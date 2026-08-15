@@ -430,38 +430,58 @@ function initEconomyCounters() {
  * CMCI (Competitive Index) Data
  */
 const cmciData = {
-  years: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+  years: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
   pillars: {
     economicDynamism: {
       labels: [
         'Local Economy Size',
-        'Economy Growth',
+        'Local Economy Growth',
         'Active Establishments',
-        'Safety Compliant',
-        'Employment',
+        'Safety Compliant Business',
+        'Employment Generation',
+        'Cost of Living',
+        'Cost of Doing Business',
+        'Financial Deepening',
+        'Productivity',
+        'Business & Prof. Organizations',
       ],
       data: [
-        [0.4353, 0.1829, 0.1004, 0.042, 0.0328, 0.0935, 0.0344, 0.0571, 0.0259],
-        [0.0847, 0.003, 0.0081, 0.0028, 0.3297, 0.0026, 0.0, 0.0005, 0.0318],
-        [null, 0.1411, 0.8263, 0.3719, 0.5391, 0.5346, 0.5349, 0.5154, 0.4994],
-        [null, 0.2991, 0.3683, 0.2471, 0.247, 0.2629, 0.0, 0.248, 0.2235],
-        [0.3157, 0.1756, 0.1604, 0.1599, 0.1807, 0.1636, 0.1433, 0.1485, 0.3835],
+        [0.0836, 0.5628, 0.6533, 0.2854, 1.4896, 1.5438, 1.5557, 0.1457, 0.2204, 0.1688, 0.1375],
+        [1.1346, 0.3252, 0.3421, 0.0589, 0.4253, 0.1038, 0.5575, 0.0101, 0.0164, 0.0123, 0.0098],
+        [null, null, null, 1.5372, 1.4852, 1.0082, 0.7671, 0.8381, 0.6904, 0.8107, 1.2331],
+        [null, null, null, 0.5491, 0.4092, 0.6662, 0.7260, 0.3878, 0.5173, 0.5147, 0.4927],
+        [0.3967, 0.7864, 1.9368, 0.4001, 2.2459, 1.0558, 2.0809, 1.9125, 1.0008, 1.1003, 0.2406],
+        [3.2692, 2.9438, 3.5000, 1.6810, 0.7143, 0.2778, 1.9366, 0.2273, 1.0000, 1.0957, 0.9296],
+        [3.7040, 3.4046, 3.3498, 1.7362, 1.8941, 1.9723, 2.1282, 2.2036, 1.6248, 1.6062, 1.7885],
+        [0.3159, 0.6628, 2.0833, 1.5800, 1.3847, 1.0219, 1.2964, 1.1492, 1.0690, 0.9314, 1.1362],
+        [0.0498, 0.1813, 0.1395, 0.0109, 0.0232, 0.9413, 1.3548, 0.9267, 0.1414, 0.1559, 0.1529],
+        [0.2717, 0.7494, 1.3634, 0.4158, 0.4786, 0.4002, 1.2792, 0.8448, 2.0000, 2.0000, 2.0000],
       ],
     },
     governmentEfficiency: {
       labels: [
-        'Cost of Living',
-        'Cost of Business',
-        'Financial Deepening',
-        'Productivity',
-        'Compliance',
+        'Compliance to Directives',
+        'Investment Promotion Unit',
+        'ARTA Citizens Charter',
+        'Local Resource Generation',
+        'Capacity of Health Services',
+        'Capacity of School Services',
+        'Recognition of Performance',
+        'Business Permits',
+        'Peace and Order',
+        'Social Protection',
       ],
       data: [
-        [2.6667, 1.6216, 1.3889, 1.1508, 0.8621, 0.4063, 1.6635, 1.1905, 1.1919],
-        [2.2968, 2.2431, 2.1045, 1.9988, 2.1827, 2.1901, 1.8629, 1.546, 1.5599],
-        [2.2418, 1.5657, 0.2448, 0.7057, 0.8357, 0.7899, 1.1689, 1.1263, 0.8288],
-        [0.0062, 0.0339, 0.0083, 0.004, 0.1654, 0.2272, 0.1243, 0.1451, 0.3297],
-        [3.0994, 2.1474, 0.0, 2.45, 2.5, 2.381, 1.8929, 1.9565, 1.96],
+        [2.9167, 3.3333, 2.8105, 2.4306, 2.3611, 2.4306, 2.5000, 2.4265, 1.8571, 1.9643, 2.0000],
+        [3.3333, 3.3333, 3.3333, 2.5000, 2.5000, 2.5000, 2.5000, 2.5000, 1.9048, 1.9048, 2.0001],
+        [null, 2.1134, 1.9476, 1.8439, 2.0130, 1.1632, 2.2766, 1.0417, 2.0000, 2.0000, 2.0000],
+        [0.9656, 1.1834, 0.6239, 0.5512, 0.5682, 0.3819, 0.3771, 0.2641, 0.5644, 0.4643, 0.2247],
+        [0.0941, 0.3425, 0.6827, 0.9042, 1.4015, 1.3582, 1.1587, 1.1622, 0.8112, 0.7329, 0.6818],
+        [0.5480, 1.0780, 0.3458, 0.3699, 0.0474, 0.9268, 0.8618, 0.6910, 0.2954, 0.6763, 0.5917],
+        [0.5714, 0.4496, 2.5000, 0.3699, 0.6604, 0.5832, 0.7935, 0.2729, 0.3616, 1.0833, 0.5578],
+        [null, null, 3.0944, 2.2106, 2.1230, 2.2650, 2.1363, 2.3461, 2.0000, 2.0000, 2.0000],
+        [0.6895, 0.8681, 1.9525, 1.0121, 0.2076, 0.3754, 0.5876, 0.4468, 0.0007, 0.3979, 0.3307],
+        [null, null, 0.7996, 0.0199, 1.5081, 0.8581, 0.7192, 0.7175, 1.2860, 0.5640, 1.7674],
       ],
     },
     infrastructure: {
@@ -469,25 +489,51 @@ const cmciData = {
         'Road Network',
         'Distance to Ports',
         'Basic Utilities',
-        'Transportation',
+        'Transportation Vehicles',
+        'Education',
+        'Health',
+        'LGU Investment',
+        'Accommodation Capacity',
         'IT Capacity',
+        'FinTech Capacity',
       ],
       data: [
-        [0.0019, 0.0003, 0.0, 0.009, 0.0021, 0.0235, 0.0015, 0.0016, 0.0016],
-        [2.3543, 1.8319, 0.0, 1.6595, 2.4576, 2.4658, 1.3088, 1.562, 1.5281],
-        [3.3333, 2.5, 0.0, 1.8498, 2.475, 2.4714, 0.0037, 0.6363, 0.356],
-        [0.4063, 0.2816, 0.0, 0.0343, 0.0221, 0.0153, 0.023, 0.0636, 0.0959],
-        [1.4638, 0.4, 0.0, 0.1278, 0.3108, 0.2727, 0.0617, 0.1674, 0.0155],
+        [0.1529, 0.0014, 0.3671, 0.0063, 2.5000, 0.1069, 0.1070, 0.0522, 0.0093, 0.0023, 0.0075],
+        [3.2937, 3.3117, 3.3116, 2.4816, 2.4595, 2.4622, 2.4708, 2.4859, 1.9770, 1.9584, 1.9183],
+        [3.3333, 3.3333, 3.3333, 2.5000, 2.5000, 2.5000, 2.5000, 2.5000, 1.5710, 1.5800, 0.9936],
+        [0.3047, 0.6300, 0.2556, 0.2835, 0.2358, 1.4174, 1.6161, 0.4990, 0.3798, 0.2739, 0.1476],
+        [0.2918, 0.9501, 0.7898, 0.6803, 1.0588, 1.0409, 0.9383, 0.8080, 0.7691, 0.6235, 0.6333],
+        [0.7312, 1.1021, 0.5881, 1.0757, 1.3019, 1.4124, 1.8439, 1.6773, 1.3211, 1.1773, 1.1994],
+        [0.9969, 0.3214, 3.1818, 0.9360, 0.9837, 0.6890, 0.6609, 0.1339, 0.0028, 0.5090, 0.3190],
+        [0.4443, 1.2404, 1.4686, 2.0252, 2.4510, 1.6233, 1.7930, 1.4424, 1.3014, 1.1746, 1.1444],
+        [0.2851, 0.9028, 1.5769, 0.8516, 1.3371, 2.0000, 1.7045, 0.7292, 0.2456, 0.2857, 0.2629],
+        [0.2766, 0.7878, 1.4357, 1.0312, 1.1308, 1.2178, 1.3721, 1.1044, 1.3944, 1.3760, 1.4153],
       ],
     },
     resiliency: {
-      labels: ['DRR Plan', 'Disaster Drill', 'Early Warning', 'DRRMP Budget', 'Risk Assessments'],
+      labels: [
+        'Land Use Plan',
+        'DRR Plan',
+        'Disaster Drill',
+        'Early Warning System',
+        'DRRMP Budget',
+        'Risk Assessments',
+        'Emergency Infrastructure',
+        'Utilities',
+        'Employed Population',
+        'Sanitary System',
+      ],
       data: [
-        [null, 2.5, 0.0, 2.4537, 2.5, 2.4474, 1.9995, 1.9583, 1.9783],
-        [null, 2.5, 0.0, 2.25, 2.5, 1.2583, 1.002, 1.0016, 1.0023],
-        [null, 2.5, 0.0, 2.5, 2.5, 1.2573, 1.0062, 1.0033, 1.0397],
-        [null, 0.0022, 0.0, 0.2655, 0.1649, 0.0183, 0.0, 0.0699, 0.002],
-        [null, 2.5, 0.0, 2.5, 2.5, 2.5, 2.0, 2.0, 2.0],
+        [null, null, null, 2.5000, 2.5000, 2.4998, 2.5000, 2.4800, 1.9524, 1.9643, 1.9828],
+        [null, null, null, 2.5000, 2.5000, 2.4405, 2.5000, 2.5000, 1.8889, 1.9524, 1.9091],
+        [null, null, null, 2.5000, 2.5000, 1.2500, 2.5000, 1.2635, 1.1748, 1.0745, 1.0136],
+        [null, null, null, 2.5000, 2.5000, 2.5000, 2.5000, 1.3571, 1.0884, 1.0090, 1.0041],
+        [null, null, null, 0.0627, 0.2109, 0.2672, 0.5516, 0.7942, 0.3579, 0.3638, 0.7416],
+        [null, null, null, 2.5000, 2.5000, 2.5000, 2.5000, 2.5000, 2.0000, 2.0000, 2.0000],
+        [null, null, null, 1.2760, 1.2982, 0.9502, 0.9828, 0.5961, 0.6450, 0.5757, 0.5241],
+        [null, null, null, 1.0546, 1.7227, 1.9294, 1.9393, 1.5884, 1.6553, 1.6443, 1.4978],
+        [null, null, null, 0.3476, 0.0423, 0.0773, 0.0464, 0.0220, 0.3059, 0.3949, 0.2657],
+        [null, null, null, 1.6180, 1.6659, 1.8815, 1.9875, 1.8762, 1.5004, 1.5192, 1.5212],
       ],
     },
     innovation: {
@@ -495,52 +541,249 @@ const cmciData = {
         'ICT Plan',
         'R&D Expenditures',
         'E-BPLS Software',
+        'Online Payment Facilities',
         'STEM Graduates',
+        'IP Registration',
+        'Internet Capability',
+        'Basic Internet Service',
         'Innovation Facilities',
+        'New Technology',
       ],
       data: [
-        [null, null, null, null, null, null, 1.3334, 2.0001, 2.0001],
-        [null, null, null, null, null, null, 0.0, 0.0, 0.0006],
-        [null, null, null, null, null, null, 2.0, 0.0, 2.0],
-        [null, null, null, null, null, null, 0.0039, 0.0052, 0.0181],
-        [null, null, null, null, null, null, 0.0392, 0.1669, 0.0227],
+        [null, null, null, null, null, null, null, null, 2.0001, 2.0001, 2.0001],
+        [null, null, null, null, null, null, null, null, 0.0036, 0.0763, 0.0925],
+        [null, null, null, null, null, null, null, null, 2.0000, 2.0000, 2.0000],
+        [null, null, null, null, null, null, null, null, 2.0000, 2.0000, 2.0000],
+        [null, null, null, null, null, null, null, null, 0.8490, 1.2746, 0.9778],
+        [null, null, null, null, null, null, null, null, 0.4989, 0.3639, 0.3832],
+        [null, null, null, null, null, null, null, null, 1.0473, 1.0299, 1.0016],
+        [null, null, null, null, null, null, null, null, 0.7291, 0.8892, 0.9868],
+        [null, null, null, null, null, null, null, null, 0.3193, 0.3225, 0.2272],
+        [null, null, null, null, null, null, null, null, 0.0766, 0.0106, 0.0128],
       ],
     },
   },
   keyIndicators: {
     labels: ['Health', 'Education', 'Social Protection', 'Peace & Order', 'LGU Investment'],
     data: [
-      [0.7476, 0.5608, 0.0, 0.3946, 0.3941, 0.469, 0.3219, 0.2037, 0.2995],
-      [0.0605, 0.0992, 0.0, 0.0348, 0.1006, 0.0231, 0.1263, 0.0764, 0.1341],
-      [0.2988, 0.2421, 0.0, 0.2778, 0.2845, 0.4097, 0.0011, 0.2567, 0.4923],
-      [0.0638, 0.408, 0.0, 0.0395, 0.0347, 0.0649, 0.0, 0.2571, 0.1031],
-      [2.4381, 0.2859, 0.0, 0.2648, 0.1597, 0.0191, 0.0, 0.0016, 0.0108],
+      [0.7312, 1.1021, 0.5881, 1.0757, 1.3019, 1.4124, 1.8439, 1.6773, 1.3211, 1.1773, 1.1994],
+      [0.2918, 0.9501, 0.7898, 0.6803, 1.0588, 1.0409, 0.9383, 0.8080, 0.7691, 0.6235, 0.6333],
+      [null, null, 0.7996, 0.0199, 1.5081, 0.8581, 0.7192, 0.7175, 1.2860, 0.5640, 1.7674],
+      [0.6895, 0.8681, 1.9525, 1.0121, 0.2076, 0.3754, 0.5876, 0.4468, 0.0007, 0.3979, 0.3307],
+      [0.9969, 0.3214, 3.1818, 0.9360, 0.9837, 0.6890, 0.6609, 0.1339, 0.0028, 0.5090, 0.3190],
     ],
   },
 };
 
 /**
+ * Palette for charts (up to 10 series)
+ */
+const CMCI_PALETTE = [
+  COLORS.primary,
+  COLORS.accent,
+  COLORS.success,
+  COLORS.info,
+  '#8B5CF6',
+  '#EC4899',
+  '#10B981',
+  '#F59E0B',
+  '#6366F1',
+  '#14B8A6',
+];
+
+/**
+ * Setup 2-in-1 Interactive Bottom Legend for a CMCI Chart (Option 2)
+ */
+function setupInteractiveBottomLegend(chartInstance, canvasId, labels, colors) {
+  if (typeof document === 'undefined') return;
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const container = canvas.closest('.cmci-chart-container');
+  if (!container) return;
+
+  // Clean up any old toolbars or legends
+  const prevToolbar = container.querySelector('.cmci-chart-toolbar');
+  if (prevToolbar) prevToolbar.remove();
+  const prevLegend = container.querySelector('.cmci-interactive-legend');
+  if (prevLegend) prevLegend.remove();
+
+  const legendContainer = document.createElement('div');
+  legendContainer.className = 'cmci-interactive-legend';
+
+  const itemsContainer = document.createElement('div');
+  itemsContainer.className = 'cmci-legend-items';
+
+  const actionsContainer = document.createElement('div');
+  actionsContainer.className = 'cmci-legend-actions';
+
+  const btnAll = document.createElement('button');
+  btnAll.type = 'button';
+  btnAll.className = 'cmci-legend-btn active';
+  btnAll.innerHTML = '<i class="bi bi-check2-all"></i> <span data-i18n="stats-filter-all">All</span>';
+
+  const btnClear = document.createElement('button');
+  btnClear.type = 'button';
+  btnClear.className = 'cmci-legend-btn';
+  btnClear.innerHTML = '<i class="bi bi-x"></i> <span data-i18n="stats-filter-clear">Clear</span>';
+
+  actionsContainer.appendChild(btnAll);
+  actionsContainer.appendChild(btnClear);
+
+  const legendItems = [];
+
+  labels.forEach((label, index) => {
+    const color = colors[index % colors.length];
+    const item = document.createElement('button');
+    item.type = 'button';
+    item.className = 'cmci-legend-item active';
+    item.style.setProperty('--indicator-color', color);
+    item.innerHTML = `<span class="legend-indicator" style="--indicator-color:${color}"></span><span class="legend-text">${label}</span>`;
+    item.title = 'Click to toggle. Double-click to isolate.';
+
+    // Single click toggles
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isVisible = chartInstance.isDatasetVisible(index);
+      chartInstance.setDatasetVisibility(index, !isVisible);
+      item.classList.toggle('active', !isVisible);
+      item.classList.toggle('inactive', isVisible);
+      chartInstance.update();
+      updateActionState();
+    });
+
+    // Double click isolates
+    item.addEventListener('dblclick', (e) => {
+      e.stopPropagation();
+      isolateIndicator(index);
+    });
+
+    // Hover highlight
+    item.addEventListener('mouseenter', () => {
+      if (!chartInstance.isDatasetVisible(index)) return;
+      chartInstance.data.datasets.forEach((ds, i) => {
+        if (i === index) {
+          ds.borderWidth = 3.5;
+          ds.pointRadius = 4;
+        } else {
+          ds.borderColor = colors[i % colors.length] + '35';
+        }
+      });
+      chartInstance.update('none');
+    });
+
+    item.addEventListener('mouseleave', () => {
+      chartInstance.data.datasets.forEach((ds, i) => {
+        ds.borderWidth = 2;
+        ds.pointRadius = 0;
+        ds.borderColor = colors[i % colors.length];
+      });
+      chartInstance.update('none');
+    });
+
+    itemsContainer.appendChild(item);
+    legendItems.push(item);
+  });
+
+  function isolateIndicator(targetIndex) {
+    labels.forEach((_, i) => {
+      const show = (i === targetIndex);
+      chartInstance.setDatasetVisibility(i, show);
+      if (legendItems[i]) {
+        legendItems[i].classList.toggle('active', show);
+        legendItems[i].classList.toggle('inactive', !show);
+      }
+    });
+    chartInstance.update();
+    updateActionState();
+  }
+
+  function updateActionState() {
+    let allActive = true;
+    let noneActive = true;
+    labels.forEach((_, i) => {
+      const visible = chartInstance.isDatasetVisible(i);
+      if (visible) noneActive = false;
+      else allActive = false;
+    });
+    btnAll.classList.toggle('active', allActive);
+    btnClear.classList.toggle('active', noneActive);
+  }
+
+  btnAll.addEventListener('click', () => {
+    labels.forEach((_, i) => {
+      chartInstance.setDatasetVisibility(i, true);
+      if (legendItems[i]) {
+        legendItems[i].classList.add('active');
+        legendItems[i].classList.remove('inactive');
+      }
+    });
+    chartInstance.update();
+    updateActionState();
+  });
+
+  btnClear.addEventListener('click', () => {
+    labels.forEach((_, i) => {
+      chartInstance.setDatasetVisibility(i, false);
+      if (legendItems[i]) {
+        legendItems[i].classList.remove('active');
+        legendItems[i].classList.add('inactive');
+      }
+    });
+    chartInstance.update();
+    updateActionState();
+  });
+
+  legendContainer.appendChild(itemsContainer);
+  legendContainer.appendChild(actionsContainer);
+  container.appendChild(legendContainer);
+
+  // Link indicator cards in panel to chart filter
+  const panel = container.closest('.cmci-panel');
+  if (panel) {
+    panel.querySelectorAll('.cmci-indicator-card').forEach((card) => {
+      card.title = 'Click to isolate indicator on chart';
+      card.addEventListener('click', () => {
+        const headerEl = card.querySelector('.indicator-header');
+        if (!headerEl) return;
+        const text = headerEl.textContent.trim().toLowerCase();
+        const matchIndex = labels.findIndex((l) => {
+          const lLower = l.toLowerCase();
+          return text.includes(lLower) || lLower.includes(text);
+        });
+        if (matchIndex !== -1) {
+          isolateIndicator(matchIndex);
+          panel.querySelectorAll('.cmci-indicator-card').forEach((c) => c.classList.remove('card-selected'));
+          card.classList.add('card-selected');
+        }
+      });
+    });
+  }
+}
+
+/**
  * Create CMCI Overview Chart
  */
 function createCMCIOverviewChart() {
+  if (typeof document === 'undefined') return;
   const ctx = document.getElementById('cmciOverviewChart');
   if (!ctx || charts.cmciOverview) return;
 
-  const chartColors = [COLORS.primary, COLORS.accent, COLORS.success, COLORS.info, '#8B5CF6'];
+  const labels = cmciData.keyIndicators.labels;
 
   charts.cmciOverview = new Chart(ctx, {
     type: 'line',
     data: {
       labels: cmciData.years,
-      datasets: cmciData.keyIndicators.labels.map((label, i) => ({
+      datasets: labels.map((label, i) => ({
         label: label,
         data: cmciData.keyIndicators.data[i],
-        borderColor: chartColors[i],
-        backgroundColor: chartColors[i] + '20',
+        borderColor: CMCI_PALETTE[i % CMCI_PALETTE.length],
+        backgroundColor: CMCI_PALETTE[i % CMCI_PALETTE.length] + '20',
         fill: false,
         tension: 0.4,
-        pointRadius: 4,
+        pointRadius: 0,
         pointHoverRadius: 6,
+        pointHitRadius: 8,
         borderWidth: 2,
       })),
     },
@@ -551,8 +794,7 @@ function createCMCIOverviewChart() {
       interaction: { intersect: false, mode: 'index' },
       plugins: {
         legend: {
-          position: 'bottom',
-          labels: { boxWidth: 12, padding: 16, font: { size: 11 }, usePointStyle: true },
+          display: false,
         },
         tooltip: {
           backgroundColor: 'rgba(0, 50, 160, 0.95)',
@@ -576,19 +818,20 @@ function createCMCIOverviewChart() {
       },
     },
   });
+
+  setupInteractiveBottomLegend(charts.cmciOverview, 'cmciOverviewChart', labels, CMCI_PALETTE);
 }
 
 /**
  * Create CMCI Pillar Chart
  */
 function createCMCIPillarChart(pillarKey, canvasId) {
+  if (typeof document === 'undefined') return;
   const ctx = document.getElementById(canvasId);
   if (!ctx || charts[canvasId]) return;
 
   const pillarData = cmciData.pillars[pillarKey];
   if (!pillarData) return;
-
-  const chartColors = [COLORS.primary, COLORS.accent, COLORS.success, COLORS.info, '#8B5CF6'];
 
   charts[canvasId] = new Chart(ctx, {
     type: 'line',
@@ -597,12 +840,13 @@ function createCMCIPillarChart(pillarKey, canvasId) {
       datasets: pillarData.labels.map((label, i) => ({
         label: label,
         data: pillarData.data[i],
-        borderColor: chartColors[i],
-        backgroundColor: chartColors[i] + '20',
+        borderColor: CMCI_PALETTE[i % CMCI_PALETTE.length],
+        backgroundColor: CMCI_PALETTE[i % CMCI_PALETTE.length] + '20',
         fill: false,
         tension: 0.4,
-        pointRadius: 3,
-        pointHoverRadius: 5,
+        pointRadius: 0,
+        pointHoverRadius: 6,
+        pointHitRadius: 8,
         borderWidth: 2,
       })),
     },
@@ -613,8 +857,7 @@ function createCMCIPillarChart(pillarKey, canvasId) {
       interaction: { intersect: false, mode: 'index' },
       plugins: {
         legend: {
-          position: 'bottom',
-          labels: { boxWidth: 10, padding: 12, font: { size: 10 }, usePointStyle: true },
+          display: false,
         },
         tooltip: {
           backgroundColor: 'rgba(0, 50, 160, 0.95)',
@@ -638,6 +881,8 @@ function createCMCIPillarChart(pillarKey, canvasId) {
       },
     },
   });
+
+  setupInteractiveBottomLegend(charts[canvasId], canvasId, pillarData.labels, CMCI_PALETTE);
 }
 
 /**
@@ -725,12 +970,14 @@ function initCMCISection() {
 }
 
 // Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-  initScrollAnimations();
-  initCharts();
-  initEconomyCounters();
-  initCMCISection();
-});
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initScrollAnimations();
+    initCharts();
+    initEconomyCounters();
+    initCMCISection();
+  });
+}
 
 // Export for testing
 if (typeof module !== 'undefined' && module.exports) {

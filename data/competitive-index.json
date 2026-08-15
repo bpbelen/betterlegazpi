@@ -1,33 +1,55 @@
 {
-  "title": "Solano Competitive Index",
+  "title": "Legazpi Competitive Index",
   "description": "Annual competitiveness indicators measuring local economic performance",
   "source": "Cities and Municipalities Competitiveness Index (CMCI)",
-  "years": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+  "years": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+  "overallScore": [37.4601, 41.3456, 47.7672, 49.1971, 57.3392, 52.5991, 60.6076, 46.9244, 50.4261, 51.6097, 50.4584],
   "pillars": [
     {
       "id": "economic-dynamism",
       "name": "Economic Dynamism",
       "icon": "bi-graph-up-arrow",
+      "score": [9.2255, 9.6162, 13.3683, 8.2546, 10.5502, 8.9912, 13.6824, 8.6459, 8.2805, 8.396, 8.1209],
       "indicators": [
         {
           "name": "Local Economy Size",
-          "values": [0.4353, 0.1829, 0.1004, 0.042, 0.0328, 0.0935, 0.0344, 0.0571, 0.0259]
+          "values": [0.0836, 0.5628, 0.6533, 0.2854, 1.4896, 1.5438, 1.5557, 0.1457, 0.2204, 0.1688, 0.1375]
         },
         {
           "name": "Local Economy Growth",
-          "values": [0.0847, 0.003, 0.0081, 0.0028, 0.3297, 0.0026, 0.0, 0.0005, 0.0318]
+          "values": [1.1346, 0.3252, 0.3421, 0.0589, 0.4253, 0.1038, 0.5575, 0.0101, 0.0164, 0.0123, 0.0098]
         },
         {
-          "name": "Active Establishments",
-          "values": [null, 0.1411, 0.8263, 0.3719, 0.5391, 0.5346, 0.5349, 0.5154, 0.4994]
+          "name": "Active Establishments in the Locality",
+          "values": [null, null, null, 1.5372, 1.4852, 1.0082, 0.7671, 0.8381, 0.6904, 0.8107, 1.2331]
         },
         {
           "name": "Safety Compliant Business",
-          "values": [null, 0.2991, 0.3683, 0.2471, 0.247, 0.2629, 0.0, 0.248, 0.2235]
+          "values": [null, null, null, 0.5491, 0.4092, 0.6662, 0.726, 0.3878, 0.5173, 0.5147, 0.4927]
         },
         {
           "name": "Employment Generation",
-          "values": [0.3157, 0.1756, 0.1604, 0.1599, 0.1807, 0.1636, 0.1433, 0.1485, 0.3835]
+          "values": [0.3967, 0.7864, 1.9368, 0.4001, 2.2459, 1.0558, 2.0809, 1.9125, 1.0008, 1.1003, 0.2406]
+        },
+        {
+          "name": "Cost of Living",
+          "values": [3.2692, 2.9438, 3.5, 1.681, 0.7143, 0.2778, 1.9366, 0.2273, 1.0, 1.0957, 0.9296]
+        },
+        {
+          "name": "Cost of Doing Business",
+          "values": [3.704, 3.4046, 3.3498, 1.7362, 1.8941, 1.9723, 2.1282, 2.2036, 1.6248, 1.6062, 1.7885]
+        },
+        {
+          "name": "Financial Deepening",
+          "values": [0.3159, 0.6628, 2.0833, 1.58, 1.3847, 1.0219, 1.2964, 1.1492, 1.069, 0.9314, 1.1362]
+        },
+        {
+          "name": "Productivity",
+          "values": [0.0498, 0.1813, 0.1395, 0.0109, 0.0232, 0.9413, 1.3548, 0.9267, 0.1414, 0.1559, 0.1529]
+        },
+        {
+          "name": "Presence of Business and Professional Organizations",
+          "values": [0.2717, 0.7494, 1.3634, 0.4158, 0.4786, 0.4002, 1.2792, 0.8448, 2.0, 2.0, 2.0]
         }
       ]
     },
@@ -35,26 +57,47 @@
       "id": "government-efficiency",
       "name": "Government Efficiency",
       "icon": "bi-building-check",
+      "score": [18.124, 19.1483, 18.0904, 12.2122, 13.3904, 12.8422, 13.9109, 11.8686, 11.0812, 11.7878, 12.1542],
       "indicators": [
         {
-          "name": "Cost of Living",
-          "values": [2.6667, 1.6216, 1.3889, 1.1508, 0.8621, 0.4063, 1.6635, 1.1905, 1.1919]
-        },
-        {
-          "name": "Cost of Doing Business",
-          "values": [2.2968, 2.2431, 2.1045, 1.9988, 2.1827, 2.1901, 1.8629, 1.546, 1.5599]
-        },
-        {
-          "name": "Financial Deepening",
-          "values": [2.2418, 1.5657, 0.2448, 0.7057, 0.8357, 0.7899, 1.1689, 1.1263, 0.8288]
-        },
-        {
-          "name": "Productivity",
-          "values": [0.0062, 0.0339, 0.0083, 0.004, 0.1654, 0.2272, 0.1243, 0.1451, 0.3297]
-        },
-        {
           "name": "Compliance to National Directives",
-          "values": [3.0994, 2.1474, 0.0, 2.45, 2.5, 2.381, 1.8929, 1.9565, 1.96]
+          "values": [2.9167, 3.3333, 2.8105, 2.4306, 2.3611, 2.4306, 2.5, 2.4265, 1.8571, 1.9643, 2.0]
+        },
+        {
+          "name": "Presence of Investment Promotion Unit",
+          "values": [3.3333, 3.3333, 3.3333, 2.5, 2.5, 2.5, 2.5, 2.5, 1.9048, 1.9048, 2.0001]
+        },
+        {
+          "name": "Compliance to ARTA Citizens Charter",
+          "values": [null, 2.1134, 1.9476, 1.8439, 2.013, 1.1632, 2.2766, 1.0417, 2.0, 2.0, 2.0]
+        },
+        {
+          "name": "Capacity to Generate Local Resource",
+          "values": [0.9656, 1.1834, 0.6239, 0.5512, 0.5682, 0.3819, 0.3771, 0.2641, 0.5644, 0.4643, 0.2247]
+        },
+        {
+          "name": "Capacity of Health Services",
+          "values": [0.0941, 0.3425, 0.6827, 0.9042, 1.4015, 1.3582, 1.1587, 1.1622, 0.8112, 0.7329, 0.6818]
+        },
+        {
+          "name": "Capacity of School Services",
+          "values": [0.548, 1.078, 0.3458, 0.3699, 0.0474, 0.9268, 0.8618, 0.691, 0.2954, 0.6763, 0.5917]
+        },
+        {
+          "name": "Recognition of Performance",
+          "values": [0.5714, 0.4496, 2.5, 0.3699, 0.6604, 0.5832, 0.7935, 0.2729, 0.3616, 1.0833, 0.5578]
+        },
+        {
+          "name": "Getting Business Permits",
+          "values": [null, null, 3.0944, 2.2106, 2.123, 2.265, 2.1363, 2.3461, 2.0, 2.0, 2.0]
+        },
+        {
+          "name": "Peace and Order",
+          "values": [0.6895, 0.8681, 1.9525, 1.0121, 0.2076, 0.3754, 0.5876, 0.4468, 0.0007, 0.3979, 0.3307]
+        },
+        {
+          "name": "Social Protection",
+          "values": [null, null, 0.7996, 0.0199, 1.5081, 0.8581, 0.7192, 0.7175, 1.286, 0.564, 1.7674]
         }
       ]
     },
@@ -62,26 +105,47 @@
       "id": "infrastructure",
       "name": "Infrastructure",
       "icon": "bi-building-gear",
+      "score": [10.1106, 12.581, 16.3085, 11.8714, 15.9587, 14.47, 15.0066, 11.4323, 8.9715, 8.9607, 8.0413],
       "indicators": [
         {
           "name": "Road Network",
-          "values": [0.0019, 0.0003, 0.0, 0.009, 0.0021, 0.0235, 0.0015, 0.0016, 0.0016]
+          "values": [0.1529, 0.0014, 0.3671, 0.0063, 2.5, 0.1069, 0.107, 0.0522, 0.0093, 0.0023, 0.0075]
         },
         {
           "name": "Distance to Ports",
-          "values": [2.3543, 1.8319, 0.0, 1.6595, 2.4576, 2.4658, 1.3088, 1.562, 1.5281]
+          "values": [3.2937, 3.3117, 3.3116, 2.4816, 2.4595, 2.4622, 2.4708, 2.4859, 1.977, 1.9584, 1.9183]
         },
         {
           "name": "Availability of Basic Utilities",
-          "values": [3.3333, 2.5, 0.0, 1.8498, 2.475, 2.4714, 0.0037, 0.6363, 0.356]
+          "values": [3.3333, 3.3333, 3.3333, 2.5, 2.5, 2.5, 2.5, 2.5, 1.571, 1.58, 0.9936]
         },
         {
           "name": "Transportation Vehicles",
-          "values": [0.4063, 0.2816, 0.0, 0.0343, 0.0221, 0.0153, 0.023, 0.0636, 0.0959]
+          "values": [0.3047, 0.63, 0.2556, 0.2835, 0.2358, 1.4174, 1.6161, 0.499, 0.3798, 0.2739, 0.1476]
+        },
+        {
+          "name": "Education",
+          "values": [0.2918, 0.9501, 0.7898, 0.6803, 1.0588, 1.0409, 0.9383, 0.808, 0.7691, 0.6235, 0.6333]
+        },
+        {
+          "name": "Health",
+          "values": [0.7312, 1.1021, 0.5881, 1.0757, 1.3019, 1.4124, 1.8439, 1.6773, 1.3211, 1.1773, 1.1994]
+        },
+        {
+          "name": "LGU Investment",
+          "values": [0.9969, 0.3214, 3.1818, 0.936, 0.9837, 0.689, 0.6609, 0.1339, 0.0028, 0.509, 0.319]
+        },
+        {
+          "name": "Accommodation Capacity",
+          "values": [0.4443, 1.2404, 1.4686, 2.0252, 2.451, 1.6233, 1.793, 1.4424, 1.3014, 1.1746, 1.1444]
         },
         {
           "name": "Information Technology Capacity",
-          "values": [1.4638, 0.4, 0.0, 0.1278, 0.3108, 0.2727, 0.0617, 0.1674, 0.0155]
+          "values": [0.2851, 0.9028, 1.5769, 0.8516, 1.3371, 2.0, 1.7045, 0.7292, 0.2456, 0.2857, 0.2629]
+        },
+        {
+          "name": "Financial Technology Capacity",
+          "values": [0.2766, 0.7878, 1.4357, 1.0312, 1.1308, 1.2178, 1.3721, 1.1044, 1.3944, 1.376, 1.4153]
         }
       ]
     },
@@ -89,30 +153,47 @@
       "id": "resiliency",
       "name": "Resiliency",
       "icon": "bi-shield-check",
+      "score": [null, null, null, 16.8589, 17.4399, 16.2958, 18.0077, 14.9775, 12.569, 12.4981, 12.46],
       "indicators": [
         {
+          "name": "Land Use Plan",
+          "values": [null, null, null, 2.5, 2.5, 2.4998, 2.5, 2.48, 1.9524, 1.9643, 1.9828]
+        },
+        {
           "name": "Disaster Risk Reduction Plan",
-          "values": [null, 2.5, 0.0, 2.4537, 2.5, 2.4474, 1.9995, 1.9583, 1.9783]
+          "values": [null, null, null, 2.5, 2.5, 2.4405, 2.5, 2.5, 1.8889, 1.9524, 1.9091]
         },
         {
           "name": "Annual Disaster Drill",
-          "values": [null, 2.5, 0.0, 2.25, 2.5, 1.2583, 1.002, 1.0016, 1.0023]
+          "values": [null, null, null, 2.5, 2.5, 1.25, 2.5, 1.2635, 1.1748, 1.0745, 1.0136]
         },
         {
           "name": "Early Warning System",
-          "values": [null, 2.5, 0.0, 2.5, 2.5, 1.2573, 1.0062, 1.0033, 1.0397]
+          "values": [null, null, null, 2.5, 2.5, 2.5, 2.5, 1.3571, 1.0884, 1.009, 1.0041]
         },
         {
           "name": "Budget for DRRMP",
-          "values": [null, 0.0022, 0.0, 0.2655, 0.1649, 0.0183, 0.0, 0.0699, 0.002]
+          "values": [null, null, null, 0.0627, 0.2109, 0.2672, 0.5516, 0.7942, 0.3579, 0.3638, 0.7416]
         },
         {
           "name": "Local Risk Assessments",
-          "values": [null, 2.5, 0.0, 2.5, 2.5, 2.5, 2.0, 2.0, 2.0]
+          "values": [null, null, null, 2.5, 2.5, 2.5, 2.5, 2.5, 2.0, 2.0, 2.0]
         },
         {
           "name": "Emergency Infrastructure",
-          "values": [null, 0.8921, 0.0, 0.5495, 0.5883, 0.3314, 0.4282, 0.4363, 0.4754]
+          "values": [null, null, null, 1.276, 1.2982, 0.9502, 0.9828, 0.5961, 0.645, 0.5757, 0.5241]
+        },
+        {
+          "name": "Utilities",
+          "values": [null, null, null, 1.0546, 1.7227, 1.9294, 1.9393, 1.5884, 1.6553, 1.6443, 1.4978]
+        },
+        {
+          "name": "Employed Population",
+          "values": [null, null, null, 0.3476, 0.0423, 0.0773, 0.0464, 0.022, 0.3059, 0.3949, 0.2657]
+        },
+        {
+          "name": "Sanitary System",
+          "values": [null, null, null, 1.618, 1.6659, 1.8815, 1.9875, 1.8762, 1.5004, 1.5192, 1.5212]
         }
       ]
     },
@@ -120,30 +201,47 @@
       "id": "innovation",
       "name": "Innovation",
       "icon": "bi-lightbulb",
+      "score": [null, null, null, null, null, null, null, null, 9.5239, 9.9671, 9.682],
       "indicators": [
         {
           "name": "ICT Plan",
-          "values": [null, null, null, null, null, null, 1.3334, 2.0001, 2.0001]
+          "values": [null, null, null, null, null, null, null, null, 2.0001, 2.0001, 2.0001]
         },
         {
-          "name": "R&D Expenditures Allotment",
-          "values": [null, null, null, null, null, null, 0.0, 0.0, 0.0006]
+          "name": "Innovation Financing: R&D Expenditures Allotment",
+          "values": [null, null, null, null, null, null, null, null, 0.0036, 0.0763, 0.0925]
         },
         {
           "name": "ICT Use: E-BPLS Software",
-          "values": [null, null, null, null, null, null, 2.0, 0.0, 2.0]
+          "values": [null, null, null, null, null, null, null, null, 2.0, 2.0, 2.0]
         },
         {
           "name": "Online Payment Facilities",
-          "values": [null, null, null, null, null, null, 0.0, 0.0, 0.0]
+          "values": [null, null, null, null, null, null, null, null, 2.0, 2.0, 2.0]
         },
         {
-          "name": "STEM Graduates",
-          "values": [null, null, null, null, null, null, 0.0039, 0.0052, 0.0181]
+          "name": "STEM graduates",
+          "values": [null, null, null, null, null, null, null, null, 0.849, 1.2746, 0.9778]
+        },
+        {
+          "name": "Intellectual Property Registration",
+          "values": [null, null, null, null, null, null, null, null, 0.4989, 0.3639, 0.3832]
+        },
+        {
+          "name": "Internet Capability",
+          "values": [null, null, null, null, null, null, null, null, 1.0473, 1.0299, 1.0016]
+        },
+        {
+          "name": "Availability of Basic Internet Service",
+          "values": [null, null, null, null, null, null, null, null, 0.7291, 0.8892, 0.9868]
         },
         {
           "name": "Start Up and Innovation Facilities",
-          "values": [null, null, null, null, null, null, 0.0392, 0.1669, 0.0227]
+          "values": [null, null, null, null, null, null, null, null, 0.3193, 0.3225, 0.2272]
+        },
+        {
+          "name": "New Technology",
+          "values": [null, null, null, null, null, null, null, null, 0.0766, 0.0106, 0.0128]
         }
       ]
     }
@@ -151,23 +249,23 @@
   "keyIndicators": [
     {
       "name": "Health",
-      "values": [0.7476, 0.5608, 0.0, 0.3946, 0.3941, 0.469, 0.3219, 0.2037, 0.2995]
+      "values": [0.7312, 1.1021, 0.5881, 1.0757, 1.3019, 1.4124, 1.8439, 1.6773, 1.3211, 1.1773, 1.1994]
     },
     {
       "name": "Education",
-      "values": [0.0605, 0.0992, 0.0, 0.0348, 0.1006, 0.0231, 0.1263, 0.0764, 0.1341]
+      "values": [0.2918, 0.9501, 0.7898, 0.6803, 1.0588, 1.0409, 0.9383, 0.808, 0.7691, 0.6235, 0.6333]
     },
     {
       "name": "Social Protection",
-      "values": [0.2988, 0.2421, 0.0, 0.2778, 0.2845, 0.4097, 0.0011, 0.2567, 0.4923]
+      "values": [null, null, 0.7996, 0.0199, 1.5081, 0.8581, 0.7192, 0.7175, 1.286, 0.564, 1.7674]
     },
     {
       "name": "Peace and Order",
-      "values": [0.0638, 0.408, 0.0, 0.0395, 0.0347, 0.0649, 0.0, 0.2571, 0.1031]
+      "values": [0.6895, 0.8681, 1.9525, 1.0121, 0.2076, 0.3754, 0.5876, 0.4468, 0.0007, 0.3979, 0.3307]
     },
     {
       "name": "LGU Investment",
-      "values": [2.4381, 0.2859, 0.0, 0.2648, 0.1597, 0.0191, 0.0, 0.0016, 0.0108]
+      "values": [0.9969, 0.3214, 3.1818, 0.936, 0.9837, 0.689, 0.6609, 0.1339, 0.0028, 0.509, 0.319]
     }
   ]
 }

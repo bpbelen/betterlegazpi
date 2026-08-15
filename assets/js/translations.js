@@ -5751,7 +5751,7 @@ const translations = {
     'stats-business': 'Business',
     'stats-certificates': 'Certificates',
     'stats-cities-and-municipalities-competitiveness-index':
-      'Cities and Municipalities Competitiveness Index (CMCI) Performance 2016-2024',
+      '10-year Cities and Municipalities Competitiveness Index (CMCI) Performance (2014-2024)',
     'stats-citizens-charter': "Citizen's Charter",
     'stats-cmci-dti-portal': 'CMCI DTI Portal',
     'stats-communal': 'Communal',
@@ -5773,6 +5773,8 @@ const translations = {
     'stats-empowering-the-people-of-solano-with-transparent':
       'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
     'stats-environment': 'Environment',
+    'stats-filter-all': 'All',
+    'stats-filter-clear': 'Clear',
     'stats-finance': 'Finance',
     'stats-financial-standing-for-fiscal-year-2023': 'Financial standing for fiscal year 2023',
     'stats-freedom-of-information': 'Freedom of Information',
@@ -5793,7 +5795,7 @@ const translations = {
     'stats-ira-dependency': 'IRA Dependency',
     'stats-ira-share': 'IRA Share',
     'stats-key-economic-data-and-business-statistics': 'Key economic data and business statistics',
-    'stats-key-indicators-trend-20162024': 'Key Indicators Trend (2016-2024)',
+    'stats-key-indicators-trend-20162024': 'Key Indicators Trend (2014-2024)',
     'stats-lactawan': 'Lactawan',
     'stats-lgu-solano-facebook': 'LGU Solano Facebook',
     'stats-local-4055': 'Local 40.55%',
@@ -5829,7 +5831,7 @@ const translations = {
     'stats-sitemap': 'Sitemap',
     'stats-skip-to-main-content': 'Skip to main content',
     'stats-social-services': 'Social Services',
-    'stats-solano-competitive-index': 'Solano Competitive Index',
+    'stats-solano-competitive-index': 'Legazpi Competitive Index',
     'stats-tax-payments': 'Tax Payments',
     'stats-terms-of-use': 'Terms of Use',
     'stats-trade-amp-commerce': 'Trade &amp; Commerce',
@@ -12219,7 +12221,7 @@ const translations = {
     'stats-business': 'Negosyo',
     'stats-certificates': 'Mga Sertipiko',
     'stats-cities-and-municipalities-competitiveness-index':
-      'Pagganap ng Cities and Municipalities Competitiveness Index (CMCI) 2016-2024',
+      '10-taong Pagganap ng Cities and Municipalities Competitiveness Index (CMCI) (2014-2024)',
     'stats-citizens-charter': "Citizen's Charter",
     'stats-cmci-dti-portal': 'CMCI DTI Portal',
     'stats-communal': 'Communal',
@@ -12241,12 +12243,14 @@ const translations = {
     'stats-empowering-the-people-of-solano-with-transparent':
       'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
     'stats-environment': 'Kapaligiran',
+    'stats-filter-all': 'Lahat',
+    'stats-filter-clear': 'I-clear',
     'stats-finance': 'Pananalapi',
     'stats-financial-standing-for-fiscal-year-2023':
       'Kalagayang pinansyal para sa taong piskal 2023',
     'stats-freedom-of-information': 'Kalayaan sa Impormasyon',
     'stats-government-efficiency': 'Kahusayan ng Pamahalaan',
-    'stats-government-efficiency-trend': 'Pamahalaan Efficiency Trend',
+    'stats-government-efficiency-trend': 'Trend ng Kahusayan ng Pamahalaan',
     'stats-growth': 'Paglago',
     'stats-health': 'Kalusugan',
     'stats-historical-growth-from-1990-to-2024': 'Makasaysayang paglago mula 1990 hanggang 2024',
@@ -12262,7 +12266,7 @@ const translations = {
     'stats-ira-dependency': 'Pagdepende sa IRA',
     'stats-ira-share': 'IRA Ibahagi',
     'stats-key-economic-data-and-business-statistics': 'Key economic datos and business statistics',
-    'stats-key-indicators-trend-20162024': 'Trend ng mga Pangunahing Tagapagpahiwatig (2016-2024)',
+    'stats-key-indicators-trend-20162024': 'Trend ng mga Pangunahing Tagapagpahiwatig (2014-2024)',
     'stats-lactawan': 'Lactawan',
     'stats-lgu-solano-facebook': 'LGU Solano Facebook',
     'stats-local-4055': 'Lokal 40.55%',
@@ -12298,7 +12302,7 @@ const translations = {
     'stats-sitemap': 'Mapa ng Site',
     'stats-skip-to-main-content': 'Lumaktaw sa pangunahing nilalaman',
     'stats-social-services': 'Serbisyong Panlipunan',
-    'stats-solano-competitive-index': 'Competitive Index ng Solano',
+    'stats-solano-competitive-index': 'Competitive Index ng Legazpi',
     'stats-tax-payments': 'Pagbabayad ng Buwis',
     'stats-terms-of-use': 'Mga Tuntunin ng Paggamit',
     'stats-trade-amp-commerce': 'Kalakalan at Komersyo',
@@ -18706,7 +18710,7 @@ const translations = {
     'stats-business': 'Negosio',
     'stats-certificates': 'Dagiti Sertipiko',
     'stats-cities-and-municipalities-competitiveness-index':
-      'Pagganap ti Cities and Municipalities Competitiveness Index (CMCI) 2016-2024',
+      '10-tawen a Pagganap ti Cities and Municipalities Competitiveness Index (CMCI) (2014-2024)',
     'stats-citizens-charter': "Citizen's Charter",
     'stats-cmci-dti-portal': 'CMCI DTI Portal',
     'stats-communal': 'Communal',
@@ -18728,12 +18732,14 @@ const translations = {
     'stats-empowering-the-people-of-solano-with-transparent':
       'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
     'stats-environment': 'Aglawlaw',
+    'stats-filter-all': 'Amin',
+    'stats-filter-clear': 'I-clear',
     'stats-finance': 'Pananalapi',
     'stats-financial-standing-for-fiscal-year-2023':
       'Kalagayang pinansyal para iti taong piskal 2023',
     'stats-freedom-of-information': 'Wayawaya ti Impormasion',
     'stats-government-efficiency': 'Kahusayan ti Pamahalaan',
-    'stats-government-efficiency-trend': 'Gobierno Efficiency Trend',
+    'stats-government-efficiency-trend': 'Trend ti Kahusayan ti Pamahalaan',
     'stats-growth': 'Paglago',
     'stats-health': 'Salun-at',
     'stats-historical-growth-from-1990-to-2024': 'Makasaysayang paglago manipud 1990 hanggang 2024',
@@ -18750,7 +18756,7 @@ const translations = {
     'stats-ira-share': 'IRA Ibingay',
     'stats-key-economic-data-and-business-statistics': 'Key economic datos and business statistics',
     'stats-key-indicators-trend-20162024':
-      'Trend ti dagiti Kangrunaan a Tagapagpahiwatig (2016-2024)',
+      'Trend ti dagiti Kangrunaan a Tagapagpahiwatig (2014-2024)',
     'stats-lactawan': 'Lactawan',
     'stats-lgu-solano-facebook': 'LGU Solano Facebook',
     'stats-local-4055': 'Lokal 40.55%',
@@ -18786,7 +18792,7 @@ const translations = {
     'stats-sitemap': 'Mapa ti Site',
     'stats-skip-to-main-content': 'Lumaktaw iti kangrunaan a linaon',
     'stats-social-services': 'Serbisio Sosyal',
-    'stats-solano-competitive-index': 'Competitive Index ti Solano',
+    'stats-solano-competitive-index': 'Competitive Index ti Legazpi',
     'stats-tax-payments': 'Panagbayad ti Buwis',
     'stats-terms-of-use': 'Dagiti Kondision ti Panagusar',
     'stats-trade-amp-commerce': 'Kalakalan ken Komersyo',
@@ -19855,12 +19861,14 @@ const TranslationEngine = {
 };
 
 // Initialize when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', function () {
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      TranslationEngine.init();
+    });
+  } else {
     TranslationEngine.init();
-  });
-} else {
-  TranslationEngine.init();
+  }
 }
 
 // Export for module systems
