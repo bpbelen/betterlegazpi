@@ -463,13 +463,13 @@ const cmciData = {
         [0.0836, 0.5628, 0.6533, 0.2854, 1.4896, 1.5438, 1.5557, 0.1457, 0.2204, 0.1688, 0.1375],
         [1.1346, 0.3252, 0.3421, 0.0589, 0.4253, 0.1038, 0.5575, 0.0101, 0.0164, 0.0123, 0.0098],
         [null, null, null, 1.5372, 1.4852, 1.0082, 0.7671, 0.8381, 0.6904, 0.8107, 1.2331],
-        [null, null, null, 0.5491, 0.4092, 0.6662, 0.7260, 0.3878, 0.5173, 0.5147, 0.4927],
+        [null, null, null, 0.5491, 0.4092, 0.6662, 0.726, 0.3878, 0.5173, 0.5147, 0.4927],
         [0.3967, 0.7864, 1.9368, 0.4001, 2.2459, 1.0558, 2.0809, 1.9125, 1.0008, 1.1003, 0.2406],
-        [3.2692, 2.9438, 3.5000, 1.6810, 0.7143, 0.2778, 1.9366, 0.2273, 1.0000, 1.0957, 0.9296],
-        [3.7040, 3.4046, 3.3498, 1.7362, 1.8941, 1.9723, 2.1282, 2.2036, 1.6248, 1.6062, 1.7885],
-        [0.3159, 0.6628, 2.0833, 1.5800, 1.3847, 1.0219, 1.2964, 1.1492, 1.0690, 0.9314, 1.1362],
+        [3.2692, 2.9438, 3.5, 1.681, 0.7143, 0.2778, 1.9366, 0.2273, 1.0, 1.0957, 0.9296],
+        [3.704, 3.4046, 3.3498, 1.7362, 1.8941, 1.9723, 2.1282, 2.2036, 1.6248, 1.6062, 1.7885],
+        [0.3159, 0.6628, 2.0833, 1.58, 1.3847, 1.0219, 1.2964, 1.1492, 1.069, 0.9314, 1.1362],
         [0.0498, 0.1813, 0.1395, 0.0109, 0.0232, 0.9413, 1.3548, 0.9267, 0.1414, 0.1559, 0.1529],
-        [0.2717, 0.7494, 1.3634, 0.4158, 0.4786, 0.4002, 1.2792, 0.8448, 2.0000, 2.0000, 2.0000],
+        [0.2717, 0.7494, 1.3634, 0.4158, 0.4786, 0.4002, 1.2792, 0.8448, 2.0, 2.0, 2.0],
       ],
     },
     governmentEfficiency: {
@@ -486,16 +486,16 @@ const cmciData = {
         'Social Protection',
       ],
       data: [
-        [2.9167, 3.3333, 2.8105, 2.4306, 2.3611, 2.4306, 2.5000, 2.4265, 1.8571, 1.9643, 2.0000],
-        [3.3333, 3.3333, 3.3333, 2.5000, 2.5000, 2.5000, 2.5000, 2.5000, 1.9048, 1.9048, 2.0001],
-        [null, 2.1134, 1.9476, 1.8439, 2.0130, 1.1632, 2.2766, 1.0417, 2.0000, 2.0000, 2.0000],
+        [2.9167, 3.3333, 2.8105, 2.4306, 2.3611, 2.4306, 2.5, 2.4265, 1.8571, 1.9643, 2.0],
+        [3.3333, 3.3333, 3.3333, 2.5, 2.5, 2.5, 2.5, 2.5, 1.9048, 1.9048, 2.0001],
+        [null, 2.1134, 1.9476, 1.8439, 2.013, 1.1632, 2.2766, 1.0417, 2.0, 2.0, 2.0],
         [0.9656, 1.1834, 0.6239, 0.5512, 0.5682, 0.3819, 0.3771, 0.2641, 0.5644, 0.4643, 0.2247],
         [0.0941, 0.3425, 0.6827, 0.9042, 1.4015, 1.3582, 1.1587, 1.1622, 0.8112, 0.7329, 0.6818],
-        [0.5480, 1.0780, 0.3458, 0.3699, 0.0474, 0.9268, 0.8618, 0.6910, 0.2954, 0.6763, 0.5917],
-        [0.5714, 0.4496, 2.5000, 0.3699, 0.6604, 0.5832, 0.7935, 0.2729, 0.3616, 1.0833, 0.5578],
-        [null, null, 3.0944, 2.2106, 2.1230, 2.2650, 2.1363, 2.3461, 2.0000, 2.0000, 2.0000],
+        [0.548, 1.078, 0.3458, 0.3699, 0.0474, 0.9268, 0.8618, 0.691, 0.2954, 0.6763, 0.5917],
+        [0.5714, 0.4496, 2.5, 0.3699, 0.6604, 0.5832, 0.7935, 0.2729, 0.3616, 1.0833, 0.5578],
+        [null, null, 3.0944, 2.2106, 2.123, 2.265, 2.1363, 2.3461, 2.0, 2.0, 2.0],
         [0.6895, 0.8681, 1.9525, 1.0121, 0.2076, 0.3754, 0.5876, 0.4468, 0.0007, 0.3979, 0.3307],
-        [null, null, 0.7996, 0.0199, 1.5081, 0.8581, 0.7192, 0.7175, 1.2860, 0.5640, 1.7674],
+        [null, null, 0.7996, 0.0199, 1.5081, 0.8581, 0.7192, 0.7175, 1.286, 0.564, 1.7674],
       ],
     },
     infrastructure: {
@@ -512,16 +512,16 @@ const cmciData = {
         'FinTech Capacity',
       ],
       data: [
-        [0.1529, 0.0014, 0.3671, 0.0063, 2.5000, 0.1069, 0.1070, 0.0522, 0.0093, 0.0023, 0.0075],
-        [3.2937, 3.3117, 3.3116, 2.4816, 2.4595, 2.4622, 2.4708, 2.4859, 1.9770, 1.9584, 1.9183],
-        [3.3333, 3.3333, 3.3333, 2.5000, 2.5000, 2.5000, 2.5000, 2.5000, 1.5710, 1.5800, 0.9936],
-        [0.3047, 0.6300, 0.2556, 0.2835, 0.2358, 1.4174, 1.6161, 0.4990, 0.3798, 0.2739, 0.1476],
-        [0.2918, 0.9501, 0.7898, 0.6803, 1.0588, 1.0409, 0.9383, 0.8080, 0.7691, 0.6235, 0.6333],
+        [0.1529, 0.0014, 0.3671, 0.0063, 2.5, 0.1069, 0.107, 0.0522, 0.0093, 0.0023, 0.0075],
+        [3.2937, 3.3117, 3.3116, 2.4816, 2.4595, 2.4622, 2.4708, 2.4859, 1.977, 1.9584, 1.9183],
+        [3.3333, 3.3333, 3.3333, 2.5, 2.5, 2.5, 2.5, 2.5, 1.571, 1.58, 0.9936],
+        [0.3047, 0.63, 0.2556, 0.2835, 0.2358, 1.4174, 1.6161, 0.499, 0.3798, 0.2739, 0.1476],
+        [0.2918, 0.9501, 0.7898, 0.6803, 1.0588, 1.0409, 0.9383, 0.808, 0.7691, 0.6235, 0.6333],
         [0.7312, 1.1021, 0.5881, 1.0757, 1.3019, 1.4124, 1.8439, 1.6773, 1.3211, 1.1773, 1.1994],
-        [0.9969, 0.3214, 3.1818, 0.9360, 0.9837, 0.6890, 0.6609, 0.1339, 0.0028, 0.5090, 0.3190],
-        [0.4443, 1.2404, 1.4686, 2.0252, 2.4510, 1.6233, 1.7930, 1.4424, 1.3014, 1.1746, 1.1444],
-        [0.2851, 0.9028, 1.5769, 0.8516, 1.3371, 2.0000, 1.7045, 0.7292, 0.2456, 0.2857, 0.2629],
-        [0.2766, 0.7878, 1.4357, 1.0312, 1.1308, 1.2178, 1.3721, 1.1044, 1.3944, 1.3760, 1.4153],
+        [0.9969, 0.3214, 3.1818, 0.936, 0.9837, 0.689, 0.6609, 0.1339, 0.0028, 0.509, 0.319],
+        [0.4443, 1.2404, 1.4686, 2.0252, 2.451, 1.6233, 1.793, 1.4424, 1.3014, 1.1746, 1.1444],
+        [0.2851, 0.9028, 1.5769, 0.8516, 1.3371, 2.0, 1.7045, 0.7292, 0.2456, 0.2857, 0.2629],
+        [0.2766, 0.7878, 1.4357, 1.0312, 1.1308, 1.2178, 1.3721, 1.1044, 1.3944, 1.376, 1.4153],
       ],
     },
     resiliency: {
@@ -538,16 +538,16 @@ const cmciData = {
         'Sanitary System',
       ],
       data: [
-        [null, null, null, 2.5000, 2.5000, 2.4998, 2.5000, 2.4800, 1.9524, 1.9643, 1.9828],
-        [null, null, null, 2.5000, 2.5000, 2.4405, 2.5000, 2.5000, 1.8889, 1.9524, 1.9091],
-        [null, null, null, 2.5000, 2.5000, 1.2500, 2.5000, 1.2635, 1.1748, 1.0745, 1.0136],
-        [null, null, null, 2.5000, 2.5000, 2.5000, 2.5000, 1.3571, 1.0884, 1.0090, 1.0041],
+        [null, null, null, 2.5, 2.5, 2.4998, 2.5, 2.48, 1.9524, 1.9643, 1.9828],
+        [null, null, null, 2.5, 2.5, 2.4405, 2.5, 2.5, 1.8889, 1.9524, 1.9091],
+        [null, null, null, 2.5, 2.5, 1.25, 2.5, 1.2635, 1.1748, 1.0745, 1.0136],
+        [null, null, null, 2.5, 2.5, 2.5, 2.5, 1.3571, 1.0884, 1.009, 1.0041],
         [null, null, null, 0.0627, 0.2109, 0.2672, 0.5516, 0.7942, 0.3579, 0.3638, 0.7416],
-        [null, null, null, 2.5000, 2.5000, 2.5000, 2.5000, 2.5000, 2.0000, 2.0000, 2.0000],
-        [null, null, null, 1.2760, 1.2982, 0.9502, 0.9828, 0.5961, 0.6450, 0.5757, 0.5241],
+        [null, null, null, 2.5, 2.5, 2.5, 2.5, 2.5, 2.0, 2.0, 2.0],
+        [null, null, null, 1.276, 1.2982, 0.9502, 0.9828, 0.5961, 0.645, 0.5757, 0.5241],
         [null, null, null, 1.0546, 1.7227, 1.9294, 1.9393, 1.5884, 1.6553, 1.6443, 1.4978],
-        [null, null, null, 0.3476, 0.0423, 0.0773, 0.0464, 0.0220, 0.3059, 0.3949, 0.2657],
-        [null, null, null, 1.6180, 1.6659, 1.8815, 1.9875, 1.8762, 1.5004, 1.5192, 1.5212],
+        [null, null, null, 0.3476, 0.0423, 0.0773, 0.0464, 0.022, 0.3059, 0.3949, 0.2657],
+        [null, null, null, 1.618, 1.6659, 1.8815, 1.9875, 1.8762, 1.5004, 1.5192, 1.5212],
       ],
     },
     innovation: {
@@ -566,9 +566,9 @@ const cmciData = {
       data: [
         [null, null, null, null, null, null, null, null, 2.0001, 2.0001, 2.0001],
         [null, null, null, null, null, null, null, null, 0.0036, 0.0763, 0.0925],
-        [null, null, null, null, null, null, null, null, 2.0000, 2.0000, 2.0000],
-        [null, null, null, null, null, null, null, null, 2.0000, 2.0000, 2.0000],
-        [null, null, null, null, null, null, null, null, 0.8490, 1.2746, 0.9778],
+        [null, null, null, null, null, null, null, null, 2.0, 2.0, 2.0],
+        [null, null, null, null, null, null, null, null, 2.0, 2.0, 2.0],
+        [null, null, null, null, null, null, null, null, 0.849, 1.2746, 0.9778],
         [null, null, null, null, null, null, null, null, 0.4989, 0.3639, 0.3832],
         [null, null, null, null, null, null, null, null, 1.0473, 1.0299, 1.0016],
         [null, null, null, null, null, null, null, null, 0.7291, 0.8892, 0.9868],
@@ -581,10 +581,10 @@ const cmciData = {
     labels: ['Health', 'Education', 'Social Protection', 'Peace & Order', 'LGU Investment'],
     data: [
       [0.7312, 1.1021, 0.5881, 1.0757, 1.3019, 1.4124, 1.8439, 1.6773, 1.3211, 1.1773, 1.1994],
-      [0.2918, 0.9501, 0.7898, 0.6803, 1.0588, 1.0409, 0.9383, 0.8080, 0.7691, 0.6235, 0.6333],
-      [null, null, 0.7996, 0.0199, 1.5081, 0.8581, 0.7192, 0.7175, 1.2860, 0.5640, 1.7674],
+      [0.2918, 0.9501, 0.7898, 0.6803, 1.0588, 1.0409, 0.9383, 0.808, 0.7691, 0.6235, 0.6333],
+      [null, null, 0.7996, 0.0199, 1.5081, 0.8581, 0.7192, 0.7175, 1.286, 0.564, 1.7674],
       [0.6895, 0.8681, 1.9525, 1.0121, 0.2076, 0.3754, 0.5876, 0.4468, 0.0007, 0.3979, 0.3307],
-      [0.9969, 0.3214, 3.1818, 0.9360, 0.9837, 0.6890, 0.6609, 0.1339, 0.0028, 0.5090, 0.3190],
+      [0.9969, 0.3214, 3.1818, 0.936, 0.9837, 0.689, 0.6609, 0.1339, 0.0028, 0.509, 0.319],
     ],
   },
 };
@@ -633,7 +633,8 @@ function setupInteractiveBottomLegend(chartInstance, canvasId, labels, colors) {
   const btnAll = document.createElement('button');
   btnAll.type = 'button';
   btnAll.className = 'cmci-legend-btn active';
-  btnAll.innerHTML = '<i class="bi bi-check2-all"></i> <span data-i18n="stats-filter-all">All</span>';
+  btnAll.innerHTML =
+    '<i class="bi bi-check2-all"></i> <span data-i18n="stats-filter-all">All</span>';
 
   const btnClear = document.createElement('button');
   btnClear.type = 'button';
@@ -700,7 +701,7 @@ function setupInteractiveBottomLegend(chartInstance, canvasId, labels, colors) {
 
   function isolateIndicator(targetIndex) {
     labels.forEach((_, i) => {
-      const show = (i === targetIndex);
+      const show = i === targetIndex;
       chartInstance.setDatasetVisibility(i, show);
       if (legendItems[i]) {
         legendItems[i].classList.toggle('active', show);
@@ -766,7 +767,9 @@ function setupInteractiveBottomLegend(chartInstance, canvasId, labels, colors) {
         });
         if (matchIndex !== -1) {
           isolateIndicator(matchIndex);
-          panel.querySelectorAll('.cmci-indicator-card').forEach((c) => c.classList.remove('card-selected'));
+          panel
+            .querySelectorAll('.cmci-indicator-card')
+            .forEach((c) => c.classList.remove('card-selected'));
           card.classList.add('card-selected');
         }
       });
@@ -983,6 +986,166 @@ function initCMCISection() {
   observer.observe(cmciSection);
 }
 
+/**
+ * Load Fiscal Transparency Data (SSOT) & 5-Year SRE Series (2021-2025)
+ */
+let FISCAL_SERIES_DATA = null;
+
+function renderTrendBadge(
+  elementId,
+  currentVal,
+  prevVal,
+  isPercentagePts = false,
+  prevYearLabel = ''
+) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+
+  if (prevVal === undefined || prevVal === null || prevVal === 0) {
+    el.className = 'finance-trend-badge badge-neutral';
+    el.innerHTML = `<i class="bi bi-dash"></i> Base Year (${prevYearLabel ? '20' + prevYearLabel : '2021'})`;
+    return;
+  }
+
+  if (isPercentagePts) {
+    const diff = currentVal - prevVal;
+    const sign = diff >= 0 ? '+' : '';
+    const badgeClass =
+      Math.abs(diff) < 0.05 ? 'badge-neutral' : diff > 0 ? 'badge-up' : 'badge-down';
+    const icon = diff >= 0 ? 'bi-arrow-up-right' : 'bi-arrow-down-right';
+    el.className = `finance-trend-badge ${badgeClass}`;
+    el.innerHTML = `<i class="bi ${icon}"></i> ${sign}${diff.toFixed(2)}% vs FY${prevYearLabel}`;
+  } else {
+    const pctChange = ((currentVal - prevVal) / prevVal) * 100;
+    const sign = pctChange >= 0 ? '+' : '';
+    const badgeClass = pctChange >= 0 ? 'badge-up' : 'badge-down';
+    const icon = pctChange >= 0 ? 'bi-arrow-up-right' : 'bi-arrow-down-right';
+    el.className = `finance-trend-badge ${badgeClass}`;
+    el.innerHTML = `<i class="bi ${icon}"></i> ${sign}${pctChange.toFixed(2)}% vs FY${prevYearLabel}`;
+  }
+}
+
+function updateFinanceDisplay(annual) {
+  if (!annual) return;
+
+  // Update Annual Income
+  const annualValEl = document.getElementById('finance-annual-income-value');
+  const annualDetailEl = document.getElementById('finance-annual-income-detail');
+  if (annualValEl && annual.annual_income?.formatted_short) {
+    annualValEl.textContent = annual.annual_income.formatted_short;
+  }
+  if (annualDetailEl && annual.annual_income?.formatted_full) {
+    annualDetailEl.textContent = annual.annual_income.formatted_full;
+  }
+
+  // Update IRA Share
+  const iraValEl = document.getElementById('finance-ira-share-value');
+  const iraDetailEl = document.getElementById('finance-ira-share-detail');
+  if (iraValEl && annual.ira_share?.formatted_short) {
+    iraValEl.textContent = annual.ira_share.formatted_short;
+  }
+  if (iraDetailEl && annual.ira_share?.label) {
+    iraDetailEl.textContent = annual.ira_share.label;
+  }
+
+  // Update IRA Dependency
+  const iraDepValEl = document.getElementById('finance-ira-dependency-value');
+  if (iraDepValEl && annual.ira_dependency_rate !== undefined) {
+    iraDepValEl.textContent = `${annual.ira_dependency_rate}%`;
+  }
+
+  // Update YoY Trend Badges
+  const year = annual.year || parseInt(annual.source_dataset, 10) || 2025;
+  const prevYear = year - 1;
+  const prevData = FISCAL_SERIES_DATA ? FISCAL_SERIES_DATA[String(prevYear)] : null;
+  const prevYearShort = String(prevYear).slice(-2);
+
+  renderTrendBadge(
+    'finance-annual-income-trend',
+    annual.annual_income?.exact_amount,
+    prevData?.annual_income?.exact_amount,
+    false,
+    prevYearShort
+  );
+
+  renderTrendBadge(
+    'finance-ira-share-trend',
+    annual.ira_share?.exact_amount,
+    prevData?.ira_share?.exact_amount,
+    false,
+    prevYearShort
+  );
+
+  renderTrendBadge(
+    'finance-ira-dependency-trend',
+    annual.ira_dependency_rate,
+    prevData?.ira_dependency_rate,
+    true,
+    prevYearShort
+  );
+
+  // Update Breakdown bars and labels
+  const iraBar = document.getElementById('finance-breakdown-ira');
+  const localBar = document.getElementById('finance-breakdown-local');
+  const iraLabel = document.getElementById('finance-breakdown-ira-label');
+  const localLabel = document.getElementById('finance-breakdown-local-label');
+
+  if (iraBar && annual.ira_dependency_rate !== undefined) {
+    iraBar.dataset.width = annual.ira_dependency_rate;
+    iraBar.style.width = `${annual.ira_dependency_rate}%`;
+    if (iraLabel) {
+      iraLabel.textContent = `IRA ${annual.ira_dependency_rate}%`;
+    }
+  }
+
+  if (localBar && annual.local_sources_share?.percentage !== undefined) {
+    localBar.dataset.width = annual.local_sources_share.percentage;
+    localBar.style.width = `${annual.local_sources_share.percentage}%`;
+    if (localLabel) {
+      localLabel.textContent = `Local ${annual.local_sources_share.percentage}%`;
+    }
+  }
+
+  // Update source dataset tag
+  const sourceDatasetEl = document.getElementById('finance-source-dataset');
+  if (sourceDatasetEl && annual.source_dataset) {
+    sourceDatasetEl.textContent = annual.source_dataset;
+  }
+}
+
+async function loadFiscalData() {
+  const financeSection = document.getElementById('stats-finance-section');
+  if (!financeSection) return;
+
+  try {
+    const basePath = window.location.pathname.includes('/statistics') ? '../' : './';
+    const response = await fetch(`${basePath}data/fiscal_transparency.json`);
+    if (!response.ok) return;
+
+    const data = await response.json();
+    FISCAL_SERIES_DATA = data.annual_income_series || null;
+
+    const yearSelect = document.getElementById('finance-year-select');
+    if (yearSelect && FISCAL_SERIES_DATA) {
+      yearSelect.addEventListener('change', function () {
+        const selectedYear = this.value;
+        if (FISCAL_SERIES_DATA[selectedYear]) {
+          updateFinanceDisplay(FISCAL_SERIES_DATA[selectedYear]);
+        }
+      });
+    }
+
+    const initialData =
+      (FISCAL_SERIES_DATA && FISCAL_SERIES_DATA['2025']) || data.annual_income_summary || null;
+
+    if (initialData) {
+      updateFinanceDisplay(initialData);
+    }
+  } catch (error) {
+    console.warn('Could not load fiscal data dynamically, using fallback markup:', error);
+  }
+}
+
 // Initialize on DOM ready
 if (typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', () => {
@@ -990,6 +1153,7 @@ if (typeof document !== 'undefined') {
     initCharts();
     initEconomyCounters();
     initCMCISection();
+    loadFiscalData();
   });
 }
 
@@ -1001,5 +1165,6 @@ if (typeof module !== 'undefined' && module.exports) {
     cmciData,
     COLORS,
     animateCount,
+    loadFiscalData,
   };
 }

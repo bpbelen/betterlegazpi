@@ -1,9 +1,362 @@
 {
   "_schema_version": "1.0",
-  "_status": "draft",
-  "_source": "Bureau of Local Government Finance (BLGF) / LGU Solano Budget Office",
-  "_note": "Awaiting official fiscal data",
-  "municipality": "Solano",
-  "province": "Nueva Vizcaya",
-  "fiscal_years": []
+  "_status": "published",
+  "_source": "Bureau of Local Government Finance (BLGF)",
+  "_source_url": "https://blgf.gov.ph/",
+  "city": "Legazpi",
+  "province": "Albay",
+  "annual_income_summary": {
+    "latest_year": 2025,
+    "source_dataset": "2025 SRE Data",
+    "annual_income": {
+      "formatted_short": "₱2.13B",
+      "exact_amount": 2125280392.66,
+      "formatted_full": "₱2,125,280,392.66"
+    },
+    "ira_share": {
+      "formatted_short": "₱1.19B",
+      "exact_amount": 1191003041.0,
+      "formatted_full": "₱1,191,003,041.00",
+      "label": "Internal Revenue Allotment"
+    },
+    "ira_dependency_rate": 56.04,
+    "local_sources_share": {
+      "formatted_short": "₱891.51M",
+      "exact_amount": 891508312.34,
+      "percentage": 43.96,
+      "label": "Local Sources"
+    }
+  },
+  "annual_income_series": {
+    "2021": {
+      "year": 2021,
+      "annual_income": {
+        "formatted_short": "₱1.44B",
+        "exact_amount": 1442062428.51,
+        "formatted_full": "₱1,442,062,428.51"
+      },
+      "ira_share": {
+        "formatted_short": "₱813.22M",
+        "exact_amount": 813218082.96,
+        "formatted_full": "₱813,218,082.96",
+        "label": "Internal Revenue Allotment"
+      },
+      "ira_dependency_rate": 56.39,
+      "local_sources_share": {
+        "formatted_short": "₱621.72M",
+        "exact_amount": 621717967.81,
+        "percentage": 43.61,
+        "label": "Local Sources"
+      },
+      "source_dataset": "2021 SRE Data"
+    },
+    "2022": {
+      "year": 2022,
+      "annual_income": {
+        "formatted_short": "₱1.85B",
+        "exact_amount": 1848067024.89,
+        "formatted_full": "₱1,848,067,024.89"
+      },
+      "ira_share": {
+        "formatted_short": "₱1.11B",
+        "exact_amount": 1111869264.0,
+        "formatted_full": "₱1,111,869,264.00",
+        "label": "Internal Revenue Allotment"
+      },
+      "ira_dependency_rate": 60.16,
+      "local_sources_share": {
+        "formatted_short": "₱733.73M",
+        "exact_amount": 733730537.81,
+        "percentage": 39.84,
+        "label": "Local Sources"
+      },
+      "source_dataset": "2022 SRE Data"
+    },
+    "2023": {
+      "year": 2023,
+      "annual_income": {
+        "formatted_short": "₱1.73B",
+        "exact_amount": 1731701617.27,
+        "formatted_full": "₱1,731,701,617.27"
+      },
+      "ira_share": {
+        "formatted_short": "₱947.34M",
+        "exact_amount": 947343696.96,
+        "formatted_full": "₱947,343,696.96",
+        "label": "Internal Revenue Allotment"
+      },
+      "ira_dependency_rate": 54.71,
+      "local_sources_share": {
+        "formatted_short": "₱779.48M",
+        "exact_amount": 779480670.96,
+        "percentage": 45.29,
+        "label": "Local Sources"
+      },
+      "source_dataset": "2023 SRE Data"
+    },
+    "2024": {
+      "year": 2024,
+      "annual_income": {
+        "formatted_short": "₱1.83B",
+        "exact_amount": 1832839535.98,
+        "formatted_full": "₱1,832,839,535.98"
+      },
+      "ira_share": {
+        "formatted_short": "₱1.00B",
+        "exact_amount": 1003952745.0,
+        "formatted_full": "₱1,003,952,745.00",
+        "label": "Internal Revenue Allotment"
+      },
+      "ira_dependency_rate": 54.78,
+      "local_sources_share": {
+        "formatted_short": "₱824.02M",
+        "exact_amount": 824021300.57,
+        "percentage": 45.22,
+        "label": "Local Sources"
+      },
+      "source_dataset": "2024 SRE Data"
+    },
+    "2025": {
+      "year": 2025,
+      "annual_income": {
+        "formatted_short": "₱2.13B",
+        "exact_amount": 2125280392.66,
+        "formatted_full": "₱2,125,280,392.66"
+      },
+      "ira_share": {
+        "formatted_short": "₱1.19B",
+        "exact_amount": 1191003041.0,
+        "formatted_full": "₱1,191,003,041.00",
+        "label": "Internal Revenue Allotment"
+      },
+      "ira_dependency_rate": 56.04,
+      "local_sources_share": {
+        "formatted_short": "₱891.51M",
+        "exact_amount": 891508312.34,
+        "percentage": 43.96,
+        "label": "Local Sources"
+      },
+      "source_dataset": "2025 SRE Data"
+    }
+  },
+  "quarterly_sre_reports": {
+    "2024": {
+      "q1": {
+        "period": "Q1 2024",
+        "periodLabel": "Jan - Mar",
+        "income": {
+          "local": 462.7,
+          "external": 252.68,
+          "total": 715.38,
+          "breakdown": {
+            "local": {
+              "tax_revenue": {
+                "total": 410.04,
+                "real_property_tax": {
+                  "total": 147.05,
+                  "general_fund": 81.94,
+                  "sef": 65.11
+                },
+                "tax_on_business": 256.76,
+                "other_taxes": 6.22
+              },
+              "non_tax_revenue": {
+                "total": 52.67,
+                "regulatory_fees": 15.35,
+                "service_user_charges": 25.1,
+                "economic_enterprises": 9.75,
+                "other_receipts": 2.47
+              }
+            },
+            "external": {
+              "national_tax_allotment": 250.99,
+              "other_national_shares": 0.0,
+              "inter_local_transfers": 0.0,
+              "extraordinary_receipts_grants": 1.69
+            }
+          }
+        },
+        "expenditures": {
+          "gps": 73.35,
+          "social": 29.16,
+          "economic": 25.08,
+          "debt": 0.0,
+          "total": 127.6,
+          "breakdown": {
+            "social": {
+              "education_culture_sports": 1.84,
+              "health_nutrition": 22.68,
+              "labor_employment": 0.0,
+              "housing_community_dev": 0.87,
+              "social_welfare": 3.78
+            }
+          }
+        },
+        "netIncome": 587.78,
+        "fundBalance": 2048.79
+      },
+      "q2": {
+        "period": "Q2 2024",
+        "periodLabel": "Apr - Jun",
+        "income": {
+          "local": 581.52,
+          "external": 505.18,
+          "total": 1086.7,
+          "breakdown": {
+            "local": {
+              "tax_revenue": {
+                "total": 501.35,
+                "real_property_tax": {
+                  "total": 169.54,
+                  "general_fund": 94.06,
+                  "sef": 75.49
+                },
+                "tax_on_business": 321.51,
+                "other_taxes": 10.29
+              },
+              "non_tax_revenue": {
+                "total": 80.16,
+                "regulatory_fees": 17.93,
+                "service_user_charges": 34.78,
+                "economic_enterprises": 21.09,
+                "other_receipts": 6.36
+              }
+            },
+            "external": {
+              "national_tax_allotment": 501.98,
+              "other_national_shares": 0.01,
+              "inter_local_transfers": 0.0,
+              "extraordinary_receipts_grants": 3.19
+            }
+          }
+        },
+        "expenditures": {
+          "gps": 182.45,
+          "social": 81.55,
+          "economic": 63.73,
+          "debt": 0.0,
+          "total": 327.73,
+          "breakdown": {
+            "social": {
+              "education_culture_sports": 10.13,
+              "health_nutrition": 59.35,
+              "labor_employment": 0.0,
+              "housing_community_dev": 2.22,
+              "social_welfare": 9.85
+            }
+          }
+        },
+        "netIncome": 758.97,
+        "fundBalance": 2152.12
+      },
+      "q3": {
+        "period": "Q3 2024",
+        "periodLabel": "Jul - Sep",
+        "income": {
+          "local": 714.44,
+          "external": 756.74,
+          "total": 1471.18,
+          "breakdown": {
+            "local": {
+              "tax_revenue": {
+                "total": 594.89,
+                "real_property_tax": {
+                  "total": 185.34,
+                  "general_fund": 102.34,
+                  "sef": 82.99
+                },
+                "tax_on_business": 395.23,
+                "other_taxes": 14.31
+              },
+              "non_tax_revenue": {
+                "total": 119.55,
+                "regulatory_fees": 26.78,
+                "service_user_charges": 49.19,
+                "economic_enterprises": 32.17,
+                "other_receipts": 11.41
+              }
+            },
+            "external": {
+              "national_tax_allotment": 752.96,
+              "other_national_shares": 0.08,
+              "inter_local_transfers": 0.0,
+              "extraordinary_receipts_grants": 3.7
+            }
+          }
+        },
+        "expenditures": {
+          "gps": 283.6,
+          "social": 149.51,
+          "economic": 95.86,
+          "debt": 0.0,
+          "total": 528.96,
+          "breakdown": {
+            "social": {
+              "education_culture_sports": 22.9,
+              "health_nutrition": 89.55,
+              "labor_employment": 0.0,
+              "housing_community_dev": 5.52,
+              "social_welfare": 31.54
+            }
+          }
+        },
+        "netIncome": 942.22,
+        "fundBalance": 2243.05
+      },
+      "q4": {
+        "period": "Q4 2024",
+        "periodLabel": "Oct - Dec",
+        "income": {
+          "local": 824.02,
+          "external": 1008.82,
+          "total": 1832.84,
+          "breakdown": {
+            "local": {
+              "tax_revenue": {
+                "total": 671.42,
+                "real_property_tax": {
+                  "total": 207.75,
+                  "general_fund": 114.73,
+                  "sef": 93.02
+                },
+                "tax_on_business": 445.79,
+                "other_taxes": 17.88
+              },
+              "non_tax_revenue": {
+                "total": 152.6,
+                "regulatory_fees": 28.69,
+                "service_user_charges": 64.44,
+                "economic_enterprises": 43.41,
+                "other_receipts": 16.07
+              }
+            },
+            "external": {
+              "national_tax_allotment": 1003.95,
+              "other_national_shares": 0.29,
+              "inter_local_transfers": 0.0,
+              "extraordinary_receipts_grants": 4.58
+            }
+          }
+        },
+        "expenditures": {
+          "gps": 551.31,
+          "social": 298.74,
+          "economic": 148.58,
+          "debt": 0.0,
+          "total": 998.63,
+          "breakdown": {
+            "social": {
+              "education_culture_sports": 40.18,
+              "health_nutrition": 159.46,
+              "labor_employment": 0.0,
+              "housing_community_dev": 8.09,
+              "social_welfare": 91.02
+            }
+          }
+        },
+        "netIncome": 834.21,
+        "fundBalance": 1729.21
+      }
+    }
+  }
 }

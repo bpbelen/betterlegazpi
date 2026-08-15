@@ -161,6 +161,58 @@
   margin: 0;
 }
 
+.section-header-with-actions {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.finance-year-selector-wrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.finance-year-select {
+  padding: 7px 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary, #0032a0);
+  background-color: #ffffff;
+  border: 1.5px solid rgba(0, 50, 160, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.finance-year-select:hover {
+  border-color: var(--color-primary, #0032a0);
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.finance-year-select:focus {
+  border-color: var(--color-primary, #0032a0);
+  box-shadow: 0 0 0 3px rgba(0, 50, 160, 0.15);
+}
+
+@media (max-width: 768px) {
+  .section-header-with-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .finance-year-selector-wrap {
+    position: static;
+    margin-top: 14px;
+  }
+}
+
 /* Finance Section */
 .finance-grid {
   display: grid;
@@ -197,6 +249,7 @@
 .finance-card-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   font-size: 0.875rem;
   font-weight: 500;
@@ -204,8 +257,57 @@
   margin-bottom: 12px;
 }
 
+.finance-card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .finance-card-header i {
   font-size: 1rem;
+}
+
+/* Trend Badges */
+.finance-trend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  border-radius: 12px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.finance-trend-badge.badge-up {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+}
+
+.finance-card-primary .finance-trend-badge.badge-up {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.finance-trend-badge.badge-down {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+.finance-card-primary .finance-trend-badge.badge-down {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fed7aa;
+}
+
+.finance-trend-badge.badge-neutral {
+  background: rgba(100, 116, 139, 0.12);
+  color: #475569;
+}
+
+.finance-card-primary .finance-trend-badge.badge-neutral {
+  background: rgba(255, 255, 255, 0.18);
+  color: #e2e8f0;
 }
 
 .finance-card-value {
@@ -269,6 +371,94 @@
   justify-content: center;
   gap: 32px;
   margin-top: 16px;
+}
+
+/* SRE Breakdown CTA Card */
+.finance-sre-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e0effe 100%);
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.finance-sre-cta:hover {
+  border-color: #7dd3fc;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.12);
+  transform: translateY(-1px);
+}
+
+.finance-sre-cta-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.finance-sre-cta-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--color-primary, #0032a0) 0%, #0284c7 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.finance-sre-cta-text h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 2px 0;
+}
+
+.finance-sre-cta-text p {
+  font-size: 0.8125rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.finance-sre-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  background: var(--color-primary, #0032a0);
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 50, 160, 0.2);
+}
+
+.finance-sre-cta-btn:hover {
+  background: #002270;
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+@media (max-width: 768px) {
+  .finance-sre-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .finance-sre-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .legend-item {

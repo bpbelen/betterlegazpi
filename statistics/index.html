@@ -131,7 +131,13 @@
           <ul>
             <li><a href="../" data-i18n="nav-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                data-i18n="nav-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="stats-certificates">Certificates</a>
@@ -168,7 +174,13 @@
             <li><a href="../government/" data-i18n="nav-government">Government</a></li>
             <li><a href="./" class="active" data-i18n="nav-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="../legislative/"
+                data-i18n="nav-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../legislative/ordinance-framework" data-i18n="stats-ordinance-framework"
@@ -288,53 +300,96 @@
       </section>
 
       <!-- Municipal Finance -->
-      <section class="stats-section stats-finance animate-on-scroll">
+      <section class="stats-section stats-finance animate-on-scroll" id="stats-finance-section">
         <div class="container">
-          <div class="section-header-minimal">
-            <span class="section-tag"
-              ><i class="bi bi-cash-stack"></i> <span data-i18n="stats-finance">Finance</span></span
-            >
-            <h2 data-i18n="stats-municipal-income">City Income</h2>
-            <p data-i18n="stats-financial-standing-for-fiscal-year-2023">
-              Financial standing for fiscal year 2023
-            </p>
+          <div class="section-header-minimal section-header-with-actions">
+            <div>
+              <span class="section-tag"
+                ><i class="bi bi-cash-stack"></i>
+                <span data-i18n="stats-finance">Finance</span></span
+              >
+              <h2 data-i18n="stats-municipal-income">City Income</h2>
+              <p id="finance-subtitle">5-year Financial Standing based on Annual SRE (2021-2025)</p>
+            </div>
+            <div class="finance-year-selector-wrap">
+              <select
+                id="finance-year-select"
+                class="finance-year-select"
+                aria-label="Select Fiscal Year"
+              >
+                <option value="2025" selected>FY 2025 (Latest)</option>
+                <option value="2024">FY 2024</option>
+                <option value="2023">FY 2023</option>
+                <option value="2022">FY 2022</option>
+                <option value="2021">FY 2021</option>
+              </select>
+            </div>
           </div>
 
           <div class="finance-grid">
             <div class="finance-card finance-card-primary">
               <div class="finance-card-header">
-                <i class="bi bi-graph-up-arrow"></i>
-                <span data-i18n="stats-annual-income">Annual Income</span>
+                <div class="finance-card-header-left">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span data-i18n="stats-annual-income">Annual Income</span>
+                </div>
+                <span class="finance-trend-badge badge-up" id="finance-annual-income-trend">
+                  <i class="bi bi-arrow-up-right"></i> +15.96% vs FY24
+                </span>
               </div>
-              <div class="finance-card-value">₱371.33M</div>
-              <div class="finance-card-detail">₱371,329,918.71</div>
+              <div class="finance-card-value" id="finance-annual-income-value">₱2.13B</div>
+              <div class="finance-card-detail" id="finance-annual-income-detail">
+                ₱2,125,280,392.66
+              </div>
             </div>
             <div class="finance-card">
               <div class="finance-card-header">
-                <i class="bi bi-bank"></i>
-                <span data-i18n="stats-ira-share">IRA Share</span>
+                <div class="finance-card-header-left">
+                  <i class="bi bi-bank"></i>
+                  <span data-i18n="stats-ira-share">IRA Share</span>
+                </div>
+                <span class="finance-trend-badge badge-up" id="finance-ira-share-trend">
+                  <i class="bi bi-arrow-up-right"></i> +18.63% vs FY24
+                </span>
               </div>
-              <div class="finance-card-value">₱220.77M</div>
-              <div class="finance-card-detail">Internal Revenue Allotment</div>
+              <div class="finance-card-value" id="finance-ira-share-value">₱1.19B</div>
+              <div class="finance-card-detail" id="finance-ira-share-detail">
+                Internal Revenue Allotment
+              </div>
             </div>
             <div class="finance-card">
               <div class="finance-card-header">
-                <i class="bi bi-pie-chart-fill"></i>
-                <span data-i18n="stats-ira-dependency">IRA Dependency</span>
+                <div class="finance-card-header-left">
+                  <i class="bi bi-pie-chart-fill"></i>
+                  <span data-i18n="stats-ira-dependency">IRA Dependency</span>
+                </div>
+                <span class="finance-trend-badge badge-neutral" id="finance-ira-dependency-trend">
+                  <i class="bi bi-arrow-up-right"></i> +1.26% vs FY24
+                </span>
               </div>
-              <div class="finance-card-value">59.45%</div>
-              <div class="finance-card-detail">National Tax Share</div>
+              <div class="finance-card-value" id="finance-ira-dependency-value">56.04%</div>
+              <div class="finance-card-detail" id="finance-ira-dependency-detail">
+                National Tax Share
+              </div>
             </div>
           </div>
 
           <div class="income-breakdown animate-on-scroll">
             <h4 data-i18n="stats-income-composition">Income Composition</h4>
             <div class="breakdown-bar">
-              <div class="breakdown-segment breakdown-ira breakdown-initial" data-width="59.45">
-                <span class="breakdown-label" data-i18n="stats-ira-5945">IRA 59.45%</span>
+              <div
+                class="breakdown-segment breakdown-ira breakdown-initial"
+                id="finance-breakdown-ira"
+                data-width="56.04"
+              >
+                <span class="breakdown-label" id="finance-breakdown-ira-label">IRA 56.04%</span>
               </div>
-              <div class="breakdown-segment breakdown-local breakdown-initial" data-width="40.55">
-                <span class="breakdown-label" data-i18n="stats-local-4055">Local 40.55%</span>
+              <div
+                class="breakdown-segment breakdown-local breakdown-initial"
+                id="finance-breakdown-local"
+                data-width="43.96"
+              >
+                <span class="breakdown-label" id="finance-breakdown-local-label">Local 43.96%</span>
               </div>
             </div>
             <div class="breakdown-legend">
@@ -347,6 +402,26 @@
             </div>
           </div>
 
+          <!-- SRE Breakdown CTA Card -->
+          <div class="finance-sre-cta animate-on-scroll">
+            <div class="finance-sre-cta-content">
+              <div class="finance-sre-cta-icon">
+                <i class="bi bi-pie-chart-fill"></i>
+              </div>
+              <div class="finance-sre-cta-text">
+                <h4>Detailed SRE Breakdown</h4>
+                <p>
+                  Do you want to see the breakdown of the latest Statement of Receipts &
+                  Expenditures (SRE) by quarter?
+                </p>
+              </div>
+            </div>
+            <a href="../budget/#budget-sre-section" class="finance-sre-cta-btn">
+              <span>View Quarterly SRE Breakdown</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
           <p class="data-source">
             <i class="bi bi-info-circle"></i> Source:
             <a
@@ -356,7 +431,7 @@
               data-i18n="stats-bureau-of-local-government-finance-blgf"
               >Bureau of Local Government Finance (BLGF)</a
             >
-            – 2023 SRE Data
+            – <span id="finance-source-dataset">2025 SRE Data</span>
           </p>
         </div>
       </section>

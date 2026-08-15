@@ -51,6 +51,20 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Screen Reader / Visually Hidden Utility */
+.visually-hidden,
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 ul {
   list-style: none;
 }
@@ -6016,7 +6030,9 @@ cklist with Icons - Proper Indentation */
   padding: 12px 22px;
   border-radius: var(--border-radius);
   text-decoration: none;
-  transition: background 0.18s ease, transform 0.15s ease;
+  transition:
+    background 0.18s ease,
+    transform 0.15s ease;
 }
 
 .home-fb-cta:hover,
@@ -6104,12 +6120,26 @@ cklist with Icons - Proper Indentation */
   animation: skeleton-shimmer 1.4s infinite ease-in-out;
 }
 
-.fb-skel-bar--title { height: 13px; width: 72%; margin-bottom: 8px; }
-.fb-skel-bar--100   { width: 100%; }
-.fb-skel-bar--80    { width: 80%; }
-.fb-skel-bar--60    { width: 60%; }
-.fb-skel-bar--45    { width: 45%; }
-.fb-skel-bar--sm    { height: 8px; }
+.fb-skel-bar--title {
+  height: 13px;
+  width: 72%;
+  margin-bottom: 8px;
+}
+.fb-skel-bar--100 {
+  width: 100%;
+}
+.fb-skel-bar--80 {
+  width: 80%;
+}
+.fb-skel-bar--60 {
+  width: 60%;
+}
+.fb-skel-bar--45 {
+  width: 45%;
+}
+.fb-skel-bar--sm {
+  height: 8px;
+}
 
 /* ── Post cards ── */
 .fb-feed-local {
@@ -9766,7 +9796,9 @@ a.a11y-contact-item:hover i {
   pointer-events: none;
   /* Visibility flips only after the fade-out finishes, so the close animation
      stays visible; opacity still carries the motion. */
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  transition:
+    opacity 0.3s ease,
+    visibility 0s linear 0.3s;
   /* Pre-promote the overlay to its own persistent GPU compositing layer at page
      load — even while hidden (opacity:0). This forces the backdrop-filter layer
      to be established ONCE up front, so toggling opacity 0->1 on reveal can no
@@ -9846,7 +9878,9 @@ a.a11y-contact-item:hover i {
   justify-content: center;
   font-size: 1rem;
   z-index: 2;
-  transition: background 0.18s ease, transform 0.18s ease;
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
 }
 
 /* Expand the pointer target to ~46px without growing the 36px visual circle,
@@ -10006,7 +10040,9 @@ a.a11y-contact-item:hover i {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
   box-shadow: 0 4px 16px rgba(0, 50, 160, 0.32);
   font-family: var(--font-main);
 }
@@ -10167,5 +10203,93 @@ a.a11y-contact-item:hover i {
   .vol-popup-skip:focus-visible {
     outline: 2px solid Highlight;
     outline-offset: 2px;
+  }
+}
+
+/* SRE Breakdown CTA Card */
+.finance-sre-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e0effe 100%);
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.finance-sre-cta:hover {
+  border-color: #7dd3fc;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.12);
+  transform: translateY(-1px);
+}
+
+.finance-sre-cta-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.finance-sre-cta-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--color-primary, #0032a0) 0%, #0284c7 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.finance-sre-cta-text h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 2px 0;
+}
+
+.finance-sre-cta-text p {
+  font-size: 0.8125rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.finance-sre-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  background: var(--color-primary, #0032a0);
+  color: #ffffff !important;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 50, 160, 0.2);
+}
+
+.finance-sre-cta-btn:hover {
+  background: #002270;
+  color: #ffffff !important;
+  transform: translateX(2px);
+}
+
+@media (max-width: 768px) {
+  .finance-sre-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .finance-sre-cta-btn {
+    width: 100%;
+    justify-content: center;
   }
 }

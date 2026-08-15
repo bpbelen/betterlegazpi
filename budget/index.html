@@ -125,7 +125,13 @@
           <ul>
             <li><a href="../" data-i18n="budget-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="budget-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                data-i18n="budget-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="budget-certificates"
@@ -166,7 +172,13 @@
             <li><a href="../government/" data-i18n="budget-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="budget-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="budget-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="../legislative/"
+                data-i18n="budget-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a
@@ -249,7 +261,7 @@
           </div>
         </div>
       </section>
-      <section class="sre-section-v2 animate-on-scroll">
+      <section class="sre-section-v2 animate-on-scroll" id="budget-sre-section">
         <div class="container">
           <div class="sre-header-v2">
             <div class="sre-title-group">
@@ -260,8 +272,8 @@
               <h2 data-i18n="budget-statement-of-receipts-expenditures">
                 Statement of Receipts & Expenditures
               </h2>
-              <p data-i18n="budget-fy-2025-quarterly-financial-performance">
-                FY 2025 quarterly financial performance
+              <p data-i18n="budget-fy-2024-quarterly-financial-performance">
+                FY 2024 quarterly financial performance
               </p>
             </div>
             <div class="sre-period-toggle" role="tablist" aria-label="Select fiscal quarter">
@@ -285,20 +297,40 @@
                 <span class="sre-period-q" data-i18n="budget-q2">Q2</span>
                 <span class="sre-period-range" data-i18n="budget-apr-jun">Apr - Jun</span>
               </button>
+              <button
+                type="button"
+                class="sre-period-btn"
+                role="tab"
+                aria-selected="false"
+                data-quarter="q3"
+              >
+                <span class="sre-period-q" data-i18n="budget-q3">Q3</span>
+                <span class="sre-period-range" data-i18n="budget-jul-sep">Jul - Sep</span>
+              </button>
+              <button
+                type="button"
+                class="sre-period-btn"
+                role="tab"
+                aria-selected="false"
+                data-quarter="q4"
+              >
+                <span class="sre-period-q" data-i18n="budget-q4">Q4</span>
+                <span class="sre-period-range" data-i18n="budget-oct-dec">Oct - Dec</span>
+              </button>
             </div>
           </div>
           <div class="sre-metrics-row">
             <div class="sre-metric-card sre-metric-income">
               <div class="sre-metric-icon"><i class="bi bi-arrow-down-circle"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-total-income">₱158.47 M</span>
+                <span class="sre-metric-value" id="sre-total-income">₱715.38 M</span>
                 <span class="sre-metric-label" data-i18n="budget-total-income">Total Income</span>
               </div>
             </div>
             <div class="sre-metric-card sre-metric-expense">
               <div class="sre-metric-icon"><i class="bi bi-arrow-up-circle"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-total-expense">₱67.51 M</span>
+                <span class="sre-metric-value" id="sre-total-expense">₱127.60 M</span>
                 <span class="sre-metric-label" data-i18n="budget-total-expenditures"
                   >Total Expenditures</span
                 >
@@ -307,7 +339,7 @@
             <div class="sre-metric-card sre-metric-net">
               <div class="sre-metric-icon"><i class="bi bi-plus-slash-minus"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-net-income">₱90.96 M</span>
+                <span class="sre-metric-value" id="sre-net-income">₱587.78 M</span>
                 <span class="sre-metric-label" data-i18n="budget-net-operating-income"
                   >Net Operating Income</span
                 >
@@ -316,7 +348,7 @@
             <div class="sre-metric-card sre-metric-balance">
               <div class="sre-metric-icon"><i class="bi bi-wallet2"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-fund-balance">₱283.29 M</span>
+                <span class="sre-metric-value" id="sre-fund-balance">₱2,048.79 M</span>
                 <span class="sre-metric-label" data-i18n="budget-fund-balance-end"
                   >Fund Balance (End)</span
                 >
@@ -331,57 +363,343 @@
                   <i class="bi bi-pie-chart"></i>
                   <span data-i18n="budget-income-sources">Income Sources</span>
                 </h3>
+                <span class="sre-drilldown-hint"
+                  ><i class="bi bi-pie-chart"></i> Click arc to expand</span
+                >
               </div>
               <div class="sre-panel-body">
                 <div class="sre-chart-container">
                   <canvas id="incomeChartV2"></canvas>
+                  <button
+                    type="button"
+                    class="sre-chart-reset-btn"
+                    id="income-chart-reset"
+                    aria-label="Reset Income Chart"
+                    style="display: none"
+                  >
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                    <span id="income-chart-reset-text">Reset View</span>
+                  </button>
                 </div>
-                <div class="sre-breakdown-list">
-                  <div class="sre-breakdown-item" data-type="local">
-                    <span class="sre-item-indicator sre-indicator-local"></span>
-                    <div class="sre-item-info">
-                      <span class="sre-item-name" data-i18n="budget-local-sources"
-                        >Local Sources</span
-                      >
-                      <span class="sre-item-detail" data-i18n="budget-tax-nontax-revenue"
-                        >Tax & Non-Tax Revenue</span
+                <!-- Floating Sub-Allocation Focus Bar -->
+                <div class="sre-callout-focus" id="income-callout-focus" style="display: none">
+                  <div class="sre-callout-header">
+                    <div class="sre-callout-title-wrap">
+                      <span class="sre-callout-dot" id="income-callout-dot"></span>
+                      <span class="sre-callout-title" id="income-callout-title"
+                        >Sub-Allocation Breakdown</span
                       >
                     </div>
-                    <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-income-local">₱88.85 M</span>
-                      <span class="sre-item-pct" id="sre-income-local-pct">56.1%</span>
+                    <button
+                      type="button"
+                      class="sre-callout-close"
+                      id="income-callout-close"
+                      aria-label="Close focus view"
+                    >
+                      &times;
+                    </button>
+                  </div>
+                  <div class="sre-callout-bar" id="income-callout-bar"></div>
+                  <div class="sre-callout-badges" id="income-callout-badges"></div>
+                </div>
+                <div class="sre-list-column-header">
+                  <span class="sre-col-name">Source / Revenue Stream</span>
+                  <span class="sre-col-val">Amount (% of Total Income)</span>
+                </div>
+                <div class="sre-breakdown-list" id="sre-income-list">
+                  <!-- Level 1: Local Sources -->
+                  <div class="sre-breakdown-group">
+                    <div
+                      class="sre-breakdown-item has-children"
+                      data-type="local"
+                      role="button"
+                      tabindex="0"
+                      aria-expanded="false"
+                    >
+                      <span class="sre-item-indicator sre-indicator-local"></span>
+                      <div class="sre-item-info">
+                        <span class="sre-item-name"
+                          ><i class="bi bi-chevron-right sre-chevron"></i>
+                          <span data-i18n="budget-local-sources">Local Sources</span></span
+                        >
+                        <span class="sre-item-detail" data-i18n="budget-tax-nontax-revenue"
+                          >Tax & Non-Tax Revenue</span
+                        >
+                      </div>
+                      <div class="sre-item-values">
+                        <span class="sre-item-amount" id="sre-income-local">₱462.70 M</span>
+                        <span class="sre-item-pct" id="sre-income-local-pct">64.7%</span>
+                      </div>
+                    </div>
+                    <!-- Level 2 Sub-list under Local Sources -->
+                    <div class="sre-sub-list">
+                      <!-- Level 2: Tax Revenue -->
+                      <div class="sre-breakdown-group">
+                        <div
+                          class="sre-sub-item has-children"
+                          data-type="tax-revenue"
+                          role="button"
+                          tabindex="0"
+                          aria-expanded="false"
+                        >
+                          <span class="sre-sub-indicator sre-ind-tax"></span>
+                          <div class="sre-item-info">
+                            <span class="sre-item-name"
+                              ><i class="bi bi-chevron-right sre-chevron"></i> Tax Revenue</span
+                            >
+                            <span class="sre-item-detail">RPT, Business & Other Taxes</span>
+                          </div>
+                          <div class="sre-item-values">
+                            <span class="sre-item-amount" id="sre-income-tax-total">₱410.04 M</span>
+                            <span class="sre-item-pct" id="sre-income-tax-total-pct">57.3%</span>
+                          </div>
+                        </div>
+                        <!-- Level 3 Sub-list under Tax Revenue -->
+                        <div class="sre-sub-sub-list">
+                          <!-- Real Property Tax -->
+                          <div class="sre-breakdown-group">
+                            <div
+                              class="sre-sub-sub-item has-children"
+                              data-type="rpt"
+                              role="button"
+                              tabindex="0"
+                              aria-expanded="false"
+                            >
+                              <div class="sre-item-info">
+                                <span class="sre-item-name"
+                                  ><i class="bi bi-chevron-right sre-chevron"></i> Real Property Tax
+                                  (RPT)</span
+                                >
+                              </div>
+                              <div class="sre-item-values">
+                                <span class="sre-item-amount" id="sre-income-rpt-total"
+                                  >₱147.05 M</span
+                                >
+                                <span class="sre-item-pct" id="sre-income-rpt-total-pct"
+                                  >20.6%</span
+                                >
+                              </div>
+                            </div>
+                            <!-- Level 4: GF & SEF -->
+                            <div class="sre-sub-deep-list">
+                              <div class="sre-deep-item">
+                                <span class="sre-item-name">General Fund</span>
+                                <span class="sre-item-amount" id="sre-income-rpt-gf">₱81.94 M</span>
+                              </div>
+                              <div class="sre-deep-item">
+                                <span class="sre-item-name">Special Education Fund (SEF)</span>
+                                <span class="sre-item-amount" id="sre-income-rpt-sef"
+                                  >₱65.11 M</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Tax on Business -->
+                          <div class="sre-sub-sub-item">
+                            <div class="sre-item-info">
+                              <span class="sre-item-name">Tax on Business</span>
+                            </div>
+                            <div class="sre-item-values">
+                              <span class="sre-item-amount" id="sre-income-tax-business"
+                                >₱256.76 M</span
+                              >
+                              <span class="sre-item-pct" id="sre-income-tax-business-pct"
+                                >35.9%</span
+                              >
+                            </div>
+                          </div>
+                          <!-- Other Taxes -->
+                          <div class="sre-sub-sub-item">
+                            <div class="sre-item-info">
+                              <span class="sre-item-name">Other Taxes</span>
+                            </div>
+                            <div class="sre-item-values">
+                              <span class="sre-item-amount" id="sre-income-tax-other">₱6.22 M</span>
+                              <span class="sre-item-pct" id="sre-income-tax-other-pct">0.9%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Level 2: Non-Tax Revenue -->
+                      <div class="sre-breakdown-group">
+                        <div
+                          class="sre-sub-item has-children"
+                          data-type="nontax-revenue"
+                          role="button"
+                          tabindex="0"
+                          aria-expanded="false"
+                        >
+                          <span class="sre-sub-indicator sre-ind-nontax"></span>
+                          <div class="sre-item-info">
+                            <span class="sre-item-name"
+                              ><i class="bi bi-chevron-right sre-chevron"></i> Non-Tax Revenue</span
+                            >
+                            <span class="sre-item-detail">Fees, Charges & Enterprises</span>
+                          </div>
+                          <div class="sre-item-values">
+                            <span class="sre-item-amount" id="sre-income-nontax-total"
+                              >₱52.67 M</span
+                            >
+                            <span class="sre-item-pct" id="sre-income-nontax-total-pct">7.4%</span>
+                          </div>
+                        </div>
+                        <!-- Level 3 Sub-list under Non-Tax Revenue -->
+                        <div class="sre-sub-sub-list">
+                          <div class="sre-sub-sub-item">
+                            <div class="sre-item-info">
+                              <span class="sre-item-name">Regulatory Fees</span>
+                            </div>
+                            <div class="sre-item-values">
+                              <span class="sre-item-amount" id="sre-income-nontax-regulatory"
+                                >₱15.35 M</span
+                              ><span class="sre-item-pct" id="sre-income-nontax-regulatory-pct"
+                                >2.1%</span
+                              >
+                            </div>
+                          </div>
+                          <div class="sre-sub-sub-item">
+                            <div class="sre-item-info">
+                              <span class="sre-item-name">Service / User Charges</span>
+                            </div>
+                            <div class="sre-item-values">
+                              <span class="sre-item-amount" id="sre-income-nontax-service"
+                                >₱25.10 M</span
+                              ><span class="sre-item-pct" id="sre-income-nontax-service-pct"
+                                >3.5%</span
+                              >
+                            </div>
+                          </div>
+                          <div class="sre-sub-sub-item">
+                            <div class="sre-item-info">
+                              <span class="sre-item-name">Economic Enterprises</span>
+                            </div>
+                            <div class="sre-item-values">
+                              <span class="sre-item-amount" id="sre-income-nontax-enterprise"
+                                >₱9.75 M</span
+                              ><span class="sre-item-pct" id="sre-income-nontax-enterprise-pct"
+                                >1.4%</span
+                              >
+                            </div>
+                          </div>
+                          <div class="sre-sub-sub-item">
+                            <div class="sre-item-info">
+                              <span class="sre-item-name">Other Receipts</span>
+                            </div>
+                            <div class="sre-item-values">
+                              <span class="sre-item-amount" id="sre-income-nontax-other"
+                                >₱2.47 M</span
+                              ><span class="sre-item-pct" id="sre-income-nontax-other-pct"
+                                >0.3%</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="sre-breakdown-item" data-type="external">
-                    <span class="sre-item-indicator sre-indicator-external"></span>
-                    <div class="sre-item-info">
-                      <span class="sre-item-name" data-i18n="budget-external-sources"
-                        >External Sources</span
-                      >
-                      <span class="sre-item-detail" data-i18n="budget-national-tax-allotment"
-                        >National Tax Allotment</span
-                      >
+
+                  <!-- Level 1: External Sources -->
+                  <div class="sre-breakdown-group">
+                    <div
+                      class="sre-breakdown-item has-children"
+                      data-type="external"
+                      role="button"
+                      tabindex="0"
+                      aria-expanded="false"
+                    >
+                      <span class="sre-item-indicator sre-indicator-external"></span>
+                      <div class="sre-item-info">
+                        <span class="sre-item-name"
+                          ><i class="bi bi-chevron-right sre-chevron"></i>
+                          <span data-i18n="budget-external-sources">External Sources</span></span
+                        >
+                        <span class="sre-item-detail" data-i18n="budget-national-tax-allotment"
+                          >National Tax Allotment & Grants</span
+                        >
+                      </div>
+                      <div class="sre-item-values">
+                        <span class="sre-item-amount" id="sre-income-external">₱252.68 M</span>
+                        <span class="sre-item-pct" id="sre-income-external-pct">35.3%</span>
+                      </div>
                     </div>
-                    <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-income-external">₱69.62 M</span>
-                      <span class="sre-item-pct" id="sre-income-external-pct">43.9%</span>
+                    <!-- Level 2 Sub-list under External Sources -->
+                    <div class="sre-sub-list">
+                      <div class="sre-sub-item">
+                        <div class="sre-item-info">
+                          <span class="sre-item-name">National Tax Allotment (NTA)</span>
+                        </div>
+                        <div class="sre-item-values">
+                          <span class="sre-item-amount" id="sre-income-ext-nta">₱250.99 M</span
+                          ><span class="sre-item-pct" id="sre-income-ext-nta-pct">35.1%</span>
+                        </div>
+                      </div>
+                      <div class="sre-sub-item">
+                        <div class="sre-item-info">
+                          <span class="sre-item-name">Extraordinary Receipts / Grants</span>
+                        </div>
+                        <div class="sre-item-values">
+                          <span class="sre-item-amount" id="sre-income-ext-grants">₱1.69 M</span
+                          ><span class="sre-item-pct" id="sre-income-ext-grants-pct">0.2%</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="sre-breakdown-panel">
               <div class="sre-panel-header">
                 <h3>
                   <i class="bi bi-bar-chart"></i>
                   <span data-i18n="budget-expenditure-allocation">Expenditure Allocation</span>
                 </h3>
+                <span class="sre-drilldown-hint"
+                  ><i class="bi bi-pie-chart"></i> Click arc to expand</span
+                >
               </div>
               <div class="sre-panel-body">
                 <div class="sre-chart-container">
                   <canvas id="expenditureChartV2"></canvas>
+                  <button
+                    type="button"
+                    class="sre-chart-reset-btn"
+                    id="exp-chart-reset"
+                    aria-label="Reset Expenditure Chart"
+                    style="display: none"
+                  >
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                    <span id="exp-chart-reset-text">Reset View</span>
+                  </button>
                 </div>
-                <div class="sre-breakdown-list">
+                <!-- Floating Sub-Allocation Focus Bar -->
+                <div class="sre-callout-focus" id="exp-callout-focus" style="display: none">
+                  <div class="sre-callout-header">
+                    <div class="sre-callout-title-wrap">
+                      <span class="sre-callout-dot" id="exp-callout-dot"></span>
+                      <span class="sre-callout-title" id="exp-callout-title"
+                        >Sub-Allocation Breakdown</span
+                      >
+                    </div>
+                    <button
+                      type="button"
+                      class="sre-callout-close"
+                      id="exp-callout-close"
+                      aria-label="Close focus view"
+                    >
+                      &times;
+                    </button>
+                  </div>
+                  <div class="sre-callout-bar" id="exp-callout-bar"></div>
+                  <div class="sre-callout-badges" id="exp-callout-badges"></div>
+                </div>
+                <div class="sre-list-column-header">
+                  <span class="sre-col-name">Sector / Allocation Program</span>
+                  <span class="sre-col-val">Amount (% of Total Budget)</span>
+                </div>
+                <div class="sre-breakdown-list" id="sre-exp-list">
+                  <!-- General Public Services -->
                   <div class="sre-breakdown-item" data-type="gps">
                     <span class="sre-item-indicator sre-indicator-gps"></span>
                     <div class="sre-item-info">
@@ -393,25 +711,86 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-gps">₱42.76 M</span>
-                      <span class="sre-item-pct" id="sre-exp-gps-pct">63.3%</span>
+                      <span class="sre-item-amount" id="sre-exp-gps">₱73.35 M</span>
+                      <span class="sre-item-pct" id="sre-exp-gps-pct">57.5%</span>
                     </div>
                   </div>
-                  <div class="sre-breakdown-item" data-type="social">
-                    <span class="sre-item-indicator sre-indicator-social"></span>
-                    <div class="sre-item-info">
-                      <span class="sre-item-name" data-i18n="budget-social-services"
-                        >Social Services</span
-                      >
-                      <span class="sre-item-detail" data-i18n="budget-health-education-welfare"
-                        >Health, Education, Welfare</span
-                      >
+
+                  <!-- Social Services (Expandable) -->
+                  <div class="sre-breakdown-group">
+                    <div
+                      class="sre-breakdown-item has-children"
+                      data-type="social"
+                      role="button"
+                      tabindex="0"
+                      aria-expanded="false"
+                    >
+                      <span class="sre-item-indicator sre-indicator-social"></span>
+                      <div class="sre-item-info">
+                        <span class="sre-item-name"
+                          ><i class="bi bi-chevron-right sre-chevron"></i>
+                          <span data-i18n="budget-social-services">Social Services</span></span
+                        >
+                        <span class="sre-item-detail" data-i18n="budget-health-education-welfare"
+                          >Health, Education, Welfare & Housing</span
+                        >
+                      </div>
+                      <div class="sre-item-values">
+                        <span class="sre-item-amount" id="sre-exp-social">₱29.16 M</span>
+                        <span class="sre-item-pct" id="sre-exp-social-pct">22.8%</span>
+                      </div>
                     </div>
-                    <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-social">₱13.33 M</span>
-                      <span class="sre-item-pct" id="sre-exp-social-pct">19.7%</span>
+                    <!-- Level 2 Sub-list under Social Services -->
+                    <div class="sre-sub-list">
+                      <div class="sre-sub-item">
+                        <div class="sre-item-info">
+                          <span class="sre-item-name">Health, Nutrition & Population Control</span>
+                        </div>
+                        <div class="sre-item-values">
+                          <span class="sre-item-amount" id="sre-exp-social-health">₱22.68 M</span
+                          ><span class="sre-item-pct" id="sre-exp-social-health-pct">17.8%</span>
+                        </div>
+                      </div>
+                      <div class="sre-sub-item">
+                        <div class="sre-item-info">
+                          <span class="sre-item-name">Education, Culture & Sports</span>
+                        </div>
+                        <div class="sre-item-values">
+                          <span class="sre-item-amount" id="sre-exp-social-edu">₱1.84 M</span
+                          ><span class="sre-item-pct" id="sre-exp-social-edu-pct">1.4%</span>
+                        </div>
+                      </div>
+                      <div class="sre-sub-item">
+                        <div class="sre-item-info">
+                          <span class="sre-item-name">Social Services & Social Welfare</span>
+                        </div>
+                        <div class="sre-item-values">
+                          <span class="sre-item-amount" id="sre-exp-social-welfare">₱3.78 M</span
+                          ><span class="sre-item-pct" id="sre-exp-social-welfare-pct">3.0%</span>
+                        </div>
+                      </div>
+                      <div class="sre-sub-item">
+                        <div class="sre-item-info">
+                          <span class="sre-item-name">Housing & Community Development</span>
+                        </div>
+                        <div class="sre-item-values">
+                          <span class="sre-item-amount" id="sre-exp-social-housing">₱0.87 M</span
+                          ><span class="sre-item-pct" id="sre-exp-social-housing-pct">0.7%</span>
+                        </div>
+                      </div>
+                      <div class="sre-sub-item">
+                        <div class="sre-item-info">
+                          <span class="sre-item-name">Labor & Employment</span>
+                        </div>
+                        <div class="sre-item-values">
+                          <span class="sre-item-amount" id="sre-exp-social-labor">₱0.00 M</span
+                          ><span class="sre-item-pct" id="sre-exp-social-labor-pct">0.0%</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
+
+                  <!-- Economic Services -->
                   <div class="sre-breakdown-item" data-type="economic">
                     <span class="sre-item-indicator sre-indicator-economic"></span>
                     <div class="sre-item-info">
@@ -423,10 +802,12 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-economic">₱11.07 M</span>
-                      <span class="sre-item-pct" id="sre-exp-economic-pct">16.4%</span>
+                      <span class="sre-item-amount" id="sre-exp-economic">₱25.08 M</span>
+                      <span class="sre-item-pct" id="sre-exp-economic-pct">19.7%</span>
                     </div>
                   </div>
+
+                  <!-- Debt Service -->
                   <div class="sre-breakdown-item" data-type="debt">
                     <span class="sre-item-indicator sre-indicator-debt"></span>
                     <div class="sre-item-info">
@@ -438,13 +819,33 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-debt">₱0.35 M</span>
-                      <span class="sre-item-pct" id="sre-exp-debt-pct">0.5%</span>
+                      <span class="sre-item-amount" id="sre-exp-debt">₱0.00 M</span>
+                      <span class="sre-item-pct" id="sre-exp-debt-pct">0.0%</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- Counterpart Annual SRE CTA Banner -->
+          <div class="finance-sre-cta animate-on-scroll">
+            <div class="finance-sre-cta-content">
+              <div class="finance-sre-cta-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <div class="finance-sre-cta-text">
+                <h4>5-Year Annual SRE Standing</h4>
+                <p>
+                  Do you want to see Legazpi City's 5-year annual financial standing (2021–2025) and
+                  IRA dependency?
+                </p>
+              </div>
+            </div>
+            <a href="../statistics/#stats-finance-section" class="finance-sre-cta-btn">
+              <span>View 5-Year Annual Income</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
           </div>
 
           <p class="sre-source">
