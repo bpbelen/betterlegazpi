@@ -68,10 +68,10 @@ const barangayData = [
   { name: 'Poblacion South', population: 817, classification: 'Urban' },
 ];
 
-// Historical population data (Census years)
+// Historical population data (Census years - Official PSA)
 const historicalData = {
   years: [1990, 1995, 2000, 2007, 2010, 2015, 2020, 2024],
-  populations: [38500, 43200, 48100, 52800, 56400, 60500, 65287, 69296],
+  populations: [121116, 141657, 157010, 179481, 182201, 196639, 209533, 210616],
 };
 
 // Economic indicators data
@@ -79,7 +79,7 @@ const economicData = {
   registeredBusinesses: 1200,
   agriculturalLand: 8500, // hectares
   incomeClass: '1st Class',
-  landArea: 162.7, // km²
+  landArea: 161.6, // km²
 };
 
 // Chart instances storage
@@ -162,14 +162,18 @@ function createHistoricalLineChart(canvasId) {
     return null;
   }
 
+  const points = historicalData.years.map((year, index) => ({
+    x: year,
+    y: historicalData.populations[index],
+  }));
+
   const chart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: historicalData.years,
       datasets: [
         {
           label: 'Population',
-          data: historicalData.populations,
+          data: points,
           borderColor: CHART_COLORS.primary,
           backgroundColor: 'rgba(0, 50, 160, 0.1)',
           fill: true,
@@ -191,16 +195,33 @@ function createHistoricalLineChart(canvasId) {
         },
         tooltip: {
           callbacks: {
+            title: function (items) {
+              return items.length ? `Census Year: ${items[0].raw.x}` : '';
+            },
             label: function (context) {
-              return `Population: ${context.raw.toLocaleString()}`;
+              return `Population: ${context.raw.y.toLocaleString()}`;
             },
           },
         },
       },
       scales: {
-        y: {
-          beginAtZero: false,
+        x: {
+          type: 'linear',
+          min: 1990,
+          max: 2025,
+          grid: { display: false },
           ticks: {
+            stepSize: 5,
+            callback: function (val) {
+              return val.toString();
+            },
+          },
+        },
+        y: {
+          min: 120000,
+          max: 220000,
+          ticks: {
+            stepSize: 20000,
             callback: function (value) {
               return value.toLocaleString();
             },

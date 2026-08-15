@@ -39,10 +39,10 @@ const barangayData = [
   { name: 'Poblacion South', pop: 817 },
 ];
 
-// Historical data
+// Historical data (Legazpi City Census - Official PSA)
 const historicalData = {
   years: [1990, 1995, 2000, 2007, 2010, 2015, 2020, 2024],
-  populations: [38006, 42857, 47288, 53004, 56831, 62649, 65896, 69296],
+  populations: [121116, 141657, 157010, 179481, 182201, 196639, 209533, 210616],
 };
 
 // Chart instances
@@ -164,18 +164,22 @@ function createHistoricalChart() {
   gradient.addColorStop(0, 'rgba(0, 50, 160, 0.2)');
   gradient.addColorStop(1, 'rgba(0, 50, 160, 0)');
 
+  const points = historicalData.years.map((year, index) => ({
+    x: year,
+    y: historicalData.populations[index],
+  }));
+
   charts.historical = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: historicalData.years,
       datasets: [
         {
           label: 'Population',
-          data: historicalData.populations,
+          data: points,
           borderColor: COLORS.primary,
           backgroundColor: gradient,
           fill: true,
-          tension: 0.4,
+          tension: 0.3,
           pointBackgroundColor: COLORS.primary,
           pointBorderColor: '#fff',
           pointBorderWidth: 3,
@@ -194,7 +198,7 @@ function createHistoricalChart() {
       },
       interaction: {
         intersect: false,
-        mode: 'index',
+        mode: 'nearest',
       },
       plugins: {
         legend: { display: false },
@@ -206,19 +210,29 @@ function createHistoricalChart() {
           cornerRadius: 8,
           displayColors: false,
           callbacks: {
-            label: (ctx) => `Population: ${ctx.raw.toLocaleString()}`,
+            title: (items) => (items.length ? `Census Year: ${items[0].raw.x}` : ''),
+            label: (ctx) => `Population: ${ctx.raw.y.toLocaleString()}`,
           },
         },
       },
       scales: {
         x: {
+          type: 'linear',
+          min: 1990,
+          max: 2025,
           grid: { display: false },
-          ticks: { font: { size: 12 } },
+          ticks: {
+            stepSize: 5,
+            font: { size: 12 },
+            callback: (v) => v.toString(),
+          },
         },
         y: {
-          beginAtZero: false,
+          min: 120000,
+          max: 220000,
           grid: { color: 'rgba(0,0,0,0.05)' },
           ticks: {
+            stepSize: 20000,
             font: { size: 12 },
             callback: (v) => v / 1000 + 'K',
           },
