@@ -87,9 +87,12 @@ if ('serviceWorker' in navigator) {
         .register('/sw.js')
         .then(function (reg) {
           // Check for updates every 30 minutes
-          setInterval(function () {
-            reg.update();
-          }, 30 * 60 * 1000);
+          setInterval(
+            function () {
+              reg.update();
+            },
+            30 * 60 * 1000
+          );
 
           reg.addEventListener('updatefound', function () {
             var newWorker = reg.installing;
@@ -339,7 +342,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!link) return;
       // If it's a dropdown trigger, don't close menu (handled by dropdown init)
       if (link.getAttribute('aria-haspopup') === 'true') return;
-      if (link.parentElement && link.parentElement.classList.contains('has-dropdown') && link.parentElement.querySelector('.dropdown-menu')) return;
+      if (
+        link.parentElement &&
+        link.parentElement.classList.contains('has-dropdown') &&
+        link.parentElement.querySelector('.dropdown-menu')
+      )
+        return;
       closeMobileMenu();
     });
 
@@ -595,4 +603,127 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   initEduAccordion();
+
+  // Education School Node Expand via Event Delegation
+  const initEduSchoolExpand = () => {
+    document.addEventListener('click', (e) => {
+      const card = e.target.closest('.edu-school-item.is-expandable');
+      if (!card) return;
+
+      // If clicking directly on an anchor tag (link), do not toggle card
+      if (e.target.closest('a')) return;
+
+      const details = card.querySelector('.edu-school-details');
+      if (!details) return;
+
+      const isExpanded = card.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        details.hidden = true;
+        card.setAttribute('aria-expanded', 'false');
+      } else {
+        details.hidden = false;
+        card.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const card = e.target.closest('.edu-school-item.is-expandable');
+      if (!card) return;
+
+      if (e.target.closest('a')) return;
+
+      const details = card.querySelector('.edu-school-details');
+      if (!details) return;
+
+      e.preventDefault();
+      const isExpanded = card.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        details.hidden = true;
+        card.setAttribute('aria-expanded', 'false');
+      } else {
+        details.hidden = false;
+        card.setAttribute('aria-expanded', 'true');
+      }
+    });
+  };
+
+  initEduSchoolExpand();
+
+  // Education Directory Real-Time Search & Filter
+  const initEduSearchAndFilter = () => {
+    const searchInput = document.getElementById('edu-school-search');
+    const searchClear = document.getElementById('edu-search-clear');
+    const filterPills = document.querySelectorAll('.edu-filter-pill');
+
+    if (!searchInput) return;
+
+    let activeFilter = 'all';
+
+    const filterSchools = () => {
+      const query = searchInput.value.trim().toLowerCase();
+
+      if (query.length > 0) {
+        if (searchClear) searchClear.hidden = false;
+      } else {
+        if (searchClear) searchClear.hidden = true;
+      }
+
+      const categories = document.querySelectorAll('.edu-category');
+
+      categories.forEach((cat) => {
+        const header = cat.querySelector('.edu-category-header');
+        const content = cat.querySelector('.edu-category-content');
+        const cards = cat.querySelectorAll('.edu-school-item');
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          const matchesQuery = !query || text.includes(query);
+
+          // Type matching (Public / Private / SUC)
+          let matchesType = true;
+          if (activeFilter !== 'all') {
+            const badge = card.querySelector('.badge-type');
+            const typeText = badge ? badge.textContent.trim().toLowerCase() : '';
+            matchesType = typeText === activeFilter;
+          }
+
+          if (matchesQuery && matchesType) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Auto expand category accordion if user is actively searching/filtering and matching cards exist
+        if ((query || activeFilter !== 'all') && visibleCount > 0) {
+          if (content) content.hidden = false;
+          if (header) header.setAttribute('aria-expanded', 'true');
+        }
+      });
+    };
+
+    searchInput.addEventListener('input', filterSchools);
+
+    if (searchClear) {
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        filterSchools();
+        searchInput.focus();
+      });
+    }
+
+    filterPills.forEach((pill) => {
+      pill.addEventListener('click', function () {
+        filterPills.forEach((p) => p.classList.remove('active'));
+        this.classList.add('active');
+        activeFilter = this.getAttribute('data-filter') || 'all';
+        filterSchools();
+      });
+    });
+  };
+
+  initEduSearchAndFilter();
 });

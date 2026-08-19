@@ -927,6 +927,7 @@ body.mobile-menu-open {
     opacity: 0;
     transform: translateY(100%);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -938,6 +939,7 @@ body.mobile-menu-open {
     opacity: 0;
     transform: translateX(-50%) translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
@@ -1070,6 +1072,7 @@ body.mobile-menu-open {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -1932,6 +1935,7 @@ body.mobile-menu-open {
 
 /* Service Item Cards - Detail Pages */
 .service-item-card {
+  position: relative;
   background: var(--color-white);
   border: 1px solid #e5e7eb;
   border-radius: 10px;
@@ -2960,6 +2964,7 @@ h6 {
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }
@@ -4066,57 +4071,75 @@ cklist with Icons - Proper Indentation */
 .barangay-bar[data-width='100'] {
   width: 100%;
 }
+
 .barangay-bar[data-width='72'] {
   width: 72%;
 }
+
 .barangay-bar[data-width='70'] {
   width: 70%;
 }
+
 .barangay-bar[data-width='63'] {
   width: 63%;
 }
+
 .barangay-bar[data-width='54'] {
   width: 54%;
 }
+
 .barangay-bar[data-width='52'] {
   width: 52%;
 }
+
 .barangay-bar[data-width='46'] {
   width: 46%;
 }
+
 .barangay-bar[data-width='42'] {
   width: 42%;
 }
+
 .barangay-bar[data-width='34'] {
   width: 34%;
 }
+
 .barangay-bar[data-width='29'] {
   width: 29%;
 }
+
 .barangay-bar[data-width='28'] {
   width: 28%;
 }
+
 .barangay-bar[data-width='23'] {
   width: 23%;
 }
+
 .barangay-bar[data-width='22'] {
   width: 22%;
 }
+
 .barangay-bar[data-width='21'] {
   width: 21%;
 }
+
 .barangay-bar[data-width='15'] {
   width: 15%;
 }
+
 .barangay-bar[data-width='14'] {
   width: 14%;
 }
+
 .barangay-bar[data-width='13'] {
   width: 13%;
 }
+
 .barangay-bar[data-width='11'] {
   width: 11%;
 }
+
 .barangay-bar[data-width='9'] {
   width: 9%;
 }
@@ -4362,9 +4385,11 @@ cklist with Icons - Proper Indentation */
 .demo-stat-ring-accent .demo-stat-number {
   color: var(--color-accent);
 }
+
 .demo-stat-ring-info .demo-stat-number {
   color: var(--color-info);
 }
+
 .demo-stat-ring-success .demo-stat-number {
   color: var(--color-success);
 }
@@ -4626,24 +4651,31 @@ cklist with Icons - Proper Indentation */
 .milestone-bar[data-percent='55'] {
   width: 55%;
 }
+
 .milestone-bar[data-percent='62'] {
   width: 62%;
 }
+
 .milestone-bar[data-percent='68'] {
   width: 68%;
 }
+
 .milestone-bar[data-percent='77'] {
   width: 77%;
 }
+
 .milestone-bar[data-percent='82'] {
   width: 82%;
 }
+
 .milestone-bar[data-percent='90'] {
   width: 90%;
 }
+
 .milestone-bar[data-percent='95'] {
   width: 95%;
 }
+
 .milestone-bar[data-percent='100'] {
   width: 100%;
 }
@@ -6235,18 +6267,23 @@ cklist with Icons - Proper Indentation */
   width: 72%;
   margin-bottom: 8px;
 }
+
 .fb-skel-bar--100 {
   width: 100%;
 }
+
 .fb-skel-bar--80 {
   width: 80%;
 }
+
 .fb-skel-bar--60 {
   width: 60%;
 }
+
 .fb-skel-bar--45 {
   width: 45%;
 }
+
 .fb-skel-bar--sm {
   height: 8px;
 }
@@ -8395,6 +8432,7 @@ a.a11y-contact-item:hover i {
     opacity: 0;
     transform: translateY(-4px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -8823,6 +8861,7 @@ a.a11y-contact-item:hover i {
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -8926,9 +8965,11 @@ a.a11y-contact-item:hover i {
 .leaflet-tile-pane {
   z-index: 200;
 }
+
 .leaflet-marker-pane {
   z-index: 600;
 }
+
 .leaflet-popup-pane {
   z-index: 700;
 }
@@ -9601,6 +9642,7 @@ a.a11y-contact-item:hover i {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 8px;
+  align-items: start;
 }
 
 .edu-school-item {
@@ -9612,6 +9654,7 @@ a.a11y-contact-item:hover i {
   border-radius: 6px;
   border-left: 3px solid var(--color-primary);
   transition: all 0.15s ease;
+  align-self: start;
 }
 
 .edu-school-item:hover {
@@ -9623,12 +9666,154 @@ a.a11y-contact-item:hover i {
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .edu-school-loc {
   font-size: 0.6875rem;
   color: var(--color-text-light);
   white-space: nowrap;
+}
+
+/* Expandable HEI Cards in Schools Directory */
+.edu-school-item.is-expandable {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  cursor: pointer;
+  padding: 10px 12px;
+  background: var(--color-bg-alt);
+  border-radius: 6px;
+  border-left: 3px solid var(--color-primary);
+  transition: all 0.15s ease;
+  align-self: start;
+}
+
+.edu-school-item.is-expandable:hover {
+  background: #eef2ff;
+  border-left-color: var(--color-primary-dark);
+}
+
+.edu-school-item.is-expandable:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.edu-school-item.is-expandable[aria-expanded='true'] {
+  background: #f8fafc;
+  border-left-color: var(--color-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 8px 12px;
+}
+
+.edu-school-item.is-expandable[aria-expanded='true'] .edu-school-name {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.edu-school-details {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edu-school-details[hidden] {
+  display: none;
+}
+
+.edu-detail-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+}
+
+.edu-detail-label {
+  font-weight: 500;
+  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 75px;
+  width: 75px;
+  flex-shrink: 0;
+}
+
+.edu-detail-label i {
+  color: #94a3b8;
+  font-size: 0.6875rem;
+}
+
+.edu-detail-value {
+  color: #475569;
+  word-break: break-word;
+  flex: 1;
+}
+
+.edu-detail-value .badge-type {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 600;
+  padding: 0px 6px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  text-transform: uppercase;
+}
+
+.edu-detail-link {
+  color: #475569;
+  text-decoration: underline;
+  text-decoration-color: #cbd5e1;
+  word-break: break-all;
+}
+
+.edu-detail-link:hover {
+  color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
+}
+
+.edu-tel-link {
+  color: #475569;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.edu-tel-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.edu-unlisted {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.sre-source {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.sre-source a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.sre-source a:hover {
+  color: var(--color-primary-dark);
 }
 
 @media (max-width: 640px) {
@@ -9884,6 +10069,7 @@ a.a11y-contact-item:hover i {
     opacity: 0;
     transform: scale(0.93) translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -9895,6 +10081,7 @@ a.a11y-contact-item:hover i {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
+
   to {
     opacity: 0;
     transform: scale(0.96) translateY(10px);
@@ -10418,6 +10605,7 @@ a.a11y-contact-item:hover i {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .finance-sre-cta-btn {
     width: 100%;
     justify-content: center;
@@ -10445,4 +10633,121 @@ a.a11y-contact-item:hover i {
 
 .source-credit-simple a:hover {
   color: #0369a1;
+}
+
+/* Schools Directory Search & Filter Controls */
+.edu-directory-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.edu-search-box {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+}
+
+.edu-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.edu-search-input {
+  width: 100%;
+  padding: 8px 36px 8px 34px;
+  font-size: 0.875rem;
+  color: #1e293b;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.edu-search-input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.edu-search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.edu-search-clear:hover {
+  color: #64748b;
+}
+
+.edu-filter-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.edu-filter-pill {
+  padding: 5px 12px;
+  font-size: 0.775rem;
+  font-weight: 500;
+  color: #64748b;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.edu-filter-pill:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.edu-filter-pill.active {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 4px rgba(13, 110, 253, 0.2);
+}
+
+/* Popping Top-Right "TO BE UPDATED" Badge */
+.badge-to-be-updated {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  background: #64748b;
+  color: #ffffff;
+  font-size: 0.675rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(100, 116, 139, 0.35);
+  z-index: 2;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
