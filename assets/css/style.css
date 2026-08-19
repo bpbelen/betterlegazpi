@@ -955,8 +955,10 @@ body.mobile-menu-open {
 .hotline-inner {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .hotline-label {
@@ -970,21 +972,25 @@ body.mobile-menu-open {
 .hotline-items {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .hotline-item {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   color: var(--color-white);
   background: rgba(255, 255, 255, 0.15);
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 20px;
   transition: all 0.2s ease;
   text-decoration: none;
   white-space: nowrap;
+  font-size: 0.8125rem;
+  width: auto;
 }
 
 .hotline-item:hover {
@@ -1047,6 +1053,7 @@ body.mobile-menu-open {
 
   .hotline-item {
     flex-shrink: 0;
+    width: auto;
     font-size: 0.75rem;
     padding: 4px 10px;
   }
@@ -7652,16 +7659,21 @@ cklist with Icons - Proper Indentation */
 }
 
 .hotline-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  row-gap: 4px;
   align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
+  padding: 12px 14px;
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   text-decoration: none;
   color: var(--color-text);
   transition: all 0.2s ease;
+  min-height: 72px;
+  box-sizing: border-box;
 }
 
 .hotline-card:hover {
@@ -7670,24 +7682,39 @@ cklist with Icons - Proper Indentation */
   text-decoration: none;
 }
 
+.hotline-card--medical:hover {
+  border-color: #0284c7;
+  background: #f0f9ff;
+}
+
 .hotline-card > i {
-  font-size: 1rem;
+  grid-row: 1 / 3;
+  grid-column: 1;
+  font-size: 1.125rem;
   color: #dc2626;
-  flex-shrink: 0;
+  align-self: center;
+  justify-self: center;
+}
+
+.hotline-card--medical > i {
+  color: #0284c7;
 }
 
 .hotline-card-label {
+  grid-column: 2;
+  grid-row: 1;
   font-size: 0.8125rem;
+  font-weight: 500;
   color: var(--color-text-light);
-  flex: 1;
-  min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.25;
+  white-space: normal;
+  overflow: visible;
 }
 
 .hotline-card-number {
-  font-size: 0.875rem;
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: var(--color-text);
   white-space: nowrap;
