@@ -1,54 +1,205 @@
 {
+  "_schema_version": "1.0",
+  "_sources": {
+    "executive": "https://legazpi.gov.ph/executive/",
+    "legislative": "https://legazpi.gov.ph/about-us/legislative/"
+  },
+  "city": "City of Legazpi",
+  "province": "Albay",
+  "term": "2025 - 2028",
   "mayor": {
-    "name": "Hon. Philip A. Dacayo",
-    "title": "Municipal Mayor",
+    "name": "Hon. Hisham B. Ismail",
+    "title": "City Mayor",
+    "email": "legazpicitymayorsoffice@gmail.com",
+    "phone": "0927-414-3768 (GLOBE) / 0912-298-3504 (TNT)",
+    "phones": [
+      { "number": "0927-414-3768", "network": "GLOBE" },
+      { "number": "0912-298-3504", "network": "TNT" }
+    ],
+    "office": "Office of the City Mayor",
     "image": "assets/images/officials/mayor.jpg"
   },
   "vice_mayor": {
-    "name": "Hon. Eduardo D. Tiongson",
-    "title": "Municipal Vice Mayor",
+    "name": "Hon. Luis Felipe L. Gutierrez",
+    "title": "City Vice Mayor",
+    "email": "Unlisted",
+    "phone": "(052) 820-5199",
+    "phones": [
+      { "number": "(052) 820-5199", "network": "Landline" },
+      { "number": "Unlisted", "network": "" }
+    ],
+    "office": "Office of the City Vice Mayor / Sangguniang Panlungsod",
     "image": "assets/images/officials/vice-mayor.jpg"
   },
   "councilors": [
     {
-      "name": "Hon. Councilor One",
-      "title": "SB Member",
+      "name": "Hon. Alan O. Rañola",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "Trade & Commerce", "icon": "bi-shop" },
+        { "name": "Good Governance, Public Ethics & Accountability", "icon": "bi-shield-check" },
+        { "name": "Tourism, Culture & Heritage", "icon": "bi-camera" }
+      ],
       "image": "assets/images/officials/sb1.jpg"
     },
     {
-      "name": "Hon. Councilor Two",
-      "title": "SB Member",
+      "name": "Hon. Lourence M. Beltran",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "Finance & Appropriations", "icon": "bi-cash-stack" },
+        { "name": "Public Works & Infrastructure", "icon": "bi-hammer" },
+        { "name": "Games, Amusement & Entertainment", "icon": "bi-controller" }
+      ],
       "image": "assets/images/officials/sb2.jpg"
     },
     {
-      "name": "Hon. Councilor Three",
-      "title": "SB Member",
+      "name": "Hon. Ismael B. Buban IV",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "Agriculture", "icon": "bi-tree" },
+        { "name": "Social Welfare & Protection", "icon": "bi-heart-pulse" },
+        { "name": "CSOs & People's Empowerment", "icon": "bi-people" }
+      ],
       "image": "assets/images/officials/sb3.jpg"
     },
     {
-      "name": "Hon. Councilor Four",
-      "title": "SB Member",
+      "name": "Hon. Charlton S. Lajara",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "Ways & Means", "icon": "bi-calculator" },
+        { "name": "Environmental Protection", "icon": "bi-flower1" },
+        { "name": "Public Order, Safety & Civil Defense", "icon": "bi-shield-shaded" }
+      ],
       "image": "assets/images/officials/sb4.jpg"
     },
     {
-      "name": "Hon. Councilor Five",
-      "title": "SB Member",
+      "name": "Hon. Vicente F. Baltazar III",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "ICT & E-Governance", "icon": "bi-laptop" },
+        { "name": "Sisterhood, Inter-LGU & International Relations", "icon": "bi-globe" }
+      ],
       "image": "assets/images/officials/sb5.jpg"
     },
     {
-      "name": "Hon. Councilor Six",
-      "title": "SB Member",
+      "name": "Hon. Maria Paz Salud C. Imperial",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "Women, Children & Family Welfare", "icon": "bi-gender-female" },
+        { "name": "Health & Sanitation", "icon": "bi-hospital" },
+        { "name": "Solo Parents, PWDs & Vulnerable Groups", "icon": "bi-person-arms-up" }
+      ],
       "image": "assets/images/officials/sb6.jpg"
     },
     {
-      "name": "Hon. Councilor Seven",
-      "title": "SB Member",
+      "name": "Hon. Alexander U. Jao",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "Senior Citizens Affairs", "icon": "bi-person-heart" },
+        { "name": "Sustainable Development Goals (SDG)", "icon": "bi-bullseye" }
+      ],
       "image": "assets/images/officials/sb7.jpg"
     },
     {
-      "name": "Hon. Councilor Eight",
-      "title": "SB Member",
+      "name": "Hon. Joseph Philip L. Lee",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "Cooperatives, Livelihood & Employment", "icon": "bi-buildings" },
+        { "name": "Education, Science, Technology & Arts", "icon": "bi-book" },
+        { "name": "DRRM & Climate Change Adaptation", "icon": "bi-cloud-lightning-rain" }
+      ],
       "image": "assets/images/officials/sb8.jpg"
+    },
+    {
+      "name": "Hon. Renato A. Valladolid",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "Human Rights & Social Justice", "icon": "bi-hammer" },
+        { "name": "Fisheries & Aquatic Resources", "icon": "bi-water" }
+      ],
+      "image": "assets/images/officials/sb9.jpg"
+    },
+    {
+      "name": "Hon. Roberto Rafael N. Lucila II",
+      "title": "SP Member",
+      "designation": "Sangguniang Panlungsod Member",
+      "is_ex_officio": false,
+      "badge_type": "regular",
+      "committees": [
+        { "name": "Laws, Rules & Oversight", "icon": "bi-journal-text" },
+        { "name": "Urban Planning, Housing & Resettlement", "icon": "bi-houses" },
+        { "name": "Public Utilities & Energy", "icon": "bi-lightning-charge" }
+      ],
+      "image": "assets/images/officials/sb10.jpg"
+    },
+    {
+      "name": "Atty. Amore Rex B. Rañeses",
+      "title": "Liga ng mga Barangay President",
+      "designation": "President, Association of Barangay Captains",
+      "is_ex_officio": true,
+      "badge_type": "liga",
+      "committees": [
+        { "name": "Barangay Affairs", "icon": "bi-geo-alt" }
+      ],
+      "image": "assets/images/officials/abc-rep.jpg"
+    },
+    {
+      "name": "John Nicolas C. Garbin",
+      "title": "PPSK President",
+      "designation": "President, Sangguniang Kabataan Federation",
+      "is_ex_officio": true,
+      "badge_type": "sk",
+      "committees": [
+        { "name": "Youth & Sports Development", "icon": "bi-trophy" }
+      ],
+      "image": "assets/images/officials/sk-rep.jpg"
+    }
+  ],
+  "ex_officio": [
+    {
+      "name": "Atty. Amore Rex B. Rañeses",
+      "title": "Liga ng mga Barangay President",
+      "designation": "President, Association of Barangay Captains",
+      "committees": [
+        { "name": "Barangay Affairs", "icon": "bi-geo-alt" }
+      ],
+      "image": "assets/images/officials/abc-rep.jpg"
+    },
+    {
+      "name": "John Nicolas C. Garbin",
+      "title": "PPSK President",
+      "designation": "President, Sangguniang Kabataan Federation",
+      "committees": [
+        { "name": "Youth & Sports Development", "icon": "bi-trophy" }
+      ],
+      "image": "assets/images/officials/sk-rep.jpg"
     }
   ]
 }

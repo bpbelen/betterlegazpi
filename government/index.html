@@ -15,50 +15,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Solano, Nueva Vizcaya government structure. Meet Mayor Philip A. Dacayo, Vice Mayor, Sangguniang Bayan members, 16 municipal offices, and 22 barangay captains. Access office contacts and services."
+      content="Legazpi City, Albay government structure and leadership directory. Meet Mayor Hisham B. Ismail, Vice Mayor Luis Felipe L. Gutierrez, Sangguniang Panlungsod members, executive offices, and 70 barangay captains."
     />
 
     <!-- SEO Meta Tags -->
-    <meta name="author" content="Ramon Logan Jr." />
+    <meta name="author" content="BetterLegazpi Team" />
     <meta
       name="keywords"
-      content="Solano government, municipal officials, Mayor Philip Dacayo, Vice Mayor Tiongson, Sangguniang Bayan, LGU Solano, municipal offices, MSWDO, SEEDO, BPLS, treasurer, assessor, barangay captains, Nueva Vizcaya officials"
+      content="Legazpi City government, Legazpi officials, Mayor Hisham Ismail, Vice Mayor Luis Felipe Gutierrez, Sangguniang Panlungsod, LGU Legazpi, city departments, BPLO, city assessor, treasurer, 70 barangay captains, Albay officials"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://bettersolano.org/government/" />
+    <link rel="canonical" href="https://betterlegazpi.org/government/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bettersolano.org/government/" />
-    <meta property="og:title" content="Government Officials & Structure | BetterSolano.org" />
+    <meta property="og:url" content="https://betterlegazpi.org/government/" />
+    <meta property="og:title" content="Government Officials & Structure | BetterLegazpi.org" />
     <meta
       property="og:description"
-      content="Meet the government officials of Solano, Nueva Vizcaya. Learn about the municipal structure, Mayor Philip A. Dacayo, Vice Mayor, Sangguniang Bayan members, and department heads."
+      content="Meet the government officials of Legazpi City, Albay. Learn about the municipal structure, Mayor Hisham B. Ismail, Vice Mayor, Sangguniang Panlungsod members, 16 executive offices, and 70 barangay units."
     />
     <meta
       property="og:image"
-      content="https://bettersolano.org/assets/images/banners/opengraph.png"
+      content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
-    <meta
-      property="og:image:secure_url"
-      content="https://bettersolano.org/assets/images/banners/opengraph.png"
-    />
-    <meta property="og:site_name" content="BetterSolano.org" />
+    <meta property="og:site_name" content="BetterLegazpi.org" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
-      content="https://bettersolano.org/assets/images/banners/opengraph.png"
+      content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#1a5f2a" />
+    <meta name="theme-color" content="#c2410c" />
 
-    <title>Government Officials & Structure | BetterSolano.org</title>
+    <title>Government Officials & Structure | BetterLegazpi.org</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
@@ -71,7 +67,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -86,6 +82,254 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+
+    <style>
+      .source-credit-simple {
+        margin-top: 28px;
+        font-size: 0.98rem;
+        color: #475569;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .source-credit-simple a {
+        color: #0284c7;
+        text-decoration: underline;
+      }
+      .source-credit-simple a:hover {
+        color: #0369a1;
+      }
+      .barangay-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: var(--spacing-lg, 24px);
+        background: white;
+        padding: 16px 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        border: 1px solid #e2e8f0;
+      }
+      .bgy-search-wrap {
+        flex: 1;
+        min-width: 260px;
+        position: relative;
+      }
+      .bgy-search-input {
+        width: 100%;
+        padding: 10px 16px 10px 40px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        font-size: 0.95rem;
+        font-family: inherit;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .bgy-search-input:focus {
+        outline: none;
+        border-color: var(--color-primary, #c2410c);
+        box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
+      }
+      .bgy-search-icon {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #94a3b8;
+        font-size: 1rem;
+      }
+      .bgy-filter-btns {
+        display: flex;
+        gap: 6px;
+      }
+      .bgy-filter-btn {
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        color: #475569;
+        padding: 8px 14px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .bgy-filter-btn:hover {
+        background: #e2e8f0;
+      }
+      .bgy-filter-btn.active {
+        background: var(--color-primary, #c2410c);
+        color: white;
+        border-color: var(--color-primary, #c2410c);
+      }
+      #barangayGrid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 20px !important;
+        align-items: stretch !important;
+        width: 100% !important;
+      }
+      @media (max-width: 992px) {
+        #barangayGrid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+      }
+      @media (max-width: 640px) {
+        #barangayGrid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+      .barangay-card {
+        background: white;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        padding: 16px 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 224px;
+        height: 100%;
+        min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .barangay-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+      }
+      .barangay-card-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 8px;
+        min-height: 42px;
+        margin-bottom: 10px;
+      }
+      .barangay-name {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0;
+        color: #0f172a;
+        line-height: 1.3;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .badge-urban {
+        background: #dbeafe;
+        color: #1e40af;
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 3px 7px;
+        border-radius: 12px;
+        text-transform: uppercase;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .badge-rural {
+        background: #dcfce7;
+        color: #166534;
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 3px 7px;
+        border-radius: 12px;
+        text-transform: uppercase;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .barangay-card-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+        min-width: 0;
+      }
+      .bgy-official-row {
+        margin-bottom: 8px;
+        min-height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-width: 0;
+      }
+      .bgy-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        color: #64748b;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        margin-bottom: 2px;
+      }
+      .bgy-label i {
+        font-size: 0.76rem;
+      }
+      .bgy-val {
+        font-size: 0.86rem;
+        font-weight: 600;
+        color: #1e293b;
+        line-height: 1.25;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .bgy-footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-top: auto;
+        padding-top: 10px;
+        border-top: 1px solid #f1f5f9;
+        font-size: 0.8rem;
+        min-height: 36px;
+      }
+      .bgy-pop {
+        color: #64748b;
+        font-weight: 500;
+        font-size: 0.78rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+      }
+      .bgy-call-btn {
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
+        color: var(--color-primary, #c2410c);
+        font-weight: 600;
+        font-size: 0.76rem;
+        padding: 4px 8px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        min-width: 85px;
+        max-width: 120px;
+        height: 28px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: all 0.2s ease;
+      }
+      .bgy-call-btn:hover {
+        background: var(--color-primary, #c2410c);
+        color: white;
+        border-color: var(--color-primary, #c2410c);
+      }
+    </style>
   </head>
 
   <body>
@@ -104,7 +348,7 @@
             </a>
             <a href="tel:09162840885" class="hotline-item">
               <i class="bi bi-heart-fill"></i>
-              <span>MSWDO: 0916 284 0885</span>
+              <span>CSWDO: 0916 284 0885</span>
             </a>
             <a href="tel:09360620305" class="hotline-item">
               <i class="bi bi-fire"></i>
@@ -116,11 +360,11 @@
             </a>
             <a href="tel:09263833744" class="hotline-item">
               <i class="bi bi-exclamation-triangle-fill"></i>
-              <span>MDRRMO: 0926 383 3744</span>
+              <span>CDRRMO: 0926 383 3744</span>
             </a>
-            <a href="tel:09068195569" class="hotline-item">
-              <i class="bi bi-truck"></i>
-              <span>R2TMC: 0906 819 5569</span>
+            <a href="tel:0527425000" class="hotline-item">
+              <i class="bi bi-hospital"></i>
+              <span>BRHMC: (052) 742-5000</span>
             </a>
           </div>
         </div>
@@ -134,7 +378,7 @@
           <a href="../">
             <img
               src="../assets/images/logo/better-solano-logo.svg"
-              alt="Municipality of Solano Logo"
+              alt="City of Legazpi Logo"
               class="logo-img"
             />
           </a>
@@ -146,36 +390,16 @@
             <li class="has-dropdown">
               <a href="../services/" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
               <ul class="dropdown-menu">
-                <li>
-                  <a href="../services/certificates" data-i18n="gov-certificates">Certificates</a>
-                </li>
+                <li><a href="../services/certificates" data-i18n="gov-certificates">Certificates</a></li>
                 <li><a href="../services/business" data-i18n="gov-business">Business</a></li>
-                <li>
-                  <a href="../services/tax-payments" data-i18n="gov-tax-payments">Tax Payments</a>
-                </li>
-                <li>
-                  <a href="../services/social-services" data-i18n="gov-social-services"
-                    >Social Services</a
-                  >
-                </li>
+                <li><a href="../services/tax-payments" data-i18n="gov-tax-payments">Tax Payments</a></li>
+                <li><a href="../services/social-services" data-i18n="gov-social-services">Social Services</a></li>
                 <li><a href="../services/health" data-i18n="gov-health">Health</a></li>
-                <li>
-                  <a href="../services/agriculture" data-i18n="gov-agriculture">Agriculture</a>
-                </li>
-                <li>
-                  <a href="../services/infrastructure" data-i18n="gov-infrastructure"
-                    >Infrastructure</a
-                  >
-                </li>
+                <li><a href="../services/agriculture" data-i18n="gov-agriculture">Agriculture</a></li>
+                <li><a href="../services/infrastructure" data-i18n="gov-infrastructure">Infrastructure</a></li>
                 <li><a href="../services/education" data-i18n="gov-education">Education</a></li>
-                <li>
-                  <a href="../services/public-safety" data-i18n="gov-public-safety"
-                    >Public Safety</a
-                  >
-                </li>
-                <li>
-                  <a href="../services/environment" data-i18n="gov-environment">Environment</a>
-                </li>
+                <li><a href="../services/public-safety" data-i18n="gov-public-safety">Public Safety</a></li>
+                <li><a href="../services/environment" data-i18n="gov-environment">Environment</a></li>
               </ul>
             </li>
             <li><a href="./" class="active" data-i18n="nav-government">Government</a></li>
@@ -183,16 +407,8 @@
             <li class="has-dropdown">
               <a href="../legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
               <ul class="dropdown-menu">
-                <li>
-                  <a href="../legislative/ordinance-framework" data-i18n="gov-ordinance-framework"
-                    >Ordinance Framework</a
-                  >
-                </li>
-                <li>
-                  <a href="../legislative/resolution-framework" data-i18n="gov-resolution-framework"
-                    >Resolution Framework</a
-                  >
-                </li>
+                <li><a href="../legislative/ordinance-framework" data-i18n="gov-ordinance-framework">Ordinance Framework</a></li>
+                <li><a href="../legislative/resolution-framework" data-i18n="gov-resolution-framework">Resolution Framework</a></li>
               </ul>
             </li>
             <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
@@ -204,13 +420,12 @@
           <div class="lang-selector">
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
+            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">BK</button>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Real-Time Info Bar -->
     <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
@@ -221,9 +436,9 @@
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
             <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Solano</span>
+            <span class="weather-location">Legazpi City</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
@@ -258,13 +473,13 @@
             >
             <h1 data-i18n="gov-title">Government Structure & Officials</h1>
             <p class="page-header-desc" data-i18n="gov-subtitle">
-              Meet the leadership and offices serving Solano
+              Meet the leadership, executive offices, and 70 barangays serving Legazpi City, Albay
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Executive Branch -->
+      <!-- Executive Officials (City Leadership) -->
       <section class="section" style="background: var(--color-bg-alt)">
         <div class="container">
           <!-- Section Header -->
@@ -286,40 +501,38 @@
                 margin-bottom: var(--spacing-sm);
               "
               ><i class="bi bi-star-fill"></i>
-              <span data-i18n="gov-executive-branch">Executive Branch</span></span
+              <span>City Leadership</span></span
             >
             <h3
-              data-i18n="gov-executive"
               style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
             >
-              Municipal Leadership
+              Executive Officials
             </h3>
             <p
               style="color: var(--color-text-light)"
-              data-i18n="gov-the-executive-officials-leading-solanos-governance"
             >
-              The executive officials leading Solano's governance
+              The executive officials leading Legazpi City's governance
             </p>
           </div>
 
-          <!-- Executive Cards -->
+          <!-- Executive Cards (Identical Height with 3 rows each) -->
           <div class="grid grid-2" style="gap: var(--spacing-lg)">
             <!-- Mayor Card -->
             <div class="executive-card">
               <div class="executive-card-header">
-                <span class="executive-badge" data-i18n="title-mayor">Municipal Mayor</span>
-                <h4 class="executive-name" data-i18n="gov-hon-philip-a-dacayo">
-                  Hon. Philip A. Dacayo
+                <span class="executive-badge" data-i18n="title-mayor">City Mayor</span>
+                <h4 class="executive-name" data-i18n="gov-mayor-name">
+                  Hon. Hisham B. Ismail
                 </h4>
               </div>
               <div class="executive-card-body">
                 <div class="executive-contacts">
-                  <a href="mailto:mayor@solano.gov.ph"
+                  <a href="mailto:legazpicitymayorsoffice@gmail.com"
                     ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-mayorsolanogovph">mayor@solano.gov.ph</span></a
+                    <span>legazpicitymayorsoffice@gmail.com</span></a
                   >
-                  <a href="tel:0783265002"><i class="bi bi-telephone"></i> (078) 326-5002</a>
-                  <span><i class="bi bi-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</span>
+                  <a href="tel:09274143768"><i class="bi bi-phone"></i> <span>0927 414 3768 (GLOBE)</span></a>
+                  <a href="tel:09122983504"><i class="bi bi-phone"></i> <span>0912 298 3504 (TNT)</span></a>
                 </div>
               </div>
             </div>
@@ -328,28 +541,30 @@
             <div class="executive-card">
               <div class="executive-card-header">
                 <span class="executive-badge" data-i18n="title-vice-mayor"
-                  >Municipal Vice Mayor</span
+                  >City Vice Mayor</span
                 >
-                <h4 class="executive-name" data-i18n="gov-hon-eduardo-d-tiongson">
-                  Hon. Eduardo D. Tiongson
+                <h4 class="executive-name" data-i18n="gov-vice-mayor-name">
+                  Hon. Luis Felipe L. Gutierrez
                 </h4>
               </div>
               <div class="executive-card-body">
                 <div class="executive-contacts">
-                  <a href="mailto:vicemayor@solano.gov.ph"
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-vicemayorsolanogovph">vicemayor@solano.gov.ph</span></a
-                  >
-                  <a href="tel:0783265003"><i class="bi bi-telephone"></i> (078) 326-5003</a>
-                  <span><i class="bi bi-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</span>
+                  <a style="pointer-events: none; opacity: 0.6;"><i class="bi bi-envelope"></i> <span>Unlisted</span></a>
+                  <a href="tel:0528205199"><i class="bi bi-telephone"></i> <span>(052) 820-5199</span></a>
+                  <a style="pointer-events: none; opacity: 0.6;"><i class="bi bi-phone"></i> <span>Unlisted</span></a>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Simple Executive Source Line (Centered & Enlarged) -->
+          <div class="source-credit-simple">
+            <i class="bi bi-info-circle"></i> Source: <a href="https://legazpi.gov.ph/executive/" target="_blank" rel="noopener noreferrer">City Government of Legazpi - Directory</a>
+          </div>
         </div>
       </section>
 
-      <!-- Municipal Council -->
+      <!-- Legislative Branch (Sangguniang Panlungsod) -->
       <section class="section">
         <div class="container">
           <!-- Section Header -->
@@ -370,158 +585,131 @@
               <span data-i18n="gov-legislative-branch">Legislative Branch</span></span
             >
             <h3
-              data-i18n="gov-sb-members"
+              data-i18n="gov-sp-members"
               style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
             >
-              Sangguniang Bayan Members
+              Sangguniang Panlungsod Members
             </h3>
-            <p data-i18n="gov-sb-subtitle" style="color: var(--color-text-light)">
-              Municipal Councilors serving the people of Solano
+            <p data-i18n="gov-sp-subtitle" style="color: var(--color-text-light)">
+              City Councilors crafting legislation, policies, and ordinances for Legazpi City
             </p>
           </div>
 
-          <!-- Councilors Grid -->
+          <!-- Councilors Grid (Restored Clean Layout with Icon Bulleted Committees) -->
           <div class="grid grid-3" style="gap: var(--spacing-md)">
             <div class="councilor-card">
-              <h4 class="councilor-name" data-i18n="gov-hon-thomas-dave-c-santos">
-                Hon. Thomas Dave C. Santos
-              </h4>
-              <span class="councilor-badge" data-i18n="gov-sb-member">SB Member</span>
-              <p
-                class="councilor-committees"
-                data-i18n="gov-entrepreneurship-economic-development-historical"
-              >
-                Entrepreneurship & Economic Development, Historical Records & Preservation of
-                Heritage, Culture and the Arts
-              </p>
+              <h4 class="councilor-name">Hon. Alan O. Rañola</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-shop"></i> <span>Trade & Commerce</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-shield-check"></i> <span>Good Governance, Public Ethics & Accountability</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-camera"></i> <span>Tourism, Culture & Heritage</span></li>
+              </ul>
             </div>
             <div class="councilor-card">
-              <h4 class="councilor-name" data-i18n="gov-hon-edwin-clifford-f-tito-od">
-                Hon. Edwin Clifford F. Tito, O.D.
-              </h4>
-              <span class="councilor-badge" data-i18n="gov-sb-member">SB Member</span>
-              <p
-                class="councilor-committees"
-                data-i18n="gov-health-sanitation-finance-appropriation-and-budget"
-              >
-                Health & Sanitation, Finance Appropriation and Budget
-              </p>
+              <h4 class="councilor-name">Hon. Lourence M. Beltran</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-cash-stack"></i> <span>Finance & Appropriations</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-hammer"></i> <span>Public Works & Infrastructure</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-controller"></i> <span>Games, Amusement & Entertainment</span></li>
+              </ul>
             </div>
             <div class="councilor-card">
-              <h4 class="councilor-name" data-i18n="gov-hon-michael-dl-tiongson-lpt">
-                Hon. Michael Dl. Tiongson, LPT
-              </h4>
-              <span class="councilor-badge" data-i18n="gov-sb-member">SB Member</span>
-              <p
-                class="councilor-committees"
-                data-i18n="gov-education-science-technology-transportation"
-              >
-                Education, Science & Technology, Transportation, Commerce, Trade & Industry
-              </p>
+              <h4 class="councilor-name">Hon. Ismael B. Buban IV</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-tree"></i> <span>Agriculture</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-heart-pulse"></i> <span>Social Welfare & Protection</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-people"></i> <span>CSOs & People's Empowerment</span></li>
+              </ul>
             </div>
             <div class="councilor-card">
-              <h4 class="councilor-name" data-i18n="gov-hon-walter-d-savedra-sr">
-                Hon. Walter D. Savedra, Sr.
-              </h4>
-              <span class="councilor-badge" data-i18n="gov-sb-member">SB Member</span>
-              <p
-                class="councilor-committees"
-                data-i18n="gov-cooperative-development-senior-citizens-and"
-              >
-                Cooperative Development, Senior Citizens and Disability Affairs
-              </p>
+              <h4 class="councilor-name">Hon. Charlton S. Lajara</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-calculator"></i> <span>Ways & Means</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-flower1"></i> <span>Environmental Protection</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-shield-shaded"></i> <span>Public Order, Safety & Civil Defense</span></li>
+              </ul>
             </div>
             <div class="councilor-card">
-              <h4 class="councilor-name" data-i18n="gov-hon-atty-jerome-g-marcos">
-                Hon. Atty. Jerome G. Marcos
-              </h4>
-              <span class="councilor-badge" data-i18n="gov-sb-member">SB Member</span>
-              <p
-                class="councilor-committees"
-                data-i18n="gov-legal-good-governance-justice-human-rights"
-              >
-                Legal, Good Governance, Justice, Human Rights, Environmental Management
-              </p>
+              <h4 class="councilor-name">Hon. Vicente F. Baltazar III</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-laptop"></i> <span>ICT & E-Governance</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-globe"></i> <span>Sisterhood, Inter-LGU & International Relations</span></li>
+              </ul>
             </div>
             <div class="councilor-card">
-              <h4 class="councilor-name" data-i18n="gov-hon-roland-m-carub-jd">
-                Hon. Roland M. Carub, J.D.
-              </h4>
-              <span class="councilor-badge" data-i18n="gov-sb-member">SB Member</span>
-              <p
-                class="councilor-committees"
-                data-i18n="gov-agriculture-aquaculture-food-security-overseas"
-              >
-                Agriculture, Aquaculture & Food Security, Overseas Filipino Workers Affairs
-              </p>
+              <h4 class="councilor-name">Hon. Maria Paz Salud C. Imperial</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-gender-female"></i> <span>Women, Children & Family Welfare</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-hospital"></i> <span>Health & Sanitation</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-person-arms-up"></i> <span>Solo Parents, PWDs & Vulnerable Groups</span></li>
+              </ul>
             </div>
             <div class="councilor-card">
-              <h4 class="councilor-name" data-i18n="gov-hon-joseph-t-alindada">
-                Hon. Joseph T. Alindada
-              </h4>
-              <span class="councilor-badge" data-i18n="gov-sb-member">SB Member</span>
-              <p
-                class="councilor-committees"
-                data-i18n="gov-games-entertainment-amusement-internal-affairs"
-              >
-                Games, Entertainment & Amusement, Internal Affairs
-              </p>
+              <h4 class="councilor-name">Hon. Alexander U. Jao</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-person-heart"></i> <span>Senior Citizens Affairs</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-bullseye"></i> <span>Sustainable Development Goals (SDG)</span></li>
+              </ul>
             </div>
             <div class="councilor-card">
-              <h4 class="councilor-name" data-i18n="gov-hon-luisito-l-lannu">
-                Hon. Luisito L. Lannu
-              </h4>
-              <span class="councilor-badge" data-i18n="gov-sb-member">SB Member</span>
-              <p
-                class="councilor-committees"
-                data-i18n="gov-public-safety-peace-order-family-women-children"
-              >
-                Public Safety, Peace & Order, Family, Women, Children & Social Services
-              </p>
+              <h4 class="councilor-name">Hon. Joseph Philip L. Lee</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-buildings"></i> <span>Cooperatives, Livelihood & Employment</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-book"></i> <span>Education, Science, Technology & Arts</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-cloud-lightning-rain"></i> <span>DRRM & Climate Change Adaptation</span></li>
+              </ul>
+            </div>
+            <div class="councilor-card">
+              <h4 class="councilor-name">Hon. Renato A. Valladolid</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-hammer"></i> <span>Human Rights & Social Justice</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-water"></i> <span>Fisheries & Aquatic Resources</span></li>
+              </ul>
+            </div>
+            <div class="councilor-card">
+              <h4 class="councilor-name">Hon. Roberto Rafael N. Lucila II</h4>
+              <span class="councilor-badge">SP Member</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-journal-text"></i> <span>Laws, Rules & Oversight</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-houses"></i> <span>Urban Planning, Housing & Resettlement</span></li>
+                <li class="councilor-committee-item"><i class="bi bi-lightning-charge"></i> <span>Public Utilities & Energy</span></li>
+              </ul>
             </div>
             <div class="councilor-card councilor-card--liga">
-              <h4 class="councilor-name" data-i18n="gov-hon-melchor-e-marzo">
-                Hon. Melchor E. Marzo
-              </h4>
-              <span
-                class="councilor-badge councilor-badge--liga"
-                data-i18n="gov-liga-ng-mga-barangay-president"
-                >Liga ng mga Barangay President</span
-              >
-              <p class="councilor-committees" data-i18n="gov-barangay-affairs-tourism">
-                Barangay Affairs, Tourism
-              </p>
+              <h4 class="councilor-name">Atty. Amore Rex B. Rañeses</h4>
+              <span class="councilor-badge councilor-badge--liga">Liga ng mga Barangay President</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-geo-alt"></i> <span>Barangay Affairs</span></li>
+              </ul>
+              <span class="councilor-ex-officio-badge">EX-OFFICIO MEMBER</span>
             </div>
             <div class="councilor-card councilor-card--sk">
-              <h4 class="councilor-name" data-i18n="gov-hon-isaac-r-divina">
-                Hon. Isaac R. Divina
-              </h4>
-              <span
-                class="councilor-badge councilor-badge--sk"
-                data-i18n="gov-sk-federation-president"
-                >SK Federation President</span
-              >
-              <p
-                class="councilor-committees"
-                data-i18n="gov-youth-sports-development-legislative-drafting"
-              >
-                Youth & Sports Development, Legislative Drafting
-              </p>
+              <h4 class="councilor-name">John Nicolas C. Garbin</h4>
+              <span class="councilor-badge councilor-badge--sk">PPSK President</span>
+              <ul class="councilor-committees-list">
+                <li class="councilor-committee-item"><i class="bi bi-trophy"></i> <span>Youth & Sports Development</span></li>
+              </ul>
+              <span class="councilor-ex-officio-badge">EX-OFFICIO MEMBER</span>
             </div>
-            <div class="councilor-card councilor-card--ipmr">
-              <h4 class="councilor-name" data-i18n="gov-hon-ipmr-leon-g-dumani">
-                Hon. IPMR Leon G. Dumani
-              </h4>
-              <span class="councilor-badge councilor-badge--ipmr">IPMR</span>
-              <p class="councilor-committees" data-i18n="gov-indigenous-people-affairs">
-                Indigenous People Affairs
-              </p>
-            </div>
+          </div>
+
+          <!-- Simple Legislative Source Line (Centered & Enlarged) -->
+          <div class="source-credit-simple">
+            <i class="bi bi-info-circle"></i> Source: <a href="https://legazpi.gov.ph/about-us/legislative/" target="_blank" rel="noopener noreferrer">City Government of Legazpi - Legislative</a>
           </div>
         </div>
       </section>
 
-      <!-- Department Heads -->
+      <!-- Executive Offices (City Departments) -->
       <section class="section" style="background: var(--color-bg-alt)">
         <div class="container">
           <!-- Section Header -->
@@ -539,448 +727,360 @@
                 margin-bottom: var(--spacing-sm);
               "
               ><i class="bi bi-building-fill"></i>
-              <span data-i18n="gov-municipal-offices">Municipal Offices</span></span
+              <span>Executive Branch</span></span
             >
             <h3
-              data-i18n="gov-departments"
               style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
             >
-              Department Heads & Key Offices
+              Executive Offices
             </h3>
-            <p data-i18n="gov-dept-subtitle" style="color: var(--color-text-light)">
-              Municipal offices providing services to citizens
+            <p style="color: var(--color-text-light)">
+              Directory and official contact details of Legazpi City government departments
             </p>
           </div>
 
-          <!-- Departments Grid -->
+          <!-- Departments Grid (22 Executive Offices Alphabetically Arranged) -->
           <div class="grid grid-3" style="gap: var(--spacing-md)">
-            <a
-              href="../service-details/municipal-civil-registrar"
-              class="dept-card dept-card-link-wrap"
-            >
-              <div class="dept-card-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-civil-registrar">
-                  Municipal Civil Registrar
-                </h4>
-                <p class="dept-card-desc" data-i18n="gov-birth-death-marriage-certificates-cenomar">
-                  Birth, death, marriage certificates, CENOMAR
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5011</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-civilregsolanogovph">civilreg@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a href="../service-details/municipal-treasurer" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-cash-coin"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-treasurers-office">
-                  Municipal Treasurer's Office
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-tax-payments-real-property-tax-revenue-collection"
-                >
-                  Tax payments, real property tax, revenue collection
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5012</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-treasurersolanogovph">treasurer@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a
-              href="../service-details/municipal-engineering"
-              class="dept-card dept-card-link-wrap"
-            >
-              <div class="dept-card-icon"><i class="bi bi-building-fill-gear"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-engineering-office">
-                  Municipal Engineering Office
-                </h4>
-                <p class="dept-card-desc" data-i18n="gov-building-permits-construction-permits">
-                  Building permits, construction permits, infrastructure
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5013</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-engineersolanogovph">engineer@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a href="../service-details/mswdo-services" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-people-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title">MSWDO</h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-social-services-pwd-senior-citizen-ids-financial"
-                >
-                  Social services, PWD & senior citizen IDs, financial assistance
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5014</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-mswdosolanogovph">mswdo@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a
-              href="../service-details/municipal-agriculture"
-              class="dept-card dept-card-link-wrap"
-            >
-              <div class="dept-card-icon"><i class="bi bi-tree-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-agriculture-office">
-                  Municipal Agriculture Office
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-agricultural-loans-crop-insurance-fertilizer"
-                >
-                  Agricultural loans, crop insurance, fertilizer assistance
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5015</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-agrisolanogovph">agri@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a href="../service-details/municipal-planning" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-clipboard-data-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-planning-development">
-                  Municipal Planning & Development
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-development-planning-project-monitoring-zoning"
-                >
-                  Development planning, project monitoring, zoning
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5016</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-mpdosolanogovph">mpdo@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a href="../service-details/municipal-assessor" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-house-door-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-assessors-office">
-                  Municipal Assessor's Office
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-property-assessment-tax-declarations-land-records"
-                >
-                  Property assessment, tax declarations, land records
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5017</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-assessorsolanogovph">assessor@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a href="../service-details/municipal-accounting" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-calculator-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-accounting-office">
-                  Municipal Accounting Office
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-financial-records-disbursements-accounting"
-                >
-                  Financial records, disbursements, accounting services
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-accountingsolanogovph"
-                      >accounting@solano.gov.ph</span
-                    ></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a href="../service-details/municipal-budget" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-piggy-bank-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-budget-office">
-                  Municipal Budget Office
-                </h4>
-                <p class="dept-card-desc" data-i18n="gov-budget-preparation-appropriations-fiscal">
-                  Budget preparation, appropriations, fiscal management
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-budgetsolanogovph">budget@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a
-              href="../service-details/municipal-general-services"
-              class="dept-card dept-card-link-wrap"
-            >
-              <div class="dept-card-icon"><i class="bi bi-gear-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-general-services-office">
-                  Municipal General Services Office
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-property-management-procurement-administration"
-                >
-                  Property management, procurement, administration
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-gsosolanogovph">gso@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a href="../services/health" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-municipal-health-office">
-                  Municipal Health Office
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-vaccination-health-certificates-medical-assistance"
-                >
-                  Vaccination, health certificates, medical assistance
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5010</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-mhosolanogovph">mho@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a
-              href="../service-details/business-permits-licensing"
-              class="dept-card dept-card-link-wrap"
-            >
+            <!-- 1. Business Permits & Licensing (BPLO) -->
+            <a href="../services/business.html" class="dept-card dept-card-link-wrap">
               <div class="dept-card-icon"><i class="bi bi-shop"></i></div>
               <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-business-permits-licensing">
-                  Business Permits & Licensing
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-business-permits-mayors-clearance-licensing"
-                >
-                  Business permits, Mayor's clearance, licensing
-                </p>
+                <h4 class="dept-card-title">Business Permits & Licensing (BPLO)</h4>
+                <p class="dept-card-desc">For business permits</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Asuncion C. Viñas (BPLO Head)</span>
                 <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5002</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-bplssolanogovph">bpls@solano.gov.ph</span></span
-                  >
+                  <span><i class="bi bi-phone"></i> 0915-872-7722</span>
+                  <span><i class="bi bi-envelope"></i> legpermit@gmail.com</span>
                 </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
+                <span class="dept-card-link">&rarr; View Services</span>
               </div>
             </a>
-            <a
-              href="../service-details/human-resource-management"
-              class="dept-card dept-card-link-wrap"
-            >
-              <div class="dept-card-icon"><i class="bi bi-person-badge-fill"></i></div>
+
+            <!-- 2. City Accounting Office (CAccO) -->
+            <a href="../services/tax-payments.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-calculator-fill"></i></div>
               <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-human-resource-management">
-                  Human Resource Management
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-personnel-services-recruitment-employee-records"
-                >
-                  Personnel services, recruitment, employee records
-                </p>
+                <h4 class="dept-card-title">City Accounting Office (CAccO)</h4>
+                <p class="dept-card-desc">For city accounting & audit</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Gloria E. Aringo, CPA (City Accountant)</span>
                 <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5002</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-hrmosolanogovph">hrmo@solano.gov.ph</span></span
-                  >
+                  <span><i class="bi bi-telephone"></i> (052) 742-3700</span>
+                  <span><i class="bi bi-envelope"></i> lgulegazpi2020@gmail.com</span>
                 </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
+                <span class="dept-card-link">&rarr; View Services</span>
               </div>
             </a>
-            <a href="../services/public-safety" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title">MDRRMO</h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-disaster-preparedness-emergency-response-risk"
-                >
-                  Disaster preparedness, emergency response, risk reduction
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> 0926 383 3744</span>
-                  <span
-                    ><i class="bi bi-envelope"></i>
-                    <span data-i18n="gov-mdrrmosolanogovph">mdrrmo@solano.gov.ph</span></span
-                  >
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a href="../service-details/seedo-public-market" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-shop-window"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-seedo-public-market">
-                  SEEDO – Public Market
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-market-clearance-entrance-fees-vendor-services-ctc"
-                >
-                  Market clearance, entrance fees, vendor services, CTC
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <a href="../service-details/seedo-slaughterhouse" class="dept-card dept-card-link-wrap">
-              <div class="dept-card-icon"><i class="bi bi-box-seam"></i></div>
-              <div class="dept-card-content">
-                <h4 class="dept-card-title" data-i18n="gov-seedo-slaughterhouse">
-                  SEEDO – Slaughterhouse
-                </h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-hog-cattle-goat-carabao-slaughter-with-meat"
-                >
-                  Hog, cattle, goat, carabao slaughter with meat inspection
-                </p>
-                <div class="dept-card-contacts">
-                  <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
-                </div>
-                <span class="dept-card-link"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="gov-view-services">View Services</span></span
-                >
-              </div>
-            </a>
-            <div class="dept-card">
+
+            <!-- 3. City Administrator's Office (CAO) -->
+            <a href="../services/" class="dept-card dept-card-link-wrap">
               <div class="dept-card-icon"><i class="bi bi-briefcase-fill"></i></div>
               <div class="dept-card-content">
-                <h4 class="dept-card-title">PESO</h4>
-                <p
-                  class="dept-card-desc"
-                  data-i18n="gov-job-placement-employment-assistance-career"
-                >
-                  Job placement, employment assistance, career guidance
-                </p>
+                <h4 class="dept-card-title">City Administrator's Office (CAO)</h4>
+                <p class="dept-card-desc">For city administration</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Grace R. Bachiller (City Administrator)</span>
                 <div class="dept-card-contacts">
-                  <a href="tel:09171551043"><i class="bi bi-telephone"></i> 0917-155-1043</a>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61564916854423"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="bi bi-facebook"></i>
-                    <span data-i18n="gov-view-job-vacancies">View Job Vacancies</span></a
-                  >
+                  <span><i class="bi bi-phone"></i> 0919-364-8292</span>
+                  <span><i class="bi bi-envelope"></i> chitoante@yahoo.com</span>
                 </div>
+                <span class="dept-card-link">&rarr; View Services</span>
               </div>
-            </div>
+            </a>
+
+            <!-- 4. City Agriculture Services (CASO) -->
+            <a href="../services/agriculture.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-tree-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Agriculture Services (CASO)</h4>
+                <p class="dept-card-desc">For agriculture & fisheries</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Sheila R. Nas (City Agriculturist)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-telephone"></i> (052) 820-5015</span>
+                  <span><i class="bi bi-envelope"></i> agri.legazpi@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 5. City Anti-Drug Abuse Council (CADAC) -->
+            <a href="../services/public-safety.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-shield-shaded"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Anti-Drug Abuse Council (CADAC)</h4>
+                <p class="dept-card-desc">For anti-drug programs</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Debbie A. Baltasar (OIC)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0912-252-6865</span>
+                  <span><i class="bi bi-envelope"></i> Legazpicadac@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 6. City Assessor's Office (OCAS) -->
+            <a href="../services/tax-payments.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-house-door-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Assessor's Office (OCAS)</h4>
+                <p class="dept-card-desc">For property assessments</p>
+                <span class="dept-card-head" style="opacity: 0.6;"><i class="bi bi-person-fill"></i> Unlisted</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-telephone"></i> (052) 742-6882</span>
+                  <span><i class="bi bi-envelope"></i> legazpi.assessorsoffice@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 7. City Civil Registrar's Office (CCRO) -->
+            <a href="../services/certificates.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-file-earmark-person-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Civil Registrar's Office (CCRO)</h4>
+                <p class="dept-card-desc">For civil certificates</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Priscilla L. Galicia (City Civil Registrar)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-telephone"></i> (052) 742-5000</span>
+                  <span><i class="bi bi-envelope"></i> ccro.legazpi@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 8. City Disaster Risk Reduction & Management (CDRRMO) -->
+            <a href="../services/public-safety.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Disaster Risk Reduction & Mgmt. (CDRRMO)</h4>
+                <p class="dept-card-desc">For disaster response</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Engr. Miladee N. Azur (CDRRMO Head)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0926-383-3744</span>
+                  <span><i class="bi bi-envelope"></i> cdrrmo.legazpi@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 9. City Engineering Office (CEO) -->
+            <a href="../services/infrastructure.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-building-fill-gear"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Engineering Office (CEO)</h4>
+                <p class="dept-card-desc">For building permits</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Engr. Clemente A. Ibo (City Engineer)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0998-983-3073</span>
+                  <span><i class="bi bi-envelope"></i> ceolegazpiad1@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 10. City Environment & Natural Resources (OCENR) -->
+            <a href="../services/environment.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-flower1"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Environment & Natural Resources (OCENR)</h4>
+                <p class="dept-card-desc">For environment & sanitation</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Engr. Linno Benju Q. Calleja (OIC)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0946-599-0597</span>
+                  <span><i class="bi bi-envelope"></i> ocenr.leg@legazpi.gov.ph</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 11. City Health Office (CHO) -->
+            <a href="../services/health.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Health Office (CHO)</h4>
+                <p class="dept-card-desc">For public health services</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Dr. Francis Gerald A. Gomez (OIC)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0977-183-3638</span>
+                  <span><i class="bi bi-envelope"></i> cholegazpi@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 12. City Human Resource Management (CHRMO) -->
+            <a href="../services/" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-person-badge-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Human Resource Management (CHRMO)</h4>
+                <p class="dept-card-desc">For human resources</p>
+                <span class="dept-card-head" style="opacity: 0.6;"><i class="bi bi-person-fill"></i> Unlisted</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0999-883-3285</span>
+                  <span><i class="bi bi-envelope"></i> chrmo.legazpicity@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 13. City Legal Office (CLO) -->
+            <a href="../services/" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-bank2"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Legal Office (CLO)</h4>
+                <p class="dept-card-desc">For legal services</p>
+                <span class="dept-card-head" style="opacity: 0.6;"><i class="bi bi-person-fill"></i> Unlisted</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0956-862-8647</span>
+                  <span><i class="bi bi-envelope"></i> legazpicitylegaloffice@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 14. City Planning & Development Office (CPDO) -->
+            <a href="../services/infrastructure.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-clipboard-data-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Planning & Dev. Office (CPDO)</h4>
+                <p class="dept-card-desc">For urban planning & zoning</p>
+                <span class="dept-card-head" style="opacity: 0.6;"><i class="bi bi-person-fill"></i> Unlisted</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-telephone"></i> (052) 742-3701</span>
+                  <span><i class="bi bi-envelope"></i> cpdo.legazpi@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 15. City Social Welfare & Development (CSWDO) -->
+            <a href="../services/social-services.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-people-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Social Welfare & Dev. (CSWDO)</h4>
+                <p class="dept-card-desc">For social welfare & aid</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Cecilia E. Arcilla, RSW (CSWDO Head)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0916-284-0885</span>
+                  <span><i class="bi bi-envelope"></i> cswdo.legazpicity@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 16. City Tourism Services Division (CTSD) -->
+            <a href="../services/" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-camera-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Tourism Services Division (CTSD)</h4>
+                <p class="dept-card-desc">For tourism promotion</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Ricky A. Loterte (OIC)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-telephone"></i> (052) 742-5000</span>
+                  <span><i class="bi bi-envelope"></i> tourism.legazpi@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 17. City Treasurer's Office (CTO) -->
+            <a href="../services/tax-payments.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-cash-coin"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">City Treasurer's Office (CTO)</h4>
+                <p class="dept-card-desc">For taxes & revenue</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Constance S. Oliveros (City Treasurer)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-telephone"></i> (052) 201-9487</span>
+                  <span><i class="bi bi-envelope"></i> cto_leg@yahoo.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 18. Gender & Development Division (GAD) -->
+            <a href="../services/social-services.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-gender-ambiguous"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">Gender & Development Division (GAD)</h4>
+                <p class="dept-card-desc">For women & gender affairs</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Dr. Marites T. Pasa (OIC)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0912-158-3909</span>
+                  <span><i class="bi bi-envelope"></i> gadlegazpihb1@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 19. Legazpi City Hospital (LCH) -->
+            <a href="../services/health.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-hospital-fill"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">Legazpi City Hospital (LCH)</h4>
+                <p class="dept-card-desc">For clinical care</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Dr. Lady Ann T. Serrano (OIC)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0917-517-178</span>
+                  <span><i class="bi bi-envelope"></i> legazpicityhospital.ph@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 20. Office of the City Veterinarian (OCVET) -->
+            <a href="../services/agriculture.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-shield-plus"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">Office of the City Veterinarian (OCVET)</h4>
+                <p class="dept-card-desc">For veterinary & pet care</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Dr. Francis Gerald A. Gomez (City Veterinarian)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-telephone"></i> (052) 820-5015</span>
+                  <span><i class="bi bi-envelope"></i> vet.legazpi@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 21. Persons with Disability Affairs (PDAO) -->
+            <a href="../services/social-services.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-person-arms-up"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">Persons with Disability Affairs (PDAO)</h4>
+                <p class="dept-card-desc">For PWD affairs & benefits</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Catalina Z. Maraña (OIC)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-phone"></i> 0916-284-0885</span>
+                  <span><i class="bi bi-envelope"></i> pdao.legazpicity@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+
+            <!-- 22. Public Employment Service Office (PESO) -->
+            <a href="../services/education.html" class="dept-card dept-card-link-wrap">
+              <div class="dept-card-icon"><i class="bi bi-person-workspace"></i></div>
+              <div class="dept-card-content">
+                <h4 class="dept-card-title">Public Employment Service Office (PESO)</h4>
+                <p class="dept-card-desc">For jobs & employment</p>
+                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Diosdado R. Rañeses (PESO Head)</span>
+                <div class="dept-card-contacts">
+                  <span><i class="bi bi-telephone"></i> (052) 820-7671</span>
+                  <span><i class="bi bi-envelope"></i> pesolegazpi@gmail.com</span>
+                </div>
+                <span class="dept-card-link">&rarr; View Services</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Simple Departments Source Line (Centered & Enlarged) -->
+          <div class="source-credit-simple">
+            <i class="bi bi-info-circle"></i> Source: <a href="https://legazpi.gov.ph/directory/" target="_blank" rel="noopener noreferrer">City Government of Legazpi - Executive</a>
           </div>
         </div>
       </section>
 
-      <!-- Barangays -->
-      <section class="section">
+      <!-- Barangays Section (Option A: Interactive 70 Barangays) -->
+      <section class="section" id="barangay-directory">
         <div class="container">
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
@@ -1007,303 +1107,1465 @@
               data-i18n="gov-barangays"
               style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
             >
-              Barangays of Solano
+              Barangays of Legazpi
             </h3>
-            <p data-i18n="gov-barangays-count" style="color: var(--color-text-light)">
-              22 Barangays serving our community
+            <p style="color: var(--color-text-light)">
+              Directory of all 70 Barangays in Legazpi City with Punong Barangays and SK Chairpersons (Term 2023–2026)
             </p>
           </div>
 
-          <!-- Barangays Grid -->
-          <div class="grid grid-4" style="gap: var(--spacing-sm)">
-            <a href="tel:09751772529" class="barangay-card">
+          <!-- Interactive Search and Filter Toolbar -->
+          <div class="barangay-toolbar">
+            <div class="bgy-search-wrap">
+              <i class="bi bi-search bgy-search-icon"></i>
+              <input
+                type="text"
+                id="bgySearchInput"
+                class="bgy-search-input"
+                placeholder="Search by Barangay name (e.g., Bgy. 56 - Taysan, Rawis) or official..."
+                aria-label="Search barangays"
+              />
+            </div>
+            <div class="bgy-filter-btns">
+              <button type="button" class="bgy-filter-btn active" data-filter="all">All (70)</button>
+              <button type="button" class="bgy-filter-btn" data-filter="urban">Urban (45)</button>
+              <button type="button" class="bgy-filter-btn" data-filter="rural">Rural (25)</button>
+            </div>
+          </div>
+
+          <div id="bgyEmptyNotice" style="display: none; text-align: center; padding: 40px; background: white; border-radius: 12px; border: 1px dashed #cbd5e1; margin-bottom: 24px;">
+            <i class="bi bi-search" style="font-size: 2rem; color: #94a3b8; display: block; margin-bottom: 8px;"></i>
+            <p style="font-weight: 600; color: #475569; margin: 0;">No barangays match your search query.</p>
+          </div>
+
+          <!-- Barangays Grid (70 Cards) -->
+          <div id="barangayGrid">
+            <div class="barangay-card" data-bgy-num="1" data-name="bgy. 1 - em's barrio" data-pb="hon. veronica s. geraldino" data-sk="anidene dashi d. armenta" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-aggub">Aggub</span>
+                <h4 class="barangay-name">Bgy. 1 - Em's Barrio</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-felix-caramat-tolentino-sr"
-                  >Kap. Felix Caramat Tolentino Sr.</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0975 177 2529</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Veronica S. Geraldino</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Anidene Dashi D. Armenta</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 3,259 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 1 - Em's Barrio"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09366551984" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="2" data-name="bgy. 2 - em's barrio south" data-pb="hon. milagros b. bal" data-sk="aljon s. alvarado" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-bagahabag">Bagahabag</span>
+                <h4 class="barangay-name">Bgy. 2 - Em's Barrio South</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-eduardo-abu-bangad-sr"
-                  >Kap. Eduardo Abu Bangad Sr.</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0936 655 1984</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Milagros B. Bal</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Aljon S. Alvarado</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,416 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 2 - Em's Barrio South"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09352425023" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="3" data-name="bgy. 3 - em's barrio east" data-pb="hon. jose t. pispis" data-sk="lowella mae c. apuac" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-bangaan">Bangaan</span>
+                <h4 class="barangay-name">Bgy. 3 - Em's Barrio East</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-isidro-baliza-prado"
-                  >Kap. Isidro Baliza Prado</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0935 242 5023</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Jose T. Pispis</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Lowella Mae C. Apuac</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 945 (2024)</span>
+                  <a href="tel:09814619092" class="bgy-call-btn" aria-label="Call Bgy. 3 - Em's Barrio East"><i class="bi bi-phone-fill"></i> 09814619092</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09358066847" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="4" data-name="bgy. 4 - sagpon pob." data-pb="hon. gibsen salvador e. de leoz" data-sk="jonnalyn p. aringo" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-bangar">Bangar</span>
+                <h4 class="barangay-name">Bgy. 4 - Sagpon Pob.</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-victor-tubay-adalin-jr"
-                  >Kap. Victor Tubay Adalin Jr.</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0935 806 6847</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Gibsen Salvador E. De Leoz</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Jonnalyn P. Aringo</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 975 (2024)</span>
+                  <a href="tel:09516995291" class="bgy-call-btn" aria-label="Call Bgy. 4 - Sagpon Pob."><i class="bi bi-phone-fill"></i> 09516995291</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09261879385" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="5" data-name="bgy. 5 - sagmin pob." data-pb="hon. lorena a. vargas" data-sk="regine r. lombes" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-bascaran">Bascaran</span>
+                <h4 class="barangay-name">Bgy. 5 - Sagmin Pob.</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-federico-vienes-asuncion"
-                  >Kap. Federico Vienes Asuncion</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0926 187 9385</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Lorena A. Vargas</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Regine R. Lombes</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,037 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 5 - Sagmin Pob."><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09058411484" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="6" data-name="bgy. 6 - bañadero pob." data-pb="hon. arthur r. marco" data-sk="franz vincent b. reynoso" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-communal">Communal</span>
+                <h4 class="barangay-name">Bgy. 6 - Bañadero Pob.</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-renaldo-ginom-nabadaw"
-                  >Kap. Renaldo Gin-Om Nabad-Aw</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0905 841 1484</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Arthur R. Marco</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Franz Vincent B. Reynoso</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,289 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 6 - Bañadero Pob."><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09274646243" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="7" data-name="bgy. 7 - baño" data-pb="hon. domingo alberto d. pasano jr." data-sk="kristian angelo o. soloria" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-concepcion">Concepcion</span>
+                <h4 class="barangay-name">Bgy. 7 - Baño</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-jenny-gomez-marquez"
-                  >Kap. Jenny Gomez Marquez</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0927 464 6243</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Domingo Alberto D. Pasano Jr.</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Kristian Angelo O. Soloria</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 559 (2024)</span>
+                  <a href="tel:0527421409" class="bgy-call-btn" aria-label="Call Bgy. 7 - Baño"><i class="bi bi-phone-fill"></i> (052) 742-1409</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09363607880" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="8" data-name="bgy. 8 - bagumbayan" data-pb="hon. amore rex b. rañeses" data-sk="neiljan c. alianza" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-curifang">Curifang</span>
+                <h4 class="barangay-name">Bgy. 8 - Bagumbayan</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-elmer-zabala-lingayu"
-                  >Kap. Elmer Zabala Lingayu</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0936 360 7880</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Amore Rex B. Rañeses</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Neiljan C. Alianza</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,564 (2024)</span>
+                  <a href="tel:8304636" class="bgy-call-btn" aria-label="Call Bgy. 8 - Bagumbayan"><i class="bi bi-phone-fill"></i> 830-4636</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09053412755" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="9" data-name="bgy. 9 - pinaric" data-pb="hon. roy a. nañoz" data-sk="steven marc red l. sabdao" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-dadap">Dadap</span>
+                <h4 class="barangay-name">Bgy. 9 - Pinaric</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-rudy-eugenio-paranis"
-                  >Kap. Rudy Eugenio Paranis</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0905 341 2755</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Roy A. Nañoz</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Steven Marc Red L. Sabdao</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,414 (2024)</span>
+                  <a href="tel:09308119357" class="bgy-call-btn" aria-label="Call Bgy. 9 - Pinaric"><i class="bi bi-phone-fill"></i> 09308119357</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09169958916" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="10" data-name="bgy. 10 - cabugao" data-pb="hon. victor r. lapasaran" data-sk="mary rose d. quiles" data-type="rural">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-lactawan">Lactawan</span>
+                <h4 class="barangay-name">Bgy. 10 - Cabugao</h4>
+                <span class="badge badge-rural">Rural</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-sherwin-elevazo-vicente"
-                  >Kap. Sherwin Elevazo Vicente</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0916 995 8916</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Victor R. Lapasaran</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Mary Rose D. Quiles</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 452 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 10 - Cabugao"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09063843974" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="11" data-name="bgy. 11 - maoyod pob." data-pb="hon. mark joel o. beguiras" data-sk="trisha jane b. guiterrez" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-osmea">Osmeña</span>
+                <h4 class="barangay-name">Bgy. 11 - Maoyod Pob.</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-danilo-estacio-domingo"
-                  >Kap. Danilo Estacio Domingo</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0906 384 3974</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Mark Joel O. Beguiras</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Trisha Jane B. Guiterrez</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,505 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 11 - Maoyod Pob."><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09655516034" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="12" data-name="bgy. 12 - tula-tula" data-pb="hon. miguelito a. barcoma" data-sk="ma. louisa a. araneta" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-pilar-d-galima">Pilar D. Galima</span>
+                <h4 class="barangay-name">Bgy. 12 - Tula-tula</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-dexter-yaranon-ruiz"
-                  >Kap. Dexter Yaranon Ruiz</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0965 551 6034</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Miguelito A. Barcoma</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Ma. Louisa A. Araneta</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,041 (2024)</span>
+                  <a href="tel:0936161381" class="bgy-call-btn" aria-label="Call Bgy. 12 - Tula-tula"><i class="bi bi-phone-fill"></i> 0936161381</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09171475710" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="13" data-name="bgy. 13 - ilawod west pob." data-pb="hon. ma. lourdes f. baltazar" data-sk="qyara milse a. caño" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-poblacion-north">Poblacion North</span>
+                <h4 class="barangay-name">Bgy. 13 - Ilawod West Pob.</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-angelito-de-leon-tiongson"
-                  >Kap. Angelito De Leon Tiongson</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0917 147 5710</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Ma. Lourdes F. Baltazar</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Qyara Milse A. Caño</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 365 (2024)</span>
+                  <a href="tel:09751738902" class="bgy-call-btn" aria-label="Call Bgy. 13 - Ilawod West Pob."><i class="bi bi-phone-fill"></i> 09751738902</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09062685095" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="14" data-name="bgy. 14 - ilawod pob." data-pb="hon. gerald a. ayque" data-sk="maria patricia e. hurtado" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-poblacion-south">Poblacion South</span>
+                <h4 class="barangay-name">Bgy. 14 - Ilawod Pob.</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-melchor-esmedina-marzo"
-                  >Kap. Melchor Esmedina Marzo</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0906 268 5095</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Gerald A. Ayque</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Maria Patricia E. Hurtado</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 719 (2024)</span>
+                  <a href="tel:09953606107" class="bgy-call-btn" aria-label="Call Bgy. 14 - Ilawod Pob."><i class="bi bi-phone-fill"></i> 09953606107</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09209454538" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="15" data-name="bgy. 15 - ilawod east pob." data-pb="hon. erlim a. azotea" data-sk="kenneth w. manila" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-quezon">Quezon</span>
+                <h4 class="barangay-name">Bgy. 15 - Ilawod East Pob.</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-luis-amangi-castillo"
-                  >Kap. Luis Amangi Castillo</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0920 945 4538</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Erlim A. Azotea</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Kenneth W. Manila</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,386 (2024)</span>
+                  <a href="tel:09305283465" class="bgy-call-btn" aria-label="Call Bgy. 15 - Ilawod East Pob."><i class="bi bi-phone-fill"></i> 09305283465</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09351987103" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="16" data-name="bgy. 16 - kawit-east washington drive" data-pb="hon. jonathan g. rodenas" data-sk="julius e. gandol" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-quirino">Quirino</span>
+                <h4 class="barangay-name">Bgy. 16 - Kawit-East Washington Drive</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-walter-dalupang-savedra-sr"
-                  >Kap. Walter Dalupang Savedra Sr.</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0935 198 7103</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Jonathan G. Rodenas</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Julius E. Gandol</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 5,420 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 16 - Kawit-East Washington Drive"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09364504413" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="17" data-name="bgy. 17 - rizal street., ilawod" data-pb="hon. benito b. chan" data-sk="luke franz s. buitre" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-roxas">Roxas</span>
+                <h4 class="barangay-name">Bgy. 17 - Rizal Street., Ilawod</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-edwin-bungan-dacayo"
-                  >Kap. Edwin Bungan Dacayo</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0936 450 4413</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Benito B. Chan</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Luke Franz S. Buitre</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,365 (2024)</span>
+                  <a href="tel:0524131047" class="bgy-call-btn" aria-label="Call Bgy. 17 - Rizal Street., Ilawod"><i class="bi bi-phone-fill"></i> (052) 413-1047</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09653480556" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="18" data-name="bgy. 18 - cabagñan west" data-pb="hon. rowena a. olimpo" data-sk="nathaniel b. arao" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-san-juan">San Juan</span>
+                <h4 class="barangay-name">Bgy. 18 - Cabagñan West</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-nardo-eustaquio-ramel"
-                  >Kap. Nardo Eustaquio Ramel</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0965 348 0556</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Rowena A. Olimpo</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Nathaniel B. Arao</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 4,133 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 18 - Cabagñan West"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09363680681" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="19" data-name="bgy. 19 - cabagñan" data-pb="hon. john b. macalampad" data-sk="antonio camillo b. repillo" data-type="rural">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-san-luis">San Luis</span>
+                <h4 class="barangay-name">Bgy. 19 - Cabagñan</h4>
+                <span class="badge badge-rural">Rural</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-ernesto-domingo-ramones-jr"
-                  >Kap. Ernesto Domingo Ramones Jr.</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0936 368 0681</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. John B. Macalampad</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Antonio Camillo B. Repillo</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,611 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 19 - Cabagñan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09661769302" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="20" data-name="bgy. 20 - cabagñan east" data-pb="hon. fabian b. batalla jr." data-sk="carmela may d. acerado" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-tucal">Tucal</span>
+                <h4 class="barangay-name">Bgy. 20 - Cabagñan East</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-roberto-ojastro-dizon"
-                  >Kap. Roberto Ojastro Dizon</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0966 176 9302</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Fabian B. Batalla Jr.</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Carmela May D. Acerado</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 707 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 20 - Cabagñan East"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09355460625" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="21" data-name="bgy. 21 - binanuahan west" data-pb="hon. jose t. abiera" data-sk="chelsea azenith p. ortal" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-uddiawan">Uddiawan</span>
+                <h4 class="barangay-name">Bgy. 21 - Binanuahan West</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-jessie-concepcion-delos-reyes"
-                  >Kap. Jessie Concepcion Delos Reyes</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0935 546 0625</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Jose T. Abiera</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Chelsea Azenith P. Ortal</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 770 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 21 - Binanuahan West"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
-            <a href="tel:09159621403" class="barangay-card">
+            </div>
+            <div class="barangay-card" data-bgy-num="22" data-name="bgy. 22 - binanuahan east" data-pb="hon. jerry a. grageda" data-sk="christine h. reñevo" data-type="urban">
               <div class="barangay-card-header">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="barangay-name" data-i18n="gov-wacal">Wacal</span>
+                <h4 class="barangay-name">Bgy. 22 - Binanuahan East</h4>
+                <span class="badge badge-urban">Urban</span>
               </div>
               <div class="barangay-card-body">
-                <span class="barangay-captain" data-i18n="gov-kap-janette-quines-cristobal"
-                  >Kap. Janette Quines Cristobal</span
-                >
-                <span class="barangay-contact"><i class="bi bi-telephone"></i> 0915 962 1403</span>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Jerry A. Grageda</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Christine H. Reñevo</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,861 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 22 - Binanuahan East"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
               </div>
-            </a>
+            </div>
+            <div class="barangay-card" data-bgy-num="23" data-name="bgy. 23 - imperial court subd." data-pb="hon. edgar b. bejer" data-sk="jhon anthony j. morauda" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 23 - Imperial Court Subd.</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Edgar B. Bejer</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Jhon Anthony J. Morauda</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,202 (2024)</span>
+                  <a href="tel:09122025648" class="bgy-call-btn" aria-label="Call Bgy. 23 - Imperial Court Subd."><i class="bi bi-phone-fill"></i> 09122025648</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="24" data-name="bgy. 24 - rizal street" data-pb="hon. ricardo v. abunda" data-sk="loryden f. abella" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 24 - Rizal Street</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Ricardo V. Abunda</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Loryden F. Abella</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,826 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 24 - Rizal Street"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="25" data-name="bgy. 25 - lapu-lapu" data-pb="hon. ma. karren c. valdez" data-sk="mark justin a. padilla" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 25 - Lapu-lapu</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Ma. Karren C. Valdez</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Mark Justin A. Padilla</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,730 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 25 - Lapu-lapu"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="26" data-name="bgy. 26 - dinagaan" data-pb="hon. julia d. agao" data-sk="jamaica b. abunda" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 26 - Dinagaan</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Julia D. Agao</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Jamaica B. Abunda</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 534 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 26 - Dinagaan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="27" data-name="bgy. 27 - victory village south" data-pb="hon. basilia a. capino" data-sk="mark stephen m. abinion" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 27 - Victory Village South</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Basilia A. Capino</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Mark Stephen M. Abinion</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,451 (2024)</span>
+                  <a href="tel:09776320556" class="bgy-call-btn" aria-label="Call Bgy. 27 - Victory Village South"><i class="bi bi-phone-fill"></i> 09776320556</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="28" data-name="bgy. 28 - victory village north" data-pb="hon. antonio l. loveriza" data-sk="prince khalid d. dao" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 28 - Victory Village North</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Antonio L. Loveriza</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Prince Khalid D. Dao</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,487 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 28 - Victory Village North"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="29" data-name="bgy. 29 - sabang" data-pb="hon. ismael g. santillan" data-sk="danica l. almayda" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 29 - Sabang</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Ismael G. Santillan</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Danica L. Almayda</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,894 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 29 - Sabang"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="30" data-name="bgy. 30 - pigcale" data-pb="hon. fernando a. lopez" data-sk="joyce h. lesano" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 30 - Pigcale</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Fernando A. Lopez</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Joyce H. Lesano</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,210 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 30 - Pigcale"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="31" data-name="bgy. 31 - centro-baybay" data-pb="hon. teresita l. empig" data-sk="ivy mae t. aranel" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 31 - Centro-Baybay</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Teresita L. Empig</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Ivy Mae T. Aranel</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,088 (2024)</span>
+                  <a href="tel:09070127231" class="bgy-call-btn" aria-label="Call Bgy. 31 - Centro-Baybay"><i class="bi bi-phone-fill"></i> 09070127231</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="32" data-name="bgy. 32 - san roque" data-pb="hon. bill b. atento" data-sk="james kim r. barcelon" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 32 - San Roque</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Bill B. Atento</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">James Kim R. Barcelon</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 5,452 (2024)</span>
+                  <a href="tel:09171120318" class="bgy-call-btn" aria-label="Call Bgy. 32 - San Roque"><i class="bi bi-phone-fill"></i> 09171120318</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="33" data-name="bgy. 33 - pnr-peñaranda st.-iraya" data-pb="hon. marife d. velasco" data-sk="julius l. boyon" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 33 - PNR-Peñaranda St.-Iraya</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Marife D. Velasco</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Julius L. Boyon</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,887 (2024)</span>
+                  <a href="tel:09636753741" class="bgy-call-btn" aria-label="Call Bgy. 33 - PNR-Peñaranda St.-Iraya"><i class="bi bi-phone-fill"></i> 09636753741</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="34" data-name="bgy. 34 - oro site-magallanes st." data-pb="hon. mariano oriel a. maddela" data-sk="jose howard b. guan" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 34 - Oro Site-Magallanes St.</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Mariano Oriel A. Maddela</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Jose Howard B. Guan</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,140 (2024)</span>
+                  <a href="tel:0524808766" class="bgy-call-btn" aria-label="Call Bgy. 34 - Oro Site-Magallanes St."><i class="bi bi-phone-fill"></i> (052) 480-8766</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="35" data-name="bgy. 35 - tinago" data-pb="hon. sayri r. sayco" data-sk="carmela c. hernandez" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 35 - Tinago</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Sayri R. Sayco</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Carmela C. Hernandez</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 340 (2024)</span>
+                  <a href="tel:09395968501" class="bgy-call-btn" aria-label="Call Bgy. 35 - Tinago"><i class="bi bi-phone-fill"></i> 09395968501</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="36" data-name="bgy. 36 - kapantawan" data-pb="hon. eric sim b. brizuela" data-sk="neilfred d. abad" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 36 - Kapantawan</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Eric Sim B. Brizuela</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Neilfred D. Abad</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 404 (2024)</span>
+                  <a href="tel:0528207009" class="bgy-call-btn" aria-label="Call Bgy. 36 - Kapantawan"><i class="bi bi-phone-fill"></i> (052) 820-7009</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="37" data-name="bgy. 37 - bitano" data-pb="hon. bernard y. pacardo" data-sk="phoebe diane p. cruel" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 37 - Bitano</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Bernard Y. Pacardo</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Phoebe Diane P. Cruel</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 7,546 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 37 - Bitano"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="38" data-name="bgy. 38 - gogon" data-pb="hon. ma. theresa s. naz" data-sk="angelica a. nacion" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 38 - Gogon</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Ma. Theresa S. Naz</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Angelica A. Nacion</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 6,534 (2024)</span>
+                  <a href="tel:09257136784" class="bgy-call-btn" aria-label="Call Bgy. 38 - Gogon"><i class="bi bi-phone-fill"></i> 09257136784</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="39" data-name="bgy. 39 - bonot" data-pb="hon. reynaldo h. bendicio" data-sk="kim dino o. serrano" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 39 - Bonot</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Reynaldo H. Bendicio</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Kim Dino O. Serrano</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,375 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 39 - Bonot"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="40" data-name="bgy. 40 - cruzada" data-pb="hon. edsil n. llaguno" data-sk="lawrence grant l. oliva" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 40 - Cruzada</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Edsil N. Llaguno</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Lawrence Grant L. Oliva</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 7,030 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 40 - Cruzada"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="41" data-name="bgy. 41 - bogtong" data-pb="hon. joel a. ador" data-sk="fatima a. hagos" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 41 - Bogtong</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Joel A. Ador</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Fatima A. Hagos</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 5,389 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 41 - Bogtong"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="42" data-name="bgy. 42 - rawis" data-pb="hon. joel a. orosco" data-sk="keneth l. pinon" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 42 - Rawis</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Joel A. Orosco</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Keneth L. Pinon</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 10,330 (2024)</span>
+                  <a href="tel:09106022923" class="bgy-call-btn" aria-label="Call Bgy. 42 - Rawis"><i class="bi bi-phone-fill"></i> 09106022923</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="43" data-name="bgy. 43 - tamaoyan" data-pb="hon. sylvia m. del agua" data-sk="joseph b. baronia" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 43 - Tamaoyan</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Sylvia M. Del Agua</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Joseph B. Baronia</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,809 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 43 - Tamaoyan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="44" data-name="bgy. 44 - pawa" data-pb="hon. tito c. villanueva" data-sk="arjay a. dino" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 44 - Pawa</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Tito C. Villanueva</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Arjay A. Dino</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 4,585 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 44 - Pawa"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="45" data-name="bgy. 45 - dita" data-pb="hon. romeo a. almayda jr." data-sk="john nicolas c. garbin" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 45 - Dita</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Romeo A. Almayda Jr.</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">John Nicolas C. Garbin</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,167 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 45 - Dita"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="46" data-name="bgy. 46 - san joaquin" data-pb="hon. amelia a. dela torre" data-sk="lhenard khen a. dino" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 46 - San Joaquin</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Amelia A. Dela Torre</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Lhenard Khen A. Dino</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,903 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 46 - San Joaquin"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="47" data-name="bgy. 47 - arimbay" data-pb="hon. wilhelmina m. budao" data-sk="danica mae n. biago" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 47 - Arimbay</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Wilhelmina M. Budao</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Danica Mae N. Biago</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 4,085 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 47 - Arimbay"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="48" data-name="bgy. 48 - bagong abre" data-pb="hon. dindo d. nuñez" data-sk="ma. bernadeth b. bañares" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 48 - Bagong Abre</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Dindo D. Nuñez</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Ma. Bernadeth B. Bañares</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,675 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 48 - Bagong Abre"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="49" data-name="bgy. 49 - bigaa" data-pb="hon. ricardo a. arienda" data-sk="james paul simon n. arienda" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 49 - Bigaa</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Ricardo A. Arienda</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">James Paul Simon N. Arienda</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 7,287 (2024)</span>
+                  <a href="tel:09158717790" class="bgy-call-btn" aria-label="Call Bgy. 49 - Bigaa"><i class="bi bi-phone-fill"></i> 09158717790</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="50" data-name="bgy. 50 - padang" data-pb="hon. harold l. bembenuto" data-sk="desiree ayala" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 50 - Padang</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Harold L. Bembenuto</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Desiree Ayala</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,949 (2024)</span>
+                  <a href="tel:09068516780" class="bgy-call-btn" aria-label="Call Bgy. 50 - Padang"><i class="bi bi-phone-fill"></i> 09068516780</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="51" data-name="bgy. 51 - buyuan" data-pb="hon. ronaldo b. miña sr." data-sk="regine s. abrique" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 51 - Buyuan</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Ronaldo B. Miña Sr.</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Regine S. Abrique</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 4,200 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 51 - Buyuan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="52" data-name="bgy. 52 - matanag" data-pb="hon. hilario a. atun" data-sk="dale xendrick b. neptuno" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 52 - Matanag</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Hilario A. Atun</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Dale Xendrick B. Neptuno</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,904 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 52 - Matanag"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="53" data-name="bgy. 53 - bonga" data-pb="hon. chona m. miña" data-sk="precy a. nuñez" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 53 - Bonga</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Chona M. Miña</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Precy A. Nuñez</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 4,308 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 53 - Bonga"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="54" data-name="bgy. 54 - mabinit" data-pb="hon. dennis p. nuñez" data-sk="mark ivan l. armario" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 54 - Mabinit</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Dennis P. Nuñez</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Mark Ivan L. Armario</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,699 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 54 - Mabinit"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="55" data-name="bgy. 55 - estanza" data-pb="hon. danilo d. agripa" data-sk="mark a. agripa" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 55 - Estanza</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Danilo D. Agripa</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Mark A. Agripa</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 4,963 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 55 - Estanza"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="56" data-name="bgy. 56 - taysan" data-pb="hon. benjamin d. rosin" data-sk="antoniette a. arganda" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 56 - Taysan</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Benjamin D. Rosin</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Antoniette A. Arganda</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 20,017 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 56 - Taysan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="57" data-name="bgy. 57 - dap-dap" data-pb="hon. glenn j. barcelon" data-sk="ma. maxine a. castillo" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 57 - Dap-dap</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Glenn J. Barcelon</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Ma. Maxine A. Castillo</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,746 (2024)</span>
+                  <a href="tel:0527425763" class="bgy-call-btn" aria-label="Call Bgy. 57 - Dap-dap"><i class="bi bi-phone-fill"></i> (052) 742-5763</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="58" data-name="bgy. 58 - buragwis" data-pb="hon. maria cristina p. ajero" data-sk="camila remoto" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 58 - Buragwis</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Maria Cristina P. Ajero</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Camila Remoto</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 4,329 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 58 - Buragwis"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="59" data-name="bgy. 59 - puro" data-pb="hon. henyl b. olimpo" data-sk="ma. ellyne h. apin" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 59 - Puro</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Henyl B. Olimpo</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Ma. Ellyne H. Apin</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 5,215 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 59 - Puro"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="60" data-name="bgy. 60 - lamba" data-pb="hon. norberto m. abion" data-sk="chris l. presentacion" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 60 - Lamba</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Norberto M. Abion</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Chris L. Presentacion</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,453 (2024)</span>
+                  <a href="tel:0527423913" class="bgy-call-btn" aria-label="Call Bgy. 60 - Lamba"><i class="bi bi-phone-fill"></i> (052) 742-3913</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="61" data-name="bgy. 61 - maslog" data-pb="hon. niño albert c. berjuega" data-sk="algenbert p. gribialde" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 61 - Maslog</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Niño Albert C. Berjuega</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Algenbert P. Gribialde</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 5,320 (2024)</span>
+                  <a href="tel:0527420611" class="bgy-call-btn" aria-label="Call Bgy. 61 - Maslog"><i class="bi bi-phone-fill"></i> (052) 742-0611</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="62" data-name="bgy. 62 - homapon" data-pb="hon. fidel a. botin sr." data-sk="angela a. serrano" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 62 - Homapon</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Fidel A. Botin Sr.</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Angela A. Serrano</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 5,250 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 62 - Homapon"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="63" data-name="bgy. 63 - mariawa" data-pb="hon. anabelle a. teope" data-sk="mark owen a. manoriña" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 63 - Mariawa</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Anabelle A. Teope</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Mark Owen A. Manoriña</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,026 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 63 - Mariawa"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="64" data-name="bgy. 64 - bagacay" data-pb="hon. dennis a. alamo" data-sk="mark owen d. alapan" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 64 - Bagacay</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Dennis A. Alamo</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Mark Owen D. Alapan</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,869 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 64 - Bagacay"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="65" data-name="bgy. 65 - imalnod" data-pb="hon. beberlyn a. bitancur" data-sk="bridalyn claire m. trilles" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 65 - Imalnod</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Beberlyn A. Bitancur</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Bridalyn Claire M. Trilles</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,798 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 65 - Imalnod"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="66" data-name="bgy. 66 - banquerohan" data-pb="hon. crispin a. botin" data-sk="mark justine l. jacob" data-type="urban">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 66 - Banquerohan</h4>
+                <span class="badge badge-urban">Urban</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Crispin A. Botin</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Mark Justine L. Jacob</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 8,918 (2024)</span>
+                  <a href="tel:09091238701" class="bgy-call-btn" aria-label="Call Bgy. 66 - Banquerohan"><i class="bi bi-phone-fill"></i> 09091238701</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="67" data-name="bgy. 67 - bariis" data-pb="hon. jesse m. aycardo" data-sk="charles a. leron" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 67 - Bariis</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Jesse M. Aycardo</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Charles A. Leron</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,739 (2024)</span>
+                  <a href="tel:09664594639" class="bgy-call-btn" aria-label="Call Bgy. 67 - Bariis"><i class="bi bi-phone-fill"></i> 09664594639</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="68" data-name="bgy. 68 - san francisco" data-pb="hon. ronaldo p. aringo" data-sk="jhacel a. aringo" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 68 - San Francisco</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Ronaldo P. Aringo</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Jhacel A. Aringo</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 2,322 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 68 - San Francisco"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="69" data-name="bgy. 69 - buenavista" data-pb="hon. rogelio a. leron" data-sk="rendell a. ramos" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 69 - Buenavista</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Rogelio A. Leron</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Rendell A. Ramos</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 1,419 (2024)</span>
+                  <a href="tel:09564267369" class="bgy-call-btn" aria-label="Call Bgy. 69 - Buenavista"><i class="bi bi-phone-fill"></i> 09564267369</a>
+                </div>
+              </div>
+            </div>
+            <div class="barangay-card" data-bgy-num="70" data-name="bgy. 70 - cagbacong" data-pb="hon. gladwyn t. candia" data-sk="dominic g. asilo" data-type="rural">
+              <div class="barangay-card-header">
+                <h4 class="barangay-name">Bgy. 70 - Cagbacong</h4>
+                <span class="badge badge-rural">Rural</span>
+              </div>
+              <div class="barangay-card-body">
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-person-fill"></i> Punong Barangay</span>
+                  <span class="bgy-val">Hon. Gladwyn T. Candia</span>
+                </div>
+                <div class="bgy-official-row">
+                  <span class="bgy-label"><i class="bi bi-award"></i> SK Chairperson</span>
+                  <span class="bgy-val">Dominic G. Asilo</span>
+                </div>
+                <div class="bgy-footer-row">
+                  <span class="bgy-pop"><i class="bi bi-people"></i> 3,019 (2024)</span>
+                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 70 - Cagbacong"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simple Barangay Source Line (Centered & Enlarged) -->
+          <div class="source-credit-simple">
+            <i class="bi bi-info-circle"></i> Sources: <a href="https://www.dilg.gov.ph/barangay-officials-directory/search" target="_blank" rel="noopener noreferrer">DILG Barangay Officials Directory</a> &bull; <a href="https://psa.gov.ph/content/2024-census-population-popcen-population-counts-declared-official-president" target="_blank" rel="noopener noreferrer">PSA Census of Population (2024)</a>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Solano logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
-            <p
-              class="footer-tagline"
-              data-i18n="gov-empowering-the-people-of-solano-with-transparent"
-            >
-              Empowering the people of Solano with transparent access to the services, programs, and
-              public funds of LGU Solano.
+            <p class="footer-tagline">
+              Empowering the people of Legazpi City with transparent access to municipal services, programs, and public funds.
             </p>
             <div class="footer-social-new">
               <a
-                href="https://www.facebook.com/bettersolano.org"
+                href="https://www.facebook.com/betterlegazpi"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1311,45 +2573,19 @@
                 ><i class="bi bi-facebook"></i
               ></a>
               <a
-                href="https://www.linkedin.com/company/bettersolano/"
+                href="https://github.com/bpbelen/betterlegazpi"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-              <a
-                href="https://discord.com/invite/qeSu7RJkjQ"
-                class="footer-social-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Discord"
-                ><i class="bi bi-discord"></i
+                aria-label="GitHub"
+                ><i class="bi bi-github"></i
               ></a>
             </div>
           </div>
           <div class="footer-column">
             <h4 data-i18n="gov-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
-              <li>
-                <a
-                  href="https://quiz.bettersolano.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="gov-solano-quiz"
-                  >Solano Quiz</a
-                >
-              </li>
               <li><a href="../sitemap/" data-i18n="gov-sitemap">Sitemap</a></li>
-              <li>
-                <a
-                  href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="gov-citizens-charter"
-                  >Citizen's Charter</a
-                >
-              </li>
               <li><a href="../terms/" data-i18n="gov-terms-of-use">Terms of Use</a></li>
               <li><a href="../privacy/" data-i18n="gov-privacy-policy">Privacy Policy</a></li>
               <li><a href="../accessibility/" data-i18n="gov-accessibility">Accessibility</a></li>
@@ -1357,69 +2593,46 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="gov-resources">Resources</h4>
+            <h4 data-i18n="gov-resources">Official Portals</h4>
             <ul class="footer-links-new">
+              <li>
+                <a
+                  href="https://legazpi.gov.ph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official Legazpi City Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://legazpi.gov.ph/executive/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Executive Directory</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://legazpi.gov.ph/about-us/legislative/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Sangguniang Panlungsod</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://legazpi.gov.ph/directory/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >City Office Directory</a
+                >
+              </li>
               <li>
                 <a
                   href="https://data.gov.ph"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="gov-open-data-philippines"
                   >Open Data Philippines</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.foi.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="gov-freedom-of-information"
-                  >Freedom of Information</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://solano.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="gov-official-lgu-solano-portal"
-                  >Official LGU Solano Portal</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://sangguniangbayan.solano.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="gov-sangguniang-bayan"
-                  >Sangguniang Bayan</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/OfficialLguSolanoFanpage/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="gov-lgu-solano-facebook"
-                  >LGU Solano Facebook</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://blgf.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="gov-blgf-portal"
-                  >BLGF Portal</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://cmci.dti.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="gov-cmci-dti-portal"
-                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -1428,68 +2641,27 @@
             <div
               class="footer-cost"
               role="status"
-              aria-label="Cost to the People of Solano: Zero Pesos"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
             >
-              Cost to the People of Solano = <span class="footer-cost-value">₱0</span>
+              Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
               ><i class="bi bi-envelope-heart"></i>
-              <span data-i18n="gov-volunteer-with-us">Volunteer with us</span></a
+              <span>Volunteer with us</span></a
             >
             <a
-              href="https://github.com/BetterSolano/bettersolano"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-github"></i>
-              <span data-i18n="gov-contribute-code-with-us">Contribute code with us</span></a
+              <span>Contribute code with us</span></a
             >
-            <div class="footer-partners">
-              <a
-                href="https://abakada.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Abakada.org"
-                ><img
-                  src="../assets/images/logo/abakada-footer.svg"
-                  alt="Abakada.org"
-                  class="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-              /></a>
-              <a
-                href="https://hivcareph.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="HIV Care Philippines"
-                ><img
-                  src="../assets/images/logo/hiv-care-logo-footer.svg"
-                  alt="HIV Care Philippines"
-                  class="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-              /></a>
-              <a
-                href="https://bettergov.ph"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="BetterGov.ph"
-                ><img
-                  src="../assets/images/logo/bettergov-footer.svg"
-                  alt="BetterGov.ph"
-                  class="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-              /></a>
-            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
           <div class="footer-copyright">
-            <span class="footer-copyright-text">&copy; 2026 BetterSolano.org</span>
+            <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer"
               >All public information sourced from official government portals.</span
@@ -1499,6 +2671,65 @@
         </div>
       </div>
     </footer>
+
+    <!-- Interactive Barangay Filter & Search Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('bgySearchInput');
+        const filterBtns = document.querySelectorAll('.bgy-filter-btn');
+        const cards = document.querySelectorAll('#barangayGrid .barangay-card');
+        const emptyNotice = document.getElementById('bgyEmptyNotice');
+
+        let currentFilter = 'all';
+        let currentQuery = '';
+
+        function applyFilter() {
+          let visibleCount = 0;
+          cards.forEach((card) => {
+            const cardName = card.getAttribute('data-name') || '';
+            const cardPb = card.getAttribute('data-pb') || '';
+            const cardSk = card.getAttribute('data-sk') || '';
+            const cardType = card.getAttribute('data-type') || '';
+            const cardNum = card.getAttribute('data-bgy-num') || '';
+
+            const matchesSearch = !currentQuery || 
+              cardName.includes(currentQuery) || 
+              cardPb.includes(currentQuery) || 
+              cardSk.includes(currentQuery) ||
+              cardNum === currentQuery;
+
+            const matchesType = currentFilter === 'all' || cardType === currentFilter;
+
+            if (matchesSearch && matchesType) {
+              card.style.display = 'flex';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          if (emptyNotice) {
+            emptyNotice.style.display = visibleCount === 0 ? 'block' : 'none';
+          }
+        }
+
+        if (searchInput) {
+          searchInput.addEventListener('input', (e) => {
+            currentQuery = e.target.value.trim().toLowerCase();
+            applyFilter();
+          });
+        }
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.getAttribute('data-filter') || 'all';
+            applyFilter();
+          });
+        });
+      });
+    </script>
 
     <script defer src="../assets/js/translations.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>

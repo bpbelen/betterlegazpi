@@ -1,6 +1,6 @@
 {
   "_schema_version": "1.0",
-  "_source": "Philippine Statistics Authority (PSA) - 2024 Census of Population & PSGC",
+  "_source": "Philippine Statistics Authority (PSA) 2024 Population & DILG Legazpi City Barangay Officials Directory (Term 2023-2026)",
   "city": "City of Legazpi",
   "province": "Albay",
   "region": "Region V - Bicol Region",
@@ -18,7 +18,13 @@
       "barangay_number": 1,
       "population": 3259,
       "percentage": 1.55,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Veronica S. Geraldino",
+      "sk_chairperson": "Anidene Dashi D. Armenta",
+      "barangay_secretary": "Maria Vecia G. Basilan",
+      "barangay_treasurer": "Marie A. Atizado",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506016",
@@ -28,7 +34,13 @@
       "barangay_number": 2,
       "population": 1416,
       "percentage": 0.67,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Milagros B. Bal",
+      "sk_chairperson": "Aljon S. Alvarado",
+      "barangay_secretary": "Ma. Zarina N. Miraflores",
+      "barangay_treasurer": "Geneflex R. Maleniza",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506027",
@@ -38,7 +50,13 @@
       "barangay_number": 3,
       "population": 945,
       "percentage": 0.45,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Jose T. Pispis",
+      "sk_chairperson": "Lowella Mae C. Apuac",
+      "barangay_secretary": "Ave A. Palcon",
+      "barangay_treasurer": "Lalaine A. Royeras",
+      "contact_number": "09814619092",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506038",
@@ -48,7 +66,13 @@
       "barangay_number": 4,
       "population": 975,
       "percentage": 0.46,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Gibsen Salvador E. De Leoz",
+      "sk_chairperson": "Jonnalyn P. Aringo",
+      "barangay_secretary": "Ma. Keneth O. Campillos",
+      "barangay_treasurer": "Marlon P. Jacob",
+      "contact_number": "09516995291",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506039",
@@ -58,7 +82,13 @@
       "barangay_number": 5,
       "population": 1037,
       "percentage": 0.49,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Lorena A. Vargas",
+      "sk_chairperson": "Regine R. Lombes",
+      "barangay_secretary": "Thea Salome U. Martinez",
+      "barangay_treasurer": "Aleth A. Buan",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506040",
@@ -68,7 +98,13 @@
       "barangay_number": 6,
       "population": 1289,
       "percentage": 0.61,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Arthur R. Marco",
+      "sk_chairperson": "Franz Vincent B. Reynoso",
+      "barangay_secretary": "Maria Angela A. Nalles",
+      "barangay_treasurer": "Judith H. Silvestre",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506041",
@@ -78,7 +114,13 @@
       "barangay_number": 7,
       "population": 559,
       "percentage": 0.27,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Domingo Alberto D. Pasano Jr.",
+      "sk_chairperson": "Kristian Angelo O. Soloria",
+      "barangay_secretary": "Mary Ann P. Morano",
+      "barangay_treasurer": "Amephilda A. Lamar",
+      "contact_number": "(052) 742-1409",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506042",
@@ -88,7 +130,13 @@
       "barangay_number": 8,
       "population": 2564,
       "percentage": 1.22,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Amore Rex B. Rañeses",
+      "sk_chairperson": "Neiljan C. Alianza",
+      "barangay_secretary": "Regina D. De Guzman",
+      "barangay_treasurer": "Soledad R. Ebrada",
+      "contact_number": "830-4636",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506043",
@@ -98,7 +146,13 @@
       "barangay_number": 9,
       "population": 1414,
       "percentage": 0.67,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Roy A. Nañoz",
+      "sk_chairperson": "Steven Marc Red L. Sabdao",
+      "barangay_secretary": "Jacqueline L. Amaranto",
+      "barangay_treasurer": "Haidilyn G. Vargas",
+      "contact_number": "09308119357",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506072",
@@ -108,7 +162,13 @@
       "barangay_number": 10,
       "population": 452,
       "percentage": 0.21,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Victor R. Lapasaran",
+      "sk_chairperson": "Mary Rose D. Quiles",
+      "barangay_secretary": "Christy M. Aycocho",
+      "barangay_treasurer": "Leonila G. Zaballa",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506007",
@@ -118,7 +178,13 @@
       "barangay_number": 11,
       "population": 1505,
       "percentage": 0.71,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Mark Joel O. Beguiras",
+      "sk_chairperson": "Trisha Jane B. Guiterrez",
+      "barangay_secretary": "Meryl E. Bajamundi",
+      "barangay_treasurer": "Paul B. Dasalla",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506008",
@@ -128,7 +194,13 @@
       "barangay_number": 12,
       "population": 1041,
       "percentage": 0.49,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Miguelito A. Barcoma",
+      "sk_chairperson": "Ma. Louisa A. Araneta",
+      "barangay_secretary": "Ma. Rayzel A. Ibay",
+      "barangay_treasurer": "Marilyn C. Alcazar",
+      "contact_number": "0936161381",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506009",
@@ -138,7 +210,13 @@
       "barangay_number": 13,
       "population": 365,
       "percentage": 0.17,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Ma. Lourdes F. Baltazar",
+      "sk_chairperson": "Qyara Milse A. Caño",
+      "barangay_secretary": "Lailani A. Belleza",
+      "barangay_treasurer": "Mariecelle L. Rilloraza",
+      "contact_number": "09751738902",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506010",
@@ -148,7 +226,13 @@
       "barangay_number": 14,
       "population": 719,
       "percentage": 0.34,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Gerald A. Ayque",
+      "sk_chairperson": "Maria Patricia E. Hurtado",
+      "barangay_secretary": "Lorelie M. Mangampo",
+      "barangay_treasurer": "Regina R. Puche",
+      "contact_number": "09953606107",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506011",
@@ -158,7 +242,13 @@
       "barangay_number": 15,
       "population": 2386,
       "percentage": 1.13,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Erlim A. Azotea",
+      "sk_chairperson": "Kenneth W. Manila",
+      "barangay_secretary": "Irma A. Buemia",
+      "barangay_treasurer": "Rhona B. Dy",
+      "contact_number": "09305283465",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506012",
@@ -168,7 +258,13 @@
       "barangay_number": 16,
       "population": 5420,
       "percentage": 2.57,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Jonathan G. Rodenas",
+      "sk_chairperson": "Julius E. Gandol",
+      "barangay_secretary": "Cesar L. Asiado",
+      "barangay_treasurer": "Joane R. Luces",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506013",
@@ -178,7 +274,13 @@
       "barangay_number": 17,
       "population": 2365,
       "percentage": 1.12,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Benito B. Chan",
+      "sk_chairperson": "Luke Franz S. Buitre",
+      "barangay_secretary": "Amelia R. Colecha",
+      "barangay_treasurer": "Lorelie B. Reodique",
+      "contact_number": "(052) 413-1047",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506017",
@@ -188,7 +290,13 @@
       "barangay_number": 18,
       "population": 4133,
       "percentage": 1.96,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Rowena A. Olimpo",
+      "sk_chairperson": "Nathaniel B. Arao",
+      "barangay_secretary": "Arlene Mae D. Magno",
+      "barangay_treasurer": "Richard E. Diaz",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506015",
@@ -198,7 +306,13 @@
       "barangay_number": 19,
       "population": 1611,
       "percentage": 0.76,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. John B. Macalampad",
+      "sk_chairperson": "Antonio Camillo B. Repillo",
+      "barangay_secretary": "Christine Joy N. Apita",
+      "barangay_treasurer": "Mery Lyn B. Jacob",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506021",
@@ -208,7 +322,13 @@
       "barangay_number": 20,
       "population": 707,
       "percentage": 0.34,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Fabian B. Batalla Jr.",
+      "sk_chairperson": "Carmela May D. Acerado",
+      "barangay_secretary": "Maria Shiela M. Enaje",
+      "barangay_treasurer": "Floricelle A. Monte",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506018",
@@ -218,7 +338,13 @@
       "barangay_number": 21,
       "population": 770,
       "percentage": 0.37,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Jose T. Abiera",
+      "sk_chairperson": "Chelsea Azenith P. Ortal",
+      "barangay_secretary": "Arcie A. Malto",
+      "barangay_treasurer": "Nora O. Salameño",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506019",
@@ -228,7 +354,13 @@
       "barangay_number": 22,
       "population": 1861,
       "percentage": 0.88,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Jerry A. Grageda",
+      "sk_chairperson": "Christine H. Reñevo",
+      "barangay_secretary": "Merle Z. Mira",
+      "barangay_treasurer": "Wendy M. Angolima",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506020",
@@ -238,7 +370,13 @@
       "barangay_number": 23,
       "population": 1202,
       "percentage": 0.57,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Edgar B. Bejer",
+      "sk_chairperson": "Jhon Anthony J. Morauda",
+      "barangay_secretary": "Joseph C. Belga",
+      "barangay_treasurer": "Mary Ann L. Morauda",
+      "contact_number": "09122025648",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506073",
@@ -248,7 +386,13 @@
       "barangay_number": 24,
       "population": 1826,
       "percentage": 0.87,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Ricardo V. Abunda",
+      "sk_chairperson": "Loryden F. Abella",
+      "barangay_secretary": "Elmer S. Canon",
+      "barangay_treasurer": "Rowena R. Mendenilla",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506022",
@@ -258,7 +402,13 @@
       "barangay_number": 25,
       "population": 2730,
       "percentage": 1.3,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Ma. Karren C. Valdez",
+      "sk_chairperson": "Mark Justin A. Padilla",
+      "barangay_secretary": "Carrie Mae A. Lusuegro",
+      "barangay_treasurer": "Amie Grace Buiza",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506023",
@@ -268,7 +418,13 @@
       "barangay_number": 26,
       "population": 534,
       "percentage": 0.25,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Julia D. Agao",
+      "sk_chairperson": "Jamaica B. Abunda",
+      "barangay_secretary": "April Ester M. Naval",
+      "barangay_treasurer": "Alicia D. Salvidar",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506024",
@@ -278,7 +434,13 @@
       "barangay_number": 27,
       "population": 1451,
       "percentage": 0.69,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Basilia A. Capino",
+      "sk_chairperson": "Mark Stephen M. Abinion",
+      "barangay_secretary": "Laurice T. Dazal",
+      "barangay_treasurer": "Mary Grace C. Gervasio",
+      "contact_number": "09776320556",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506025",
@@ -288,7 +450,13 @@
       "barangay_number": 28,
       "population": 1487,
       "percentage": 0.71,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Antonio L. Loveriza",
+      "sk_chairperson": "Prince Khalid D. Dao",
+      "barangay_secretary": "Cecelia M. Cariño",
+      "barangay_treasurer": "Teresita E. Ofemia",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506026",
@@ -298,7 +466,13 @@
       "barangay_number": 29,
       "population": 1894,
       "percentage": 0.9,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Ismael G. Santillan",
+      "sk_chairperson": "Danica L. Almayda",
+      "barangay_secretary": "Rhounalyn Dematera",
+      "barangay_treasurer": "Raquel L. Carretero",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506029",
@@ -308,7 +482,13 @@
       "barangay_number": 30,
       "population": 1210,
       "percentage": 0.57,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Fernando A. Lopez",
+      "sk_chairperson": "Joyce H. Lesano",
+      "barangay_secretary": "Maricel L. Encinareal",
+      "barangay_treasurer": "Nheza S. Bulawan",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506030",
@@ -318,7 +498,13 @@
       "barangay_number": 31,
       "population": 1088,
       "percentage": 0.52,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Teresita L. Empig",
+      "sk_chairperson": "Ivy Mae T. Aranel",
+      "barangay_secretary": "Bremer D. Romero",
+      "barangay_treasurer": "Bibiano M. Sayson",
+      "contact_number": "09070127231",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506067",
@@ -328,7 +514,13 @@
       "barangay_number": 32,
       "population": 5452,
       "percentage": 2.59,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Bill B. Atento",
+      "sk_chairperson": "James Kim R. Barcelon",
+      "barangay_secretary": "Rafael Padrique",
+      "barangay_treasurer": "Hannah Lyn R. Borja",
+      "contact_number": "09171120318",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506032",
@@ -338,7 +530,13 @@
       "barangay_number": 33,
       "population": 2887,
       "percentage": 1.37,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Marife D. Velasco",
+      "sk_chairperson": "Julius L. Boyon",
+      "barangay_secretary": "Maria Teresa A. Cuebillas",
+      "barangay_treasurer": "Aneli G. Garcia",
+      "contact_number": "09636753741",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506033",
@@ -348,7 +546,13 @@
       "barangay_number": 34,
       "population": 2140,
       "percentage": 1.02,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Mariano Oriel A. Maddela",
+      "sk_chairperson": "Jose Howard B. Guan",
+      "barangay_secretary": "Rolando B. Gonzales",
+      "barangay_treasurer": "Ma. Magdalena P. Chan",
+      "contact_number": "(052) 480-8766",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506034",
@@ -358,7 +562,13 @@
       "barangay_number": 35,
       "population": 340,
       "percentage": 0.16,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Sayri R. Sayco",
+      "sk_chairperson": "Carmela C. Hernandez",
+      "barangay_secretary": "Benajane Bellen",
+      "barangay_treasurer": "Arlene A. Olila",
+      "contact_number": "09395968501",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506028",
@@ -368,7 +578,13 @@
       "barangay_number": 36,
       "population": 404,
       "percentage": 0.19,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Eric Sim B. Brizuela",
+      "sk_chairperson": "Neilfred D. Abad",
+      "barangay_secretary": "Nelia D. Abad",
+      "barangay_treasurer": "Mary Jean A. Belludo",
+      "contact_number": "(052) 820-7009",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506035",
@@ -378,7 +594,13 @@
       "barangay_number": 37,
       "population": 7546,
       "percentage": 3.58,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Bernard Y. Pacardo",
+      "sk_chairperson": "Phoebe Diane P. Cruel",
+      "barangay_secretary": "Ali Raza P. Ahmad",
+      "barangay_treasurer": "Eldrine Ryan B. Fernandez",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506055",
@@ -388,7 +610,13 @@
       "barangay_number": 38,
       "population": 6534,
       "percentage": 3.1,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Ma. Theresa S. Naz",
+      "sk_chairperson": "Angelica A. Nacion",
+      "barangay_secretary": "Angelica N. Cordovilla",
+      "barangay_treasurer": "Janice B. Lita",
+      "contact_number": "09257136784",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506037",
@@ -398,7 +626,13 @@
       "barangay_number": 39,
       "population": 2375,
       "percentage": 1.13,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Reynaldo H. Bendicio",
+      "sk_chairperson": "Kim Dino O. Serrano",
+      "barangay_secretary": "Monica S. Lorica",
+      "barangay_treasurer": "Ruth Concepcion E. Bayle",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506051",
@@ -408,7 +642,13 @@
       "barangay_number": 40,
       "population": 7030,
       "percentage": 3.34,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Edsil N. Llaguno",
+      "sk_chairperson": "Lawrence Grant L. Oliva",
+      "barangay_secretary": "Niño Joseph C. Llena",
+      "barangay_treasurer": "Julius M. Batalla",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506046",
@@ -418,7 +658,13 @@
       "barangay_number": 41,
       "population": 5389,
       "percentage": 2.56,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Joel A. Ador",
+      "sk_chairperson": "Fatima A. Hagos",
+      "barangay_secretary": "Ma. Angelica B. Nuñez",
+      "barangay_treasurer": "Alicia A. Agripa",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506064",
@@ -428,7 +674,13 @@
       "barangay_number": 42,
       "population": 10330,
       "percentage": 4.9,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Joel A. Orosco",
+      "sk_chairperson": "Keneth L. Pinon",
+      "barangay_secretary": "Jean A. Ramos",
+      "barangay_treasurer": "Johann M. Alarcon",
+      "contact_number": "09106022923",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506069",
@@ -438,7 +690,13 @@
       "barangay_number": 43,
       "population": 1809,
       "percentage": 0.86,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Sylvia M. Del Agua",
+      "sk_chairperson": "Joseph B. Baronia",
+      "barangay_secretary": "Thelma B. Arcinue",
+      "barangay_treasurer": "Roslyn N. Organo",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506062",
@@ -448,7 +706,13 @@
       "barangay_number": 44,
       "population": 4585,
       "percentage": 2.18,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Tito C. Villanueva",
+      "sk_chairperson": "Arjay A. Dino",
+      "barangay_secretary": "Joy M. Alamil",
+      "barangay_treasurer": "Noel B. Esplana",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506053",
@@ -458,7 +722,13 @@
       "barangay_number": 45,
       "population": 2167,
       "percentage": 1.03,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Romeo A. Almayda Jr.",
+      "sk_chairperson": "John Nicolas C. Garbin",
+      "barangay_secretary": "Cynthia D. Nuñez",
+      "barangay_treasurer": "Cristy L. Alcantara",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506066",
@@ -468,7 +738,13 @@
       "barangay_number": 46,
       "population": 1903,
       "percentage": 0.9,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Amelia A. Dela Torre",
+      "sk_chairperson": "Lhenard Khen A. Dino",
+      "barangay_secretary": "Rodel P. Balaguer",
+      "barangay_treasurer": "Gigi A. Marzo",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506001",
@@ -478,7 +754,13 @@
       "barangay_number": 47,
       "population": 4085,
       "percentage": 1.94,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Wilhelmina M. Budao",
+      "sk_chairperson": "Danica Mae N. Biago",
+      "barangay_secretary": "Marifaith A. Estevez",
+      "barangay_treasurer": "Jonalyn D. Bajaro",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506003",
@@ -488,7 +770,13 @@
       "barangay_number": 48,
       "population": 1675,
       "percentage": 0.8,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Dindo D. Nuñez",
+      "sk_chairperson": "Ma. Bernadeth B. Bañares",
+      "barangay_secretary": "Jecel N. De Lumen",
+      "barangay_treasurer": "Juvy A. Abrique",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506045",
@@ -498,7 +786,13 @@
       "barangay_number": 49,
       "population": 7287,
       "percentage": 3.46,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Ricardo A. Arienda",
+      "sk_chairperson": "James Paul Simon N. Arienda",
+      "barangay_secretary": "Catherine A. Loterte",
+      "barangay_treasurer": "Rosielyn G. De Guzman",
+      "contact_number": "09158717790",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506061",
@@ -508,7 +802,13 @@
       "barangay_number": 50,
       "population": 1949,
       "percentage": 0.93,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Harold L. Bembenuto",
+      "sk_chairperson": "Desiree Ayala",
+      "barangay_secretary": "Lhiza Mae A. Banania",
+      "barangay_treasurer": "Charlene Q. Opiana",
+      "contact_number": "09068516780",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506049",
@@ -518,7 +818,13 @@
       "barangay_number": 51,
       "population": 4200,
       "percentage": 1.99,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Ronaldo B. Miña Sr.",
+      "sk_chairperson": "Regine S. Abrique",
+      "barangay_secretary": "Janette A. Araña",
+      "barangay_treasurer": "Marlene J. Azupardo",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506071",
@@ -528,7 +834,13 @@
       "barangay_number": 52,
       "population": 1904,
       "percentage": 0.9,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Hilario A. Atun",
+      "sk_chairperson": "Dale Xendrick B. Neptuno",
+      "barangay_secretary": "Mae N. Aydalla",
+      "barangay_treasurer": "Katrina M. Vibar",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506047",
@@ -538,7 +850,13 @@
       "barangay_number": 53,
       "population": 4308,
       "percentage": 2.05,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Chona M. Miña",
+      "sk_chairperson": "Precy A. Nuñez",
+      "barangay_secretary": "Violeta N. Abejuro",
+      "barangay_treasurer": "Eric Jay J. Beldad",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506058",
@@ -548,7 +866,13 @@
       "barangay_number": 54,
       "population": 1699,
       "percentage": 0.81,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Dennis P. Nuñez",
+      "sk_chairperson": "Mark Ivan L. Armario",
+      "barangay_secretary": "Ronaldo L. Agao",
+      "barangay_treasurer": "Elsie N. Beringuel",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506054",
@@ -558,7 +882,13 @@
       "barangay_number": 55,
       "population": 4963,
       "percentage": 2.36,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Danilo D. Agripa",
+      "sk_chairperson": "Mark A. Agripa",
+      "barangay_secretary": "Cristy E. Arimado",
+      "barangay_treasurer": "Gaspar P. Monreal",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506070",
@@ -568,7 +898,13 @@
       "barangay_number": 56,
       "population": 20017,
       "percentage": 9.5,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Benjamin D. Rosin",
+      "sk_chairperson": "Antoniette A. Arganda",
+      "barangay_secretary": "Cecilia T. Gandol",
+      "barangay_treasurer": "Maria A. Del Mundo",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506052",
@@ -578,7 +914,13 @@
       "barangay_number": 57,
       "population": 1746,
       "percentage": 0.83,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Glenn J. Barcelon",
+      "sk_chairperson": "Ma. Maxine A. Castillo",
+      "barangay_secretary": "Michelle D. Ayque",
+      "barangay_treasurer": "Gloria D. De Los Santos",
+      "contact_number": "(052) 742-5763",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506074",
@@ -588,7 +930,13 @@
       "barangay_number": 58,
       "population": 4329,
       "percentage": 2.06,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Maria Cristina P. Ajero",
+      "sk_chairperson": "Camila Remoto",
+      "barangay_secretary": "Benjamin Gabriel G. Imperial",
+      "barangay_treasurer": "Ruby Anne C. Borlagdan",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506063",
@@ -598,7 +946,13 @@
       "barangay_number": 59,
       "population": 5215,
       "percentage": 2.48,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Henyl B. Olimpo",
+      "sk_chairperson": "Ma. Ellyne H. Apin",
+      "barangay_secretary": "Ernesto D. Barrameda Jr.",
+      "barangay_treasurer": "Sharalyn D. Bernal",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506077",
@@ -608,7 +962,13 @@
       "barangay_number": 60,
       "population": 1453,
       "percentage": 0.69,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Norberto M. Abion",
+      "sk_chairperson": "Chris L. Presentacion",
+      "barangay_secretary": "Shaira B. Lana",
+      "barangay_treasurer": "Lilybeth C. Griño",
+      "contact_number": "(052) 742-3913",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506060",
@@ -618,7 +978,13 @@
       "barangay_number": 61,
       "population": 5320,
       "percentage": 2.53,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Niño Albert C. Berjuega",
+      "sk_chairperson": "Algenbert P. Gribialde",
+      "barangay_secretary": "Cristina A. Bertiz",
+      "barangay_treasurer": "Salve M. Bella",
+      "contact_number": "(052) 742-0611",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506056",
@@ -628,7 +994,13 @@
       "barangay_number": 62,
       "population": 5250,
       "percentage": 2.49,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Fidel A. Botin Sr.",
+      "sk_chairperson": "Angela A. Serrano",
+      "barangay_secretary": "Ella B. Maravilla",
+      "barangay_treasurer": "Romel A. Mendez",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506059",
@@ -638,7 +1010,13 @@
       "barangay_number": 63,
       "population": 2026,
       "percentage": 0.96,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Anabelle A. Teope",
+      "sk_chairperson": "Mark Owen A. Manoriña",
+      "barangay_secretary": "Rachel M. Alcantara",
+      "barangay_treasurer": "Analyn C. Madronio",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506002",
@@ -648,7 +1026,13 @@
       "barangay_number": 64,
       "population": 1869,
       "percentage": 0.89,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Dennis A. Alamo",
+      "sk_chairperson": "Mark Owen D. Alapan",
+      "barangay_secretary": "Janice Ian Rose P. Agripa",
+      "barangay_treasurer": "Edizon D. Jacob",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506057",
@@ -658,7 +1042,13 @@
       "barangay_number": 65,
       "population": 2798,
       "percentage": 1.33,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Beberlyn A. Bitancur",
+      "sk_chairperson": "Bridalyn Claire M. Trilles",
+      "barangay_secretary": "Andy A. Aguimba",
+      "barangay_treasurer": "Eunice Angeline L. Onato",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506004",
@@ -668,7 +1058,13 @@
       "barangay_number": 66,
       "population": 8918,
       "percentage": 4.23,
-      "urban_rural": "Urban"
+      "urban_rural": "Urban",
+      "punong_barangay": "Hon. Crispin A. Botin",
+      "sk_chairperson": "Mark Justine L. Jacob",
+      "barangay_secretary": "Mark Jhay R. Alcazar",
+      "barangay_treasurer": "Lorena L. Antuerpia",
+      "contact_number": "09091238701",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506044",
@@ -678,7 +1074,13 @@
       "barangay_number": 67,
       "population": 1739,
       "percentage": 0.83,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Jesse M. Aycardo",
+      "sk_chairperson": "Charles A. Leron",
+      "barangay_secretary": "Rose Ann E. Nicol",
+      "barangay_treasurer": "Darlene C. Yape",
+      "contact_number": "09664594639",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506065",
@@ -688,7 +1090,13 @@
       "barangay_number": 68,
       "population": 2322,
       "percentage": 1.1,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Ronaldo P. Aringo",
+      "sk_chairperson": "Jhacel A. Aringo",
+      "barangay_secretary": "Anna Marie A. Dejumo",
+      "barangay_treasurer": "Gina B. Baltar",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506048",
@@ -698,7 +1106,13 @@
       "barangay_number": 69,
       "population": 1419,
       "percentage": 0.67,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Rogelio A. Leron",
+      "sk_chairperson": "Rendell A. Ramos",
+      "barangay_secretary": "Sara Jean L. Musa",
+      "barangay_treasurer": "Emy Rose A. Rivero",
+      "contact_number": "09564267369",
+      "term": "2023 - 2026"
     },
     {
       "code": "050506050",
@@ -708,7 +1122,14 @@
       "barangay_number": 70,
       "population": 3019,
       "percentage": 1.43,
-      "urban_rural": "Rural"
+      "urban_rural": "Rural",
+      "punong_barangay": "Hon. Gladwyn T. Candia",
+      "sk_chairperson": "Dominic G. Asilo",
+      "barangay_secretary": "Hazel L. Lorilla",
+      "barangay_treasurer": "Sally B. Baltazar",
+      "contact_number": "N/A",
+      "term": "2023 - 2026"
     }
-  ]
+  ],
+  "_barangay_term": "2023 - 2026"
 }

@@ -2092,8 +2092,13 @@ body.mobile-menu-open {
   background: var(--color-white);
   border-radius: 10px;
   border: 1px solid #e5e7eb;
-  border-left: 3px solid var(--color-primary);
-  padding: var(--spacing-md);
+  border-left: 3.5px solid var(--color-primary);
+  padding: 18px 20px 32px 20px;
+  min-height: 140px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   transition: all 0.2s ease;
 }
 
@@ -2103,41 +2108,87 @@ body.mobile-menu-open {
 }
 
 .councilor-card--liga {
-  border-left-color: var(--color-success);
+  border-left-color: #059669;
 }
 
 .councilor-card--sk {
-  border-left-color: var(--color-accent);
+  border-left-color: #d97706;
 }
 
-.councilor-card--ipmr {
-  border-left-color: #8b4513;
+.councilor-badge--liga {
+  background: #059669 !important;
+}
+
+.councilor-badge--sk {
+  background: #d97706 !important;
+}
+
+.councilor-ex-officio-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 2px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
 .councilor-name {
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-text);
   margin: 0 0 6px 0;
 }
 
 .councilor-badge {
   display: inline-block;
-  background: var(--color-primary);
+  align-self: flex-start;
+  background: #0032a0;
   color: white;
-  padding: 2px 10px;
+  padding: 3px 12px;
   border-radius: 50px;
   font-size: 0.6875rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.councilor-badge--liga {
-  background: var(--color-success);
+.councilor-committees-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.councilor-badge--sk {
-  background: var(--color-accent);
+.councilor-committee-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.72rem;
+  line-height: 1.25;
+  color: #334155;
+  font-weight: 500;
+}
+
+.councilor-committee-item i {
+  font-size: 0.78rem;
+  color: var(--color-primary, #0032a0);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.councilor-card--liga .councilor-committee-item i {
+  color: #059669;
+}
+
+.councilor-card--sk .councilor-committee-item i {
+  color: #d97706;
 }
 
 .councilor-badge--ipmr {
@@ -2180,31 +2231,63 @@ body.mobile-menu-open {
 
 .dept-card-content {
   flex: 1;
-  padding: var(--spacing-md);
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  min-width: 0;
 }
 
 .dept-card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text, #0f172a);
   margin: 0;
+  line-height: 1.35;
+  min-height: 42px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .dept-card-desc {
-  font-size: 0.8125rem;
-  color: var(--color-text-light);
+  font-size: 0.8rem;
+  color: var(--color-text-light, #64748b);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
+  min-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dept-card-head {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #334155;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 20px;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dept-card-head i {
+  font-size: 0.78rem;
+  color: var(--color-primary, #0032a0);
+  flex-shrink: 0;
 }
 
 .dept-card-contacts {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
   margin-top: auto;
+  padding-top: 8px;
+  font-size: 0.8rem;
+  min-height: 48px;
 }
 
 .dept-card-contacts a {
@@ -10312,4 +10395,27 @@ a.a11y-contact-item:hover i {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* Simple Source Credit Line */
+.source-credit-simple {
+  margin-top: 28px;
+  font-size: 0.98rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.source-credit-simple a {
+  color: #0284c7;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.source-credit-simple a:hover {
+  color: #0369a1;
 }
