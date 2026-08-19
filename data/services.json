@@ -799,6 +799,176 @@
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
       "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/po/billing"
+    },
+    {
+      "id": "permit-to-dump",
+      "title": "Securing Permit to Dump",
+      "category": "Environment & Natural Resources",
+      "categoryId": "environment",
+      "description": "Permit for individuals and firms to directly dispose segregated garbage at city composting or sanitary landfill facility",
+      "keywords": [
+        "dump permit",
+        "permit to dump",
+        "waste disposal",
+        "garbage",
+        "sanitary landfill",
+        "composting",
+        "MRDOC",
+        "OCENR",
+        "solid waste"
+      ],
+      "fee": "Free",
+      "processingTime": "1 hour 35 minutes",
+      "office": "Office of the City Environment and Natural Resources",
+      "url": "../service-details/city-environment-natural-resources.html#tab-permit-dump"
+    },
+    {
+      "id": "landfill-entry-pass",
+      "title": "Sanitary Landfill Facility (SLF) Visitors Entry Pass",
+      "category": "Environment & Natural Resources",
+      "categoryId": "environment",
+      "description": "Visitor entry pass and orientation for benchmarking and educational tours of Legazpi's Sanitary Landfill Facility",
+      "keywords": [
+        "landfill pass",
+        "SLF entry pass",
+        "landfill tour",
+        "benchmarking",
+        "visitor pass",
+        "solid waste",
+        "educational tour",
+        "OCENR",
+        "RA 9003"
+      ],
+      "fee": "Free",
+      "processingTime": "1 hour 18 minutes",
+      "office": "Office of the City Environment and Natural Resources",
+      "url": "../service-details/city-environment-natural-resources.html#tab-landfill-pass"
+    },
+    {
+      "id": "eswm-business-seminar",
+      "title": "ESWM Seminar & Environmental Certificate",
+      "category": "Environment & Natural Resources",
+      "categoryId": "environment",
+      "description": "Ecological Solid Waste Management seminar and 3-year Environmental Certificate for business permit issuance and renewal",
+      "keywords": [
+        "eswm",
+        "environmental certificate",
+        "business permit seminar",
+        "ecological solid waste management",
+        "webinar",
+        "EBDS",
+        "environmental seminar",
+        "OCENR"
+      ],
+      "fee": "₱50.00",
+      "processingTime": "2h 13m - 2h 55m",
+      "office": "Office of the City Environment and Natural Resources",
+      "url": "../service-details/city-environment-natural-resources.html#tab-eswm-seminar"
+    },
+    {
+      "id": "tree-cutting-no-objection",
+      "title": "Certificate of No Objection to Cut Tree",
+      "category": "Environment & Natural Resources",
+      "categoryId": "environment",
+      "description": "LGU certificate and ocular inspection supporting DENR applications for tree cutting permits",
+      "keywords": [
+        "tree cutting",
+        "cut tree",
+        "tree permit",
+        "no objection tree",
+        "tree replacement",
+        "DENR",
+        "PENRO",
+        "OCENR"
+      ],
+      "fee": "Free",
+      "processingTime": "6 days 40 minutes",
+      "office": "Office of the City Environment and Natural Resources",
+      "url": "../service-details/city-environment-natural-resources.html#tab-tree-cutting"
+    },
+    {
+      "id": "chainsaw-registration",
+      "title": "Certification for Chainsaw Registration",
+      "category": "Environment & Natural Resources",
+      "categoryId": "environment",
+      "description": "LGU certification and serial verification required for chainsaw registration with the DENR",
+      "keywords": [
+        "chainsaw",
+        "chainsaw registration",
+        "chainsaw permit",
+        "DENR chainsaw",
+        "serial number stencil",
+        "OCENR",
+        "RA 9175"
+      ],
+      "fee": "Free",
+      "processingTime": "1 hour 10 minutes",
+      "office": "Office of the City Environment and Natural Resources",
+      "url": "../service-details/city-environment-natural-resources.html#tab-chainsaw"
+    },
+    {
+      "id": "free-tree-seedlings",
+      "title": "Request for Free Tree Seedlings",
+      "category": "Environment & Natural Resources",
+      "categoryId": "environment",
+      "description": "Free native seedlings from the city nursery for schools, organizations, and community tree planting activities",
+      "keywords": [
+        "seedlings",
+        "tree seedlings",
+        "free trees",
+        "tree planting",
+        "nursery",
+        "reforestation",
+        "greening",
+        "OCENR"
+      ],
+      "fee": "Free",
+      "processingTime": "4 hours 35 minutes",
+      "office": "Office of the City Environment and Natural Resources",
+      "url": "../service-details/city-environment-natural-resources.html#tab-seedlings"
+    },
+    {
+      "id": "septic-tank-desludging",
+      "title": "Septic Tank Desludging / Syphoning Services",
+      "category": "Environment & Natural Resources",
+      "categoryId": "environment",
+      "description": "Vacuum truck septic tank desludging services under the City Septage Management Code",
+      "keywords": [
+        "septic tank",
+        "desludging",
+        "syphoning",
+        "pozo negro",
+        "septage",
+        "vacuum truck",
+        "sanitation",
+        "OCENR",
+        "wastewater"
+      ],
+      "fee": "Assessed Fee",
+      "processingTime": "2 hours 12 minutes",
+      "office": "Office of the City Environment and Natural Resources",
+      "url": "../service-details/city-environment-natural-resources.html#tab-septic"
+    },
+    {
+      "id": "iec-campaign-request",
+      "title": "Request for Conduct of IEC Campaign",
+      "category": "Environment & Natural Resources",
+      "categoryId": "environment",
+      "description": "Request resource speakers for environmental awareness campaigns and seminars on waste management and clean water",
+      "keywords": [
+        "IEC campaign",
+        "environmental seminar",
+        "speaker request",
+        "awareness campaign",
+        "RA 9003",
+        "RA 9275",
+        "OCENR",
+        "environmental talk"
+      ],
+      "fee": "Free",
+      "processingTime": "20 minutes",
+      "office": "Office of the City Environment and Natural Resources",
+      "url": "../service-details/city-environment-natural-resources.html#tab-iec"
     }
   ]
 }
