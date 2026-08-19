@@ -649,23 +649,24 @@
       "url": "../service-details/city-civil-registrar.html"
     },
     {
-      "id": "municipal-engineering",
-      "title": "Municipal Engineering Office",
+      "id": "city-engineers-office",
+      "title": "City Engineer's Office",
       "category": "Infrastructure & Public Works",
       "categoryId": "infrastructure",
-      "description": "Building permits, infrastructure projects, and engineering services",
+      "description": "Building permits, occupancy certificates, truck ban permits, and engineering services",
       "keywords": [
         "engineering",
-        "MEO",
+        "CEO",
         "building permit",
         "construction",
         "infrastructure",
-        "road"
+        "road",
+        "city engineer"
       ],
       "fee": "Varies",
-      "processingTime": "5-10 days",
-      "office": "Municipal Engineering Office",
-      "url": "../service-details/municipal-engineering.html"
+      "processingTime": "1-15 days",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
     },
     {
       "id": "municipal-planning",
@@ -969,6 +970,220 @@
       "processingTime": "20 minutes",
       "office": "Office of the City Environment and Natural Resources",
       "url": "../service-details/city-environment-natural-resources.html#tab-iec"
+    },
+    {
+      "id": "building-permit",
+      "title": "Building Permit Application",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Permit for new construction, alteration, addition, renovation, or conversion under the National Building Code (PD 1096)",
+      "keywords": [
+        "building permit",
+        "construction permit",
+        "architectural plans",
+        "structural plans",
+        "one stop shop",
+        "city engineer",
+        "PD 1096",
+        "NBCP"
+      ],
+      "fee": "Order of Payment",
+      "processingTime": "5-15 days",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "certificate-of-occupancy",
+      "title": "Certificate of Occupancy Application",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Official certification required before occupying or operating completed buildings or structures",
+      "keywords": [
+        "occupancy permit",
+        "certificate of occupancy",
+        "as-built plans",
+        "building inspection",
+        "completion certificate",
+        "city engineer"
+      ],
+      "fee": "Order of Payment",
+      "processingTime": "5-15 days",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "electrical-permit",
+      "title": "Electrical / Temporary Wiring Permit and CFEI / CEI",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Application for electrical installation permit and Certificate of Final Electrical Inspection",
+      "keywords": [
+        "electrical permit",
+        "wiring permit",
+        "CFEI",
+        "CEI",
+        "power connection",
+        "ALECO",
+        "city engineer"
+      ],
+      "fee": "Order of Payment",
+      "processingTime": "3-5 days",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "mechanical-permit",
+      "title": "Mechanical Permit & Permit to Operate",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Permit for installation and operation of machinery, boilers, elevators, air-conditioning units, and pressure vessels",
+      "keywords": [
+        "mechanical permit",
+        "permit to operate",
+        "elevator permit",
+        "boiler",
+        "air conditioning",
+        "PME",
+        "city engineer"
+      ],
+      "fee": "Order of Payment",
+      "processingTime": "3-5 days",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "truck-ban-permit",
+      "title": "Special Permit for Truck Ban",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Special vehicular permit allowing heavy delivery and cargo trucks during restricted truck ban hours in Legazpi City",
+      "keywords": [
+        "truck ban",
+        "special permit",
+        "heavy vehicle",
+        "delivery truck",
+        "gross weight",
+        "traffic permit",
+        "city engineer"
+      ],
+      "fee": "₱750 - ₱1,250",
+      "processingTime": "1 day 1 hour 10 minutes",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "road-use-permit",
+      "title": "Permit for Use of Roads (Motorcade, Parade, Road Closure)",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Permit for motorcades, parades, fun runs, recorrida, and temporary road closures along city thoroughfares",
+      "keywords": [
+        "road closure",
+        "motorcade",
+        "parade",
+        "fun run",
+        "road use permit",
+        "recorrida",
+        "traffic clearance",
+        "city engineer"
+      ],
+      "fee": "₱350.00 / day",
+      "processingTime": "1 hour 55 minutes",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "banner-permit",
+      "title": "Permit for Hanging of Banners / Tarpaulins / Streamers",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Permit for displaying banners, tarpaulins, and promotional streamers on approved public street posts and corridors",
+      "keywords": [
+        "tarpaulin permit",
+        "banner permit",
+        "streamer permit",
+        "signage",
+        "advertisement display",
+        "city engineer"
+      ],
+      "fee": "₱24.00/sq.m./week + dismantling fee",
+      "processingTime": "1 day 1 hour 5 minutes",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "excavation-permit",
+      "title": "Excavation & Ground Preparation Permit",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Permit for road digging, utilities trenching, groundwork, and street pavement excavation",
+      "keywords": [
+        "excavation permit",
+        "road digging",
+        "ground preparation",
+        "trenching",
+        "utility works",
+        "city engineer"
+      ],
+      "fee": "Order of Payment",
+      "processingTime": "3 days",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "demolition-permit",
+      "title": "Demolition Permit Application",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Permit for the safe and code-compliant dismantling and demolition of buildings and structures",
+      "keywords": [
+        "demolition permit",
+        "dismantling",
+        "condemned building",
+        "structure removal",
+        "city engineer"
+      ],
+      "fee": "Order of Payment",
+      "processingTime": "3 days",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "annual-building-inspection",
+      "title": "Certificate of Annual Inspection",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Annual structural and architectural inspection clearance for business and commercial establishments",
+      "keywords": [
+        "annual inspection",
+        "business permit inspection",
+        "building safety",
+        "commercial inspection",
+        "city engineer"
+      ],
+      "fee": "Order of Payment",
+      "processingTime": "3-5 days",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
+    },
+    {
+      "id": "program-of-works",
+      "title": "Preparation of Program of Works and Estimates (POW)",
+      "category": "Infrastructure & Engineering",
+      "categoryId": "infrastructure",
+      "description": "Engineering surveys, drafting of plans, cost estimates, and POW preparation for public and barangay infrastructure projects",
+      "keywords": [
+        "program of works",
+        "POW",
+        "engineering estimates",
+        "barangay projects",
+        "construction plans",
+        "city engineer"
+      ],
+      "fee": "Free",
+      "processingTime": "13-37 days",
+      "office": "City Engineer's Office",
+      "url": "../service-details/city-engineers-office.html"
     }
   ]
 }
