@@ -625,24 +625,28 @@
     },
     {
       "id": "civil-registrar",
-      "title": "Local Civil Registrar",
+      "title": "City Civil Registrar's Office",
       "category": "Certificates & Vital Records",
       "categoryId": "certificates",
-      "description": "Birth, marriage, death certificates and civil registry services",
+      "description": "Birth, marriage, death certificates, civil registry corrections, and frontline services",
       "keywords": [
         "civil registrar",
-        "LCR",
+        "CCRO",
+        "LCRO",
         "birth",
         "marriage",
         "death",
         "certificate",
         "vital records",
-        "CENOMAR"
+        "CENOMAR",
+        "legitimation",
+        "RA 9048",
+        "RA 10172"
       ],
-      "fee": "₱150+",
-      "processingTime": "15-30 minutes",
-      "office": "Local Civil Registrar",
-      "url": "../service-details/municipal-civil-registrar.html"
+      "fee": "₱0 - ₱1,100+",
+      "processingTime": "1 - 3 hours",
+      "office": "City Civil Registrar",
+      "url": "../service-details/city-civil-registrar.html"
     },
     {
       "id": "municipal-engineering",
