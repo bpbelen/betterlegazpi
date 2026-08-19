@@ -62,47 +62,59 @@ function showInstallBanner() {
 
 // ─── Register Service Worker with seamless updates ──────────────────────────
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then(function (reg) {
-        // Check for updates every 30 minutes
-        setInterval(function () {
-          reg.update();
-        }, 30 * 60 * 1000);
+  var isLocalhost =
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1' ||
+    window.location.hostname === '';
 
-        reg.addEventListener('updatefound', function () {
-          var newWorker = reg.installing;
-          if (!newWorker) return;
-          newWorker.addEventListener('statechange', function () {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              // New SW installed and waiting — show update banner
-              showUpdateBanner(newWorker);
-            }
-          });
-        });
-      })
-      .catch(function (err) {
-        console.warn('SW registration failed:', err);
-      });
-
-    // When a new SW *replaces an existing one*, reload seamlessly.
-    //
-    // The guard matters: sw.js calls clients.claim() on activate, so on a first
-    // visit the worker claims this page about a second after load and fires
-    // controllerchange with no previous controller. Reloading there threw away
-    // whatever the visitor was already looking at — including the volunteer
-    // dialog, which reveals itself at the 800ms mark and was being torn down
-    // mid-animation. An uncontrolled page has nothing stale to refresh, so the
-    // first claim should be adopted silently.
-    var hadController = !!navigator.serviceWorker.controller;
-    var refreshing = false;
-    navigator.serviceWorker.addEventListener('controllerchange', function () {
-      if (!hadController || refreshing) return;
-      refreshing = true;
-      window.location.reload();
+  if (isLocalhost) {
+    // Unregister any existing service worker on localhost to prevent stale caching during dev
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      for (var reg of registrations) {
+        reg.unregister();
+      }
     });
-  });
+    if ('caches' in window) {
+      caches.keys().then(function (names) {
+        for (var name of names) {
+          caches.delete(name);
+        }
+      });
+    }
+  } else {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(function (reg) {
+          // Check for updates every 30 minutes
+          setInterval(function () {
+            reg.update();
+          }, 30 * 60 * 1000);
+
+          reg.addEventListener('updatefound', function () {
+            var newWorker = reg.installing;
+            if (!newWorker) return;
+            newWorker.addEventListener('statechange', function () {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New SW installed and waiting — show update banner
+                showUpdateBanner(newWorker);
+              }
+            });
+          });
+        })
+        .catch(function (err) {
+          console.warn('SW registration failed:', err);
+        });
+
+      var hadController = !!navigator.serviceWorker.controller;
+      var refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (!hadController || refreshing) return;
+        refreshing = true;
+        window.location.reload();
+      });
+    });
+  }
 }
 
 function showUpdateBanner(worker) {

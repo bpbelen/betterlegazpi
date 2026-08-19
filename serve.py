@@ -6,7 +6,7 @@ Mimics Apache's mod_rewrite behavior for testing cPanel deployment locally
 
 import os
 import sys
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from urllib.parse import urlparse, unquote
 
 class CleanURLHandler(SimpleHTTPRequestHandler):
@@ -55,6 +55,7 @@ class CleanURLHandler(SimpleHTTPRequestHandler):
         # Fall back to default behavior
         return super().do_GET()
     
+
     def log_message(self, format, *args):
         # Custom logging with color for clean URL rewrites
         message = format % args
@@ -75,7 +76,7 @@ def run_server(port=8888, directory='dist'):
         os.chdir(directory)
     
     server_address = ('', port)
-    httpd = HTTPServer(server_address, CleanURLHandler)
+    httpd = ThreadingHTTPServer(server_address, CleanURLHandler)
     
     print("=" * 60)
     print("Clean URL Development Server")

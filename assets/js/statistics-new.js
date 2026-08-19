@@ -877,6 +877,28 @@ const historicalData = {
   populations: [121116, 141657, 157010, 179481, 182201, 196639, 209533, 210616],
 };
 
+// Official PSA Small Area Poverty Estimates for Albay (2018, 2021, 2023)
+const povertyAlbayData = [
+  { id: '50501', name: 'Bacacay', rates: { 2018: 31.5, 2021: 27.3, 2023: 27.8 }, ci: { 2018: [27.8, 35.2], 2021: [24.2, 30.4], 2023: [25.3, 30.4] } },
+  { id: '50502', name: 'Camalig', rates: { 2018: 21.1, 2021: 23.4, 2023: 26.0 }, ci: { 2018: [17.8, 24.3], 2021: [20.2, 26.5], 2023: [22.7, 29.2] } },
+  { id: '50503', name: 'Daraga (Locsin)', rates: { 2018: 13.5, 2021: 15.5, 2023: 16.9 }, ci: { 2018: [11.1, 15.9], 2021: [13.2, 17.7], 2023: [14.9, 18.9] } },
+  { id: '50504', name: 'Guinobatan', rates: { 2018: 25.6, 2021: 21.9, 2023: 24.0 }, ci: { 2018: [22.4, 28.9], 2021: [19.2, 24.6], 2023: [21.6, 26.4] } },
+  { id: '50505', name: 'Jovellar', rates: { 2018: 37.5, 2021: 37.0, 2023: 36.0 }, ci: { 2018: [32.2, 42.9], 2021: [31.9, 42.0], 2023: [31.3, 40.8] } },
+  { id: '50506', name: 'City of Legazpi', isLegazpi: true, rates: { 2018: 13.8, 2021: 17.6, 2023: 16.3 }, ci: { 2018: [11.7, 15.8], 2021: [15.9, 19.3], 2023: [14.4, 18.3] } },
+  { id: '50507', name: 'Libon', rates: { 2018: 37.4, 2021: 33.3, 2023: 34.7 }, ci: { 2018: [33.1, 41.6], 2021: [29.9, 36.6], 2023: [32.0, 37.5] } },
+  { id: '50508', name: 'City of Ligao', rates: { 2018: 23.1, 2021: 24.7, 2023: 28.4 }, ci: { 2018: [20.4, 25.7], 2021: [22.3, 27.2], 2023: [26.1, 30.8] } },
+  { id: '50509', name: 'Malilipot', rates: { 2018: 26.1, 2021: 21.3, 2023: 25.8 }, ci: { 2018: [21.3, 30.9], 2021: [17.4, 25.2], 2023: [21.6, 30.0] } },
+  { id: '50510', name: 'Malinao', rates: { 2018: 33.7, 2021: 28.3, 2023: 33.1 }, ci: { 2018: [29.5, 37.8], 2021: [24.8, 31.7], 2023: [29.5, 36.6] } },
+  { id: '50511', name: 'Manito', rates: { 2018: 37.2, 2021: 29.0, 2023: 34.4 }, ci: { 2018: [31.5, 42.9], 2021: [23.4, 34.5], 2023: [29.3, 39.6] } },
+  { id: '50512', name: 'Oas', rates: { 2018: 34.2, 2021: 31.4, 2023: 29.7 }, ci: { 2018: [31.0, 37.5], 2021: [28.3, 34.5], 2023: [26.9, 32.5] } },
+  { id: '50513', name: 'Pio Duran', rates: { 2018: 37.5, 2021: 31.4, 2023: 35.4 }, ci: { 2018: [32.8, 42.2], 2021: [27.7, 35.1], 2023: [31.5, 39.3] } },
+  { id: '50514', name: 'Polangui', rates: { 2018: 21.3, 2021: 22.3, 2023: 24.8 }, ci: { 2018: [18.5, 24.2], 2021: [20.0, 24.6], 2023: [22.3, 27.3] } },
+  { id: '50515', name: 'Rapu-Rapu', rates: { 2018: 42.7, 2021: 38.8, 2023: 39.9 }, ci: { 2018: [38.3, 47.1], 2021: [34.2, 43.4], 2023: [36.4, 43.5] } },
+  { id: '50516', name: 'Santo Domingo', rates: { 2018: 23.0, 2021: 17.9, 2023: 20.7 }, ci: { 2018: [18.1, 27.9], 2021: [14.7, 21.1], 2023: [17.6, 23.9] } },
+  { id: '50517', name: 'City of Tabaco', rates: { 2018: 19.8, 2021: 20.2, 2023: 22.3 }, ci: { 2018: [16.7, 22.9], 2021: [17.7, 22.7], 2023: [19.9, 24.7] } },
+  { id: '50518', name: 'Tiwi', rates: { 2018: 23.6, 2021: 24.7, 2023: 27.3 }, ci: { 2018: [19.0, 28.2], 2021: [21.2, 28.2], 2023: [24.7, 29.9] } },
+];
+
 // Chart instances
 let charts = {};
 
@@ -926,6 +948,15 @@ function initScrollAnimations() {
 
             // Animate bars
             animateBars(entry.target);
+
+            // Resize or create poverty chart when scrolled into view
+            if (entry.target.classList.contains('stats-poverty') || entry.target.querySelector('#povertyAlbayChart')) {
+              if (!charts.povertyAlbay) {
+                createPovertyChart();
+              } else {
+                charts.povertyAlbay.resize();
+              }
+            }
           }, delay);
 
           observer.unobserve(entry.target);
@@ -1137,6 +1168,232 @@ function createDistributionChart() {
       },
     },
   });
+}
+
+/**
+ * Create Albay Poverty Comparison Horizontal Bar Chart
+ */
+let currentPovertyYear = 2023;
+
+function createPovertyChart() {
+  if (typeof document === 'undefined') return;
+  const ctx = document.getElementById('povertyAlbayChart');
+  if (!ctx) return;
+
+  if (typeof Chart === 'undefined') {
+    console.warn('Chart.js is not loaded yet');
+    return;
+  }
+
+  // Destroy previous instance if exists
+  if (charts.povertyAlbay) {
+    try {
+      charts.povertyAlbay.destroy();
+    } catch (e) {
+      console.warn('Error destroying poverty chart:', e);
+    }
+    charts.povertyAlbay = null;
+  }
+
+  // Map and sort items for current year
+  const items = povertyAlbayData.map((d) => {
+    return {
+      id: d.id,
+      name: d.name,
+      isLegazpi: d.isLegazpi || d.id === '50506',
+      rate: (d.rates && d.rates[currentPovertyYear]) || 0,
+      ci: (d.ci && d.ci[currentPovertyYear]) || [0, 0],
+    };
+  });
+
+  // Calculate provincial average across all 18 LGUs
+  const totalRate = items.reduce((acc, curr) => acc + curr.rate, 0);
+  const albayAvg = +(totalRate / items.length).toFixed(1);
+
+  // Update Legend & Footer Insight
+  const avgLegendEl = document.getElementById('povertyAvgLegendLabel');
+  if (avgLegendEl) {
+    avgLegendEl.innerHTML = `Albay Average: <strong>${albayAvg}%</strong>`;
+  }
+
+  const legazpiItem = items.find((d) => d.isLegazpi);
+  const insightEl = document.getElementById('povertyInsightText');
+  if (insightEl && legazpiItem) {
+    const allSorted = items.slice().sort((a, b) => a.rate - b.rate);
+    const rank = allSorted.findIndex((d) => d.isLegazpi) + 1;
+    const rankSuffix = rank === 1 ? 'lowest' : `#${rank} lowest`;
+    insightEl.innerHTML = `In ${currentPovertyYear}, <strong>Legazpi City</strong> recorded the ${rankSuffix} poverty incidence in the Province of Albay at <strong>${legazpiItem.rate}%</strong> (90% CI: ${legazpiItem.ci[0]}% - ${legazpiItem.ci[1]}%), well below the provincial average of <strong>${albayAvg}%</strong>.`;
+  }
+
+  // Sorted items from lowest to highest poverty incidence
+  const displayItems = items.slice().sort((a, b) => a.rate - b.rate);
+
+  // Generate colors
+  const backgroundColors = displayItems.map((d) => (d.isLegazpi ? '#0032a0' : '#cbd5e1'));
+  const borderColors = displayItems.map((d) => (d.isLegazpi ? '#002170' : '#94a3b8'));
+  const hoverColors = displayItems.map((d) => (d.isLegazpi ? '#002170' : '#64748b'));
+  const labels = displayItems.map((d) => (d.isLegazpi ? `⭐ ${d.name}` : d.name));
+  const rates = displayItems.map((d) => d.rate);
+
+  // Plugin to draw dashed average line safely
+  const povertyAvgLinePlugin = {
+    id: 'povertyAvgLine',
+    afterDatasetsDraw(chart) {
+      if (!chart || !chart.chartArea) return;
+      const chartCtx = chart.ctx;
+      const chartArea = chart.chartArea;
+      const x = chart.scales && chart.scales.x;
+      if (!chartCtx || !chartArea || !x) return;
+
+      const top = chartArea.top;
+      const bottom = chartArea.bottom;
+      const left = chartArea.left;
+      const right = chartArea.right;
+
+      const xPos = x.getPixelForValue(albayAvg);
+      if (typeof xPos !== 'number' || isNaN(xPos) || xPos < left || xPos > right) return;
+
+      chartCtx.save();
+      chartCtx.beginPath();
+      chartCtx.setLineDash([4, 4]);
+      chartCtx.strokeStyle = '#f59e0b';
+      chartCtx.lineWidth = 2;
+      chartCtx.moveTo(xPos, top);
+      chartCtx.lineTo(xPos, bottom);
+      chartCtx.stroke();
+
+      // Label at top
+      chartCtx.fillStyle = '#b45309';
+      chartCtx.font = 'bold 11px Outfit, Inter, sans-serif';
+      chartCtx.textAlign = 'center';
+      chartCtx.fillText(`Albay Avg: ${albayAvg}%`, xPos, Math.max(10, top - 6));
+      chartCtx.restore();
+    },
+  };
+
+  try {
+    charts.povertyAlbay = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: `Poverty Incidence (${currentPovertyYear})`,
+            data: rates,
+            backgroundColor: backgroundColors,
+            borderColor: borderColors,
+            hoverBackgroundColor: hoverColors,
+            borderWidth: 1.5,
+            borderRadius: 6,
+            barPercentage: 0.75,
+            categoryPercentage: 0.85,
+          },
+        ],
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+          padding: { top: 20, right: 24, bottom: 8, left: 8 },
+        },
+        animation: {
+          duration: 600,
+          easing: 'easeOutQuart',
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+            titleFont: { size: 13, weight: 'bold', family: "'Outfit', 'Inter', sans-serif" },
+            bodyFont: { size: 12, family: "'Outfit', 'Inter', sans-serif" },
+            padding: 12,
+            cornerRadius: 8,
+            callbacks: {
+              title: (tooltipItems) => {
+                if (!tooltipItems || !tooltipItems.length) return '';
+                const idx = tooltipItems[0].dataIndex;
+                const item = displayItems[idx];
+                return item ? (item.isLegazpi ? `${item.name} (Focus LGU)` : item.name) : '';
+              },
+              label: (toolCtx) => `Poverty Incidence: ${toolCtx.raw}%`,
+              afterLabel: (toolCtx) => {
+                const idx = toolCtx.dataIndex;
+                const item = displayItems[idx];
+                if (!item) return [];
+                const allSorted = items.slice().sort((a, b) => a.rate - b.rate);
+                const rank = allSorted.findIndex((d) => d.id === item.id) + 1;
+                const legazpiRate = legazpiItem ? legazpiItem.rate : 16.3;
+                const diff = item.rate - legazpiRate;
+                const diffStr = item.isLegazpi
+                  ? '⭐ Lowest in Albay'
+                  : `${diff >= 0 ? '+' : ''}${diff.toFixed(1)}% vs Legazpi`;
+
+                return [
+                  `90% Confidence Interval: ${item.ci[0]}% - ${item.ci[1]}%`,
+                  `Rank in Albay: #${rank} of 18`,
+                  `Comparison: ${diffStr}`,
+                ];
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            min: 0,
+            max: 48,
+            grid: { color: 'rgba(0, 0, 0, 0.05)' },
+            ticks: {
+              stepSize: 5,
+              font: { size: 11, family: "'Outfit', 'Inter', sans-serif" },
+              callback: (v) => v + '%',
+            },
+            title: {
+              display: true,
+              text: 'Poverty Incidence (%)',
+              font: { size: 11, weight: 'bold' },
+              color: '#64748b',
+            },
+          },
+          y: {
+            grid: { display: false },
+            ticks: {
+              font: { size: 11, family: "'Outfit', 'Inter', sans-serif" },
+              color: '#334155',
+            },
+          },
+        },
+      },
+      plugins: [povertyAvgLinePlugin],
+    });
+  } catch (err) {
+    console.error('Failed to create poverty chart:', err);
+  }
+}
+
+function initPovertyControls() {
+  const yearButtons = document.querySelectorAll('.poverty-year-btn');
+  yearButtons.forEach((btn) => {
+    btn.addEventListener('click', function () {
+      const selectedYear = parseInt(this.dataset.year, 10);
+      if (selectedYear === currentPovertyYear) return;
+
+      yearButtons.forEach((b) => b.classList.remove('active'));
+      this.classList.add('active');
+
+      currentPovertyYear = selectedYear;
+      createPovertyChart();
+    });
+  });
+}
+
+/**
+ * Initialize all Core Charts
+ */
+function initCharts() {
+  createHistoricalChart();
+  createDistributionChart();
+  createPovertyChart();
 }
 
 /**
@@ -2031,17 +2288,24 @@ async function loadFiscalData() {
   }
 }
 
-// Initialize on DOM ready
+function initAllStatistics() {
+  initScrollAnimations();
+  initCharts();
+  initPovertyControls();
+  loadBarangayData();
+  initBarangaySearch();
+  initEconomyCounters();
+  initCMCISection();
+  loadFiscalData();
+}
+
+// Initialize on DOM ready or immediately if already loaded
 if (typeof document !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', () => {
-    initScrollAnimations();
-    initCharts();
-    loadBarangayData();
-    initBarangaySearch();
-    initEconomyCounters();
-    initCMCISection();
-    loadFiscalData();
-  });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAllStatistics);
+  } else {
+    initAllStatistics();
+  }
 }
 
 // Export for testing
@@ -2049,10 +2313,12 @@ if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     barangayData,
     historicalData,
+    povertyAlbayData,
     cmciData,
     COLORS,
     DOUGHNUT_COLORS,
     animateCount,
+    createPovertyChart,
     renderBarangayList,
     loadBarangayData,
     loadFiscalData,

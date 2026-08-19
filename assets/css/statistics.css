@@ -947,118 +947,358 @@
 }
 
 /* Poverty Section */
-.poverty-comparison {
+.poverty-legazpi-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.poverty-legazpi-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px 22px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.poverty-legazpi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.poverty-legazpi-card.plc-highlighted {
+  border-color: #06a77d;
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf8 100%);
+  box-shadow: 0 4px 20px rgba(6, 167, 125, 0.14);
+}
+
+.plc-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 32px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.plc-year {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-light, #64748b);
+  background: var(--color-bg-alt, #f1f5f9);
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.plc-badge-year {
+  background: rgba(6, 167, 125, 0.12);
+  color: #06a77d;
+}
+
+.plc-rank {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.plc-rank.rank-gold {
+  color: #b45309;
+  background: #fef3c7;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.plc-rate {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
 }
 
-.poverty-card {
-  background: white;
-  border-radius: 16px;
-  padding: 32px;
-  text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  min-width: 200px;
-  position: relative;
-}
-
-.poverty-card-2021 {
-  border-color: var(--color-success);
-  box-shadow: 0 4px 20px rgba(6, 167, 125, 0.15);
-}
-
-.poverty-year {
-  display: inline-block;
-  background: var(--color-bg-alt);
-  padding: 4px 12px;
-  border-radius: 50px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--color-text-light);
-  margin-bottom: 16px;
-}
-
-.poverty-card-2021 .poverty-year {
-  background: rgba(6, 167, 125, 0.1);
-  color: var(--color-success);
-}
-
-.poverty-rate {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 2px;
-  margin-bottom: 16px;
-}
-
-.rate-value {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--color-text);
+.plc-val {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary, #0032a0);
   line-height: 1;
+  font-family: 'Outfit', 'Inter', sans-serif;
 }
 
-.rate-symbol {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-text-light);
+.plc-highlighted .plc-val {
+  color: #06a77d;
 }
 
-.poverty-bar {
+.plc-unit {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text-light, #64748b);
+}
+
+.plc-trend-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #dcfce7;
+  color: #15803d;
+  padding: 3px 8px;
+  border-radius: 50px;
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.plc-bar {
   height: 8px;
-  background: var(--color-bg-alt);
+  background: #f1f5f9;
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 12px;
 }
 
-.poverty-fill {
+.plc-fill {
   height: 100%;
-  background: var(--color-primary);
+  background: var(--color-primary, #0032a0);
   border-radius: 4px;
-  width: 0;
-  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: width 1s ease-out;
 }
 
-.poverty-card-2021 .poverty-fill {
-  background: var(--color-success);
+.plc-fill.fill-accent {
+  background: linear-gradient(90deg, #06a77d 0%, #10b981 100%);
 }
 
-.poverty-ci {
-  font-size: 0.75rem;
-  color: var(--color-text-light);
+.plc-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  font-size: 0.775rem;
+  color: var(--color-text-light, #64748b);
 }
 
+.plc-ci {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.plc-highlight-tag {
+  font-weight: 700;
+  color: #06a77d;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+/* Floating Lowest Badge on top-right of highlighted card */
 .poverty-badge {
   position: absolute;
-  top: -10px;
+  top: -12px;
   right: -10px;
-  background: var(--color-success);
+  background: var(--color-success, #06a77d);
   color: white;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 50px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(6, 167, 125, 0.3);
+  z-index: 2;
 }
 
-.poverty-arrow {
+/* Poverty Chart Card */
+.poverty-chart-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-bottom: 24px;
+}
+
+.poverty-chart-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
-  color: var(--color-text-light);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.poverty-change {
-  font-size: 0.875rem;
+.pch-info h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text, #1e293b);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pch-info h4 i {
+  color: var(--color-primary, #0032a0);
+}
+
+.pch-info p {
+  font-size: 0.85rem;
+  color: var(--color-text-light, #64748b);
+  margin: 0;
+}
+
+.pch-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.poverty-year-switcher {
+  display: inline-flex;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.poverty-year-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 0.825rem;
   font-weight: 600;
-  color: var(--color-success);
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.poverty-year-btn:hover {
+  color: var(--color-primary, #0032a0);
+}
+
+.poverty-year-btn.active {
+  background: white;
+  color: var(--color-primary, #0032a0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+}
+
+.poverty-chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-radius: 10px;
+  font-size: 0.8125rem;
+  color: #475569;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.swatch-legazpi {
+  background: #0032a0;
+  box-shadow: 0 0 0 2px rgba(0, 50, 160, 0.25);
+}
+
+.swatch-other {
+  background: #cbd5e1;
+}
+
+.legend-line.swatch-avg {
+  width: 20px;
+  height: 0;
+  border-top: 2px dashed #f59e0b;
+}
+
+.poverty-canvas-container {
+  position: relative;
+  height: 520px;
+  width: 100%;
+}
+
+.poverty-chart-footer {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pcf-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #334155;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.pcf-insight i {
+  color: #0284c7;
+  font-size: 1rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+  .poverty-legazpi-summary {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .poverty-canvas-container {
+    height: 560px;
+  }
+}
+
+@media (max-width: 575px) {
+  .poverty-chart-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pch-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .poverty-year-switcher {
+    width: 100%;
+    display: flex;
+  }
+
+  .poverty-year-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .poverty-canvas-container {
+    height: 600px;
+  }
 }
 
 /* Data Source */
@@ -1616,5 +1856,399 @@
   .cmci-overview-grid,
   .cmci-indicator-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   POVERTY STATISTICS SECTION
+   ═══════════════════════════════════════════════════════════ */
+
+/* --- Legazpi 3-Year Summary Cards --- */
+.poverty-legazpi-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.poverty-legazpi-card {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.poverty-legazpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.poverty-legazpi-card.plc-highlighted {
+  border-color: #10b981;
+  border-width: 2px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.12);
+}
+
+/* Floating "Lowest" badge */
+.poverty-badge {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+.poverty-badge i {
+  font-size: 0.65rem;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35); }
+  50% { box-shadow: 0 3px 16px rgba(16, 185, 129, 0.55); }
+}
+
+/* Card header */
+.plc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.plc-year {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.plc-badge-year {
+  color: #059669;
+  font-weight: 700;
+}
+
+.plc-rank {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.plc-rank i {
+  font-size: 0.68rem;
+}
+
+.rank-gold {
+  color: #b45309;
+  font-weight: 700;
+}
+
+/* Card rate */
+.plc-rate {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.plc-val {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.plc-highlighted .plc-val {
+  color: #059669;
+}
+
+.plc-unit {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.plc-trend-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #059669;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+/* Mini progress bar */
+.plc-bar {
+  height: 5px;
+  background: #f1f5f9;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.plc-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0032a0, #0050d0);
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+
+.plc-fill.fill-accent {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+/* Card meta */
+.plc-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plc-ci {
+  font-size: 0.68rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.plc-ci i {
+  font-size: 0.6rem;
+}
+
+.plc-highlight-tag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #059669;
+}
+
+/* --- Chart Card --- */
+.poverty-chart-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.poverty-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.pch-info h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pch-info h4 i {
+  color: #0032a0;
+}
+
+.pch-info p {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Year switcher buttons */
+.pch-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.poverty-year-switcher {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.poverty-year-btn {
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.poverty-year-btn:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.poverty-year-btn.active {
+  background: #0032a0;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 50, 160, 0.25);
+}
+
+/* Chart legend */
+.poverty-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 10px 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.swatch-legazpi {
+  background: #0032a0;
+}
+
+.swatch-other {
+  background: #cbd5e1;
+}
+
+.legend-line {
+  width: 20px;
+  height: 0;
+  border-top: 2px dashed #f59e0b;
+}
+
+.swatch-avg {
+  border-color: #f59e0b;
+}
+
+/* Chart body / canvas container — MUST have explicit height */
+.poverty-chart-body {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.poverty-canvas-container {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  min-height: 400px;
+}
+
+.poverty-canvas-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Chart footer / insight */
+.poverty-chart-footer {
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.pcf-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+  border-radius: 10px;
+  border-left: 3px solid #0032a0;
+  font-size: 0.78rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.pcf-insight i {
+  color: #0032a0;
+  font-size: 0.9rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* --- Source Footer --- */
+.poverty-source {
+  text-align: center;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  padding: 12px 0 0;
+}
+
+.poverty-source a {
+  color: #0032a0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.poverty-source a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .poverty-legazpi-summary {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .poverty-chart-header {
+    flex-direction: column;
+  }
+
+  .poverty-canvas-container {
+    height: 450px;
+    min-height: 350px;
+  }
+
+  .plc-val {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .poverty-canvas-container {
+    height: 400px;
+    min-height: 300px;
+  }
+
+  .poverty-chart-card {
+    padding: 16px;
   }
 }

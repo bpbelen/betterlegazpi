@@ -5735,6 +5735,8 @@ const translations = {
     'social-volunteer-with-us': 'Volunteer with us',
     'stats-2021-city-and-municipal-level-poverty-estimates':
       '2021 City and Municipal Level Poverty Estimates',
+    'stats-poverty-subtitle':
+      '2018, 2021 & 2023 City and Municipal Level Poverty Estimates across Albay',
     'stats-2024-census-of-population': '2024 Census of Population',
     'stats-90-ci-47-81': '90% CI: 4.7% - 8.1%',
     'stats-90-ci-47-92': '90% CI: 4.7% - 9.2%',
@@ -12205,6 +12207,8 @@ const translations = {
     'social-volunteer-with-us': 'Mag-volunteer sa amin',
     'stats-2021-city-and-municipal-level-poverty-estimates':
       '2021 Mga Tantiya ng Kahirapan sa Antas ng Lungsod at Munisipyo',
+    'stats-poverty-subtitle':
+      '2018, 2021 & 2023 Mga Tantiya ng Kahirapan sa Antas ng Lungsod at Munisipyo sa Albay',
     'stats-2024-census-of-population': '2024 Senso ng Populasyon',
     'stats-90-ci-47-81': '90% CI: 4.7% - 8.1%',
     'stats-90-ci-47-92': '90% CI: 4.7% - 9.2%',
@@ -18694,6 +18698,8 @@ const translations = {
     'social-volunteer-with-us': 'Ag-volunteer kadakami',
     'stats-2021-city-and-municipal-level-poverty-estimates':
       '2021 Dagiti Tantia ti Kinapanglaw iti Lebel ti Siudad ken Munisipalidad',
+    'stats-poverty-subtitle':
+      '2018, 2021 & 2023 Dagiti Tantia ti Kinapanglaw iti Lebel ti Siudad ken Munisipalidad iti Albay',
     'stats-2024-census-of-population': '2024 Senso ti Populasion',
     'stats-90-ci-47-81': '90% CI: 4.7% - 8.1%',
     'stats-90-ci-47-92': '90% CI: 4.7% - 9.2%',

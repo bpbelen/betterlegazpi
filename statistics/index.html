@@ -80,7 +80,23 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="../assets/css/statistics.css" />
+    <link rel="stylesheet" href="../assets/css/statistics.css?v=1.1.21" />
+    <!-- Dev: Force-clear stale service worker caches on localhost -->
+    <script>
+      if (
+        'serviceWorker' in navigator &&
+        (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+      ) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          regs.forEach(function (r) { r.unregister(); });
+        });
+        if ('caches' in window) {
+          caches.keys().then(function (names) {
+            names.forEach(function (n) { caches.delete(n); });
+          });
+        }
+      }
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link" data-i18n="stats-skip-to-main-content"
@@ -649,7 +665,7 @@
       </section>
 
       <!-- Poverty Statistics -->
-      <section class="stats-section stats-poverty animate-on-scroll">
+      <section class="stats-section stats-poverty animate-on-scroll" id="poverty-statistics">
         <div class="container">
           <div class="section-header-minimal">
             <span class="section-tag"
@@ -657,50 +673,119 @@
               <span data-i18n="stats-poverty">Poverty</span></span
             >
             <h2 data-i18n="stats-poverty-statistics">Poverty Statistics</h2>
-            <p data-i18n="stats-2021-city-and-municipal-level-poverty-estimates">
-              2021 City and Municipal Level Poverty Estimates
+            <p data-i18n="stats-poverty-subtitle">
+              2018, 2021 & 2023 City and Municipal Level Poverty Estimates across Albay
             </p>
           </div>
 
-          <div class="poverty-comparison">
-            <div class="poverty-card poverty-card-2018">
-              <span class="poverty-year">2018</span>
-              <div class="poverty-rate">
-                <span class="rate-value">7.0</span>
-                <span class="rate-symbol">%</span>
+          <!-- Legazpi 3-Year Trend Summary Cards -->
+          <div class="poverty-legazpi-summary">
+            <div class="poverty-legazpi-card">
+              <div class="plc-header">
+                <span class="plc-year">2018</span>
               </div>
-              <div class="poverty-bar"><div class="poverty-fill" data-width="7"></div></div>
-              <span class="poverty-ci" data-i18n="stats-90-ci-47-92">90% CI: 4.7% - 9.2%</span>
-            </div>
-            <div class="poverty-arrow">
-              <i class="bi bi-arrow-right"></i>
-              <span class="poverty-change">-0.6%</span>
-            </div>
-            <div class="poverty-card poverty-card-2021">
-              <span class="poverty-year">2021</span>
-              <div class="poverty-rate">
-                <span class="rate-value">6.4</span>
-                <span class="rate-symbol">%</span>
+              <div class="plc-rate">
+                <span class="plc-val">13.8</span>
+                <span class="plc-unit">%</span>
               </div>
-              <div class="poverty-bar"><div class="poverty-fill" data-width="6.4"></div></div>
-              <span class="poverty-ci" data-i18n="stats-90-ci-47-81">90% CI: 4.7% - 8.1%</span>
+              <div class="plc-bar"><div class="plc-fill" style="width: 13.8%;"></div></div>
+              <div class="plc-meta">
+                <span class="plc-ci"><i class="bi bi-shield-check"></i> 90% CI: 11.7% - 15.8%</span>
+                <span class="plc-rank"><i class="bi bi-award"></i> #2 in Albay</span>
+              </div>
+            </div>
+
+            <div class="poverty-legazpi-card">
+              <div class="plc-header">
+                <span class="plc-year">2021</span>
+              </div>
+              <div class="plc-rate">
+                <span class="plc-val">17.6</span>
+                <span class="plc-unit">%</span>
+              </div>
+              <div class="plc-bar"><div class="plc-fill" style="width: 17.6%;"></div></div>
+              <div class="plc-meta">
+                <span class="plc-ci"><i class="bi bi-shield-check"></i> 90% CI: 15.9% - 19.3%</span>
+                <span class="plc-rank"><i class="bi bi-award"></i> #2 in Albay</span>
+              </div>
+            </div>
+
+            <div class="poverty-legazpi-card plc-highlighted">
               <span class="poverty-badge"
                 ><i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="stats-improved">Improved</span></span
+                <span>Lowest</span></span
               >
+              <div class="plc-header">
+                <span class="plc-year plc-badge-year">2023 (Latest)</span>
+              </div>
+              <div class="plc-rate">
+                <span class="plc-val">16.3</span>
+                <span class="plc-unit">%</span>
+                <span class="plc-trend-badge"><i class="bi bi-arrow-down-right"></i> -1.3% vs 2021</span>
+              </div>
+              <div class="plc-bar"><div class="plc-fill fill-accent" style="width: 16.3%;"></div></div>
+              <div class="plc-meta">
+                <span class="plc-ci"><i class="bi bi-shield-check"></i> 90% CI: 14.4% - 18.3%</span>
+                <span class="plc-rank rank-gold"><i class="bi bi-trophy-fill"></i> #1 in Albay</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Albay Province Comparative Chart Container -->
+          <div class="poverty-chart-card animate-on-scroll">
+            <div class="poverty-chart-header">
+              <div class="pch-info">
+                <h4><i class="bi bi-bar-chart-fill"></i> Albay LGUs Poverty Incidence Comparison</h4>
+                <p>Municipal & City-level poverty incidence estimates ranked from lowest to highest</p>
+              </div>
+              <div class="pch-controls">
+                <div class="poverty-year-switcher" role="group" aria-label="Poverty Year Selection">
+                  <button type="button" class="poverty-year-btn" data-year="2018">2018</button>
+                  <button type="button" class="poverty-year-btn" data-year="2021">2021</button>
+                  <button type="button" class="poverty-year-btn active" data-year="2023">2023</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="poverty-chart-legend">
+              <div class="legend-item">
+                <span class="legend-swatch swatch-legazpi"></span>
+                <span><strong>Legazpi City</strong> (Focus)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-swatch swatch-other"></span>
+                <span>Other Albay Municipalities</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-line swatch-avg"></span>
+                <span id="povertyAvgLegendLabel">Albay Average: <strong>27.1%</strong></span>
+              </div>
+            </div>
+
+            <div class="poverty-chart-body">
+              <div class="poverty-canvas-container">
+                <canvas id="povertyAlbayChart"></canvas>
+              </div>
+            </div>
+
+            <div class="poverty-chart-footer">
+              <div class="pcf-insight">
+                <i class="bi bi-info-circle-fill"></i>
+                <span id="povertyInsightText">In 2023, <strong>Legazpi City</strong> recorded the lowest poverty incidence in the entire Province of Albay at <strong>16.3%</strong>, well below the provincial average of <strong>27.1%</strong>.</span>
+              </div>
             </div>
           </div>
 
           <p class="data-source">
             <i class="bi bi-info-circle"></i> Source:
             <a
-              href="https://psa.gov.ph/"
+              href="https://psa.gov.ph/statistics/poverty"
               target="_blank"
               rel="noopener noreferrer"
               data-i18n="stats-philippine-statistics-authority-psa"
               >Philippine Statistics Authority (PSA)</a
             >
-            - 2021 Poverty Estimates
+            - 2018, 2021 & 2023 Small Area Poverty Estimates
           </p>
         </div>
       </section>
@@ -1295,6 +1380,6 @@
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
-    <script defer src="../assets/js/statistics-new.js"></script>
+    <script defer src="../assets/js/statistics-new.js?v=1.1.20"></script>
   </body>
 </html>
