@@ -194,13 +194,6 @@
   </url>
   
   <url>
-    <loc>https://bettersolano.org/service-details/civil-registrar</loc>
-    <lastmod>2025-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bettersolano.org/service-details/municipal-civil-registrar</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -238,13 +231,6 @@
   </url>
   
   <!-- Service Details - Social Services -->
-  <url>
-    <loc>https://bettersolano.org/service-details/mswdo</loc>
-    <lastmod>2025-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
   <url>
     <loc>https://bettersolano.org/service-details/mswdo-services</loc>
     <lastmod>2025-12-10</lastmod>
@@ -304,13 +290,6 @@
   
   <url>
     <loc>https://bettersolano.org/service-details/municipal-agriculture</loc>
-    <lastmod>2025-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bettersolano.org/service-details/general-services</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

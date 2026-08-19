@@ -642,7 +642,7 @@
       "fee": "₱150+",
       "processingTime": "15-30 minutes",
       "office": "Local Civil Registrar",
-      "url": "../service-details/civil-registrar.html"
+      "url": "../service-details/municipal-civil-registrar.html"
     },
     {
       "id": "municipal-engineering",
@@ -706,7 +706,7 @@
       "fee": "Free",
       "processingTime": "Varies",
       "office": "General Services Office",
-      "url": "../service-details/general-services.html"
+      "url": "../service-details/municipal-general-services.html"
     },
     {
       "id": "human-resource",
