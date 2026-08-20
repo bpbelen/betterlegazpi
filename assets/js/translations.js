@@ -404,7 +404,7 @@ const translations = {
 
     // Infrastructure Page
     'infra-page-title': 'Infrastructure Services',
-    'infra-page-desc': 'Road maintenance, facilities, and public utilities',
+    'infra-page-desc': 'Building permits, urban planning, and other related services',
     'infra-page-badge': 'Infrastructure',
     'infra-road': 'Road Maintenance',
     'infra-road-desc': 'Request for road repairs and maintenance',
@@ -6839,7 +6839,7 @@ const translations = {
     'edu-training': 'Pagsasanay sa Kasanayan',
     'edu-training-desc': 'Mga programa sa bokasyonal at pagpapaunlad ng kasanayan',
     'infra-page-title': 'Serbisyo sa Imprastraktura',
-    'infra-page-desc': 'Pagpapanatili ng daan, pasilidad, at mga pampublikong utility',
+    'infra-page-desc': 'Mga permit sa gusali, pagpaplano ng lungsod, at iba pang kaugnay na serbisyo',
     'infra-page-badge': 'Imprastraktura',
     'infra-road': 'Pagpapanatili ng Daan',
     'infra-road-desc': 'Kahilingan para sa pagkukumpuni at pagpapanatili ng daan',
@@ -13319,7 +13319,7 @@ const translations = {
     'edu-training': 'Panagsanay ti Kasanayan',
     'edu-training-desc': 'Dagiti programa ti bokasyonal ken panagtaray ti kasanayan',
     'infra-page-title': 'Serbisio ti Imprastraktura',
-    'infra-page-desc': 'Panagtartaripato ti dalan, pasilidad, ken dagiti pampubliko a utility',
+    'infra-page-desc': 'Mga permit sa gusali, urban planning, asin iba pang kaugnay na serbisyo',
     'infra-page-badge': 'Imprastraktura',
     'infra-road': 'Panagtartaripato ti Dalan',
     'infra-road-desc': 'Dawat para iti panangaywan ken panagtartaripato ti dalan',

@@ -2560,8 +2560,37 @@
 
       function checkHash() {
         const hash = window.location.hash.replace('#', '');
-        if (hash) {
-          activateTab(hash);
+        if (!hash) return;
+
+        let targetTab = document.querySelector(`.service-tab[data-tab="${hash}"]`);
+        let targetContent = document.getElementById(hash);
+        let targetSubCard = null;
+
+        if (!targetTab) {
+          targetSubCard = document.querySelector(`.category-card[data-sub="${hash}"]`) || document.getElementById(hash);
+          if (targetSubCard) {
+            const parentContent = targetSubCard.closest('.service-content');
+            if (parentContent) {
+              const tabId = parentContent.id;
+              targetTab = document.querySelector(`.service-tab[data-tab="${tabId}"]`);
+              targetContent = parentContent;
+            }
+          }
+        }
+
+        if (targetTab && targetContent) {
+          document.querySelectorAll('.service-tab').forEach((t) => t.classList.remove('active'));
+          document.querySelectorAll('.service-content').forEach((c) => c.classList.remove('active'));
+          targetTab.classList.add('active');
+          targetContent.classList.add('active');
+
+          if (targetSubCard && typeof targetSubCard.click === 'function') {
+            targetSubCard.click();
+          }
+
+          setTimeout(() => {
+            targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 150);
         }
       }
 
