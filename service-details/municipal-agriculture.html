@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Municipal Agriculture Office - Farm registration, certifications, rice program, corn program, livestock, fishery, and agricultural services in Solano, Nueva Vizcaya."
+      content="City Agriculture Office (CAO) - Farm registration, certifications, and production inputs for Legazpeño farmers in Legazpi City, Albay."
     />
     <meta name="author" content="Ramon Logan Jr." />
     <meta
       name="keywords"
-      content="Municipal Agriculture Solano, RSBSA, farm registration, rice program, corn program, livestock, fishery, agricultural services, Nueva Vizcaya"
+      content="CAO Legazpi, City Agriculture Office, RSBSA, farm registration, rice program, corn program, livestock, fishery, agricultural services, Albay, Legazpi City"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://bettersolano.org/service-details/municipal-agriculture" />
+    <link rel="canonical" href="https://betterlegazpi.org/service-details/municipal-agriculture" />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://bettersolano.org/service-details/municipal-agriculture"
+      content="https://betterlegazpi.org/service-details/municipal-agriculture"
     />
-    <meta property="og:title" content="Municipal Agriculture Office | BetterSolano.org" />
+    <meta property="og:title" content="City Agriculture Office | BetterLegazpi.org" />
     <meta
       property="og:description"
-      content="Farm registration, certifications, and agricultural services in Solano, Nueva Vizcaya."
+      content="Farm registration, certifications, and production inputs for Legazpeño farmers in Legazpi City, Albay."
     />
     <meta
       property="og:image"
-      content="https://bettersolano.org/assets/images/banners/opengraph.png"
+      content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>Municipal Agriculture Office | BetterSolano.org</title>
+    <title>City Agriculture Office | BetterLegazpi.org</title>
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,11 +59,16 @@
       }
       .section-header {
         margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
       }
       .section-header h2 {
         font-size: 1.125rem;
         color: var(--color-text);
-        margin-bottom: 4px;
+        margin: 0;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -113,6 +118,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
       }
+      .service-grid-5 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+      }
       .service-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -156,6 +166,12 @@
         border-radius: 4px;
         font-weight: 500;
       }
+      .req-summary-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
       .req-box {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -193,6 +209,92 @@
         margin-top: 3px;
         flex-shrink: 0;
       }
+      .process-table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        font-size: 0.75rem;
+      }
+      .process-table th:nth-child(1),
+      .process-table td:nth-child(1) {
+        width: 5%;
+        text-align: center;
+      }
+      .process-table th:nth-child(2),
+      .process-table td:nth-child(2) {
+        width: 43%;
+      }
+      .process-table th:nth-child(3),
+      .process-table td:nth-child(3) {
+        width: 7%;
+      }
+      .process-table th:nth-child(4),
+      .process-table td:nth-child(4) {
+        width: 20%;
+      }
+      .process-table th:nth-child(5),
+      .process-table td:nth-child(5) {
+        width: 25%;
+        padding-right: 16px;
+      }
+      .process-table th {
+        background: var(--color-primary);
+        color: white;
+        padding: 10px 12px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+      }
+      .process-table td {
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        vertical-align: top;
+      }
+      .process-table tr:last-child td {
+        border-bottom: none;
+      }
+      .process-table tr:hover {
+        background: rgba(0, 50, 160, 0.02);
+      }
+      .step-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        background: var(--color-primary);
+        color: white;
+        font-size: 0.625rem;
+        font-weight: 700;
+        border-radius: 4px;
+      }
+      .personnel-tag {
+        display: block;
+        background: rgba(0, 50, 160, 0.06);
+        color: var(--color-text);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 0.6875rem;
+        font-weight: 500;
+        margin: 2px 0;
+        white-space: nowrap;
+        width: fit-content;
+      }
+      .time-tag {
+        color: var(--color-text-light);
+        font-size: 0.6875rem;
+      }
+      .fee-tag {
+        color: var(--color-text);
+        font-size: 0.6875rem;
+        font-weight: 600;
+      }
+      .service-tabs,
       .program-tabs {
         display: flex;
         flex-wrap: wrap;
@@ -200,6 +302,7 @@
         margin-bottom: 20px;
         justify-content: center;
       }
+      .service-tab,
       .program-tab {
         padding: 8px 16px;
         background: white;
@@ -211,38 +314,99 @@
         cursor: pointer;
         transition: all 0.2s ease;
       }
+      .service-tab:hover,
       .program-tab:hover {
         border-color: var(--color-primary);
       }
+      .service-tab.active,
       .program-tab.active {
         background: var(--color-primary);
         border-color: var(--color-primary);
         color: white;
       }
+      .service-content,
       .program-content {
         display: none;
       }
+      .service-content.active,
       .program-content.active {
         display: block;
       }
+      @media (max-width: 1200px) {
+        .service-grid-5 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
       @media (max-width: 992px) {
-        .service-grid {
+        .service-grid,
+        .req-summary-grid {
           grid-template-columns: repeat(2, 1fr);
         }
       }
       @media (max-width: 768px) {
+        .service-grid-5 {
+          grid-template-columns: repeat(2, 1fr);
+        }
         .quick-stats {
           grid-template-columns: repeat(2, 1fr);
         }
+        .process-table {
+          table-layout: auto;
+          font-size: 0.6875rem;
+        }
+        .personnel-tag {
+          white-space: normal;
+        }
+      }
+      .contact-info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .contact-card {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 14px;
+      }
+      .contact-card h4 {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .contact-card h4 i {
+        color: var(--color-primary);
+      }
+      .contact-card p {
+        font-size: 0.75rem;
+        color: var(--color-text-light);
+        margin: 2px 0;
+      }
+      .data-source {
+        font-size: 0.8125rem;
+        color: var(--color-text-light);
+      }
+      .data-source a {
+        color: var(--color-primary);
+        text-decoration: underline;
       }
       @media (max-width: 575px) {
         .service-grid,
-        .quick-stats {
+        .service-grid-5,
+        .req-summary-grid,
+        .quick-stats,
+        .contact-info-grid {
           grid-template-columns: 1fr;
         }
+        .service-tabs,
         .program-tabs {
           flex-direction: column;
         }
+        .service-tab,
         .program-tab {
           text-align: center;
         }
@@ -250,10 +414,9 @@
     </style>
   </head>
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="magri-skip-to-main-content"
-      >Skip to main content</a
-    >
-                    <!-- Hotline Bar -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -292,68 +455,44 @@
           <a href="../"
             ><img
               src="../assets/images/logo/better-solano-logo.svg"
-              alt="Better Solano Logo"
+              alt="Better Legazpi Logo"
               class="logo-img"
           /></a>
         </div>
         <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="magri-home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" class="active" data-i18n="magri-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false">Services</a>
               <ul class="dropdown-menu">
-<li>
-                  <a href="../services/agriculture" data-i18n="magri-agriculture">Agriculture</a>
-                </li>
-<li><a href="../services/business" data-i18n="magri-business">Business</a></li>
-<li>
-                  <a href="../services/certificates" data-i18n="magri-certificates">Certificates</a>
-                </li>
-<li><a href="../services/education" data-i18n="magri-education">Education</a></li>
-<li><a href="../services/health" data-i18n="magri-health">Health</a></li>
-<li>
-                  <a href="../services/infrastructure" data-i18n="magri-infrastructure"
-                    >Infrastructure</a
-                  >
-                </li>
-<li>
-                  <a href="../services/social-services" data-i18n="magri-social-services"
-                    >Social Services</a
-                  >
-                </li>
-<li>
-                  <a href="../services/tax-payments" data-i18n="magri-tax-payments">Tax Payments</a>
-                </li>
-</ul>
-            </li>
-            <li><a href="../government/" data-i18n="magri-government">Government</a></li>
-            <li><a href="../statistics/" data-i18n="magri-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="magri-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="../legislative/ordinance-framework" data-i18n="magri-ordinance-framework"
-                    >Ordinance Framework</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../legislative/resolution-framework"
-                    data-i18n="magri-resolution-framework"
-                    >Resolution Framework</a
-                  >
-                </li>
+                <li><a href="../services/agriculture">Agriculture</a></li>
+                <li><a href="../services/business">Business</a></li>
+                <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
+                <li><a href="../services/health">Health</a></li>
+                <li><a href="../services/infrastructure">Infrastructure</a></li>
+                <li><a href="../services/social-services">Social Services</a></li>
+                <li><a href="../services/tax-payments">Tax Payments</a></li>
               </ul>
             </li>
-            <li><a href="../budget/" data-i18n="magri-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="magri-contact">Contact</a></li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li class="has-dropdown">
+              <a href="../legislative/" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <ul class="dropdown-menu">
+                <li><a href="../legislative/ordinance-framework">Ordinance Framework</a></li>
+                <li><a href="../legislative/resolution-framework">Resolution Framework</a></li>
+              </ul>
+            </li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
         <div class="header-actions">
           <div class="lang-selector">
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">BCL</button>
           </div>
         </div>
       </div>
@@ -362,17 +501,21 @@
       <div class="container">
         <div class="info-bar-inner">
           <div class="info-bar-item info-bar-rates">
-            <i class="bi bi-currency-exchange"></i
-            ><span class="rate-rotator"><span class="rate-display">1 USD = ₱ --</span></span>
+            <i class="bi bi-currency-exchange"></i>
+            <span class="rate-rotator"><span class="rate-display">1 USD = ₱ --</span></span>
           </div>
           <div class="info-bar-item info-bar-weather">
-            <i class="bi bi-thermometer-half"></i><span class="weather-location">Solano</span
-            ><span class="weather-temp">--°C</span>
+            <i class="bi bi-thermometer-half"></i>
+            <span class="weather-location">Legazpi</span>
+            <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime">
-            <i class="bi bi-calendar3"></i><span class="date-value">--- --, ----</span
-            ><span class="datetime-separator">•</span><i class="bi bi-clock"></i
-            ><span class="time-value">--:-- --</span><span class="time-label">PHT</span>
+            <i class="bi bi-calendar3"></i>
+            <span class="date-value">--- --, ----</span>
+            <span class="datetime-separator">•</span>
+            <i class="bi bi-clock"></i>
+            <span class="time-value">--:-- --</span>
+            <span class="time-label">PHT</span>
           </div>
         </div>
       </div>
@@ -381,27 +524,20 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../" data-i18n="magri-home">Home</a><span>/</span>
-          <a href="../services/" data-i18n="magri-services">Services</a><span>/</span>
-          <a href="../services/agriculture" data-i18n="magri-agriculture">Agriculture</a
-          ><span>/</span>
-          <span aria-current="page">Municipal Agriculture Office</span>
+          <a href="../">Home</a><span>/</span>
+          <a href="../services/">Services</a><span>/</span>
+          <a href="../services/agriculture">Agriculture</a><span>/</span>
+          <span aria-current="page">City Agriculture Office</span>
         </nav>
       </div>
 
       <section class="page-header">
         <div class="container">
           <div class="page-header-content">
-            <span class="page-header-badge"
-              ><i class="bi bi-tree"></i>
-              <span data-i18n="magri-agriculture">Agriculture</span></span
-            >
-            <h1 data-i18n="magri-municipal-agriculture-office">Municipal Agriculture Office</h1>
-            <p
-              class="page-header-desc"
-              data-i18n="magri-farm-registration-certifications-and-agricultural"
-            >
-              Farm registration, certifications, and agricultural programs for Solano farmers
+            <span class="page-header-badge"><i class="bi bi-tree-fill"></i> CAO</span>
+            <h1>City Agriculture Office</h1>
+            <p class="page-header-desc">
+              Your consolidated guide for farm registration, certifications, and production inputs for Legazpeño farmers
             </p>
           </div>
         </div>
@@ -413,335 +549,328 @@
           <div class="quick-stats">
             <div class="stat-card">
               <i class="bi bi-building"></i>
-              <h4 data-i18n="magri-office">Office</h4>
-              <p data-i18n="magri-mun-agriculture">Mun. Agriculture</p>
+              <h4>Office</h4>
+              <p>CAO</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-geo-alt"></i>
-              <h4 data-i18n="magri-location">Location</h4>
-              <p data-i18n="magri-municipal-hall">Municipal Hall</p>
+              <h4>Location</h4>
+              <p>Brgy. 38-Gogon</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-clock"></i>
-              <h4 data-i18n="magri-hours">Hours</h4>
-              <p data-i18n="magri-8am-5pm">8AM - 5PM</p>
+              <h4>Hours</h4>
+              <p>8 AM - 5 PM (Mon-Fri)</p>
             </div>
             <div class="stat-card">
-              <i class="bi bi-calendar-check"></i>
-              <h4 data-i18n="magri-days">Days</h4>
-              <p>Monday - Friday</p>
+              <i class="bi bi-file-earmark-text"></i>
+              <h4>Services</h4>
+              <p>3 Key Services</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Program Tabs -->
+      <!-- CAO Services Section -->
       <section class="mao-section alt-bg">
         <div class="container">
-          <div class="section-header" style="text-align: center">
-            <h2 style="justify-content: center">
+          <div class="section-header">
+            <h2>
               <i class="bi bi-grid-3x3-gap"></i>
-              <span data-i18n="magri-agricultural-programs-services"
-                >Agricultural Programs & Services</span
-              >
+              <span>CAO Services</span>
             </h2>
-            <p data-i18n="magri-select-a-program-category-to-view-details">
-              Select a program category to view details
-            </p>
+            <p>Select a service below to view the detailed requirements, process, and turn-around time</p>
           </div>
-          <div class="program-tabs">
-            <button
-              type="button"
-              class="program-tab active"
-              data-tab="rsbsa"
-              data-i18n="magri-rsbsa-registration"
-            >
-              RSBSA Registration
-            </button>
-            <button
-              type="button"
-              class="program-tab"
-              data-tab="certifications"
-              data-i18n="magri-certifications"
-            >
-              Certifications
-            </button>
-            <button
-              type="button"
-              class="program-tab"
-              data-tab="rice"
-              data-i18n="magri-rice-program"
-            >
-              Rice Program
-            </button>
-            <button
-              type="button"
-              class="program-tab"
-              data-tab="corn"
-              data-i18n="magri-corn-program"
-            >
-              Corn Program
-            </button>
-            <button
-              type="button"
-              class="program-tab"
-              data-tab="livestock"
-              data-i18n="magri-livestock"
-            >
-              Livestock
-            </button>
-            <button type="button" class="program-tab" data-tab="fishery" data-i18n="magri-fishery">
-              Fishery
-            </button>
-            <button
-              type="button"
-              class="program-tab"
-              data-tab="organic"
-              data-i18n="magri-organic-agriculture"
-            >
-              Organic Agriculture
-            </button>
+          
+          <div class="service-tabs">
+            <button type="button" class="service-tab active" data-tab="farm-registration">1. Farm Registration</button>
+            <button type="button" class="service-tab" data-tab="agri-fishery">2. Agri-Fishery</button>
+            <button type="button" class="service-tab" data-tab="production-inputs">3. Production Inputs (Distribution)</button>
           </div>
 
-          <!-- RSBSA Registration -->
-          <div class="program-content active" id="rsbsa">
+          <!-- Farm Registration -->
+          <div class="service-content program-content active" id="farm-registration">
             <div class="section-header">
               <h2>
                 <i class="bi bi-person-badge"></i>
-                <span data-i18n="magri-rsbsa-registration-farm-registration"
-                  >RSBSA Registration (Farm Registration)</span
-                >
+                <span>1. Farm Registration</span>
               </h2>
-              <p data-i18n="magri-registry-system-for-basic-sectors-in-agriculture">
-                Registry System for Basic Sectors in Agriculture - Official farmer registration for
-                government programs
-              </p>
+              <p>Official farmer registration for government programs</p>
             </div>
-            <div class="grid grid-2" style="gap: 14px; margin-bottom: 20px">
+            
+            <div class="req-summary-grid">
               <div class="req-box">
                 <h4>
                   <i class="bi bi-file-earmark-text"></i>
-                  <span data-i18n="magri-requirements-for-new-registration"
-                    >Requirements for New Registration</span
-                  >
+                  <span>Checklist of Requirements</span>
                 </h4>
                 <ul class="req-list">
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="magri-valid-id-any-governmentissued-id"
-                      >Valid ID (any government-issued ID)</span
-                    >
+                    <span>Request Form (from the AT Assigned)</span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="magri-barangay-certification">Barangay Certification</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="magri-land-title-tax-declaration-lease-contract"
-                      >Land Title / Tax Declaration / Lease Contract</span
-                    >
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="magri-1x1-or-2x2-id-photo">1x1 or 2x2 ID Photo</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="magri-sketch-of-farm-location">Sketch of Farm Location</span>
+                    <span>RSBSA Registration</span>
                   </li>
                 </ul>
               </div>
+
               <div class="req-box">
                 <h4>
-                  <i class="bi bi-arrow-repeat"></i>
-                  <span data-i18n="magri-requirements-for-updaterenewal"
-                    >Requirements for Update/Renewal</span
-                  >
+                  <i class="bi bi-card-checklist"></i>
+                  <span>Types of Registration</span>
                 </h4>
                 <ul class="req-list">
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="magri-old-rsbsa-form-reference-number"
-                      >Old RSBSA Form / Reference Number</span
-                    >
+                    <span>Certification</span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="magri-valid-id">Valid ID</span>
+                    <span>Registry System for Basic Sectors in Agriculture (RSBSA)</span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="magri-updated-land-documents-if-changed"
-                      >Updated Land Documents (if changed)</span
-                    >
+                    <span>Philippine Crop Insurance Corporation (PCIC) Insurance</span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="magri-recent-1x1-or-2x2-photo">Recent 1x1 or 2x2 Photo</span>
+                    <span>Boat Registration</span>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="service-grid">
-              <div class="service-card">
-                <h4><i class="bi bi-cash-stack"></i> <span data-i18n="magri-fee">Fee</span></h4>
-                <p data-i18n="magri-free-of-charge-for-all-farmers">
-                  Free of charge for all farmers
-                </p>
-                <div class="meta">
-                  <span data-i18n="magri-no-payment-required">No Payment Required</span>
-                </div>
-              </div>
-              <div class="service-card">
-                <h4>
-                  <i class="bi bi-clock-history"></i>
-                  <span data-i18n="magri-processing-time">Processing Time</span>
-                </h4>
-                <p data-i18n="magri-same-day-registration-upon-complete-submission">
-                  Same day registration upon complete submission
-                </p>
-                <div class="meta"><span data-i18n="magri-1530-minutes">15-30 Minutes</span></div>
-              </div>
-              <div class="service-card">
-                <h4>
-                  <i class="bi bi-award"></i> <span data-i18n="magri-benefits">Benefits</span>
-                </h4>
-                <p data-i18n="magri-access-to-government-subsidies-insurance-and">
-                  Access to government subsidies, insurance, and agricultural programs
-                </p>
-                <div class="meta">
-                  <span>RCEF</span><span>PCIC</span
-                  ><span data-i18n="magri-da-programs">DA Programs</span>
-                </div>
-              </div>
+
+            <div class="table-responsive" style="margin-top: 14px;">
+              <table class="process-table">
+                <thead>
+                  <tr>
+                    <th>Step</th>
+                    <th>Agency Actions</th>
+                    <th>Fee</th>
+                    <th>Processing Time</th>
+                    <th>Person Responsible</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="step-badge">1</span></td>
+                    <td>
+                      <strong>Refer to the AT/ Concerned person</strong><br />
+                      • Schedule site visit/ validation if necessary<br />
+                      • If Validated already proceed to Admin Section for printing of certificate
+                    </td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">2 minutes</span></td>
+                    <td>
+                      <span class="personnel-tag">Agricultural Technologist / Aqua Culturist I</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">2</span></td>
+                    <td>
+                      <strong>Forward to CAO for signature and approval</strong>
+                    </td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">5 minutes</span></td>
+                    <td>
+                      <span class="personnel-tag">City Agriculturist</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">3</span></td>
+                    <td>
+                      <strong>Proceed to Admin Section for record and release</strong>
+                    </td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">2 minutes</span></td>
+                    <td>
+                      <span class="personnel-tag">Officer of the Day</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">4</span></td>
+                    <td>
+                      <strong>Filling-up Client Satisfactory Forms</strong>
+                    </td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">2 minutes</span></td>
+                    <td>
+                      <span class="personnel-tag">Officer of the Day</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
-          <!-- Certifications -->
-          <div class="program-content" id="certifications">
+          <!-- Production Inputs (Distribution) -->
+          <div class="service-content program-content" id="production-inputs">
             <div class="section-header">
               <h2>
-                <i class="bi bi-file-earmark-check"></i>
-                <span data-i18n="magri-agricultural-certifications"
-                  >Agricultural Certifications</span
-                >
+                <i class="bi bi-box-seam"></i>
+                <span>3. Production Inputs (Distribution)</span>
               </h2>
-              <p data-i18n="magri-official-certifications-issued-by-the-municipal">
-                Official certifications issued by the Municipal Agriculture Office
-              </p>
+              <p>Distribution of certified seeds, fertilizers, fingerlings, and planting stock</p>
             </div>
-            <div class="service-grid">
+
+            <div class="service-grid-5" style="margin-bottom: 20px;">
               <div class="service-card">
                 <h4>
-                  <i class="bi bi-patch-check"></i>
-                  <span data-i18n="magri-farmer-certification">Farmer Certification</span>
+                  <i class="bi bi-flower2"></i>
+                  <span>Palay</span>
                 </h4>
-                <p data-i18n="magri-certification-that-individual-is-a-registered">
-                  Certification that individual is a registered farmer in Solano
-                </p>
-                <div class="meta">
-                  <span data-i18n="magri-free">Free</span
-                  ><span data-i18n="magri-same-day">Same Day</span>
-                </div>
+                <p>Inbred & hybrid palay seed distribution for farmers</p>
               </div>
-              <div class="service-card">
-                <h4>
-                  <i class="bi bi-geo"></i>
-                  <span data-i18n="magri-farm-location-certification"
-                    >Farm Location Certification</span
-                  >
-                </h4>
-                <p data-i18n="magri-certification-of-farm-location-and-area-cultivated">
-                  Certification of farm location and area cultivated
-                </p>
-                <div class="meta">
-                  <span data-i18n="magri-free">Free</span
-                  ><span data-i18n="magri-same-day">Same Day</span>
-                </div>
-              </div>
+
               <div class="service-card">
                 <h4>
                   <i class="bi bi-flower1"></i>
-                  <span data-i18n="magri-crop-certification">Crop Certification</span>
+                  <span>Seeds / Planting Materials</span>
                 </h4>
-                <p data-i18n="magri-certification-of-crops-planted-and-production-data">
-                  Certification of crops planted and production data
-                </p>
-                <div class="meta">
-                  <span data-i18n="magri-free">Free</span
-                  ><span data-i18n="magri-same-day">Same Day</span>
-                </div>
+                <p>Quality vegetable seeds & crop planting stock</p>
               </div>
+
               <div class="service-card">
                 <h4>
-                  <i class="bi bi-droplet"></i>
-                  <span data-i18n="magri-calamity-certification">Calamity Certification</span>
+                  <i class="bi bi-droplet-half"></i>
+                  <span>Fertilizers</span>
                 </h4>
-                <p data-i18n="magri-certification-for-crop-damage-due-to-natural">
-                  Certification for crop damage due to natural calamities
-                </p>
-                <div class="meta">
-                  <span data-i18n="magri-free">Free</span
-                  ><span data-i18n="magri-after-validation">After Validation</span>
-                </div>
+                <p>Organic & inorganic fertilizers for crop production</p>
               </div>
+
               <div class="service-card">
                 <h4>
-                  <i class="bi bi-truck"></i>
-                  <span data-i18n="magri-transport-permit">Transport Permit</span>
+                  <i class="bi bi-water"></i>
+                  <span>Fingerlings</span>
                 </h4>
-                <p data-i18n="magri-permit-for-transporting-agricultural-products">
-                  Permit for transporting agricultural products
-                </p>
-                <div class="meta">
-                  <span data-i18n="magri-free">Free</span
-                  ><span data-i18n="magri-same-day">Same Day</span>
-                </div>
+                <p>Tilapia & bangus fingerlings for local aquaculture</p>
               </div>
+
               <div class="service-card">
                 <h4>
-                  <i class="bi bi-clipboard-data"></i>
-                  <span data-i18n="magri-production-data-certification"
-                    >Production Data Certification</span
-                  >
+                  <i class="bi bi-tree"></i>
+                  <span>Mangrove Seedlings</span>
                 </h4>
-                <p data-i18n="magri-official-production-records-for-loan-and">
-                  Official production records for loan and insurance purposes
-                </p>
-                <div class="meta">
-                  <span data-i18n="magri-free">Free</span
-                  ><span data-i18n="magri-12-days">1-2 Days</span>
-                </div>
+                <p>Mangrove planting stock for coastal protection</p>
               </div>
             </div>
-            <div class="req-box" style="margin-top: 14px">
-              <h4>
-                <i class="bi bi-info-circle"></i>
-                <span data-i18n="magri-general-requirements-for-certifications"
-                  >General Requirements for Certifications</span
-                >
-              </h4>
-              <ul class="req-list">
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="magri-valid-id">Valid ID</span>
-                </li>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="magri-rsbsa-registration-if-applicable"
-                    >RSBSA Registration (if applicable)</span
-                  >
-                </li>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="magri-barangay-certification">Barangay Certification</span>
-                </li>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="magri-purpose-of-certification">Purpose of Certification</span>
-                </li>
-              </ul>
+
+            <div class="table-responsive">
+              <table class="process-table">
+                <thead>
+                  <tr>
+                    <th>Step</th>
+                    <th>Agency Actions</th>
+                    <th>Fee</th>
+                    <th>Processing Time</th>
+                    <th>Person Responsible</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="step-badge">1</span></td>
+                    <td><strong>Assist client in filing up visitor's logbook</strong></td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">2 minutes</span></td>
+                    <td><span class="personnel-tag">Officer of the Day</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">2</span></td>
+                    <td><strong>Ask for request form of agri-inputs for record purposes</strong></td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">1 minute</span></td>
+                    <td><span class="personnel-tag">AT Assigned / Aquaculturist</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">3</span></td>
+                    <td><strong>Check availability of seeds and planting materials then issue requisition slip</strong></td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">1 minute</span></td>
+                    <td><span class="personnel-tag">Admin Aide I</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">4</span></td>
+                    <td><strong>Forward the same to CAO for approval/ signature</strong></td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">1 minute</span></td>
+                    <td><span class="personnel-tag">City Agriculturist</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">5</span></td>
+                    <td><strong>Assist client to sign forms and fill-up logbook for release</strong></td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">2 minutes</span></td>
+                    <td><span class="personnel-tag">Admin Aide I</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">6</span></td>
+                    <td><strong>Proceed to Bodega/ Nursery, wait for release and receive the agri inputs</strong></td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">5 minutes</span></td>
+                    <td><span class="personnel-tag">Admin Aide I</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">7</span></td>
+                    <td><strong>Filling-up Client Satisfactory Forms</strong></td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">2 minutes</span></td>
+                    <td><span class="personnel-tag">Officer of the Day</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Agri-Fishery -->
+          <div class="service-content program-content" id="agri-fishery">
+            <div class="section-header">
+              <h2>
+                <i class="bi bi-water"></i>
+                <span>2. Agri-Fishery</span>
+              </h2>
+              <p>Technical assistance, site visitation, and training services for agricultural technologists and aquaculturists</p>
+            </div>
+
+            <div class="table-responsive" style="margin-top: 14px;">
+              <table class="process-table">
+                <thead>
+                  <tr>
+                    <th>Step</th>
+                    <th>Agency Actions</th>
+                    <th>Fee</th>
+                    <th>Processing Time</th>
+                    <th>Person Responsible</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="step-badge">1</span></td>
+                    <td>
+                      <strong>Refer to the AT/ Concerned person</strong><br />
+                      • Discuss with client and advise client next things to do<br />
+                      • Scheduling of site visitation, conduct of trainings/ lecture as per request
+                    </td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">15 minutes</span></td>
+                    <td>
+                      <span class="personnel-tag">Agricultural Technologist / Aqua culturist I</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="step-badge">2</span></td>
+                    <td>
+                      <strong>Filling-up Client Satisfactory Forms</strong>
+                    </td>
+                    <td><span class="fee-tag">Free</span></td>
+                    <td><span class="time-tag">2 minutes</span></td>
+                    <td>
+                      <span class="personnel-tag">Officer of the Day</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
@@ -1212,48 +1341,50 @@
         </div>
       </section>
 
-      <!-- Contact Section -->
+      <!-- Contact & Feedback Section (White Background) -->
       <section class="mao-section">
         <div class="container">
-          <div class="grid grid-2" style="gap: 14px">
-            <div class="req-box">
+          <div class="contact-info-grid">
+            <!-- Card 1: Office Address & Location -->
+            <div class="contact-card">
               <h4>
-                <i class="bi bi-building"></i>
-                <span data-i18n="magri-office-information">Office Information</span>
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Office Address & Location</span>
               </h4>
-              <ul class="req-list">
-                <li>
-                  <i class="bi bi-geo-alt"></i>
-                  <span data-i18n="magri-municipal-agriculture-office-municipal-hall"
-                    >Municipal Agriculture Office, Municipal Hall, Solano, Nueva Vizcaya</span
-                  >
-                </li>
-                <li><i class="bi bi-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</li>
-                <li><i class="bi bi-telephone"></i> (078) 326-5001</li>
-              </ul>
+              <p><strong>City Agriculture Office (CAO)</strong></p>
+              <p>Barangay Gogon, Barriada, Legazpi City, Albay</p>
+              <p><strong>Hours:</strong> Monday to Friday, 8:00 AM - 5:00 PM</p>
             </div>
-            <div class="req-box">
+
+            <!-- Card 2: Contact Information & Feedback -->
+            <div class="contact-card">
               <h4>
-                <i class="bi bi-info-circle"></i>
-                <span data-i18n="magri-important-notes">Important Notes</span>
+                <i class="bi bi-chat-dots-fill"></i>
+                <span>Contact Information & Feedback</span>
               </h4>
-              <ul class="req-list">
-                <li>
-                  <i class="bi bi-check-circle"></i> All services require valid ID and RSBSA
-                  registration
-                </li>
-                <li>
-                  <i class="bi bi-check-circle"></i> Program availability subject to budget
-                  allocation
-                </li>
-                <li><i class="bi bi-check-circle"></i> Priority given to small-scale farmers</li>
-                <li>
-                  <i class="bi bi-check-circle"></i> Bring supporting documents for faster
-                  processing
-                </li>
-              </ul>
+              <p><strong>Sheila R. Nas</strong>, City Agriculturist</p>
+              <p><strong>Tel No:</strong> (052) 742-1739 &bull; <strong>Mobile:</strong> 09391550681</p>
+              <p><strong>Email:</strong> <a href="mailto:legazpicitycao@gmail.com">legazpicitycao@gmail.com</a></p>
+              <p style="margin-top: 6px; font-size: 0.6875rem; color: var(--color-text-light);">
+                Feedbacks & complaints may be filed directly to the City Agriculture Office or via telephone/email.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Data Source Section (Grey Background) -->
+      <section class="mao-section alt-bg">
+        <div class="container">
+          <p class="data-source" style="text-align: center; margin: 0;">
+            <i class="bi bi-info-circle"></i> Source:
+            <a
+              href="https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-AGRICULTURE-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Legazpi City City Agriculture Office (CAO) Citizen's Charter 2026</a
+            >
+          </p>
         </div>
       </section>
     </main>
@@ -1473,17 +1604,34 @@
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
     <script>
-      // Tab functionality
-      document.querySelectorAll('.program-tab').forEach((tab) => {
+      // Tab functionality & URL Hash Handling
+      function activateTab(tabId) {
+        if (!tabId) return;
+        const targetTab = document.querySelector(`.service-tab[data-tab="${tabId}"], .program-tab[data-tab="${tabId}"]`);
+        const targetContent = document.getElementById(tabId);
+        if (targetTab && targetContent) {
+          document.querySelectorAll('.service-tab, .program-tab').forEach((t) => t.classList.remove('active'));
+          document.querySelectorAll('.service-content, .program-content').forEach((c) => c.classList.remove('active'));
+          targetTab.classList.add('active');
+          targetContent.classList.add('active');
+        }
+      }
+
+      document.querySelectorAll('.service-tab, .program-tab').forEach((tab) => {
         tab.addEventListener('click', () => {
-          document.querySelectorAll('.program-tab').forEach((t) => t.classList.remove('active'));
-          document
-            .querySelectorAll('.program-content')
-            .forEach((c) => c.classList.remove('active'));
-          tab.classList.add('active');
-          document.getElementById(tab.dataset.tab).classList.add('active');
+          activateTab(tab.dataset.tab);
         });
       });
+
+      function checkHash() {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) {
+          activateTab(hash);
+        }
+      }
+
+      window.addEventListener('DOMContentLoaded', checkHash);
+      window.addEventListener('hashchange', checkHash);
     </script>
   </body>
 </html>

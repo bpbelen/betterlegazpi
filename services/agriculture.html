@@ -80,6 +80,19 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <style>
+      .service-item-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s ease;
+      }
+      .service-item-card:hover {
+        border-color: var(--color-primary, #0032A0);
+        box-shadow: 0 4px 14px rgba(0, 50, 160, 0.12);
+        transform: translateY(-2px);
+      }
+    </style>
   </head>
 
   <body>
@@ -236,62 +249,45 @@
       <section class="section">
         <div class="container">
           <div class="grid grid-3">
-            <div class="service-item-card">
+            <a href="../service-details/municipal-agriculture#farm-registration" class="service-item-card">
               <h3 class="service-item-title">
-                <i class="bi bi-flower1"></i>
-                <span data-i18n="agri-seedling">Seedling Distribution</span>
+                <i class="bi bi-person-badge"></i>
+                <span data-i18n="agri-farm-reg">Farm Registration</span>
               </h3>
-              <p class="service-item-desc" data-i18n="agri-seedling-desc">
-                Free seeds and seedlings for farmers
+              <p class="service-item-desc" data-i18n="agri-farm-reg-desc">
+                RSBSA registration, crop insurance (PCIC), and official farmer certifications
               </p>
               <div class="service-item-meta">
-                <span
-                  ><strong data-i18n="label-fee">Fee:</strong>
-                  <span data-i18n="label-free">Free</span></span
-                >
-                <span
-                  ><strong data-i18n="label-time">Time:</strong>
-                  <span data-i18n="label-seasonal">Seasonal</span></span
-                >
+                <span><strong data-i18n="label-fee">Fee:</strong> <span data-i18n="label-free">Free</span></span>
+                <span><strong data-i18n="label-time">Time:</strong> <span>2 - 5 mins</span></span>
               </div>
-            </div>
-            <div class="service-item-card">
+            </a>
+            <a href="../service-details/municipal-agriculture#agri-fishery" class="service-item-card">
               <h3 class="service-item-title">
-                <i class="bi bi-tools"></i> <span data-i18n="agri-equipment">Farm Equipment</span>
+                <i class="bi bi-water"></i>
+                <span data-i18n="agri-fishery-support">Agri-Fishery Support</span>
               </h3>
-              <p class="service-item-desc" data-i18n="agri-equipment-desc">
-                Equipment rental and assistance
+              <p class="service-item-desc" data-i18n="agri-fishery-support-desc">
+                Technical assistance, site visitation, and capacity-building lectures
               </p>
               <div class="service-item-meta">
-                <span
-                  ><strong data-i18n="label-fee">Fee:</strong>
-                  <span data-i18n="label-subsidized">Subsidized</span></span
-                >
-                <span
-                  ><strong data-i18n="label-time">Time:</strong>
-                  <span data-i18n="label-by-schedule">By schedule</span></span
-                >
+                <span><strong data-i18n="label-fee">Fee:</strong> <span data-i18n="label-free">Free</span></span>
+                <span><strong data-i18n="label-time">Time:</strong> <span>15 mins</span></span>
               </div>
-            </div>
-            <div class="service-item-card">
+            </a>
+            <a href="../service-details/municipal-agriculture#production-inputs" class="service-item-card">
               <h3 class="service-item-title">
-                <i class="bi bi-graph-up"></i>
-                <span data-i18n="agri-livelihood">Livelihood Programs</span>
+                <i class="bi bi-box-seam"></i>
+                <span data-i18n="agri-prod-inputs">Production Inputs</span>
               </h3>
-              <p class="service-item-desc" data-i18n="agri-livelihood-desc">
-                Training and support for farmers
+              <p class="service-item-desc" data-i18n="agri-prod-inputs-desc">
+                Distribution of certified seeds, fertilizers, fingerlings, and seedlings
               </p>
               <div class="service-item-meta">
-                <span
-                  ><strong data-i18n="label-fee">Fee:</strong>
-                  <span data-i18n="label-free">Free</span></span
-                >
-                <span
-                  ><strong data-i18n="label-time">Time:</strong>
-                  <span data-i18n="label-varies">Varies</span></span
-                >
+                <span><strong data-i18n="label-fee">Fee:</strong> <span data-i18n="label-free">Free</span></span>
+                <span><strong data-i18n="label-time">Time:</strong> <span>14 mins</span></span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -307,11 +303,10 @@
               </div>
               <div class="office-card-content">
                 <h3 class="office-card-title" data-i18n="agri-office-mao">
-                  Municipal Agriculture Office
+                  CAO Services
                 </h3>
                 <p class="office-card-desc" data-i18n="agri-office-mao-desc">
-                  RSBSA registration, certifications, rice/corn programs, livestock, fishery
-                  services
+                  Official farmer registration, agri-fishery technical support, and seed distribution
                 </p>
               </div>
               <div class="office-card-arrow">

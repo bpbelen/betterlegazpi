@@ -283,9 +283,9 @@ const translations = {
     'agri-equipment-desc': 'Equipment rental and assistance',
     'agri-livelihood': 'Livelihood Programs',
     'agri-livelihood-desc': 'Training and support for farmers',
-    'agri-office-mao': 'Municipal Agriculture Office',
+    'agri-office-mao': 'CAO Services',
     'agri-office-mao-desc':
-      'RSBSA registration, certifications, rice/corn programs, livestock, fishery services',
+      'Official farmer registration, agri-fishery technical support, and seed distribution',
 
     // Ordinance Framework Page
     'ord-page-title': 'Ordinance Framework',
