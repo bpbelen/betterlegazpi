@@ -470,16 +470,20 @@
     },
     {
       "id": "mswdo-services",
-      "title": "MSWDO Services",
+      "title": "CSWDO Services",
       "category": "Social Services & Assistance",
       "categoryId": "social-services",
-      "description": "Social case studies, indigency certificates, AICS, PWD and senior citizen assistance",
+      "description": "AICS financial assistance, Social Case Study reports, Indigency certificates, PhilHealth UHC, Solo Parent ID (RA 11861), PWD & senior citizen assistance",
       "keywords": [
-        "MSWDO",
+        "CSWDO",
+        "Legazpi",
         "social welfare",
         "indigency",
         "certificate",
         "AICS",
+        "Solo Parent",
+        "RA 11861",
+        "PhilHealth UHC",
         "PWD",
         "senior citizen",
         "assistance",
@@ -487,8 +491,8 @@
         "welfare"
       ],
       "fee": "Free",
-      "processingTime": "28 min - 1.5 hrs",
-      "office": "MSWDO",
+      "processingTime": "55 min - 2 days",
+      "office": "CSWDO Legazpi",
       "url": "../service-details/mswdo-services.html"
     },
     {
