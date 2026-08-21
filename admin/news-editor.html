@@ -267,7 +267,44 @@
         position: absolute;
         left: -9999px;
       }
+      [data-theme="dark"] {
+        --border: #2d3748;
+        --text: #f0f6fc;
+        --muted: #8b949e;
+        --bg: #090a0f;
+      }
+      [data-theme="dark"] header.app,
+      [data-theme="dark"] .panel,
+      [data-theme="dark"] button {
+        background: #16181f;
+        color: #f0f6fc;
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+      [data-theme="dark"] input,
+      [data-theme="dark"] select,
+      [data-theme="dark"] textarea {
+        background: #1c1f28;
+        color: #f0f6fc;
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+      [data-theme="dark"] .entry {
+        border-color: rgba(255, 255, 255, 0.08);
+        background: #1c1f28;
+      }
+      [data-theme="dark"] .nc {
+        background: #16181f;
+        border-color: rgba(255, 255, 255, 0.08);
+      }
     </style>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <header class="app">
@@ -277,6 +314,7 @@
       <input id="file-input" type="file" accept="application/json,.json" class="visually-hidden" />
       <button id="btn-copy">Copy JSON</button>
       <button id="btn-download" class="primary">Download news.json</button>
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode" onclick="const isD = document.documentElement.getAttribute('data-theme') === 'dark'; if (isD) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); } else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }">🌓 Theme</button>
       <span id="status" class="status"></span>
     </header>
 

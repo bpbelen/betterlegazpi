@@ -961,7 +961,9 @@
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
   position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
 }
@@ -1877,7 +1879,9 @@
   border: 1.5px solid #e2e8f0;
   border-radius: 14px;
   padding: 20px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .poverty-legazpi-card:hover {
@@ -1918,8 +1922,13 @@
 }
 
 @keyframes badgePulse {
-  0%, 100% { box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35); }
-  50% { box-shadow: 0 3px 16px rgba(16, 185, 129, 0.55); }
+  0%,
+  100% {
+    box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35);
+  }
+  50% {
+    box-shadow: 0 3px 16px rgba(16, 185, 129, 0.55);
+  }
 }
 
 /* Card header */
@@ -2251,4 +2260,80 @@
   .poverty-chart-card {
     padding: 16px;
   }
+}
+
+/* ==========================================================================
+   STATISTICS DASHBOARD - DARK MODE THEME SYSTEM
+   ========================================================================== */
+[data-theme='dark'] .stats-hero {
+  background: linear-gradient(135deg, #090a0f 0%, #16181f 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+[data-theme='dark'] .stats-section,
+[data-theme='dark'] .stats-section:nth-child(even) {
+  background-color: #090a0f;
+}
+
+[data-theme='dark'] .metric-card,
+[data-theme='dark'] .stat-card,
+[data-theme='dark'] .chart-card,
+[data-theme='dark'] .poverty-chart-card,
+[data-theme='dark'] .demographics-card,
+[data-theme='dark'] .poverty-legazpi-card {
+  background: #16181f !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+  color: #f0f6fc;
+}
+
+[data-theme='dark'] .metric-card:hover,
+[data-theme='dark'] .stat-card:hover,
+[data-theme='dark'] .chart-card:hover {
+  background: #1c1f28 !important;
+  border-color: rgba(79, 142, 255, 0.35) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme='dark'] .metric-value,
+[data-theme='dark'] .plc-val,
+[data-theme='dark'] .stat-value,
+[data-theme='dark'] .chart-title {
+  color: #f0f6fc !important;
+}
+
+[data-theme='dark'] .metric-label,
+[data-theme='dark'] .plc-label,
+[data-theme='dark'] .stat-label,
+[data-theme='dark'] .chart-subtitle,
+[data-theme='dark'] .poverty-source,
+[data-theme='dark'] .metric-source {
+  color: #8b949e !important;
+}
+
+[data-theme='dark'] .section-tag,
+[data-theme='dark'] .stat-pill,
+[data-theme='dark'] .stat-badge {
+  background: rgba(79, 142, 255, 0.12) !important;
+  color: #93c5fd !important;
+  border: 1px solid rgba(79, 142, 255, 0.25) !important;
+}
+
+[data-theme='dark'] .stat-table,
+[data-theme='dark'] .data-table {
+  background: #16181f;
+  color: #c9d1d9;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .stat-table th,
+[data-theme='dark'] .data-table th {
+  background: #1c1f28;
+  color: #f0f6fc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .stat-table td,
+[data-theme='dark'] .data-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }

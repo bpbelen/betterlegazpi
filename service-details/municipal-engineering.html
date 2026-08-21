@@ -272,6 +272,15 @@
         }
       }
     </style>
+      <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link" data-i18n="eng-skip-to-main-content"
@@ -377,6 +386,10 @@
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
           </div>
+        
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
     </header>

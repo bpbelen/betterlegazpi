@@ -9,12 +9,22 @@
   <script>
     window.location.replace('city-civil-registrar' + window.location.hash);
   </script>
-</head>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
 
 <body style="font-family: sans-serif; text-align: center; padding: 50px 20px;">
   <h2>Redirecting to City Civil Registrar Hub...</h2>
   <p>If you are not redirected automatically, please click below:</p>
   <p><a href="city-civil-registrar" style="color: #0032a0; font-weight: bold;">Go to City Civil Registrar Hub</a></p>
-</body>
+    <script defer src="../assets/js/main.js"></script>
+  </body>
 
 </html>

@@ -1325,7 +1325,9 @@
   font-size: 0.8125rem;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 8px;
-  background: #f8fafc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 8px center;
+  background: #f8fafc
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat right 8px center;
   background-size: 12px;
   appearance: none;
   cursor: pointer;
@@ -2008,7 +2010,7 @@
   background: #f1f5f9;
 }
 
-.dpwh-multiselect-item input[type="checkbox"] {
+.dpwh-multiselect-item input[type='checkbox'] {
   cursor: pointer;
   accent-color: var(--color-primary);
 }
@@ -2354,7 +2356,9 @@
 .dpwh-expand-chevron {
   color: #94a3b8;
   font-size: 0.75rem;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
   flex-shrink: 0;
 }
 
@@ -2614,7 +2618,7 @@
   .dpwh-table {
     min-width: 700px;
   }
-  
+
   .dpwh-detail-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2730,7 +2734,6 @@
   }
 }
 
-
 /* SRE Breakdown CTA Card */
 .finance-sre-cta {
   display: flex;
@@ -2817,4 +2820,100 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+/* ==========================================================================
+   TRANSPARENCY PORTAL & FINANCE - DARK MODE THEME SYSTEM
+   ========================================================================== */
+[data-theme='dark'] .transparency-hero,
+[data-theme='dark'] .transparency-section {
+  background: #090a0f !important;
+}
+
+[data-theme='dark'] .transparency-card,
+[data-theme='dark'] .sumbong-card,
+[data-theme='dark'] .finance-chart-card,
+[data-theme='dark'] .finance-sre-card,
+[data-theme='dark'] .disclosure-card,
+[data-theme='dark'] .fund-breakdown-card {
+  background: #16181f !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+  color: #f0f6fc !important;
+}
+
+[data-theme='dark'] .transparency-card:hover,
+[data-theme='dark'] .sumbong-card:hover {
+  background: #1c1f28 !important;
+  border-color: rgba(79, 142, 255, 0.35) !important;
+}
+
+[data-theme='dark'] .sumbong-expanded-details {
+  background: #111318 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-theme='dark'] .sumbong-field-row {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme='dark'] .sumbong-field-label {
+  color: #8b949e !important;
+}
+
+[data-theme='dark'] .sumbong-field-value {
+  color: #f0f6fc !important;
+}
+
+[data-theme='dark'] .finance-sre-table,
+[data-theme='dark'] .procurement-table,
+[data-theme='dark'] .disclosure-table {
+  background: #16181f !important;
+  color: #c9d1d9 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme='dark'] .finance-sre-table th,
+[data-theme='dark'] .procurement-table th,
+[data-theme='dark'] .disclosure-table th {
+  background: #1c1f28 !important;
+  color: #f0f6fc !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme='dark'] .finance-sre-table td,
+[data-theme='dark'] .procurement-table td,
+[data-theme='dark'] .disclosure-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  color: #c9d1d9 !important;
+}
+
+[data-theme='dark'] .finance-sre-cta {
+  background: #1c1f28 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme='dark'] .finance-sre-cta-text h4 {
+  color: #f0f6fc !important;
+}
+
+[data-theme='dark'] .finance-sre-cta-text p {
+  color: #8b949e !important;
+}
+
+[data-theme='dark'] .transparency-tab-btn {
+  background: #16181f !important;
+  color: #8b949e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme='dark'] .transparency-tab-btn:hover {
+  background: #232734 !important;
+  color: #4f8eff !important;
+}
+
+[data-theme='dark'] .transparency-tab-btn.active {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #4f8eff !important;
 }

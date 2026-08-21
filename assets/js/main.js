@@ -733,40 +733,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ─── Universal Theme Toggle (Light / Dark Mode) ──────────────────────────
   function initThemeToggle() {
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (!toggleBtn) return;
+    const toggleBtns = document.querySelectorAll('#theme-toggle, .theme-toggle-btn');
+    if (!toggleBtns || toggleBtns.length === 0) return;
 
-    function updateToggleIcon() {
+    function updateToggleIcons() {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const icon = toggleBtn.querySelector('i');
-      if (icon) {
-        if (isDark) {
-          icon.className = 'bi bi-sun-fill';
-          toggleBtn.setAttribute('aria-label', 'Switch to light mode');
-          toggleBtn.setAttribute('title', 'Switch to light mode');
-        } else {
-          icon.className = 'bi bi-moon-stars-fill';
-          toggleBtn.setAttribute('aria-label', 'Switch to dark mode');
-          toggleBtn.setAttribute('title', 'Switch to dark mode');
+      toggleBtns.forEach((btn) => {
+        const icon = btn.querySelector('i');
+        if (icon) {
+          if (isDark) {
+            icon.className = 'bi bi-sun-fill';
+            btn.setAttribute('aria-label', 'Switch to light mode');
+            btn.setAttribute('title', 'Switch to light mode');
+          } else {
+            icon.className = 'bi bi-moon-stars-fill';
+            btn.setAttribute('aria-label', 'Switch to dark mode');
+            btn.setAttribute('title', 'Switch to dark mode');
+          }
         }
-      }
+      });
     }
 
-    updateToggleIcon();
+    updateToggleIcons();
 
-    toggleBtn.addEventListener('click', function () {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-      if (newTheme === 'dark') {
+    function setTheme(theme) {
+      if (theme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
         localStorage.setItem('theme', 'light');
       }
-      updateToggleIcon();
+      updateToggleIcons();
+      document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: theme } }));
+    }
+
+    toggleBtns.forEach((btn) => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
     });
+
+    // Listen for OS system preference changes if user hasn't explicitly set preference
+    if (window.matchMedia) {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      mediaQuery.addEventListener('change', function (e) {
+        if (!localStorage.getItem('theme')) {
+          if (e.matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          updateToggleIcons();
+          document.dispatchEvent(
+            new CustomEvent('themechange', { detail: { theme: e.matches ? 'dark' : 'light' } })
+          );
+        }
+      });
+    }
   }
 
   initThemeToggle();

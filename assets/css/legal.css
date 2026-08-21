@@ -335,3 +335,81 @@ Contact Section */
     padding: 16px;
   }
 }
+
+/* ==========================================================================
+   LEGAL PAGES (TERMS, PRIVACY) - DARK MODE THEME SYSTEM
+   ========================================================================== */
+[data-theme='dark'] .legal-hero {
+  background: linear-gradient(135deg, #090a0f 0%, #16181f 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+[data-theme='dark'] .legal-content {
+  background: #090a0f;
+}
+
+[data-theme='dark'] .legal-toc {
+  background: #16181f;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme='dark'] .legal-toc h4 {
+  color: #f0f6fc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='dark'] .legal-toc a {
+  color: #8b949e;
+}
+
+[data-theme='dark'] .legal-toc a:hover {
+  background: #232734;
+  color: #4f8eff;
+}
+
+[data-theme='dark'] .legal-section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='dark'] .legal-section h2 {
+  color: #f0f6fc;
+  border-bottom-color: #4f8eff;
+}
+
+[data-theme='dark'] .legal-section h3 {
+  color: #f0f6fc;
+}
+
+[data-theme='dark'] .legal-section p,
+[data-theme='dark'] .legal-list li {
+  color: #c9d1d9;
+}
+
+[data-theme='dark'] .legal-callout {
+  background: #16181f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #c9d1d9;
+}
+
+[data-theme='dark'] .legal-callout h4 {
+  color: #4f8eff;
+}
+
+[data-theme='dark'] .legal-note {
+  background: #1c1f28;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .legal-note p {
+  color: #8b949e;
+}
+
+[data-theme='dark'] .legal-highlight {
+  background: rgba(16, 185, 129, 0.12);
+  border-left-color: #10b981;
+}
+
+[data-theme='dark'] .legal-highlight span {
+  color: #f0f6fc;
+}

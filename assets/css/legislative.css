@@ -628,3 +628,68 @@
     font-size: 0.75rem;
   }
 }
+
+/* ==========================================================================
+   LEGISLATIVE PAGES - DARK MODE THEME SYSTEM
+   ========================================================================== */
+[data-theme='dark'] .leg-hero {
+  background: linear-gradient(135deg, #090a0f 0%, #16181f 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+[data-theme='dark'] .leg-categories {
+  background: #090a0f;
+}
+
+[data-theme='dark'] .leg-category-card,
+[data-theme='dark'] .leg-framework-card,
+[data-theme='dark'] .leg-doc-card,
+[data-theme='dark'] .leg-flow-card {
+  background: #16181f !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+  color: #f0f6fc !important;
+}
+
+[data-theme='dark'] .leg-category-card:hover,
+[data-theme='dark'] .leg-framework-card:hover,
+[data-theme='dark'] .leg-doc-card:hover {
+  background: #1c1f28 !important;
+  border-color: rgba(79, 142, 255, 0.35) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme='dark'] .leg-category-content h2,
+[data-theme='dark'] .leg-doc-title,
+[data-theme='dark'] .leg-flow-card h4 {
+  color: #f0f6fc !important;
+}
+
+[data-theme='dark'] .leg-category-content p,
+[data-theme='dark'] .leg-doc-desc,
+[data-theme='dark'] .leg-doc-meta,
+[data-theme='dark'] .leg-flow-card p {
+  color: #8b949e !important;
+}
+
+[data-theme='dark'] .leg-flow-number {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .leg-filter-pill {
+  background: #16181f !important;
+  color: #8b949e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme='dark'] .leg-filter-pill:hover {
+  background: #232734 !important;
+  color: #4f8eff !important;
+}
+
+[data-theme='dark'] .leg-filter-pill.active {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #4f8eff !important;
+}

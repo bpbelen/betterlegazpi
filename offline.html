@@ -119,14 +119,64 @@
         outline: 2px solid #0032a0;
         outline-offset: 2px;
       }
-      @media (max-width: 480px) {
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #090a0f;
+          color: #f0f6fc;
+        }
+        .hotlines {
+          background: #16181f;
+          border-color: rgba(255, 255, 255, 0.08);
+        }
+        .hotline-label {
+          color: #c9d1d9;
+        }
+        .hotline-number {
+          color: #4f8eff;
+        }
+        .hotlines h2 {
+          color: #4f8eff;
+        }
         .hotline-list li {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0.25rem;
+          border-bottom-color: rgba(255, 255, 255, 0.05);
+        }
+        .subtitle {
+          color: #8b949e;
         }
       }
+      [data-theme="dark"] body {
+        background: #090a0f;
+        color: #f0f6fc;
+      }
+      [data-theme="dark"] .hotlines {
+        background: #16181f;
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+      [data-theme="dark"] .hotline-label {
+        color: #c9d1d9;
+      }
+      [data-theme="dark"] .hotline-number {
+        color: #4f8eff;
+      }
+      [data-theme="dark"] .hotlines h2 {
+        color: #4f8eff;
+      }
+      [data-theme="dark"] .hotline-list li {
+        border-bottom-color: rgba(255, 255, 255, 0.05);
+      }
+      [data-theme="dark"] .subtitle {
+        color: #8b949e;
+      }
     </style>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link" data-i18n="offline-skip-to-main-content"
@@ -187,7 +237,10 @@
         </ul>
       </div>
 
-      <button class="retry-btn" onclick="window.location.reload()">Try Again</button>
+      <div style="margin-top: 1rem; display: flex; gap: 10px; justify-content: center; align-items: center;">
+        <button class="retry-btn" onclick="window.location.reload()">Try Again</button>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode" style="background: transparent; border: 1px solid currentColor; color: inherit; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer;" onclick="const isD = document.documentElement.getAttribute('data-theme') === 'dark'; if (isD) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); } else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }">🌓 Dark Mode</button>
+      </div>
     </main>
   </body>
 </html>
