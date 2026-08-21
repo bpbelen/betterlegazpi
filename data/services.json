@@ -928,25 +928,27 @@
       "url": "../service-details/municipal-planning.html"
     },
     {
-      "id": "municipal-agriculture",
-      "title": "Municipal Agriculture Office",
+      "id": "cao-services",
+      "title": "City Agriculture Office (CAO)",
       "category": "Agriculture & Economic Development",
       "categoryId": "agriculture",
-      "description": "Agricultural assistance, farm registration, and livelihood programs",
+      "description": "Farmer registration, RSBSA enrollment, agri-fishery technical support, and production inputs distribution",
       "keywords": [
         "agriculture",
-        "MAO",
+        "CAO",
         "farmer",
         "farm",
-        "livestock",
         "crops",
+        "seeds",
+        "fertilizer",
+        "fingerlings",
         "RSBSA",
         "livelihood"
       ],
-      "fee": "Free/Varies",
-      "processingTime": "Varies",
-      "office": "Municipal Agriculture Office",
-      "url": "../service-details/municipal-agriculture.html"
+      "fee": "—",
+      "processingTime": "11 - 17 mins",
+      "office": "City Agriculture Office (CAO)",
+      "url": "../service-details/cao-services-2.html"
     },
     {
       "id": "general-services",

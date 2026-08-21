@@ -15,51 +15,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Agricultural services in Solano, Nueva Vizcaya including seedling distribution, farm equipment assistance, livelihood programs, and farming support from LGU Solano."
+      content="Agricultural services in Legazpi City including farmer registration, RSBSA enrollment, agri-fishery support, seedling distribution, and farming inputs from the City Agriculture Office (CAO)."
     />
-    <meta name="author" content="Ramon Logan Jr." />
+    <meta name="author" content="Better Legazpi Team" />
     <meta
       name="keywords"
-      content="agriculture Solano, farming services, seedling distribution, farm equipment, livelihood programs, agricultural assistance, Nueva Vizcaya farming, LGU Solano agriculture"
+      content="agriculture Legazpi, farming services Legazpi, CAO Legazpi, RSBSA registration, seedling distribution, fertilizer assistance, agri-fishery support, Albay agriculture"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://bettersolano.org/services/agriculture" />
+    <link rel="canonical" href="https://betterlegazpi.org/services/agriculture" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bettersolano.org/services/agriculture" />
-    <meta property="og:title" content="Agriculture Services | BetterSolano.org" />
+    <meta property="og:url" content="https://betterlegazpi.org/services/agriculture" />
+    <meta property="og:title" content="Agriculture Services | BetterLegazpi.org" />
     <meta
       property="og:description"
-      content="Agricultural services in Solano, Nueva Vizcaya including seedling distribution, farm equipment assistance, livelihood programs, and farming support from LGU Solano."
+      content="Agricultural services in Legazpi City including farmer registration, RSBSA enrollment, agri-fishery support, seedling distribution, and farming inputs from CAO Legazpi."
     />
     <meta
       property="og:image"
-      content="https://bettersolano.org/assets/images/banners/opengraph.png"
+      content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
     <meta
       property="og:image:secure_url"
-      content="https://bettersolano.org/assets/images/banners/opengraph.png"
+      content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
     <meta property="og:locale" content="en_PH" />
-    <meta property="og:site_name" content="BetterSolano.org" />
+    <meta property="og:site_name" content="BetterLegazpi.org" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://bettersolano.org/services/agriculture" />
-    <meta name="twitter:title" content="Agriculture Services | BetterSolano.org" />
+    <meta name="twitter:url" content="https://betterlegazpi.org/services/agriculture" />
+    <meta name="twitter:title" content="Agriculture Services | BetterLegazpi.org" />
     <meta
       name="twitter:description"
-      content="Agricultural services in Solano, Nueva Vizcaya including seedling distribution, farm equipment assistance, livelihood programs, and farming support from LGU Solano."
+      content="Agricultural services in Legazpi City including farmer registration, RSBSA enrollment, agri-fishery support, seedling distribution, and farming inputs from CAO Legazpi."
     />
     <meta
       name="twitter:image"
-      content="https://bettersolano.org/assets/images/banners/opengraph.png"
+      content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
-    <title>Agriculture Services | BetterSolano.org</title>
+    <title>Agriculture Services | BetterLegazpi.org</title>
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -92,7 +92,20 @@
         box-shadow: 0 4px 14px rgba(0, 50, 160, 0.12);
         transform: translateY(-2px);
       }
+      [data-theme="dark"] .service-item-card:hover {
+        border-color: rgba(79, 142, 255, 0.4);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      }
     </style>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
 
   <body>
@@ -100,7 +113,7 @@
       >Skip to main content</a
     >
 
-                    <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -141,7 +154,7 @@
           <a href="../"
             ><img
               src="../assets/images/logo/better-solano-logo.svg"
-              alt="Municipality of Solano Logo"
+              alt="Better Legazpi Logo"
               class="logo-img"
           /></a>
         </div>
@@ -151,19 +164,17 @@
             <li class="has-dropdown">
               <a href="./" class="active" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
               <ul class="dropdown-menu">
-<li><a href="agriculture" data-i18n="agri-agriculture">Agriculture</a></li>
-<li><a href="business" data-i18n="agri-business">Business</a></li>
-<li><a href="certificates" data-i18n="agri-certificates">Certificates</a></li>
-<li><a href="education" data-i18n="agri-education">Education</a></li>
-<li><a href="employment" data-i18n="agri-employment">Employment</a></li>
-<li><a href="environment" data-i18n="agri-environment">Environment</a></li>
-<li><a href="health" data-i18n="agri-health">Health</a></li>
-<li><a href="infrastructure" data-i18n="agri-infrastructure">Infrastructure</a></li>
-<li>
-                  <a href="social-services" data-i18n="agri-social-services">Social Services</a>
-                </li>
-<li><a href="tax-payments" data-i18n="agri-tax-payments">Tax Payments</a></li>
-</ul>
+                <li><a href="agriculture" data-i18n="agri-agriculture">Agriculture</a></li>
+                <li><a href="business" data-i18n="agri-business">Business</a></li>
+                <li><a href="certificates" data-i18n="agri-certificates">Certificates</a></li>
+                <li><a href="education" data-i18n="agri-education">Education</a></li>
+                <li><a href="employment" data-i18n="agri-employment">Employment</a></li>
+                <li><a href="environment" data-i18n="agri-environment">Environment</a></li>
+                <li><a href="health" data-i18n="agri-health">Health</a></li>
+                <li><a href="infrastructure" data-i18n="agri-infrastructure">Infrastructure</a></li>
+                <li><a href="social-services" data-i18n="agri-social-services">Social Services</a></li>
+                <li><a href="tax-payments" data-i18n="agri-tax-payments">Tax Payments</a></li>
+              </ul>
             </li>
             <li><a href="../government/" data-i18n="nav-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
@@ -192,8 +203,11 @@
           <div class="lang-selector">
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
+            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">BCL</button>
           </div>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -208,9 +222,9 @@
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
             <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Solano</span>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
@@ -233,6 +247,7 @@
           <span aria-current="page">Agriculture</span>
         </nav>
       </div>
+
       <section class="page-header">
         <div class="container">
           <div class="page-header-content">
@@ -247,46 +262,50 @@
           </div>
         </div>
       </section>
+
+      <!-- 3 Service Action Cards (Direct without section header) -->
       <section class="section">
         <div class="container">
           <div class="grid grid-3">
-            <a href="../service-details/municipal-agriculture#farm-registration" class="service-item-card">
+            <a href="../service-details/cao-services-2#farm-registration" class="service-item-card">
               <h3 class="service-item-title">
                 <i class="bi bi-person-badge"></i>
-                <span data-i18n="agri-farm-reg">Farm Registration</span>
+                <span>Get on record</span>
               </h3>
-              <p class="service-item-desc" data-i18n="agri-farm-reg-desc">
+              <p class="service-item-desc">
                 RSBSA registration, crop insurance (PCIC), and official farmer certifications
               </p>
               <div class="service-item-meta">
-                <span><strong data-i18n="label-fee">Fee:</strong> <span data-i18n="label-free">Free</span></span>
-                <span><strong data-i18n="label-time">Time:</strong> <span>2 - 5 mins</span></span>
+                <span><strong>Fee:</strong> <span>—</span></span>
+                <span><strong>Time:</strong> <span>11 mins</span></span>
               </div>
             </a>
-            <a href="../service-details/municipal-agriculture#agri-fishery" class="service-item-card">
+
+            <a href="../service-details/cao-services-2#agri-fishery" class="service-item-card">
               <h3 class="service-item-title">
                 <i class="bi bi-water"></i>
-                <span data-i18n="agri-fishery-support">Agri-Fishery Support</span>
+                <span>Get supported</span>
               </h3>
-              <p class="service-item-desc" data-i18n="agri-fishery-support-desc">
+              <p class="service-item-desc">
                 Technical assistance, site visitation, and capacity-building lectures
               </p>
               <div class="service-item-meta">
-                <span><strong data-i18n="label-fee">Fee:</strong> <span data-i18n="label-free">Free</span></span>
-                <span><strong data-i18n="label-time">Time:</strong> <span>15 mins</span></span>
+                <span><strong>Fee:</strong> <span>—</span></span>
+                <span><strong>Time:</strong> <span>17 mins</span></span>
               </div>
             </a>
-            <a href="../service-details/municipal-agriculture#production-inputs" class="service-item-card">
+
+            <a href="../service-details/cao-services-2#production-inputs" class="service-item-card">
               <h3 class="service-item-title">
                 <i class="bi bi-box-seam"></i>
-                <span data-i18n="agri-prod-inputs">Production Inputs</span>
+                <span>Get resourced</span>
               </h3>
-              <p class="service-item-desc" data-i18n="agri-prod-inputs-desc">
+              <p class="service-item-desc">
                 Distribution of certified seeds, fertilizers, fingerlings, and seedlings
               </p>
               <div class="service-item-meta">
-                <span><strong data-i18n="label-fee">Fee:</strong> <span data-i18n="label-free">Free</span></span>
-                <span><strong data-i18n="label-time">Time:</strong> <span>14 mins</span></span>
+                <span><strong>Fee:</strong> <span>—</span></span>
+                <span><strong>Time:</strong> <span>14 mins</span></span>
               </div>
             </a>
           </div>
@@ -298,16 +317,16 @@
         <div class="container">
           <h2 class="section-title-sm" data-i18n="agri-responsible-offices">Responsible Offices</h2>
           <div class="office-cards-grid">
-            <a href="../service-details/municipal-agriculture" class="office-card">
+            <a href="../service-details/cao-services-2" class="office-card">
               <div class="office-card-icon">
-                <i class="bi bi-tree"></i>
+                <i class="bi bi-tree-fill"></i>
               </div>
               <div class="office-card-content">
-                <h3 class="office-card-title" data-i18n="agri-office-mao">
+                <h3 class="office-card-title">
                   CAO Services
                 </h3>
-                <p class="office-card-desc" data-i18n="agri-office-mao-desc">
-                  Official farmer registration, agri-fishery technical support, and seed distribution
+                <p class="office-card-desc">
+                  Register in RSBSA, request agri-fishery technical assistance, and acquire certified seeds and planting inputs.
                 </p>
               </div>
               <div class="office-card-arrow">
@@ -318,25 +337,22 @@
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Solano logo"
+              alt="Better Legazpi logo"
               class="footer-logo"
             />
-            <p
-              class="footer-tagline"
-              data-i18n="agri-empowering-the-people-of-solano-with-transparent"
-            >
-              Empowering the people of Solano with transparent access to the services, programs, and
-              public funds of LGU Solano.
+            <p class="footer-tagline">
+              Empowering the people of Legazpi City with transparent access to municipal services, agricultural support, and local governance.
             </p>
             <div class="footer-social-new">
               <a
-                href="https://www.facebook.com/bettersolano.org"
+                href="https://www.facebook.com/betterlegazpi.org"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -344,7 +360,7 @@
                 ><i class="bi bi-facebook"></i
               ></a>
               <a
-                href="https://www.linkedin.com/company/bettersolano/"
+                href="https://www.linkedin.com/company/betterlegazpi/"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -352,7 +368,7 @@
                 ><i class="bi bi-linkedin"></i
               ></a>
               <a
-                href="https://discord.com/invite/qeSu7RJkjQ"
+                href="https://discord.com/invite/betterlegazpi"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -362,172 +378,75 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="agri-quick-links">Quick Links</h4>
+            <h4>Quick Links</h4>
             <ul class="footer-links-new">
-              <li>
-                <a
-                  href="https://quiz.bettersolano.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="agri-solano-quiz"
-                  >Solano Quiz</a
-                >
-              </li>
-              <li><a href="../sitemap/" data-i18n="agri-sitemap">Sitemap</a></li>
-              <li>
-                <a
-                  href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="agri-citizens-charter"
-                  >Citizen's Charter</a
-                >
-              </li>
-              <li><a href="../terms/" data-i18n="agri-terms-of-use">Terms of Use</a></li>
-              <li><a href="../privacy/" data-i18n="agri-privacy-policy">Privacy Policy</a></li>
-              <li><a href="../accessibility/" data-i18n="agri-accessibility">Accessibility</a></li>
+              <li><a href="../services/business">Business Services</a></li>
+              <li><a href="../services/agriculture">Agriculture Services</a></li>
+              <li><a href="../services/tax-payments">Tax Payments</a></li>
+              <li><a href="../government/">Government Directory</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
+              <li><a href="../accessibility/">Accessibility</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="agri-resources">Resources</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://data.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="agri-open-data-philippines"
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
               </li>
               <li>
-                <a
-                  href="https://www.foi.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="agri-freedom-of-information"
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
                   >Freedom of Information</a
                 >
               </li>
               <li>
-                <a
-                  href="https://solano.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="agri-official-lgu-solano-portal"
-                  >Official LGU Solano Portal</a
+                <a href="https://albay.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Province of Albay</a
                 >
               </li>
               <li>
-                <a
-                  href="https://sangguniangbayan.solano.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="agri-sangguniang-bayan"
-                  >Sangguniang Bayan</a
+                <a href="https://da.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Department of Agriculture</a
                 >
               </li>
               <li>
-                <a
-                  href="https://www.facebook.com/OfficialLguSolanoFanpage/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="agri-lgu-solano-facebook"
-                  >LGU Solano Facebook</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://blgf.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="agri-blgf-portal"
-                  >BLGF Portal</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://cmci.dti.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="agri-cmci-dti-portal"
-                  >CMCI DTI Portal</a
+                <a href="https://legazpi.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Legazpi City Official Portal</a
                 >
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div
-              class="footer-cost"
-              role="status"
-              aria-label="Cost to the People of Solano: Zero Pesos"
-            >
-              Cost to the People of Solano = <span class="footer-cost-value">₱0</span>
+            <div class="footer-cost" role="status">
+              Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
               ><i class="bi bi-envelope-heart"></i>
-              <span data-i18n="agri-volunteer-with-us">Volunteer with us</span></a
+              <span>Volunteer with us</span></a
             >
             <a
-              href="https://github.com/BetterSolano/bettersolano"
+              href="https://github.com/BetterLegazpi/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-github"></i>
-              <span data-i18n="agri-contribute-code-with-us">Contribute code with us</span></a
+              <span>Contribute code with us</span></a
             >
-            <div class="footer-partners">
-              <a
-                href="https://abakada.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Abakada.org"
-                ><img
-                  src="../assets/images/logo/abakada-footer.svg"
-                  alt="Abakada.org"
-                  class="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-              /></a>
-              <a
-                href="https://hivcareph.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="HIV Care Philippines"
-                ><img
-                  src="../assets/images/logo/hiv-care-logo-footer.svg"
-                  alt="HIV Care Philippines"
-                  class="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-              /></a>
-              <a
-                href="https://bettergov.ph"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="BetterGov.ph"
-                ><img
-                  src="../assets/images/logo/bettergov-footer.svg"
-                  alt="BetterGov.ph"
-                  class="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-              /></a>
-            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
           <div class="footer-copyright">
-            <span class="footer-copyright-text">&copy; 2026 BetterSolano.org</span>
+            <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer"
-              >All public information sourced from official government portals.</span
+              >All public information sourced from official government portals &amp; the Legazpi City Citizen's Charter.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.2.0</span>
           </div>
         </div>
       </div>
