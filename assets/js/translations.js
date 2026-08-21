@@ -351,6 +351,10 @@ const translations = {
     'biz-online-subtitle':
       'Complete your business transactions online through the official Filipizen portal',
     'biz-online-badge': 'Online Services via Filipizen',
+    'biz-inperson-title': 'Face-to-Face Business Transactions',
+    'biz-inperson-subtitle':
+      'Complete your business transactions in-person at the Legazpi City BPLO',
+    'biz-inperson-badge': 'In-person Services',
     'biz-billing': 'Business Online Billing & Payment',
     'biz-billing-desc': 'View and pay your business tax bills online',
     'biz-new-app': 'New Business Application',
@@ -1197,11 +1201,12 @@ const translations = {
     'biz-apply-for-tricycle-franchise-mtof-and-request':
       'Apply for tricycle franchise (MTOF) and request records',
     'biz-blgf-portal': 'BLGF Portal',
-    'biz-bpls-office': 'BPLS Office',
+    'biz-bpls-office': 'Legazpi City BPLO',
     'biz-business': 'Business',
     'biz-business-online-billing-payment': 'Business Online Billing & Payment',
     'biz-business-permit-renewal': 'Business Permit Renewal',
-    'biz-business-permits-licensing': 'Business Permits & Licensing',
+    'biz-bplo-services': 'BPLO Services',
+    'biz-business-permits-licensing': 'BPLO Services',
     'biz-certificates': 'Certificates',
     'biz-citizens-charter': "Citizen's Charter",
     'biz-cmci-dti-portal': 'CMCI DTI Portal',
@@ -1221,7 +1226,7 @@ const translations = {
       'Market clearance, entrance fees, vendor services, and CTC issuance',
     'biz-new-business-application': 'New Business Application',
     'biz-new-permits-renewals-mayors-clearance-and-other':
-      "New permits, renewals, Mayor's clearance, and other business permits",
+      'Register new businesses, renew annual permits, obtain Mayor\'s clearances, and apply for MTOP.',
     'biz-official-lgu-solano-portal': 'Official LGU Legazpi Portal',
     'biz-open-data-philippines': 'Open Data Philippines',
     'biz-ordinance-framework': 'Ordinance Framework',
@@ -6792,6 +6797,10 @@ const translations = {
     'biz-online-subtitle':
       'Kumpletuhin ang mga transaksiyon sa negosyo online sa pamamagitan ng opisyal na Filipizen portal',
     'biz-online-badge': 'Mga Online na Serbisyo sa Filipizen',
+    'biz-inperson-title': 'Harapang Transaksyon sa Negosyo',
+    'biz-inperson-subtitle':
+      'Kumpletuhin ang inyong transaksyon sa negosyo nang personal sa BPLO ng Lungsod ng Legazpi',
+    'biz-inperson-badge': 'Personal na Serbisyo',
     'biz-billing': 'Online Billing at Pagbabayad para sa Negosyo',
     'biz-billing-desc': 'Tingnan at bayaran ang mga bill sa buwis ng negosyo online',
     'biz-new-app': 'Bagong Aplikasyon sa Negosyo',
@@ -7609,11 +7618,12 @@ const translations = {
     'biz-apply-for-tricycle-franchise-mtof-and-request':
       'Mag-apply para sa prangkisa ng traysikel (MTOF) at humiling ng mga rekord',
     'biz-blgf-portal': 'BLGF Portal',
-    'biz-bpls-office': 'Opisina ng BPLS',
+    'biz-bpls-office': 'BPLO ng Lungsod ng Legazpi',
     'biz-business': 'Negosyo',
     'biz-business-online-billing-payment': 'Online na Pagsingil at Pagbabayad ng Negosyo',
     'biz-business-permit-renewal': 'Permiso sa Negosyo Renewal',
-    'biz-business-permits-licensing': 'Mga Permit at Lisensya sa Negosyo',
+    'biz-bplo-services': 'Mga Serbisyo ng BPLO',
+    'biz-business-permits-licensing': 'Mga Serbisyo ng BPLO',
     'biz-certificates': 'Mga Sertipiko',
     'biz-citizens-charter': "Citizen's Charter",
     'biz-cmci-dti-portal': 'CMCI DTI Portal',
@@ -13273,6 +13283,10 @@ const translations = {
     'biz-online-subtitle':
       'Kompleto dagiti transaksiyon iti negosio online babaen ti opisial a Filipizen portal',
     'biz-online-badge': 'Dagiti Online a Serbisio iti Filipizen',
+    'biz-inperson-title': 'Rupa-iti-Rupa a Transaksion ti Negosio',
+    'biz-inperson-subtitle':
+      'Kumpletoen dagiti transaksion ti negosio iti personal iti BPLO ti Ciudad ti Legazpi',
+    'biz-inperson-badge': 'Personal a Serbisio',
     'biz-billing': 'Online Billing ken Panagbayad para iti Negosio',
     'biz-billing-desc': 'Kitaen ken bayadan dagiti bill ti buwis ti negosio online',
     'biz-new-app': 'Baro nga Aplikasion iti Negosio',
@@ -14092,11 +14106,12 @@ const translations = {
     'biz-apply-for-tricycle-franchise-mtof-and-request':
       'Mag-apply para iti prangkisa ti traysikel (MTOF) ken humiling ti dagiti rekord',
     'biz-blgf-portal': 'BLGF Portal',
-    'biz-bpls-office': 'Opisina ti BPLS',
+    'biz-bpls-office': 'BPLO ti Ciudad ti Legazpi',
     'biz-business': 'Negosio',
     'biz-business-online-billing-payment': 'Online na Pagsingil ken Panagbayad ti Negosio',
     'biz-business-permit-renewal': 'Permiso ti Negosio Renewal',
-    'biz-business-permits-licensing': 'Dagiti Permit ken Lisensya ti Negosio',
+    'biz-bplo-services': 'Mga Serbisyo ti BPLO',
+    'biz-business-permits-licensing': 'Mga Serbisyo ti BPLO',
     'biz-certificates': 'Dagiti Sertipiko',
     'biz-citizens-charter': "Citizen's Charter",
     'biz-cmci-dti-portal': 'CMCI DTI Portal',

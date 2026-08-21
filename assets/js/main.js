@@ -725,5 +725,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  initEduSearchAndFilter();
+  try {
+    initEduSearchAndFilter();
+  } catch (err) {
+    console.error('Education search initialization error:', err);
+  }
+
+  // ─── Universal Theme Toggle (Light / Dark Mode) ──────────────────────────
+  function initThemeToggle() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (!toggleBtn) return;
+
+    function updateToggleIcon() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const icon = toggleBtn.querySelector('i');
+      if (icon) {
+        if (isDark) {
+          icon.className = 'bi bi-sun-fill';
+          toggleBtn.setAttribute('aria-label', 'Switch to light mode');
+          toggleBtn.setAttribute('title', 'Switch to light mode');
+        } else {
+          icon.className = 'bi bi-moon-stars-fill';
+          toggleBtn.setAttribute('aria-label', 'Switch to dark mode');
+          toggleBtn.setAttribute('title', 'Switch to dark mode');
+        }
+      }
+    }
+
+    updateToggleIcon();
+
+    toggleBtn.addEventListener('click', function () {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      if (newTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      }
+      updateToggleIcon();
+    });
+  }
+
+  initThemeToggle();
 });

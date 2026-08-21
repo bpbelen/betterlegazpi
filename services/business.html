@@ -80,6 +80,15 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
 
   <body>
@@ -178,6 +187,9 @@
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
           </div>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -214,7 +226,7 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <a href="../" data-i18n="biz-home">Home</a><span>/</span>
           <a href="./" data-i18n="biz-services">Services</a><span>/</span>
-          <span aria-current="page">Business Services</span>
+          <span aria-current="page" data-i18n="biz-page-badge">Business</span>
         </nav>
       </div>
       <section class="page-header">
@@ -225,7 +237,7 @@
             >
             <h1 data-i18n="biz-page-title">Business Services</h1>
             <p class="page-header-desc" data-i18n="biz-page-desc">
-              Permits, licenses, and support for businesses in Solano
+              Permits, licenses, and support for businesses in Legazpi City
             </p>
           </div>
         </div>
@@ -246,7 +258,7 @@
           </div>
           <div class="online-services-grid">
             <a
-              href="https://www.filipizen.com/partners/nuevavizcaya_solano/bpls/billing"
+              href="https://www.filipizen.com/partners/albay_legazpi/bpls/billing"
               target="_blank"
               rel="noopener noreferrer"
               class="online-service-card"
@@ -261,13 +273,13 @@
                 </p>
                 <span class="online-service-office"
                   ><i class="bi bi-building"></i>
-                  <span data-i18n="biz-bpls-office">BPLS Office</span></span
+                  <span data-i18n="biz-bpls-office">Legazpi City BPLO</span></span
                 >
               </div>
               <span class="online-service-link"><i class="bi bi-box-arrow-up-right"></i></span>
             </a>
             <a
-              href="https://www.filipizen.com/partners/nuevavizcaya_solano/bpls/newbusiness"
+              href="https://www.filipizen.com/partners/albay_legazpi/bpls/newbusiness"
               target="_blank"
               rel="noopener noreferrer"
               class="online-service-card"
@@ -280,13 +292,13 @@
                 </p>
                 <span class="online-service-office"
                   ><i class="bi bi-building"></i>
-                  <span data-i18n="biz-bpls-office">BPLS Office</span></span
+                  <span data-i18n="biz-bpls-office">Legazpi City BPLO</span></span
                 >
               </div>
               <span class="online-service-link"><i class="bi bi-box-arrow-up-right"></i></span>
             </a>
             <a
-              href="https://www.filipizen.com/partners/nuevavizcaya_solano/bpls/renewbusiness"
+              href="https://www.filipizen.com/partners/albay_legazpi/bpls/renewbusiness"
               target="_blank"
               rel="noopener noreferrer"
               class="online-service-card"
@@ -299,7 +311,7 @@
                 </p>
                 <span class="online-service-office"
                   ><i class="bi bi-building"></i>
-                  <span data-i18n="biz-bpls-office">BPLS Office</span></span
+                  <span data-i18n="biz-bpls-office">Legazpi City BPLO</span></span
                 >
               </div>
               <span class="online-service-link"><i class="bi bi-box-arrow-up-right"></i></span>
@@ -308,88 +320,509 @@
         </div>
       </section>
 
-      <section class="section">
+      <!-- In-Person (Face-to-Face) Business Services Section -->
+      <section class="section bplo-in-person-section">
         <div class="container">
-          <div class="grid grid-3">
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-shop"></i>
-                <span data-i18n="biz-permit-new">Business Permit (New)</span>
-              </h3>
-              <p class="service-item-desc" data-i18n="biz-permit-new-desc">
-                Apply for a new mayor's permit to operate a business
-              </p>
-              <div class="service-item-meta">
-                <span
-                  ><strong data-i18n="label-fee">Fee:</strong>
-                  <span data-i18n="label-varies">Varies</span></span
-                >
-                <span
-                  ><strong data-i18n="label-time">Time:</strong>
-                  <span data-i18n="label-3-5-days">3-5 days</span></span
-                >
+          <div class="online-services-header">
+            <span class="online-badge">
+              <i class="bi bi-building" aria-hidden="true"></i>
+              <span data-i18n="biz-inperson-badge">In-person Services</span>
+            </span>
+            <h2 data-i18n="biz-inperson-title">Face-to-Face Business Transactions</h2>
+            <p data-i18n="biz-inperson-subtitle">
+              Complete your business transactions in-person at the Legazpi City BPLO
+            </p>
+          </div>
+
+          <!-- Application Type Switcher Tabs -->
+          <div class="bplo-type-switcher" role="tablist" aria-label="BPLO Application Type">
+            <button
+              class="bplo-tab-btn active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="bplo-new-content"
+              id="tab-new"
+              tabindex="0"
+              data-target="#bplo-new-content"
+            >
+              <i class="bi bi-plus-circle-fill" aria-hidden="true"></i> New Business Application
+            </button>
+            <button
+              class="bplo-tab-btn"
+              role="tab"
+              aria-selected="false"
+              aria-controls="bplo-renewal-content"
+              id="tab-renewal"
+              tabindex="-1"
+              data-target="#bplo-renewal-content"
+            >
+              <i class="bi bi-arrow-repeat" aria-hidden="true"></i> Permit Renewal Application
+            </button>
+          </div>
+
+          <!-- Panel 1: New Business Application (Open by Default) -->
+          <div
+            id="bplo-new-content"
+            class="bplo-content-panel"
+            role="tabpanel"
+            aria-labelledby="tab-new"
+          >
+            <!-- Routing Notice Card -->
+            <div class="lane-card new-app-routing-notice">
+              <div class="lane-header">
+                <i class="bi bi-arrow-right-circle" aria-hidden="true"></i>
+                <div>
+                  <h4>New Applicants Lane &amp; Electronic Routing</h4>
+                  <span class="lane-badge-tag">Electronic Inter-Agency Routing</span>
+                </div>
+              </div>
+              <p>Requirements submitted at the BPLO receiving desk are forwarded <strong>electronically by the BPLO</strong> to regulatory offices for endorsement and approval. Once approved, the application proceeds to Step 2.</p>
+            </div>
+
+            <!-- Structured Step Timeline: New Application -->
+            <div class="in-person-steps-wrapper">
+              <!-- Step 1: Expanded by Default -->
+              <div class="step-card" id="new-step-1">
+                <div class="step-card-header" role="button" tabindex="0" aria-expanded="true" aria-controls="new-step-1-body">
+                  <div class="step-card-header-left">
+                    <div class="step-badge">Step 1</div>
+                    <div class="step-title-wrap">
+                      <h3>Filing, Verification, Evaluation &amp; Assessment</h3>
+                      <span class="step-subtitle">BPLO Receiving Officer &amp; Regulatory Offices</span>
+                    </div>
+                  </div>
+                  <div class="step-chevron-btn" aria-hidden="true">
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="step-card-body" id="new-step-1-body">
+                  <p class="step-desc">
+                    Applicant submits 1 copy of the duly accomplished and signed Unified Application Form (UAF) along with mandatory requirements to the receiving officer.
+                  </p>
+                  
+                  <div class="requirements-box">
+                    <h4 class="req-title"><i class="bi bi-file-earmark-check" aria-hidden="true"></i> Standard Unified Requirements (UAF):</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle" aria-hidden="true"></i>
+                        <div>
+                          <strong>Duly Filled-out Application Form (1 Original):</strong>
+                          <span>Accomplished and signed Unified Application Form (UAF) for accountability.</span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle" aria-hidden="true"></i>
+                        <div>
+                          <strong>Sketch of Business Location (2 Copies):</strong>
+                          <span>Detailed sketch/map showing exact business premises location.</span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle" aria-hidden="true"></i>
+                        <div>
+                          <strong>Certificate of Occupancy (1 Original + 1 Photocopy):</strong>
+                          <span>Certificate of Occupancy of space/building where business is located. <em>(Original returned upon verification)</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle" aria-hidden="true"></i>
+                        <div>
+                          <strong>DTI / SEC / CDA Registration (1 Photocopy):</strong>
+                          <span>Certificate of Business Name Registration (DTI for sole proprietorship, SEC for corporation/partnership, CDA for cooperative).</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="requirements-box req-box-conditional">
+                    <h4 class="req-title req-title-warning"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Other Possible Requirements (As Applicable):</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle icon-warning" aria-hidden="true"></i>
+                        <div>
+                          <strong>For Market Stall Holders:</strong>
+                          <span>1 Original copy of Market Clearance and 1 Photocopy of Contract of Lease.</span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle icon-warning" aria-hidden="true"></i>
+                        <div>
+                          <strong>If Business Location is Rented/Not Owned:</strong>
+                          <span>1 Photocopy of Valid Lease Contract / Authority / Certification from Property Owner, or Notice of Award. <em>(Building/space owner must have a valid business permit as lessor or real estate rental)</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle icon-warning" aria-hidden="true"></i>
+                        <div>
+                          <strong>Evaluation Requirements (Determined upon application review):</strong>
+                          <span>• 1 Original copy of Affidavit of No Improvement / Electrical Plan <em>(for change of space use)</em><br>• 1 Original copy of Affidavit of Non-Objection / Manifestation</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="step-hub-link">
+                    <a href="../service-details/business-permits-licensing#business-permits">
+                      <i class="bi bi-box-arrow-up-right"></i> View Full Checklist &amp; Lane Routing in BPLO Hub &rarr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2: Collapsed by Default -->
+              <div class="step-card collapsed" id="new-step-2">
+                <div class="step-card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="new-step-2-body">
+                  <div class="step-card-header-left">
+                    <div class="step-badge">Step 2</div>
+                    <div class="step-title-wrap">
+                      <h3>Payment of Taxes &amp; Regulatory Charges</h3>
+                      <span class="step-subtitle">City Treasurer's Office &amp; Payment Partners</span>
+                    </div>
+                  </div>
+                  <div class="step-chevron-btn" aria-hidden="true">
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="step-card-body" id="new-step-2-body">
+                  <p class="step-desc">
+                    Applicant pays computed taxes and fees based on the issued Order of Payment (provided in hard copy, text, or email) at the City Treasurer's Office or online payment partners.
+                  </p>
+                  <div class="payment-channels-box">
+                    <h4><i class="bi bi-wallet2" aria-hidden="true"></i> Available Payment Channels:</h4>
+                    <div class="payment-grid">
+                      <div class="payment-chip">
+                        <i class="bi bi-building" aria-hidden="true"></i>
+                        <span>City Treasurer's Office</span>
+                      </div>
+                      <div class="payment-chip">
+                        <i class="bi bi-bank" aria-hidden="true"></i>
+                        <span>Land Bank of the Philippines</span>
+                      </div>
+                      <div class="payment-chip">
+                        <i class="bi bi-bank" aria-hidden="true"></i>
+                        <span>Development Bank of the Philippines</span>
+                      </div>
+                      <div class="payment-chip">
+                        <i class="bi bi-phone" aria-hidden="true"></i>
+                        <span>Maya (PayMaya)</span>
+                      </div>
+                      <div class="payment-chip">
+                        <i class="bi bi-phone" aria-hidden="true"></i>
+                        <span>GCash</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3: Collapsed by Default -->
+              <div class="step-card collapsed" id="new-step-3">
+                <div class="step-card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="new-step-3-body">
+                  <div class="step-card-header-left">
+                    <div class="step-badge">Step 3</div>
+                    <div class="step-title-wrap">
+                      <h3>Claim the Business Permit &amp; Other Clearances</h3>
+                      <span class="step-subtitle">BPLO Releasing (Lane 9)</span>
+                    </div>
+                  </div>
+                  <div class="step-chevron-btn" aria-hidden="true">
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="step-card-body" id="new-step-3-body">
+                  <p class="step-desc">
+                    Applicant claims the official business permit, business plate, sticker, and regulatory clearances at BPLO Lane 9 upon presenting their completed Client Feedback Form.
+                  </p>
+                  <div class="deliverables-box">
+                    <h4><i class="bi bi-box-seam" aria-hidden="true"></i> Documents Released:</h4>
+                    <div class="deliverables-list">
+                      <span class="deliverable-badge"><i class="bi bi-award" aria-hidden="true"></i> Business Permit</span>
+                      <span class="deliverable-badge"><i class="bi bi-card-heading" aria-hidden="true"></i> Business Plate</span>
+                      <span class="deliverable-badge"><i class="bi bi-patch-check" aria-hidden="true"></i> Official Sticker</span>
+                      <span class="deliverable-badge"><i class="bi bi-shield-check" aria-hidden="true"></i> Regulatory Clearances</span>
+                    </div>
+                    <div class="location-notice">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      <span><strong>Pickup Location:</strong> BPLO Lane 9 (Releasing) • Must present completed Client Feedback Form.</span>
+                    </div>
+                  </div>
+                  <div class="step-hub-link">
+                    <a href="../service-details/business-permits-licensing#business-permits">
+                      <i class="bi bi-box-arrow-up-right"></i> View Full Releasing Procedures in BPLO Hub &rarr;
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-arrow-repeat"></i>
-                <span data-i18n="biz-permit-renew">Business Permit Renewal</span>
-              </h3>
-              <p class="service-item-desc" data-i18n="biz-permit-renew-desc">
-                Renew your annual business permit
-              </p>
-              <div class="service-item-meta">
-                <span
-                  ><strong data-i18n="label-fee">Fee:</strong>
-                  <span data-i18n="label-varies">Varies</span></span
-                >
-                <span
-                  ><strong data-i18n="label-time">Time:</strong>
-                  <span data-i18n="label-same-day">Same day</span></span
-                >
+          </div>
+
+          <!-- Panel 2: Permit Renewal Application -->
+          <div
+            id="bplo-renewal-content"
+            class="bplo-content-panel"
+            role="tabpanel"
+            aria-labelledby="tab-renewal"
+            style="display: none;"
+          >
+            <!-- Quick Lanes Info Banner -->
+            <div class="bplo-lanes-summary">
+              <div class="lane-card priority-lane">
+                <div class="lane-header">
+                  <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+                  <div>
+                    <h4>Priority Lane</h4>
+                    <span class="lane-badge-tag">Gender and Development (GAD) Priority</span>
+                  </div>
+                </div>
+                <p>For Senior Citizens, Pregnant Women, PWDs, and Parents with young children (10 years old &amp; below).</p>
+              </div>
+              <div class="lane-card express-lane">
+                <div class="lane-header">
+                  <i class="bi bi-lightning-charge" aria-hidden="true"></i>
+                  <div>
+                    <h4>Express Lane</h4>
+                    <span class="lane-badge-tag">1 – 2 Applications</span>
+                  </div>
+                </div>
+                <p>Fast-track processing for applicants filing 1 to 2 business permit applications.</p>
+              </div>
+              <div class="lane-card bulk-lane">
+                <div class="lane-header">
+                  <i class="bi bi-layers" aria-hidden="true"></i>
+                  <div>
+                    <h4>Bulk Lane</h4>
+                    <span class="lane-badge-tag">3+ Applications</span>
+                  </div>
+                </div>
+                <p>Dedicated processing lane for applicants filing 3 or more business permit applications.</p>
               </div>
             </div>
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-clipboard-check"></i>
-                <span data-i18n="biz-closure">Business Closure</span>
-              </h3>
-              <p class="service-item-desc" data-i18n="biz-closure-desc">
-                File for business closure/termination
-              </p>
-              <div class="service-item-meta">
-                <span
-                  ><strong data-i18n="label-fee">Fee:</strong>
-                  <span data-i18n="label-free">Free</span></span
-                >
-                <span
-                  ><strong data-i18n="label-time">Time:</strong>
-                  <span data-i18n="label-1-2-days">1-2 days</span></span
-                >
+
+            <!-- Structured Step Timeline: Renewal -->
+            <div class="in-person-steps-wrapper">
+              <!-- Step 1: Expanded by Default -->
+              <div class="step-card" id="renewal-step-1">
+                <div class="step-card-header" role="button" tabindex="0" aria-expanded="true" aria-controls="renewal-step-1-body">
+                  <div class="step-card-header-left">
+                    <div class="step-badge">Step 1</div>
+                    <div class="step-title-wrap">
+                      <h3>Filing, Verification &amp; Assessment</h3>
+                      <span class="step-subtitle">BPLO Receiving Officers (Lanes 1, 3–7)</span>
+                    </div>
+                  </div>
+                  <div class="step-chevron-btn" aria-hidden="true">
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="step-card-body" id="renewal-step-1-body">
+                  <p class="step-desc">
+                    Applicant submits all mandatory requirements for verification and assessment to the BPLO Receiving Officer in any of the assigned processing lanes (Priority, Express, or Bulk).
+                  </p>
+                  <div class="requirements-box">
+                    <h4 class="req-title"><i class="bi bi-file-earmark-check" aria-hidden="true"></i> Checklist of Requirements (Renewal):</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle" aria-hidden="true"></i>
+                        <div>
+                          <strong>Proof of Income (Original + 1 Photocopy):</strong>
+                          <span>Latest Income Tax Return (ITR) from BIR or Audited Financial Statement. <em>(Original copy returned immediately upon verification)</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle" aria-hidden="true"></i>
+                        <div>
+                          <strong>Market Clearance (1 Original):</strong>
+                          <span>For Market Stall Holders only. <em>(Returned upon release of Mayor's Permit)</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle" aria-hidden="true"></i>
+                        <div>
+                          <strong>Certificate of Authority (1 Photocopy):</strong>
+                          <span>Valid Certificate or Provisional Certificate of Authority for Head Office of Pawnshops and Money Service Business (Joint Memorandum Circular / JMC No. 1 S. 2019).</span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle" aria-hidden="true"></i>
+                        <div>
+                          <strong>BSP Letter of Code Issuance (1 Photocopy):</strong>
+                          <span>For Pawnshops and Money Service Business branches other than the Head Office.</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="step-hub-link">
+                    <a href="../service-details/business-permits-licensing#business-permits">
+                      <i class="bi bi-box-arrow-up-right"></i> View Lane Matrix &amp; Turnaround Times in BPLO Hub &rarr;
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-cash-coin"></i>
-                <span data-i18n="biz-cedula">Community Tax Certificate</span>
-              </h3>
-              <p class="service-item-desc" data-i18n="biz-cedula-desc">
-                Obtain cedula for individuals and businesses
-              </p>
-              <div class="service-item-meta">
-                <span><strong data-i18n="label-fee">Fee:</strong> ₱5+</span>
-                <span
-                  ><strong data-i18n="label-time">Time:</strong>
-                  <span data-i18n="label-same-day">Same day</span></span
-                >
+
+              <!-- Step 2: Collapsed by Default -->
+              <div class="step-card collapsed" id="renewal-step-2">
+                <div class="step-card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="renewal-step-2-body">
+                  <div class="step-card-header-left">
+                    <div class="step-badge">Step 2</div>
+                    <div class="step-title-wrap">
+                      <h3>Pay Taxes &amp; Regulatory Charges</h3>
+                      <span class="step-subtitle">City Treasurer's Office &amp; Payment Partners</span>
+                    </div>
+                  </div>
+                  <div class="step-chevron-btn" aria-hidden="true">
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="step-card-body" id="renewal-step-2-body">
+                  <p class="step-desc">
+                    Applicant pays computed taxes and fees with reference to the issued Order of Payment (provided in hard copy, text, or email) at the Office of the City Treasurer or through partner payment channels.
+                  </p>
+                  <div class="payment-channels-box">
+                    <h4><i class="bi bi-wallet2" aria-hidden="true"></i> Available Payment Channels:</h4>
+                    <div class="payment-grid">
+                      <div class="payment-chip">
+                        <i class="bi bi-building" aria-hidden="true"></i>
+                        <span>City Treasurer's Office</span>
+                      </div>
+                      <div class="payment-chip">
+                        <i class="bi bi-bank" aria-hidden="true"></i>
+                        <span>Land Bank of the Philippines</span>
+                      </div>
+                      <div class="payment-chip">
+                        <i class="bi bi-bank" aria-hidden="true"></i>
+                        <span>Development Bank of the Philippines</span>
+                      </div>
+                      <div class="payment-chip">
+                        <i class="bi bi-phone" aria-hidden="true"></i>
+                        <span>Maya (PayMaya)</span>
+                      </div>
+                      <div class="payment-chip">
+                        <i class="bi bi-phone" aria-hidden="true"></i>
+                        <span>GCash</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3: Collapsed by Default -->
+              <div class="step-card collapsed" id="renewal-step-3">
+                <div class="step-card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="renewal-step-3-body">
+                  <div class="step-card-header-left">
+                    <div class="step-badge">Step 3</div>
+                    <div class="step-title-wrap">
+                      <h3>Claim the Business Permit</h3>
+                      <span class="step-subtitle">BPLO Releasing (Lane 9)</span>
+                    </div>
+                  </div>
+                  <div class="step-chevron-btn" aria-hidden="true">
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="step-card-body" id="renewal-step-3-body">
+                  <p class="step-desc">
+                    Applicant claims official business permit, business plate, and/or sticker at BPLO Lane 9 upon presenting their duly accomplished feedback form.
+                  </p>
+                  <div class="deliverables-box">
+                    <h4><i class="bi bi-box-seam" aria-hidden="true"></i> Documents Released:</h4>
+                    <div class="deliverables-list">
+                      <span class="deliverable-badge"><i class="bi bi-award" aria-hidden="true"></i> Business Permit</span>
+                      <span class="deliverable-badge"><i class="bi bi-card-heading" aria-hidden="true"></i> Business Plate</span>
+                      <span class="deliverable-badge"><i class="bi bi-patch-check" aria-hidden="true"></i> Official Sticker</span>
+                    </div>
+                    <div class="location-notice">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      <span><strong>Pickup Location:</strong> BPLO Lane 9 (Releasing) • Must present completed Client Feedback Form.</span>
+                    </div>
+                  </div>
+                  <div class="step-hub-link">
+                    <a href="../service-details/business-permits-licensing#business-permits">
+                      <i class="bi bi-box-arrow-up-right"></i> View Full Releasing Guidelines in BPLO Hub &rarr;
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Tab Switching Logic
+          const tabBtns = Array.from(document.querySelectorAll('.bplo-tab-btn'));
+          
+          function switchTab(btn) {
+            tabBtns.forEach(function(b) {
+              b.classList.remove('active');
+              b.setAttribute('aria-selected', 'false');
+              b.setAttribute('tabindex', '-1');
+            });
+            document.querySelectorAll('.bplo-content-panel').forEach(function(panel) {
+              panel.style.display = 'none';
+            });
+            
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            btn.setAttribute('tabindex', '0');
+            btn.focus();
+            
+            const targetId = btn.getAttribute('data-target');
+            const targetPanel = document.querySelector(targetId);
+            if (targetPanel) {
+              targetPanel.style.display = 'block';
+            }
+          }
+
+          tabBtns.forEach(function(btn, index) {
+            btn.addEventListener('click', function() { switchTab(btn); });
+            btn.addEventListener('keydown', function(e) {
+              let nextIndex = null;
+              if (e.key === 'ArrowRight') {
+                nextIndex = (index + 1) % tabBtns.length;
+              } else if (e.key === 'ArrowLeft') {
+                nextIndex = (index - 1 + tabBtns.length) % tabBtns.length;
+              } else if (e.key === 'Home') {
+                nextIndex = 0;
+              } else if (e.key === 'End') {
+                nextIndex = tabBtns.length - 1;
+              }
+              if (nextIndex !== null) {
+                e.preventDefault();
+                switchTab(tabBtns[nextIndex]);
+              }
+            });
+          });
+
+          // Accordion Step Cards Logic
+          const stepHeaders = document.querySelectorAll('.step-card-header');
+          stepHeaders.forEach(function(header) {
+            function toggleStep() {
+              const card = header.closest('.step-card');
+              if (!card) return;
+              const isCollapsed = card.classList.contains('collapsed');
+              if (isCollapsed) {
+                card.classList.remove('collapsed');
+                header.setAttribute('aria-expanded', 'true');
+              } else {
+                card.classList.add('collapsed');
+                header.setAttribute('aria-expanded', 'false');
+              }
+            }
+
+            header.addEventListener('click', toggleStep);
+            header.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleStep();
+              }
+            });
+          });
+        });
+      </script>
+
       <!-- Responsible Offices -->
-      <section class="section section-compact bg-alt">
+      <section class="section section-compact">
         <div class="container">
           <h2 class="section-title-sm" data-i18n="section-responsible-offices">
             Responsible Offices
@@ -400,71 +833,11 @@
                 <i class="bi bi-building"></i>
               </div>
               <div class="office-card-content">
-                <h3 class="office-card-title" data-i18n="biz-business-permits-licensing">
-                  Business Permits & Licensing
+                <h3 class="office-card-title" data-i18n="biz-bplo-services">
+                  BPLO Services
                 </h3>
-                <p
-                  class="office-card-desc"
-                  data-i18n="biz-new-permits-renewals-mayors-clearance-and-other"
-                >
-                  New permits, renewals, Mayor's clearance, and other business permits
-                </p>
-              </div>
-              <div class="office-card-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </div>
-            </a>
-            <a href="../service-details/tricycle-franchising" class="office-card">
-              <div class="office-card-icon">
-                <i class="bi bi-bicycle"></i>
-              </div>
-              <div class="office-card-content">
-                <h3 class="office-card-title" data-i18n="biz-tricycle-franchising-records">
-                  Tricycle Franchising & Records
-                </h3>
-                <p
-                  class="office-card-desc"
-                  data-i18n="biz-apply-for-tricycle-franchise-mtof-and-request"
-                >
-                  Apply for tricycle franchise (MTOF) and request records
-                </p>
-              </div>
-              <div class="office-card-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </div>
-            </a>
-            <a href="../service-details/seedo-public-market" class="office-card">
-              <div class="office-card-icon">
-                <i class="bi bi-shop-window"></i>
-              </div>
-              <div class="office-card-content">
-                <h3 class="office-card-title" data-i18n="biz-seedo-public-market">
-                  SEEDO Public Market
-                </h3>
-                <p
-                  class="office-card-desc"
-                  data-i18n="biz-market-clearance-entrance-fees-vendor-services"
-                >
-                  Market clearance, entrance fees, vendor services, and CTC issuance
-                </p>
-              </div>
-              <div class="office-card-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </div>
-            </a>
-            <a href="../service-details/seedo-slaughterhouse" class="office-card">
-              <div class="office-card-icon">
-                <i class="bi bi-box-seam"></i>
-              </div>
-              <div class="office-card-content">
-                <h3 class="office-card-title" data-i18n="biz-seedo-slaughterhouse">
-                  SEEDO Slaughterhouse
-                </h3>
-                <p
-                  class="office-card-desc"
-                  data-i18n="biz-hog-cattle-goat-and-carabao-slaughter-with-meat"
-                >
-                  Hog, cattle, goat, and carabao slaughter with meat inspection services
+                <p class="office-card-desc">
+                  Register new businesses, renew annual permits, obtain Mayor's clearances, and apply for MTOP.
                 </p>
               </div>
               <div class="office-card-arrow">
