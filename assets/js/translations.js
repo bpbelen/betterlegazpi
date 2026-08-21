@@ -170,6 +170,9 @@ const translations = {
       'Construction permits, road maintenance requests, and public facilities.',
     'cat-education': 'Education & Scholarship',
     'cat-education-desc': 'Scholarship programs, student assistance, and educational grants.',
+    'cat-employment': 'Employment & Human Resources',
+    'cat-employment-desc':
+      'Career opportunities, job placement, employee records, and HR administration.',
     'cat-safety': 'Public Safety & Security',
     'cat-safety-desc': 'Emergency services, disaster preparedness, and community safety programs.',
     'cat-environment': 'Environment & Natural Resources',
@@ -1206,6 +1209,8 @@ const translations = {
     'biz-business-online-billing-payment': 'Business Online Billing & Payment',
     'biz-business-permit-renewal': 'Business Permit Renewal',
     'biz-bplo-services': 'BPLO Services',
+    'cert-occr-services': 'OCCR Services',
+    'emp-chrmo-services': 'CHRMO Services',
     'biz-business-permits-licensing': 'BPLO Services',
     'biz-certificates': 'Certificates',
     'biz-citizens-charter': "Citizen's Charter",
@@ -6624,6 +6629,9 @@ const translations = {
     'cat-education': 'Edukasyon at Iskolarship',
     'cat-education-desc':
       'Mga programa sa iskolarship, tulong sa estudyante, at mga grant sa edukasyon.',
+    'cat-employment': 'Trabaho at Yamang Tao',
+    'cat-employment-desc':
+      'Mga oportunidad sa trabaho, paghahanapbuhay, talaan ng empleyado, at serbisyo sa HR.',
     'cat-safety': 'Kaligtasan at Seguridad ng Publiko',
     'cat-safety-desc':
       'Mga serbisyong pang-emergency, paghahanda sa sakuna, at mga programa sa kaligtasan ng komunidad.',
@@ -7623,6 +7631,8 @@ const translations = {
     'biz-business-online-billing-payment': 'Online na Pagsingil at Pagbabayad ng Negosyo',
     'biz-business-permit-renewal': 'Permiso sa Negosyo Renewal',
     'biz-bplo-services': 'Mga Serbisyo ng BPLO',
+    'cert-occr-services': 'Mga Serbisyo ng OCCR',
+    'emp-chrmo-services': 'Mga Serbisyo ng CHRMO',
     'biz-business-permits-licensing': 'Mga Serbisyo ng BPLO',
     'biz-certificates': 'Mga Sertipiko',
     'biz-citizens-charter': "Citizen's Charter",
@@ -13110,6 +13120,9 @@ const translations = {
     'cat-education': 'Edukasion ken Iskolarship',
     'cat-education-desc':
       'Dagiti programa ti iskolarship, tulong ti estudiante, ken dagiti grant ti edukasion.',
+    'cat-employment': 'Trabaho ken Human Resources',
+    'cat-employment-desc':
+      'Dagiti oportunidad iti trabaho, rekord ti empleyado, ken dagiti serbisio ti HR.',
     'cat-safety': 'Kinatalged ken Seguridad ti Publiko',
     'cat-safety-desc':
       'Dagiti serbisio ti emergency, panagisagana iti didigra, ken dagiti programa ti kinatalged ti komunidad.',
@@ -14106,11 +14119,13 @@ const translations = {
     'biz-apply-for-tricycle-franchise-mtof-and-request':
       'Mag-apply para iti prangkisa ti traysikel (MTOF) ken humiling ti dagiti rekord',
     'biz-blgf-portal': 'BLGF Portal',
-    'biz-bpls-office': 'BPLO ti Ciudad ti Legazpi',
+    'biz-bplo-office': 'BPLO ti Ciudad ti Legazpi',
     'biz-business': 'Negosio',
     'biz-business-online-billing-payment': 'Online na Pagsingil ken Panagbayad ti Negosio',
     'biz-business-permit-renewal': 'Permiso ti Negosio Renewal',
     'biz-bplo-services': 'Mga Serbisyo ti BPLO',
+    'cert-occr-services': 'Dagiti Serbisyo ti OCCR',
+    'emp-chrmo-services': 'Dagiti Serbisyo ti CHRMO',
     'biz-business-permits-licensing': 'Mga Serbisyo ti BPLO',
     'biz-certificates': 'Dagiti Sertipiko',
     'biz-citizens-charter': "Citizen's Charter",

@@ -187,10 +187,10 @@
   </url>
   
   <url>
-    <loc>https://bettersolano.org/service-details/municipal-civil-registrar</loc>
-    <lastmod>2025-12-10</lastmod>
+    <loc>https://betterlegazpi.org/service-details/city-civil-registrar</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   
   <!-- Service Details - Business & Licensing -->
@@ -296,10 +296,10 @@
   </url>
   
   <url>
-    <loc>https://bettersolano.org/service-details/human-resource-management</loc>
-    <lastmod>2025-12-10</lastmod>
+    <loc>https://betterlegazpi.org/service-details/human-resource-management</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   
   <!-- Legislative -->

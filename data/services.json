@@ -1,65 +1,309 @@
 {
   "services": [
     {
-      "id": "birth-certificate",
-      "title": "Birth Certificate",
+      "id": "ccro-on-time-birth",
+      "title": "On-Time Registration of Certificate of Live Birth",
       "category": "Certificates & Vital Records",
       "categoryId": "certificates",
-      "description": "Get a certified copy of birth certificate registered in Solano",
+      "description": "Register a child born in Legazpi City within 30 days from date of birth.",
       "keywords": [
         "birth",
-        "certificate",
-        "born",
+        "certificate of live birth",
+        "colb",
         "baby",
-        "civil registry",
-        "lcr",
-        "vital records"
+        "newborn",
+        "marital child",
+        "non-marital child",
+        "ausf",
+        "admission of paternity",
+        "civil registrar"
       ],
-      "fee": "₱150",
-      "processingTime": "15-30 minutes",
-      "office": "Local Civil Registrar",
-      "url": "../service-details/birth-certificate.html"
+      "fee": "Free (Marital) / ₱300.00 (Non-Marital)",
+      "processingTime": "2 hours",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#on-time-birth"
     },
     {
-      "id": "marriage-certificate",
-      "title": "Marriage Certificate",
+      "id": "ccro-delayed-birth",
+      "title": "Delayed Registration of Certificate of Live Birth",
       "category": "Certificates & Vital Records",
       "categoryId": "certificates",
-      "description": "Register or request certified true copy of marriage certificate",
+      "description": "Delayed birth registration after 30 days or no existing record from PSA/LCR, including BRAP and Out-of-Town registration.",
       "keywords": [
-        "marriage",
-        "wedding",
-        "married",
-        "spouse",
-        "civil registry",
-        "kasal",
-        "COM",
-        "certificate of marriage"
+        "delayed birth",
+        "late registration",
+        "brap",
+        "out-of-town birth",
+        "negative certification",
+        "affidavit of disinterested persons",
+        "birth certificate"
       ],
-      "fee": "Free (Registration)",
-      "processingTime": "5 minutes",
-      "office": "Local Civil Registrar",
-      "url": "../service-details/marriage-certificate.html"
+      "fee": "₱500.00 (Marital) / ₱800.00 (Non-Marital) / FREE (BRAP)",
+      "processingTime": "3 hours + 10-day notice",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#delayed-birth"
     },
     {
-      "id": "death-certificate",
-      "title": "Death Certificate",
+      "id": "ccro-legitimation",
+      "title": "Legitimation of Child",
       "category": "Certificates & Vital Records",
       "categoryId": "certificates",
-      "description": "Register death certificate and obtain burial or transfer permit",
+      "description": "Process by which a child is granted legitimacy by subsequent marriage of parents.",
       "keywords": [
-        "death",
-        "died",
-        "deceased",
-        "obituary",
-        "civil registry",
+        "legitimation",
+        "subsequent marriage",
+        "affidavit of legitimation",
+        "cenomar",
+        "annotated colb",
+        "legal instruments"
+      ],
+      "fee": "₱410.00",
+      "processingTime": "3 hours",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#legitimation"
+    },
+    {
+      "id": "ccro-on-time-death",
+      "title": "On-Time Registration of Certificate of Death",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Register death of a person who died in Legazpi City within 30 days and obtain burial or transfer permits.",
+      "keywords": [
+        "death certificate",
         "burial permit",
-        "transfer permit"
+        "transfer permit",
+        "cremation",
+        "city health office",
+        "deceased"
       ],
-      "fee": "₱50-150",
-      "processingTime": "1 hour 35 minutes",
-      "office": "Local Civil Registrar",
-      "url": "../service-details/death-certificate.html"
+      "fee": "₱120.00",
+      "processingTime": "1 hour",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#on-time-death"
+    },
+    {
+      "id": "ccro-delayed-death",
+      "title": "Delayed Registration of Certificate of Death",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Registration of death beyond 30 days or for persons with no existing record from LCR or PSA.",
+      "keywords": [
+        "delayed death",
+        "late death registration",
+        "burial certificate",
+        "negative result",
+        "death certificate"
+      ],
+      "fee": "₱620.00",
+      "processingTime": "1 hour + 10-day notice",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#delayed-death"
+    },
+    {
+      "id": "ccro-marriage-license",
+      "title": "Application and Issuance of Marriage License",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Apply for marriage license for couples intending to marry subject to existing laws.",
+      "keywords": [
+        "marriage license",
+        "kasal",
+        "wedding",
+        "parental advice",
+        "parental consent",
+        "cenomar",
+        "family planning seminar"
+      ],
+      "fee": "₱1,100.00",
+      "processingTime": "3 hours + 10-day notice",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#marriage-license"
+    },
+    {
+      "id": "ccro-on-time-marriage",
+      "title": "Registration of On-Time Marriage Certificate",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Register Certificate of Marriage solemnized in Legazpi City within 15 days (with license) or 30 days (Article 34).",
+      "keywords": [
+        "marriage certificate",
+        "on-time marriage",
+        "article 34",
+        "affidavit of cohabitation",
+        "prenup",
+        "kasal"
+      ],
+      "fee": "Free",
+      "processingTime": "1 hour",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#on-time-marriage"
+    },
+    {
+      "id": "ccro-delayed-marriage",
+      "title": "Delayed Registration of Marriage Certificate & Reconstruction",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Register marriage beyond reglementary period or reconstruct unregistered marriage certificates.",
+      "keywords": [
+        "delayed marriage",
+        "reconstruction of marriage",
+        "unregistered marriage",
+        "cenomar",
+        "matrimony"
+      ],
+      "fee": "₱500.00",
+      "processingTime": "1 hour + 10-day notice",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#delayed-marriage"
+    },
+    {
+      "id": "ccro-certified-copies",
+      "title": "Issuance of Certified True / Xerox Copies of Civil Registry Records",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Acquire certified true copies of birth, marriage, death certificates and other civil registry records.",
+      "keywords": [
+        "certified true copy",
+        "ctc",
+        "xerox copy",
+        "verification form",
+        "birth copy",
+        "marriage copy",
+        "death copy"
+      ],
+      "fee": "₱100.00 (Local) / ₱200.00 (Abroad)",
+      "processingTime": "1 hour",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#certified-copies"
+    },
+    {
+      "id": "ccro-electronic-endorsement",
+      "title": "Electronic Endorsement to PSA",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Advance endorsement to PSA for immediate SECPA copy, negative certifications, or blurred/unreadable entries.",
+      "keywords": [
+        "electronic endorsement",
+        "psa secpa",
+        "advance endorsement",
+        "negative certification",
+        "blurred entry",
+        "transmittal letter"
+      ],
+      "fee": "₱100.00 (+ ₱5/page)",
+      "processingTime": "1 hour (+ 4 weeks PSA)",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#electronic-endorsement"
+    },
+    {
+      "id": "ccro-ra-9048-10172",
+      "title": "Petitions for R.A. 9048 and R.A. 10172 (Change of Name & Clerical Errors)",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Administrative correction of clerical error, change of first name, or correction of gender/sex and date of birth.",
+      "keywords": [
+        "ra 9048",
+        "ra 10172",
+        "change of first name",
+        "clerical error",
+        "correction of sex",
+        "gender correction",
+        "birth date correction",
+        "newspaper publication"
+      ],
+      "fee": "₱1,200.00 – ₱3,200.00 (Filing)",
+      "processingTime": "2 hours + 2-wk publication + 2-5 mos PSA",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#ra-9048-10172"
+    },
+    {
+      "id": "ccro-ra-9255",
+      "title": "Application for Change of Surname per R.A. 9255",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Petition for child to use the surname of the father per RA 9255.",
+      "keywords": [
+        "ra 9255",
+        "use surname of father",
+        "ausf",
+        "admission of paternity",
+        "change surname child"
+      ],
+      "fee": "₱460.00+",
+      "processingTime": "2 hours",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#ra-9255"
+    },
+    {
+      "id": "ccro-court-decrees",
+      "title": "Registration of Court Decrees / Orders (Adoption, Nullity, Annulment)",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Registration of court decisions affecting civil status (Adoption, Annulment, Nullity of Marriage, Legal Separation).",
+      "keywords": [
+        "court decree",
+        "adoption",
+        "annulment",
+        "nullity of marriage",
+        "legal separation",
+        "certificate of finality"
+      ],
+      "fee": "₱500.00 – ₱700.00",
+      "processingTime": "2 hours",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#court-decrees"
+    },
+    {
+      "id": "ccro-supplemental-report",
+      "title": "Supplemental Report for Civil Registry Documents",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Supply omitted information on birth, death, or marriage certificates that was omitted during initial registration.",
+      "keywords": [
+        "supplemental report",
+        "omitted entry",
+        "municipal form 1a",
+        "affidavit of supplemental report"
+      ],
+      "fee": "₱200.00",
+      "processingTime": "2 hours",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#supplemental-report"
+    },
+    {
+      "id": "ccro-other-certificates",
+      "title": "Issuance of Other Certificates Relative to Civil Registration",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Issuance of civil registry related certifications for legal, employment, or reference purposes.",
+      "keywords": [
+        "civil registry certificate",
+        "certificate of appearance",
+        "certification of record",
+        "verification"
+      ],
+      "fee": "₱100.00",
+      "processingTime": "1 hour",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#other-certificates"
+    },
+    {
+      "id": "ccro-online-inquiry",
+      "title": "Email Assisted-Online Inquiry / Verification for Certificates",
+      "category": "Certificates & Vital Records",
+      "categoryId": "certificates",
+      "description": "Online email inquiry and record verification for birth, death, and marriage certificates.",
+      "keywords": [
+        "email verification",
+        "online inquiry",
+        "email inquiry",
+        "civil registrar email",
+        "verification form"
+      ],
+      "fee": "Free",
+      "processingTime": "2 hours",
+      "office": "City Civil Registrar's Office",
+      "url": "../service-details/city-civil-registrar.html#online-inquiry"
     },
     {
       "id": "barangay-clearance",
@@ -629,24 +873,28 @@
     },
     {
       "id": "civil-registrar",
-      "title": "Local Civil Registrar",
+      "title": "City Civil Registrar's Office",
       "category": "Certificates & Vital Records",
       "categoryId": "certificates",
-      "description": "Birth, marriage, death certificates and civil registry services",
+      "description": "Comprehensive Citizen's Charter guide for birth, marriage, death registrations, legal instruments, and certifications in Legazpi City.",
       "keywords": [
         "civil registrar",
+        "CCRO",
         "LCR",
         "birth",
         "marriage",
         "death",
         "certificate",
         "vital records",
-        "CENOMAR"
+        "CENOMAR",
+        "RA 9048",
+        "RA 10172",
+        "RA 9255"
       ],
-      "fee": "₱150+",
-      "processingTime": "15-30 minutes",
-      "office": "Local Civil Registrar",
-      "url": "../service-details/municipal-civil-registrar.html"
+      "fee": "Varies by service",
+      "processingTime": "1-3 hours",
+      "office": "Office of the City Civil Registrar",
+      "url": "../service-details/city-civil-registrar.html"
     },
     {
       "id": "municipal-engineering",

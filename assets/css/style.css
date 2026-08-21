@@ -1935,63 +1935,94 @@ body.mobile-menu-open {
   font-weight: 500;
 }
 
-/* Service Item Cards - Detail Pages */
+/* Service Item Cards - Detail & Service Hub Pages */
+.service-item-card,
+.service-item-card:hover,
+.service-item-card:focus,
+.service-item-card:active,
+.service-item-card *,
+.service-item-card:hover * {
+  text-decoration: none !important;
+}
+
 .service-item-card {
   position: relative;
-  background: var(--color-white);
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: var(--spacing-md);
-  transition: all 0.2s ease;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none !important;
+  color: inherit;
+  box-sizing: border-box;
 }
 
 .service-item-card:hover {
-  border-color: var(--color-primary);
-  box-shadow: 0 4px 12px rgba(0, 50, 160, 0.08);
+  border-color: var(--color-primary, #2563eb);
+  box-shadow: 0 8px 20px rgba(0, 50, 160, 0.08);
+  transform: translateY(-2px);
+  text-decoration: none !important;
 }
 
 .service-item-link {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
 }
 
 .service-item-title {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-text, #111827);
   margin: 0 0 8px 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
+  line-height: 1.35;
 }
 
 .service-item-title i {
-  color: var(--color-primary);
+  color: var(--color-primary, #2563eb);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 .service-item-desc {
-  font-size: 0.875rem;
-  color: var(--color-text-light);
-  margin: 0 0 12px 0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--color-text-light, #6b7280);
+  margin: 0 0 14px 0;
+  flex-grow: 1;
 }
 
 .service-item-meta {
-  display: flex;
-  gap: var(--spacing-md);
-  font-size: 0.8125rem;
-  color: var(--color-text-light);
-  padding-top: 12px;
-  border-top: 1px solid #f0f0f0;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  font-size: 0.8125rem !important;
+  color: var(--color-text-light, #6b7280) !important;
+  padding-top: 12px !important;
+  border-top: 1px solid var(--color-border-light, #f0f0f0) !important;
+  margin-top: auto !important;
 }
 
 .service-item-meta span {
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  display: flex !important;
+  align-items: baseline !important;
+  justify-content: flex-start !important;
+  gap: 6px !important;
+  line-height: 1.4 !important;
 }
 
 .service-item-meta strong {
-  color: var(--color-text);
+  color: var(--color-text, #111827) !important;
+  font-weight: 600 !important;
+  min-width: 44px;
+  flex-shrink: 0;
 }
 
 /* Section Title Small */
@@ -2009,6 +2040,15 @@ body.mobile-menu-open {
   gap: var(--spacing-md);
 }
 
+.office-card,
+.office-card:hover,
+.office-card:focus,
+.office-card:active,
+.office-card *,
+.office-card:hover * {
+  text-decoration: none !important;
+}
+
 .office-card {
   display: flex;
   align-items: center;
@@ -2017,7 +2057,7 @@ body.mobile-menu-open {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: var(--spacing-md) var(--spacing-lg);
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
   transition: all 0.2s ease;
 }
@@ -2026,6 +2066,7 @@ body.mobile-menu-open {
   border-color: var(--color-primary);
   box-shadow: 0 4px 16px rgba(0, 50, 160, 0.1);
   transform: translateY(-2px);
+  text-decoration: none !important;
 }
 
 .office-card-icon {
@@ -10735,17 +10776,35 @@ a.a11y-contact-item:hover i {
 }
 
 /* Service Item Cards (Scholarship Programs) */
+.service-item-card,
+.service-item-card:hover,
+.service-item-card:focus,
+.service-item-card:active,
+.service-item-card *,
+.service-item-card:hover * {
+  text-decoration: none !important;
+}
+
 .service-item-card {
-  background: var(--color-white);
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: var(--spacing-md);
-  transition: all 0.2s ease;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none !important;
+  color: inherit;
+  box-sizing: border-box;
 }
 
 .service-item-card:hover {
-  border-color: var(--color-primary);
-  box-shadow: 0 4px 12px rgba(0, 50, 160, 0.08);
+  border-color: var(--color-primary, #2563eb);
+  box-shadow: 0 8px 20px rgba(0, 50, 160, 0.08);
+  transform: translateY(-2px);
+  text-decoration: none !important;
 }
 
 .service-item-link {
@@ -10754,42 +10813,55 @@ a.a11y-contact-item:hover i {
 }
 
 .service-item-title {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-text, #111827);
   margin: 0 0 8px 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
+  line-height: 1.35;
 }
 
 .service-item-title i {
-  color: var(--color-primary);
+  color: var(--color-primary, #2563eb);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 .service-item-desc {
-  font-size: 0.875rem;
-  color: var(--color-text-light);
-  margin: 0 0 12px 0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--color-text-light, #6b7280);
+  margin: 0 0 14px 0;
+  flex-grow: 1;
 }
 
 .service-item-meta {
-  display: flex;
-  gap: var(--spacing-md);
-  font-size: 0.8125rem;
-  color: var(--color-text-light);
-  padding-top: 12px;
-  border-top: 1px solid #f0f0f0;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  font-size: 0.8125rem !important;
+  color: var(--color-text-light, #6b7280) !important;
+  padding-top: 12px !important;
+  border-top: 1px solid var(--color-border-light, #f0f0f0) !important;
+  margin-top: auto !important;
 }
 
 .service-item-meta span {
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  display: flex !important;
+  align-items: baseline !important;
+  justify-content: flex-start !important;
+  gap: 6px !important;
+  line-height: 1.4 !important;
 }
 
 .service-item-meta strong {
-  color: var(--color-text);
+  color: var(--color-text, #111827) !important;
+  font-weight: 600 !important;
+  min-width: 44px;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
@@ -11959,4 +12031,67 @@ a.a11y-contact-item:hover i {
   [data-theme="dark"] .process-table td:nth-child(5)::before {
     color: #8b949e;
   }
+}
+
+/* Service Hub & Item Cards Dark Mode */
+[data-theme="dark"] .service-item-card {
+  background: #16181f !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+}
+
+[data-theme="dark"] .service-item-card:hover {
+  background: #1c1f28 !important;
+  border-color: #4f8eff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme="dark"] .service-item-title {
+  color: #f0f6fc !important;
+}
+
+[data-theme="dark"] .service-item-title i {
+  color: #4f8eff !important;
+}
+
+[data-theme="dark"] .service-item-desc {
+  color: #8b949e !important;
+}
+
+[data-theme="dark"] .service-item-meta {
+  border-top-color: rgba(255, 255, 255, 0.07) !important;
+  color: #8b949e !important;
+}
+
+[data-theme="dark"] .service-item-meta strong {
+  color: #f0f6fc !important;
+}
+
+[data-theme="dark"] .office-card {
+  background: #16181f !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+}
+
+[data-theme="dark"] .office-card:hover {
+  background: #1c1f28 !important;
+  border-color: #4f8eff !important;
+}
+
+[data-theme="dark"] .office-card-title {
+  color: #f0f6fc !important;
+}
+
+[data-theme="dark"] .office-card-desc {
+  color: #8b949e !important;
+}
+
+[data-theme="dark"] .office-card-icon {
+  background: rgba(79, 142, 255, 0.12) !important;
+  color: #4f8eff !important;
+}
+
+[data-theme="dark"] .office-card-arrow {
+  background: #232734 !important;
+  color: #4f8eff !important;
 }

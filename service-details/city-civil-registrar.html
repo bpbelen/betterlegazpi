@@ -1,0 +1,3700 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Office of the City Civil Registrar Hub | Legazpi City Citizen's Charter</title>
+    <meta
+      name="description"
+      content="Official Citizen's Charter and Frontline Services Directory for the Office of the City Civil Registrar (OCCR) in Legazpi City. Requirements, step-by-step guides, fees, and processing times for birth, marriage, death registrations, legal instruments, and certifications."
+    />
+    <link rel="canonical" href="https://betterlegazpi.org/service-details/city-civil-registrar" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/accessibility.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <style>
+      .bpl-section {
+        padding: 40px 0;
+      }
+      .bpl-section.alt-bg {
+        background: var(--color-bg-alt);
+      }
+      .section-header {
+        margin-bottom: 24px;
+      }
+      .section-header h2 {
+        font-size: 1.25rem;
+        color: var(--color-text);
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 700;
+      }
+      .section-header h2 i {
+        color: var(--color-primary);
+        font-size: 1.15rem;
+      }
+      .section-header p {
+        color: var(--color-text-light);
+        font-size: 0.875rem;
+        margin: 0;
+        line-height: 1.5;
+      }
+      .quick-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .stat-card {
+        background: var(--color-white, #ffffff);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 14px;
+        text-align: center;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      }
+      .stat-card i {
+        font-size: 1.15rem;
+        color: var(--color-primary);
+        margin-bottom: 4px;
+      }
+      .stat-card h4 {
+        font-size: 0.6875rem;
+        color: var(--color-text-light);
+        margin-bottom: 2px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .stat-card p {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--color-text);
+        margin: 0;
+      }
+      .service-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 28px;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+      .service-tab {
+        padding: 10px 20px;
+        background: var(--color-white, #ffffff);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--color-text);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+      }
+      .service-tab:hover {
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+      }
+      .service-tab.active {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+        color: white;
+        box-shadow: 0 2px 6px rgba(0, 50, 160, 0.2);
+      }
+      .service-tab.active i {
+        color: white;
+      }
+      .service-content {
+        display: none;
+      }
+      .service-content.active {
+        display: block;
+      }
+      .sub-service-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 4px 2px;
+      }
+      .sub-service-count {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: #64748b;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .sub-service-count i {
+        color: var(--color-primary);
+      }
+      .btn-toggle-all {
+        background: var(--color-white, #ffffff);
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
+        padding: 6px 14px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      }
+      .btn-toggle-all:hover {
+        background: rgba(0, 50, 160, 0.06);
+        border-color: var(--color-primary);
+      }
+      .sub-service-card {
+        background: var(--color-white, #ffffff);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        margin-bottom: 14px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        overflow: hidden;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .sub-service-card:hover {
+        border-color: rgba(0, 50, 160, 0.22);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      }
+      .sub-service-card.is-open {
+        border-color: rgba(0, 50, 160, 0.25);
+        box-shadow: 0 4px 14px rgba(0, 50, 160, 0.05);
+      }
+      .sub-service-card:last-child {
+        margin-bottom: 0;
+      }
+      .sub-service-header {
+        padding: 18px 20px;
+        cursor: pointer;
+        user-select: none;
+        background: var(--color-white, #ffffff);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        transition: background 0.15s ease;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+      .sub-service-header:hover {
+        background: #f8faff;
+      }
+      .sub-service-header:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: -2px;
+      }
+      .sub-service-header-left {
+        flex: 1;
+        min-width: 0;
+      }
+      .sub-service-title-wrap {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        margin-bottom: 6px;
+      }
+      .sub-service-header h3 {
+        font-size: 1.0625rem;
+        font-weight: 700;
+        color: var(--color-text);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .sub-service-header h3 i {
+        color: var(--color-primary);
+      }
+      .sub-service-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 10px;
+        background: rgba(0, 50, 160, 0.08);
+        color: var(--color-primary);
+        border-radius: 20px;
+        font-size: 0.71875rem;
+        font-weight: 600;
+      }
+      .sub-service-desc {
+        color: #475569;
+        font-size: 0.8125rem;
+        line-height: 1.45;
+        margin: 0 0 6px 0;
+      }
+      .sub-service-teaser {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.71875rem;
+        font-weight: 600;
+        color: var(--color-primary);
+      }
+      .sub-service-chevron-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #f1f5f9;
+        color: #475569;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: all 0.25s ease;
+        border: none;
+        font-size: 0.8125rem;
+      }
+      .sub-service-card:hover .sub-service-chevron-btn {
+        background: rgba(0, 50, 160, 0.1);
+        color: var(--color-primary);
+      }
+      .sub-service-card.is-open .sub-service-chevron-btn {
+        background: var(--color-primary);
+        color: white;
+        transform: rotate(180deg);
+      }
+      .sub-service-body {
+        display: none;
+        padding: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        background: var(--color-bg-alt, #f8f9fa);
+      }
+      .sub-service-card.is-open .sub-service-body {
+        display: block;
+      }
+      .req-summary-grid {
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+      .req-box {
+        background: var(--color-bg-alt, #f8fafc);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 16px;
+      }
+      .req-box h4 {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--color-text);
+        margin: 0 0 12px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .req-box h4 i {
+        color: var(--color-primary);
+      }
+      .req-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .req-list li {
+        font-size: 0.8125rem;
+        color: #334155;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        line-height: 1.45;
+      }
+      .req-list li i {
+        color: var(--color-primary);
+        font-size: 0.875rem;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+      .req-list li strong {
+        color: var(--color-text);
+      }
+      .summary-metrics {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .metric-card {
+        background: var(--color-white, #ffffff);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 6px;
+        padding: 10px 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .metric-icon {
+        width: 30px;
+        height: 30px;
+        background: rgba(0, 50, 160, 0.05);
+        color: var(--color-primary);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.95rem;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .metric-content {
+        flex: 1;
+      }
+      .metric-label {
+        font-size: 0.625rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--color-text-light);
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+      }
+      .metric-value {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--color-text);
+        line-height: 1.4;
+      }
+      .process-table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        background: var(--color-white, #ffffff);
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        font-size: 0.8125rem;
+        margin-top: 10px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+      }
+      .process-table th {
+        background: var(--color-primary);
+        color: white;
+        padding: 12px 14px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+      }
+      .process-table td {
+        padding: 14px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        vertical-align: top;
+        line-height: 1.5;
+      }
+      .process-table tr:last-child td {
+        border-bottom: none;
+      }
+      .process-table tbody tr:hover {
+        background: rgba(0, 50, 160, 0.015);
+      }
+      .step-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background: var(--color-primary);
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 700;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 50, 160, 0.15);
+      }
+      .personnel-tag {
+        display: inline-block;
+        background: rgba(0, 50, 160, 0.08);
+        color: var(--color-primary);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        margin: 2px 0;
+      }
+      .time-tag {
+        color: var(--color-text-light);
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+      .fee-tag {
+        color: #166534;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        background: transparent;
+        border: none;
+        padding: 0;
+        display: inline-block;
+      }
+      .fee-note {
+        font-size: 0.78125rem;
+        color: var(--color-text-light, #64748b);
+        font-weight: 500;
+        display: inline-block;
+        line-height: 1.35;
+      }
+      .req-badge-conditional {
+        display: inline-flex;
+        align-items: center;
+        background: #fef3c7;
+        color: #92400e;
+        border: 1px solid #fde68a;
+        padding: 1px 6px;
+        border-radius: 4px;
+        font-size: 0.65625rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        margin-right: 4px;
+        flex-shrink: 0;
+      }
+      .staff-expand-btn {
+        margin: 20px auto 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: white;
+        color: var(--color-primary);
+        border: 1px solid rgba(0, 50, 160, 0.2);
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+      }
+      .staff-expand-btn:hover {
+        background: rgba(0, 50, 160, 0.05);
+        border-color: var(--color-primary);
+      }
+      .staff-extra {
+        display: none;
+      }
+      .staff-extra.show {
+        display: contents;
+      }
+      .contact-info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .contact-card {
+        background: var(--color-white, #ffffff);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      }
+      .contact-card h4 {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--color-text);
+        margin: 0 0 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .contact-card h4 i {
+        color: var(--color-primary);
+      }
+      .contact-card p {
+        font-size: 0.8125rem;
+        color: #475569;
+        margin: 0 0 6px 0;
+        line-height: 1.45;
+      }
+      .contact-card p:last-child {
+        margin-bottom: 0;
+      }
+      .contact-card a {
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .contact-card a:hover {
+        text-decoration: underline;
+      }
+      .staff-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .staff-card {
+        background: var(--color-white, #ffffff);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 14px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      }
+      .staff-card h4 {
+        font-size: 0.8125rem;
+        font-weight: 700;
+        color: var(--color-text);
+        margin: 0 0 3px 0;
+      }
+      .staff-card .staff-role {
+        font-size: 0.75rem;
+        color: var(--color-primary);
+        font-weight: 600;
+        margin: 0 0 2px 0;
+      }
+      .staff-card p {
+        font-size: 0.6875rem;
+        color: var(--color-text-light);
+        margin: 0;
+      }
+      @media (max-width: 992px) {
+        .req-summary-grid,
+        .contact-info-grid {
+          grid-template-columns: 1fr;
+        }
+        .staff-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .quick-stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        
+        /* Mobile Card Transformation for Process Tables */
+        .table-responsive {
+          overflow-x: visible;
+          border: none;
+        }
+        .process-table {
+          display: block;
+          width: 100%;
+          border: none;
+          background: transparent;
+          box-shadow: none;
+          margin-top: 12px;
+        }
+        .process-table thead {
+          display: none;
+        }
+        .process-table tbody {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          width: 100%;
+        }
+        .process-table tbody tr {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          background: var(--color-white, #ffffff);
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          border-radius: 12px;
+          padding: 16px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+          gap: 10px;
+        }
+        .process-table tbody tr:hover {
+          background: var(--color-white, #ffffff);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        .process-table td {
+          display: block;
+          width: 100%;
+          padding: 0;
+          border: none;
+        }
+        
+        /* 1. Step Header Pill */
+        .process-table td:nth-child(1) {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .process-table td:nth-child(1)::after {
+          content: "STEP DETAILS";
+          font-weight: 700;
+          font-size: 0.6875rem;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          color: var(--color-primary);
+        }
+        
+        /* 2. Client Action (Primary) */
+        .process-table td:nth-child(2) {
+          font-size: 0.84375rem;
+          color: var(--color-text, #1e293b);
+          line-height: 1.5;
+        }
+        .process-table td:nth-child(2)::before {
+          content: "👤 Client Step";
+          display: block;
+          font-size: 0.6875rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+          color: var(--color-primary);
+          margin-bottom: 4px;
+        }
+        .process-table td:nth-child(2) strong {
+          color: var(--color-text, #0f172a);
+          font-weight: 700;
+          font-size: 0.875rem;
+        }
+        
+        /* 3. Agency Action (Subtle Callout) */
+        .process-table td:nth-child(3) {
+          background: var(--color-bg-alt, #f8fafc);
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          border-radius: 8px;
+          padding: 10px 12px;
+          font-size: 0.78125rem;
+          color: var(--color-text-light, #475569);
+          line-height: 1.45;
+        }
+        .process-table td:nth-child(3)::before {
+          content: "🏛️ Agency Action";
+          display: block;
+          font-size: 0.65625rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+          color: var(--color-text-light, #64748b);
+          margin-bottom: 4px;
+        }
+        
+        /* 4. Fees Meta Row */
+        .process-table td:nth-child(4) {
+          display: flex;
+          align-items: baseline;
+          flex-wrap: wrap;
+          gap: 6px;
+          font-size: 0.78125rem;
+          color: var(--color-text, #1e293b);
+          padding-top: 2px;
+        }
+        .process-table td:nth-child(4)::before {
+          content: "💰 Fees:";
+          font-weight: 700;
+          font-size: 0.71875rem;
+          color: var(--color-text-light, #64748b);
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+          flex-shrink: 0;
+        }
+        
+        /* 5. Assigned Personnel / Lane */
+        .process-table td:nth-child(5) {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 6px;
+          padding-top: 2px;
+          font-size: 0.78125rem;
+        }
+        .process-table td:nth-child(5)::before {
+          content: "📍 Officer / Lane:";
+          font-weight: 700;
+          font-size: 0.71875rem;
+          color: var(--color-text-light, #64748b);
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+          width: 100%;
+          margin-bottom: 2px;
+        }
+      }
+      @media (max-width: 575px) {
+        .quick-stats,
+        .staff-grid {
+          grid-template-columns: 1fr;
+        }
+        .service-tabs {
+          flex-direction: column;
+        }
+        .service-tab {
+          text-align: center;
+          justify-content: center;
+        }
+      }
+    </style>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Hotline Bar -->
+    <div class="hotline-bar">
+      <div class="container">
+        <div class="hotline-inner">
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item">
+              <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+              <span>Command Center: 911</span>
+            </a>
+            <a href="tel:09058921185" class="hotline-item">
+              <i class="bi bi-hospital" aria-hidden="true"></i>
+              <span>Hospital: 0905 892 1185</span>
+            </a>
+            <a href="tel:09209528188" class="hotline-item">
+              <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+              <span>CDRRMO: 0920 952 8188</span>
+            </a>
+            <a href="tel:09985985926" class="hotline-item">
+              <i class="bi bi-shield-fill" aria-hidden="true"></i>
+              <span>PNP: 0998 598 5926</span>
+            </a>
+            <a href="tel:09171859984" class="hotline-item">
+              <i class="bi bi-fire" aria-hidden="true"></i>
+              <span>BFP: 0917 185 9984</span>
+            </a>
+            <a href="tel:09275640600" class="hotline-item">
+              <i class="bi bi-life-preserver" aria-hidden="true"></i>
+              <span>PCG: 0927 564 0600</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo-container">
+          <a href="../">
+            <img
+              src="../assets/images/logo/better-solano-logo.svg"
+              alt="Better Legazpi Logo"
+              class="logo-img"
+            />
+          </a>
+        </div>
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li class="has-dropdown">
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="../services/agriculture">Agriculture</a></li>
+                <li><a href="../services/business">Business</a></li>
+                <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
+                <li><a href="../services/environment">Environment</a></li>
+                <li><a href="../services/health">Health</a></li>
+                <li><a href="../services/infrastructure">Infrastructure</a></li>
+                <li><a href="../services/social-services">Social Services</a></li>
+                <li><a href="../services/tax-payments">Tax Payments</a></li>
+              </ul>
+            </li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li class="has-dropdown">
+              <a href="../legislative/" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <ul class="dropdown-menu">
+                <li><a href="../legislative/ordinance-framework">Ordinance Framework</a></li>
+                <li><a href="../legislative/resolution-framework">Resolution Framework</a></li>
+              </ul>
+            </li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-selector">
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">
+              EN
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
+              FIL
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
+              BCL
+            </button>
+          </div>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Real-Time Info Bar -->
+    <div class="info-bar" role="complementary" aria-label="Real-time information">
+      <div class="container">
+        <div class="info-bar-inner">
+          <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
+            <i class="bi bi-currency-exchange"></i>
+            <span class="rate-rotator">
+              <span class="rate-display">1 USD = ₱ --</span>
+            </span>
+          </div>
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
+            <i class="bi bi-thermometer-half"></i>
+            <span class="weather-location">Legazpi City</span>
+            <span class="weather-temp">--°C</span>
+          </div>
+          <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
+            <i class="bi bi-calendar3"></i>
+            <span class="date-value">--- --, ----</span>
+            <span class="datetime-separator">•</span>
+            <i class="bi bi-clock"></i>
+            <span class="time-value">--:-- --</span>
+            <span class="time-label">PHT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../">Home</a><span>/</span>
+          <a href="../services/">Services</a><span>/</span>
+          <a href="../services/certificates">Certificates</a><span>/</span>
+          <span aria-current="page">OCCR Citizen's Charter</span>
+        </nav>
+      </div>
+
+      <!-- Page Header Hero -->
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-content">
+            <span class="page-header-badge"><i class="bi bi-building-fill"></i> OCCR</span>
+            <h1>Office of the City Civil Registrar</h1>
+            <p class="page-header-desc">
+              Your consolidated guide for birth, marriage, death registrations, legal instruments, and vital records in Legazpi City.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Info Bar Section -->
+      <section class="bpl-section">
+        <div class="container">
+          <div class="quick-stats">
+            <div class="stat-card">
+              <i class="bi bi-building"></i>
+              <h4>Office</h4>
+              <p>City Civil Registrar's Office</p>
+            </div>
+            <div class="stat-card">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location</h4>
+              <p>Ground Floor, Legazpi City Hall</p>
+            </div>
+            <div class="stat-card">
+              <i class="bi bi-clock"></i>
+              <h4>Hours</h4>
+              <p>8:00 AM – 5:00 PM (Mon–Fri)</p>
+            </div>
+            <div class="stat-card">
+              <i class="bi bi-telephone"></i>
+              <h4>Contact / Hotline</h4>
+              <p>0960-688-4345 / 742-5700</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Frontline Services Section -->
+      <section class="bpl-section alt-bg">
+        <div class="container">
+          <div class="section-header" style="text-align: center">
+            <h2 style="justify-content: center">
+              <i class="bi bi-grid-3x3-gap"></i>
+              <span>OCCR Frontline Services</span>
+            </h2>
+            <p>
+              Select a service category to view detailed requirements, step-by-step processes, and turn-around times.
+            </p>
+          </div>
+
+          <!-- Service Category Tabs -->
+          <div class="service-tabs" role="tablist" aria-label="Civil Registrar Service Categories">
+            <button
+              type="button"
+              class="service-tab active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="tab-birth"
+              id="tab-btn-birth"
+              data-tab="birth"
+            >
+              <i class="bi bi-person-heart"></i>
+              <span>Birth &amp; Legitimation</span>
+            </button>
+            <button
+              type="button"
+              class="service-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-marriage"
+              id="tab-btn-marriage"
+              data-tab="marriage"
+            >
+              <i class="bi bi-hearts"></i>
+              <span>Marriage Services</span>
+            </button>
+            <button
+              type="button"
+              class="service-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-death"
+              id="tab-btn-death"
+              data-tab="death"
+            >
+              <i class="bi bi-file-earmark-medical"></i>
+              <span>Death Registration</span>
+            </button>
+            <button
+              type="button"
+              class="service-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-legal"
+              id="tab-btn-legal"
+              data-tab="legal"
+            >
+              <i class="bi bi-journal-bookmark"></i>
+              <span>Legal &amp; Petitions</span>
+            </button>
+            <button
+              type="button"
+              class="service-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-certifications"
+              id="tab-btn-certifications"
+              data-tab="certifications"
+            >
+              <i class="bi bi-file-earmark-check"></i>
+              <span>Certificates &amp; Inquiries</span>
+            </button>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- TAB 1: BIRTH & LEGITIMATION                -->
+          <!-- ========================================== -->
+          <div
+            id="tab-birth"
+            class="service-content active"
+            role="tabpanel"
+            aria-labelledby="tab-btn-birth"
+          >
+            <div class="sub-service-controls">
+              <span class="sub-service-count">
+                <i class="bi bi-collection"></i> 3 Services in this category
+              </span>
+              <button class="btn-toggle-all" type="button" aria-expanded="false">
+                <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
+              </button>
+            </div>
+
+            <!-- Service 1.1: On-Time Registration of Certificate of Live Birth -->
+            <div class="sub-service-card" id="on-time-birth">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-plus-circle"></i>
+                      <span>On-Time Registration of Certificate of Live Birth</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Frontline Counter)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Declaration of facts and circumstances surrounding the birth of a child born in Legazpi City, to be registered within thirty (30) days from the date of birth.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Application Form:</strong> 4 copies of duly accomplished Certificate of Live Birth (prepared by hospital, lying-in clinic, or birth attendant).</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><span class="req-badge-conditional">MARITAL CHILD</span> <strong>Marriage Certificate of Parents:</strong> 1 original or certified true copy from PSA or LCRO.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><span class="req-badge-conditional">NON-MARITAL CHILD</span> <strong>Affidavit of Paternity / AUSF:</strong> Duly notarized Affidavit to Use the Surname of the Father &amp; Admission of Paternity.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Hospital Information Sheet:</strong> 1 original copy from the hospital or lying-in clinic.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid Government-Issued ID:</strong> 1 photocopy of valid ID of parents / informant with signature.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">2 Hours (Maximum)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">Free (Marital) / ₱300.00 (Non-Marital AAP/AUSF)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Frontline Receiving Counter (Window 1)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for On-Time Birth Registration">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Application &amp; Requirements</strong><br />
+                          Submit 4 copies of accomplished COLB and required attachments to the receiving desk.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Checks for correctness and completeness of entries and attachments; verifies civil registry rules and prepares documents.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Officer II</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Registration / Processing Fees</strong><br />
+                          Proceed to the City Treasurer's Office (CTO) Cashier for payment (if non-marital child requiring AAP/AUSF).
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Accepts payment and issues Official Receipt (OR).
+                        </td>
+                        <td data-col="FEES">
+                          <span class="fee-tag">₱300.00</span><br />
+                          <small class="fee-note">Free for marital child</small>
+                        </td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Registered Birth Certificate</strong><br />
+                          Present Official Receipt and claim the registered local copy of Certificate of Live Birth.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Signs, assigns local registry number, enters record into the Civil Registry Book, and releases client copy.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 1.2: Delayed Registration of Certificate of Live Birth -->
+            <div class="sub-service-card" id="delayed-birth">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-hourglass-split"></i>
+                      <span>Delayed Registration of Certificate of Live Birth</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Frontline Counter)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Registration of birth reported after the 30-day reglementary period or for individuals with no existing record in LCRO and PSA. Includes Out-of-Town Delayed Registration and BRAP assistance.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certificate of Live Birth (COLB):</strong> 4 original copies with Affidavit of Delayed Registration on reverse side.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA Negative Certification:</strong> 1 original copy &amp; 1 photocopy certifying no prior birth record exists in PSA.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Two (2) Documentary Evidences:</strong> Certified copies (e.g. Baptismal Certificate, School Form 137, Voter's Certification, SSS/PhilHealth record).</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Affidavit of 2 Disinterested Persons:</strong> 1 original Joint Affidavit with valid IDs of affiants.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Barangay Residency &amp; 2x2 Photo:</strong> 1 original Barangay Certification and 2x2 picture of applicant on white background.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><span class="req-badge-conditional">BRAP APPLICANTS</span> <strong>Certificate of Indigency:</strong> 1 original copy from Punong Barangay (services 100% Free under BRAP).</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">10 Days Posting + 3 Hours</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱500.00 (Marital) / ₱800.00 (Non-Marital) / Free (BRAP)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Frontline Receiving Counter • Posting Board</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Delayed Birth Registration">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Application &amp; Interview</strong><br />
+                          Submit accomplished COLB with supporting documentary evidence for legal evaluation.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Interviews applicant, assesses authenticity of supporting evidence, and prepares 10-day notice of posting.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Officer II</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Delayed Registration Fee</strong><br />
+                          Pay late filing fee at the City Treasurer's Office (waived for BRAP beneficiaries).
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Receives payment and issues Official Receipt.
+                        </td>
+                        <td data-col="FEES">
+                          <span class="fee-tag">₱500.00 / ₱800.00</span><br />
+                          <small class="fee-note">Free for BRAP</small>
+                        </td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Mandatory 10-Day Posting Period</strong><br />
+                          Wait for the statutory 10-calendar-day public posting period.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Posts Notice of Delayed Registration on the official public bulletin board as required by Act No. 3753.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Staff</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">4</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Registered Birth Certificate</strong><br />
+                          Return after completion of posting period and claim the registered Certificate of Live Birth.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Assigns local registry number, enters record into register, and releases official registered copy.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 1.3: Legitimation by Subsequent Marriage of Parents -->
+            <div class="sub-service-card" id="legitimation-birth">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-patch-check"></i>
+                      <span>Legitimation of Child by Subsequent Marriage of Parents</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Legal Instruments Division)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Registration of legitimation for children conceived and born outside of wedlock to parents without legal impediment at the time of conception, who subsequently contracted a valid marriage.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Affidavit of Legitimation:</strong> 4 original notarized copies executed by both biological parents.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certificate of Live Birth (COLB):</strong> 1 original PSA copy / Local Civil Registry copy of child.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certificate of Marriage of Parents:</strong> 1 original PSA copy / certified local copy.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA Advisory on Marriages (CENOMAR):</strong> 1 original copy for each parent issued by PSA.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid IDs of Both Parents:</strong> 1 photocopy of government-issued IDs with signature.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">1 Day (24 Hours)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱500.00 (Legitimation &amp; Annotation Fee)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Legal Instruments Division (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Legitimation Registration">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Legitimation Documents</strong><br />
+                          Submit notarized Affidavit of Legitimation and civil registry certificates.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Examines legal capacity, verifies authenticity of marriage, and prepares order of payment.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Supervising Admin Officer (SAO)</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Legitimation Fees</strong><br />
+                          Pay registration and annotation fees at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Receives payment and issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱500.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Annotated Birth Certificate</strong><br />
+                          Present Official Receipt and claim the Certificate of Live Birth with approved legitimation annotation.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Enters legitimation into registry books, stamps official annotation on COLB, and releases registered documents.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- TAB 2: MARRIAGE SERVICES                   -->
+          <!-- ========================================== -->
+          <div
+            id="tab-marriage"
+            class="service-content"
+            role="tabpanel"
+            aria-labelledby="tab-btn-marriage"
+          >
+            <div class="sub-service-controls">
+              <span class="sub-service-count">
+                <i class="bi bi-collection"></i> 3 Services in this category
+              </span>
+              <button class="btn-toggle-all" type="button" aria-expanded="false">
+                <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
+              </button>
+            </div>
+
+            <!-- Service 2.1: Application for Marriage License -->
+            <div class="sub-service-card" id="marriage-license">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-card-heading"></i>
+                      <span>Application for Marriage License</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Marriage Division)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Filing and issuance of Marriage License required for couples intending to marry in Legazpi City, with mandatory 10-day public publication period.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA Birth Certificate:</strong> 1 original PSA copy for each applicant.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA Certificate of No Marriage (CENOMAR):</strong> 1 original copy issued within the last 6 months.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PMOC Certificate:</strong> 1 original Pre-Marriage Orientation and Counseling Certificate from City Health/Population Office.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Barangay Certificate of Residency:</strong> 1 original certification from the barangay of applicant residence.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><span class="req-badge-conditional">AGE 18-21</span> <strong>Parental Consent:</strong> Duly notarized consent of parents.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><span class="req-badge-conditional">AGE 22-25</span> <strong>Parental Advice:</strong> Duly notarized written parental advice.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><span class="req-badge-conditional">FOREIGN CITIZEN</span> <strong>Certificate of Legal Capacity:</strong> Issued by applicant's Embassy in the Philippines.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">10 Days Posting + 3 Hours</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱350.00 (License &amp; Application Fee)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Marriage Division (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Marriage License Application">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Application &amp; Pre-Marriage Interview</strong><br />
+                          Both applicants appear in person, fill out application form, and submit requirements.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Verifies age, legal capacity, and PMOC certificate; administers oath and prepares notice of posting.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Administrative Aide IV</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Marriage License Fee</strong><br />
+                          Pay application and license fees at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱350.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Mandatory 10-Day Publication / Posting</strong><br />
+                          Wait for the 10 consecutive calendar days public posting period.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Posts notice on public bulletin board as required by Article 17 of the Family Code.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Marriage Registration Officer</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">4</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Marriage License (Form 90)</strong><br />
+                          Claim official Marriage License upon completion of the 10-day posting.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Issues signed Marriage License (valid for 120 days nationwide).
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 2.2: Registration of Certificate of Marriage (On-Time) -->
+            <div class="sub-service-card" id="on-time-marriage">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-heart-half"></i>
+                      <span>Registration of Certificate of Marriage (On-Time)</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Frontline Counter)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Registration of marriage solemnized by authorized solemnizing officers (judges, priests, ministers, mayors) within fifteen (15) days from the date of marriage.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certificate of Marriage (Form 97):</strong> 4 original copies completely filled out and signed by solemnizing officer, contracting parties, and witnesses.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Marriage License or Article 34 Affidavit:</strong> 1 original copy attached to the marriage contract.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid IDs:</strong> 1 photocopy of IDs of the solemnizing officer and contracting parties.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">2 Hours (Maximum)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">Free (Solemnized within Legazpi)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Marriage Registration Counter (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for On-Time Marriage Registration">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Certificate of Marriage</strong><br />
+                          Submit 4 copies of executed Certificate of Marriage within 15 days of ceremony.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Verifies solemnizing officer's authority (CRSO/SOAR), signatures, and completeness of details.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Administrative Aide IV</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Civil Registry Register Entry</strong><br />
+                          Wait for document entry into the official Marriage Register.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Assigns official Registry Number, enters record into books, and stamps official dry seal.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Officer</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Registered Marriage Certificate</strong><br />
+                          Claim registered local civil registry copy of Marriage Certificate.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Releases client copy and prepares national transmittal copy for PSA.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 2.3: Delayed Registration of Certificate of Marriage -->
+            <div class="sub-service-card" id="delayed-marriage">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-clock-history"></i>
+                      <span>Delayed Registration of Certificate of Marriage</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Marriage Division)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Registration of marriage reported beyond the statutory 15-day period (or 30 days under Article 34 of the Family Code), requiring mandatory 10-day posting.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certificate of Marriage:</strong> 4 original copies with Affidavit of Delayed Registration on reverse side.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA Negative Result:</strong> 1 original Certification of Negative Result of Marriage from PSA.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Affidavit of Solemnizing Officer:</strong> 1 original stating the date, place, and reason for late registration.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Affidavit of 2 Witnesses:</strong> 1 original Joint Affidavit of witnesses who attended the ceremony.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid Government IDs:</strong> 1 photocopy of government IDs of both spouses.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">10 Days Posting + 2 Hours</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱300.00 (Late Registration Fee)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Marriage Division Counter</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Delayed Marriage Registration">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Delayed Marriage Contract</strong><br />
+                          Submit 4 copies of marriage certificate with delayed registration affidavit.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Examines authenticity of signatures and prepares 10-day notice of delayed registration posting.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Administrative Aide IV</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Late Registration Fee</strong><br />
+                          Pay late filing fee at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Receives payment and issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱300.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Mandatory 10-Day Posting Period</strong><br />
+                          Wait for the 10 consecutive calendar days public posting period.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Posts notice on bulletin board as required by civil registry rules.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Staff</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">4</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Registered Marriage Certificate</strong><br />
+                          Claim registered marriage certificate after expiration of posting.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Assigns official registry number, enters in Marriage Register, and releases client copy.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- TAB 3: DEATH REGISTRATION                  -->
+          <!-- ========================================== -->
+          <div
+            id="tab-death"
+            class="service-content"
+            role="tabpanel"
+            aria-labelledby="tab-btn-death"
+          >
+            <div class="sub-service-controls">
+              <span class="sub-service-count">
+                <i class="bi bi-collection"></i> 2 Services in this category
+              </span>
+              <button class="btn-toggle-all" type="button" aria-expanded="false">
+                <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
+              </button>
+            </div>
+
+            <!-- Service 3.1: Registration of Certificate of Death (On-Time) -->
+            <div class="sub-service-card" id="on-time-death">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-file-earmark-medical"></i>
+                      <span>Registration of Certificate of Death (On-Time)</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Death Section)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Official recording of death occurring within Legazpi City within forty-eight (48) hours from the time of death.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certificate of Death (Form 103):</strong> 4 original copies completely filled out and signed by attending physician or City Health Officer.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Barangay Certificate of Death:</strong> 1 original copy from the barangay of occurrence/residence.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid Government ID:</strong> 1 photocopy of valid ID of the informant/relative.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">1 Hour (Immediate Releasing)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">Free (Burial Permit: ₱50.00)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Death Registration Counter (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for On-Time Death Registration">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Certificate of Death</strong><br />
+                          Submit 4 copies of Certificate of Death reviewed by City Health Officer.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Checks medical certification of cause of death, verifies doctor's signature, and encodes details.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Administrative Aide IV</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Burial / Transfer Permit (If Needed)</strong><br />
+                          Pay burial permit or transfer fees at CTO Cashier for cemetery interment.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Issues Official Receipt and Burial Permit.
+                        </td>
+                        <td data-col="FEES">
+                          <span class="fee-tag">₱50.00</span><br />
+                          <small class="fee-note">Registration is Free</small>
+                        </td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Registered Death Certificate</strong><br />
+                          Claim registered local Certificate of Death and Burial Permit.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Assigns local registry number, enters in Death Register, and releases copies immediately.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 3.2: Delayed Registration of Certificate of Death -->
+            <div class="sub-service-card" id="delayed-death">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-hourglass-bottom"></i>
+                      <span>Delayed Registration of Certificate of Death</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Death Section)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Registration of death reported beyond the mandatory 48-hour period, requiring 10-day public bulletin posting.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certificate of Death:</strong> 4 original copies with Affidavit of Delayed Registration executed by informant.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA Negative Certification:</strong> 1 original Certificate of Negative Result of Death from PSA.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Burial Certificate / Cemetery Certification:</strong> 1 original certification from cemetery administrator.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Affidavit of 2 Disinterested Persons:</strong> 1 original Joint Affidavit attesting to date and place of death.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">10 Days Posting + 2 Hours</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱300.00 (Late Registration Fee)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Death Registration Counter (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Delayed Death Registration">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Delayed Death Records</strong><br />
+                          Submit accomplished Certificate of Death with delayed registration affidavit and burial proofs.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Verifies records, reviews cemetery proof, and prepares 10-day notice of delayed registration posting.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Administrative Aide IV</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Late Registration Fee</strong><br />
+                          Pay late filing fee at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Receives payment and issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱300.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Mandatory 10-Day Posting Period</strong><br />
+                          Wait for the 10-calendar-day public posting period.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Posts notice on public bulletin board as required by Act No. 3753.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Staff</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">4</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Registered Death Certificate</strong><br />
+                          Return after completion of posting period and claim the registered Certificate of Death.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Records in Death Registry Book, assigns official number, and releases registered document.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- TAB 4: LEGAL & PETITIONS                   -->
+          <!-- ========================================== -->
+          <div
+            id="tab-legal"
+            class="service-content"
+            role="tabpanel"
+            aria-labelledby="tab-btn-legal"
+          >
+            <div class="sub-service-controls">
+              <span class="sub-service-count">
+                <i class="bi bi-collection"></i> 4 Services in this category
+              </span>
+              <button class="btn-toggle-all" type="button" aria-expanded="false">
+                <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
+              </button>
+            </div>
+
+            <!-- Service 4.1: Correction of Clerical Error (RA 9048) -->
+            <div class="sub-service-card" id="ra-9048">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-pencil-square"></i>
+                      <span>Petition for Correction of Clerical Error (RA 9048)</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Legal Instruments Division)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Administrative petition to correct typographical, spelling, or clerical errors in civil registry entries (Birth, Marriage, Death) without court order.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Petition Form (RA 9048 Form):</strong> 3 original notarized copies.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA Document with Error:</strong> 1 original PSA copy containing the clerical error.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Two (2) Supporting Documents:</strong> Form 137, Baptismal Certificate, Voter's Record, SSS/GSIS Static Information, or Medical Records.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid ID &amp; Community Tax Certificate:</strong> 1 photocopy of valid ID and Cedula of petitioner.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">10 Days Posting + 5 Days Review</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱1,000.00 (Filing Fee per RA 9048)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Legal Instruments Division (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for RA 9048 Petition">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>File Petition &amp; Legal Evaluation</strong><br />
+                          Submit notarized petition and supporting documents for legal assessment.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Evaluates petition, verifies jurisdictional facts, and prepares order of payment.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Supervising Admin Officer (SAO)</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay RA 9048 Filing Fee</strong><br />
+                          Pay administrative filing fee at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱1,000.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>10-Day Posting &amp; Decision Rendering</strong><br />
+                          Wait for the mandatory 10-day posting period and subsequent review.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Posts notice for 10 days; renders official Decision and Certificate of Finality.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">4</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Decision &amp; PSA Endorsement</strong><br />
+                          Claim approved Decision and Certificate of Finality for PSA affirmation.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Releases approved decision and endorses record to PSA Civil Registrar General.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Officer</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 4.2: Change of First Name / Correction of Sex/Date of Birth (RA 10172) -->
+            <div class="sub-service-card" id="ra-10172">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-file-earmark-diff"></i>
+                      <span>Change of First Name or Correction of Sex / Date of Birth (RA 10172)</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Legal Instruments Division)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Administrative petition for change of first name (RA 9048) or correction of day/month in birth date or sex entry (RA 10172) without court litigation.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Petition Form (RA 10172 Form):</strong> 3 original notarized copies.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA Birth Certificate:</strong> 1 original copy containing the incorrect entry.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Earliest School Records &amp; Medical Records:</strong> Form 137/138 (Elementary &amp; High School), Medical Certificate.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Clearances:</strong> NBI Clearance, Police Clearance, and Certificate of No Pending Case / Employment Record.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><span class="req-badge-conditional">FOR SEX CORRECTION</span> <strong>Government Physician Certification:</strong> Affidavit certifying petitioner has not undergone sex change.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Affidavit of Publication:</strong> Proof of 2 consecutive weeks publication in newspaper of general circulation.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">2 Weeks Publication + 10 Days Posting</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱3,000.00 (Filing Fee per RA 10172)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Legal Instruments Division</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for RA 10172 Petition">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Filing &amp; Legal Examination</strong><br />
+                          Submit notarized petition form, medical clearances, and early educational records.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Reviews clearances, interviews petitioner, and issues notice for newspaper publication.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Supervising Admin Officer (SAO)</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Filing Fee</strong><br />
+                          Pay administrative filing fee at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱3,000.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Newspaper Publication &amp; Bulletin Posting</strong><br />
+                          Publish notice once a week for 2 consecutive weeks in a local newspaper and wait for 10-day posting.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Posts notice on bulletin board and verifies publisher's affidavit of publication.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Officer</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">4</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Decision &amp; Endorsement to PSA</strong><br />
+                          Claim approved Decision, Certificate of Finality, and PSA Endorsement Record.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Renders decision, annotates civil registry books, and transmits record to PSA-OCRG.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 4.3: Registration of Legal Instruments -->
+            <div class="sub-service-card" id="legal-instruments">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-file-earmark-ruled"></i>
+                      <span>Registration of Legal Instruments (AUSF, AAP, Marriage Settlements)</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Legal Instruments Division)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Recording and registration of affidavits, marital property agreements, and authorization instruments (AUSF, AAP, Art. 176 Family Code).
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Legal Instrument:</strong> 4 original notarized copies (AUSF, AAP, Pre-nuptial Agreement, etc.).</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Affected Civil Registry Document:</strong> 1 PSA / Certified local copy of Birth or Marriage Certificate.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid Government IDs:</strong> 1 photocopy of valid IDs of executing parties.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">1 Day (24 Hours)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱300.00 (Registration Fee)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Legal Instruments Counter (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Legal Instruments Registration">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Notarized Instruments</strong><br />
+                          Submit 4 original copies of legal instrument and affected civil registry certificate.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Examines legal sufficiency, notarization details, and entry consistency.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Supervising Admin Officer (SAO)</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Registration Fee</strong><br />
+                          Pay registration fee at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱300.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Registered Record</strong><br />
+                          Claim registered instrument and annotated Certificate of Live Birth / Marriage.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Records in Register of Legal Instruments, enters annotation, and releases registered documents.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 4.4: Registration of Court Decrees / Orders -->
+            <div class="sub-service-card" id="court-decrees">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-bank"></i>
+                      <span>Registration of Court Decrees / Orders (Annulment, Adoption, Correction)</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Court Decrees Division)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Recording of judicial decrees rendered by Philippine courts (Nullity/Annulment of Marriage, Adoption, Presumptive Death, Court Correction of Entry).
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certified True Copy of Court Decision:</strong> 4 copies issued by the Clerk of Court.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certificate of Finality:</strong> 1 original copy from the deciding court.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA / Local Civil Registry Document:</strong> 1 original copy of affected document.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Certificate of Registration from City of Court:</strong> Required if court origin is outside Legazpi City.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">2 Days (48 Hours)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱1,000.00 (Annulment) / ₱500.00 (Adoption/Others)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Legal &amp; Judicial Decrees Section</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Court Decrees Registration">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Court Decision &amp; Finality</strong><br />
+                          Submit certified court decision and certificate of finality with affected civil registry records.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Verifies court seal, examines dispositive portion, and checks Certificate of Finality.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Supervising Admin Officer (SAO)</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Registration Fee</strong><br />
+                          Pay court decree registration fee at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Issues Official Receipt.
+                        </td>
+                        <td data-col="FEES">
+                          <span class="fee-tag">₱1,000.00</span><br />
+                          <small class="fee-note">₱500.00 for adoption/others</small>
+                        </td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Registered Court Decree &amp; Annotation</strong><br />
+                          Present Official Receipt and claim Certificate of Registration of Court Decree and annotated document.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Enters into Register of Court Decrees, annotates original record, and releases registered copies.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- TAB 5: CERTIFICATES & INQUIRIES            -->
+          <!-- ========================================== -->
+          <div
+            id="tab-certifications"
+            class="service-content"
+            role="tabpanel"
+            aria-labelledby="tab-btn-certifications"
+          >
+            <div class="sub-service-controls">
+              <span class="sub-service-count">
+                <i class="bi bi-collection"></i> 4 Services in this category
+              </span>
+              <button class="btn-toggle-all" type="button" aria-expanded="false">
+                <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
+              </button>
+            </div>
+
+            <!-- Service 5.1: Issuance of Certified True Copy / Transcription -->
+            <div class="sub-service-card" id="issuance-ctc">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-file-earmark-check"></i>
+                      <span>Issuance of Certified True Copy / Transcription of Civil Registry Documents</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Frontline Counter)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Request and issuance of certified true machine copies or official transcriptions (Form 1A, 2A, 3A) of Birth, Marriage, or Death records on file in Legazpi City archives.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Duly Accomplished Request Slip:</strong> 1 original copy available at frontline.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid Government-Issued ID:</strong> 1 original &amp; 1 photocopy of document owner / requester.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><span class="req-badge-conditional">IF REPRESENTATIVE</span> <strong>Authorization Letter:</strong> Signed authorization letter and valid ID of both owner and representative.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">20 Minutes (Maximum)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱100.00 (Per Copy / CTC)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Archives &amp; Records Counter (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Certified True Copy Issuance">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Request Form &amp; Verification</strong><br />
+                          Submit filled-out request slip and present valid ID at the verification counter.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Verifies identity and authority; searches archive databases and book records.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Administrative Officer / Aide</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Certification Fee</strong><br />
+                          Pay certification fee at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Receives payment and issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱100.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Certified Copy</strong><br />
+                          Present Official Receipt and claim certified true copy or Form 1A/2A/3A transcription.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Prints official transcription, affixes dry seal and signature, and releases document.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Officer III</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 5.2: Issuance of Certificate of Non-Availability / Negative Record -->
+            <div class="sub-service-card" id="negative-certification">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-file-earmark-x"></i>
+                      <span>Issuance of Certificate of Non-Availability / Negative Record Certification</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Archives Division)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Verification and issuance of certification certifying that a specific civil registry record is not available or destroyed/missing in the city archives.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Duly Accomplished Request Slip:</strong> 1 original copy.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid Government ID:</strong> 1 photocopy of requester ID.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">30 Minutes (Maximum)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱100.00 (Certification Fee)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">Archives &amp; Records Division (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Negative Certification">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Request &amp; Archival Search</strong><br />
+                          Submit request form with complete names, dates, and parents' details for archive verification.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Conducts exhaustive search across registry volumes and digitized databases.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Administrative Aide I / Nemir</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Certification Fee</strong><br />
+                          Pay certification fee at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Receives payment and issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱100.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Negative Certification</strong><br />
+                          Present Official Receipt and claim official Certification of Negative Record / Non-Availability.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Prepares certification of non-availability, signs, affixes official seal, and releases.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Officer III</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 5.3: Endorsement of Civil Registry Records to PSA -->
+            <div class="sub-service-card" id="psa-endorsement">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-send-check"></i>
+                      <span>Endorsement of Civil Registry Records to PSA (Advance Endorsement)</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Archives Division)</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Official endorsement and electronic transmission of local civil registry records to the Philippine Statistics Authority (PSA) for national database loading and indexing.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>PSA Negative Certification:</strong> 1 original copy showing document is not yet in PSA database.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Local Civil Registry Copy:</strong> 1 certified true copy of the registered document.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid Government ID:</strong> 1 photocopy of document owner.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">2 Hours (Endorsement Dispatch)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">₱150.00 (Endorsement Fee)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">PSA Endorsement Desk (Ground Floor)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for PSA Endorsement">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit PSA Negative &amp; Local Copy</strong><br />
+                          Submit local certified copy and PSA negative result requesting electronic/courier endorsement.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Verifies local book record, prepares transmittal slip and electronic endorsement package.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Registration Officer III</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Pay Endorsement Fee</strong><br />
+                          Pay transmittal and endorsement fee at the City Treasurer's Office.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Issues Official Receipt.
+                        </td>
+                        <td data-col="FEES"><span class="fee-tag">₱150.00</span></td>
+                        <td data-col="OFFICER"><span class="personnel-tag">CTO Cashier</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">3</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Claim Official Transmittal Record</strong><br />
+                          Claim official endorsement cover letter and tracking transmittal number.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Assigns transmittal number, stamps received, and dispatches records to PSA Provincial/Central Office.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 5.4: Assistance on Online Inquiries & Record Verification -->
+            <div class="sub-service-card" id="email-inquiries">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+              >
+                <div class="sub-service-header-left">
+                  <div class="sub-service-title-wrap">
+                    <h3>
+                      <i class="bi bi-chat-left-dots"></i>
+                      <span>Assistance on Online Feedback, Email Inquiries, &amp; Civil Registry Verification</span>
+                    </h3>
+                    <span class="sub-service-badge"><i class="bi bi-envelope"></i> Online / Email or Walk-in</span>
+                  </div>
+                  <p class="sub-service-desc">
+                    Public assistance for status verification of birth, marriage, death records, BRAP inquiries, and general civil registry concerns via email and help desk.
+                  </p>
+                  <div class="sub-service-teaser">
+                    <i class="bi bi-plus-circle-dotted"></i>
+                    <span>Tap to view checklist, turnaround, &amp; process steps</span>
+                  </div>
+                </div>
+                <div class="sub-service-chevron-btn" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+              <div class="sub-service-body">
+                <div class="req-summary-grid">
+                  <div class="req-box">
+                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
+                    <ul class="req-list">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Written Inquiry Details:</strong> Full name of document owner, birth/marriage/death dates, and parents' names.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Valid Government ID:</strong> 1 clear scanned copy / photo of requester ID.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="summary-metrics">
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-clock"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Turnaround Time</div>
+                        <div class="metric-value">2 Hours (Maximum)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-cash-coin"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Standard Fees</div>
+                        <div class="metric-value">Free (Public Assistance)</div>
+                      </div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="metric-content">
+                        <div class="metric-label">Mode of Transaction</div>
+                        <div class="metric-value">PACD Desk • Email Inquiries Desk</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="process-table" aria-label="Steps for Email Inquiries & Verification">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;">STEP</th>
+                        <th style="width: 32%;">CLIENT STEP</th>
+                        <th style="width: 36%;">AGENCY ACTION</th>
+                        <th style="width: 12%;">FEES</th>
+                        <th style="width: 12%;">OFFICER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">1</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Submit Inquiry Details</strong><br />
+                          Submit inquiry details in person at PACD desk or send email to legazpicivilregistrar@gmail.com.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Logs inquiry, searches archive indices, and prepares official response or verification instructions.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">Admin Officer IV / Nemir</span></td>
+                      </tr>
+                      <tr>
+                        <td data-col="STEP"><span class="step-badge">2</span></td>
+                        <td data-col="CLIENT STEP">
+                          <strong>Receive Verification / Guidance</strong><br />
+                          Receive confirmation of document availability, status of endorsement, or step-by-step guidance.
+                        </td>
+                        <td data-col="AGENCY ACTION">
+                          Provides complete guidance, application requirements, and relevant scheduling details.
+                        </td>
+                        <td data-col="FEES">—</td>
+                        <td data-col="OFFICER"><span class="personnel-tag">City Civil Registrar Staff</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Personnel Section -->
+      <section class="bpl-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>
+              <i class="bi bi-people"></i>
+              <span>OCCR Key Personnel &amp; Section Officers</span>
+            </h2>
+            <p>
+              Frontline staff and registration officers serving the citizens of Legazpi City.
+            </p>
+          </div>
+          <div class="staff-grid" id="staff-grid-container">
+            <!-- Top 3 Key Officers by Authority (Default Visible) -->
+            <div class="staff-card">
+              <h4>Priscilla L. Galicia</h4>
+              <p class="staff-role">Head of Office</p>
+              <p>CGDH I, City Civil Registrar</p>
+            </div>
+            <div class="staff-card">
+              <h4>Juan B. Yuson</h4>
+              <p class="staff-role">Supervising Admin. Officer</p>
+              <p>Court Decrees &amp; Legal Instruments</p>
+            </div>
+            <div class="staff-card">
+              <h4>Corazon Kim E. Nemir</h4>
+              <p class="staff-role">Registration Officer III / Admin Officer IV</p>
+              <p>Archives, Admin &amp; Information Division</p>
+            </div>
+
+            <!-- Additional Staff & Section Officers (Expandable) -->
+            <div class="staff-extra" id="staff-extra-container">
+              <div class="staff-card">
+                <h4>L. Casquejo</h4>
+                <p class="staff-role">Assistant Registration Officer</p>
+                <p>Legal Instruments &amp; Archives Division</p>
+              </div>
+              <div class="staff-card">
+                <h4>M. Loria</h4>
+                <p class="staff-role">Registration Officer II</p>
+                <p>Birth Registration Section</p>
+              </div>
+              <div class="staff-card">
+                <h4>J.P. Pasano</h4>
+                <p class="staff-role">Administrative Aide IV</p>
+                <p>Death Registration Section</p>
+              </div>
+              <div class="staff-card">
+                <h4>V. Macasinag</h4>
+                <p class="staff-role">Administrative Aide IV</p>
+                <p>Marriage Registration Section</p>
+              </div>
+              <div class="staff-card">
+                <h4>M. Lorilla</h4>
+                <p class="staff-role">Administrative Aide III</p>
+                <p>Marriage Registration Section</p>
+              </div>
+              <div class="staff-card">
+                <h4>D. Abejuro</h4>
+                <p class="staff-role">Administrative Aide IV</p>
+                <p>Birth Registration Section</p>
+              </div>
+              <div class="staff-card">
+                <h4>M. Azcune</h4>
+                <p class="staff-role">Administrative Aide I</p>
+                <p>Birth Registration Section</p>
+              </div>
+              <div class="staff-card">
+                <h4>R.A. Olimpo</h4>
+                <p class="staff-role">Administrative Aide III</p>
+                <p>Death Registration Section</p>
+              </div>
+              <div class="staff-card">
+                <h4>A. Vargas</h4>
+                <p class="staff-role">Administrative Aide I</p>
+                <p>Legal Instruments &amp; Judicial Decrees</p>
+              </div>
+              <div class="staff-card">
+                <h4>M. Binas</h4>
+                <p class="staff-role">Administrative Aide I</p>
+                <p>Legal Instruments &amp; Judicial Decrees</p>
+              </div>
+              <div class="staff-card">
+                <h4>I. Mendones &amp; J.K. Nunez</h4>
+                <p class="staff-role">Cashier / Disbursing Officers</p>
+                <p>Collection &amp; Official Receipts</p>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="staff-expand-btn" id="btn-toggle-staff" aria-expanded="false">
+            <i class="bi bi-chevron-down"></i>
+            <span>View All Staff &amp; Section Officers (14)</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Feedback, Complaints & Official OCCR Contact Info Section (Grey Background) -->
+      <section class="bpl-section alt-bg">
+        <div class="container">
+          <div class="contact-info-grid">
+            <div class="contact-card">
+              <h4><i class="bi bi-geo-alt-fill"></i> Office Address &amp; Location</h4>
+              <p><strong>Office of the City Civil Registrar (OCCR)</strong></p>
+              <p>Ground Floor, City Hall Building, Rizal St., Legazpi City, Albay</p>
+              <p>Hours: Monday to Friday, 8:00 AM - 5:00 PM</p>
+            </div>
+
+            <div class="contact-card">
+              <h4><i class="bi bi-telephone-fill"></i> Direct Contact Lines</h4>
+              <p><strong>OCCR Action Hotline:</strong> <a href="tel:09606884345">0960 688 4345</a> / <a href="tel:0527425700">742-5700</a></p>
+              <p><strong>Official Email:</strong> <a href="mailto:legazpicivilregistrar@gmail.com">legazpicivilregistrar@gmail.com</a></p>
+              <p><strong>Head of Office:</strong> Priscilla L. Galicia, CGDH I</p>
+            </div>
+
+            <div class="contact-card">
+              <h4><i class="bi bi-chat-dots"></i> Feedback Mechanism</h4>
+              <p>Accomplish the <strong>Customer Feedback Form</strong> available at the Information / PACD Desk.</p>
+              <p>Feedback is evaluated and endorsed to the concerned section and City Civil Registrar for prompt action and continuous service quality improvement.</p>
+            </div>
+
+            <div class="contact-card">
+              <h4><i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) &amp; CCB</h4>
+              <p><strong>ARTA Complaints Email:</strong> <a href="mailto:complaints@arta.gov.ph">complaints@arta.gov.ph</a> | 1-ARTA (2782)</p>
+              <p><strong>Presidential Complaint Center (PCC):</strong> Hotline 8888 | <a href="mailto:pcc@malacanang.gov.ph">pcc@malacanang.gov.ph</a></p>
+              <p><strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS) | <a href="mailto:email@contactcenterngbayan.gov.ph">email@contactcenterngbayan.gov.ph</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Source Section (White Background) -->
+      <section class="bpl-section">
+        <div class="container">
+          <p class="data-source" style="text-align: center; margin: 0;">
+            <i class="bi bi-info-circle"></i> Source:
+            <a
+              href="https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-CIVIL-REGISTRAR-CITIZEN_S-CHARTER-2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Legazpi Office of the City Civil Registrar (OCCR) Citizen's Charter 2026</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main-new">
+          <div class="footer-brand">
+            <img
+              src="../assets/images/logo/better-solano-logo-white.svg"
+              alt="Better Legazpi logo"
+              class="footer-logo"
+            />
+            <p class="footer-tagline">
+              Empowering the people of Legazpi with transparent access to the services, programs, and public records of LGU Legazpi City.
+            </p>
+            <div class="footer-social-new">
+              <a
+                href="https://www.facebook.com/betterlegazpi.org"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/betterlegazpi/"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://discord.com/invite/betterlegazpi"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                ><i class="bi bi-discord"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul class="footer-links-new">
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../services/certificates">Certificates &amp; Vital Records</a></li>
+              <li><a href="../service-details/business-permits-licensing">BPLO Hub</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
+              <li><a href="../accessibility/">Accessibility</a></li>
+              <li><a href="../faq/">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul class="footer-links-new">
+              <li>
+                <a href="https://psa.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >PSA Official Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://psaserbilis.com.ph" target="_blank" rel="noopener noreferrer"
+                  >PSA Serbilis Online</a
+                >
+              </li>
+              <li>
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Open Data Philippines</a
+                >
+              </li>
+              <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <div class="footer-cost" role="status">
+              Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
+              ><i class="bi bi-envelope-heart"></i>
+              <span>Volunteer with us</span></a
+            >
+            <a
+              href="https://github.com/BetterLegazpi/betterlegazpi"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="bi bi-github"></i>
+              <span>Contribute code with us</span></a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom-new">
+          <div class="footer-copyright">
+            <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
+            <span class="footer-copyright-license">MIT | CC BY 4.0</span>
+            <span class="footer-copyright-disclaimer"
+              >All public information sourced from official government portals &amp; the Legazpi City Citizen's Charter.</span
+            >
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.2.0</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/info-bar.js"></script>
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/version.js"></script>
+
+    <!-- Interactive Scripts -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // --- 1. Service Category Tab Switching ---
+        const tabs = document.querySelectorAll('.service-tab');
+        const contents = document.querySelectorAll('.service-content');
+        const tabArray = Array.from(tabs);
+
+        function activateTab(targetTab) {
+          const tabName = targetTab.getAttribute('data-tab');
+          if (!tabName) return;
+
+          tabs.forEach((t) => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          contents.forEach((c) => c.classList.remove('active'));
+
+          targetTab.classList.add('active');
+          targetTab.setAttribute('aria-selected', 'true');
+
+          const targetContent = document.getElementById('tab-' + tabName);
+          if (targetContent) {
+            targetContent.classList.add('active');
+          }
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener('click', () => {
+            activateTab(tab);
+          });
+
+          tab.addEventListener('keydown', (e) => {
+            const index = tabArray.indexOf(tab);
+            let nextIndex = null;
+
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+              nextIndex = (index + 1) % tabArray.length;
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+              nextIndex = (index - 1 + tabArray.length) % tabArray.length;
+            } else if (e.key === 'Home') {
+              nextIndex = 0;
+            } else if (e.key === 'End') {
+              nextIndex = tabArray.length - 1;
+            }
+
+            if (nextIndex !== null) {
+              e.preventDefault();
+              tabArray[nextIndex].focus();
+              activateTab(tabArray[nextIndex]);
+            }
+          });
+        });
+
+        // Hash-based Tab Deep Linking
+        if (window.location.hash) {
+          const hash = window.location.hash.substring(1);
+          const targetCard = document.getElementById(hash);
+          if (targetCard) {
+            const parentContent = targetCard.closest('.service-content');
+            if (parentContent) {
+              const tabId = parentContent.id.replace('tab-', '');
+              const matchingTab = document.querySelector('.service-tab[data-tab="' + tabId + '"]');
+              if (matchingTab) {
+                activateTab(matchingTab);
+                targetCard.classList.add('is-open');
+                const header = targetCard.querySelector('.sub-service-header');
+                if (header) header.setAttribute('aria-expanded', 'true');
+                setTimeout(() => {
+                  targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+              }
+            }
+          }
+        }
+
+        // --- 2. Sub-Service Accordions ---
+        function updateToggleAllButton(tabContainer) {
+          const toggleBtn = tabContainer.querySelector('.btn-toggle-all');
+          if (!toggleBtn) return;
+          const cards = tabContainer.querySelectorAll('.sub-service-card');
+          const allOpen = Array.from(cards).every((card) => card.classList.contains('is-open'));
+
+          if (allOpen) {
+            toggleBtn.setAttribute('aria-expanded', 'true');
+            toggleBtn.innerHTML = '<i class="bi bi-arrows-collapse"></i> <span>Collapse All</span>';
+          } else {
+            toggleBtn.setAttribute('aria-expanded', 'false');
+            toggleBtn.innerHTML = '<i class="bi bi-arrows-expand"></i> <span>Expand All</span>';
+          }
+        }
+
+        function toggleCard(card) {
+          const header = card.querySelector('.sub-service-header');
+          const isOpen = card.classList.toggle('is-open');
+          if (header) {
+            header.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          }
+          const tabContainer = card.closest('.service-content');
+          if (tabContainer) {
+            updateToggleAllButton(tabContainer);
+          }
+        }
+
+        const headers = document.querySelectorAll('.sub-service-header');
+        headers.forEach((header) => {
+          header.addEventListener('click', () => {
+            const card = header.closest('.sub-service-card');
+            if (card) toggleCard(card);
+          });
+
+          header.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const card = header.closest('.sub-service-card');
+              if (card) toggleCard(card);
+            }
+          });
+        });
+
+        const toggleAllBtns = document.querySelectorAll('.btn-toggle-all');
+        toggleAllBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const tabContainer = btn.closest('.service-content');
+            if (!tabContainer) return;
+            const cards = tabContainer.querySelectorAll('.sub-service-card');
+            const isCurrentlyExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+            cards.forEach((card) => {
+              const header = card.querySelector('.sub-service-header');
+              if (isCurrentlyExpanded) {
+                card.classList.remove('is-open');
+                if (header) header.setAttribute('aria-expanded', 'false');
+              } else {
+                card.classList.add('is-open');
+                if (header) header.setAttribute('aria-expanded', 'true');
+              }
+            });
+
+            if (isCurrentlyExpanded) {
+              btn.setAttribute('aria-expanded', 'false');
+              btn.innerHTML = '<i class="bi bi-arrows-expand"></i> <span>Expand All</span>';
+            } else {
+              btn.setAttribute('aria-expanded', 'true');
+              btn.innerHTML = '<i class="bi bi-arrows-collapse"></i> <span>Collapse All</span>';
+            }
+          });
+        });
+
+        // --- 3. Key Personnel Expand / Collapse Toggle ---
+        const staffToggleBtn = document.getElementById('btn-toggle-staff');
+        const staffExtraContainer = document.getElementById('staff-extra-container');
+
+        if (staffToggleBtn && staffExtraContainer) {
+          staffToggleBtn.addEventListener('click', () => {
+            const isExpanded = staffToggleBtn.getAttribute('aria-expanded') === 'true';
+            if (isExpanded) {
+              staffExtraContainer.classList.remove('show');
+              staffToggleBtn.setAttribute('aria-expanded', 'false');
+              staffToggleBtn.innerHTML = '<i class="bi bi-chevron-down"></i> <span>View All Staff &amp; Section Officers (14)</span>';
+            } else {
+              staffExtraContainer.classList.add('show');
+              staffToggleBtn.setAttribute('aria-expanded', 'true');
+              staffToggleBtn.innerHTML = '<i class="bi bi-chevron-up"></i> <span>Show Key Officers Only (Top 3)</span>';
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

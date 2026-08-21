@@ -80,6 +80,15 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
 
   <body>
@@ -142,6 +151,7 @@
 <li><a href="business" data-i18n="infra-business">Business</a></li>
 <li><a href="certificates" data-i18n="infra-certificates">Certificates</a></li>
 <li><a href="education" data-i18n="infra-education">Education</a></li>
+<li><a href="employment" data-i18n="infra-employment">Employment</a></li>
 <li><a href="environment" data-i18n="infra-environment">Environment</a></li>
 <li><a href="health" data-i18n="infra-health">Health</a></li>
 <li>
@@ -182,6 +192,9 @@
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">BCL</button>
           </div>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -251,7 +264,7 @@
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/cpdo-services.html#locational-building-permit" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
+              <a href="../service-details/cpdo-services.html#locational-building-permit" class="service-item-card">
                 <h3 class="service-item-title">
                   <i class="bi bi-geo-alt-fill"></i>
                   <span>Locational & Zoning Clearance</span>
@@ -265,7 +278,7 @@
                 </div>
               </a>
 
-              <a href="../service-details/ceo-services.html#bldg-permit" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
+              <a href="../service-details/ceo-services.html#bldg-permit" class="service-item-card">
                 <h3 class="service-item-title">
                   <i class="bi bi-hammer"></i>
                   <span>Building Permit Issuance</span>
@@ -279,7 +292,7 @@
                 </div>
               </a>
 
-              <a href="../service-details/ceo-services.html#occupancy-app" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
+              <a href="../service-details/ceo-services.html#occupancy-app" class="service-item-card">
                 <h3 class="service-item-title">
                   <i class="bi bi-house-check"></i>
                   <span>Certificate of Occupancy</span>
@@ -307,7 +320,7 @@
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/ceo-services.html#mechanical-permit" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
+              <a href="../service-details/ceo-services.html#mechanical-permit" class="service-item-card">
                 <h3 class="service-item-title">
                   <i class="bi bi-gear-wide-connected"></i>
                   <span>Ancillary & Mechanical Permits</span>
@@ -321,7 +334,7 @@
                 </div>
               </a>
 
-              <a href="../service-details/ceo-services.html#electrical-permit" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
+              <a href="../service-details/ceo-services.html#electrical-permit" class="service-item-card">
                 <h3 class="service-item-title">
                   <i class="bi bi-lightning-charge-fill"></i>
                   <span>Electrical Inspection & CFEI</span>
@@ -335,7 +348,7 @@
                 </div>
               </a>
 
-              <a href="../service-details/ceo-services.html#demolition-permit" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
+              <a href="../service-details/ceo-services.html#demolition-permit" class="service-item-card">
                 <h3 class="service-item-title">
                   <i class="bi bi-building-gear"></i>
                   <span>Demolition & Structural Repair</span>
@@ -363,7 +376,7 @@
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/cpdo-services.html#development-permit" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
+              <a href="../service-details/cpdo-services.html#development-permit" class="service-item-card">
                 <h3 class="service-item-title">
                   <i class="bi bi-diagram-3-fill"></i>
                   <span>Subdivision Development Permit</span>
@@ -377,7 +390,7 @@
                 </div>
               </a>
 
-              <a href="../service-details/cpdo-services.html#site-zoning-cert" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
+              <a href="../service-details/cpdo-services.html#site-zoning-cert" class="service-item-card">
                 <h3 class="service-item-title">
                   <i class="bi bi-card-checklist"></i>
                   <span>Zoning & Land Use Certification</span>
@@ -391,7 +404,7 @@
                 </div>
               </a>
 
-              <a href="../service-details/cpdo-services.html#land-reclassification" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
+              <a href="../service-details/cpdo-services.html#land-reclassification" class="service-item-card">
                 <h3 class="service-item-title">
                   <i class="bi bi-layers-half"></i>
                   <span>Site Plan & Land Reclassification</span>
