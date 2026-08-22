@@ -80,7 +80,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-      <script>
+    <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -147,19 +147,17 @@
             <li class="has-dropdown">
               <a href="./" class="active" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
               <ul class="dropdown-menu">
-<li><a href="agriculture" data-i18n="env-agriculture">Agriculture</a></li>
-<li><a href="business" data-i18n="env-business">Business</a></li>
-<li><a href="certificates" data-i18n="env-certificates">Certificates</a></li>
-<li><a href="education" data-i18n="env-education">Education</a></li>
-<li><a href="employment" data-i18n="env-employment">Employment</a></li>
-<li><a href="environment" data-i18n="env-environment">Environment</a></li>
-<li><a href="health" data-i18n="env-health">Health</a></li>
-<li><a href="infrastructure" data-i18n="env-infrastructure">Infrastructure</a></li>
-<li>
-                  <a href="social-services" data-i18n="env-social-services">Social Services</a>
-                </li>
-<li><a href="tax-payments" data-i18n="env-tax-payments">Tax Payments</a></li>
-</ul>
+                <li><a href="agriculture" data-i18n="env-agriculture">Agriculture</a></li>
+                <li><a href="business" data-i18n="env-business">Business</a></li>
+                <li><a href="certificates" data-i18n="env-certificates">Certificates</a></li>
+                <li><a href="education" data-i18n="env-education">Education</a></li>
+                <li><a href="employment" data-i18n="env-employment">Employment</a></li>
+                <li><a href="environment" data-i18n="env-environment">Environment</a></li>
+                <li><a href="health" data-i18n="env-health">Health</a></li>
+                <li><a href="infrastructure" data-i18n="env-infrastructure">Infrastructure</a></li>
+                <li><a href="social-services" data-i18n="env-social-services">Social Services</a></li>
+                <li><a href="tax-payments" data-i18n="env-tax-payments">Tax Payments</a></li>
+              </ul>
             </li>
             <li><a href="../government/" data-i18n="nav-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
@@ -247,121 +245,169 @@
         </div>
       </section>
 
-      <!-- SECTION 1: KEY SERVICES -->
+      <!-- SECTION 1: KEY SERVICES USER-JOURNEY GRID -->
       <section class="section">
         <div class="container">
-          <div class="grid grid-3">
-            <a href="../service-details/ocenr-services#dump-permit" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
-              <h3 class="service-item-title">
-                <i class="bi bi-trash"></i>
-                <span>Permit to Dump (Solid Waste)</span>
-              </h3>
-              <p class="service-item-desc">
-                Secure permits for direct garbage disposal at Banquerohan Sanitary Landfill Facility
+          <!-- Category 1: Managing waste & business compliance -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
+              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
+                <i class="bi bi-trash3-fill" style="color: var(--color-primary);"></i>
+                <span>Managing waste &amp; business compliance</span>
+              </h2>
+              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
+                Secure permits for waste disposal, attend mandatory ESWM seminars, and schedule septic tank siphoning.
               </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> Free</span>
-                <span><strong>Time:</strong> 1 hr 35 mins</span>
-              </div>
-            </a>
+            </div>
+            <div class="grid grid-3">
+              <!-- Get a Permit to Dump -->
+              <a href="../service-details/ocenr-services#permit-to-dump" class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-trash"></i>
+                  <span>Get a Permit to Dump</span>
+                </h3>
+                <p class="service-item-desc">
+                  Secure permits for direct garbage disposal at Banquerohan Sanitary Landfill or composting facilities.
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> Free</span>
+                  <span><strong>Time:</strong> 1 hr 35 mins</span>
+                </div>
+              </a>
 
-            <a href="../service-details/ocenr-services#slf-visitor-pass" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
-              <h3 class="service-item-title">
-                <i class="bi bi-building-check"></i>
-                <span>SLF Visitor Entry Pass</span>
-              </h3>
-              <p class="service-item-desc">
-                Request visitor entry pass and facility orientation for Banquerohan Sanitary Landfill
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> Free</span>
-                <span><strong>Time:</strong> 1 hr 18 mins</span>
-              </div>
-            </a>
+              <!-- Attend the ESWM Seminar -->
+              <a href="../service-details/ocenr-services#eswm-virtual-seminar" class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-file-earmark-check"></i>
+                  <span>Attend the ESWM Seminar</span>
+                </h3>
+                <p class="service-item-desc">
+                  Complete online or face-to-face ESWM seminar to obtain the mandatory Environmental Certificate.
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> ₱50.00</span>
+                  <span><strong>Time:</strong> ~2 hrs 55 mins</span>
+                </div>
+              </a>
 
-            <a href="../service-details/ocenr-services#environmental-certificate" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
-              <h3 class="service-item-title">
-                <i class="bi bi-file-earmark-check"></i>
-                <span>Environmental Certificate</span>
-              </h3>
-              <p class="service-item-desc">
-                Complete ESWM seminar requirement and secure Environmental Certificate for business
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> ₱50.00</span>
-                <span><strong>Time:</strong> ~2 hrs 55 mins</span>
-              </div>
-            </a>
+              <!-- Schedule Septic Tank Desludging -->
+              <a href="../service-details/ocenr-services#septage-management" class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-droplet-half"></i>
+                  <span>Schedule Septic Tank Desludging</span>
+                </h3>
+                <p class="service-item-desc">
+                  Apply for septic tank siphoning and desludging services under the City Septage Management Code.
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> Septage Fee</span>
+                  <span><strong>Time:</strong> 2 hrs 12 mins</span>
+                </div>
+              </a>
+            </div>
+          </div>
 
-            <a href="../service-details/ocenr-services#tree-cutting-no-objection" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
-              <h3 class="service-item-title">
-                <i class="bi bi-tree"></i>
-                <span>Tree Cutting No-Objection</span>
-              </h3>
-              <p class="service-item-desc">
-                Obtain LGU Certificate of No Objection for DENR tree cutting permit applications
+          <!-- Category 2: Cutting trees & registering equipment -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
+              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
+                <i class="bi bi-tree-fill" style="color: var(--color-primary);"></i>
+                <span>Cutting trees &amp; registering equipment</span>
+              </h2>
+              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
+                Obtain LGU certifications and clearances required for DENR tree cutting and chainsaw registration.
               </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> Free</span>
-                <span><strong>Time:</strong> 6 days 40 mins</span>
-              </div>
-            </a>
+            </div>
+            <div class="grid grid-3">
+              <!-- Get a Certificate of No Objection to Cut Trees -->
+              <a href="../service-details/ocenr-services#tree-cutting-no-objection" class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-tree"></i>
+                  <span>Get a Certificate of No Objection to Cut Trees</span>
+                </h3>
+                <p class="service-item-desc">
+                  Obtain LGU Certificate of No Objection prerequisite for DENR tree cutting permit applications.
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> Free</span>
+                  <span><strong>Time:</strong> 6 days 40 mins</span>
+                </div>
+              </a>
 
-            <a href="../service-details/ocenr-services#chainsaw-registration" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
-              <h3 class="service-item-title">
-                <i class="bi bi-tools"></i>
-                <span>Chainsaw Registration Cert</span>
-              </h3>
-              <p class="service-item-desc">
-                Secure LGU registration support and serial number validation for DENR chainsaw permit
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> Free</span>
-                <span><strong>Time:</strong> 1 hr 10 mins</span>
-              </div>
-            </a>
+              <!-- Get Chainsaw Registration Certification -->
+              <a href="../service-details/ocenr-services#chainsaw-registration" class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-tools"></i>
+                  <span>Get Chainsaw Registration Certification</span>
+                </h3>
+                <p class="service-item-desc">
+                  Secure LGU registration support and serial number validation before registering chainsaws with DENR.
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> Free</span>
+                  <span><strong>Time:</strong> 1 hr 10 mins</span>
+                </div>
+              </a>
+            </div>
+          </div>
 
-            <a href="../service-details/ocenr-services#tree-seedling-request" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
-              <h3 class="service-item-title">
-                <i class="bi bi-flower2"></i>
-                <span>Free Tree Seedlings</span>
-              </h3>
-              <p class="service-item-desc">
-                Request free tree seedlings for community planting activities and urban reforestation
+          <!-- Category 3: Community & environmental requests -->
+          <div>
+            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
+              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
+                <i class="bi bi-flower2" style="color: var(--color-primary);"></i>
+                <span>Community &amp; environmental requests</span>
+              </h2>
+              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
+                Request facility entry passes, free tree seedlings for planting activities, and educational campaigns.
               </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> Free</span>
-                <span><strong>Time:</strong> 4 hrs 35 mins</span>
-              </div>
-            </a>
+            </div>
+            <div class="grid grid-3">
+              <!-- Visit the Sanitary Landfill Facility -->
+              <a href="../service-details/ocenr-services#slf-visitor-pass" class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-building-check"></i>
+                  <span>Visit the Sanitary Landfill Facility</span>
+                </h3>
+                <p class="service-item-desc">
+                  Request visitor entry pass and project orientation for the Banquerohan Sanitary Landfill Facility.
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> Free</span>
+                  <span><strong>Time:</strong> 1 hr 18 mins</span>
+                </div>
+              </a>
 
-            <a href="../service-details/ocenr-services#iec-campaign-request" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
-              <h3 class="service-item-title">
-                <i class="bi bi-megaphone"></i>
-                <span>IEC Campaign Request</span>
-              </h3>
-              <p class="service-item-desc">
-                Book OCENR resource speakers for ecological waste and clean water educational campaigns
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> Free</span>
-                <span><strong>Time:</strong> 20 mins</span>
-              </div>
-            </a>
+              <!-- Request Free Tree Seedlings -->
+              <a href="../service-details/ocenr-services#tree-seedling-request" class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-flower2"></i>
+                  <span>Request Free Tree Seedlings</span>
+                </h3>
+                <p class="service-item-desc">
+                  Request free tree seedlings from the OCENR Nursery for community planting and urban greening.
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> Free</span>
+                  <span><strong>Time:</strong> 4 hrs 35 mins</span>
+                </div>
+              </a>
 
-            <a href="../service-details/ocenr-services#septage-management" class="service-item-card" style="text-decoration: none; color: inherit; display: block;">
-              <h3 class="service-item-title">
-                <i class="bi bi-droplet-half"></i>
-                <span>Septage Desludging</span>
-              </h3>
-              <p class="service-item-desc">
-                Apply for septic tank siphoning and desludging under local septage management code
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> Septage Fee</span>
-                <span><strong>Time:</strong> 2 hrs 12 mins</span>
-              </div>
-            </a>
+              <!-- Request an IEC Campaign -->
+              <a href="../service-details/ocenr-services#iec-campaign-request" class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-megaphone"></i>
+                  <span>Request an IEC Campaign</span>
+                </h3>
+                <p class="service-item-desc">
+                  Book OCENR speakers for ecological solid waste and environmental awareness lectures.
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> Free</span>
+                  <span><strong>Time:</strong> 20 mins</span>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -380,7 +426,7 @@
               <div class="office-card-content">
                 <h3 class="office-card-title">OCENR Services</h3>
                 <p class="office-card-desc">
-                  Official portal for solid waste management, landfill passes, environmental clearances, and septage services
+                  Official Citizen's Charter portal for solid waste permits, ESWM compliance seminars, tree certifications, and septage desludging.
                 </p>
               </div>
               <div class="office-card-arrow">
@@ -409,7 +455,7 @@
             </p>
             <div class="footer-social-new">
               <a
-                href="https://www.facebook.com/bettersolano.org"
+                href="https://www.facebook.com/betterlegazpi.org"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -417,7 +463,7 @@
                 ><i class="bi bi-facebook"></i
               ></a>
               <a
-                href="https://www.linkedin.com/company/bettersolano/"
+                href="https://www.linkedin.com/company/betterlegazpi/"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -425,7 +471,7 @@
                 ><i class="bi bi-linkedin"></i
               ></a>
               <a
-                href="https://discord.com/invite/qeSu7RJkjQ"
+                href="https://discord.com/invite/betterlegazpi"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -437,6 +483,9 @@
           <div class="footer-column">
             <h4 data-i18n="env-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
+              <li><a href="../services/business">Business Services</a></li>
+              <li><a href="../services/environment">Environment Services</a></li>
+              <li><a href="../services/agriculture">Agriculture Services</a></li>
               <li><a href="../sitemap/" data-i18n="env-sitemap">Sitemap</a></li>
               <li><a href="../terms/" data-i18n="env-terms-of-use">Terms of Use</a></li>
               <li><a href="../privacy/" data-i18n="env-privacy-policy">Privacy Policy</a></li>
@@ -483,6 +532,18 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
+              ><i class="bi bi-envelope-heart"></i>
+              <span>Volunteer with us</span></a
+            >
+            <a
+              href="https://github.com/BetterLegazpi/betterlegazpi"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="bi bi-github"></i>
+              <span>Contribute code with us</span></a
+            >
           </div>
         </div>
         <div class="footer-bottom-new">
@@ -492,7 +553,7 @@
             <span class="footer-copyright-disclaimer"
               >All public information sourced from official government portals.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.2.0</span>
           </div>
         </div>
       </div>

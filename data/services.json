@@ -951,6 +951,30 @@
       "url": "../service-details/cao-services-2.html"
     },
     {
+      "id": "ocenr-services",
+      "title": "Office of the City Environment and Natural Resources",
+      "category": "Environment Services",
+      "categoryId": "environment",
+      "description": "Solid waste permits, sanitary landfill visitor passes, ESWM environmental certificates, tree cutting no-objection, tree seedlings, and septage desludging",
+      "keywords": [
+        "OCENR",
+        "environment",
+        "solid waste",
+        "permit to dump",
+        "sanitary landfill",
+        "environmental certificate",
+        "tree cutting",
+        "chainsaw",
+        "tree seedlings",
+        "septage",
+        "desludging"
+      ],
+      "fee": "Free / ₱50.00 / Septage Fee",
+      "processingTime": "20 mins - 6 days",
+      "office": "Office of the City Environment and Natural Resources (OCENR)",
+      "url": "../service-details/ocenr-services.html"
+    },
+    {
       "id": "general-services",
       "title": "General Services Office",
       "category": "Government Services",
