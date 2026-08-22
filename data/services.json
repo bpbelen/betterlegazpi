@@ -713,11 +713,11 @@
       "url": "../service-details/seedo-slaughterhouse.html"
     },
     {
-      "id": "mswdo-services",
+      "id": "cswdo-services",
       "title": "CSWDO Services",
       "category": "Social Services & Assistance",
       "categoryId": "social-services",
-      "description": "AICS financial assistance, Social Case Study reports, Indigency certificates, PhilHealth UHC, Solo Parent ID (RA 11861), PWD & senior citizen assistance",
+      "description": "AICS financial assistance, Social Case Study reports, Indigency certificates, PhilHealth UHC, Solo Parent ID (RA 11861)",
       "keywords": [
         "CSWDO",
         "Legazpi",
@@ -728,16 +728,15 @@
         "Solo Parent",
         "RA 11861",
         "PhilHealth UHC",
-        "PWD",
-        "senior citizen",
         "assistance",
         "social worker",
-        "welfare"
+        "welfare",
+        "crisis"
       ],
       "fee": "Free",
-      "processingTime": "55 min - 2 days",
+      "processingTime": "1 hr - 2 days",
       "office": "CSWDO Legazpi",
-      "url": "../service-details/mswdo-services.html"
+      "url": "../service-details/cswdo-services.html"
     },
     {
       "id": "waste-management",
