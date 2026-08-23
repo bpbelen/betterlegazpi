@@ -1,0 +1,3560 @@
+{
+  "_schema_version": "1.0",
+  "_sources": [
+    "Department of Health (DOH) National Health Facility Registry (NHFR) 2026",
+    "PhilHealth List of Accredited YAKAP Clinics with Available GAMOT Prescription for CY 2026 (Updated July 31, 2026)",
+    "Legazpi City Health Office (CHO) Barangay Health Network & PSA 2024 Population Registry"
+  ],
+  "city": "City of Legazpi",
+  "province": "Albay",
+  "region": "Region V - Bicol Region",
+  "summary_counts": {
+    "total": 88,
+    "hospitals": 8,
+    "yakap_accredited": 13,
+    "super_health_centers": 1,
+    "birthing_homes": 3,
+    "laboratories": 2,
+    "barangay_health_stations": 70,
+    "government_owned": 80,
+    "private_owned": 8
+  },
+  "facilities": [
+    {
+      "id": "fac-hosp-001",
+      "name": "Bicol Regional Hospital and Medical Center (BRHMC)",
+      "short_name": "BRHMC",
+      "category": "Hospital",
+      "type": "Level 3 Tertiary Apex Medical Center",
+      "ownership": "Government",
+      "address": {
+        "street": "Rizal Street",
+        "building": "BRHMC Medical Complex",
+        "barangay": "Bgy. 1 - Em's Barrio / Concepcion Border",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 483-0017 / (052) 483-0014",
+        "mobile": "0917-826-6467",
+        "email": "brhmc.doh@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "yakap_validity": "2026-12-31",
+        "philhealth_accredited": true
+      },
+      "services": [
+        "24/7 Emergency",
+        "Trauma & Critical Care",
+        "Specialized Surgery",
+        "Cardiology & Hemodialysis",
+        "Pediatrics & OB-GYN",
+        "Oncology",
+        "Comprehensive Laboratory & Radiology",
+        "Pharmacy"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1444,
+        "lng": 123.7291
+      }
+    },
+    {
+      "id": "fac-hosp-002",
+      "name": "Allied Care Experts (ACE) Medical Center - Legazpi, Inc.",
+      "short_name": "ACE Medical Center Legazpi",
+      "category": "Hospital",
+      "type": "Level 2 General Hospital",
+      "ownership": "Private",
+      "doh_code": "43714",
+      "address": {
+        "street": "Maharlika Highway",
+        "building": "ACE Medical Center Complex",
+        "barangay": "Bgy. 41 - Bogtong",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 742-5938",
+        "mobile": "0917-142-3633",
+        "email": "info@acemedicalcenterlegazpi.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": true
+      },
+      "services": [
+        "24/7 Emergency",
+        "ICU & NICU",
+        "Inpatient Care",
+        "Hemodialysis",
+        "Endoscopy & Diagnostics",
+        "CT Scan & X-Ray",
+        "Pharmacy"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1678,
+        "lng": 123.7225
+      }
+    },
+    {
+      "id": "fac-hosp-003",
+      "name": "Albay Doctors' Hospital, Inc.",
+      "short_name": "Albay Doctors' Hospital",
+      "category": "Hospital",
+      "type": "Level 2 General Hospital",
+      "ownership": "Private",
+      "doh_code": "2071",
+      "address": {
+        "street": "Peñaranda Street",
+        "building": "",
+        "barangay": "Bgy. 15 - Ilawod",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-7777 / (052) 480-7778",
+        "mobile": "0917-582-3977 / 0917-558-1679",
+        "email": "adh_hospital@yahoo.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "yakap_validity": "2026-12-31",
+        "philhealth_accredited": true
+      },
+      "services": [
+        "24/7 Emergency",
+        "YAKAP Konsulta & GAMOT",
+        "Inpatient Care",
+        "Maternity & Child Care",
+        "Surgical Services",
+        "Clinical Laboratory",
+        "Pharmacy"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1396,
+        "lng": 123.7441
+      }
+    },
+    {
+      "id": "fac-hosp-004",
+      "name": "Tanchuling General Hospital, Inc.",
+      "short_name": "Tanchuling Hospital",
+      "category": "Hospital",
+      "type": "Level 2 General Hospital",
+      "ownership": "Private",
+      "doh_code": "2105",
+      "address": {
+        "street": "Imperial Court Subdivision, Rizal Street",
+        "building": "",
+        "barangay": "Bgy. 24 - Rizal Street",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-7411",
+        "mobile": "0945-385-3587",
+        "email": "tghlegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "yakap_validity": "2026-12-31",
+        "philhealth_accredited": true
+      },
+      "services": [
+        "24/7 Emergency",
+        "YAKAP Konsulta Clinic",
+        "Inpatient & Outpatient",
+        "General Surgery & OB-GYN",
+        "Pediatrics",
+        "Diagnostic Ultrasound & X-Ray",
+        "Pharmacy"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1415,
+        "lng": 123.738
+      }
+    },
+    {
+      "id": "fac-hosp-005",
+      "name": "Legazpi City Hospital",
+      "short_name": "City Hospital",
+      "category": "Hospital",
+      "type": "Level 1 Local Government Hospital",
+      "ownership": "Government",
+      "doh_code": "35681",
+      "address": {
+        "street": "Zone 9",
+        "building": "Legazpi City Hospital Complex",
+        "barangay": "Bgy. 37 - Bitano",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 742-1234",
+        "mobile": "0905-892-1185",
+        "email": "legazpicityhospital.ph@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "yakap_validity": "2026-12-31",
+        "philhealth_accredited": true
+      },
+      "services": [
+        "24/7 Emergency",
+        "YAKAP Konsulta & GAMOT",
+        "General Inpatient Care",
+        "Maternity & Delivery",
+        "Pediatrics",
+        "Primary Surgery",
+        "Clinical Lab & Pharmacy"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1465,
+        "lng": 123.7485
+      }
+    },
+    {
+      "id": "fac-hosp-006",
+      "name": "University of Santo Tomas - Legazpi Hospital",
+      "short_name": "UST-Legazpi Hospital",
+      "category": "Hospital",
+      "type": "Level 2 University Hospital",
+      "ownership": "Private",
+      "address": {
+        "street": "Capt. F. Aquende Drive (Washington Drive)",
+        "building": "UST-Legazpi Medical Complex",
+        "barangay": "Bgy. 17 - Ilawod",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 736-0330 / (052) 481-1450",
+        "mobile": "0917-578-8785",
+        "email": "hospital@ust-legazpi.edu.ph"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": true
+      },
+      "services": [
+        "24/7 Emergency",
+        "Intensive Care Unit (ICU)",
+        "Diagnostic Imaging & CT Scan",
+        "Laboratory Services",
+        "Physical Therapy & Rehab",
+        "Outpatient Specialties",
+        "Pharmacy"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1418,
+        "lng": 123.7412
+      }
+    },
+    {
+      "id": "fac-hosp-007",
+      "name": "Ago General Hospital",
+      "short_name": "Ago Hospital",
+      "category": "Hospital",
+      "type": "Level 1 General Hospital",
+      "ownership": "Private",
+      "address": {
+        "street": "Rizal Street",
+        "building": "",
+        "barangay": "Bgy. 24 - Rizal Street",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-7132",
+        "mobile": "0917-512-3456",
+        "email": "agohospital@yahoo.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": true
+      },
+      "services": [
+        "Emergency Care",
+        "General Medicine",
+        "Maternity & Pediatric Care",
+        "Outpatient Clinic",
+        "Clinical Laboratory"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1388,
+        "lng": 123.7365
+      }
+    },
+    {
+      "id": "fac-hosp-008",
+      "name": "Estévez Memorial Hospital, Inc.",
+      "short_name": "Estevez Hospital",
+      "category": "Hospital",
+      "type": "Level 1 General Hospital",
+      "ownership": "Private",
+      "address": {
+        "street": "Guevarra Subdivision",
+        "building": "",
+        "barangay": "Bgy. 28 - Victory Village",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-7764 / (052) 480-7765",
+        "mobile": "0917-890-1234",
+        "email": "estevezhospital@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": true
+      },
+      "services": [
+        "Emergency Care",
+        "Inpatient & Outpatient",
+        "Minor Surgery",
+        "Maternal & Child Health",
+        "Pharmacy"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1432,
+        "lng": 123.751
+      }
+    },
+    {
+      "id": "fac-yakap-001",
+      "name": "Legazpi City Health Office (Main CHO)",
+      "short_name": "City Health Office",
+      "category": "PhilHealth YAKAP Clinic",
+      "type": "City Health Office & Primary Care Facility",
+      "ownership": "Government",
+      "doh_code": "6700",
+      "yakap_code": "2085",
+      "address": {
+        "street": "City Hall Compound, Rizal Street",
+        "building": "City Health Office Building",
+        "barangay": "Bgy. 24 - Rizal Street",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 435-0832 / (052) 742-2000",
+        "mobile": "0956-841-6087",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2027-12-31",
+        "is_yakap_accredited": true,
+        "yakap_validity": "2026-12-31",
+        "philhealth_accredited": true
+      },
+      "services": [
+        "Free YAKAP Konsulta Consultations",
+        "Free GAMOT Maintenance Medicines",
+        "Childhood Immunization & EPI",
+        "Prenatal & Postnatal Care",
+        "TB-DOTS Treatment",
+        "Dental Health Services",
+        "Sanitary Inspection & Health Cards"
+      ],
+      "emergency_24_7": false,
+      "coordinates": {
+        "lat": 13.1398,
+        "lng": 123.7345
+      }
+    },
+    {
+      "id": "fac-yakap-002",
+      "name": "PremierMD Health Care Clinic",
+      "short_name": "PremierMD Clinic",
+      "category": "PhilHealth YAKAP Clinic",
+      "type": "Primary Care Facility & Specialty Clinic",
+      "ownership": "Private",
+      "yakap_code": "2093",
+      "address": {
+        "street": "213 Magallanes Street",
+        "building": "",
+        "barangay": "Bgy. 34 - Oro Site",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 742-8899",
+        "mobile": "0916-373-8055",
+        "email": "premiermd213@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "yakap_validity": "2026-12-31",
+        "philhealth_accredited": true
+      },
+      "services": [
+        "PhilHealth YAKAP Konsulta Package",
+        "GAMOT Prescription Dispensing",
+        "General Medical Consultation",
+        "Diagnostic Laboratory",
+        "Preventive Health Checkups"
+      ],
+      "emergency_24_7": false,
+      "coordinates": {
+        "lat": 13.1425,
+        "lng": 123.746
+      }
+    },
+    {
+      "id": "fac-yakap-003",
+      "name": "Regional Medical and Dental Unit 5 (RMDU 5)",
+      "short_name": "PNP RMDU 5 Clinic",
+      "category": "PhilHealth YAKAP Clinic",
+      "type": "Government Institutional Health Facility",
+      "ownership": "Government",
+      "yakap_code": "2094",
+      "address": {
+        "street": "Camp BGen Simeon A. Ola",
+        "building": "RMDU 5 Health Facility",
+        "barangay": "Bgy. 1 - Em's Barrio",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-1234",
+        "mobile": "0956-875-8958",
+        "email": "rmdu5ekonsulta@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "yakap_validity": "2026-12-31",
+        "philhealth_accredited": true
+      },
+      "services": [
+        "PhilHealth YAKAP Konsulta Services",
+        "General Medical & Dental Consultations",
+        "Physical Examinations",
+        "Primary Care & First Aid"
+      ],
+      "emergency_24_7": false,
+      "coordinates": {
+        "lat": 13.146,
+        "lng": 123.731
+      }
+    },
+    {
+      "id": "fac-yakap-004",
+      "name": "Southeast Occupational Health and Environmental Safety Services, Inc.",
+      "short_name": "Southeast Health Services",
+      "category": "PhilHealth YAKAP Clinic",
+      "type": "Primary Care & Occupational Health Clinic",
+      "ownership": "Private",
+      "yakap_code": "2104",
+      "address": {
+        "street": "Landco Business Park",
+        "building": "2F Towermall Building 4",
+        "barangay": "Bgy. 36 - Capantawan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 836-7014",
+        "mobile": "0956-221-1360",
+        "email": "southeastoccupationalhealth@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "yakap_validity": "2026-12-31",
+        "philhealth_accredited": true
+      },
+      "services": [
+        "PhilHealth YAKAP Konsulta Provider",
+        "Occupational Health & Pre-Employment Exams",
+        "Diagnostic Laboratory Tests",
+        "Executive Health Checkups"
+      ],
+      "emergency_24_7": false,
+      "coordinates": {
+        "lat": 13.1402,
+        "lng": 123.7525
+      }
+    },
+    {
+      "id": "fac-shc-001",
+      "name": "Legazpi City Health Office (LCHO) RHU III (Super Health Center)",
+      "short_name": "Homapon Super Health Center",
+      "category": "Super Health Center & RHU",
+      "type": "Rural Health Unit / Super Health Center",
+      "ownership": "Government",
+      "doh_code": "54794",
+      "address": {
+        "street": "Homapon National Highway",
+        "building": "Super Health Center Complex",
+        "barangay": "Bgy. 62 - Homapon",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-0695",
+        "mobile": "0956-841-6087",
+        "email": "cholegazpi.rhu3@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2027-12-31",
+        "is_yakap_accredited": true,
+        "yakap_validity": "2026-12-31",
+        "philhealth_accredited": true
+      },
+      "services": [
+        "Outpatient Consultations",
+        "Birthing & Lying-in Facility",
+        "Laboratory & Ultrasound Diagnostics",
+        "Childhood Immunization",
+        "Pharmacy & GAMOT Dispensing",
+        "Dental Care",
+        "Minor Surgery & Triage"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1095,
+        "lng": 123.722
+      }
+    },
+    {
+      "id": "fac-birth-001",
+      "name": "Legazpi CHO Northern District Maternity Lying-in Clinic",
+      "short_name": "Buyuan Maternity Clinic",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "Government Birthing Home",
+      "ownership": "Government",
+      "doh_code": "32449",
+      "address": {
+        "street": "Northern District Health Center Road",
+        "building": "Buyuan Health Center Compound",
+        "barangay": "Bgy. 51 - Buyuan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-0695",
+        "mobile": "0956-841-6087",
+        "email": "cholegazpi.buyuan@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "philhealth_accredited": true
+      },
+      "services": [
+        "24/7 Normal Spontaneous Delivery",
+        "Prenatal & Postnatal Care",
+        "Newborn Screening & Hearing Test",
+        "Family Planning & Lactation Counseling"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.203,
+        "lng": 123.765
+      }
+    },
+    {
+      "id": "fac-birth-002",
+      "name": "Legazpi CHO Southern District Maternity Lying-in Clinic",
+      "short_name": "Banquerohan Maternity Clinic",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "Government Birthing Home",
+      "ownership": "Government",
+      "doh_code": "32450",
+      "address": {
+        "street": "Southern District Road",
+        "building": "Banquerohan Health Station Compound",
+        "barangay": "Bgy. 66 - Banquerohan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-0695",
+        "mobile": "0956-841-6087",
+        "email": "cholegazpi.banquerohan@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "philhealth_accredited": true
+      },
+      "services": [
+        "24/7 Normal Spontaneous Delivery",
+        "Prenatal & Postnatal Checkups",
+        "Newborn Care & Immunization",
+        "Family Planning Services"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.085,
+        "lng": 123.755
+      }
+    },
+    {
+      "id": "fac-birth-003",
+      "name": "Legazpi CHO Southern District 2 Maternity Lying-in Clinic",
+      "short_name": "Taysan Maternity Clinic",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "Government Birthing Home",
+      "ownership": "Government",
+      "doh_code": "37755",
+      "address": {
+        "street": "Taysan Main Road",
+        "building": "Taysan Health Center",
+        "barangay": "Bgy. 56 - Taysan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-0695",
+        "mobile": "0956-841-6087",
+        "email": "cholegazpi.taysan@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "philhealth_accredited": true
+      },
+      "services": [
+        "Normal Delivery Services",
+        "Maternal Health Monitoring",
+        "Newborn Care",
+        "Immunization & Nutrition"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.121,
+        "lng": 123.738
+      }
+    },
+    {
+      "id": "fac-lab-001",
+      "name": "Legazpi City Health Office Laboratory",
+      "short_name": "CHO Diagnostic Lab",
+      "category": "Diagnostic Laboratory",
+      "type": "Government Clinical & Diagnostic Laboratory",
+      "ownership": "Government",
+      "doh_code": "39679",
+      "address": {
+        "street": "City Hall Compound, Rizal Street",
+        "building": "CHO Building",
+        "barangay": "Bgy. 24 - Rizal Street",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 435-0832",
+        "mobile": "0956-841-6087",
+        "email": "cholegazpi.lab@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": true,
+        "philhealth_accredited": true
+      },
+      "services": [
+        "CBC & Blood Chemistry",
+        "Urinalysis & Fecalysis",
+        "Sputum Examination & GeneXpert (TB)",
+        "Water Testing & Food Handler Screening",
+        "Drug Testing"
+      ],
+      "emergency_24_7": false,
+      "coordinates": {
+        "lat": 13.1398,
+        "lng": 123.7345
+      }
+    },
+    {
+      "id": "fac-lab-002",
+      "name": "Philippine Red Cross - Albay Chapter Blood Service Facility",
+      "short_name": "PRC Albay Blood Center",
+      "category": "Diagnostic Laboratory",
+      "type": "Blood Service Facility & Emergency First Aid",
+      "ownership": "Government",
+      "address": {
+        "street": "Landco Business Park",
+        "building": "Red Cross Building",
+        "barangay": "Bgy. 36 - Capantawan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 480-1288",
+        "mobile": "0917-838-8975",
+        "email": "albay@redcross.org.ph"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "doh_license_validity": "2026-12-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "24/7 Blood Banking & Blood Products",
+        "Voluntary Blood Donation",
+        "Blood Typing & Crossmatching",
+        "Ambulance & Emergency Response"
+      ],
+      "emergency_24_7": true,
+      "coordinates": {
+        "lat": 13.1405,
+        "lng": 123.753
+      }
+    },
+    {
+      "id": "fac-bhs-001",
+      "name": "Bgy. 1 - Em's Barrio Barangay Health Center",
+      "short_name": "Bgy. 1 - Em's Barrio BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 1,
+      "urban_rural": "Urban",
+      "population_served": 3259,
+      "punong_barangay": "Hon. Veronica S. Geraldino",
+      "barangay_secretary": "Maria Vecia G. Basilan",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 1 - Em's Barrio",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-002",
+      "name": "Bgy. 2 - Em's Barrio South Barangay Health Center",
+      "short_name": "Bgy. 2 - Em's Barrio South BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 2,
+      "urban_rural": "Urban",
+      "population_served": 1416,
+      "punong_barangay": "Hon. Milagros B. Bal",
+      "barangay_secretary": "Ma. Zarina N. Miraflores",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 2 - Em's Barrio South",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-003",
+      "name": "Bgy. 3 - Em's Barrio East Barangay Health Center",
+      "short_name": "Bgy. 3 - Em's Barrio East BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 3,
+      "urban_rural": "Urban",
+      "population_served": 945,
+      "punong_barangay": "Hon. Jose T. Pispis",
+      "barangay_secretary": "Ave A. Palcon",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 3 - Em's Barrio East",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09814619092",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-004",
+      "name": "Bgy. 4 - Sagpon Pob. Barangay Health Center",
+      "short_name": "Bgy. 4 - Sagpon Pob. BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 4,
+      "urban_rural": "Urban",
+      "population_served": 975,
+      "punong_barangay": "Hon. Gibsen Salvador E. De Leoz",
+      "barangay_secretary": "Ma. Keneth O. Campillos",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 4 - Sagpon Pob.",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09516995291",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-005",
+      "name": "Bgy. 5 - Sagmin Pob. Barangay Health Center",
+      "short_name": "Bgy. 5 - Sagmin Pob. BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 5,
+      "urban_rural": "Urban",
+      "population_served": 1037,
+      "punong_barangay": "Hon. Lorena A. Vargas",
+      "barangay_secretary": "Thea Salome U. Martinez",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 5 - Sagmin Pob.",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-006",
+      "name": "Bgy. 6 - Bañadero Pob. Barangay Health Center",
+      "short_name": "Bgy. 6 - Bañadero Pob. BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 6,
+      "urban_rural": "Urban",
+      "population_served": 1289,
+      "punong_barangay": "Hon. Arthur R. Marco",
+      "barangay_secretary": "Maria Angela A. Nalles",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 6 - Bañadero Pob.",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-007",
+      "name": "Bgy. 7 - Baño Barangay Health Center",
+      "short_name": "Bgy. 7 - Baño BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 7,
+      "urban_rural": "Urban",
+      "population_served": 559,
+      "punong_barangay": "Hon. Domingo Alberto D. Pasano Jr.",
+      "barangay_secretary": "Mary Ann P. Morano",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 7 - Baño",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "(052) 742-1409",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-008",
+      "name": "Bgy. 8 - Bagumbayan Barangay Health Center",
+      "short_name": "Bgy. 8 - Bagumbayan BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 8,
+      "urban_rural": "Urban",
+      "population_served": 2564,
+      "punong_barangay": "Hon. Amore Rex B. Rañeses",
+      "barangay_secretary": "Regina D. De Guzman",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 8 - Bagumbayan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "830-4636",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-009",
+      "name": "Bgy. 9 - Pinaric Barangay Health Center",
+      "short_name": "Bgy. 9 - Pinaric BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 9,
+      "urban_rural": "Urban",
+      "population_served": 1414,
+      "punong_barangay": "Hon. Roy A. Nañoz",
+      "barangay_secretary": "Jacqueline L. Amaranto",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 9 - Pinaric",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09308119357",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-010",
+      "name": "Bgy. 10 - Cabugao Barangay Health Center",
+      "short_name": "Bgy. 10 - Cabugao BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 10,
+      "urban_rural": "Rural",
+      "population_served": 452,
+      "punong_barangay": "Hon. Victor R. Lapasaran",
+      "barangay_secretary": "Christy M. Aycocho",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 10 - Cabugao",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-011",
+      "name": "Bgy. 11 - Maoyod Pob. Barangay Health Center",
+      "short_name": "Bgy. 11 - Maoyod Pob. BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 11,
+      "urban_rural": "Urban",
+      "population_served": 1505,
+      "punong_barangay": "Hon. Mark Joel O. Beguiras",
+      "barangay_secretary": "Meryl E. Bajamundi",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 11 - Maoyod Pob.",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-012",
+      "name": "Bgy. 12 - Tula-tula Barangay Health Center",
+      "short_name": "Bgy. 12 - Tula-tula BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 12,
+      "urban_rural": "Urban",
+      "population_served": 1041,
+      "punong_barangay": "Hon. Miguelito A. Barcoma",
+      "barangay_secretary": "Ma. Rayzel A. Ibay",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 12 - Tula-tula",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0936161381",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-013",
+      "name": "Bgy. 13 - Ilawod West Pob. Barangay Health Center",
+      "short_name": "Bgy. 13 - Ilawod West Pob. BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 13,
+      "urban_rural": "Urban",
+      "population_served": 365,
+      "punong_barangay": "Hon. Ma. Lourdes F. Baltazar",
+      "barangay_secretary": "Lailani A. Belleza",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 13 - Ilawod West Pob.",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09751738902",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-014",
+      "name": "Bgy. 14 - Ilawod Pob. Barangay Health Center",
+      "short_name": "Bgy. 14 - Ilawod Pob. BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 14,
+      "urban_rural": "Urban",
+      "population_served": 719,
+      "punong_barangay": "Hon. Gerald A. Ayque",
+      "barangay_secretary": "Lorelie M. Mangampo",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 14 - Ilawod Pob.",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09953606107",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-015",
+      "name": "Bgy. 15 - Ilawod East Pob. Barangay Health Center",
+      "short_name": "Bgy. 15 - Ilawod East Pob. BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 15,
+      "urban_rural": "Urban",
+      "population_served": 2386,
+      "punong_barangay": "Hon. Erlim A. Azotea",
+      "barangay_secretary": "Irma A. Buemia",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 15 - Ilawod East Pob.",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09305283465",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-016",
+      "name": "Bgy. 16 - Kawit-East Washington Drive Barangay Health Center",
+      "short_name": "Bgy. 16 - Kawit-East Washington Drive BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 16,
+      "urban_rural": "Urban",
+      "population_served": 5420,
+      "punong_barangay": "Hon. Jonathan G. Rodenas",
+      "barangay_secretary": "Cesar L. Asiado",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 16 - Kawit-East Washington Drive",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-017",
+      "name": "Bgy. 17 - Rizal Street., Ilawod Barangay Health Center",
+      "short_name": "Bgy. 17 - Rizal Street., Ilawod BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 17,
+      "urban_rural": "Urban",
+      "population_served": 2365,
+      "punong_barangay": "Hon. Benito B. Chan",
+      "barangay_secretary": "Amelia R. Colecha",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 17 - Rizal Street., Ilawod",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "(052) 413-1047",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-018",
+      "name": "Bgy. 18 - Cabagñan West Barangay Health Center",
+      "short_name": "Bgy. 18 - Cabagñan West BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 18,
+      "urban_rural": "Urban",
+      "population_served": 4133,
+      "punong_barangay": "Hon. Rowena A. Olimpo",
+      "barangay_secretary": "Arlene Mae D. Magno",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 18 - Cabagñan West",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-019",
+      "name": "Bgy. 19 - Cabagñan Barangay Health Center",
+      "short_name": "Bgy. 19 - Cabagñan BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 19,
+      "urban_rural": "Rural",
+      "population_served": 1611,
+      "punong_barangay": "Hon. John B. Macalampad",
+      "barangay_secretary": "Christine Joy N. Apita",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 19 - Cabagñan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-020",
+      "name": "Bgy. 20 - Cabagñan East Barangay Health Center",
+      "short_name": "Bgy. 20 - Cabagñan East BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 20,
+      "urban_rural": "Urban",
+      "population_served": 707,
+      "punong_barangay": "Hon. Fabian B. Batalla Jr.",
+      "barangay_secretary": "Maria Shiela M. Enaje",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 20 - Cabagñan East",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-021",
+      "name": "Bgy. 21 - Binanuahan West Barangay Health Center",
+      "short_name": "Bgy. 21 - Binanuahan West BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 21,
+      "urban_rural": "Urban",
+      "population_served": 770,
+      "punong_barangay": "Hon. Jose T. Abiera",
+      "barangay_secretary": "Arcie A. Malto",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 21 - Binanuahan West",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-022",
+      "name": "Bgy. 22 - Binanuahan East Barangay Health Center",
+      "short_name": "Bgy. 22 - Binanuahan East BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 22,
+      "urban_rural": "Urban",
+      "population_served": 1861,
+      "punong_barangay": "Hon. Jerry A. Grageda",
+      "barangay_secretary": "Merle Z. Mira",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 22 - Binanuahan East",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-023",
+      "name": "Bgy. 23 - Imperial Court Subd. Barangay Health Center",
+      "short_name": "Bgy. 23 - Imperial Court Subd. BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 23,
+      "urban_rural": "Urban",
+      "population_served": 1202,
+      "punong_barangay": "Hon. Edgar B. Bejer",
+      "barangay_secretary": "Joseph C. Belga",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 23 - Imperial Court Subd.",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09122025648",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-024",
+      "name": "Bgy. 24 - Rizal Street Barangay Health Center",
+      "short_name": "Bgy. 24 - Rizal Street BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 24,
+      "urban_rural": "Rural",
+      "population_served": 1826,
+      "punong_barangay": "Hon. Ricardo V. Abunda",
+      "barangay_secretary": "Elmer S. Canon",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 24 - Rizal Street",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-025",
+      "name": "Bgy. 25 - Lapu-lapu Barangay Health Center",
+      "short_name": "Bgy. 25 - Lapu-lapu BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 25,
+      "urban_rural": "Urban",
+      "population_served": 2730,
+      "punong_barangay": "Hon. Ma. Karren C. Valdez",
+      "barangay_secretary": "Carrie Mae A. Lusuegro",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 25 - Lapu-lapu",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-026",
+      "name": "Bgy. 26 - Dinagaan Barangay Health Center",
+      "short_name": "Bgy. 26 - Dinagaan BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 26,
+      "urban_rural": "Urban",
+      "population_served": 534,
+      "punong_barangay": "Hon. Julia D. Agao",
+      "barangay_secretary": "April Ester M. Naval",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 26 - Dinagaan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-027",
+      "name": "Bgy. 27 - Victory Village South Barangay Health Center",
+      "short_name": "Bgy. 27 - Victory Village South BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 27,
+      "urban_rural": "Urban",
+      "population_served": 1451,
+      "punong_barangay": "Hon. Basilia A. Capino",
+      "barangay_secretary": "Laurice T. Dazal",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 27 - Victory Village South",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09776320556",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-028",
+      "name": "Bgy. 28 - Victory Village North Barangay Health Center",
+      "short_name": "Bgy. 28 - Victory Village North BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 28,
+      "urban_rural": "Urban",
+      "population_served": 1487,
+      "punong_barangay": "Hon. Antonio L. Loveriza",
+      "barangay_secretary": "Cecelia M. Cariño",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 28 - Victory Village North",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-029",
+      "name": "Bgy. 29 - Sabang Barangay Health Center",
+      "short_name": "Bgy. 29 - Sabang BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 29,
+      "urban_rural": "Urban",
+      "population_served": 1894,
+      "punong_barangay": "Hon. Ismael G. Santillan",
+      "barangay_secretary": "Rhounalyn Dematera",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 29 - Sabang",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-030",
+      "name": "Bgy. 30 - Pigcale Barangay Health Center",
+      "short_name": "Bgy. 30 - Pigcale BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 30,
+      "urban_rural": "Urban",
+      "population_served": 1210,
+      "punong_barangay": "Hon. Fernando A. Lopez",
+      "barangay_secretary": "Maricel L. Encinareal",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 30 - Pigcale",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-031",
+      "name": "Bgy. 31 - Centro-Baybay Barangay Health Center",
+      "short_name": "Bgy. 31 - Centro-Baybay BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 31,
+      "urban_rural": "Urban",
+      "population_served": 1088,
+      "punong_barangay": "Hon. Teresita L. Empig",
+      "barangay_secretary": "Bremer D. Romero",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 31 - Centro-Baybay",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09070127231",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-032",
+      "name": "Bgy. 32 - San Roque Barangay Health Center",
+      "short_name": "Bgy. 32 - San Roque BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 32,
+      "urban_rural": "Urban",
+      "population_served": 5452,
+      "punong_barangay": "Hon. Bill B. Atento",
+      "barangay_secretary": "Rafael Padrique",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 32 - San Roque",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09171120318",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-033",
+      "name": "Bgy. 33 - PNR-Peñaranda St.-Iraya Barangay Health Center",
+      "short_name": "Bgy. 33 - PNR-Peñaranda St.-Iraya BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 33,
+      "urban_rural": "Urban",
+      "population_served": 2887,
+      "punong_barangay": "Hon. Marife D. Velasco",
+      "barangay_secretary": "Maria Teresa A. Cuebillas",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 33 - PNR-Peñaranda St.-Iraya",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09636753741",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-034",
+      "name": "Bgy. 34 - Oro Site-Magallanes St. Barangay Health Center",
+      "short_name": "Bgy. 34 - Oro Site-Magallanes St. BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 34,
+      "urban_rural": "Urban",
+      "population_served": 2140,
+      "punong_barangay": "Hon. Mariano Oriel A. Maddela",
+      "barangay_secretary": "Rolando B. Gonzales",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 34 - Oro Site-Magallanes St.",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "(052) 480-8766",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-035",
+      "name": "Bgy. 35 - Tinago Barangay Health Center",
+      "short_name": "Bgy. 35 - Tinago BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 35,
+      "urban_rural": "Urban",
+      "population_served": 340,
+      "punong_barangay": "Hon. Sayri R. Sayco",
+      "barangay_secretary": "Benajane Bellen",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 35 - Tinago",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09395968501",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-036",
+      "name": "Bgy. 36 - Kapantawan Barangay Health Center",
+      "short_name": "Bgy. 36 - Kapantawan BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 36,
+      "urban_rural": "Urban",
+      "population_served": 404,
+      "punong_barangay": "Hon. Eric Sim B. Brizuela",
+      "barangay_secretary": "Nelia D. Abad",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 36 - Kapantawan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "(052) 820-7009",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-037",
+      "name": "Bgy. 37 - Bitano Barangay Health Center",
+      "short_name": "Bgy. 37 - Bitano BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 37,
+      "urban_rural": "Urban",
+      "population_served": 7546,
+      "punong_barangay": "Hon. Bernard Y. Pacardo",
+      "barangay_secretary": "Ali Raza P. Ahmad",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 37 - Bitano",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-038",
+      "name": "Bgy. 38 - Gogon Barangay Health Center",
+      "short_name": "Bgy. 38 - Gogon BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 38,
+      "urban_rural": "Urban",
+      "population_served": 6534,
+      "punong_barangay": "Hon. Ma. Theresa S. Naz",
+      "barangay_secretary": "Angelica N. Cordovilla",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 38 - Gogon",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09257136784",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-039",
+      "name": "Bgy. 39 - Bonot Barangay Health Center",
+      "short_name": "Bgy. 39 - Bonot BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 39,
+      "urban_rural": "Urban",
+      "population_served": 2375,
+      "punong_barangay": "Hon. Reynaldo H. Bendicio",
+      "barangay_secretary": "Monica S. Lorica",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 39 - Bonot",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-040",
+      "name": "Bgy. 40 - Cruzada Barangay Health Center",
+      "short_name": "Bgy. 40 - Cruzada BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 40,
+      "urban_rural": "Urban",
+      "population_served": 7030,
+      "punong_barangay": "Hon. Edsil N. Llaguno",
+      "barangay_secretary": "Niño Joseph C. Llena",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 40 - Cruzada",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-041",
+      "name": "Bgy. 41 - Bogtong Barangay Health Center",
+      "short_name": "Bgy. 41 - Bogtong BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 41,
+      "urban_rural": "Urban",
+      "population_served": 5389,
+      "punong_barangay": "Hon. Joel A. Ador",
+      "barangay_secretary": "Ma. Angelica B. Nuñez",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 41 - Bogtong",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-042",
+      "name": "Bgy. 42 - Rawis Barangay Health Center",
+      "short_name": "Bgy. 42 - Rawis BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 42,
+      "urban_rural": "Urban",
+      "population_served": 10330,
+      "punong_barangay": "Hon. Joel A. Orosco",
+      "barangay_secretary": "Jean A. Ramos",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 42 - Rawis",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09106022923",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-043",
+      "name": "Bgy. 43 - Tamaoyan Barangay Health Center",
+      "short_name": "Bgy. 43 - Tamaoyan BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 43,
+      "urban_rural": "Rural",
+      "population_served": 1809,
+      "punong_barangay": "Hon. Sylvia M. Del Agua",
+      "barangay_secretary": "Thelma B. Arcinue",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 43 - Tamaoyan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-044",
+      "name": "Bgy. 44 - Pawa Barangay Health Center",
+      "short_name": "Bgy. 44 - Pawa BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 44,
+      "urban_rural": "Rural",
+      "population_served": 4585,
+      "punong_barangay": "Hon. Tito C. Villanueva",
+      "barangay_secretary": "Joy M. Alamil",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 44 - Pawa",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-045",
+      "name": "Bgy. 45 - Dita Barangay Health Center",
+      "short_name": "Bgy. 45 - Dita BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 45,
+      "urban_rural": "Rural",
+      "population_served": 2167,
+      "punong_barangay": "Hon. Romeo A. Almayda Jr.",
+      "barangay_secretary": "Cynthia D. Nuñez",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 45 - Dita",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-046",
+      "name": "Bgy. 46 - San Joaquin Barangay Health Center",
+      "short_name": "Bgy. 46 - San Joaquin BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 46,
+      "urban_rural": "Rural",
+      "population_served": 1903,
+      "punong_barangay": "Hon. Amelia A. Dela Torre",
+      "barangay_secretary": "Rodel P. Balaguer",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 46 - San Joaquin",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-047",
+      "name": "Bgy. 47 - Arimbay Barangay Health Center",
+      "short_name": "Bgy. 47 - Arimbay BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 47,
+      "urban_rural": "Rural",
+      "population_served": 4085,
+      "punong_barangay": "Hon. Wilhelmina M. Budao",
+      "barangay_secretary": "Marifaith A. Estevez",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 47 - Arimbay",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-048",
+      "name": "Bgy. 48 - Bagong Abre Barangay Health Center",
+      "short_name": "Bgy. 48 - Bagong Abre BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 48,
+      "urban_rural": "Rural",
+      "population_served": 1675,
+      "punong_barangay": "Hon. Dindo D. Nuñez",
+      "barangay_secretary": "Jecel N. De Lumen",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 48 - Bagong Abre",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-049",
+      "name": "Bgy. 49 - Bigaa Barangay Health Center",
+      "short_name": "Bgy. 49 - Bigaa BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 49,
+      "urban_rural": "Urban",
+      "population_served": 7287,
+      "punong_barangay": "Hon. Ricardo A. Arienda",
+      "barangay_secretary": "Catherine A. Loterte",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 49 - Bigaa",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09158717790",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-050",
+      "name": "Bgy. 50 - Padang Barangay Health Center",
+      "short_name": "Bgy. 50 - Padang BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 50,
+      "urban_rural": "Rural",
+      "population_served": 1949,
+      "punong_barangay": "Hon. Harold L. Bembenuto",
+      "barangay_secretary": "Lhiza Mae A. Banania",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 50 - Padang",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09068516780",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-051",
+      "name": "Bgy. 51 - Buyuan Barangay Health Center",
+      "short_name": "Bgy. 51 - Buyuan BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 51,
+      "urban_rural": "Rural",
+      "population_served": 4200,
+      "punong_barangay": "Hon. Ronaldo B. Miña Sr.",
+      "barangay_secretary": "Janette A. Araña",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 51 - Buyuan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-052",
+      "name": "Bgy. 52 - Matanag Barangay Health Center",
+      "short_name": "Bgy. 52 - Matanag BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 52,
+      "urban_rural": "Rural",
+      "population_served": 1904,
+      "punong_barangay": "Hon. Hilario A. Atun",
+      "barangay_secretary": "Mae N. Aydalla",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 52 - Matanag",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-053",
+      "name": "Bgy. 53 - Bonga Barangay Health Center",
+      "short_name": "Bgy. 53 - Bonga BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 53,
+      "urban_rural": "Rural",
+      "population_served": 4308,
+      "punong_barangay": "Hon. Chona M. Miña",
+      "barangay_secretary": "Violeta N. Abejuro",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 53 - Bonga",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-054",
+      "name": "Bgy. 54 - Mabinit Barangay Health Center",
+      "short_name": "Bgy. 54 - Mabinit BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 54,
+      "urban_rural": "Rural",
+      "population_served": 1699,
+      "punong_barangay": "Hon. Dennis P. Nuñez",
+      "barangay_secretary": "Ronaldo L. Agao",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 54 - Mabinit",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-055",
+      "name": "Bgy. 55 - Estanza Barangay Health Center",
+      "short_name": "Bgy. 55 - Estanza BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 55,
+      "urban_rural": "Rural",
+      "population_served": 4963,
+      "punong_barangay": "Hon. Danilo D. Agripa",
+      "barangay_secretary": "Cristy E. Arimado",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 55 - Estanza",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-056",
+      "name": "Bgy. 56 - Taysan Barangay Health Center",
+      "short_name": "Bgy. 56 - Taysan BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 56,
+      "urban_rural": "Urban",
+      "population_served": 20017,
+      "punong_barangay": "Hon. Benjamin D. Rosin",
+      "barangay_secretary": "Cecilia T. Gandol",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 56 - Taysan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-057",
+      "name": "Bgy. 57 - Dap-dap Barangay Health Center",
+      "short_name": "Bgy. 57 - Dap-dap BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 57,
+      "urban_rural": "Rural",
+      "population_served": 1746,
+      "punong_barangay": "Hon. Glenn J. Barcelon",
+      "barangay_secretary": "Michelle D. Ayque",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 57 - Dap-dap",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "(052) 742-5763",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-058",
+      "name": "Bgy. 58 - Buragwis Barangay Health Center",
+      "short_name": "Bgy. 58 - Buragwis BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 58,
+      "urban_rural": "Rural",
+      "population_served": 4329,
+      "punong_barangay": "Hon. Maria Cristina P. Ajero",
+      "barangay_secretary": "Benjamin Gabriel G. Imperial",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 58 - Buragwis",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-059",
+      "name": "Bgy. 59 - Puro Barangay Health Center",
+      "short_name": "Bgy. 59 - Puro BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 59,
+      "urban_rural": "Urban",
+      "population_served": 5215,
+      "punong_barangay": "Hon. Henyl B. Olimpo",
+      "barangay_secretary": "Ernesto D. Barrameda Jr.",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 59 - Puro",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-060",
+      "name": "Bgy. 60 - Lamba Barangay Health Center",
+      "short_name": "Bgy. 60 - Lamba BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 60,
+      "urban_rural": "Rural",
+      "population_served": 1453,
+      "punong_barangay": "Hon. Norberto M. Abion",
+      "barangay_secretary": "Shaira B. Lana",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 60 - Lamba",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "(052) 742-3913",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-061",
+      "name": "Bgy. 61 - Maslog Barangay Health Center",
+      "short_name": "Bgy. 61 - Maslog BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 61,
+      "urban_rural": "Urban",
+      "population_served": 5320,
+      "punong_barangay": "Hon. Niño Albert C. Berjuega",
+      "barangay_secretary": "Cristina A. Bertiz",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 61 - Maslog",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "(052) 742-0611",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-062",
+      "name": "Bgy. 62 - Homapon Barangay Health Center",
+      "short_name": "Bgy. 62 - Homapon BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 62,
+      "urban_rural": "Urban",
+      "population_served": 5250,
+      "punong_barangay": "Hon. Fidel A. Botin Sr.",
+      "barangay_secretary": "Ella B. Maravilla",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 62 - Homapon",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-063",
+      "name": "Bgy. 63 - Mariawa Barangay Health Center",
+      "short_name": "Bgy. 63 - Mariawa BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 63,
+      "urban_rural": "Rural",
+      "population_served": 2026,
+      "punong_barangay": "Hon. Anabelle A. Teope",
+      "barangay_secretary": "Rachel M. Alcantara",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 63 - Mariawa",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-064",
+      "name": "Bgy. 64 - Bagacay Barangay Health Center",
+      "short_name": "Bgy. 64 - Bagacay BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 64,
+      "urban_rural": "Rural",
+      "population_served": 1869,
+      "punong_barangay": "Hon. Dennis A. Alamo",
+      "barangay_secretary": "Janice Ian Rose P. Agripa",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 64 - Bagacay",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-065",
+      "name": "Bgy. 65 - Imalnod Barangay Health Center",
+      "short_name": "Bgy. 65 - Imalnod BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 65,
+      "urban_rural": "Rural",
+      "population_served": 2798,
+      "punong_barangay": "Hon. Beberlyn A. Bitancur",
+      "barangay_secretary": "Andy A. Aguimba",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 65 - Imalnod",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-066",
+      "name": "Bgy. 66 - Banquerohan Barangay Health Center",
+      "short_name": "Bgy. 66 - Banquerohan BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 66,
+      "urban_rural": "Urban",
+      "population_served": 8918,
+      "punong_barangay": "Hon. Crispin A. Botin",
+      "barangay_secretary": "Mark Jhay R. Alcazar",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 66 - Banquerohan",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09091238701",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-067",
+      "name": "Bgy. 67 - Bariis Barangay Health Center",
+      "short_name": "Bgy. 67 - Bariis BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 67,
+      "urban_rural": "Rural",
+      "population_served": 1739,
+      "punong_barangay": "Hon. Jesse M. Aycardo",
+      "barangay_secretary": "Rose Ann E. Nicol",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 67 - Bariis",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09664594639",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-068",
+      "name": "Bgy. 68 - San Francisco Barangay Health Center",
+      "short_name": "Bgy. 68 - San Francisco BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 68,
+      "urban_rural": "Rural",
+      "population_served": 2322,
+      "punong_barangay": "Hon. Ronaldo P. Aringo",
+      "barangay_secretary": "Anna Marie A. Dejumo",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 68 - San Francisco",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-069",
+      "name": "Bgy. 69 - Buenavista Barangay Health Center",
+      "short_name": "Bgy. 69 - Buenavista BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 69,
+      "urban_rural": "Rural",
+      "population_served": 1419,
+      "punong_barangay": "Hon. Rogelio A. Leron",
+      "barangay_secretary": "Sara Jean L. Musa",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 69 - Buenavista",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "09564267369",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-bhs-070",
+      "name": "Bgy. 70 - Cagbacong Barangay Health Center",
+      "short_name": "Bgy. 70 - Cagbacong BHS",
+      "category": "Barangay Health Station",
+      "type": "Primary Barangay Health Station (BHS)",
+      "ownership": "Government",
+      "barangay_number": 70,
+      "urban_rural": "Rural",
+      "population_served": 3019,
+      "punong_barangay": "Hon. Gladwyn T. Candia",
+      "barangay_secretary": "Hazel L. Lorilla",
+      "address": {
+        "street": "Barangay Hall Compound",
+        "building": "Barangay Health Station",
+        "barangay": "Bgy. 70 - Cagbacong",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "0956-841-6087 (CHO Hotline)",
+        "email": "cholegazpi@gmail.com"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": [
+        "Free Primary Consultation & Triage",
+        "Childhood Immunization & Growth Monitoring",
+        "Maternal & Prenatal Health Checkups",
+        "Family Planning & Contraceptive Distribution",
+        "Blood Pressure & Vital Signs Monitoring",
+        "Barangay Health Worker (BHW) Outreach"
+      ],
+      "emergency_24_7": false
+    }
+  ]
+}

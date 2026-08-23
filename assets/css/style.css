@@ -9899,175 +9899,596 @@ a.a11y-contact-item:hover i {
 .health-stat-card {
   background: var(--color-white);
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 16px 12px;
+  border-radius: 12px;
+  padding: 20px 16px;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .health-stat-card:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 2px 8px rgba(0, 50, 160, 0.1);
+  box-shadow: 0 4px 14px rgba(0, 50, 160, 0.12);
+  transform: translateY(-2px);
 }
 
 .health-stat-num {
   display: block;
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--color-primary);
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  font-family: inherit;
 }
 
 .health-stat-label {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
   color: var(--color-text-light);
-  line-height: 1.2;
-}
-
-.health-facilities-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.health-facility-card {
-  background: var(--color-white);
-  border: 1px solid #e5e7eb;
-  border-left: 3px solid var(--color-primary);
-  border-radius: 0 8px 8px 0;
-  padding: 16px;
-  transition: all 0.2s ease;
-}
-
-.health-facility-card:hover {
-  border-color: var(--color-primary);
-  border-left-color: var(--color-primary-dark);
-  box-shadow: 0 2px 8px rgba(0, 50, 160, 0.08);
-}
-
-.health-facility-badge {
-  display: inline-block;
-  font-size: 0.625rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  background: rgba(0, 50, 160, 0.1);
-  padding: 3px 8px;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.health-facility-card h3 {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--color-text);
-  margin: 0 0 6px 0;
   line-height: 1.3;
 }
 
-.health-facility-desc {
-  font-size: 0.8125rem;
-  color: var(--color-text-light);
-  margin: 0 0 10px 0;
-  line-height: 1.5;
-}
-
-.health-facility-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.health-facility-meta span {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.75rem;
-  color: var(--color-text-light);
-}
-
-.health-facility-meta i {
-  color: var(--color-primary);
-  font-size: 0.6875rem;
-}
-
-.health-mho-card {
-  background: var(--color-white);
-  border: 1px solid #e5e7eb;
-  border-left: 3px solid var(--color-primary);
-  border-radius: 0 8px 8px 0;
-  padding: 20px;
-}
-
-.health-mho-content h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-text);
-  margin: 0 0 8px 0;
-}
-
-.health-mho-content p {
-  font-size: 0.8125rem;
-  color: var(--color-text-light);
-  margin: 0 0 14px 0;
-  line-height: 1.5;
-}
-
-.health-mho-services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.health-mho-services span {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.75rem;
-  color: var(--color-text);
-  background: var(--color-bg-alt);
-  padding: 5px 10px;
-  border-radius: 4px;
-}
-
-.health-mho-services i {
-  color: var(--color-primary);
-  font-size: 0.6875rem;
-}
-
-.section-subtitle {
-  font-size: 0.8125rem;
-  color: var(--color-text-light);
-  margin: -8px 0 16px 0;
-}
-
-.health-bhs-grid {
+.health-stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
 }
 
-.health-bhs-item {
-  background: var(--color-bg-alt);
-  border-left: 3px solid var(--color-primary);
-  padding: 10px 12px;
-  border-radius: 0 6px 6px 0;
-  font-size: 0.8125rem;
-  font-weight: 500;
+/* ===================================================
+   Health Directory Interactive Search & Filter Controls
+   =================================================== */
+.health-directory-section {
+  padding-top: 10px;
+}
+
+.health-directory-header {
+  margin-bottom: 24px;
+}
+
+.health-directory-header .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.625rem;
+  font-weight: 700;
   color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.health-directory-header .section-subtitle {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.health-controls-panel {
+  background: var(--color-white);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.health-search-wrap {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.health-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 1.125rem;
+  pointer-events: none;
+}
+
+.health-search-input {
+  width: 100%;
+  padding: 14px 44px 14px 46px;
+  font-size: 0.95rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: var(--color-text);
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.health-search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.health-search-clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 50%;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 0.875rem;
   transition: all 0.15s ease;
 }
 
-.health-bhs-item:hover {
-  background: #eef2ff;
-  border-left-color: var(--color-primary-dark);
+.health-search-clear:hover {
+  background: #cbd5e1;
+  color: #1e293b;
 }
 
+/* Category Filter Pills */
+.health-cat-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.health-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 50px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.health-cat-pill i {
+  font-size: 0.875rem;
+}
+
+.health-cat-pill:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.health-cat-pill.active {
+  background: #0284c7;
+  border-color: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+}
+
+/* Secondary Filter Row */
+.health-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.health-filter-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.health-select-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.health-filter-select {
+  padding: 6px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+}
+
+.health-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  user-select: none;
+}
+
+.health-checkbox-label input {
+  accent-color: #0284c7;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.health-result-count {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* ===================================================
+   Health Facility Cards & Grid
+   =================================================== */
+.health-facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.facility-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  transition: all 0.25s ease;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.facility-card:hover {
+  transform: translateY(-3px);
+  border-color: #93c5fd;
+  box-shadow: 0 8px 20px rgba(0, 50, 160, 0.09);
+}
+
+.facility-card--yakap {
+  border-top: 3px solid #10b981;
+}
+
+.facility-card--govt {
+  border-left: 3px solid #0284c7;
+}
+
+.facility-card--private {
+  border-left: 3px solid #8b5cf6;
+}
+
+.facility-card-header {
+  margin-bottom: 12px;
+}
+
+.facility-badge-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.facility-badge-strip .badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-govt {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.badge-private {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
+.badge-yakap {
+  background: #d1fae5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-247 {
+  background: #ffe4e6;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+}
+
+.badge-doh {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.facility-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.35;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.facility-type-icon {
+  color: #0284c7;
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.facility-type-desc {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.facility-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.facility-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.location-icon {
+  color: #ef4444;
+  font-size: 0.9375rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.location-text strong {
+  display: block;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.location-text span {
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.bhs-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 8px 10px;
+  border: 1px solid #f1f5f9;
+}
+
+.bhs-meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.bhs-meta-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.bhs-meta-val {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.facility-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+}
+
+.contact-line i {
+  color: #0284c7;
+  font-size: 0.8125rem;
+  width: 14px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contact-link {
+  color: #334155;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+  word-break: break-all;
+}
+
+.contact-link:hover {
+  color: #0284c7;
+  text-decoration: underline;
+}
+
+.facility-services-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.facility-services-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.facility-services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.service-pill {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  background: #f1f5f9;
+  color: #334155;
+  padding: 3px 7px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.service-pill-more {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.facility-card-footer {
+  display: flex;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: auto;
+}
+
+.facility-action-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.facility-action-btn--primary {
+  background: #0284c7;
+  color: #ffffff;
+  border: 1px solid #0284c7;
+}
+
+.facility-action-btn--primary:hover {
+  background: #0369a1;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
+}
+
+.facility-action-btn--secondary {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.facility-action-btn--secondary:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+/* Load More & Empty State */
+.health-load-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.health-load-more-btn {
+  padding: 10px 24px;
+  background: #f8fafc;
+  color: #0284c7;
+  border: 1.5px solid #0284c7;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.health-load-more-btn:hover {
+  background: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
+}
+
+.health-empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  background: var(--color-white);
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+  margin: 16px 0;
+}
+
+.health-empty-state i {
+  font-size: 2.5rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.health-empty-state h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.health-empty-state p {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+/* Responsive Overrides */
 @media (max-width: 1024px) {
   .health-stats-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .health-facilities-grid {
@@ -10083,25 +10504,144 @@ a.a11y-contact-item:hover i {
   .health-facilities-grid {
     grid-template-columns: 1fr;
   }
+
+  .health-filter-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .health-filter-left {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
-@media (max-width: 640px) {
-  .health-stat-card {
-    padding: 12px 10px;
+@media (max-width: 480px) {
+  .health-stats-grid {
+    grid-template-columns: 1fr;
   }
 
-  .health-stat-num {
-    font-size: 1.5rem;
+  .facility-card-footer {
+    flex-direction: column;
   }
+}
 
-  .health-bhs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Dark Mode Overrides for Health Directory */
+[data-theme='dark'] .health-stat-card {
+  background: #16181f;
+  border-color: rgba(255, 255, 255, 0.08);
+}
 
-  .health-mho-services span {
-    font-size: 0.6875rem;
-    padding: 4px 8px;
-  }
+[data-theme='dark'] .health-stat-label {
+  color: #8b949e;
+}
+
+[data-theme='dark'] .health-controls-panel {
+  background: #16181f;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .health-search-input {
+  background: #0f1117;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f0f6fc;
+}
+
+[data-theme='dark'] .health-search-input:focus {
+  border-color: #38bdf8;
+  background: #16181f;
+}
+
+[data-theme='dark'] .health-cat-pill {
+  background: #1c1f28;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #c9d1d9;
+}
+
+[data-theme='dark'] .health-cat-pill:hover {
+  background: #232734;
+  color: #f0f6fc;
+}
+
+[data-theme='dark'] .health-cat-pill.active {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+[data-theme='dark'] .health-filter-select {
+  background: #0f1117;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f0f6fc;
+}
+
+[data-theme='dark'] .health-checkbox-label {
+  color: #c9d1d9;
+}
+
+[data-theme='dark'] .facility-card {
+  background: #16181f;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .facility-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='dark'] .facility-title {
+  color: #f0f6fc;
+}
+
+[data-theme='dark'] .location-text strong {
+  color: #f0f6fc;
+}
+
+[data-theme='dark'] .location-text span {
+  color: #8b949e;
+}
+
+[data-theme='dark'] .contact-link {
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .contact-link:hover {
+  color: #38bdf8;
+}
+
+[data-theme='dark'] .bhs-meta-grid {
+  background: #0f1117;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='dark'] .bhs-meta-val {
+  color: #f0f6fc;
+}
+
+[data-theme='dark'] .service-pill {
+  background: #1c1f28;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #c9d1d9;
+}
+
+[data-theme='dark'] .facility-card-footer {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .facility-action-btn--secondary {
+  background: #1c1f28;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #c9d1d9;
+}
+
+[data-theme='dark'] .facility-action-btn--secondary:hover {
+  background: #232734;
+  color: #ffffff;
+}
+
+[data-theme='dark'] .health-empty-state {
+  background: #16181f;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ===================================================
