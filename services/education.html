@@ -92,11 +92,11 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="edu-skip-to-main-content"
+    <a href="#main-content" class="skip-link"
       >Skip to main content</a
     >
 
-    <!-- Hotline Bar -->
+        <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -130,7 +130,7 @@
       </div>
     </div>
 
-    <!-- Header -->
+    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -141,63 +141,36 @@
               class="logo-img"
           /></a>
         </div>
-        <nav class="main-nav" aria-label="Main Navigation">
+                <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="nav-home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="has-dropdown">
               <a
-                href="./"
-                class="active"
-                data-i18n="nav-services"
+                href="../services/" class="active"
                 aria-haspopup="true"
                 aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
-                <li><a href="agriculture">Agriculture</a></li>
-                <li><a href="business">Business</a></li>
-                <li><a href="certificates">Certificates</a></li>
-                <li><a href="employment">Employment</a></li>
-                <li><a href="environment">Environment</a></li>
-                <li><a href="health">Health</a></li>
-                <li><a href="infrastructure">Infrastructure</a></li>
-                <li><a href="social-services">Social Services</a></li>
-                <li><a href="tax-payments">Tax Payments</a></li>
+                <li><a href="../services/agriculture">Agriculture</a></li>
+                <li><a href="../services/business">Business</a></li>
+                <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
+                <li><a href="../services/employment">Employment</a></li>
+                <li><a href="../services/environment">Environment</a></li>
+                <li><a href="../services/health">Health</a></li>
+                <li><a href="../services/infrastructure">Infrastructure</a></li>
+                <li><a href="../services/social-services">Social Services</a></li>
+                <li><a href="../services/tax-payments">Tax & Payments</a></li>
               </ul>
             </li>
-            <li><a href="../government/" data-i18n="nav-government">Government</a></li>
-            <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a
-                href="../legislative/"
-                data-i18n="nav-legislative"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Legislative</a
-              >
-              <ul class="dropdown-menu">
-                <li><a href="agriculture">Agriculture</a></li>
-                <li><a href="business">Business</a></li>
-                <li><a href="certificates">Certificates</a></li>
-                <li><a href="employment">Employment</a></li>
-                <li><a href="environment">Environment</a></li>
-                <li><a href="health">Health</a></li>
-                <li><a href="infrastructure">Infrastructure</a></li>
-                <li><a href="social-services">Social Services</a></li>
-                <li><a href="tax-payments">Tax Payments</a></li>
-              </ul>
-            </li>
-            <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-        <div class="header-actions">
-          <div class="lang-selector">
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
-          </div>
-        
+                <div class="header-actions">
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
@@ -205,26 +178,26 @@
       </div>
     </header>
 
-    <!-- Real-Time Info Bar -->
+        <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
-        <div class="info-bar-inner">
+        <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
           <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
-            <i class="bi bi-currency-exchange"></i>
+            <i class="bi bi-currency-exchange" aria-hidden="true"></i>
             <span class="rate-rotator">
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
-            <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Solano</span>
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
+            <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span class="date-value">--- --, ----</span>
-            <span class="datetime-separator">•</span>
-            <i class="bi bi-clock"></i>
+            <span class="datetime-separator" aria-hidden="true">•</span>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span class="time-value">--:-- --</span>
             <span class="time-label">PHT</span>
           </div>
@@ -235,8 +208,8 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../" data-i18n="edu-home">Home</a><span>/</span>
-          <a href="./" data-i18n="edu-services">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span>
+          <a href="./">Services</a><span>/</span>
           <span aria-current="page">Education</span>
         </nav>
       </div>
@@ -245,10 +218,10 @@
           <div class="page-header-content">
             <span class="page-header-badge"
               ><i class="bi bi-mortarboard-fill"></i>
-              <span data-i18n="edu-page-badge">Education</span></span
+              <span>Education</span></span
             >
-            <h1 data-i18n="edu-page-title">Education Services</h1>
-            <p class="page-header-desc" data-i18n="edu-page-desc">
+            <h1>Education Services</h1>
+            <p class="page-header-desc">
               Scholarship programs and educational assistance
             </p>
           </div>
@@ -260,17 +233,17 @@
             <div class="service-item-card">
               <h3 class="service-item-title">
                 <i class="bi bi-award"></i>
-                <span data-i18n="edu-scholarship">Scholarship Programs</span>
+                <span>Scholarship Programs</span>
               </h3>
-              <p class="service-item-desc" data-i18n="edu-scholarship-desc">
+              <p class="service-item-desc">
                 Municipal scholarships for deserving students
               </p>
               <div class="service-item-meta">
                 <span
-                  ><strong data-i18n="label-fee">Fee:</strong>
-                  <span data-i18n="label-free">Free</span></span
+                  ><strong>Fee:</strong>
+                  <span>Free</span></span
                 >
-                <span><strong data-i18n="label-time">Time:</strong> Annual application</span>
+                <span><strong>Time:</strong> Annual application</span>
               </div>
             </div>
           </div>
@@ -283,17 +256,17 @@
           <div class="edu-stats-grid">
             <div class="edu-stat-card">
               <span class="edu-stat-num">91</span>
-              <span class="edu-stat-label" data-i18n="edu-primary-elementary">Primary Schools</span>
+              <span class="edu-stat-label">Primary Schools</span>
             </div>
             <div class="edu-stat-card">
               <span class="edu-stat-num">63</span>
-              <span class="edu-stat-label" data-i18n="edu-secondary-schools"
+              <span class="edu-stat-label"
                 >Secondary Schools</span
               >
             </div>
             <div class="edu-stat-card">
               <span class="edu-stat-num">16</span>
-              <span class="edu-stat-label" data-i18n="edu-higher-education">Higher Education</span>
+              <span class="edu-stat-label">Higher Education</span>
             </div>
           </div>
         </div>
@@ -337,9 +310,9 @@
             <button type="button" class="edu-category-header" aria-expanded="false">
               <span
                 ><i class="bi bi-book"></i>
-                <span data-i18n="edu-primary-and-elementary-schools">Primary Schools</span></span
+                <span>Primary Schools</span></span
               >
-              <span class="edu-category-count" data-i18n="edu-91-schools">91 schools</span>
+              <span class="edu-category-count">91 schools</span>
             </button>
             <div class="edu-category-content" hidden>
               <div class="edu-school-grid">
@@ -3710,9 +3683,9 @@
             <button type="button" class="edu-category-header" aria-expanded="false">
               <span
                 ><i class="bi bi-bank"></i>
-                <span data-i18n="edu-secondary-schools">Secondary Schools</span></span
+                <span>Secondary Schools</span></span
               >
-              <span class="edu-category-count" data-i18n="edu-63-schools">63 schools</span>
+              <span class="edu-category-count">63 schools</span>
             </button>
             <div class="edu-category-content" hidden>
               <div class="edu-school-grid">
@@ -6070,11 +6043,11 @@
             <button type="button" class="edu-category-header" aria-expanded="false">
               <span
                 ><i class="bi bi-mortarboard-fill"></i>
-                <span data-i18n="edu-higher-educational-institutions"
+                <span
                   >Higher Educational Institutions</span
                 ></span
               >
-              <span class="edu-category-count" data-i18n="edu-16-institutions"
+              <span class="edu-category-count"
                 >16 institutions</span
               >
             </button>
@@ -6697,7 +6670,6 @@
             />
             <p
               class="abakada-cta-text"
-              data-i18n="edu-empowering-filipino-students-and-educators-with"
             >
               Empowering Filipino students and educators with 1,000+ free and open-source
               productivity tools across 18 categories — from document processing and design to AI
@@ -6709,7 +6681,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-              <span data-i18n="edu-free-tools-for-education">Free Tools for Education</span></a
+              <span>Free Tools for Education</span></a
             >
           </div>
         </div>
@@ -6726,7 +6698,6 @@
             />
             <p
               class="footer-tagline"
-              data-i18n="edu-empowering-the-people-of-solano-with-transparent"
             >
               Empowering the people of Solano with transparent access to the services, programs, and
               public funds of LGU Solano.
@@ -6759,42 +6730,39 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="edu-quick-links">Quick Links</h4>
+            <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://quiz.bettersolano.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="edu-solano-quiz"
                   >Solano Quiz</a
                 >
               </li>
-              <li><a href="../sitemap/" data-i18n="edu-sitemap">Sitemap</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
               <li>
                 <a
                   href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="edu-citizens-charter"
                   >Citizen's Charter</a
                 >
               </li>
-              <li><a href="../terms/" data-i18n="edu-terms-of-use">Terms of Use</a></li>
-              <li><a href="../privacy/" data-i18n="edu-privacy-policy">Privacy Policy</a></li>
-              <li><a href="../accessibility/" data-i18n="edu-accessibility">Accessibility</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
+              <li><a href="../accessibility/">Accessibility</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="edu-resources">Resources</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://data.gov.ph"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="edu-open-data-philippines"
                   >Open Data Philippines</a
                 >
               </li>
@@ -6803,7 +6771,6 @@
                   href="https://www.foi.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="edu-freedom-of-information"
                   >Freedom of Information</a
                 >
               </li>
@@ -6812,7 +6779,6 @@
                   href="https://solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="edu-official-lgu-solano-portal"
                   >Official LGU Solano Portal</a
                 >
               </li>
@@ -6821,7 +6787,6 @@
                   href="https://sangguniangbayan.solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="edu-sangguniang-bayan"
                   >Sangguniang Bayan</a
                 >
               </li>
@@ -6830,7 +6795,6 @@
                   href="https://www.facebook.com/OfficialLguSolanoFanpage/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="edu-lgu-solano-facebook"
                   >LGU Solano Facebook</a
                 >
               </li>
@@ -6839,7 +6803,6 @@
                   href="https://blgf.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="edu-blgf-portal"
                   >BLGF Portal</a
                 >
               </li>
@@ -6860,7 +6823,7 @@
             </div>
             <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"
               ><i class="bi bi-envelope-heart"></i>
-              <span data-i18n="edu-volunteer-with-us">Volunteer with us</span></a
+              <span>Volunteer with us</span></a
             >
             <a
               href="https://github.com/BetterSolano/bettersolano"
@@ -6868,7 +6831,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-github"></i>
-              <span data-i18n="edu-contribute-code-with-us">Contribute code with us</span></a
+              <span>Contribute code with us</span></a
             >
             <div class="footer-partners">
               <a
@@ -6925,7 +6888,6 @@
         </div>
       </div>
     </footer>
-    <script defer src="../assets/js/translations.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>

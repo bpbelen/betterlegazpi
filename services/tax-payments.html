@@ -92,11 +92,11 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="tax-skip-to-main-content"
+    <a href="#main-content" class="skip-link"
       >Skip to main content</a
     >
 
-    <!-- Hotline Bar -->
+        <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -130,7 +130,7 @@
       </div>
     </div>
 
-    <!-- Header -->
+    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -141,97 +141,63 @@
               class="logo-img"
           /></a>
         </div>
-        <nav class="main-nav" aria-label="Main Navigation">
+                <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="nav-home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="has-dropdown">
               <a
-                href="./"
-                class="active"
-                data-i18n="nav-services"
+                href="../services/" class="active"
                 aria-haspopup="true"
                 aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
-                <li><a href="agriculture" data-i18n="tax-agriculture">Agriculture</a></li>
-                <li><a href="business" data-i18n="tax-business">Business</a></li>
-                <li><a href="certificates" data-i18n="tax-certificates">Certificates</a></li>
-                <li><a href="employment" data-i18n="tax-employment">Employment</a></li>
-                <li><a href="environment" data-i18n="tax-environment">Environment</a></li>
-                <li><a href="health" data-i18n="tax-health">Health</a></li>
-                <li><a href="infrastructure" data-i18n="tax-infrastructure">Infrastructure</a></li>
-                <li>
-                  <a href="social-services" data-i18n="tax-social-services">Social Services</a>
-                </li>
-                <li><a href="tax-payments" data-i18n="tax-tax-payments">Tax Payments</a></li>
+                <li><a href="../services/agriculture">Agriculture</a></li>
+                <li><a href="../services/business">Business</a></li>
+                <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
+                <li><a href="../services/employment">Employment</a></li>
+                <li><a href="../services/environment">Environment</a></li>
+                <li><a href="../services/health">Health</a></li>
+                <li><a href="../services/infrastructure">Infrastructure</a></li>
+                <li><a href="../services/social-services">Social Services</a></li>
+                <li><a href="../services/tax-payments">Tax & Payments</a></li>
               </ul>
             </li>
-            <li><a href="../government/" data-i18n="nav-government">Government</a></li>
-            <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a
-                href="../legislative/"
-                data-i18n="nav-legislative"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Legislative</a
-              >
-              <ul class="dropdown-menu">
-                <li><a href="agriculture">Agriculture</a></li>
-                <li><a href="business">Business</a></li>
-                <li><a href="certificates">Certificates</a></li>
-                <li><a href="employment">Employment</a></li>
-                <li><a href="environment">Environment</a></li>
-                <li><a href="health">Health</a></li>
-                <li><a href="infrastructure">Infrastructure</a></li>
-                <li><a href="social-services">Social Services</a></li>
-                <li><a href="tax-payments">Tax Payments</a></li>
-              </ul>
-            </li>
-            <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-        <div class="header-actions">
-          <div class="lang-selector">
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
-          </div>
-
-          <button
-            id="theme-toggle"
-            class="theme-toggle-btn"
-            aria-label="Toggle dark mode"
-            title="Toggle dark mode"
-          >
+                <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-    <!-- Real-Time Info Bar -->
+        <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
-        <div class="info-bar-inner">
+        <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
           <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
-            <i class="bi bi-currency-exchange"></i>
+            <i class="bi bi-currency-exchange" aria-hidden="true"></i>
             <span class="rate-rotator">
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
           <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
-            <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Legazpi City</span>
+            <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span class="date-value">--- --, ----</span>
-            <span class="datetime-separator">•</span>
-            <i class="bi bi-clock"></i>
+            <span class="datetime-separator" aria-hidden="true">•</span>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span class="time-value">--:-- --</span>
             <span class="time-label">PHT</span>
           </div>
@@ -242,8 +208,8 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../" data-i18n="tax-home">Home</a><span>/</span>
-          <a href="./" data-i18n="tax-services">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span>
+          <a href="./">Services</a><span>/</span>
           <span aria-current="page">Tax</span>
         </nav>
       </div>
@@ -784,7 +750,6 @@
         </div>
       </div>
     </footer>
-    <script defer src="../assets/js/translations.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>

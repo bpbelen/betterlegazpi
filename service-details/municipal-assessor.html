@@ -436,11 +436,11 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="assessor-skip-to-main-content"
+    <a href="#main-content" class="skip-link"
       >Skip to main content</a
     >
 
-                    <!-- Hotline Bar -->
+                        <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -474,7 +474,7 @@
       </div>
     </div>
 
-    <!-- Header -->
+    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -485,61 +485,36 @@
               class="logo-img"
           /></a>
         </div>
-        <nav class="main-nav" aria-label="Main Navigation">
+                <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="nav-home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" class="active" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/" class="active"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
                 <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
                 <li><a href="../services/employment">Employment</a></li>
                 <li><a href="../services/environment">Environment</a></li>
                 <li><a href="../services/health">Health</a></li>
                 <li><a href="../services/infrastructure">Infrastructure</a></li>
                 <li><a href="../services/social-services">Social Services</a></li>
-                <li><a href="../services/tax-payments">Tax Payments</a></li>
+                <li><a href="../services/tax-payments">Tax & Payments</a></li>
               </ul>
             </li>
-            <li><a href="../government/" data-i18n="nav-government">Government</a></li>
-            <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    href="../legislative/ordinance-framework"
-                    data-i18n="assessor-ordinance-framework"
-                    >Ordinance Framework</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../legislative/resolution-framework"
-                    data-i18n="assessor-resolution-framework"
-                    >Resolution Framework</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-        <div class="header-actions">
-          <div class="lang-selector">
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">
-              EN
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
-              FIL
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
-            </button>
-          </div>
-        
+                <div class="header-actions">
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
@@ -547,26 +522,26 @@
       </div>
     </header>
 
-    <!-- Real-Time Info Bar -->
+        <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
-        <div class="info-bar-inner">
+        <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
           <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
-            <i class="bi bi-currency-exchange"></i>
+            <i class="bi bi-currency-exchange" aria-hidden="true"></i>
             <span class="rate-rotator">
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
-            <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Solano</span>
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
+            <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span class="date-value">--- --, ----</span>
-            <span class="datetime-separator">•</span>
-            <i class="bi bi-clock"></i>
+            <span class="datetime-separator" aria-hidden="true">•</span>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span class="time-value">--:-- --</span>
             <span class="time-label">PHT</span>
           </div>
@@ -578,11 +553,11 @@
       <!-- Breadcrumbs -->
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../" data-i18n="assessor-home">Home</a>
+          <a href="../">Home</a>
           <span>/</span>
-          <a href="../services/" data-i18n="assessor-services">Services</a>
+          <a href="../services/">Services</a>
           <span>/</span>
-          <a href="../services/tax-payments" data-i18n="assessor-tax-payments">Tax & Payments</a>
+          <a href="../services/tax-payments">Tax & Payments</a>
           <span>/</span>
           <span aria-current="page">Municipal Assessor's Office</span>
         </nav>
@@ -594,14 +569,13 @@
           <div class="page-header-content">
             <span class="page-header-badge"
               ><i class="bi bi-house-door"></i>
-              <span data-i18n="assessor-municipal-assessors-office"
+              <span
                 >Municipal Assessor's Office</span
               ></span
             >
-            <h1 data-i18n="assessor-property-assessment-services">Property Assessment Services</h1>
+            <h1>Property Assessment Services</h1>
             <p
               class="page-header-desc"
-              data-i18n="assessor-real-property-assessment-tax-declarations-and"
             >
               Real property assessment, tax declarations, and land records management
             </p>
@@ -615,22 +589,22 @@
           <div class="quick-stats">
             <div class="quick-stat-card">
               <i class="bi bi-clock"></i>
-              <h4 data-i18n="assessor-processing-time">Processing Time</h4>
-              <p data-i18n="assessor-15-days">1-5 Days</p>
+              <h4>Processing Time</h4>
+              <p>1-5 Days</p>
             </div>
             <div class="quick-stat-card">
               <i class="bi bi-cash"></i>
-              <h4 data-i18n="assessor-fees">Fees</h4>
-              <p data-i18n="assessor-varies-by-service">Varies by Service</p>
+              <h4>Fees</h4>
+              <p>Varies by Service</p>
             </div>
             <div class="quick-stat-card">
               <i class="bi bi-calendar-check"></i>
-              <h4 data-i18n="assessor-availability">Availability</h4>
+              <h4>Availability</h4>
               <p>Mon-Fri, 8AM-5PM</p>
             </div>
             <div class="quick-stat-card">
               <i class="bi bi-telephone"></i>
-              <h4 data-i18n="assessor-hotline">Hotline</h4>
+              <h4>Hotline</h4>
               <p>(078) 326-5017</p>
             </div>
           </div>
@@ -639,27 +613,27 @@
           <nav class="assessor-nav" aria-label="Assessor Services Navigation">
             <a href="#assessment" class="assessor-nav-btn"
               ><i class="bi bi-house-check"></i>
-              <span data-i18n="assessor-property-assessment">Property Assessment</span></a
+              <span>Property Assessment</span></a
             >
             <a href="#declaration" class="assessor-nav-btn"
               ><i class="bi bi-file-text"></i>
-              <span data-i18n="assessor-tax-declaration">Tax Declaration</span></a
+              <span>Tax Declaration</span></a
             >
             <a href="#transfer" class="assessor-nav-btn"
               ><i class="bi bi-arrow-left-right"></i>
-              <span data-i18n="assessor-transfer-of-ownership">Transfer of Ownership</span></a
+              <span>Transfer of Ownership</span></a
             >
             <a href="#certification" class="assessor-nav-btn"
               ><i class="bi bi-award"></i>
-              <span data-i18n="assessor-certifications">Certifications</span></a
+              <span>Certifications</span></a
             >
             <a href="#annotation" class="assessor-nav-btn"
               ><i class="bi bi-pencil-square"></i>
-              <span data-i18n="assessor-annotation">Annotation</span></a
+              <span>Annotation</span></a
             >
             <a href="#reclassification" class="assessor-nav-btn"
               ><i class="bi bi-layers"></i>
-              <span data-i18n="assessor-reclassification">Reclassification</span></a
+              <span>Reclassification</span></a
             >
           </nav>
         </div>
@@ -675,8 +649,8 @@
                 <div class="section-header-card assessment">
                   <div class="section-header-icon"><i class="bi bi-house-check"></i></div>
                   <div class="section-header-content">
-                    <h2 data-i18n="assessor-property-assessment">Property Assessment</h2>
-                    <p data-i18n="assessor-appraisal-and-valuation-of-real-properties-for">
+                    <h2>Property Assessment</h2>
+                    <p>
                       Appraisal and valuation of real properties for taxation purposes
                     </p>
                   </div>
@@ -685,33 +659,32 @@
                   <div class="service-detail-header">
                     <div class="service-info-box">
                       <i class="bi bi-clock"></i>
-                      <h4 data-i18n="assessor-processing-time">Processing Time</h4>
-                      <p data-i18n="assessor-35-days">3-5 Days</p>
+                      <h4>Processing Time</h4>
+                      <p>3-5 Days</p>
                       <small>After inspection</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-cash"></i>
-                      <h4 data-i18n="assessor-fee">Fee</h4>
-                      <p data-i18n="assessor-varies">Varies</p>
+                      <h4>Fee</h4>
+                      <p>Varies</p>
                       <small>Based on property</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-person-check"></i>
-                      <h4 data-i18n="assessor-who-can-apply">Who Can Apply</h4>
-                      <p data-i18n="assessor-property-owner">Property Owner</p>
+                      <h4>Who Can Apply</h4>
+                      <p>Property Owner</p>
                       <small>Or authorized rep</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-calendar-check"></i>
-                      <h4 data-i18n="assessor-appointment">Appointment</h4>
-                      <p data-i18n="assessor-walkin">Walk-in</p>
+                      <h4>Appointment</h4>
+                      <p>Walk-in</p>
                       <small>Inspection scheduled</small>
                     </div>
                   </div>
                   <div class="service-detail-body">
                     <h3
                       style="font-size: 1.125rem; margin-bottom: var(--spacing-sm)"
-                      data-i18n="assessor-about-property-assessment"
                     >
                       About Property Assessment
                     </h3>
@@ -721,7 +694,6 @@
                         font-size: 0.9375rem;
                         margin-bottom: var(--spacing-md);
                       "
-                      data-i18n="assessor-property-assessment-determines-the-fair-market"
                     >
                       Property assessment determines the fair market value and assessed value of
                       real properties (land, buildings, machinery) for real property tax
@@ -733,8 +705,8 @@
                       <div class="process-step">
                         <div class="process-step-number">1</div>
                         <div class="process-step-content">
-                          <h4 data-i18n="assessor-submit-application">Submit Application</h4>
-                          <p data-i18n="assessor-file-application-at-the-assessors-office-with">
+                          <h4>Submit Application</h4>
+                          <p>
                             File application at the Assessor's Office with required documents
                             including proof of ownership.
                           </p>
@@ -743,8 +715,8 @@
                       <div class="process-step">
                         <div class="process-step-number">2</div>
                         <div class="process-step-content">
-                          <h4 data-i18n="assessor-property-inspection">Property Inspection</h4>
-                          <p data-i18n="assessor-assessors-staff-will-conduct-onsite-inspection">
+                          <h4>Property Inspection</h4>
+                          <p>
                             Assessor's staff will conduct on-site inspection and measurement of the
                             property.
                           </p>
@@ -753,8 +725,8 @@
                       <div class="process-step">
                         <div class="process-step-number">3</div>
                         <div class="process-step-content">
-                          <h4 data-i18n="assessor-valuation-assessment">Valuation & Assessment</h4>
-                          <p data-i18n="assessor-property-is-appraised-based-on-schedule-of-fair">
+                          <h4>Valuation & Assessment</h4>
+                          <p>
                             Property is appraised based on Schedule of Fair Market Values and
                             assessment levels.
                           </p>
@@ -763,10 +735,10 @@
                       <div class="process-step">
                         <div class="process-step-number">4</div>
                         <div class="process-step-content">
-                          <h4 data-i18n="assessor-issuance-of-tax-declaration">
+                          <h4>
                             Issuance of Tax Declaration
                           </h4>
-                          <p data-i18n="assessor-new-tax-declaration-is-issued-reflecting-the">
+                          <p>
                             New Tax Declaration is issued reflecting the assessed value of the
                             property.
                           </p>
@@ -776,7 +748,6 @@
 
                     <h4
                       style="font-size: 1rem; margin: var(--spacing-lg) 0 var(--spacing-sm)"
-                      data-i18n="assessor-required-documents"
                     >
                       Required Documents
                     </h4>
@@ -803,8 +774,8 @@
                 <div class="section-header-card declaration">
                   <div class="section-header-icon"><i class="bi bi-file-text"></i></div>
                   <div class="section-header-content">
-                    <h2 data-i18n="assessor-tax-declaration-services">Tax Declaration Services</h2>
-                    <p data-i18n="assessor-issuance-and-management-of-real-property-tax">
+                    <h2>Tax Declaration Services</h2>
+                    <p>
                       Issuance and management of real property tax declarations
                     </p>
                   </div>
@@ -813,33 +784,32 @@
                   <div class="service-detail-header">
                     <div class="service-info-box">
                       <i class="bi bi-clock"></i>
-                      <h4 data-i18n="assessor-processing-time">Processing Time</h4>
-                      <p data-i18n="assessor-13-days">1-3 Days</p>
+                      <h4>Processing Time</h4>
+                      <p>1-3 Days</p>
                       <small>Standard processing</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-cash"></i>
-                      <h4 data-i18n="assessor-fee">Fee</h4>
+                      <h4>Fee</h4>
                       <p>₱100-500</p>
                       <small>Depends on type</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-person-check"></i>
-                      <h4 data-i18n="assessor-who-can-apply">Who Can Apply</h4>
-                      <p data-i18n="assessor-ownerrep">Owner/Rep</p>
+                      <h4>Who Can Apply</h4>
+                      <p>Owner/Rep</p>
                       <small>With authorization</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-calendar-check"></i>
-                      <h4 data-i18n="assessor-appointment">Appointment</h4>
-                      <p data-i18n="assessor-walkin">Walk-in</p>
+                      <h4>Appointment</h4>
+                      <p>Walk-in</p>
                       <small>No appointment needed</small>
                     </div>
                   </div>
                   <div class="service-detail-body">
                     <h3
                       style="font-size: 1.125rem; margin-bottom: var(--spacing-sm)"
-                      data-i18n="assessor-tax-declaration-services"
                     >
                       Tax Declaration Services
                     </h3>
@@ -849,7 +819,6 @@
                         font-size: 0.9375rem;
                         margin-bottom: var(--spacing-md);
                       "
-                      data-i18n="assessor-tax-declaration-is-an-official-document-showing"
                     >
                       Tax Declaration is an official document showing the assessed value of a
                       property. It is used as basis for computing real property taxes and serves as
@@ -881,11 +850,10 @@
                           "
                         >
                           <i class="bi bi-plus-circle" style="color: var(--color-success)"></i>
-                          <span data-i18n="assessor-new-tax-declaration">New Tax Declaration</span>
+                          <span>New Tax Declaration</span>
                         </h4>
                         <p
                           style="font-size: 0.875rem; color: var(--color-text-light); margin: 0"
-                          data-i18n="assessor-for-newly-constructed-buildings-improvements-or"
                         >
                           For newly constructed buildings, improvements, or newly discovered
                           properties.
@@ -908,11 +876,10 @@
                           "
                         >
                           <i class="bi bi-arrow-repeat" style="color: var(--color-primary)"></i>
-                          <span data-i18n="assessor-revisionupdate">Revision/Update</span>
+                          <span>Revision/Update</span>
                         </h4>
                         <p
                           style="font-size: 0.875rem; color: var(--color-text-light); margin: 0"
-                          data-i18n="assessor-for-changes-in-property-details-corrections-or"
                         >
                           For changes in property details, corrections, or general revision updates.
                         </p>
@@ -934,11 +901,10 @@
                           "
                         >
                           <i class="bi bi-files" style="color: var(--color-info)"></i>
-                          <span data-i18n="assessor-duplicate-copy">Duplicate Copy</span>
+                          <span>Duplicate Copy</span>
                         </h4>
                         <p
                           style="font-size: 0.875rem; color: var(--color-text-light); margin: 0"
-                          data-i18n="assessor-replacement-for-lost-damaged-or-additional-copies"
                         >
                           Replacement for lost, damaged, or additional copies of tax declaration.
                         </p>
@@ -947,7 +913,6 @@
 
                     <h4
                       style="font-size: 1rem; margin: var(--spacing-lg) 0 var(--spacing-sm)"
-                      data-i18n="assessor-required-documents"
                     >
                       Required Documents
                     </h4>
@@ -974,8 +939,8 @@
                 <div class="section-header-card transfer">
                   <div class="section-header-icon"><i class="bi bi-arrow-left-right"></i></div>
                   <div class="section-header-content">
-                    <h2 data-i18n="assessor-transfer-of-ownership">Transfer of Ownership</h2>
-                    <p data-i18n="assessor-processing-of-property-ownership-transfers-in-tax">
+                    <h2>Transfer of Ownership</h2>
+                    <p>
                       Processing of property ownership transfers in tax records
                     </p>
                   </div>
@@ -984,33 +949,32 @@
                   <div class="service-detail-header">
                     <div class="service-info-box">
                       <i class="bi bi-clock"></i>
-                      <h4 data-i18n="assessor-processing-time">Processing Time</h4>
-                      <p data-i18n="assessor-35-days">3-5 Days</p>
+                      <h4>Processing Time</h4>
+                      <p>3-5 Days</p>
                       <small>After complete docs</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-cash"></i>
-                      <h4 data-i18n="assessor-fee">Fee</h4>
+                      <h4>Fee</h4>
                       <p>₱200-1,000</p>
                       <small>Plus transfer tax</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-person-check"></i>
-                      <h4 data-i18n="assessor-who-can-apply">Who Can Apply</h4>
-                      <p data-i18n="assessor-new-owner">New Owner</p>
+                      <h4>Who Can Apply</h4>
+                      <p>New Owner</p>
                       <small>Or authorized rep</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-calendar-check"></i>
-                      <h4 data-i18n="assessor-appointment">Appointment</h4>
-                      <p data-i18n="assessor-walkin">Walk-in</p>
+                      <h4>Appointment</h4>
+                      <p>Walk-in</p>
                       <small>No appointment needed</small>
                     </div>
                   </div>
                   <div class="service-detail-body">
                     <h3
                       style="font-size: 1.125rem; margin-bottom: var(--spacing-sm)"
-                      data-i18n="assessor-transfer-of-property-ownership"
                     >
                       Transfer of Property Ownership
                     </h3>
@@ -1020,7 +984,6 @@
                         font-size: 0.9375rem;
                         margin-bottom: var(--spacing-md);
                       "
-                      data-i18n="assessor-when-property-changes-ownership-through-sale"
                     >
                       When property changes ownership through sale, donation, inheritance, or other
                       means, the tax declaration must be transferred to the new owner's name.
@@ -1030,8 +993,8 @@
                       <div class="process-step">
                         <div class="process-step-number">1</div>
                         <div class="process-step-content">
-                          <h4 data-i18n="assessor-secure-tax-clearance">Secure Tax Clearance</h4>
-                          <p data-i18n="assessor-obtain-tax-clearance-from-treasurers-office">
+                          <h4>Secure Tax Clearance</h4>
+                          <p>
                             Obtain tax clearance from Treasurer's Office showing no unpaid real
                             property taxes.
                           </p>
@@ -1040,8 +1003,8 @@
                       <div class="process-step">
                         <div class="process-step-number">2</div>
                         <div class="process-step-content">
-                          <h4 data-i18n="assessor-pay-transfer-tax">Pay Transfer Tax</h4>
-                          <p data-i18n="assessor-pay-the-required-transfer-tax-at-the-treasurers">
+                          <h4>Pay Transfer Tax</h4>
+                          <p>
                             Pay the required transfer tax at the Treasurer's Office (0.5% of selling
                             price or fair market value).
                           </p>
@@ -1050,8 +1013,8 @@
                       <div class="process-step">
                         <div class="process-step-number">3</div>
                         <div class="process-step-content">
-                          <h4 data-i18n="assessor-submit-documents">Submit Documents</h4>
-                          <p data-i18n="assessor-file-application-with-complete-documents-at-the">
+                          <h4>Submit Documents</h4>
+                          <p>
                             File application with complete documents at the Assessor's Office.
                           </p>
                         </div>
@@ -1059,10 +1022,10 @@
                       <div class="process-step">
                         <div class="process-step-number">4</div>
                         <div class="process-step-content">
-                          <h4 data-i18n="assessor-claim-new-tax-declaration">
+                          <h4>
                             Claim New Tax Declaration
                           </h4>
-                          <p data-i18n="assessor-new-tax-declaration-under-the-new-owners-name">
+                          <p>
                             New Tax Declaration under the new owner's name will be issued.
                           </p>
                         </div>
@@ -1071,7 +1034,6 @@
 
                     <h4
                       style="font-size: 1rem; margin: var(--spacing-lg) 0 var(--spacing-sm)"
-                      data-i18n="assessor-required-documents"
                     >
                       Required Documents
                     </h4>
@@ -1104,8 +1066,8 @@
                 <div class="section-header-card certification">
                   <div class="section-header-icon"><i class="bi bi-award"></i></div>
                   <div class="section-header-content">
-                    <h2 data-i18n="assessor-certifications">Certifications</h2>
-                    <p data-i18n="assessor-various-certifications-related-to-real-property">
+                    <h2>Certifications</h2>
+                    <p>
                       Various certifications related to real property records
                     </p>
                   </div>
@@ -1129,7 +1091,6 @@
                       >
                         <h4
                           style="font-size: 1rem; margin-bottom: 8px"
-                          data-i18n="assessor-certified-true-copy-of-tax-declaration"
                         >
                           Certified True Copy of Tax Declaration
                         </h4>
@@ -1139,16 +1100,15 @@
                             color: var(--color-text-light);
                             margin-bottom: 12px;
                           "
-                          data-i18n="assessor-official-copy-of-tax-declaration-for-legal-and"
                         >
                           Official copy of tax declaration for legal and banking purposes.
                         </p>
                         <div style="font-size: 0.8125rem">
                           <span style="display: block; margin-bottom: 4px"
-                            ><strong data-i18n="assessor-fee">Fee:</strong> ₱100</span
+                            ><strong>Fee:</strong> ₱100</span
                           >
                           <span style="display: block"
-                            ><strong data-i18n="assessor-time">Time:</strong> Same day</span
+                            ><strong>Time:</strong> Same day</span
                           >
                         </div>
                       </div>
@@ -1162,7 +1122,6 @@
                       >
                         <h4
                           style="font-size: 1rem; margin-bottom: 8px"
-                          data-i18n="assessor-certificate-of-no-property"
                         >
                           Certificate of No Property
                         </h4>
@@ -1172,16 +1131,15 @@
                             color: var(--color-text-light);
                             margin-bottom: 12px;
                           "
-                          data-i18n="assessor-certification-that-a-person-has-no-declared"
                         >
                           Certification that a person has no declared property in Solano.
                         </p>
                         <div style="font-size: 0.8125rem">
                           <span style="display: block; margin-bottom: 4px"
-                            ><strong data-i18n="assessor-fee">Fee:</strong> ₱100</span
+                            ><strong>Fee:</strong> ₱100</span
                           >
                           <span style="display: block"
-                            ><strong data-i18n="assessor-time">Time:</strong> Same day</span
+                            ><strong>Time:</strong> Same day</span
                           >
                         </div>
                       </div>
@@ -1195,7 +1153,6 @@
                       >
                         <h4
                           style="font-size: 1rem; margin-bottom: 8px"
-                          data-i18n="assessor-certificate-of-property-holdings"
                         >
                           Certificate of Property Holdings
                         </h4>
@@ -1205,16 +1162,15 @@
                             color: var(--color-text-light);
                             margin-bottom: 12px;
                           "
-                          data-i18n="assessor-list-of-all-properties-declared-under-a-persons"
                         >
                           List of all properties declared under a person's name.
                         </p>
                         <div style="font-size: 0.8125rem">
                           <span style="display: block; margin-bottom: 4px"
-                            ><strong data-i18n="assessor-fee">Fee:</strong> ₱150</span
+                            ><strong>Fee:</strong> ₱150</span
                           >
                           <span style="display: block"
-                            ><strong data-i18n="assessor-time">Time:</strong> 1-2 days</span
+                            ><strong>Time:</strong> 1-2 days</span
                           >
                         </div>
                       </div>
@@ -1228,7 +1184,6 @@
                       >
                         <h4
                           style="font-size: 1rem; margin-bottom: 8px"
-                          data-i18n="assessor-certificate-of-land-area"
                         >
                           Certificate of Land Area
                         </h4>
@@ -1238,16 +1193,15 @@
                             color: var(--color-text-light);
                             margin-bottom: 12px;
                           "
-                          data-i18n="assessor-certification-of-the-total-land-area-based-on-tax"
                         >
                           Certification of the total land area based on tax records.
                         </p>
                         <div style="font-size: 0.8125rem">
                           <span style="display: block; margin-bottom: 4px"
-                            ><strong data-i18n="assessor-fee">Fee:</strong> ₱100</span
+                            ><strong>Fee:</strong> ₱100</span
                           >
                           <span style="display: block"
-                            ><strong data-i18n="assessor-time">Time:</strong> Same day</span
+                            ><strong>Time:</strong> Same day</span
                           >
                         </div>
                       </div>
@@ -1261,8 +1215,8 @@
                 <div class="section-header-card annotation">
                   <div class="section-header-icon"><i class="bi bi-pencil-square"></i></div>
                   <div class="section-header-content">
-                    <h2 data-i18n="assessor-annotation-services">Annotation Services</h2>
-                    <p data-i18n="assessor-recording-of-encumbrances-and-other-notations-on">
+                    <h2>Annotation Services</h2>
+                    <p>
                       Recording of encumbrances and other notations on tax declarations
                     </p>
                   </div>
@@ -1271,33 +1225,32 @@
                   <div class="service-detail-header">
                     <div class="service-info-box">
                       <i class="bi bi-clock"></i>
-                      <h4 data-i18n="assessor-processing-time">Processing Time</h4>
-                      <p data-i18n="assessor-13-days">1-3 Days</p>
+                      <h4>Processing Time</h4>
+                      <p>1-3 Days</p>
                       <small>Standard processing</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-cash"></i>
-                      <h4 data-i18n="assessor-fee">Fee</h4>
+                      <h4>Fee</h4>
                       <p>₱100-300</p>
                       <small>Per annotation</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-person-check"></i>
-                      <h4 data-i18n="assessor-who-can-apply">Who Can Apply</h4>
-                      <p data-i18n="assessor-ownercreditor">Owner/Creditor</p>
+                      <h4>Who Can Apply</h4>
+                      <p>Owner/Creditor</p>
                       <small>Interested party</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-calendar-check"></i>
-                      <h4 data-i18n="assessor-appointment">Appointment</h4>
-                      <p data-i18n="assessor-walkin">Walk-in</p>
+                      <h4>Appointment</h4>
+                      <p>Walk-in</p>
                       <small>No appointment needed</small>
                     </div>
                   </div>
                   <div class="service-detail-body">
                     <h3
                       style="font-size: 1.125rem; margin-bottom: var(--spacing-sm)"
-                      data-i18n="assessor-types-of-annotations"
                     >
                       Types of Annotations
                     </h3>
@@ -1307,7 +1260,6 @@
                         font-size: 0.9375rem;
                         margin-bottom: var(--spacing-md);
                       "
-                      data-i18n="assessor-annotations-are-official-notations-recorded-on"
                     >
                       Annotations are official notations recorded on tax declarations to reflect
                       encumbrances, liens, or other legal matters affecting the property.
@@ -1335,7 +1287,7 @@
                           class="bi bi-bank"
                           style="color: var(--color-primary); font-size: 1.25rem"
                         ></i>
-                        <span style="font-size: 0.875rem" data-i18n="assessor-mortgage-annotation"
+                        <span style="font-size: 0.875rem"
                           >Mortgage Annotation</span
                         >
                       </div>
@@ -1355,7 +1307,6 @@
                         ></i>
                         <span
                           style="font-size: 0.875rem"
-                          data-i18n="assessor-cancellation-of-mortgage"
                           >Cancellation of Mortgage</span
                         >
                       </div>
@@ -1373,7 +1324,7 @@
                           class="bi bi-exclamation-triangle"
                           style="color: #f59e0b; font-size: 1.25rem"
                         ></i>
-                        <span style="font-size: 0.875rem" data-i18n="assessor-adverse-claim"
+                        <span style="font-size: 0.875rem"
                           >Adverse Claim</span
                         >
                       </div>
@@ -1391,7 +1342,7 @@
                           class="bi bi-shield-exclamation"
                           style="color: var(--color-info); font-size: 1.25rem"
                         ></i>
-                        <span style="font-size: 0.875rem" data-i18n="assessor-lis-pendens"
+                        <span style="font-size: 0.875rem"
                           >Lis Pendens</span
                         >
                       </div>
@@ -1399,7 +1350,6 @@
 
                     <h4
                       style="font-size: 1rem; margin: var(--spacing-lg) 0 var(--spacing-sm)"
-                      data-i18n="assessor-required-documents"
                     >
                       Required Documents
                     </h4>
@@ -1426,8 +1376,8 @@
                 <div class="section-header-card reclassification">
                   <div class="section-header-icon"><i class="bi bi-layers"></i></div>
                   <div class="section-header-content">
-                    <h2 data-i18n="assessor-land-reclassification">Land Reclassification</h2>
-                    <p data-i18n="assessor-change-of-land-classification-for-assessment">
+                    <h2>Land Reclassification</h2>
+                    <p>
                       Change of land classification for assessment purposes
                     </p>
                   </div>
@@ -1436,33 +1386,32 @@
                   <div class="service-detail-header">
                     <div class="service-info-box">
                       <i class="bi bi-clock"></i>
-                      <h4 data-i18n="assessor-processing-time">Processing Time</h4>
-                      <p data-i18n="assessor-515-days">5-15 Days</p>
+                      <h4>Processing Time</h4>
+                      <p>5-15 Days</p>
                       <small>Requires inspection</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-cash"></i>
-                      <h4 data-i18n="assessor-fee">Fee</h4>
-                      <p data-i18n="assessor-varies">Varies</p>
+                      <h4>Fee</h4>
+                      <p>Varies</p>
                       <small>Based on area</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-person-check"></i>
-                      <h4 data-i18n="assessor-who-can-apply">Who Can Apply</h4>
-                      <p data-i18n="assessor-property-owner">Property Owner</p>
+                      <h4>Who Can Apply</h4>
+                      <p>Property Owner</p>
                       <small>With valid reason</small>
                     </div>
                     <div class="service-info-box">
                       <i class="bi bi-calendar-check"></i>
-                      <h4 data-i18n="assessor-appointment">Appointment</h4>
-                      <p data-i18n="assessor-walkin">Walk-in</p>
+                      <h4>Appointment</h4>
+                      <p>Walk-in</p>
                       <small>Inspection scheduled</small>
                     </div>
                   </div>
                   <div class="service-detail-body">
                     <h3
                       style="font-size: 1.125rem; margin-bottom: var(--spacing-sm)"
-                      data-i18n="assessor-land-classification-categories"
                     >
                       Land Classification Categories
                     </h3>
@@ -1472,7 +1421,6 @@
                         font-size: 0.9375rem;
                         margin-bottom: var(--spacing-md);
                       "
-                      data-i18n="assessor-land-reclassification-changes-the-category-of"
                     >
                       Land reclassification changes the category of land for assessment purposes,
                       which affects the applicable assessment level and tax rate.
@@ -1505,7 +1453,6 @@
                         ></i>
                         <span
                           style="font-size: 0.875rem; font-weight: 500; color: #166534"
-                          data-i18n="assessor-agricultural"
                           >Agricultural</span
                         >
                       </div>
@@ -1528,7 +1475,6 @@
                         ></i>
                         <span
                           style="font-size: 0.875rem; font-weight: 500; color: #1e40af"
-                          data-i18n="assessor-residential"
                           >Residential</span
                         >
                       </div>
@@ -1551,7 +1497,6 @@
                         ></i>
                         <span
                           style="font-size: 0.875rem; font-weight: 500; color: #92400e"
-                          data-i18n="assessor-commercial"
                           >Commercial</span
                         >
                       </div>
@@ -1574,7 +1519,6 @@
                         ></i>
                         <span
                           style="font-size: 0.875rem; font-weight: 500; color: #5b21b6"
-                          data-i18n="assessor-industrial"
                           >Industrial</span
                         >
                       </div>
@@ -1582,7 +1526,6 @@
 
                     <h4
                       style="font-size: 1rem; margin: var(--spacing-lg) 0 var(--spacing-sm)"
-                      data-i18n="assessor-required-documents"
                     >
                       Required Documents
                     </h4>
@@ -1615,7 +1558,7 @@
             <aside class="contact-sidebar">
               <h3>
                 <i class="bi bi-building"></i>
-                <span data-i18n="assessor-municipal-assessors-office"
+                <span
                   >Municipal Assessor's Office</span
                 >
               </h3>
@@ -1623,8 +1566,8 @@
               <div class="contact-item">
                 <i class="bi bi-geo-alt"></i>
                 <div class="contact-item-content">
-                  <strong data-i18n="assessor-location">Location</strong>
-                  <span data-i18n="assessor-municipal-hall-ground-floor-solano-nueva-vizcaya"
+                  <strong>Location</strong>
+                  <span
                     >Municipal Hall, Ground Floor<br />Solano, Nueva Vizcaya 3708</span
                   >
                 </div>
@@ -1633,7 +1576,7 @@
               <div class="contact-item">
                 <i class="bi bi-telephone"></i>
                 <div class="contact-item-content">
-                  <strong data-i18n="assessor-phone">Phone</strong>
+                  <strong>Phone</strong>
                   <a href="tel:0783265017">(078) 326-5017</a>
                 </div>
               </div>
@@ -1641,8 +1584,8 @@
               <div class="contact-item">
                 <i class="bi bi-envelope"></i>
                 <div class="contact-item-content">
-                  <strong data-i18n="assessor-email">Email</strong>
-                  <a href="mailto:assessor@solano.gov.ph" data-i18n="assessor-assessorsolanogovph"
+                  <strong>Email</strong>
+                  <a href="mailto:assessor@solano.gov.ph"
                     >assessor@solano.gov.ph</a
                   >
                 </div>
@@ -1651,7 +1594,7 @@
               <div class="contact-item">
                 <i class="bi bi-clock"></i>
                 <div class="contact-item-content">
-                  <strong data-i18n="assessor-office-hours">Office Hours</strong>
+                  <strong>Office Hours</strong>
                   <span>Monday - Friday<br />8:00 AM - 5:00 PM</span>
                 </div>
               </div>
@@ -1665,7 +1608,7 @@
               >
                 <h4 style="font-size: 0.9375rem; margin-bottom: var(--spacing-sm)">
                   <i class="bi bi-link-45deg" style="color: var(--color-primary)"></i>
-                  <span data-i18n="assessor-related-services">Related Services</span>
+                  <span>Related Services</span>
                 </h4>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8125rem">
                   <li style="margin-bottom: 8px">
@@ -1677,7 +1620,6 @@
                         gap: 6px;
                         color: var(--color-primary);
                       "
-                      data-i18n="assessor-real-property-tax-payment"
                     >
                       Real Property Tax Payment
                     </a>
@@ -1691,7 +1633,6 @@
                         gap: 6px;
                         color: var(--color-primary);
                       "
-                      data-i18n="assessor-treasurers-office"
                     >
                       Treasurer's Office
                     </a>
@@ -1705,7 +1646,6 @@
                         gap: 6px;
                         color: var(--color-primary);
                       "
-                      data-i18n="assessor-business-permits"
                     >
                       Business Permits
                     </a>
@@ -1722,7 +1662,7 @@
               >
                 <h4 style="font-size: 0.9375rem; margin-bottom: var(--spacing-sm)">
                   <i class="bi bi-info-circle" style="color: var(--color-primary)"></i>
-                  <span data-i18n="assessor-important-notes">Important Notes</span>
+                  <span>Important Notes</span>
                 </h4>
                 <ul
                   style="
@@ -1732,22 +1672,20 @@
                     margin: 0;
                   "
                 >
-                  <li style="margin-bottom: 8px" data-i18n="assessor-bring-original-documents">
+                  <li style="margin-bottom: 8px">
                     Bring original documents
                   </li>
                   <li
                     style="margin-bottom: 8px"
-                    data-i18n="assessor-pay-real-property-tax-annually"
                   >
                     Pay real property tax annually
                   </li>
                   <li
                     style="margin-bottom: 8px"
-                    data-i18n="assessor-update-records-when-property-changes"
                   >
                     Update records when property changes
                   </li>
-                  <li data-i18n="assessor-representatives-need-authorization">
+                  <li>
                     Representatives need authorization
                   </li>
                 </ul>
@@ -1777,7 +1715,6 @@
             />
             <p
               class="footer-tagline"
-              data-i18n="assessor-empowering-the-people-of-solano-with-transparent"
             >
               Empowering the people of Solano with transparent access to the services, programs, and
               public funds of LGU Solano.
@@ -1810,44 +1747,41 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="assessor-quick-links">Quick Links</h4>
+            <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://quiz.bettersolano.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="assessor-solano-quiz"
                   >Solano Quiz</a
                 >
               </li>
-              <li><a href="../sitemap/" data-i18n="assessor-sitemap">Sitemap</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
               <li>
                 <a
                   href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="assessor-citizens-charter"
                   >Citizen's Charter</a
                 >
               </li>
-              <li><a href="../terms/" data-i18n="assessor-terms-of-use">Terms of Use</a></li>
-              <li><a href="../privacy/" data-i18n="assessor-privacy-policy">Privacy Policy</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
               <li>
-                <a href="../accessibility/" data-i18n="assessor-accessibility">Accessibility</a>
+                <a href="../accessibility/">Accessibility</a>
               </li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="assessor-resources">Resources</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://data.gov.ph"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="assessor-open-data-philippines"
                   >Open Data Philippines</a
                 >
               </li>
@@ -1856,7 +1790,6 @@
                   href="https://www.foi.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="assessor-freedom-of-information"
                   >Freedom of Information</a
                 >
               </li>
@@ -1865,7 +1798,6 @@
                   href="https://solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="assessor-official-lgu-solano-portal"
                   >Official LGU Solano Portal</a
                 >
               </li>
@@ -1874,7 +1806,6 @@
                   href="https://sangguniangbayan.solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="assessor-sangguniang-bayan"
                   >Sangguniang Bayan</a
                 >
               </li>
@@ -1883,7 +1814,6 @@
                   href="https://www.facebook.com/OfficialLguSolanoFanpage/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="assessor-lgu-solano-facebook"
                   >LGU Solano Facebook</a
                 >
               </li>
@@ -1892,7 +1822,6 @@
                   href="https://blgf.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="assessor-blgf-portal"
                   >BLGF Portal</a
                 >
               </li>
@@ -1901,7 +1830,6 @@
                   href="https://cmci.dti.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="assessor-cmci-dti-portal"
                   >CMCI DTI Portal</a
                 >
               </li>
@@ -1917,7 +1845,7 @@
             </div>
             <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"
               ><i class="bi bi-envelope-heart"></i>
-              <span data-i18n="assessor-volunteer-with-us">Volunteer with us</span></a
+              <span>Volunteer with us</span></a
             >
             <a
               href="https://github.com/BetterSolano/bettersolano"
@@ -1925,7 +1853,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-github"></i>
-              <span data-i18n="assessor-contribute-code-with-us">Contribute code with us</span></a
+              <span>Contribute code with us</span></a
             >
             <div class="footer-partners">
               <a
@@ -1982,8 +1910,6 @@
         </div>
       </div>
     </footer>
-
-    <script defer src="../assets/js/translations.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>

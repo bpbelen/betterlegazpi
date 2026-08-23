@@ -54,11 +54,11 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="err500-skip-to-main-content"
+    <a href="#main-content" class="skip-link"
       >Skip to main content</a
     >
 
-                    <!-- Hotline Bar -->
+                        <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -92,7 +92,7 @@
       </div>
     </div>
 
-    <!-- Header -->
+    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -105,60 +105,37 @@
           </a>
         </div>
 
-        <nav class="main-nav" aria-label="Main Navigation">
+                <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="/" data-i18n="nav-home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="has-dropdown">
-              <a href="/services/" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="services/"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li><a href="services/agriculture">Agriculture</a></li>
                 <li><a href="services/business">Business</a></li>
                 <li><a href="services/certificates">Certificates</a></li>
+                <li><a href="services/education">Education</a></li>
                 <li><a href="services/employment">Employment</a></li>
                 <li><a href="services/environment">Environment</a></li>
                 <li><a href="services/health">Health</a></li>
                 <li><a href="services/infrastructure">Infrastructure</a></li>
                 <li><a href="services/social-services">Social Services</a></li>
-                <li><a href="services/tax-payments">Tax Payments</a></li>
+                <li><a href="services/tax-payments">Tax & Payments</a></li>
               </ul>
             </li>
-            <li><a href="/government/" data-i18n="nav-government">Government</a></li>
-            <li><a href="/statistics/" data-i18n="nav-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a href="/legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="/legislative/ordinance-framework" data-i18n="err500-ordinance-framework"
-                    >Ordinance Framework</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/legislative/resolution-framework"
-                    data-i18n="err500-resolution-framework"
-                    >Resolution Framework</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><a href="/budget/" data-i18n="nav-transparency">Transparency</a></li>
-            <li><a href="/contact/" data-i18n="nav-contact">Contact</a></li>
+            <li><a href="government/">Government</a></li>
+            <li><a href="statistics/">Statistics</a></li>
+            <li><a href="budget/">Transparency</a></li>
+            <li><a href="contact/">Contact</a></li>
           </ul>
         </nav>
 
-        <div class="header-actions">
-          <div class="lang-selector">
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">
-              EN
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
-              FIL
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
-            </button>
-          </div>
-        
+                <div class="header-actions">
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
@@ -166,26 +143,26 @@
       </div>
     </header>
 
-    <!-- Real-Time Info Bar -->
+        <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
-        <div class="info-bar-inner">
+        <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
           <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
-            <i class="bi bi-currency-exchange"></i>
+            <i class="bi bi-currency-exchange" aria-hidden="true"></i>
             <span class="rate-rotator">
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
-            <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Solano</span>
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
+            <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span class="date-value">--- --, ----</span>
-            <span class="datetime-separator">•</span>
-            <i class="bi bi-clock"></i>
+            <span class="datetime-separator" aria-hidden="true">•</span>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span class="time-value">--:-- --</span>
             <span class="time-label">PHT</span>
           </div>
@@ -206,17 +183,16 @@
       >
         <div class="container" style="text-align: center">
           <span class="error-code">500</span>
-          <h1 class="error-title" data-i18n="err500-server-error">Server Error</h1>
+          <h1 class="error-title">Server Error</h1>
           <p
             class="error-desc"
-            data-i18n="err500-were-experiencing-technical-difficulties-our-team"
           >
             We're experiencing technical difficulties. Our team has been notified and is working to
             resolve the issue. Please try again later or contact us if the problem persists.
           </p>
           <div class="error-actions">
-            <a href="/" class="btn btn-primary" data-i18n="err500-go-to-homepage">Go to Homepage</a>
-            <a href="/contact/" class="btn btn-secondary" data-i18n="err500-contact-us"
+            <a href="/" class="btn btn-primary">Go to Homepage</a>
+            <a href="/contact/" class="btn btn-secondary"
               >Contact Us</a
             >
           </div>
@@ -235,7 +211,6 @@
             />
             <p
               class="footer-tagline"
-              data-i18n="err500-empowering-the-people-of-solano-with-transparent"
             >
               Empowering the people of Solano with transparent access to the services, programs, and
               public funds of LGU Solano.
@@ -268,44 +243,41 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="err500-quick-links">Quick Links</h4>
+            <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://quiz.bettersolano.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="err500-solano-quiz"
                   >Solano Quiz</a
                 >
               </li>
-              <li><a href="../sitemap/" data-i18n="err500-sitemap">Sitemap</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
               <li>
                 <a
                   href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="err500-citizens-charter"
                   >Citizen's Charter</a
                 >
               </li>
-              <li><a href="../terms/" data-i18n="err500-terms-of-use">Terms of Use</a></li>
-              <li><a href="../privacy/" data-i18n="err500-privacy-policy">Privacy Policy</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
               <li>
-                <a href="../accessibility/" data-i18n="err500-accessibility">Accessibility</a>
+                <a href="../accessibility/">Accessibility</a>
               </li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="err500-resources">Resources</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://data.gov.ph"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="err500-open-data-philippines"
                   >Open Data Philippines</a
                 >
               </li>
@@ -314,7 +286,6 @@
                   href="https://www.foi.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="err500-freedom-of-information"
                   >Freedom of Information</a
                 >
               </li>
@@ -323,7 +294,6 @@
                   href="https://solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="err500-official-lgu-solano-portal"
                   >Official LGU Solano Portal</a
                 >
               </li>
@@ -332,7 +302,6 @@
                   href="https://sangguniangbayan.solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="err500-sangguniang-bayan"
                   >Sangguniang Bayan</a
                 >
               </li>
@@ -341,7 +310,6 @@
                   href="https://www.facebook.com/OfficialLguSolanoFanpage/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="err500-lgu-solano-facebook"
                   >LGU Solano Facebook</a
                 >
               </li>
@@ -350,7 +318,6 @@
                   href="https://blgf.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="err500-blgf-portal"
                   >BLGF Portal</a
                 >
               </li>
@@ -359,7 +326,6 @@
                   href="https://cmci.dti.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="err500-cmci-dti-portal"
                   >CMCI DTI Portal</a
                 >
               </li>
@@ -375,7 +341,7 @@
             </div>
             <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"
               ><i class="bi bi-envelope-heart"></i>
-              <span data-i18n="err500-volunteer-with-us">Volunteer with us</span></a
+              <span>Volunteer with us</span></a
             >
             <a
               href="https://github.com/BetterSolano/bettersolano"
@@ -383,7 +349,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-github"></i>
-              <span data-i18n="err500-contribute-code-with-us">Contribute code with us</span></a
+              <span>Contribute code with us</span></a
             >
             <div class="footer-partners">
               <a
@@ -440,8 +406,6 @@
         </div>
       </div>
     </footer>
-
-    <script defer src="/assets/js/translations.js"></script>
     <script defer src="/assets/js/info-bar.js"></script>
     <script defer src="/assets/js/main.js"></script>
   </body>

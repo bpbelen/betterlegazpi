@@ -293,10 +293,10 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="tricycle-skip-to-main-content"
+    <a href="#main-content" class="skip-link"
       >Skip to main content</a
     >
-                    <!-- Hotline Bar -->
+                        <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -330,7 +330,7 @@
       </div>
     </div>
 
-    <!-- Header -->
+    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -341,79 +341,62 @@
               class="logo-img"
           /></a>
         </div>
-        <nav class="main-nav" aria-label="Main Navigation">
+                <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="tricycle-home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" class="active" data-i18n="tricycle-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/" class="active"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
                 <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
                 <li><a href="../services/employment">Employment</a></li>
                 <li><a href="../services/environment">Environment</a></li>
                 <li><a href="../services/health">Health</a></li>
                 <li><a href="../services/infrastructure">Infrastructure</a></li>
                 <li><a href="../services/social-services">Social Services</a></li>
-                <li><a href="../services/tax-payments">Tax Payments</a></li>
+                <li><a href="../services/tax-payments">Tax & Payments</a></li>
               </ul>
             </li>
-            <li><a href="../government/" data-i18n="tricycle-government">Government</a></li>
-            <li><a href="../statistics/" data-i18n="tricycle-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="tricycle-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    href="../legislative/ordinance-framework"
-                    data-i18n="tricycle-ordinance-framework"
-                    >Ordinance Framework</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../legislative/resolution-framework"
-                    data-i18n="tricycle-resolution-framework"
-                    >Resolution Framework</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><a href="../budget/" data-i18n="tricycle-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="tricycle-contact">Contact</a></li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-        <div class="header-actions">
-          <div class="lang-selector">
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
-          </div>
-        
+                <div class="header-actions">
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
-    <!-- Info Bar -->
+        <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
-        <div class="info-bar-inner">
+        <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
           <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
-            <i class="bi bi-currency-exchange"></i>
-            <span class="rate-rotator"><span class="rate-display">1 USD = ₱ --</span></span>
+            <i class="bi bi-currency-exchange" aria-hidden="true"></i>
+            <span class="rate-rotator">
+              <span class="rate-display">1 USD = ₱ --</span>
+            </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
-            <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Solano</span>
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
+            <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span class="date-value">--- --, ----</span>
-            <span class="datetime-separator">•</span>
-            <i class="bi bi-clock"></i>
+            <span class="datetime-separator" aria-hidden="true">•</span>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span class="time-value">--:-- --</span>
             <span class="time-label">PHT</span>
           </div>
@@ -425,9 +408,9 @@
       <!-- Breadcrumbs -->
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../" data-i18n="tricycle-home">Home</a><span>/</span>
-          <a href="../services/" data-i18n="tricycle-services">Services</a><span>/</span>
-          <a href="../services/business" data-i18n="tricycle-business">Business</a><span>/</span>
+          <a href="../">Home</a><span>/</span>
+          <a href="../services/">Services</a><span>/</span>
+          <a href="../services/business">Business</a><span>/</span>
           <span aria-current="page">Tricycle Franchising & Records</span>
         </nav>
       </div>
@@ -438,14 +421,13 @@
           <div class="page-header-content">
             <span class="page-header-badge"
               ><i class="bi bi-bicycle"></i>
-              <span data-i18n="tricycle-franchising">Franchising</span></span
+              <span>Franchising</span></span
             >
-            <h1 data-i18n="tricycle-tricycle-franchising-and-records-sections">
+            <h1>
               Tricycle Franchising and Records Sections
             </h1>
             <p
               class="page-header-desc"
-              data-i18n="tricycle-complete-guide-to-tricycle-franchise-application"
             >
               Complete guide to tricycle franchise application and records request procedures
             </p>
@@ -459,22 +441,22 @@
           <div class="quick-stats">
             <div class="stat-card">
               <i class="bi bi-list-ol"></i>
-              <h4 data-i18n="tricycle-franchise-steps">Franchise Steps</h4>
-              <p data-i18n="tricycle-15-steps">15 Steps</p>
+              <h4>Franchise Steps</h4>
+              <p>15 Steps</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-file-text"></i>
-              <h4 data-i18n="tricycle-records-steps">Records Steps</h4>
-              <p data-i18n="tricycle-5-steps">5 Steps</p>
+              <h4>Records Steps</h4>
+              <p>5 Steps</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-building"></i>
-              <h4 data-i18n="tricycle-office">Office</h4>
-              <p data-i18n="tricycle-bpls-vmo-sbo">BPLS / VMO / SBO</p>
+              <h4>Office</h4>
+              <p>BPLS / VMO / SBO</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-clock"></i>
-              <h4 data-i18n="tricycle-office-hours">Office Hours</h4>
+              <h4>Office Hours</h4>
               <p>8AM - 5PM</p>
             </div>
           </div>
@@ -485,7 +467,7 @@
       <section class="process-section alt-bg">
         <div class="container">
           <div class="process-header">
-            <h2 data-i18n="tricycle-process-flow">Process Flow</h2>
+            <h2>Process Flow</h2>
             <p>Step-by-step procedures for tricycle franchise and records request</p>
           </div>
 
@@ -493,12 +475,12 @@
           <div class="process-tabs">
             <button type="button" class="process-tab-btn active" data-tab="franchise">
               <i class="bi bi-bicycle"></i>
-              <span data-i18n="tricycle-tricycle-franchise">Tricycle Franchise</span>
+              <span>Tricycle Franchise</span>
               <small>15 Steps</small>
             </button>
             <button type="button" class="process-tab-btn" data-tab="records">
               <i class="bi bi-folder2-open"></i>
-              <span data-i18n="tricycle-records-request">Records Request</span>
+              <span>Records Request</span>
               <small>5 Steps</small>
             </button>
           </div>
@@ -509,10 +491,10 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">01</div>
-                  <h4 data-i18n="tricycle-receiving-of-documentary-requirements">
+                  <h4>
                     Receiving of Documentary Requirements
                   </h4>
-                  <p data-i18n="tricycle-submit-documentary-requirements-to-the-bpls">
+                  <p>
                     Submit documentary requirements to the BPLS
                   </p>
                 </div>
@@ -520,10 +502,10 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">02</div>
-                  <h4 data-i18n="tricycle-inspection-of-tricycle-unit">
+                  <h4>
                     Inspection of Tricycle Unit
                   </h4>
-                  <p data-i18n="tricycle-bpls-inspector-inspects-the-tricycle-unit">
+                  <p>
                     BPLS Inspector inspects the tricycle unit
                   </p>
                 </div>
@@ -531,10 +513,10 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">03</div>
-                  <h4 data-i18n="tricycle-verification-of-records-fees">
+                  <h4>
                     Verification of Records & Fees
                   </h4>
-                  <p data-i18n="tricycle-franchising-staff-verifies-records-and-assessment">
+                  <p>
                     Franchising Staff verifies records and assessment fees
                   </p>
                 </div>
@@ -542,10 +524,10 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">04</div>
-                  <h4 data-i18n="tricycle-receiving-application-form">
+                  <h4>
                     Receiving Application Form
                   </h4>
-                  <p data-i18n="tricycle-bpls-inspector-receives-the-franchise-application">
+                  <p>
                     BPLS Inspector receives the franchise application form
                   </p>
                 </div>
@@ -553,8 +535,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">05</div>
-                  <h4 data-i18n="tricycle-mayors-approval">Mayor's Approval</h4>
-                  <p data-i18n="tricycle-municipal-mayor-approves-the-application-form">
+                  <h4>Mayor's Approval</h4>
+                  <p>
                     Municipal Mayor approves the application form
                   </p>
                 </div>
@@ -562,8 +544,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">06</div>
-                  <h4 data-i18n="tricycle-collection-of-fees">Collection of Fees</h4>
-                  <p data-i18n="tricycle-municipal-treasurers-office-collects-the-fees">
+                  <h4>Collection of Fees</h4>
+                  <p>
                     Municipal Treasurer's Office collects the fees
                   </p>
                 </div>
@@ -571,10 +553,10 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">07</div>
-                  <h4 data-i18n="tricycle-receiving-notarized-documents">
+                  <h4>
                     Receiving Notarized Documents
                   </h4>
-                  <p data-i18n="tricycle-bpls-receives-notarized-application-and-other">
+                  <p>
                     BPLS receives notarized application and other documentary requirements
                   </p>
                 </div>
@@ -582,8 +564,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">08</div>
-                  <h4 data-i18n="tricycle-encoding-of-application">Encoding of Application</h4>
-                  <p data-i18n="tricycle-bpls-encodes-the-application-into-the-system">
+                  <h4>Encoding of Application</h4>
+                  <p>
                     BPLS encodes the application into the system
                   </p>
                 </div>
@@ -591,10 +573,10 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">09</div>
-                  <h4 data-i18n="tricycle-preparation-of-transmittal">
+                  <h4>
                     Preparation of Transmittal
                   </h4>
-                  <p data-i18n="tricycle-bpls-prepares-the-transmittal-letter">
+                  <p>
                     BPLS prepares the transmittal letter
                   </p>
                 </div>
@@ -602,10 +584,10 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">10</div>
-                  <h4 data-i18n="tricycle-submission-to-sangguniang-bayan">
+                  <h4>
                     Submission to Sangguniang Bayan
                   </h4>
-                  <p data-i18n="tricycle-submit-transmittal-letter-and-franchise">
+                  <p>
                     Submit transmittal letter and franchise applications to the SB
                   </p>
                 </div>
@@ -613,8 +595,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">11</div>
-                  <h4 data-i18n="tricycle-receiving-sorting">Receiving & Sorting</h4>
-                  <p data-i18n="tricycle-franchising-staff-receives-inspects-and-sorts">
+                  <h4>Receiving & Sorting</h4>
+                  <p>
                     Franchising Staff receives, inspects, and sorts applications
                   </p>
                 </div>
@@ -622,8 +604,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">12</div>
-                  <h4 data-i18n="tricycle-processing-certification">Processing & Certification</h4>
-                  <p data-i18n="tricycle-franchising-staff-processes-application-and">
+                  <h4>Processing & Certification</h4>
+                  <p>
                     Franchising Staff processes application and issues certification
                   </p>
                 </div>
@@ -631,8 +613,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">13</div>
-                  <h4 data-i18n="tricycle-sb-members-approval">SB Members Approval</h4>
-                  <p data-i18n="tricycle-sangguniang-bayan-members-approve-the-mtof">
+                  <h4>SB Members Approval</h4>
+                  <p>
                     Sangguniang Bayan Members approve the MTOF
                   </p>
                 </div>
@@ -640,8 +622,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">14</div>
-                  <h4 data-i18n="tricycle-official-signing">Official Signing</h4>
-                  <p data-i18n="tricycle-vice-mayor-and-presiding-officer-sign-the">
+                  <h4>Official Signing</h4>
+                  <p>
                     Vice Mayor and Presiding Officer sign the approved MTOF
                   </p>
                 </div>
@@ -649,8 +631,8 @@
               <div class="process-step final">
                 <div class="process-card">
                   <div class="process-num">15</div>
-                  <h4 data-i18n="tricycle-releasing-of-mtof">Releasing of MTOF</h4>
-                  <p data-i18n="tricycle-franchising-staff-releases-the-mtof-to-the">
+                  <h4>Releasing of MTOF</h4>
+                  <p>
                     Franchising Staff releases the MTOF to the applicant
                   </p>
                 </div>
@@ -664,10 +646,10 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">01</div>
-                  <h4 data-i18n="tricycle-receiving-letter-of-request">
+                  <h4>
                     Receiving Letter of Request
                   </h4>
-                  <p data-i18n="tricycle-vmosbo-staff-receives-the-letter-of-request">
+                  <p>
                     VMO/SBO Staff receives the letter of request
                   </p>
                 </div>
@@ -675,8 +657,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">02</div>
-                  <h4 data-i18n="tricycle-approvaldisapproval">Approval/Disapproval</h4>
-                  <p data-i18n="tricycle-vice-mayor-or-secretary-to-the-sanggunian">
+                  <h4>Approval/Disapproval</h4>
+                  <p>
                     Vice Mayor or Secretary to the Sanggunian approves/disapproves the request
                   </p>
                 </div>
@@ -684,8 +666,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">03</div>
-                  <h4 data-i18n="tricycle-review-determination">Review & Determination</h4>
-                  <p data-i18n="tricycle-records-officer-ii-reviews-and-determines">
+                  <h4>Review & Determination</h4>
+                  <p>
                     Records Officer II reviews and determines document availability
                   </p>
                 </div>
@@ -693,8 +675,8 @@
               <div class="process-step">
                 <div class="process-card">
                   <div class="process-num">04</div>
-                  <h4 data-i18n="tricycle-retrieval-reproduction">Retrieval & Reproduction</h4>
-                  <p data-i18n="tricycle-records-staff-retrieves-and-reproduces-the">
+                  <h4>Retrieval & Reproduction</h4>
+                  <p>
                     Records Staff retrieves and reproduces the requested documents
                   </p>
                 </div>
@@ -702,8 +684,8 @@
               <div class="process-step final">
                 <div class="process-card">
                   <div class="process-num">05</div>
-                  <h4 data-i18n="tricycle-releasing-stamping">Releasing & Stamping</h4>
-                  <p data-i18n="tricycle-records-officer-iii-releases-and-stamps-the">
+                  <h4>Releasing & Stamping</h4>
+                  <p>
                     Records Officer III releases and stamps the requested documents
                   </p>
                 </div>
@@ -728,11 +710,10 @@
                 "
               >
                 <i class="bi bi-building" style="color: var(--color-primary)"></i>
-                <span data-i18n="tricycle-bpls-office">BPLS Office</span>
+                <span>BPLS Office</span>
               </h3>
               <p
                 style="font-size: 0.875rem; color: var(--color-text-light); margin-bottom: 12px"
-                data-i18n="tricycle-business-permits-and-licensing-section-handles"
               >
                 Business Permits and Licensing Section handles tricycle franchise applications and
                 documentary requirements.
@@ -751,7 +732,7 @@
                     class="bi bi-geo-alt"
                     style="color: var(--color-primary); margin-right: 8px"
                   ></i>
-                  <span data-i18n="tricycle-municipal-hall-solano-nueva-vizcaya"
+                  <span
                     >Municipal Hall, Solano, Nueva Vizcaya</span
                   >
                 </li>
@@ -772,11 +753,10 @@
                 "
               >
                 <i class="bi bi-folder2-open" style="color: var(--color-primary)"></i>
-                <span data-i18n="tricycle-records-section">Records Section</span>
+                <span>Records Section</span>
               </h3>
               <p
                 style="font-size: 0.875rem; color: var(--color-text-light); margin-bottom: 12px"
-                data-i18n="tricycle-vice-mayors-office-sangguniang-bayan-office"
               >
                 Vice Mayor's Office / Sangguniang Bayan Office handles records requests and document
                 retrieval.
@@ -795,7 +775,7 @@
                     class="bi bi-geo-alt"
                     style="color: var(--color-primary); margin-right: 8px"
                   ></i>
-                  <span data-i18n="tricycle-sangguniang-bayan-municipal-hall"
+                  <span
                     >Sangguniang Bayan, Municipal Hall</span
                   >
                 </li>
@@ -821,7 +801,6 @@
             />
             <p
               class="footer-tagline"
-              data-i18n="tricycle-empowering-the-people-of-solano-with-transparent"
             >
               Empowering the people of Solano with transparent access to the services, programs, and
               public funds of LGU Solano.
@@ -854,35 +833,33 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="tricycle-quick-links">Quick Links</h4>
+            <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://quiz.bettersolano.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="tricycle-solano-quiz"
                   >Solano Quiz</a
                 >
               </li>
-              <li><a href="../sitemap/" data-i18n="tricycle-sitemap">Sitemap</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
               <li>
                 <a
                   href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="tricycle-citizens-charter"
                   >Citizen's Charter</a
                 >
               </li>
-              <li><a href="../terms/" data-i18n="tricycle-terms-of-use">Terms of Use</a></li>
-              <li><a href="../privacy/" data-i18n="tricycle-privacy-policy">Privacy Policy</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
               <li><a href="../accessibility/">Accessibility</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="tricycle-resources">Resources</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
                 <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
@@ -920,7 +897,6 @@
                   href="https://blgf.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="tricycle-blgf-portal"
                   >BLGF Portal</a
                 >
               </li>
@@ -929,7 +905,6 @@
                   href="https://cmci.dti.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="tricycle-cmci-dti-portal"
                   >CMCI DTI Portal</a
                 >
               </li>
@@ -945,7 +920,7 @@
             </div>
             <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"
               ><i class="bi bi-envelope-heart"></i>
-              <span data-i18n="tricycle-volunteer-with-us">Volunteer with us</span></a
+              <span>Volunteer with us</span></a
             >
             <a
               href="https://github.com/BetterSolano/bettersolano"
@@ -953,7 +928,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-github"></i>
-              <span data-i18n="tricycle-contribute-code-with-us">Contribute code with us</span></a
+              <span>Contribute code with us</span></a
             >
             <div class="footer-partners">
               <a
@@ -1010,8 +985,6 @@
         </div>
       </div>
     </footer>
-
-    <script defer src="../assets/js/translations.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>

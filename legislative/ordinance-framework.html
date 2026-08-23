@@ -100,11 +100,11 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="ord-skip-to-main-content"
+    <a href="#main-content" class="skip-link"
       >Skip to main content</a
     >
 
-                    <!-- Hotline Bar -->
+                        <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -138,7 +138,7 @@
       </div>
     </div>
 
-    <!-- Header -->
+    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -151,58 +151,37 @@
           </a>
         </div>
 
-        <nav class="main-nav" aria-label="Main Navigation">
+                <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="nav-home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
                 <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
                 <li><a href="../services/employment">Employment</a></li>
                 <li><a href="../services/environment">Environment</a></li>
                 <li><a href="../services/health">Health</a></li>
                 <li><a href="../services/infrastructure">Infrastructure</a></li>
                 <li><a href="../services/social-services">Social Services</a></li>
-                <li><a href="../services/tax-payments">Tax Payments</a></li>
+                <li><a href="../services/tax-payments">Tax & Payments</a></li>
               </ul>
             </li>
-            <li><a href="../government/" data-i18n="nav-government">Government</a></li>
-            <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a href="./" class="active" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="ordinance-framework" class="active" data-i18n="ord-ordinance-framework"
-                    >Ordinance Framework</a
-                  >
-                </li>
-                <li>
-                  <a href="resolution-framework" data-i18n="ord-resolution-framework"
-                    >Resolution Framework</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
 
-        <div class="header-actions">
-          <div class="lang-selector">
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">
-              EN
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
-              FIL
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
-            </button>
-          </div>
-        
+                <div class="header-actions">
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
@@ -210,26 +189,26 @@
       </div>
     </header>
 
-    <!-- Real-Time Info Bar -->
+        <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
-        <div class="info-bar-inner">
+        <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
           <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
-            <i class="bi bi-currency-exchange"></i>
+            <i class="bi bi-currency-exchange" aria-hidden="true"></i>
             <span class="rate-rotator">
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
-            <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Solano</span>
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
+            <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span class="date-value">--- --, ----</span>
-            <span class="datetime-separator">•</span>
-            <i class="bi bi-clock"></i>
+            <span class="datetime-separator" aria-hidden="true">•</span>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span class="time-value">--:-- --</span>
             <span class="time-label">PHT</span>
           </div>
@@ -241,9 +220,9 @@
       <!-- Breadcrumbs -->
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../" data-i18n="ord-home">Home</a>
+          <a href="../">Home</a>
           <span>/</span>
-          <a href="/" data-i18n="ord-legislative">Legislative</a>
+          <a href="/">Legislative</a>
           <span>/</span>
           <span aria-current="page">Ordinance Framework</span>
         </nav>
@@ -255,10 +234,10 @@
           <div class="page-header-content">
             <span class="page-header-badge"
               ><i class="bi bi-journal-text"></i>
-              <span data-i18n="ord-page-badge">Legislative</span></span
+              <span>Legislative</span></span
             >
-            <h1 data-i18n="ord-page-title">Ordinance Framework</h1>
-            <p class="page-header-desc" data-i18n="ord-page-desc">
+            <h1>Ordinance Framework</h1>
+            <p class="page-header-desc">
               Municipal ordinances enacted by the Sangguniang Bayan ng Solano
             </p>
           </div>
@@ -271,13 +250,13 @@
           <div class="info-card">
             <div class="info-card-icon"><i class="bi bi-info-circle"></i></div>
             <div class="info-card-content">
-              <h3 data-i18n="ord-what-is">What is an Ordinance?</h3>
-              <p data-i18n="ord-what-is-p1">
+              <h3>What is an Ordinance?</h3>
+              <p>
                 A municipal ordinance is a local law enacted by the Sangguniang Bayan (Municipal
                 Council) that governs the municipality and its residents. Ordinances have the force
                 and effect of law within the territorial jurisdiction of the municipality.
               </p>
-              <p data-i18n="ord-what-is-p2">
+              <p>
                 Ordinances may cover various subjects including but not limited to: taxation,
                 business regulations, public safety, environmental protection, traffic management,
                 and zoning.
@@ -293,7 +272,6 @@
           <div class="text-center" style="margin-bottom: var(--spacing-lg)">
             <h2
               style="font-size: 1.5rem; margin-bottom: var(--spacing-xs)"
-              data-i18n="ord-categories-title"
             >
               Ordinance Categories
             </h2>
@@ -301,25 +279,25 @@
           <div class="grid grid-3" style="gap: var(--spacing-sm)">
             <div class="category-tag">
               <i class="bi bi-cash-coin"></i>
-              <span data-i18n="ord-cat-revenue">Revenue & Taxation</span>
+              <span>Revenue & Taxation</span>
             </div>
             <div class="category-tag">
-              <i class="bi bi-shop"></i> <span data-i18n="ord-cat-business">Business & Trade</span>
+              <i class="bi bi-shop"></i> <span>Business & Trade</span>
             </div>
             <div class="category-tag">
               <i class="bi bi-shield-check"></i>
-              <span data-i18n="ord-cat-safety">Public Safety</span>
+              <span>Public Safety</span>
             </div>
             <div class="category-tag">
-              <i class="bi bi-tree"></i> <span data-i18n="ord-cat-environment">Environment</span>
+              <i class="bi bi-tree"></i> <span>Environment</span>
             </div>
             <div class="category-tag">
               <i class="bi bi-signpost-2"></i>
-              <span data-i18n="ord-cat-traffic">Traffic & Transportation</span>
+              <span>Traffic & Transportation</span>
             </div>
             <div class="category-tag">
               <i class="bi bi-building"></i>
-              <span data-i18n="ord-cat-zoning">Zoning & Land Use</span>
+              <span>Zoning & Land Use</span>
             </div>
           </div>
         </div>
@@ -331,11 +309,10 @@
           <div class="text-center" style="margin-bottom: var(--spacing-lg)">
             <h2
               style="font-size: 1.5rem; margin-bottom: var(--spacing-xs)"
-              data-i18n="ord-2025-title"
             >
               2025 Ordinances
             </h2>
-            <p style="color: var(--color-text-light)" data-i18n="ord-2025-subtitle">
+            <p style="color: var(--color-text-light)">
               Official ordinances enacted by the Sangguniang Bayan ng Solano in 2025
             </p>
           </div>
@@ -346,9 +323,9 @@
               </caption>
               <thead>
                 <tr>
-                  <th scope="col" data-i18n="ord-table-number">Ordinance No.</th>
-                  <th scope="col" data-i18n="ord-table-title">Title</th>
-                  <th scope="col" data-i18n="ord-table-date">Session Date</th>
+                  <th scope="col">Ordinance No.</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Session Date</th>
                 </tr>
               </thead>
               <tbody id="ordinance-table-body">
@@ -363,7 +340,7 @@
               rel="noopener noreferrer"
               class="btn btn-primary"
               ><i class="bi bi-box-arrow-up-right"></i>
-              <span data-i18n="ord-view-all-ordinances-on-sb-website"
+              <span
                 >View All Ordinances on SB Website</span
               ></a
             >
@@ -383,7 +360,6 @@
             />
             <p
               class="footer-tagline"
-              data-i18n="ord-empowering-the-people-of-solano-with-transparent"
             >
               Empowering the people of Solano with transparent access to the services, programs, and
               public funds of LGU Solano.
@@ -416,42 +392,39 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="ord-quick-links">Quick Links</h4>
+            <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://quiz.bettersolano.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="ord-solano-quiz"
                   >Solano Quiz</a
                 >
               </li>
-              <li><a href="../sitemap/" data-i18n="ord-sitemap">Sitemap</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
               <li>
                 <a
                   href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="ord-citizens-charter"
                   >Citizen's Charter</a
                 >
               </li>
-              <li><a href="../terms/" data-i18n="ord-terms-of-use">Terms of Use</a></li>
-              <li><a href="../privacy/" data-i18n="ord-privacy-policy">Privacy Policy</a></li>
-              <li><a href="../accessibility/" data-i18n="ord-accessibility">Accessibility</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
+              <li><a href="../accessibility/">Accessibility</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="ord-resources">Resources</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://data.gov.ph"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="ord-open-data-philippines"
                   >Open Data Philippines</a
                 >
               </li>
@@ -460,7 +433,6 @@
                   href="https://www.foi.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="ord-freedom-of-information"
                   >Freedom of Information</a
                 >
               </li>
@@ -469,7 +441,6 @@
                   href="https://solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="ord-official-lgu-solano-portal"
                   >Official LGU Solano Portal</a
                 >
               </li>
@@ -478,7 +449,6 @@
                   href="https://sangguniangbayan.solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="ord-sangguniang-bayan"
                   >Sangguniang Bayan</a
                 >
               </li>
@@ -487,7 +457,6 @@
                   href="https://www.facebook.com/OfficialLguSolanoFanpage/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="ord-lgu-solano-facebook"
                   >LGU Solano Facebook</a
                 >
               </li>
@@ -496,7 +465,6 @@
                   href="https://blgf.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="ord-blgf-portal"
                   >BLGF Portal</a
                 >
               </li>
@@ -505,7 +473,6 @@
                   href="https://cmci.dti.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="ord-cmci-dti-portal"
                   >CMCI DTI Portal</a
                 >
               </li>
@@ -521,7 +488,7 @@
             </div>
             <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"
               ><i class="bi bi-envelope-heart"></i>
-              <span data-i18n="ord-volunteer-with-us">Volunteer with us</span></a
+              <span>Volunteer with us</span></a
             >
             <a
               href="https://github.com/BetterSolano/bettersolano"
@@ -529,7 +496,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-github"></i>
-              <span data-i18n="ord-contribute-code-with-us">Contribute code with us</span></a
+              <span>Contribute code with us</span></a
             >
             <div class="footer-partners">
               <a
@@ -586,8 +553,6 @@
         </div>
       </div>
     </footer>
-
-    <script defer src="../assets/js/translations.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>

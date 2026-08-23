@@ -108,11 +108,11 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="stats-skip-to-main-content"
+    <a href="#main-content" class="skip-link"
       >Skip to main content</a
     >
 
-                    <!-- Hotline Bar -->
+                        <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -146,7 +146,7 @@
       </div>
     </div>
 
-    <!-- Header -->
+    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -158,13 +158,12 @@
             />
           </a>
         </div>
-        <nav class="main-nav" aria-label="Main Navigation">
+                <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="nav-home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="has-dropdown">
               <a
                 href="../services/"
-                data-i18n="nav-services"
                 aria-haspopup="true"
                 aria-expanded="false"
                 >Services</a
@@ -173,53 +172,22 @@
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
                 <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
                 <li><a href="../services/employment">Employment</a></li>
                 <li><a href="../services/environment">Environment</a></li>
                 <li><a href="../services/health">Health</a></li>
                 <li><a href="../services/infrastructure">Infrastructure</a></li>
                 <li><a href="../services/social-services">Social Services</a></li>
-                <li><a href="../services/tax-payments">Tax Payments</a></li>
+                <li><a href="../services/tax-payments">Tax & Payments</a></li>
               </ul>
             </li>
-            <li><a href="../government/" data-i18n="nav-government">Government</a></li>
-            <li><a href="./" class="active" data-i18n="nav-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a
-                href="../legislative/"
-                data-i18n="nav-legislative"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Legislative</a
-              >
-              <ul class="dropdown-menu">
-                <li><a href="../services/agriculture">Agriculture</a></li>
-                <li><a href="../services/business">Business</a></li>
-                <li><a href="../services/certificates">Certificates</a></li>
-                <li><a href="../services/employment">Employment</a></li>
-                <li><a href="../services/environment">Environment</a></li>
-                <li><a href="../services/health">Health</a></li>
-                <li><a href="../services/infrastructure">Infrastructure</a></li>
-                <li><a href="../services/social-services">Social Services</a></li>
-                <li><a href="../services/tax-payments">Tax Payments</a></li>
-              </ul>
-            </li>
-            <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/" class="active">Statistics</a></li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-        <div class="header-actions">
-          <div class="lang-selector">
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">
-              EN
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
-              FIL
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
-            </button>
-          </div>
-        
+                <div class="header-actions">
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
@@ -227,26 +195,26 @@
       </div>
     </header>
 
-    <!-- Real-Time Info Bar -->
+        <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
-        <div class="info-bar-inner">
+        <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
           <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
-            <i class="bi bi-currency-exchange"></i>
+            <i class="bi bi-currency-exchange" aria-hidden="true"></i>
             <span class="rate-rotator">
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
-            <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Solano</span>
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
+            <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span class="date-value">--- --, ----</span>
-            <span class="datetime-separator">•</span>
-            <i class="bi bi-clock"></i>
+            <span class="datetime-separator" aria-hidden="true">•</span>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span class="time-value">--:-- --</span>
             <span class="time-label">PHT</span>
           </div>
@@ -258,7 +226,7 @@
       <!-- Breadcrumbs -->
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../" data-i18n="stats-home">Home</a>
+          <a href="../">Home</a>
           <span>/</span>
           <span aria-current="page">Statistics</span>
         </nav>
@@ -270,10 +238,10 @@
           <div class="stats-hero-content">
             <span class="stats-hero-badge"
               ><i class="bi bi-bar-chart-fill"></i>
-              <span data-i18n="stats-municipal-data">City Data</span></span
+              <span>City Data</span></span
             >
-            <h1 data-i18n="stats-title">City Statistics</h1>
-            <p data-i18n="stats-subtitle">Data and statistics about Legazpi City, Albay</p>
+            <h1>City Statistics</h1>
+            <p>Data and statistics about Legazpi City, Albay</p>
           </div>
         </div>
       </section>
@@ -317,9 +285,9 @@
             <div>
               <span class="section-tag"
                 ><i class="bi bi-cash-stack"></i>
-                <span data-i18n="stats-finance">Finance</span></span
+                <span>Finance</span></span
               >
-              <h2 data-i18n="stats-municipal-income">City Income</h2>
+              <h2>City Income</h2>
               <p id="finance-subtitle">5-year Financial Standing based on Annual SRE (2021-2025)</p>
             </div>
             <div class="finance-year-selector-wrap">
@@ -342,7 +310,7 @@
               <div class="finance-card-header">
                 <div class="finance-card-header-left">
                   <i class="bi bi-graph-up-arrow"></i>
-                  <span data-i18n="stats-annual-income">Annual Income</span>
+                  <span>Annual Income</span>
                 </div>
                 <span class="finance-trend-badge badge-up" id="finance-annual-income-trend">
                   <i class="bi bi-arrow-up-right"></i> +15.96% vs FY24
@@ -357,7 +325,7 @@
               <div class="finance-card-header">
                 <div class="finance-card-header-left">
                   <i class="bi bi-bank"></i>
-                  <span data-i18n="stats-ira-share">IRA Share</span>
+                  <span>IRA Share</span>
                 </div>
                 <span class="finance-trend-badge badge-up" id="finance-ira-share-trend">
                   <i class="bi bi-arrow-up-right"></i> +18.63% vs FY24
@@ -372,7 +340,7 @@
               <div class="finance-card-header">
                 <div class="finance-card-header-left">
                   <i class="bi bi-pie-chart-fill"></i>
-                  <span data-i18n="stats-ira-dependency">IRA Dependency</span>
+                  <span>IRA Dependency</span>
                 </div>
                 <span class="finance-trend-badge badge-neutral" id="finance-ira-dependency-trend">
                   <i class="bi bi-arrow-up-right"></i> +1.26% vs FY24
@@ -386,7 +354,7 @@
           </div>
 
           <div class="income-breakdown animate-on-scroll">
-            <h4 data-i18n="stats-income-composition">Income Composition</h4>
+            <h4>Income Composition</h4>
             <div class="breakdown-bar">
               <div
                 class="breakdown-segment breakdown-ira breakdown-initial"
@@ -439,7 +407,6 @@
               href="https://blgf.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              data-i18n="stats-bureau-of-local-government-finance-blgf"
               >Bureau of Local Government Finance (BLGF)</a
             >
             – <span id="finance-source-dataset">2025 SRE Data</span>
@@ -452,10 +419,10 @@
         <div class="container">
           <div class="section-header-minimal">
             <span class="section-tag"
-              ><i class="bi bi-graph-up"></i> <span data-i18n="stats-growth">Growth</span></span
+              ><i class="bi bi-graph-up"></i> <span>Growth</span></span
             >
-            <h2 data-i18n="stats-population-trends">Population Trends</h2>
-            <p data-i18n="stats-historical-growth-from-1990-to-2024">
+            <h2>Population Trends</h2>
+            <p>
               Historical growth from 1990 to 2024
             </p>
           </div>
@@ -471,7 +438,7 @@
               <span class="trend-stat-value">210,616</span>
             </div>
             <div class="trend-stat trend-stat-growth">
-              <span class="trend-stat-label" data-i18n="stats-growth">Growth</span>
+              <span class="trend-stat-label">Growth</span>
               <span class="trend-stat-value">+73.9%</span>
             </div>
           </div>
@@ -486,7 +453,6 @@
               href="https://psa.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              data-i18n="stats-philippine-statistics-authority-psa"
               >Philippine Statistics Authority (PSA)</a
             >
           </p>
@@ -499,10 +465,10 @@
           <div class="section-header-minimal">
             <span class="section-tag"
               ><i class="bi bi-pie-chart-fill"></i>
-              <span data-i18n="stats-distribution">Distribution</span></span
+              <span>Distribution</span></span
             >
-            <h2 data-i18n="stats-population-by-barangay">Population by Barangay</h2>
-            <p data-i18n="stats-2024-census-of-population">2024 Census of Population</p>
+            <h2>Population by Barangay</h2>
+            <p>2024 Census of Population</p>
           </div>
 
           <div class="distribution-layout">
@@ -548,7 +514,6 @@
               href="https://psa.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              data-i18n="stats-philippine-statistics-authority-psa"
               >Philippine Statistics Authority (PSA)</a
             >
             - 2024 Census
@@ -562,10 +527,10 @@
           <div class="section-header-minimal">
             <span class="section-tag"
               ><i class="bi bi-briefcase-fill"></i>
-              <span data-i18n="stats-economy">Economy</span></span
+              <span>Economy</span></span
             >
-            <h2 data-i18n="stats-economic-indicators">Economic Indicators</h2>
-            <p data-i18n="stats-key-economic-data-and-business-statistics">
+            <h2>Economic Indicators</h2>
+            <p>
               Key economic data and business statistics
             </p>
           </div>
@@ -598,12 +563,12 @@
           </div>
 
           <div class="sectors-chart animate-on-scroll">
-            <h4 data-i18n="stats-economic-sectors">Economic Sectors</h4>
+            <h4>Economic Sectors</h4>
             <div class="sc-bars">
               <div class="sc-row">
                 <div class="sc-meta">
                   <span class="sc-dot sc-color-agri"></span>
-                  <span class="sc-name" data-i18n="stats-agriculture">Agriculture</span>
+                  <span class="sc-name">Agriculture</span>
                 </div>
                 <span class="sc-pct">45%</span>
                 <div class="sc-track">
@@ -613,7 +578,7 @@
               <div class="sc-row">
                 <div class="sc-meta">
                   <span class="sc-dot sc-color-trade"></span>
-                  <span class="sc-name" data-i18n="stats-trade-amp-commerce"
+                  <span class="sc-name"
                     >Trade &amp; Commerce</span
                   >
                 </div>
@@ -625,7 +590,7 @@
               <div class="sc-row">
                 <div class="sc-meta">
                   <span class="sc-dot sc-color-services"></span>
-                  <span class="sc-name" data-i18n="stats-services">Services</span>
+                  <span class="sc-name">Services</span>
                 </div>
                 <span class="sc-pct">20%</span>
                 <div class="sc-track">
@@ -635,7 +600,7 @@
               <div class="sc-row">
                 <div class="sc-meta">
                   <span class="sc-dot sc-color-industry"></span>
-                  <span class="sc-name" data-i18n="stats-industry">Industry</span>
+                  <span class="sc-name">Industry</span>
                 </div>
                 <span class="sc-pct">5%</span>
                 <div class="sc-track">
@@ -651,7 +616,6 @@
               href="https://blgf.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              data-i18n="stats-bureau-of-local-government-finance-blgf"
               >Bureau of Local Government Finance (BLGF)</a
             >
             - 2023
@@ -665,10 +629,10 @@
           <div class="section-header-minimal">
             <span class="section-tag"
               ><i class="bi bi-graph-down-arrow"></i>
-              <span data-i18n="stats-poverty">Poverty</span></span
+              <span>Poverty</span></span
             >
-            <h2 data-i18n="stats-poverty-statistics">Poverty Statistics</h2>
-            <p data-i18n="stats-poverty-subtitle">
+            <h2>Poverty Statistics</h2>
+            <p>
               2018, 2021 & 2023 City and Municipal Level Poverty Estimates across Albay
             </p>
           </div>
@@ -777,7 +741,6 @@
               href="https://psa.gov.ph/statistics/poverty"
               target="_blank"
               rel="noopener noreferrer"
-              data-i18n="stats-philippine-statistics-authority-psa"
               >Philippine Statistics Authority (PSA)</a
             >
             - 2018, 2021 & 2023 Small Area Poverty Estimates
@@ -791,10 +754,10 @@
           <div class="section-header-minimal">
             <span class="section-tag"
               ><i class="bi bi-trophy-fill"></i>
-              <span data-i18n="stats-competitiveness">Competitiveness</span></span
+              <span>Competitiveness</span></span
             >
-            <h2 data-i18n="stats-solano-competitive-index">Legazpi Competitive Index</h2>
-            <p data-i18n="stats-cities-and-municipalities-competitiveness-index">
+            <h2>Legazpi Competitive Index</h2>
+            <p>
               10-year Cities and Municipalities Competitiveness Index (CMCI) Performance (2014-2024)
             </p>
           </div>
@@ -802,26 +765,26 @@
           <!-- Pillar Selection Tabs -->
           <div class="cmci-tabs">
             <button type="button" class="cmci-tab active" data-pillar="overview">
-              <i class="bi bi-grid-3x3-gap"></i> <span data-i18n="stats-overview">Overview</span>
+              <i class="bi bi-grid-3x3-gap"></i> <span>Overview</span>
             </button>
             <button type="button" class="cmci-tab" data-pillar="economic-dynamism">
               <i class="bi bi-graph-up-arrow"></i>
-              <span data-i18n="stats-economic-dynamism">Economic Dynamism</span>
+              <span>Economic Dynamism</span>
             </button>
             <button type="button" class="cmci-tab" data-pillar="government-efficiency">
               <i class="bi bi-building-check"></i>
-              <span data-i18n="stats-government-efficiency">Government Efficiency</span>
+              <span>Government Efficiency</span>
             </button>
             <button type="button" class="cmci-tab" data-pillar="infrastructure">
               <i class="bi bi-building-gear"></i>
-              <span data-i18n="stats-infrastructure">Infrastructure</span>
+              <span>Infrastructure</span>
             </button>
             <button type="button" class="cmci-tab" data-pillar="resiliency">
               <i class="bi bi-shield-check"></i>
-              <span data-i18n="stats-resiliency">Resiliency</span>
+              <span>Resiliency</span>
             </button>
             <button type="button" class="cmci-tab" data-pillar="innovation">
-              <i class="bi bi-lightbulb"></i> <span data-i18n="stats-innovation">Innovation</span>
+              <i class="bi bi-lightbulb"></i> <span>Innovation</span>
             </button>
           </div>
 
@@ -830,31 +793,31 @@
             <div class="cmci-overview-grid">
               <div class="cmci-pillar-card" data-pillar="economic-dynamism">
                 <div class="pillar-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                <h4 data-i18n="stats-economic-dynamism">Economic Dynamism</h4>
+                <h4>Economic Dynamism</h4>
                 <div class="pillar-score">8.12</div>
                 <div class="pillar-trend trend-down"><i class="bi bi-arrow-down"></i> -3.3%</div>
               </div>
               <div class="cmci-pillar-card" data-pillar="government-efficiency">
                 <div class="pillar-icon"><i class="bi bi-building-check"></i></div>
-                <h4 data-i18n="stats-government-efficiency">Government Efficiency</h4>
+                <h4>Government Efficiency</h4>
                 <div class="pillar-score">12.15</div>
                 <div class="pillar-trend trend-up"><i class="bi bi-arrow-up"></i> +3.1%</div>
               </div>
               <div class="cmci-pillar-card" data-pillar="infrastructure">
                 <div class="pillar-icon"><i class="bi bi-building-gear"></i></div>
-                <h4 data-i18n="stats-infrastructure">Infrastructure</h4>
+                <h4>Infrastructure</h4>
                 <div class="pillar-score">8.04</div>
                 <div class="pillar-trend trend-down"><i class="bi bi-arrow-down"></i> -10.3%</div>
               </div>
               <div class="cmci-pillar-card" data-pillar="resiliency">
                 <div class="pillar-icon"><i class="bi bi-shield-check"></i></div>
-                <h4 data-i18n="stats-resiliency">Resiliency</h4>
+                <h4>Resiliency</h4>
                 <div class="pillar-score">12.46</div>
                 <div class="pillar-trend trend-stable"><i class="bi bi-dash"></i> Stable</div>
               </div>
               <div class="cmci-pillar-card" data-pillar="innovation">
                 <div class="pillar-icon"><i class="bi bi-lightbulb"></i></div>
-                <h4 data-i18n="stats-innovation">Innovation</h4>
+                <h4>Innovation</h4>
                 <div class="pillar-score">9.68</div>
                 <div class="pillar-trend trend-down"><i class="bi bi-arrow-down"></i> -2.9%</div>
               </div>
@@ -863,7 +826,7 @@
             <div class="cmci-chart-container">
               <h4>
                 <i class="bi bi-bar-chart-line"></i>
-                <span data-i18n="stats-key-indicators-trend-20162024"
+                <span
                   >Key Indicators Trend (2014-2024)</span
                 >
               </h4>
@@ -923,7 +886,7 @@
             <div class="cmci-chart-container">
               <h4>
                 <i class="bi bi-graph-up"></i>
-                <span data-i18n="stats-economic-dynamism-trend">Economic Dynamism Trend</span>
+                <span>Economic Dynamism Trend</span>
               </h4>
               <div class="chart-wrapper">
                 <canvas id="cmciEconomicChart"></canvas>
@@ -977,7 +940,7 @@
             <div class="cmci-chart-container">
               <h4>
                 <i class="bi bi-graph-up"></i>
-                <span data-i18n="stats-government-efficiency-trend"
+                <span
                   >Government Efficiency Trend</span
                 >
               </h4>
@@ -1031,7 +994,7 @@
             <div class="cmci-chart-container">
               <h4>
                 <i class="bi bi-graph-up"></i>
-                <span data-i18n="stats-infrastructure-trend">Infrastructure Trend</span>
+                <span>Infrastructure Trend</span>
               </h4>
               <div class="chart-wrapper">
                 <canvas id="cmciInfraChart"></canvas>
@@ -1085,7 +1048,7 @@
             <div class="cmci-chart-container">
               <h4>
                 <i class="bi bi-graph-up"></i>
-                <span data-i18n="stats-resiliency-trend">Resiliency Trend</span>
+                <span>Resiliency Trend</span>
               </h4>
               <div class="chart-wrapper">
                 <canvas id="cmciResiliencyChart"></canvas>
@@ -1137,7 +1100,7 @@
             <div class="cmci-chart-container">
               <h4>
                 <i class="bi bi-graph-up"></i>
-                <span data-i18n="stats-innovation-trend">Innovation Trend</span>
+                <span>Innovation Trend</span>
               </h4>
               <div class="chart-wrapper">
                 <canvas id="cmciInnovationChart"></canvas>
@@ -1151,7 +1114,6 @@
               href="https://cmci.dti.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              data-i18n="stats-dti-cities-and-municipalities-competitiveness"
               >DTI Cities and Municipalities Competitiveness Index (CMCI)</a
             >
           </p>
@@ -1170,7 +1132,6 @@
             />
             <p
               class="footer-tagline"
-              data-i18n="stats-empowering-the-people-of-solano-with-transparent"
             >
               Empowering the people of Solano with transparent access to the services, programs, and
               public funds of LGU Solano.
@@ -1203,35 +1164,33 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="stats-quick-links">Quick Links</h4>
+            <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://quiz.bettersolano.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="stats-solano-quiz"
                   >Solano Quiz</a
                 >
               </li>
-              <li><a href="../sitemap/" data-i18n="stats-sitemap">Sitemap</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
               <li>
                 <a
                   href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="stats-citizens-charter"
                   >Citizen's Charter</a
                 >
               </li>
-              <li><a href="../terms/" data-i18n="stats-terms-of-use">Terms of Use</a></li>
-              <li><a href="../privacy/" data-i18n="stats-privacy-policy">Privacy Policy</a></li>
-              <li><a href="../accessibility/" data-i18n="stats-accessibility">Accessibility</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
+              <li><a href="../accessibility/">Accessibility</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="stats-resources">Resources</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
                 <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
@@ -1243,7 +1202,6 @@
                   href="https://www.foi.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="stats-freedom-of-information"
                   >Freedom of Information</a
                 >
               </li>
@@ -1252,7 +1210,6 @@
                   href="https://solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="stats-official-lgu-solano-portal"
                   >Official LGU Solano Portal</a
                 >
               </li>
@@ -1261,7 +1218,6 @@
                   href="https://sangguniangbayan.solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="stats-sangguniang-bayan"
                   >Sangguniang Bayan</a
                 >
               </li>
@@ -1270,7 +1226,6 @@
                   href="https://www.facebook.com/OfficialLguSolanoFanpage/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="stats-lgu-solano-facebook"
                   >LGU Solano Facebook</a
                 >
               </li>
@@ -1279,7 +1234,6 @@
                   href="https://blgf.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="stats-blgf-portal"
                   >BLGF Portal</a
                 >
               </li>
@@ -1288,7 +1242,6 @@
                   href="https://cmci.dti.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="stats-cmci-dti-portal"
                   >CMCI DTI Portal</a
                 >
               </li>
@@ -1304,7 +1257,7 @@
             </div>
             <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"
               ><i class="bi bi-envelope-heart"></i>
-              <span data-i18n="stats-volunteer-with-us">Volunteer with us</span></a
+              <span>Volunteer with us</span></a
             >
             <a
               href="https://github.com/BetterSolano/bettersolano"
@@ -1312,7 +1265,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-github"></i>
-              <span data-i18n="stats-contribute-code-with-us">Contribute code with us</span></a
+              <span>Contribute code with us</span></a
             >
             <div class="footer-partners">
               <a
@@ -1371,7 +1324,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <script defer src="../assets/js/translations.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>

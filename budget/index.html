@@ -90,10 +90,10 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="budget-skip-to-main-content"
+    <a href="#main-content" class="skip-link"
       >Skip to main content</a
     >
-                    <!-- Hotline Bar -->
+                        <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -126,6 +126,8 @@
         </div>
       </div>
     </div>
+
+    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -137,85 +139,36 @@
             />
           </a>
         </div>
-        <nav class="main-nav" aria-label="Main Navigation">
+                <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="budget-home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="has-dropdown">
               <a
                 href="../services/"
-                data-i18n="budget-services"
                 aria-haspopup="true"
                 aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
-<li>
-                  <a href="../services/agriculture" data-i18n="budget-agriculture">Agriculture</a>
-                </li>
-<li><a href="../services/business" data-i18n="budget-business">Business</a></li>
-<li>
-                  <a href="../services/certificates" data-i18n="budget-certificates"
-                    >Certificates</a
-                  >
-                </li>
-<li><a href="../services/education" data-i18n="budget-education">Education</a></li>
-<li><a href="../services/health" data-i18n="budget-health">Health</a></li>
-<li>
-                  <a href="../services/infrastructure" data-i18n="budget-infrastructure"
-                    >Infrastructure</a
-                  >
-                </li>
-<li>
-                  <a href="../services/social-services" data-i18n="budget-social-services"
-                    >Social Services</a
-                  >
-                </li>
-<li>
-                  <a href="../services/tax-payments" data-i18n="budget-tax-payments"
-                    >Tax Payments</a
-                  >
-                </li>
-</ul>
-            </li>
-            <li><a href="../government/" data-i18n="budget-government">Government</a></li>
-            <li><a href="../statistics/" data-i18n="budget-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a
-                href="../legislative/"
-                data-i18n="budget-legislative"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Legislative</a
-              >
-              <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
                 <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
                 <li><a href="../services/employment">Employment</a></li>
                 <li><a href="../services/environment">Environment</a></li>
                 <li><a href="../services/health">Health</a></li>
                 <li><a href="../services/infrastructure">Infrastructure</a></li>
                 <li><a href="../services/social-services">Social Services</a></li>
-                <li><a href="../services/tax-payments">Tax Payments</a></li>
+                <li><a href="../services/tax-payments">Tax & Payments</a></li>
               </ul>
             </li>
-            <li><a href="./" class="active" data-i18n="budget-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="budget-contact">Contact</a></li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li><a href="../budget/" class="active">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-        <div class="header-actions">
-          <div class="lang-selector">
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">
-              EN
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
-              FIL
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
-            </button>
-          </div>
-        
+                <div class="header-actions">
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
@@ -223,23 +176,26 @@
       </div>
     </header>
 
+        <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
-        <div class="info-bar-inner">
+        <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
           <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
-            <i class="bi bi-currency-exchange"></i>
-            <span class="rate-rotator"><span class="rate-display">1 USD = ₱ --</span></span>
+            <i class="bi bi-currency-exchange" aria-hidden="true"></i>
+            <span class="rate-rotator">
+              <span class="rate-display">1 USD = ₱ --</span>
+            </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
-            <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Solano</span>
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
+            <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span class="date-value">--- --, ----</span>
-            <span class="datetime-separator">•</span>
-            <i class="bi bi-clock"></i>
+            <span class="datetime-separator" aria-hidden="true">•</span>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span class="time-value">--:-- --</span>
             <span class="time-label">PHT</span>
           </div>
@@ -249,7 +205,7 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../" data-i18n="budget-home">Home</a>
+          <a href="../">Home</a>
           <span>/</span>
           <span aria-current="page">Budget & Transparency</span>
         </nav>
@@ -259,10 +215,10 @@
           <div class="trans-hero-content-v2">
             <span class="trans-hero-badge-v2"
               ><i class="bi bi-shield-check"></i>
-              <span data-i18n="budget-financial-transparency">Financial Transparency</span></span
+              <span>Financial Transparency</span></span
             >
-            <h1 data-i18n="budget-title">Budget & Financial Transparency</h1>
-            <p data-i18n="budget-subtitle">
+            <h1>Budget & Financial Transparency</h1>
+            <p>
               Tracking municipal finances and projects for accountability
             </p>
           </div>
@@ -274,12 +230,12 @@
             <div class="sre-title-group">
               <span class="sre-label"
                 ><i class="bi bi-graph-up-arrow"></i>
-                <span data-i18n="budget-financial-report">Financial Report</span></span
+                <span>Financial Report</span></span
               >
-              <h2 data-i18n="budget-statement-of-receipts-expenditures">
+              <h2>
                 Statement of Receipts & Expenditures
               </h2>
-              <p data-i18n="budget-fy-2024-quarterly-financial-performance">
+              <p>
                 FY 2024 quarterly financial performance
               </p>
             </div>
@@ -291,8 +247,8 @@
                 aria-selected="true"
                 data-quarter="q1"
               >
-                <span class="sre-period-q" data-i18n="budget-q1">Q1</span>
-                <span class="sre-period-range" data-i18n="budget-jan-mar">Jan - Mar</span>
+                <span class="sre-period-q">Q1</span>
+                <span class="sre-period-range">Jan - Mar</span>
               </button>
               <button
                 type="button"
@@ -301,8 +257,8 @@
                 aria-selected="false"
                 data-quarter="q2"
               >
-                <span class="sre-period-q" data-i18n="budget-q2">Q2</span>
-                <span class="sre-period-range" data-i18n="budget-apr-jun">Apr - Jun</span>
+                <span class="sre-period-q">Q2</span>
+                <span class="sre-period-range">Apr - Jun</span>
               </button>
               <button
                 type="button"
@@ -311,8 +267,8 @@
                 aria-selected="false"
                 data-quarter="q3"
               >
-                <span class="sre-period-q" data-i18n="budget-q3">Q3</span>
-                <span class="sre-period-range" data-i18n="budget-jul-sep">Jul - Sep</span>
+                <span class="sre-period-q">Q3</span>
+                <span class="sre-period-range">Jul - Sep</span>
               </button>
               <button
                 type="button"
@@ -321,8 +277,8 @@
                 aria-selected="false"
                 data-quarter="q4"
               >
-                <span class="sre-period-q" data-i18n="budget-q4">Q4</span>
-                <span class="sre-period-range" data-i18n="budget-oct-dec">Oct - Dec</span>
+                <span class="sre-period-q">Q4</span>
+                <span class="sre-period-range">Oct - Dec</span>
               </button>
             </div>
           </div>
@@ -331,14 +287,14 @@
               <div class="sre-metric-icon"><i class="bi bi-arrow-down-circle"></i></div>
               <div class="sre-metric-data">
                 <span class="sre-metric-value" id="sre-total-income">₱715.38 M</span>
-                <span class="sre-metric-label" data-i18n="budget-total-income">Total Income</span>
+                <span class="sre-metric-label">Total Income</span>
               </div>
             </div>
             <div class="sre-metric-card sre-metric-expense">
               <div class="sre-metric-icon"><i class="bi bi-arrow-up-circle"></i></div>
               <div class="sre-metric-data">
                 <span class="sre-metric-value" id="sre-total-expense">₱127.60 M</span>
-                <span class="sre-metric-label" data-i18n="budget-total-expenditures"
+                <span class="sre-metric-label"
                   >Total Expenditures</span
                 >
               </div>
@@ -347,7 +303,7 @@
               <div class="sre-metric-icon"><i class="bi bi-plus-slash-minus"></i></div>
               <div class="sre-metric-data">
                 <span class="sre-metric-value" id="sre-net-income">₱587.78 M</span>
-                <span class="sre-metric-label" data-i18n="budget-net-operating-income"
+                <span class="sre-metric-label"
                   >Net Operating Income</span
                 >
               </div>
@@ -356,7 +312,7 @@
               <div class="sre-metric-icon"><i class="bi bi-wallet2"></i></div>
               <div class="sre-metric-data">
                 <span class="sre-metric-value" id="sre-fund-balance">₱2,048.79 M</span>
-                <span class="sre-metric-label" data-i18n="budget-fund-balance-end"
+                <span class="sre-metric-label"
                   >Fund Balance (End)</span
                 >
               </div>
@@ -368,7 +324,7 @@
               <div class="sre-panel-header">
                 <h3>
                   <i class="bi bi-pie-chart"></i>
-                  <span data-i18n="budget-income-sources">Income Sources</span>
+                  <span>Income Sources</span>
                 </h3>
                 <span class="sre-drilldown-hint"
                   ><i class="bi bi-pie-chart"></i> Click arc to expand</span
@@ -427,9 +383,9 @@
                       <div class="sre-item-info">
                         <span class="sre-item-name"
                           ><i class="bi bi-chevron-right sre-chevron"></i>
-                          <span data-i18n="budget-local-sources">Local Sources</span></span
+                          <span>Local Sources</span></span
                         >
-                        <span class="sre-item-detail" data-i18n="budget-tax-nontax-revenue"
+                        <span class="sre-item-detail"
                           >Tax & Non-Tax Revenue</span
                         >
                       </div>
@@ -619,9 +575,9 @@
                       <div class="sre-item-info">
                         <span class="sre-item-name"
                           ><i class="bi bi-chevron-right sre-chevron"></i>
-                          <span data-i18n="budget-external-sources">External Sources</span></span
+                          <span>External Sources</span></span
                         >
-                        <span class="sre-item-detail" data-i18n="budget-national-tax-allotment"
+                        <span class="sre-item-detail"
                           >National Tax Allotment & Grants</span
                         >
                       </div>
@@ -660,7 +616,7 @@
               <div class="sre-panel-header">
                 <h3>
                   <i class="bi bi-bar-chart"></i>
-                  <span data-i18n="budget-expenditure-allocation">Expenditure Allocation</span>
+                  <span>Expenditure Allocation</span>
                 </h3>
                 <span class="sre-drilldown-hint"
                   ><i class="bi bi-pie-chart"></i> Click arc to expand</span
@@ -710,10 +666,10 @@
                   <div class="sre-breakdown-item" data-type="gps">
                     <span class="sre-item-indicator sre-indicator-gps"></span>
                     <div class="sre-item-info">
-                      <span class="sre-item-name" data-i18n="budget-general-public-services"
+                      <span class="sre-item-name"
                         >General Public Services</span
                       >
-                      <span class="sre-item-detail" data-i18n="budget-administration-operations"
+                      <span class="sre-item-detail"
                         >Administration & Operations</span
                       >
                     </div>
@@ -736,9 +692,9 @@
                       <div class="sre-item-info">
                         <span class="sre-item-name"
                           ><i class="bi bi-chevron-right sre-chevron"></i>
-                          <span data-i18n="budget-social-services">Social Services</span></span
+                          <span>Social Services</span></span
                         >
-                        <span class="sre-item-detail" data-i18n="budget-health-education-welfare"
+                        <span class="sre-item-detail"
                           >Health, Education, Welfare & Housing</span
                         >
                       </div>
@@ -801,10 +757,10 @@
                   <div class="sre-breakdown-item" data-type="economic">
                     <span class="sre-item-indicator sre-indicator-economic"></span>
                     <div class="sre-item-info">
-                      <span class="sre-item-name" data-i18n="budget-economic-services"
+                      <span class="sre-item-name"
                         >Economic Services</span
                       >
-                      <span class="sre-item-detail" data-i18n="budget-infrastructure-development"
+                      <span class="sre-item-detail"
                         >Infrastructure & Development</span
                       >
                     </div>
@@ -818,10 +774,10 @@
                   <div class="sre-breakdown-item" data-type="debt">
                     <span class="sre-item-indicator sre-indicator-debt"></span>
                     <div class="sre-item-info">
-                      <span class="sre-item-name" data-i18n="budget-debt-service"
+                      <span class="sre-item-name"
                         >Debt Service</span
                       >
-                      <span class="sre-item-detail" data-i18n="budget-interest-charges"
+                      <span class="sre-item-detail"
                         >Interest & Charges</span
                       >
                     </div>
@@ -861,7 +817,6 @@
               href="https://blgf.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              data-i18n="budget-bureau-of-local-government-finance-blgf"
               >Bureau of Local Government Finance (BLGF)</a
             >
           </p>
@@ -901,14 +856,14 @@
           <div class="infra-header-v5">
             <span class="infra-label-v5"
               ><i class="bi bi-building"></i>
-              <span data-i18n="budget-national-government-projects"
+              <span
                 >National Government Projects</span
               ></span
             >
-            <h2 data-i18n="budget-dpwh-infrastructure-projects-in-legazpi">
+            <h2>
               DPWH Infrastructure Projects in Legazpi City
             </h2>
-            <p data-i18n="budget-implementing-agency-albay">
+            <p>
               Implementing Agency: DPWH Albay 2nd District Engineering Office / Regional Office V
             </p>
           </div>
@@ -921,7 +876,6 @@
               href="https://transparency.dpwh.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              data-i18n="budget-dpwh-transparency-portal"
               >DPWH Transparency Portal</a
             >
             <span style="margin: 0 6px; opacity: 0.5;">•</span>
@@ -941,7 +895,6 @@
             />
             <p
               class="footer-tagline"
-              data-i18n="budget-empowering-the-people-of-solano-with-transparent"
             >
               Empowering the people of Solano with transparent access to the services, programs, and
               public funds of LGU Solano.
@@ -974,37 +927,35 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="budget-quick-links">Quick Links</h4>
+            <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li>
                 <a
                   href="https://quiz.bettersolano.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="budget-solano-quiz"
                   >Solano Quiz</a
                 >
               </li>
-              <li><a href="../sitemap/" data-i18n="budget-sitemap">Sitemap</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
               <li>
                 <a
                   href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="budget-citizens-charter"
                   >Citizen's Charter</a
                 >
               </li>
-              <li><a href="../terms/" data-i18n="budget-terms-of-use">Terms of Use</a></li>
-              <li><a href="../privacy/" data-i18n="budget-privacy-policy">Privacy Policy</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
               <li>
-                <a href="../accessibility/" data-i18n="budget-accessibility">Accessibility</a>
+                <a href="../accessibility/">Accessibility</a>
               </li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="budget-resources">Resources</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
                 <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
@@ -1026,7 +977,6 @@
                   href="https://sangguniangbayan.solano.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="budget-sangguniang-bayan"
                   >Sangguniang Bayan</a
                 >
               </li>
@@ -1035,7 +985,6 @@
                   href="https://www.facebook.com/OfficialLguSolanoFanpage/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="budget-lgu-solano-facebook"
                   >LGU Solano Facebook</a
                 >
               </li>
@@ -1044,7 +993,6 @@
                   href="https://blgf.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="budget-blgf-portal"
                   >BLGF Portal</a
                 >
               </li>
@@ -1053,7 +1001,6 @@
                   href="https://cmci.dti.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="budget-cmci-dti-portal"
                   >CMCI DTI Portal</a
                 >
               </li>
@@ -1069,7 +1016,7 @@
             </div>
             <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"
               ><i class="bi bi-envelope-heart"></i>
-              <span data-i18n="budget-volunteer-with-us">Volunteer with us</span></a
+              <span>Volunteer with us</span></a
             >
             <a
               href="https://github.com/BetterSolano/bettersolano"
@@ -1077,7 +1024,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><i class="bi bi-github"></i>
-              <span data-i18n="budget-contribute-code-with-us">Contribute code with us</span></a
+              <span>Contribute code with us</span></a
             >
             <div class="footer-partners">
               <a
@@ -1135,7 +1082,6 @@
       </div>
     </footer>
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <script defer src="../assets/js/translations.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>

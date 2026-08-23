@@ -342,11 +342,11 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link" data-i18n="gov-skip-to-main-content"
+    <a href="#main-content" class="skip-link"
       >Skip to main content</a
     >
 
-                    <!-- Hotline Bar -->
+                        <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -380,7 +380,7 @@
       </div>
     </div>
 
-    <!-- Header -->
+    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -393,44 +393,37 @@
           </a>
         </div>
 
-        <nav class="main-nav" aria-label="Main Navigation">
+                <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="nav-home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
                 <li><a href="../services/certificates">Certificates</a></li>
+                <li><a href="../services/education">Education</a></li>
                 <li><a href="../services/employment">Employment</a></li>
                 <li><a href="../services/environment">Environment</a></li>
                 <li><a href="../services/health">Health</a></li>
                 <li><a href="../services/infrastructure">Infrastructure</a></li>
                 <li><a href="../services/social-services">Social Services</a></li>
-                <li><a href="../services/tax-payments">Tax Payments</a></li>
+                <li><a href="../services/tax-payments">Tax & Payments</a></li>
               </ul>
             </li>
-            <li><a href="./" class="active" data-i18n="nav-government">Government</a></li>
-            <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
-              <ul class="dropdown-menu">
-                <li><a href="../legislative/ordinance-framework" data-i18n="gov-ordinance-framework">Ordinance Framework</a></li>
-                <li><a href="../legislative/resolution-framework" data-i18n="gov-resolution-framework">Resolution Framework</a></li>
-              </ul>
-            </li>
-            <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
+            <li><a href="../government/" class="active">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
 
-        <div class="header-actions">
-          <div class="lang-selector">
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">BK</button>
-          </div>
-        
+                <div class="header-actions">
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
@@ -438,26 +431,26 @@
       </div>
     </header>
 
-    <!-- Real-Time Info Bar -->
+        <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
-        <div class="info-bar-inner">
+        <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
           <div class="info-bar-item info-bar-rates" aria-label="Exchange rates">
-            <i class="bi bi-currency-exchange"></i>
+            <i class="bi bi-currency-exchange" aria-hidden="true"></i>
             <span class="rate-rotator">
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
           <div class="info-bar-item info-bar-weather" aria-label="Current weather in Legazpi">
-            <i class="bi bi-thermometer-half"></i>
-            <span class="weather-location">Legazpi City</span>
+            <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+            <span class="weather-location">Legazpi</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span class="date-value">--- --, ----</span>
-            <span class="datetime-separator">•</span>
-            <i class="bi bi-clock"></i>
+            <span class="datetime-separator" aria-hidden="true">•</span>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span class="time-value">--:-- --</span>
             <span class="time-label">PHT</span>
           </div>
@@ -469,7 +462,7 @@
       <!-- Breadcrumbs -->
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../" data-i18n="gov-home">Home</a>
+          <a href="../">Home</a>
           <span>/</span>
           <span aria-current="page">Government</span>
         </nav>
@@ -481,10 +474,10 @@
           <div class="page-header-content">
             <span class="page-header-badge"
               ><i class="bi bi-building-fill"></i>
-              <span data-i18n="gov-government">Government</span></span
+              <span>Government</span></span
             >
-            <h1 data-i18n="gov-title">Government Structure & Officials</h1>
-            <p class="page-header-desc" data-i18n="gov-subtitle">
+            <h1>Government Structure & Officials</h1>
+            <p class="page-header-desc">
               Meet the leadership, executive offices, and 70 barangays serving Legazpi City, Albay
             </p>
           </div>
@@ -532,8 +525,8 @@
             <!-- Mayor Card -->
             <div class="executive-card">
               <div class="executive-card-header">
-                <span class="executive-badge" data-i18n="title-mayor">City Mayor</span>
-                <h4 class="executive-name" data-i18n="gov-mayor-name">
+                <span class="executive-badge">City Mayor</span>
+                <h4 class="executive-name">
                   Hon. Hisham B. Ismail
                 </h4>
               </div>
@@ -552,10 +545,10 @@
             <!-- Vice Mayor Card -->
             <div class="executive-card">
               <div class="executive-card-header">
-                <span class="executive-badge" data-i18n="title-vice-mayor"
+                <span class="executive-badge"
                   >City Vice Mayor</span
                 >
-                <h4 class="executive-name" data-i18n="gov-vice-mayor-name">
+                <h4 class="executive-name">
                   Hon. Luis Felipe L. Gutierrez
                 </h4>
               </div>
@@ -594,15 +587,14 @@
                 margin-bottom: var(--spacing-sm);
               "
               ><i class="bi bi-people-fill"></i>
-              <span data-i18n="gov-legislative-branch">Legislative Branch</span></span
+              <span>Legislative Branch</span></span
             >
             <h3
-              data-i18n="gov-sp-members"
               style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
             >
               Sangguniang Panlungsod Members
             </h3>
-            <p data-i18n="gov-sp-subtitle" style="color: var(--color-text-light)">
+            <p style="color: var(--color-text-light)">
               City Councilors crafting legislation, policies, and ordinances for Legazpi City
             </p>
           </div>
@@ -1113,10 +1105,9 @@
                 margin-bottom: var(--spacing-sm);
               "
               ><i class="bi bi-geo-alt-fill"></i>
-              <span data-i18n="gov-barangay-units">Barangay Units</span></span
+              <span>Barangay Units</span></span
             >
             <h3
-              data-i18n="gov-barangays"
               style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
             >
               Barangays of Legazpi
@@ -2595,17 +2586,17 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="gov-quick-links">Quick Links</h4>
+            <h4>Quick Links</h4>
             <ul class="footer-links-new">
-              <li><a href="../sitemap/" data-i18n="gov-sitemap">Sitemap</a></li>
-              <li><a href="../terms/" data-i18n="gov-terms-of-use">Terms of Use</a></li>
-              <li><a href="../privacy/" data-i18n="gov-privacy-policy">Privacy Policy</a></li>
-              <li><a href="../accessibility/" data-i18n="gov-accessibility">Accessibility</a></li>
+              <li><a href="../sitemap/">Sitemap</a></li>
+              <li><a href="../terms/">Terms of Use</a></li>
+              <li><a href="../privacy/">Privacy Policy</a></li>
+              <li><a href="../accessibility/">Accessibility</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4 data-i18n="gov-resources">Official Portals</h4>
+            <h4>Official Portals</h4>
             <ul class="footer-links-new">
               <li>
                 <a
@@ -2742,8 +2733,6 @@
         });
       });
     </script>
-
-    <script defer src="../assets/js/translations.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
