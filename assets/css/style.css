@@ -1,4 +1,4 @@
-/* Better Solano - Complete Main Stylesheet */
+/* BetterLegazpi - Complete Main Stylesheet */
 :root {
   --color-primary: #0032a0;
   --color-primary-dark: #002170;
@@ -800,7 +800,11 @@ body.mobile-menu-open {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  background: var(--color-primary, #0032a0);
+  /* Deliberately NOT var(--color-primary): dark mode redefines that token to
+     #4f8eff, and white on #4f8eff is ~2.6:1 — worse than the red this replaced.
+     The link is only ever visible while focused, so axe cannot catch that
+     regression. Pinning the dark brand blue keeps it ~11:1 in both themes. */
+  background: #0032a0;
   color: #ffffff;
   padding: 8px 16px;
   z-index: 1001;
@@ -2764,7 +2768,7 @@ h6 {
 }
 
 .cost-badge::before {
-  content: 'Cost to the People of Solano';
+  content: 'Cost to the People of Legazpi';
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -6536,9 +6540,13 @@ cklist with Icons - Proper Indentation */
   background: var(--color-bg-alt);
 }
 
+/* minmax(0, ...) rather than a bare 1fr: see .home-contact-v2-grid. These
+   cards carry email addresses and phone numbers that will not line-break, so
+   the default `auto` track minimum held the column at 370px on a 320px
+   phone. */
 .home-leadership-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--spacing-md);
 }
 
@@ -6548,6 +6556,8 @@ cklist with Icons - Proper Indentation */
   border-radius: 12px;
   padding: var(--spacing-lg);
   text-align: center;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .home-leader-badge {
@@ -6699,7 +6709,7 @@ cklist with Icons - Proper Indentation */
   }
 
   .home-leadership-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .home-stats-grid {
@@ -7186,7 +7196,7 @@ cklist with Icons - Proper Indentation */
   }
 }
 
-/* Solano Quiz CTA */
+/* Quiz CTA */
 .quiz-cta-section {
   background:
     radial-gradient(circle, rgba(0, 50, 160, 0.1) 1px, transparent 1px),
@@ -7481,9 +7491,15 @@ cklist with Icons - Proper Indentation */
 }
 
 /* Contact V2 - Card Grid */
+/* `1fr` is shorthand for `minmax(auto, 1fr)`, and that `auto` minimum refuses
+   to shrink a track below its content's min-content width. These cards hold
+   unbreakable strings (phone numbers, email addresses), so on a 320px phone
+   the track stayed 387px wide and pushed the page sideways. `minmax(0, 1fr)`
+   removes the floor; `min-width: 0` on the card does the same for the flex
+   layout inside it. */
 .home-contact-v2-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--spacing-md);
 }
 
@@ -7498,6 +7514,8 @@ cklist with Icons - Proper Indentation */
   text-decoration: none;
   color: var(--color-text);
   transition: all 0.2s ease;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .home-contact-v2-card:hover {
@@ -7566,7 +7584,7 @@ cklist with Icons - Proper Indentation */
   }
 
   .home-contact-v2-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

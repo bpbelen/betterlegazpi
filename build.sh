@@ -1,5 +1,5 @@
 #!/bin/bash
-# BetterSolano — Production Build Script
+# BetterLegazpi — Production Build Script
 # Usage:
 #   bash build.sh            — bump patch, build everything
 #   bash build.sh --no-bump  — keep current version, build everything
@@ -22,7 +22,7 @@ done
 
 echo ""
 echo "╔══════════════════════════════════════════╗"
-echo "║   BetterSolano — Production Build        ║"
+echo "║   BetterLegazpi — Production Build       ║"
 echo "╚══════════════════════════════════════════╝"
 
 # ── 1. Version (single source of truth: version.json) ────────────────────────
@@ -66,9 +66,21 @@ if command -v rsync &>/dev/null; then
         --exclude='*.backup' \
         --exclude='*.md' \
         --exclude='.lighthouserc.json' \
+        --exclude='.lighthouserc.desktop.json' \
         --exclude='.github' \
         --exclude='.gitignore' \
+        --exclude='.gitattributes' \
         --exclude='validate-translations.js' \
+        --exclude='tests' \
+        --exclude='test-results' \
+        --exclude='playwright-report' \
+        --exclude='scratch' \
+        --exclude='playwright.config.js' \
+        --exclude='.prettierrc' \
+        --exclude='.prettierignore' \
+        --exclude='.claude' \
+        --exclude='.impeccable' \
+        --exclude='extracted_text.txt' \
         . dist/
 else
     # Fallback: cross-platform Node.js copy (Windows / no rsync)

@@ -9,13 +9,13 @@
 
 ## Reporting a Vulnerability
 
-We take security seriously at BetterSolano.org. If you discover a security vulnerability, please report it responsibly.
+We take security seriously at BetterLegazpi.org. If you discover a security vulnerability, please report it responsibly.
 
 ### How to Report
 
 **Do NOT open a public GitHub issue for security vulnerabilities.**
 
-Instead, please email: **volunteer@bettersolano.org**
+Instead, open a private [security advisory](https://github.com/bpbelen/betterlegazpi/security/advisories/new) on GitHub, or contact the maintainer directly.
 
 Include in your report:
 
@@ -27,7 +27,7 @@ Include in your report:
 ### Response Timeline
 
 | Action             | Timeframe             |
-| ------------------ | --------------------- |
+| ------------------ | ---------------------- |
 | Acknowledgment     | Within 48 hours       |
 | Initial Assessment | Within 7 days         |
 | Resolution Target  | Within 30 days        |
@@ -62,12 +62,12 @@ Include in your report:
 
 ### Third-Party Services
 
-| Service          | Purpose          | Data Shared          |
-| ---------------- | ---------------- | -------------------- |
-| Google Analytics | Usage statistics | Anonymous page views |
-| Open-Meteo API   | Weather data     | Location (Solano)    |
-| ExchangeRate API | Currency rates   | None                 |
-| OpenStreetMap    | Map tiles        | None                 |
+| Service          | Purpose          | Data Shared                |
+| ---------------- | ---------------- | --------------------------- |
+| Google Analytics | Usage statistics | Anonymous page views        |
+| Open-Meteo API   | Weather data     | Location (Legazpi City)     |
+| ExchangeRate API | Currency rates   | None                        |
+| OpenStreetMap    | Map tiles        | None                        |
 
 ## Best Practices for Contributors
 
@@ -83,7 +83,7 @@ When contributing code:
 
 This security policy covers:
 
-- The BetterSolano.org website
+- The BetterLegazpi.org website
 - The GitHub repository
 - Associated build tools and scripts
 
@@ -91,14 +91,13 @@ Out of scope:
 
 - Third-party services (Google Analytics, APIs)
 - User's local environment
-- Social media accounts
 
 ## Contact
 
-For security concerns: **volunteer@bettersolano.org**
+For security concerns, open a [security advisory](https://github.com/bpbelen/betterlegazpi/security/advisories/new).
 
-For general inquiries: Open a GitHub issue or join our [Discord](https://discord.com/invite/qeSu7RJkjQ)
+For general inquiries, open a [GitHub issue](https://github.com/bpbelen/betterlegazpi/issues).
 
 ---
 
-Thank you for helping keep BetterSolano.org secure for the community.
+Thank you for helping keep BetterLegazpi.org secure for the community.

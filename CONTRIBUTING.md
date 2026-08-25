@@ -1,68 +1,34 @@
-# Contributing to BetterSolano.org
+# Contributing to BetterLegazpi.org
 
-Thank you for your interest in contributing to BetterSolano.org! This civic-tech project thrives on community participation. Whether you're a developer, designer, translator, or a concerned citizen of Solano, your contributions are welcome.
+Thank you for your interest in contributing to BetterLegazpi.org! This civic-tech project thrives on community participation. Whether you're a developer, designer, translator, or a concerned citizen of Legazpi City, your contributions are welcome.
 
-## Choosing a Version
-
-BetterSolano.org has two versions. Choose based on your preference:
-
-| Version            | Branch             | Best For                                                          |
-| ------------------ | ------------------ | ----------------------------------------------------------------- |
-| Static HTML        | `main`             | Quick fixes, content updates, contributors new to web development |
-| React + TypeScript | `react-typescript` | New features, complex UI, contributors familiar with React        |
-
-Both versions are actively maintained and contributions to either are welcome.
-
-For detailed differences and migration guidance, see [MIGRATION.md](MIGRATION.md).
+This repository is a static HTML/CSS/JS site — no build framework, no bundler. It began as a fork of [BetterSolano.org](https://github.com/BetterSolano/bettersolano), retrofitted for LGU Legazpi City, Albay.
 
 ## Getting Started
 
-### Static HTML Version
-
-#### Prerequisites
+### Prerequisites
 
 - Node.js v16 or higher
 - npm v8 or higher
 - Python 3 (for local development server)
 - Git
 
-#### Setup
+### Setup
 
 ```bash
-git clone https://github.com/BetterSolano/bettersolano.git
-cd bettersolano
+git clone https://github.com/bpbelen/betterlegazpi.git
+cd betterlegazpi
 npm install
 npm run dev
 ```
 
 Open http://localhost:8000 in your browser.
 
-### React + TypeScript Version
-
-#### Prerequisites
-
-- Node.js v18 or higher
-- npm v9 or higher
-- Git
-
-#### Setup
-
-```bash
-git clone https://github.com/BetterSolano/bettersolano.git
-cd bettersolano
-git checkout react-typescript
-cd react-app
-npm install
-npm run dev
-```
-
-Open http://localhost:3000 in your browser.
-
 ## How to Contribute
 
 ### Reporting Bugs
 
-1. Check existing [issues](https://github.com/BetterSolano/bettersolano/issues) to avoid duplicates
+1. Check existing [issues](https://github.com/bpbelen/betterlegazpi/issues) to avoid duplicates
 2. Create a new issue with:
    - Clear, descriptive title
    - Steps to reproduce
@@ -113,15 +79,14 @@ Types:
 ## Contribution Areas
 
 | Area               | Description                          |
-| ------------------ | ------------------------------------ |
+| ------------------ | ------------------------------------- |
 | Bug Fixes          | Fix reported issues                  |
 | Features           | Implement new functionality          |
 | Content            | Update municipal service information |
-| Translations       | Translate to Filipino or Ilocano     |
+| Translations       | Help build out planned English/Filipino/Bicol support |
 | Design             | Improve UI/UX and accessibility      |
 | Data               | Verify and update statistics         |
 | Documentation      | Improve guides and comments          |
-| API Integration    | Connect real-time data sources       |
 | Data Visualization | Enhance charts and graphs            |
 
 ## Code Guidelines
@@ -182,19 +147,12 @@ Pull requests are reviewed for:
 
 ## Community
 
-- **Discord:** [Join our community](https://discord.com/invite/qeSu7RJkjQ)
-- **Facebook:** [@bettersolano.org](https://www.facebook.com/bettersolano.org)
-- **LinkedIn:** [Connect with us](https://www.linkedin.com/company/bettersolano)
-- **Email:** volunteer@bettersolano.org
+Questions or discussion happen on [GitHub Issues](https://github.com/bpbelen/betterlegazpi/issues) — feel free to open one.
 
 ## Recognition
 
 All contributors are recognized in our repository. Significant contributions may be highlighted on the website.
 
-## Questions?
-
-Feel free to open an issue or reach out on Discord. We're happy to help!
-
 ---
 
-Thank you for helping make government information accessible to the people of Solano.
+Thank you for helping make government information accessible to the people of Legazpi City.

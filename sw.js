@@ -4,8 +4,8 @@
  */
 
 var CACHE_VERSION = 'v5';
-var STATIC_CACHE = 'bettersolano-static-' + CACHE_VERSION;
-var RUNTIME_CACHE = 'bettersolano-runtime-' + CACHE_VERSION;
+var STATIC_CACHE = 'betterlegazpi-static-' + CACHE_VERSION;
+var RUNTIME_CACHE = 'betterlegazpi-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
 
 // Core shell: precached on install for instant offline load
@@ -22,6 +22,9 @@ var PRECACHE_URLS = [
   '/assets/images/logo/better-solano-logo-white.svg',
   '/assets/images/logo/favicon.svg',
   '/assets/images/logo/favicon.ico',
+  '/assets/images/logo/icon-192.png',
+  '/assets/images/logo/icon-512.png',
+  '/assets/images/logo/icon-maskable-512.png',
   '/manifest.webmanifest',
 ];
 
@@ -239,7 +242,7 @@ self.addEventListener('push', function (event) {
       body: data.body || '',
       icon: '/assets/images/logo/favicon.svg',
       badge: '/assets/images/logo/favicon.svg',
-      tag: data.tag || 'bettersolano-notification',
+      tag: data.tag || 'betterlegazpi-notification',
       data: { url: data.url || '/' },
     })
   );

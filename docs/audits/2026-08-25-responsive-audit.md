@@ -3,6 +3,23 @@
 Automated audit of every page for desktop and mobile compatibility, covering
 layout, touch targets, accessibility, and performance.
 
+> **Status: remediation pass complete.** The findings below are recorded as
+> first measured. Outcomes after fixes:
+>
+> | Measure                                    | Before                  | After                                                                     |
+> | ------------------------------------------ | ----------------------- | ------------------------------------------------------------------------- |
+> | Horizontal overflow (430 checks)           | 44 failures / 41 routes | **0**                                                                     |
+> | Touch targets breaching WCAG 2.5.8 AA      | 1                       | **0**                                                                     |
+> | Touch targets below the 44px AAA guideline | 31 elements             | 48 elements _(more became visible once the largest offenders were fixed)_ |
+> | Accessibility scans passing — light theme  | 2 of 86 (2%)            | **51 of 86 (59%)**                                                        |
+> | Accessibility scans passing — dark theme   | 22 of 86 (26%)          | 22 of 86 (26%)                                                            |
+> | `aria-required-children` criticals         | 2                       | **0**                                                                     |
+>
+> Two corrections to this report's original conclusions, both established
+> during remediation and detailed in [Remediation](#remediation):
+> **`.skip-link` was a genuine contrast failure, not an axe artifact**, and
+> **dark theme is now the worse theme for contrast**, not light.
+
 ## Summary
 
 **817 automated checks** — 645 layout/touch (43 routes × 10 viewports) plus 172
@@ -379,3 +396,107 @@ Deliberately excluded: consolidating the 18 breakpoint values and extracting the
 40 inline `<style>` media queries. Both are recorded in
 [ADR 0001](../adr/0001-breakpoint-scale.md), and both are unsafe to attempt
 without the visual regression coverage this repo does not yet have.
+
+---
+
+## Remediation
+
+### Layout — all 44 overflow failures cleared
+
+| Fix                                                                        | Where                 | Effect              |
+| -------------------------------------------------------------------------- | --------------------- | ------------------- |
+| `flex-wrap: wrap` + `min-width: 0` on `.info-bar-datetime`                 | `style.css`           | 37 routes           |
+| Mobile card layout extended from `.resolution-table` to `.ordinance-table` | `style.css`           | ordinance-framework |
+| `overflow-wrap: break-word` on `.hero-title-v3`                            | `index.html` inline   | homepage            |
+| `minmax(0, 1fr)` + `min-width: 0` on the contact and leadership grids      | `style.css`           | homepage            |
+| `minmax(0, 1fr)` + `min-width: 0` on `.distribution-layout`                | `statistics.css`      | statistics          |
+| `minmax(0, 1fr)` + `min-width: 0` on `.dpwh-charts-grid`                   | `transparency-v2.css` | budget              |
+| `canvas { max-width: 100% }`                                               | `statistics.css`      | statistics          |
+
+Two things worth recording because they contradict what this report first
+assumed:
+
+**The ordinance table already had a mobile card layout — it just wasn't
+addressed by it.** The rules naming `.resolution-table` were never extended to
+`.ordinance-table`, while the `overflow-x: visible` override that accompanies
+them applied to _all_ wrappers. So the ordinance table lost its scroll container
+without gaining the card layout. Extending the selectors was the fix; adding a
+scroll container would have masked it.
+
+**The statistics and budget grids did have mobile collapses**, later in their
+stylesheets, using a bare `1fr`. A first attempt added _new_ collapse rules
+earlier in the file, which the existing later rules silently overrode. The
+working fix was to change the existing rules, not add new ones.
+
+`h1.hero-title-v3` deserves special mention: its **text**, not any element,
+overflowed the box. The harness could not name it, because a text run is not an
+element. It was found by walking the `scrollWidth`/`clientWidth` chain down from
+`<html>`. The offending token was "BetterLegazpi.org" — one character longer
+than the "BetterSolano.org" it replaced.
+
+### Touch targets
+
+- `.hotline-number` on `offline.html` — 22×21 → 44px. The only AA breach, and it
+  was the emergency numbers on the page shown when the visitor has no
+  connection.
+- `.retry-btn` and the offline page's theme toggle — brought to 44px. That page
+  loads no shared stylesheet, so its controls were falling back to browser
+  defaults.
+- `.theme-toggle-btn` — 36×36 → 44×44 across all 43 routes.
+- `.skip-link` — 42px → 44px.
+
+Still below the 44px guideline, all clearing the 24×24 AA floor:
+`a.hotline-item` (25px, 41 routes), `button.mobile-menu-toggle` (41px, 41
+routes), `a.footer-social-btn` (40px), `button.service-tab` (32px). The hotline
+bar is the notable one — it is a thin scrolling ticker, and taking its items to
+44px makes the bar materially taller on every page. That is a design decision,
+not a defect fix, so it is left open.
+
+### Accessibility
+
+**`.skip-link` was a real failure, not the axe artifact this report suspected.**
+Its colours were white on `#ff0000` — 4.0:1, below the 4.5:1 AA floor. And it
+was never properly hidden: `top: -40px` on a box ~42px tall left ~2px of red
+visible on every page, which is exactly why axe evaluated it. Fixed by hiding it
+with `transform: translateY(-100%)` (exact at any height) and using the dark
+brand blue (~11:1).
+
+The background is deliberately hard-coded rather than `var(--color-primary)`:
+dark mode redefines that token to `#4f8eff`, and white on `#4f8eff` is ~2.6:1 —
+_worse_ than the red. Because the link is only visible while focused, axe cannot
+catch that regression, so the token dependency was removed entirely.
+
+Both `aria-required-children` criticals fixed:
+
+- `budget/` — a redundant `role="table"` on a real `<table>` opted it into
+  strict ARIA child validation, which the sort buttons in its header cells then
+  violated. Removing the redundant role restores the identical implicit
+  semantics without the violation.
+- `services/education` — `role="tablist"` on a set of plain filter buttons that
+  are not tabs and do not switch panels. Changed to `role="group"`, with
+  `aria-pressed` added (and maintained in `main.js`) so the selected filter is
+  no longer conveyed by colour alone.
+
+**Dark theme is now the worse theme**, reversing this report's original finding:
+light-theme contrast failures fell from 43 routes to 12, while dark stayed at 30. The original measurement was correct, but the skip-link — present on 41
+routes — dominated the light-theme count. With it fixed, dark's own palette is
+the larger remaining problem.
+
+### Not fixed
+
+- **Contrast, 30 routes dark / 12 light.** The largest remaining body of work,
+  and a palette decision rather than a bug fix.
+- `link-in-text-block` (3 routes), `nested-interactive` (2),
+  `scrollable-region-focusable` (1), `label` on `admin/news-editor` (1, never
+  ships).
+- Touch targets between 24px and 44px, per the design question above.
+- P1, P2, P3 and appendix items A2–A7 are covered in the rebranding work, except
+  A6 (the logo), left in place deliberately.
+
+### A caution about the verification
+
+The full 430-check layout run reports 429 passed / 1 failed under 4 parallel
+workers, with the failing case showing a closed-browser error rather than an
+overflow measurement. Re-running the affected routes serially passes 140/140.
+Treat isolated single failures in a parallel run as suspect before treating them
+as defects.

@@ -2,7 +2,7 @@
 
 ## Our Pledge
 
-BetterSolano.org is a civic-tech project built for the people of Solano, Nueva Vizcaya. We are committed to providing a welcoming, inclusive, and harassment-free environment for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+BetterLegazpi.org is a civic-tech project built for the people of Legazpi City, Albay. We are committed to providing a welcoming, inclusive, and harassment-free environment for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 ## Our Standards
 
@@ -11,7 +11,7 @@ BetterSolano.org is a civic-tech project built for the people of Solano, Nueva V
 - Be respectful and considerate in all interactions
 - Use welcoming and inclusive language
 - Accept constructive criticism gracefully
-- Focus on what is best for the community and the people of Solano
+- Focus on what is best for the community and the people of Legazpi City
 - Show empathy towards other community members
 - Respect differing viewpoints and experiences
 - Prioritize accuracy when contributing public government data
@@ -31,17 +31,11 @@ BetterSolano.org is a civic-tech project built for the people of Solano, Nueva V
 This Code of Conduct applies to all project spaces, including:
 
 - GitHub repository (issues, pull requests, discussions)
-- Discord community
-- Social media channels (Facebook, LinkedIn)
-- Email communications
 - Any public representation of the project
 
 ## Enforcement
 
-Instances of unacceptable behavior may be reported to:
-
-- Email: volunteer@bettersolano.org
-- Discord: Contact a moderator
+Instances of unacceptable behavior may be reported by opening a [GitHub issue](https://github.com/bpbelen/betterlegazpi/issues) or contacting the maintainer directly through GitHub.
 
 All complaints will be reviewed and investigated promptly and fairly. The project team is obligated to maintain confidentiality regarding the reporter.
 
@@ -57,4 +51,4 @@ This Code of Conduct is adapted from the [Contributor Covenant](https://www.cont
 
 ---
 
-By participating in BetterSolano.org, you agree to abide by this Code of Conduct.
+By participating in BetterLegazpi.org, you agree to abide by this Code of Conduct.

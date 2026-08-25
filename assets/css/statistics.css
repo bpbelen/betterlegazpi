@@ -554,7 +554,10 @@
 /* Distribution Section */
 .distribution-layout {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  /* minmax(0, ...) rather than bare fr units: the default `auto` track minimum
+     refuses to shrink below the content's min-content width, which held these
+     panels at 358px on a 320px phone. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   gap: 36px;
   align-items: start;
 }
@@ -1342,8 +1345,15 @@
     grid-template-columns: 1fr;
   }
 
+  /* minmax(0, ...) not a bare 1fr: the `auto` track minimum kept these panels
+     at 358px on a 320px phone even as a single column. */
   .distribution-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .distribution-chart,
+  .distribution-barangays-panel {
+    min-width: 0;
   }
 
   .distribution-chart {
@@ -1440,6 +1450,18 @@
 /* Chart.js Customizations */
 .chart-wrapper canvas {
   max-height: 100%;
+}
+
+/* Chart.js writes an explicit pixel width onto the canvas when it initialises,
+   sized from the container at that moment. If the container is narrower than
+   the canvas thinks — a late layout pass, a font swap, a chart built before its
+   panel collapsed — the canvas keeps the stale width and drags the page
+   sideways. On a 320px phone these measured 325-350px. Capping every chart
+   canvas to its container makes that impossible regardless of init order.
+   This stylesheet is only loaded by the statistics page, so the bare element
+   selector is safely scoped. */
+canvas {
+  max-width: 100%;
 }
 
 /* Loading State */

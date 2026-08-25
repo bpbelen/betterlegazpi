@@ -230,6 +230,12 @@
         font-weight: 800;
         letter-spacing: -0.03em;
         line-height: 1.1;
+        /* "BetterLegazpi.org" is a single unbreakable 17-character token at
+           ~35px, so on a 320px phone the text overflowed its box by 35px and
+           dragged the whole page sideways. `break-word` only breaks a word
+           that cannot fit on a line of its own, so wider screens are
+           unaffected. */
+        overflow-wrap: break-word;
         background: linear-gradient(135deg, #1e293b 0%, #c2410c 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -336,7 +342,6 @@
         "name": "City Government of Legazpi",
         "alternateName": "Better Legazpi",
         "url": "https://betterlegazpi.org",
-        "logo": "https://betterlegazpi.org/assets/images/logo/better-solano-logo.svg",
         "description": "Official portal of the City Government of Legazpi, Albay. Access municipal services, government information, and community updates.",
         "address": {
           "@type": "PostalAddress",
@@ -1200,7 +1205,7 @@
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer">All public information sourced from official government portals.</span>
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.2.0</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>
         </div>
       </div>

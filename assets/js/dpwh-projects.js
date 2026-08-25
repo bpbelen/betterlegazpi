@@ -648,7 +648,13 @@
 
       <!-- Table Wrapper -->
       <div class="dpwh-table-wrap">
-        <table class="dpwh-table" role="table">
+        <!-- No explicit role="table": a <table> already has that role
+             implicitly, and stating it opts the element into strict ARIA
+             child validation, which the sort buttons inside the header cells
+             then violate ("children which are not allowed: [role=button]").
+             Implicit semantics give the same screen-reader result without the
+             critical axe violation. -->
+        <table class="dpwh-table">
           <thead>
             <tr>
               <th scope="col" class="col-desc">Contract Description</th>

@@ -718,8 +718,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterPills.forEach((pill) => {
       pill.addEventListener('click', function () {
-        filterPills.forEach((p) => p.classList.remove('active'));
+        filterPills.forEach((p) => {
+          p.classList.remove('active');
+          p.setAttribute('aria-pressed', 'false');
+        });
         this.classList.add('active');
+        // Without this the selected filter is conveyed by colour alone, which
+        // a screen-reader user cannot perceive. These are toggle buttons in a
+        // group, not tabs, so aria-pressed is the correct state to expose.
+        this.setAttribute('aria-pressed', 'true');
         activeFilter = this.getAttribute('data-filter') || 'all';
         filterSchools();
       });

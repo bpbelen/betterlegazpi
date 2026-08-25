@@ -21,9 +21,21 @@ const EXCLUDED = new Set([
   'scripts',
   'docs',
   '.lighthouserc.json',
+  '.lighthouserc.desktop.json',
   '.github',
   '.gitignore',
+  '.gitattributes',
   'validate-translations.js',
+  'tests',
+  'test-results',
+  'playwright-report',
+  'scratch',
+  'playwright.config.js',
+  '.prettierrc',
+  '.prettierignore',
+  '.claude',
+  '.impeccable',
+  'extracted_text.txt',
 ]);
 
 const EXCLUDED_EXT = new Set(['.backup', '.md']);

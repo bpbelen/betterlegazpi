@@ -299,10 +299,36 @@
                 <i class="bi bi-x-circle-fill"></i>
               </button>
             </div>
-            <div class="edu-filter-pills" role="tablist" aria-label="Filter schools by type">
-              <button type="button" class="edu-filter-pill active" data-filter="all">All</button>
-              <button type="button" class="edu-filter-pill" data-filter="public">Public</button>
-              <button type="button" class="edu-filter-pill" data-filter="private">Private</button>
+            <!-- role="group", not "tablist": these filter a list in place, they
+                 do not switch tab panels. A tablist requires role="tab"
+                 children, which plain buttons are not — that mismatch was a
+                 critical axe violation. aria-pressed carries the selected
+                 state, which was previously conveyed by colour alone. -->
+            <div class="edu-filter-pills" role="group" aria-label="Filter schools by type">
+              <button
+                type="button"
+                class="edu-filter-pill active"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                class="edu-filter-pill"
+                data-filter="public"
+                aria-pressed="false"
+              >
+                Public
+              </button>
+              <button
+                type="button"
+                class="edu-filter-pill"
+                data-filter="private"
+                aria-pressed="false"
+              >
+                Private
+              </button>
             </div>
           </div>
 
