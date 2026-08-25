@@ -783,19 +783,32 @@ body.mobile-menu-open {
   border-width: 0;
 }
 
+/* Three defects were fixed here together, all reported by the 2026-08-25 audit:
+
+   1. Contrast. White on #ff0000 is 4.0:1 — below the 4.5:1 WCAG AA floor for
+      normal text. This was the site's most widespread axe violation, flagged
+      on 41 of 43 routes. Brand blue gives ~11:1.
+   2. It was never fully hidden. `top: -40px` on a box ~42px tall left about
+      2px of red peeking at the top-left of every page. Translating by its own
+      height hides it exactly, whatever the box measures.
+   3. Touch target. It measured 171x42, just under the 44px minimum. */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: 0;
   left: 0;
-  background: #ff0000;
-  color: white;
-  padding: 8px;
+  transform: translateY(-100%);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  background: var(--color-primary, #0032a0);
+  color: #ffffff;
+  padding: 8px 16px;
   z-index: 1001;
-  transition: top 0.2s;
+  transition: transform 0.2s;
 }
 
 .skip-link:focus {
-  top: 0;
+  transform: translateY(0);
 }
 
 /* SW Update Banner */
@@ -3230,21 +3243,27 @@ h6 {
   }
 
   /* Hide table header on mobile */
-  .resolution-table thead {
+  .resolution-table thead,
+  .ordinance-table thead {
     display: none;
   }
 
   /* Convert table to block layout */
   .resolution-table,
+  .ordinance-table,
   .resolution-table tbody,
+  .ordinance-table tbody,
   .resolution-table tr,
-  .resolution-table td {
+  .ordinance-table tr,
+  .resolution-table td,
+  .ordinance-table td {
     display: block;
     width: 100%;
   }
 
   /* Style each row as a card */
-  .resolution-table tbody tr {
+  .resolution-table tbody tr,
+  .ordinance-table tbody tr {
     background: var(--color-white);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-sm);
@@ -3252,13 +3271,14 @@ h6 {
     padding: var(--spacing-sm);
     border: 1px solid var(--color-bg-alt);
   }
-
-  .resolution-table tbody tr:hover {
+  .resolution-table tbody tr:hover,
+  .ordinance-table tbody tr:hover {
     box-shadow: var(--shadow-md);
   }
 
   /* Style cells with data labels */
-  .resolution-table tbody td {
+  .resolution-table tbody td,
+  .ordinance-table tbody td {
     padding: var(--spacing-xs) 0;
     border-bottom: none;
     display: flex;
@@ -3266,8 +3286,8 @@ h6 {
     align-items: flex-start;
     gap: var(--spacing-sm);
   }
-
-  .resolution-table tbody td::before {
+  .resolution-table tbody td::before,
+  .ordinance-table tbody td::before {
     content: attr(data-label);
     font-weight: 600;
     color: var(--color-primary);
@@ -3278,7 +3298,8 @@ h6 {
   }
 
   /* Resolution number styling on mobile */
-  .resolution-table tbody td:first-child {
+  .resolution-table tbody td:first-child,
+  .ordinance-table tbody td:first-child {
     font-size: 1rem;
     padding-bottom: var(--spacing-xs);
     border-bottom: 1px solid var(--color-bg-alt);
@@ -3286,14 +3307,17 @@ h6 {
   }
 
   /* Title column on mobile */
-  .resolution-table tbody td:nth-child(2) {
+  .resolution-table tbody td:nth-child(2),
+  .ordinance-table tbody td:nth-child(2) {
     flex-direction: column;
     gap: var(--spacing-xs);
   }
 
   /* Remove rounded corners from last row on mobile */
   .resolution-table tbody tr:last-child td:first-child,
-  .resolution-table tbody tr:last-child td:last-child {
+  .ordinance-table tbody tr:last-child td:first-child,
+  .resolution-table tbody tr:last-child td:last-child,
+  .ordinance-table tbody tr:last-child td:last-child {
     border-radius: 0;
   }
 }
@@ -8622,8 +8646,16 @@ a.a11y-contact-item:hover i {
     display: none;
   }
 
+  /* `nowrap` here forced date + time onto a single unbreakable line, giving the
+     item a min-content width of ~329px — wider than a 320px phone, so the whole
+     page scrolled sideways on every one of the 41 pages carrying this bar.
+     `wrap` does not force a break; it only permits one when the content cannot
+     fit, so wider screens still render it on one line. `min-width: 0` is the
+     other half: without it the flex item refuses to shrink below min-content. */
   .info-bar-datetime {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    min-width: 0;
+    justify-content: flex-end;
   }
 
   .time-label {
@@ -11883,8 +11915,11 @@ a.a11y-contact-item:hover i {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  /* 44px is the WCAG 2.5.5 / platform touch-target minimum. This control is on
+     every page, so at 36px it was the site's most widespread undersized
+     target. */
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--color-white, #ffffff);
   color: var(--color-text, #1e293b);

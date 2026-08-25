@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0032a0" />
-    <title>Offline - BetterSolano.org</title>
+    <title>Offline - BetterLegazpi.org</title>
     <style>
       *,
       *::before,
@@ -96,13 +96,38 @@
         color: #0032a0;
         font-weight: 600;
         text-decoration: none;
+        /* These are emergency numbers on the page shown when the visitor has
+           no connection — they must be easy to hit under pressure. As a bare
+           inline link, "911" measured 22x21px, below the 24x24 WCAG 2.5.8 AA
+           floor and well under the 44px guideline. The negative margin keeps
+           the digits visually flush right while the tap area extends past
+           them. */
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0 0.5rem;
+        margin-right: -0.5rem;
       }
       .hotline-number:focus {
         outline: 2px solid #0032a0;
         outline-offset: 2px;
       }
+      /* This page loads no shared stylesheet, so the toggle would otherwise
+         fall back to browser default button sizing (43px tall). */
+      .theme-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        min-width: 44px;
+      }
       .retry-btn {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
         background: #0032a0;
         color: #fff;
         border: none;
@@ -184,7 +209,7 @@
     >
 
     <main id="main-content" class="container" role="main">
-      <svg class="logo" viewBox="0 0 200 60" aria-label="BetterSolano" role="img">
+      <svg class="logo" viewBox="0 0 200 60" aria-label="BetterLegazpi" role="img">
         <rect width="200" height="60" rx="8" fill="#0032a0" />
         <text
           x="100"
@@ -195,7 +220,7 @@
           font-size="18"
           font-weight="700"
         >
-          BetterSolano
+          BetterLegazpi
         </text>
       </svg>
 

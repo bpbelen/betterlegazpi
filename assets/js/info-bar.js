@@ -453,9 +453,9 @@ const WeatherService = {
       temperature: null,
       timestamp: Date.now(),
       location: {
-        lat: CONFIG.SOLANO_LAT,
-        lon: CONFIG.SOLANO_LON,
-        name: 'Solano, Nueva Vizcaya',
+        lat: CONFIG.LEGAZPI_LAT,
+        lon: CONFIG.LEGAZPI_LON,
+        name: 'Legazpi, Albay',
       },
     };
   },

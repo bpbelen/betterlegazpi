@@ -9,6 +9,16 @@ on:
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # Desktop was never audited before: .lighthouserc.json set no form
+        # factor, so Lighthouse silently ran its mobile default only.
+        formFactor: [mobile, desktop]
+
+    name: lighthouse (${{ matrix.formFactor }})
+
     steps:
       - uses: actions/checkout@v4
 
@@ -32,10 +42,20 @@ jobs:
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
         with:
+          # One URL per layout generation and per page-specific stylesheet.
+          # Non-index pages keep their .html extension: the clean-URL rewriting
+          # in .htaccess is an Apache feature, and this job serves dist/ with
+          # plain python http.server, which only resolves <dir>/index.html.
           urls: |
             http://localhost:8080/
             http://localhost:8080/services/
-            http://localhost:8080/contact/
+            http://localhost:8080/services/certificates.html
+            http://localhost:8080/service-details/cto-services.html
             http://localhost:8080/government/
-          configPath: .lighthouserc.json
+            http://localhost:8080/statistics/
+            http://localhost:8080/budget/
+            http://localhost:8080/legislative/
+            http://localhost:8080/contact/
+          configPath: ${{ matrix.formFactor == 'desktop' && '.lighthouserc.desktop.json' || '.lighthouserc.json' }}
           uploadArtifacts: true
+          artifactName: lighthouse-results-${{ matrix.formFactor }}

@@ -1,5 +1,5 @@
 /**
- * BetterSolano Service Worker
+ * BetterLegazpi Service Worker
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
@@ -17,7 +17,6 @@ var PRECACHE_URLS = [
   '/assets/css/footer.css',
   '/assets/css/accessibility.css',
   '/assets/js/main.js',
-  '/assets/js/translations.js',
   '/assets/js/info-bar.js',
   '/assets/images/logo/better-solano-logo.svg',
   '/assets/images/logo/better-solano-logo-white.svg',
@@ -236,7 +235,7 @@ self.addEventListener('push', function (event) {
   if (!event.data) return;
   var data = event.data.json();
   event.waitUntil(
-    self.registration.showNotification(data.title || 'BetterSolano', {
+    self.registration.showNotification(data.title || 'BetterLegazpi', {
       body: data.body || '',
       icon: '/assets/images/logo/favicon.svg',
       badge: '/assets/images/logo/favicon.svg',

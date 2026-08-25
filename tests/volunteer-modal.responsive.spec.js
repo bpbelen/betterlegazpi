@@ -1,24 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 const { SEL, gotoFresh, waitForOpen } = require('./helpers/volunteer-modal');
-
-/**
- * Viewports chosen to cover the real edges: the narrowest phone still in use,
- * ordinary portrait phones, phones held sideways, tablets, laptops, and a short
- * desktop window — the case where a modal most often overflows unreachably.
- */
-const VIEWPORTS = [
-  { name: 'Galaxy Fold (320x653)', width: 320, height: 653 },
-  { name: 'iPhone SE portrait (375x667)', width: 375, height: 667 },
-  { name: 'iPhone 14 Pro (393x852)', width: 393, height: 852 },
-  { name: 'iPhone SE landscape (667x375)', width: 667, height: 375 },
-  { name: 'iPhone 14 landscape (852x393)', width: 852, height: 393 },
-  { name: 'iPad portrait (768x1024)', width: 768, height: 1024 },
-  { name: 'iPad landscape (1024x768)', width: 1024, height: 768 },
-  { name: 'Laptop (1280x800)', width: 1280, height: 800 },
-  { name: 'Short desktop window (1280x420)', width: 1280, height: 420 },
-  { name: 'Full HD (1920x1080)', width: 1920, height: 1080 },
-];
+const { VIEWPORTS } = require('./helpers/viewports');
 
 test.describe('Volunteer modal — responsive layout', () => {
   for (const vp of VIEWPORTS) {

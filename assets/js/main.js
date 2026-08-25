@@ -1,4 +1,4 @@
-/* Better Solano - Main JavaScript */
+/* BetterLegazpi - Main JavaScript */
 
 // ─── PWA Install Prompt ─────────────────────────────────────────────────────
 var deferredInstallPrompt = null;
@@ -32,10 +32,10 @@ function showInstallBanner() {
   banner.innerHTML =
     '<div class="pwa-install-content">' +
     '<i class="bi bi-download" aria-hidden="true"></i>' +
-    '<span>Install BetterSolano for quick access to services.</span>' +
+    '<span>Install BetterLegazpi for quick access to services.</span>' +
     '</div>' +
     '<div class="pwa-install-actions">' +
-    '<button class="pwa-install-btn" aria-label="Install BetterSolano app">Install</button>' +
+    '<button class="pwa-install-btn" aria-label="Install BetterLegazpi app">Install</button>' +
     '<button class="pwa-install-dismiss" aria-label="Dismiss install prompt">&times;</button>' +
     '</div>';
 
@@ -520,11 +520,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initDropdowns();
 
-  // Language handling is now managed by TranslationEngine in translations.js
-  // The TranslationEngine initializes automatically and handles:
-  // - Language persistence via localStorage
-  // - Button state management
-  // - Content translation with fallback support
+  // No language handling here: the site currently ships in English only.
+  // The inherited BetterLegazpi City TranslationEngine was removed along with its
+  // translations.js — no page carries data-i18n attributes or a language
+  // toggle. Multi-language (English, Filipino, Bicol) is planned for a later
+  // iteration and should be built as per-locale files fetched on demand,
+  // not as a single bundle loaded on every page.
 
   // Dynamic copyright year
   const yearElement = document.getElementById('copyright-year');

@@ -1,7 +1,7 @@
 {
   "name": "bs-web",
   "version": "1.1.19",
-  "description": "BetterSolano.org - Official Portal for LGU Solano",
+  "description": "BetterLegazpi.org - Official Portal for LGU Legazpi City",
   "scripts": {
     "dev": "python serve.py -p 8000 -d .",
     "build": "bash build.sh",
@@ -29,6 +29,7 @@
   "author": "Ramon Logan Jr.",
   "license": "MIT",
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.23.9",

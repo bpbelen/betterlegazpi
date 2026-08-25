@@ -1,4 +1,4 @@
-/* Better Solano - Enhanced Search Functionality */
+/* BetterLegazpi - Enhanced Search Functionality */
 /* Updated: 2025-12-05 */
 
 (function () {
@@ -204,24 +204,24 @@
   function getFallbackServices() {
     return [
       {
-        id: 'birth-certificate',
-        title: 'Birth Certificate',
+        id: 'ccro-on-time-birth',
+        title: 'On-Time Registration of Certificate of Live Birth',
         category: 'Certificates & Vital Records',
-        keywords: ['birth', 'certificate'],
-        office: 'Local Civil Registrar',
-        fee: '₱150',
-        processingTime: '15-30 minutes',
-        url: '../service-details/birth-certificate.html',
+        keywords: ['birth', 'birth certificate', 'certificate of live birth', 'colb'],
+        office: "City Civil Registrar's Office",
+        fee: 'Free (Marital) / ₱300.00 (Non-Marital)',
+        processingTime: '2 hours',
+        url: 'service-details/city-civil-registrar.html#on-time-birth',
       },
       {
-        id: 'business-permit',
-        title: 'Business Permit',
-        category: 'Business Trade & Investment',
-        keywords: ['business', 'permit'],
-        office: 'BPLS',
-        fee: 'Varies',
-        processingTime: '3-5 days',
-        url: 'business.html',
+        id: 'bplo-new-business',
+        title: 'New Business Permit Application',
+        category: 'Business, Trade & Investment',
+        keywords: ['business permit', 'bpls', 'new business', 'mayors permit'],
+        office: 'Business Permits & Licensing Office',
+        fee: 'Based on capitalization/scale',
+        processingTime: '1-3 days',
+        url: 'service-details/business-permits-licensing.html#new-business',
       },
     ];
   }
@@ -612,13 +612,10 @@
     // Render results
     html += results
       .map((result, index) => {
-        let url = result.url;
+        let url = result.url || '#';
         if (!url.startsWith('http') && !url.startsWith('/')) {
-          if (window.location.pathname.includes('/services/')) {
-            // Already in services folder
-          } else if (!url.startsWith('../') && !url.startsWith('services/')) {
-            url = 'services/' + url;
-          }
+          const basePath = getBasePath();
+          url = basePath + url.replace(/^\.\.\//, '');
         }
 
         return `
@@ -1297,7 +1294,7 @@
   }
 
   if (typeof window !== 'undefined') {
-    window.BetterSolanoSearch = {
+    window.BetterLegazpiSearch = {
       searchServices,
       getSuggestions,
       getPopularSearches,

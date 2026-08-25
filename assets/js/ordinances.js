@@ -1,4 +1,4 @@
-/* Better Solano - Ordinance Table JavaScript */
+/* BetterLegazpi - Ordinance Table JavaScript */
 
 /**
  * Fetches ordinance data from the JSON file

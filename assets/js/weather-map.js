@@ -1,6 +1,6 @@
 /**
- * Weather & Map Section for Better Solano Homepage
- * Displays real-time weather data and interactive map of Solano, Nueva Vizcaya
+ * Weather & Map Section for Better Legazpi Homepage
+ * Displays real-time weather data and interactive map of Legazpi City, Albay
  * With robust fallback system to ensure content always renders
  */
 
@@ -8,10 +8,10 @@
 (function () {
   'use strict';
 
-  console.log('=== weather-map.js: Script loading started ===');
+  console.log('=== weather-map.js: Script loading started (Legazpi City) ===');
 
   // ============================================================================
-  // Mock/Fallback Data - Always available static data
+  // Mock/Fallback Data - Always available static data for Legazpi City
   // ============================================================================
   function getMockWeather() {
     const now = new Date();
@@ -23,7 +23,7 @@
       const hour = (currentHour + i) % 24;
       const isPM = hour >= 12;
       const displayHour = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
-      const temp = 26 + Math.floor(Math.random() * 5); // 26-30°C range
+      const temp = 27 + Math.floor(Math.random() * 4); // 27-31°C range for Bicol
 
       hourlyForecast.push({
         time: `${displayHour} ${isPM ? 'PM' : 'AM'}`,
@@ -34,7 +34,7 @@
 
     return {
       temperature: 29,
-      humidity: 65,
+      humidity: 71,
       windSpeed: 12,
       weatherCode: 1,
       condition: 'Mainly clear',
@@ -60,10 +60,10 @@
   // Weather Service - Handles fetching, caching, and providing weather data
   // ============================================================================
   const WeatherService = {
-    CACHE_KEY: 'solano_weather_cache',
+    CACHE_KEY: 'legazpi_weather_cache',
     CACHE_TTL: 30 * 60 * 1000,
     API_URL: 'https://api.open-meteo.com/v1/forecast',
-    COORDINATES: { lat: 16.5167, lon: 121.1833 },
+    COORDINATES: { lat: 13.1391, lon: 123.7438 }, // Legazpi City Hall Coordinates
 
     mapWeatherCode(code) {
       const mappings = {
@@ -148,7 +148,7 @@
       }
 
       // Try API fetch with timeout
-      console.log('Weather: Fetching live data from Open-Meteo API...');
+      console.log('Weather: Fetching live data from Open-Meteo API for Legazpi...');
       try {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
@@ -253,7 +253,7 @@
           : '<span style="font-size:0.65rem;color:#06a77d;margin-left:4px;" title="Live data from Open-Meteo API">●</span>';
 
         container.innerHTML = `
-                <div class="weather-widget" role="region" aria-label="Current weather in Solano">
+                <div class="weather-widget" role="region" aria-label="Current weather in Legazpi City">
                     <div class="weather-current">
                         <div class="weather-current-icon" aria-hidden="true">
                             <i class="bi ${data.icon}"></i>
@@ -262,7 +262,7 @@
                             <div class="weather-current-temp" aria-label="Temperature ${data.temperature} degrees Celsius">${data.temperature}°C</div>
                             <div class="weather-current-condition" aria-label="Condition: ${data.condition}">${data.condition}${dataSourceBadge}</div>
                             <div class="weather-current-location">
-                                <i class="bi bi-geo-alt" aria-hidden="true"></i> Solano, Nueva Vizcaya
+                                <i class="bi bi-geo-alt" aria-hidden="true"></i> Legazpi City, Albay
                             </div>
                         </div>
                     </div>
@@ -333,11 +333,11 @@
   };
 
   // ============================================================================
-  // Map Component - Initializes and manages the Leaflet map
+  // Map Component - Initializes and manages the Leaflet map for Legazpi City Hall
   // ============================================================================
   const MapComponent = {
-    SOLANO_CENTER: [16.5167, 121.1833],
-    DEFAULT_ZOOM: 14,
+    LEGAZPI_CENTER: [13.1391, 123.7438],
+    DEFAULT_ZOOM: 15,
     map: null,
 
     init(containerId) {
@@ -361,7 +361,6 @@
       }
 
       // Leaflet not available — the iframe embedded in the HTML stays visible.
-      // Ensure the fallback iframe is present if the container is somehow empty.
       if (!container.querySelector('iframe')) {
         console.warn('Map: Leaflet unavailable and no iframe found, inserting fallback');
         this.renderTextFallback(container);
@@ -374,14 +373,14 @@
     renderLoading(container) {
       container.innerHTML = `
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;min-height:300px;background:#f5f5f5;">
-                <i class="bi bi-map" style="font-size:2.5rem;color:#0032a0;opacity:0.4;"></i>
-                <p style="color:#888;margin-top:0.5rem;font-size:0.875rem;">Loading map...</p>
+                <i class="bi bi-map" style="font-size:2.5rem;color:#c2410c;opacity:0.4;"></i>
+                <p style="color:#888;margin-top:0.5rem;font-size:0.875rem;">Loading map of Legazpi City...</p>
             </div>
         `;
     },
 
     renderTextFallback(container) {
-      // Use OpenStreetMap iframe embed as fallback - this always works
+      // Use OpenStreetMap iframe embed as fallback for Legazpi City Hall
       container.innerHTML = `
             <iframe 
                 width="100%" 
@@ -390,9 +389,9 @@
                 scrolling="no" 
                 marginheight="0" 
                 marginwidth="0" 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.5167%2C121.1833"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=123.7238%2C13.1191%2C123.7638%2C13.1591&layer=mapnik&marker=13.1391%2C123.7438" 
                 style="border:0;display:block;"
-                title="Map of Solano, Nueva Vizcaya"
+                title="Map of Legazpi City Hall, Albay"
                 loading="lazy">
             </iframe>
         `;
@@ -401,10 +400,8 @@
 
     initLeaflet(container) {
       try {
-        console.log('Map: Initializing Leaflet...');
+        console.log('Map: Initializing Leaflet for Legazpi City Hall...');
 
-        // Fix marker icon paths when Leaflet is loaded from a CDN — the auto-detection
-        // of _iconUrl relative to the script URL is unreliable across CDN providers.
         delete L.Icon.Default.prototype._getIconUrl;
         L.Icon.Default.mergeOptions({
           iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
@@ -416,12 +413,12 @@
           shadowSize: [41, 41],
         });
 
-        // Clear any existing content (removes the inline iframe when upgrading)
+        // Clear any existing content
         container.innerHTML = '';
 
         // Create the map with keyboard navigation support
         this.map = L.map(container, {
-          center: this.SOLANO_CENTER,
+          center: this.LEGAZPI_CENTER,
           zoom: this.DEFAULT_ZOOM,
           scrollWheelZoom: false,
           zoomControl: true,
@@ -429,10 +426,6 @@
           keyboardPanDelta: 80,
         });
 
-        // Add tile layer with CSP-block detection — some servers (e.g. cPanel hosts that inject
-        // their own CSP alongside .htaccess) block tile.openstreetmap.org images even when
-        // unpkg.com images (marker icons) load fine. If 3 tile errors fire before any tile
-        // succeeds, the host is blocking tiles; fall back to the always-reliable OSM iframe embed.
         const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -451,7 +444,7 @@
           if (!tileLoadedOnce) {
             tileErrorCount++;
             if (tileErrorCount >= 3) {
-              console.warn('Map: Tiles blocked (likely CSP or network), falling back to OSM embed iframe');
+              console.warn('Map: Tiles blocked, falling back to OSM embed iframe');
               const map = this.map;
               this.map = null;
               if (map) map.remove();
@@ -462,13 +455,13 @@
 
         tileLayer.addTo(this.map);
 
-        // Add marker
-        const marker = L.marker(this.SOLANO_CENTER).addTo(this.map);
-        marker.bindPopup('<strong>Solano Municipal Hall</strong><br>Nueva Vizcaya 3708');
+        // Add marker for Legazpi City Hall
+        const marker = L.marker(this.LEGAZPI_CENTER).addTo(this.map);
+        marker.bindPopup('<strong>Legazpi City Hall</strong><br>Rizal St., Legazpi City, Albay 4500');
 
         container.setAttribute('data-map-loaded', 'leaflet');
 
-        // Force resize after a short delay
+        // Force resize after short delay
         setTimeout(() => {
           if (this.map) {
             this.map.invalidateSize();
@@ -476,14 +469,13 @@
           }
         }, 100);
 
-        // Another resize after tiles might have loaded
         setTimeout(() => {
           if (this.map) {
             this.map.invalidateSize();
           }
         }, 500);
 
-        console.log('Map: Leaflet initialized successfully');
+        console.log('Map: Leaflet initialized successfully for Legazpi');
         return this.map;
       } catch (e) {
         console.error('Map: Leaflet initialization failed:', e);
@@ -497,7 +489,7 @@
   // Main Initialization Function
   // ============================================================================
   async function WeatherMapInit() {
-    console.log('Weather-Map: Initializing...');
+    console.log('Weather-Map: Initializing Legazpi widgets...');
 
     const weatherContainer = document.getElementById('weather-container');
     const mapContainer = document.getElementById('map-container');
@@ -505,15 +497,11 @@
     // WEATHER: Show loading, then fetch
     if (weatherContainer) {
       try {
-        // Show loading state first
         WeatherUI.renderLoading(weatherContainer);
-
-        // Fetch weather (will use mock if needed)
         const data = await WeatherService.fetchWeather();
         WeatherUI.render(weatherContainer, data);
       } catch (error) {
         console.error('Weather: Init failed', error);
-        // Render mock data as last resort
         WeatherUI.render(weatherContainer, getMockWeather());
       }
     }
@@ -531,30 +519,21 @@
 
   // Expose for retry button and failsafe
   window.WeatherMapInit = WeatherMapInit;
-  console.log('=== weather-map.js: WeatherMapInit exposed to window ===');
 
   // ============================================================================
   // Auto-initialization
   // ============================================================================
   (function () {
-    console.log('=== weather-map.js: Auto-init IIFE executing ===');
-    console.log('Document readyState:', document.readyState);
-
     function init() {
-      console.log('=== weather-map.js: Calling WeatherMapInit() ===');
       WeatherMapInit();
     }
 
     if (document.readyState === 'loading') {
-      console.log('=== weather-map.js: Waiting for DOMContentLoaded ===');
       document.addEventListener('DOMContentLoaded', init);
     } else {
-      console.log('=== weather-map.js: DOM already loaded, initializing immediately ===');
       init();
     }
   })();
-
-  console.log('=== weather-map.js: Script loading completed ===');
 
   // Export for testing
   if (typeof module !== 'undefined' && module.exports) {

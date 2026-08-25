@@ -1,4 +1,4 @@
-// Version loader for BetterSolano
+// Version loader for BetterLegazpi
 // Dynamically updates version display across all pages
 
 (function () {

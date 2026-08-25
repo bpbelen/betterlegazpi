@@ -1,7 +1,7 @@
 {
-  "name": "BetterSolano.org - LGU Solano Portal",
-  "short_name": "BetterSolano",
-  "description": "Access government services, emergency hotlines, and transparency data for Solano, Nueva Vizcaya.",
+  "name": "BetterLegazpi.org - LGU Legazpi City Portal",
+  "short_name": "BetterLegazpi",
+  "description": "Access government services, emergency hotlines, and transparency data for Legazpi City, Albay.",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",

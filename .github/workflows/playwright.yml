@@ -1,0 +1,76 @@
+name: Playwright
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # Blocking gate: layout geometry and touch targets across three engines.
+  responsive:
+    name: responsive + behaviour
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      # The `chrome` and `edge` projects in playwright.config.js use real
+      # installed browser channels, which are slow and fragile on runners.
+      # CI runs the bundled-engine projects instead; the branded channels stay
+      # for local runs, where they are genuinely useful.
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium firefox webkit
+
+      - name: Run tests
+        run: >
+          npx playwright test
+          tests/site-responsive.spec.js
+          tests/volunteer-modal.a11y.spec.js
+          tests/volunteer-modal.behavior.spec.js
+          tests/volunteer-modal.responsive.spec.js
+          --project=mobile-chrome --project=firefox --project=safari
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-responsive
+          path: playwright-report/
+          retention-days: 14
+
+  # Non-blocking for now: axe reports a backlog that predates this workflow.
+  # Promote to a required check once the WCAG violations are cleared.
+  accessibility:
+    name: axe (advisory)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run axe
+        run: npx playwright test tests/site-a11y.spec.js --project=mobile-chrome
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-a11y
+          path: playwright-report/
+          retention-days: 14

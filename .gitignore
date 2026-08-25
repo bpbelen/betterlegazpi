@@ -11,3 +11,6 @@ test-results/
 playwright-report/
 blob-report/
 .playwright/
+
+# Audit run output (input to docs/audits/*.md, regenerated on demand)
+audit-*.json
