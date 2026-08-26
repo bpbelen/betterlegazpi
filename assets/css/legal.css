@@ -19,7 +19,7 @@
   background: rgba(255, 255, 255, 0.15);
   color: white;
   padding: 8px 20px;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 16px;
@@ -55,7 +55,7 @@
   position: sticky;
   top: 100px;
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
@@ -83,8 +83,8 @@
   padding: 8px 12px;
   font-size: 0.8125rem;
   color: var(--color-text-light);
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-base) ease;
   text-decoration: none;
 }
 
@@ -162,7 +162,7 @@
   width: 6px;
   height: 6px;
   background: var(--color-primary);
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
 }
 
 /* Highlight Box */
@@ -173,7 +173,7 @@
   background: linear-gradient(135deg, rgba(6, 167, 125, 0.1) 0%, rgba(6, 167, 125, 0.05) 100%);
   border-left: 4px solid var(--color-success);
   padding: 16px 20px;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
   margin: 20px 0;
 }
 
@@ -193,7 +193,7 @@
   gap: 12px;
   background: var(--color-bg-alt);
   padding: 16px 20px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   margin: 20px 0;
 }
 
@@ -214,7 +214,7 @@
 .legal-callout {
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 20px;
   margin: 24px 0;
 }
@@ -266,11 +266,11 @@ Contact Section */
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   color: white;
   padding: 14px 24px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-size: 0.9375rem;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .contact-link:hover {
@@ -340,31 +340,31 @@ Contact Section */
    LEGAL PAGES (TERMS, PRIVACY) - DARK MODE THEME SYSTEM
    ========================================================================== */
 [data-theme='dark'] .legal-hero {
-  background: linear-gradient(135deg, #090a0f 0%, #16181f 100%);
+  background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 [data-theme='dark'] .legal-content {
-  background: #090a0f;
+  background: var(--color-bg-alt);
 }
 
 [data-theme='dark'] .legal-toc {
-  background: #16181f;
+  background: var(--color-bg);
   border: 1px solid rgba(255, 255, 255, 0.07);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 [data-theme='dark'] .legal-toc h4 {
-  color: #f0f6fc;
+  color: var(--color-text);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 [data-theme='dark'] .legal-toc a {
-  color: #8b949e;
+  color: var(--color-text-light);
 }
 
 [data-theme='dark'] .legal-toc a:hover {
-  background: #232734;
+  background: var(--color-bg-muted);
   color: #4f8eff;
 }
 
@@ -373,23 +373,23 @@ Contact Section */
 }
 
 [data-theme='dark'] .legal-section h2 {
-  color: #f0f6fc;
+  color: var(--color-text);
   border-bottom-color: #4f8eff;
 }
 
 [data-theme='dark'] .legal-section h3 {
-  color: #f0f6fc;
+  color: var(--color-text);
 }
 
 [data-theme='dark'] .legal-section p,
 [data-theme='dark'] .legal-list li {
-  color: #c9d1d9;
+  color: var(--color-text-light);
 }
 
 [data-theme='dark'] .legal-callout {
-  background: #16181f;
+  background: var(--color-bg);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #c9d1d9;
+  color: var(--color-text-light);
 }
 
 [data-theme='dark'] .legal-callout h4 {
@@ -397,12 +397,12 @@ Contact Section */
 }
 
 [data-theme='dark'] .legal-note {
-  background: #1c1f28;
+  background: var(--color-bg);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 [data-theme='dark'] .legal-note p {
-  color: #8b949e;
+  color: var(--color-text-light);
 }
 
 [data-theme='dark'] .legal-highlight {
@@ -411,5 +411,5 @@ Contact Section */
 }
 
 [data-theme='dark'] .legal-highlight span {
-  color: #f0f6fc;
+  color: var(--color-text);
 }

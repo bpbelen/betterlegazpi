@@ -14,18 +14,12 @@
       content="OCENR Legazpi, City ENRO Legazpi, solid waste management Legazpi, permit to dump, Banquerohan sanitary landfill, environmental certificate, tree cutting permit Legazpi, chainsaw registration, tree seedlings, septage management code, desludging septic tank Legazpi, Albay environmental services"
     />
     <meta name="robots" content="index, follow" />
-    <link
-      rel="canonical"
-      href="https://betterlegazpi.org/service-details/ocenr-services"
-    />
+    <link rel="canonical" href="https://betterlegazpi.org/service-details/ocenr-services" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://betterlegazpi.org/service-details/ocenr-services"
-    />
+    <meta property="og:url" content="https://betterlegazpi.org/service-details/ocenr-services" />
     <meta
       property="og:title"
-      content="OCENR Citizen's Charter — City Environment & Natural Resources | BetterLegazpi.org"
+      content="OCENR Citizen's Charter. City Environment & Natural Resources | BetterLegazpi.org"
     />
     <meta
       property="og:description"
@@ -56,272 +50,8 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-hub.css" />
     <style>
-      .bpl-section {
-        padding: 40px 0;
-      }
-      .bpl-section.alt-bg {
-        background: var(--color-bg-alt);
-      }
-      .section-header {
-        margin-bottom: 24px;
-      }
-      .section-header h2 {
-        font-size: 1.25rem;
-        color: var(--color-text);
-        margin-bottom: 6px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 700;
-      }
-      .section-header h2 i {
-        color: var(--color-primary);
-        font-size: 1.15rem;
-      }
-      .section-header p {
-        color: var(--color-text-light);
-        font-size: 0.875rem;
-        margin: 0;
-        line-height: 1.5;
-      }
-      .quick-stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-        margin-bottom: 24px;
-      }
-      .stat-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        text-align: center;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .stat-card i {
-        font-size: 1.15rem;
-        color: var(--color-primary);
-        margin-bottom: 4px;
-      }
-      .stat-card h4 {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin-bottom: 2px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .stat-card p {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
-      .service-tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 28px;
-        justify-content: center;
-        background: transparent;
-        border: none;
-        padding: 0;
-      }
-      .service-tab {
-        padding: 10px 20px;
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 8px;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--color-text);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .service-tab:hover {
-        border-color: var(--color-primary);
-        color: var(--color-primary);
-      }
-      .service-tab.active {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
-        color: white;
-        box-shadow: 0 2px 6px rgba(0, 50, 160, 0.2);
-      }
-      .service-tab.active i {
-        color: white;
-      }
-      .service-content {
-        display: none;
-      }
-      .service-content.active {
-        display: block;
-      }
-      .sub-service-controls {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 4px 2px;
-      }
-      .sub-service-count {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: #64748b;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .sub-service-count i {
-        color: var(--color-primary);
-      }
-      .btn-toggle-all {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        border-radius: 6px;
-        padding: 6px 14px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--color-primary);
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-      }
-      .btn-toggle-all:hover {
-        background: rgba(0, 50, 160, 0.06);
-        border-color: var(--color-primary);
-      }
-      .sub-service-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        margin-bottom: 14px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-        overflow: hidden;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      }
-      .sub-service-card:hover {
-        border-color: rgba(0, 50, 160, 0.22);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-      }
-      .sub-service-card.is-open {
-        border-color: rgba(0, 50, 160, 0.25);
-        box-shadow: 0 4px 14px rgba(0, 50, 160, 0.05);
-      }
-      .sub-service-card:last-child {
-        margin-bottom: 0;
-      }
-      .sub-service-header {
-        padding: 18px 20px;
-        cursor: pointer;
-        user-select: none;
-        background: var(--color-white, #ffffff);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 14px;
-        transition: background 0.15s ease;
-        margin-bottom: 0;
-        border-bottom: none;
-      }
-      .sub-service-header:hover {
-        background: #f8faff;
-      }
-      .sub-service-header:focus-visible {
-        outline: 2px solid var(--color-primary);
-        outline-offset: -2px;
-      }
-      .sub-service-header-left {
-        flex: 1;
-        min-width: 0;
-      }
-      .sub-service-title-wrap {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px 12px;
-        margin-bottom: 6px;
-      }
-      .sub-service-header h3 {
-        font-size: 1.0625rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .sub-service-header h3 i {
-        color: var(--color-primary);
-      }
-      .sub-service-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 3px 10px;
-        background: rgba(0, 50, 160, 0.08);
-        color: var(--color-primary);
-        border-radius: 20px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-      }
-      .sub-service-desc {
-        color: #475569;
-        font-size: 0.8125rem;
-        line-height: 1.45;
-        margin: 0 0 6px 0;
-      }
-      .sub-service-teaser {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-        color: var(--color-primary);
-      }
-      .sub-service-chevron-btn {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: #f1f5f9;
-        color: #475569;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        transition: all 0.25s ease;
-        border: none;
-        font-size: 0.8125rem;
-      }
-      .sub-service-card:hover .sub-service-chevron-btn {
-        background: rgba(0, 50, 160, 0.1);
-        color: var(--color-primary);
-      }
-      .sub-service-card.is-open .sub-service-chevron-btn {
-        background: var(--color-primary);
-        color: white;
-        transform: rotate(180deg);
-      }
-      .sub-service-body {
-        display: none;
-        padding: 20px;
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
-        background: var(--color-bg-alt, #f8f9fa);
-      }
-      .sub-service-card.is-open .sub-service-body {
-        display: block;
-      }
-
       /* Requirements Checklist & Boxes */
       .req-summary-grid {
         display: grid;
@@ -329,52 +59,10 @@
         gap: 16px;
         margin-bottom: 18px;
       }
-      .req-box {
-        background: var(--color-bg-alt, #f8fafc);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-      }
-      .req-box h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 12px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .req-box h4 i {
-        color: var(--color-primary);
-      }
-      .req-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .req-list li {
-        font-size: 0.8125rem;
-        color: #334155;
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        line-height: 1.45;
-      }
-      .req-list li i {
-        color: var(--color-primary);
-        font-size: 0.875rem;
-        margin-top: 2px;
-        flex-shrink: 0;
-      }
-      .req-list li strong {
-        color: var(--color-text);
-      }
+
       .source-tag {
         font-size: 0.6875rem;
-        color: #64748b;
+        color: var(--color-text-light);
         background: rgba(0, 0, 0, 0.04);
         padding: 2px 6px;
         border-radius: 4px;
@@ -394,13 +82,16 @@
         padding: 10px 14px;
         border-radius: 6px;
       }
+
       .eop-note strong {
         color: var(--color-text);
       }
+
       .eop-note i {
         color: var(--color-primary);
         margin-right: 3px;
       }
+
       [data-theme='dark'] .eop-note {
         background: rgba(0, 50, 160, 0.12);
         color: #94a3b8;
@@ -413,6 +104,7 @@
         gap: 8px;
         margin-bottom: 16px;
       }
+
       .modality-btn {
         padding: 6px 14px;
         background: var(--color-white, #ffffff);
@@ -424,17 +116,21 @@
         cursor: pointer;
         transition: all 0.2s ease;
       }
+
       .modality-btn:hover {
         background: rgba(0, 50, 160, 0.06);
       }
+
       .modality-btn.active {
         background: var(--color-primary);
         color: white;
         border-color: var(--color-primary);
       }
+
       .modality-pane {
         display: none;
       }
+
       .modality-pane.active {
         display: block;
       }
@@ -444,45 +140,6 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
-      }
-      .metric-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 6px;
-        padding: 10px 12px;
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      .metric-icon {
-        width: 30px;
-        height: 30px;
-        background: rgba(0, 50, 160, 0.05);
-        color: var(--color-primary);
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.95rem;
-        flex-shrink: 0;
-        margin-top: 1px;
-      }
-      .metric-content {
-        flex: 1;
-      }
-      .metric-label {
-        font-size: 0.625rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: var(--color-text-light);
-        letter-spacing: 0.5px;
-        margin-bottom: 2px;
-      }
-      .metric-value {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        line-height: 1.4;
       }
 
       /* 4-Column Process Tables (Matching BPLO Spec) */
@@ -498,17 +155,7 @@
         margin-top: 10px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
       }
-      .process-table th {
-        background: var(--color-primary);
-        color: white;
-        padding: 12px 14px;
-        text-align: left;
-        font-weight: 600;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
-      }
+
       .process-table td {
         padding: 14px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -516,26 +163,7 @@
         line-height: 1.5;
         color: var(--color-text);
       }
-      .process-table tr:last-child td {
-        border-bottom: none;
-      }
-      .process-table tbody tr:hover {
-        background: rgba(0, 50, 160, 0.015);
-      }
-      .step-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        background: var(--color-primary);
-        color: white;
-        font-size: 0.75rem;
-        font-weight: 700;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0, 50, 160, 0.15);
-      }
-      
+
       /* Officer Stack & Rectangle Badges */
       .officer-stack {
         display: flex;
@@ -543,6 +171,7 @@
         gap: 5px;
         align-items: flex-start;
       }
+
       .personnel-tag {
         display: inline-block;
         background: rgba(0, 50, 160, 0.08);
@@ -554,7 +183,7 @@
         line-height: 1.35;
         border: 1px solid rgba(0, 50, 160, 0.12);
       }
-      
+
       /* BPLO Fee Tag Style */
       .fee-tag {
         color: #16a34a;
@@ -562,6 +191,7 @@
         font-size: 0.8125rem;
         display: inline-block;
       }
+
       [data-theme='dark'] .fee-tag {
         color: #4ade80;
       }
@@ -572,61 +202,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 12px;
       }
-      .staff-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .staff-card h4 {
-        font-size: 0.8125rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 3px 0;
-      }
-      .staff-card .staff-role {
-        font-size: 0.75rem;
-        color: var(--color-primary);
-        font-weight: 600;
-        margin: 0 0 2px 0;
-      }
-      .staff-card p {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-      }
-      .staff-expand-btn {
-        margin: 20px auto 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        background: white;
-        color: var(--color-primary);
-        border: 1px solid rgba(0, 50, 160, 0.2);
-        padding: 8px 20px;
-        border-radius: 20px;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .staff-expand-btn:hover {
-        background: rgba(0, 50, 160, 0.05);
-        border-color: var(--color-primary);
-      }
+
       [data-theme='dark'] .staff-expand-btn {
         background: #1e293b;
         color: #60a5fa;
         border-color: rgba(96, 165, 250, 0.3);
-      }
-      .staff-extra {
-        display: none;
-      }
-      .staff-extra.show {
-        display: contents;
       }
 
       /* 4 Contact & ARTA Cards (BPLO Spec 2x2 Grid) */
@@ -635,42 +215,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
       }
-      .contact-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .contact-card h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 10px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .contact-card h4 i {
-        color: var(--color-primary);
-      }
-      .contact-card p {
-        font-size: 0.8125rem;
-        color: #475569;
-        margin: 0 0 6px 0;
-        line-height: 1.45;
-      }
-      .contact-card p:last-child {
-        margin-bottom: 0;
-      }
-      .contact-card a {
-        color: var(--color-primary);
-        text-decoration: none;
-        font-weight: 600;
-      }
-      .contact-card a:hover {
-        text-decoration: underline;
-      }
+
       [data-theme='dark'] .contact-card p {
         color: #94a3b8;
       }
@@ -685,11 +230,12 @@
           grid-template-columns: repeat(2, 1fr);
         }
       }
+
       @media (max-width: 768px) {
         .quick-stats {
           grid-template-columns: repeat(2, 1fr);
         }
-        
+
         /* Mobile Card Transformation for Process Tables */
         .table-responsive {
           overflow-x: visible;
@@ -733,7 +279,7 @@
           padding: 0;
           border: none;
         }
-        
+
         /* 1. Step Header Pill */
         .process-table td:nth-child(1) {
           display: flex;
@@ -743,14 +289,14 @@
           border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
         .process-table td:nth-child(1)::after {
-          content: "STEP DETAILS";
+          content: 'STEP DETAILS';
           font-weight: 700;
           font-size: 0.6875rem;
           letter-spacing: 0.5px;
           text-transform: uppercase;
           color: var(--color-primary);
         }
-        
+
         /* 2. Client & Agency Action */
         .process-table td:nth-child(2) {
           font-size: 0.84375rem;
@@ -758,7 +304,7 @@
           line-height: 1.5;
         }
         .process-table td:nth-child(2)::before {
-          content: "📋 Action Details";
+          content: '📋 Action Details';
           display: block;
           font-size: 0.6875rem;
           font-weight: 700;
@@ -784,7 +330,7 @@
           padding-top: 2px;
         }
         .process-table td:nth-child(3)::before {
-          content: "💰 Fees:";
+          content: '💰 Fees:';
           font-weight: 700;
           font-size: 0.71875rem;
           color: var(--color-text-light, #64748b);
@@ -802,7 +348,7 @@
           font-size: 0.78125rem;
         }
         .process-table td:nth-child(4)::before {
-          content: "📍 Officer:";
+          content: '📍 Officer:';
           font-weight: 700;
           font-size: 0.71875rem;
           color: var(--color-text-light, #64748b);
@@ -810,19 +356,6 @@
           letter-spacing: 0.4px;
           width: 100%;
           margin-bottom: 2px;
-        }
-      }
-      @media (max-width: 575px) {
-        .quick-stats,
-        .staff-grid {
-          grid-template-columns: 1fr;
-        }
-        .service-tabs {
-          flex-direction: column;
-        }
-        .service-tab {
-          text-align: center;
-          justify-content: center;
         }
       }
     </style>
@@ -838,9 +371,9 @@
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <!-- Hotline Bar (Matching BPLO Hub) -->
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -874,7 +407,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand-block">
@@ -888,14 +420,11 @@
             />
           </a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -921,15 +450,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -960,8 +494,7 @@
       <!-- Breadcrumbs -->
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="../services/">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="../services/">Services</a><span>/</span>
           <a href="../services/environment">Environment</a><span>/</span>
           <span aria-current="page">OCENR Citizen's Charter</span>
         </nav>
@@ -974,7 +507,8 @@
             <span class="page-header-badge"><i class="bi bi-globe-americas"></i> OCENR</span>
             <h1>Office of the City Environment and Natural Resources</h1>
             <p class="page-header-desc">
-              Your consolidated guide in solid waste disposal and other environmental programs in Legazpi City.
+              Your consolidated guide in solid waste disposal and other environmental programs in
+              Legazpi City.
             </p>
           </div>
         </div>
@@ -997,7 +531,7 @@
             <div class="stat-card">
               <i class="bi bi-clock"></i>
               <h4>Hours</h4>
-              <p>8:00 AM – 5:00 PM (Mon–Fri)</p>
+              <p>8:00 AM - 5:00 PM (Mon-Fri)</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-telephone"></i>
@@ -1017,7 +551,8 @@
               <span>OCENR Frontline Services</span>
             </h2>
             <p>
-              Select a functional category to explore requirements, process workflows, and guidelines under the City Citizen's Charter.
+              Select a functional category to explore requirements, process workflows, and
+              guidelines under the City Citizen's Charter.
             </p>
           </div>
 
@@ -1043,7 +578,8 @@
               aria-controls="environmental-compliance"
               id="tab-environmental-compliance"
             >
-              <i class="bi bi-file-earmark-check" aria-hidden="true"></i> Environmental Compliance &amp; Seminars
+              <i class="bi bi-file-earmark-check" aria-hidden="true"></i> Environmental Compliance
+              &amp; Seminars
             </button>
             <button
               type="button"
@@ -1072,9 +608,16 @@
           <!-- ========================================================================= -->
           <!-- CATEGORY TAB 1: SOLID WASTE MANAGEMENT                                    -->
           <!-- ========================================================================= -->
-          <div class="service-content active" id="solid-waste" role="tabpanel" aria-labelledby="tab-solid-waste">
+          <div
+            class="service-content active"
+            id="solid-waste"
+            role="tabpanel"
+            aria-labelledby="tab-solid-waste"
+          >
             <div class="sub-service-controls">
-              <span class="sub-service-count"><i class="bi bi-collection"></i> 2 Services in this category</span>
+              <span class="sub-service-count"
+                ><i class="bi bi-collection"></i> 2 Services in this category</span
+              >
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
               </button>
@@ -1082,14 +625,24 @@
 
             <!-- Service 1.1: Securing of Permit to Dump -->
             <div class="sub-service-card" id="permit-to-dump">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-dump-permit">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-dump-permit"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
                     <h3><i class="bi bi-trash3"></i> Securing of Permit to Dump</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face</span>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Permits for individuals and commercial firms requesting direct disposal of segregated solid waste at the city's designated sanitary landfill or composting facilities.
+                    Permits for individuals and commercial firms requesting direct disposal of
+                    segregated solid waste at the city's designated sanitary landfill or composting
+                    facilities.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1108,12 +661,18 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Letter of Request:</strong> 1 original and 1 photocopy of Letter of Request.</span>
+                        <span
+                          ><strong>Letter of Request:</strong> 1 original and 1 photocopy of Letter
+                          of Request.</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Permit to Dump Form:</strong> Duly filled-out Permit to Dump Form.</span>
+                        <span
+                          ><strong>Permit to Dump Form:</strong> Duly filled-out Permit to Dump
+                          Form.</span
+                        >
                         <span class="source-tag">OCENR</span>
                       </li>
                     </ul>
@@ -1149,7 +708,11 @@
 
                 <!-- 1. EOP-Styled Policy Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Policy Overview:</strong> The OCENR implements timed and scheduled segregated collection daily from established Materials Recovery Facilities or Drop-Off-Centers (MRDOC) of each barangay. The "No Segregation, No Collection" policy is strictly enforced. Direct disposal by individuals and firms is accommodated on a case-to-case basis upon request.
+                  <strong><i class="bi bi-info-circle"></i> Policy Overview:</strong> The OCENR
+                  implements timed and scheduled segregated collection daily from established
+                  Materials Recovery Facilities or Drop-Off-Centers (MRDOC) of each barangay. The
+                  "No Segregation, No Collection" policy is strictly enforced. Direct disposal by
+                  individuals and firms is accommodated on a case-to-case basis upon request.
                 </div>
 
                 <!-- 4-Column Process Table -->
@@ -1167,11 +730,16 @@
                       <tr>
                         <td><span class="step-badge">1</span></td>
                         <td>
-                          <strong>Filing of Request</strong> (Location: OCENR – Front Desk)<br />
-                          • Submit letter of request to the Desk Officer one week before the scheduled date.<br />
-                          • <em>Desk Officer reviews the request and issues Permit to Dump Form (5 mins).</em>
+                          <strong>Filing of Request</strong> (Location: OCENR - Front Desk)<br />
+                          • Submit letter of request to the Desk Officer one week before the
+                          scheduled date.<br />
+                          •
+                          <em
+                            >Desk Officer reviews the request and issues Permit to Dump Form (5
+                            mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -1181,11 +749,15 @@
                       <tr>
                         <td><span class="step-badge">2</span></td>
                         <td>
-                          <strong>Accomplishment of Form</strong> (Location: OCENR – Front Desk)<br />
+                          <strong>Accomplishment of Form</strong> (Location: OCENR - Front Desk)<br />
                           • Fill out the Permit to Dump Form.<br />
-                          • <em>Desk Officer reviews the accomplished form and checks if all fields are properly filled out (10 mins).</em>
+                          •
+                          <em
+                            >Desk Officer reviews the accomplished form and checks if all fields are
+                            properly filled out (10 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -1195,11 +767,16 @@
                       <tr>
                         <td><span class="step-badge">3</span></td>
                         <td>
-                          <strong>Ocular Inspection</strong> (Location: Disposal Site / Client's Location)<br />
+                          <strong>Ocular Inspection</strong> (Location: Disposal Site / Client's
+                          Location)<br />
                           • Allow inspection of garbage for disposal.<br />
-                          • <em>Technical personnel conduct an ocular inspection of the garbage subject for disposal (1 hr, depends on location).</em>
+                          •
+                          <em
+                            >Technical personnel conduct an ocular inspection of the garbage subject
+                            for disposal (1 hr, depends on location).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Technical Personnel</span>
@@ -1209,11 +786,16 @@
                       <tr>
                         <td><span class="step-badge">4</span></td>
                         <td>
-                          <strong>Evaluation &amp; Recommendation</strong> (Location: OCENR – Technical Office)<br />
+                          <strong>Evaluation &amp; Recommendation</strong> (Location: OCENR -
+                          Technical Office)<br />
                           • Wait for inspection report and recommendation.<br />
-                          • <em>Administrative personnel prepare the inspection report and recommendation for approval (10 mins).</em>
+                          •
+                          <em
+                            >Administrative personnel prepare the inspection report and
+                            recommendation for approval (10 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -1223,11 +805,15 @@
                       <tr>
                         <td><span class="step-badge">5</span></td>
                         <td>
-                          <strong>Issuance of Permit</strong> (Location: OCENR – Front Desk)<br />
+                          <strong>Issuance of Permit</strong> (Location: OCENR - Front Desk)<br />
                           • Claim the Permit to Dump (or receive explanation if declined).<br />
-                          • <em>City ENRO issues the Permit to Dump if approved (5 mins) or explains reason for disapproval if declined (5 mins).</em>
+                          •
+                          <em
+                            >City ENRO issues the Permit to Dump if approved (5 mins) or explains
+                            reason for disapproval if declined (5 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">City ENRO</span>
@@ -1242,14 +828,27 @@
 
             <!-- Service 1.2: Securing of Visitors Entry Pass to SLF -->
             <div class="sub-service-card" id="slf-visitor-pass">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-slf-pass">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-slf-pass"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-shield-check"></i> Securing of Visitors Entry Pass to the City Sanitary Landfill Facility</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face</span>
+                    <h3>
+                      <i class="bi bi-shield-check"></i> Securing of Visitors Entry Pass to the City
+                      Sanitary Landfill Facility
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Entry clearance and orientation passes for visiting LGUs, academic institutions, students, and entrepreneurs visiting the Legazpi City Sanitary Landfill Facility (SLF) in Banquerohan.
+                    Entry clearance and orientation passes for visiting LGUs, academic institutions,
+                    students, and entrepreneurs visiting the Legazpi City Sanitary Landfill Facility
+                    (SLF) in Banquerohan.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1268,12 +867,18 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Letter of Request:</strong> 1 original and 1 photocopy of Letter of Request stating date and purpose.</span>
+                        <span
+                          ><strong>Letter of Request:</strong> 1 original and 1 photocopy of Letter
+                          of Request stating date and purpose.</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>SLF Visitors Entry Pass Form:</strong> Duly filled-out SLF Visitors Entry Pass Form.</span>
+                        <span
+                          ><strong>SLF Visitors Entry Pass Form:</strong> Duly filled-out SLF
+                          Visitors Entry Pass Form.</span
+                        >
                         <span class="source-tag">OCENR</span>
                       </li>
                     </ul>
@@ -1300,7 +905,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Face-to-Face (OCENR Front Desk &amp; Banquerohan SLF)</div>
+                          <div class="metric-value">
+                            Face-to-Face (OCENR Front Desk &amp; Banquerohan SLF)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1309,7 +916,12 @@
 
                 <!-- 1. EOP-Styled Facility Information Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Facility Information:</strong> Established under RA 9003 ("Ecological Solid Waste Management Act of 2000"), the Banquerohan SLF protects public health and the environment. Visitors are classified and guided into <strong>Yellow Zone (Safe Area)</strong> and <strong>Red Zone (Critical Area)</strong> with technical assistance and project orientation provided by OCENR staff.
+                  <strong><i class="bi bi-info-circle"></i> Facility Information:</strong>
+                  Established under RA 9003 ("Ecological Solid Waste Management Act of 2000"), the
+                  Banquerohan SLF protects public health and the environment. Visitors are
+                  classified and guided into <strong>Yellow Zone (Safe Area)</strong> and
+                  <strong>Red Zone (Critical Area)</strong> with technical assistance and project
+                  orientation provided by OCENR staff.
                 </div>
 
                 <!-- 4-Column Process Table -->
@@ -1327,12 +939,20 @@
                       <tr>
                         <td><span class="step-badge">1</span></td>
                         <td>
-                          <strong>Filing of Request</strong> (Location: OCENR – Front Desk)<br />
+                          <strong>Filing of Request</strong> (Location: OCENR - Front Desk)<br />
                           • Submit letter of request to the Desk Officer.<br />
-                          • <em>Information Desk Officer refers the client to the OCENR personnel project-in-charge (3 mins).</em><br />
-                          • <em>OCENR Personnel requests the client to fill out the SLF Visitors Entry Pass Form (5 mins).</em>
+                          •
+                          <em
+                            >Information Desk Officer refers the client to the OCENR personnel
+                            project-in-charge (3 mins).</em
+                          ><br />
+                          •
+                          <em
+                            >OCENR Personnel requests the client to fill out the SLF Visitors Entry
+                            Pass Form (5 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -1342,13 +962,22 @@
                       <tr>
                         <td><span class="step-badge">2</span></td>
                         <td>
-                          <strong>Accomplishment of Form &amp; Orientation</strong> (Location: OCENR – Front Desk / SLF Site)<br />
+                          <strong>Accomplishment of Form &amp; Orientation</strong> (Location: OCENR
+                          - Front Desk / SLF Site)<br />
                           • Fill out the SLF Visitors Entry Pass Form.<br />
-                          • <em>OCENR Personnel checks accomplished form and asks if project orientation is needed (5 mins).</em><br />
-                          • <em>If orientation is required, City ENRO assigns Technical Personnel to conduct it (1 hr).</em><br />
+                          •
+                          <em
+                            >OCENR Personnel checks accomplished form and asks if project
+                            orientation is needed (5 mins).</em
+                          ><br />
+                          •
+                          <em
+                            >If orientation is required, City ENRO assigns Technical Personnel to
+                            conduct it (1 hr).</em
+                          ><br />
                           • <em>OCENR issues the SLF Visitors Entry Pass (5 mins).</em>
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Special Operations Officer III</span>
@@ -1366,9 +995,17 @@
           <!-- ========================================================================= -->
           <!-- CATEGORY TAB 2: ENVIRONMENTAL COMPLIANCE & SEMINARS                       -->
           <!-- ========================================================================= -->
-          <div class="service-content" id="environmental-compliance" role="tabpanel" aria-labelledby="tab-environmental-compliance">
+          <div
+            class="service-content"
+            id="environmental-compliance"
+            role="tabpanel"
+            aria-labelledby="tab-environmental-compliance"
+          >
             <div class="sub-service-controls">
-              <span class="sub-service-count"><i class="bi bi-collection"></i> 2 Modality Suites (Online &amp; Face-to-Face)</span>
+              <span class="sub-service-count"
+                ><i class="bi bi-collection"></i> 2 Modality Suites (Online &amp;
+                Face-to-Face)</span
+              >
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
               </button>
@@ -1376,18 +1013,33 @@
 
             <!-- Service 2.1: Virtual / Online Seminar -->
             <div class="sub-service-card" id="eswm-virtual-seminar">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-virtual-seminar">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-virtual-seminar"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-laptop"></i> Ecological Solid Waste Management Virtual / Online Seminar</h3>
-                    <span class="sub-service-badge"><i class="bi bi-laptop"></i> Online (Zoom)</span>
+                    <h3>
+                      <i class="bi bi-laptop"></i> Ecological Solid Waste Management Virtual /
+                      Online Seminar
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-laptop"></i> Online (Zoom)</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Mandatory online ESWM seminar and Environmental Certificate (EC) issuance under City Ordinance No. 0010-2008 for new business permits and renewal compliance.
+                    Mandatory online ESWM seminar and Environmental Certificate (EC) issuance under
+                    City Ordinance No. 0010-2008 for new business permits and renewal compliance.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
-                    <span>Tap to view online workflows for New/Renewal and Non-Compliant businesses</span>
+                    <span
+                      >Tap to view online workflows for New/Renewal and Non-Compliant
+                      businesses</span
+                    >
                   </div>
                 </div>
                 <div class="sub-service-chevron-btn" aria-hidden="true">
@@ -1398,7 +1050,11 @@
               <div class="sub-service-body" id="sub-svc-virtual-seminar">
                 <!-- Sub-Modality Buttons for Virtual Seminar -->
                 <div class="modality-tabs" data-container="virtual-panes">
-                  <button type="button" class="modality-btn active" data-target="virtual-noncompliant">
+                  <button
+                    type="button"
+                    class="modality-btn active"
+                    data-target="virtual-noncompliant"
+                  >
                     <i class="bi bi-exclamation-triangle"></i> Non-Compliant / Expired Certificate
                   </button>
                   <button type="button" class="modality-btn" data-target="virtual-newrenewal">
@@ -1408,7 +1064,10 @@
 
                 <!-- 1. EOP-Styled Seminar Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Seminar Schedule:</strong> Conducted <strong>5x a week (Mon–Fri afternoon)</strong> during peak renewal months (Jan–Mar) and <strong>2x a week (Tue &amp; Thu afternoon)</strong> from April to December. Certificate is valid for <strong>three (3) years</strong>.
+                  <strong><i class="bi bi-info-circle"></i> Seminar Schedule:</strong> Conducted
+                  <strong>5x a week (Mon-Fri afternoon)</strong> during peak renewal months
+                  (Jan-Mar) and <strong>2x a week (Tue &amp; Thu afternoon)</strong> from April to
+                  December. Certificate is valid for <strong>three (3) years</strong>.
                 </div>
 
                 <!-- Pane 1: Virtual Non-Compliant / Expired -->
@@ -1419,12 +1078,18 @@
                       <ul class="req-list">
                         <li>
                           <i class="bi bi-check-circle"></i>
-                          <span><strong>EBDS Form:</strong> Accomplished Environmental Baseline Data Sheet via Google Forms.</span>
+                          <span
+                            ><strong>EBDS Form:</strong> Accomplished Environmental Baseline Data
+                            Sheet via Google Forms.</span
+                          >
                           <span class="source-tag">Link on OCENR FB Page</span>
                         </li>
                         <li>
                           <i class="bi bi-check-circle"></i>
-                          <span><strong>Webinar Attendance:</strong> Attendance to the Virtual Environmental Webinar.</span>
+                          <span
+                            ><strong>Webinar Attendance:</strong> Attendance to the Virtual
+                            Environmental Webinar.</span
+                          >
                           <span class="source-tag">Zoom link sent via email</span>
                         </li>
                       </ul>
@@ -1472,10 +1137,19 @@
                         <tr>
                           <td><span class="step-badge">1</span></td>
                           <td>
-                            <strong>Submission of EBDS Form</strong> (Location: Online Google Forms)<br />
+                            <strong>Submission of EBDS Form</strong> (Location: Online Google
+                            Forms)<br />
                             • Client accomplishes the Environmental Baseline Data Sheet (EBDS).<br />
-                            • <em>Review the form and send Zoom webinar details to applicant's email address (15 mins).</em><br />
-                            • <em>Note: Applicants tagged as non-compliant or with expired certificates will be cleared from the negative list after attending.</em>
+                            •
+                            <em
+                              >Review the form and send Zoom webinar details to applicant's email
+                              address (15 mins).</em
+                            ><br />
+                            •
+                            <em
+                              >Note: Applicants tagged as non-compliant or with expired certificates
+                              will be cleared from the negative list after attending.</em
+                            >
                           </td>
                           <td><span class="fee-tag">₱50.00</span></td>
                           <td>
@@ -1487,13 +1161,24 @@
                         <tr>
                           <td><span class="step-badge">2</span></td>
                           <td>
-                            <strong>Attendance to Virtual Webinar &amp; Certificate Issuance</strong> (Location: Online Zoom)<br />
+                            <strong
+                              >Attendance to Virtual Webinar &amp; Certificate Issuance</strong
+                            >
+                            (Location: Online Zoom)<br />
                             • Attend the virtual environmental webinar.<br />
                             • <em>OCENR conducts the Environmental Webinar (2.5 hrs).</em><br />
-                            • <em>Prepares Environmental Certificate (EC) after the webinar (10 mins per certificate).</em><br />
-                            • <em>Prepares &amp; prints EC for release, or sends e-copy via email upon request.</em>
+                            •
+                            <em
+                              >Prepares Environmental Certificate (EC) after the webinar (10 mins
+                              per certificate).</em
+                            ><br />
+                            •
+                            <em
+                              >Prepares &amp; prints EC for release, or sends e-copy via email upon
+                              request.</em
+                            >
                           </td>
-                          <td>—</td>
+                          <td>N/A</td>
                           <td>
                             <div class="officer-stack">
                               <span class="personnel-tag">Webinar Team</span>
@@ -1514,12 +1199,18 @@
                       <ul class="req-list">
                         <li>
                           <i class="bi bi-check-circle"></i>
-                          <span><strong>BPLO Application:</strong> New/renewal application with unexpired validity processed upon filing at BPLO.</span>
+                          <span
+                            ><strong>BPLO Application:</strong> New/renewal application with
+                            unexpired validity processed upon filing at BPLO.</span
+                          >
                           <span class="source-tag">BPLO / OCENR</span>
                         </li>
                         <li>
                           <i class="bi bi-check-circle"></i>
-                          <span><strong>Webinar Attendance:</strong> Attendance to the Virtual Environmental Webinar.</span>
+                          <span
+                            ><strong>Webinar Attendance:</strong> Attendance to the Virtual
+                            Environmental Webinar.</span
+                          >
                           <span class="source-tag">Zoom link sent via email</span>
                         </li>
                       </ul>
@@ -1546,7 +1237,9 @@
                           <div class="metric-icon"><i class="bi bi-laptop"></i></div>
                           <div class="metric-content">
                             <div class="metric-label">Mode of Transaction</div>
-                            <div class="metric-value">Online (BPLO Database &amp; Zoom Webinar)</div>
+                            <div class="metric-value">
+                              Online (BPLO Database &amp; Zoom Webinar)
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1567,11 +1260,20 @@
                         <tr>
                           <td><span class="step-badge">1</span></td>
                           <td>
-                            <strong>Attendance &amp; Certificate Processing</strong> (Location: Online Zoom)<br />
+                            <strong>Attendance &amp; Certificate Processing</strong> (Location:
+                            Online Zoom)<br />
                             • Attend the scheduled Environmental Webinar.<br />
-                            • <em>OCENR checks client info in BPLO database, reviews form, and sends Zoom details (10 mins).</em><br />
+                            •
+                            <em
+                              >OCENR checks client info in BPLO database, reviews form, and sends
+                              Zoom details (10 mins).</em
+                            ><br />
                             • <em>Conducts the Environmental Webinar via Zoom (2.5 hrs).</em><br />
-                            • <em>Prepares &amp; prints Environmental Certificate after webinar or emails e-copy (10 mins per certificate).</em>
+                            •
+                            <em
+                              >Prepares &amp; prints Environmental Certificate after webinar or
+                              emails e-copy (10 mins per certificate).</em
+                            >
                           </td>
                           <td><span class="fee-tag">₱50.00</span></td>
                           <td>
@@ -1590,18 +1292,34 @@
 
             <!-- Service 2.2: Face-to-Face Seminar -->
             <div class="sub-service-card" id="eswm-f2f-seminar">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-f2f-seminar">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-f2f-seminar"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-people"></i> Ecological Solid Waste Management Face-to-Face Seminar</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face</span>
+                    <h3>
+                      <i class="bi bi-people"></i> Ecological Solid Waste Management Face-to-Face
+                      Seminar
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    In-person physical attendance seminar on Ecological Solid Waste Management for commercial establishments conducted at the OCENR Office, 3rd Floor, Legazpi City Hall.
+                    In-person physical attendance seminar on Ecological Solid Waste Management for
+                    commercial establishments conducted at the OCENR Office, 3rd Floor, Legazpi City
+                    Hall.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
-                    <span>Tap to view in-person workflows for New/Renewal and Non-Compliant establishments</span>
+                    <span
+                      >Tap to view in-person workflows for New/Renewal and Non-Compliant
+                      establishments</span
+                    >
                   </div>
                 </div>
                 <div class="sub-service-chevron-btn" aria-hidden="true">
@@ -1622,7 +1340,10 @@
 
                 <!-- 1. EOP-Styled Seminar Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Seminar Schedule:</strong> Conducted <strong>5x a week (Mon–Fri afternoon)</strong> during peak renewal months (Jan–Mar) and <strong>2x a week (Tue &amp; Thu afternoon)</strong> from April to December at the <strong>OCENR Office, 3rd Floor</strong>.
+                  <strong><i class="bi bi-info-circle"></i> Seminar Schedule:</strong> Conducted
+                  <strong>5x a week (Mon-Fri afternoon)</strong> during peak renewal months
+                  (Jan-Mar) and <strong>2x a week (Tue &amp; Thu afternoon)</strong> from April to
+                  December at the <strong>OCENR Office, 3rd Floor</strong>.
                 </div>
 
                 <!-- Pane 1: F2F Non-Compliant / Expired -->
@@ -1633,12 +1354,18 @@
                       <ul class="req-list">
                         <li>
                           <i class="bi bi-check-circle"></i>
-                          <span><strong>Permit Application:</strong> Application with BPLO if certificate is unexpired.</span>
+                          <span
+                            ><strong>Permit Application:</strong> Application with BPLO if
+                            certificate is unexpired.</span
+                          >
                           <span class="source-tag">Link on FB Page</span>
                         </li>
                         <li>
                           <i class="bi bi-check-circle"></i>
-                          <span><strong>Seminar Attendance:</strong> Attendance to the in-person Environmental Seminar.</span>
+                          <span
+                            ><strong>Seminar Attendance:</strong> Attendance to the in-person
+                            Environmental Seminar.</span
+                          >
                           <span class="source-tag">Details via SMS / Email</span>
                         </li>
                       </ul>
@@ -1687,9 +1414,18 @@
                           <td><span class="step-badge">1</span></td>
                           <td>
                             <strong>Application Processing</strong> (Location: OCENR Office)<br />
-                            • Review form and send seminar details via email and mobile number (10 mins).<br />
-                            • <em>Applicants with expired certificates cleared from negative list after submitting EBDS.</em><br />
-                            • <em>Applicants tagged as non-compliant cleared from negative list after attending seminar (10 mins).</em>
+                            • Review form and send seminar details via email and mobile number (10
+                            mins).<br />
+                            •
+                            <em
+                              >Applicants with expired certificates cleared from negative list after
+                              submitting EBDS.</em
+                            ><br />
+                            •
+                            <em
+                              >Applicants tagged as non-compliant cleared from negative list after
+                              attending seminar (10 mins).</em
+                            >
                           </td>
                           <td><span class="fee-tag">₱50.00</span></td>
                           <td>
@@ -1702,11 +1438,12 @@
                         <tr>
                           <td><span class="step-badge">2</span></td>
                           <td>
-                            <strong>Attendance to Environmental Seminar</strong> (Location: OCENR Office, 3rd Floor)<br />
+                            <strong>Attendance to Environmental Seminar</strong> (Location: OCENR
+                            Office, 3rd Floor)<br />
                             • Attend the Environmental Seminar in person.<br />
                             • <em>OCENR conducts the Environmental Seminar (2 hrs).</em>
                           </td>
-                          <td>—</td>
+                          <td>N/A</td>
                           <td>
                             <div class="officer-stack">
                               <span class="personnel-tag">Seminar Team</span>
@@ -1716,11 +1453,16 @@
                         <tr>
                           <td><span class="step-badge">3</span></td>
                           <td>
-                            <strong>Issuance of Environmental Certificate</strong> (Location: OCENR Front Desk)<br />
+                            <strong>Issuance of Environmental Certificate</strong> (Location: OCENR
+                            Front Desk)<br />
                             • Claim physical Environmental Certificate or receive e-copy.<br />
-                            • <em>Prepares and prints the EC for release, or sends e-copy via email (3 mins per certificate).</em>
+                            •
+                            <em
+                              >Prepares and prints the EC for release, or sends e-copy via email (3
+                              mins per certificate).</em
+                            >
                           </td>
-                          <td>—</td>
+                          <td>N/A</td>
                           <td>
                             <div class="officer-stack">
                               <span class="personnel-tag">Administrative Staff</span>
@@ -1740,12 +1482,18 @@
                       <ul class="req-list">
                         <li>
                           <i class="bi bi-check-circle"></i>
-                          <span><strong>Business Permit Filing:</strong> Processed upon application of new/renewal permit to BPLO.</span>
+                          <span
+                            ><strong>Business Permit Filing:</strong> Processed upon application of
+                            new/renewal permit to BPLO.</span
+                          >
                           <span class="source-tag">BPLO / OCENR</span>
                         </li>
                         <li>
                           <i class="bi bi-check-circle"></i>
-                          <span><strong>Seminar Attendance:</strong> Attendance to in-person seminar at 3/F City Hall.</span>
+                          <span
+                            ><strong>Seminar Attendance:</strong> Attendance to in-person seminar at
+                            3/F City Hall.</span
+                          >
                           <span class="source-tag">OCENR (SMS/Email details)</span>
                         </li>
                       </ul>
@@ -1795,8 +1543,16 @@
                           <td>
                             <strong>Submission of Requirements</strong> (Location: OCENR Office)<br />
                             • Client accomplishes the EBDS via Google Forms.<br />
-                            • <em>OCENR reviews form and sends seminar details to applicant's email/mobile (10 mins).</em><br />
-                            • <em>Applicants with expired certificates cleared from negative list after EBDS submission.</em>
+                            •
+                            <em
+                              >OCENR reviews form and sends seminar details to applicant's
+                              email/mobile (10 mins).</em
+                            ><br />
+                            •
+                            <em
+                              >Applicants with expired certificates cleared from negative list after
+                              EBDS submission.</em
+                            >
                           </td>
                           <td><span class="fee-tag">₱50.00</span></td>
                           <td>
@@ -1808,11 +1564,12 @@
                         <tr>
                           <td><span class="step-badge">2</span></td>
                           <td>
-                            <strong>Attendance to Environmental Seminar</strong> (Location: OCENR Office, 3rd Floor)<br />
+                            <strong>Attendance to Environmental Seminar</strong> (Location: OCENR
+                            Office, 3rd Floor)<br />
                             • Attend the Environmental Seminar in person.<br />
                             • <em>OCENR conducts the Environmental Seminar (2 hrs).</em>
                           </td>
-                          <td>—</td>
+                          <td>N/A</td>
                           <td>
                             <div class="officer-stack">
                               <span class="personnel-tag">Seminar Staff</span>
@@ -1822,11 +1579,16 @@
                         <tr>
                           <td><span class="step-badge">3</span></td>
                           <td>
-                            <strong>Issuance of Environmental Certificate</strong> (Location: OCENR Front Desk)<br />
+                            <strong>Issuance of Environmental Certificate</strong> (Location: OCENR
+                            Front Desk)<br />
                             • Claim physical Environmental Certificate or receive e-copy.<br />
-                            • <em>Prepares and prints the EC for release, or sends e-copy via email (3 mins per certificate).</em>
+                            •
+                            <em
+                              >Prepares and prints the EC for release, or sends e-copy via email (3
+                              mins per certificate).</em
+                            >
                           </td>
-                          <td>—</td>
+                          <td>N/A</td>
                           <td>
                             <div class="officer-stack">
                               <span class="personnel-tag">Administrative Staff</span>
@@ -1844,9 +1606,16 @@
           <!-- ========================================================================= -->
           <!-- CATEGORY TAB 3: FORESTRY & NATURAL RESOURCES                              -->
           <!-- ========================================================================= -->
-          <div class="service-content" id="forestry-natural-resources" role="tabpanel" aria-labelledby="tab-forestry-natural-resources">
+          <div
+            class="service-content"
+            id="forestry-natural-resources"
+            role="tabpanel"
+            aria-labelledby="tab-forestry-natural-resources"
+          >
             <div class="sub-service-controls">
-              <span class="sub-service-count"><i class="bi bi-collection"></i> 3 Services in this category</span>
+              <span class="sub-service-count"
+                ><i class="bi bi-collection"></i> 3 Services in this category</span
+              >
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
               </button>
@@ -1854,14 +1623,27 @@
 
             <!-- Service 3.1: Certificate of No Objection to Cut Tree -->
             <div class="sub-service-card" id="tree-cutting-no-objection">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-tree-cutting">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-tree-cutting"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-tree"></i> Securing of a Certificate of No Objection to Cut Tree</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face</span>
+                    <h3>
+                      <i class="bi bi-tree"></i> Securing of a Certificate of No Objection to Cut
+                      Tree
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    LGU clearance certifying that Legazpi City has no objection to cutting down trees, required as a prerequisite before securing a Permit to Cut Tree from the DENR.
+                    LGU clearance certifying that Legazpi City has no objection to cutting down
+                    trees, required as a prerequisite before securing a Permit to Cut Tree from the
+                    DENR.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1876,36 +1658,58 @@
               <div class="sub-service-body" id="sub-svc-tree-cutting">
                 <div class="req-summary-grid">
                   <div class="req-box">
-                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements (2 Original Copies)</h4>
+                    <h4>
+                      <i class="bi bi-file-earmark-check"></i> Checklist of Requirements (2 Original
+                      Copies)
+                    </h4>
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Letter of Request:</strong> Addressed to City Mayor, Attn: City ENRO (with focal person contact number).</span>
+                        <span
+                          ><strong>Letter of Request:</strong> Addressed to City Mayor, Attn: City
+                          ENRO (with focal person contact number).</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Barangay Certificate:</strong> Brgy. Certificate of No Objection to Cut Trees.</span>
+                        <span
+                          ><strong>Barangay Certificate:</strong> Brgy. Certificate of No Objection
+                          to Cut Trees.</span
+                        >
                         <span class="source-tag">Barangay</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Land Title / Tax Declaration:</strong> Proof of ownership for private lots.</span>
+                        <span
+                          ><strong>Land Title / Tax Declaration:</strong> Proof of ownership for
+                          private lots.</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Tree Map &amp; Geotagged Photos:</strong> Diagram and individual photos with GPS coordinates and inventory list.</span>
+                        <span
+                          ><strong>Tree Map &amp; Geotagged Photos:</strong> Diagram and individual
+                          photos with GPS coordinates and inventory list.</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Site Plan &amp; Replacement Undertaking:</strong> Site development plan and signed Tree Replacement Undertaking.</span>
+                        <span
+                          ><strong>Site Plan &amp; Replacement Undertaking:</strong> Site
+                          development plan and signed Tree Replacement Undertaking.</span
+                        >
                         <span class="source-tag">Client / OCENR</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Clearances (if applicable):</strong> ECC/CNC from EMB V, Zoning Certificate, &amp; Locational Clearance (City Ord. No. 14-0011-2019).</span>
+                        <span
+                          ><strong>Clearances (if applicable):</strong> ECC/CNC from EMB V, Zoning
+                          Certificate, &amp; Locational Clearance (City Ord. No.
+                          14-0011-2019).</span
+                        >
                         <span class="source-tag">CPDO / EMB V</span>
                       </li>
                     </ul>
@@ -1932,7 +1736,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Face-to-Face (Mayor's Office, OCENR &amp; Site)</div>
+                          <div class="metric-value">
+                            Face-to-Face (Mayor's Office, OCENR &amp; Site)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1941,7 +1747,10 @@
 
                 <!-- 1. EOP-Styled Advisory Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Advisory:</strong> Clients should proceed first to DENR-PENRO Albay to seek guidance on DENR requirements and checklists. Processing time at OCENR may be extended depending on the complexity of ocular validation and simultaneous applications.
+                  <strong><i class="bi bi-info-circle"></i> Advisory:</strong> Clients should
+                  proceed first to DENR-PENRO Albay to seek guidance on DENR requirements and
+                  checklists. Processing time at OCENR may be extended depending on the complexity
+                  of ocular validation and simultaneous applications.
                 </div>
 
                 <!-- 4-Column Process Table -->
@@ -1959,11 +1768,17 @@
                       <tr>
                         <td><span class="step-badge">1</span></td>
                         <td>
-                          <strong>Filing of Request</strong> (Location: City Mayor's Office / OCENR Front Desk)<br />
-                          • Submit letter of request with complete requirements to City Mayor's Office and provide duplicate copy to OCENR Desk Officer.<br />
-                          • <em>Information Desk Officer receives and records the letter, then forwards it to City ENRO (5 mins).</em>
+                          <strong>Filing of Request</strong> (Location: City Mayor's Office / OCENR
+                          Front Desk)<br />
+                          • Submit letter of request with complete requirements to City Mayor's
+                          Office and provide duplicate copy to OCENR Desk Officer.<br />
+                          •
+                          <em
+                            >Information Desk Officer receives and records the letter, then forwards
+                            it to City ENRO (5 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -1973,11 +1788,15 @@
                       <tr>
                         <td><span class="step-badge">2</span></td>
                         <td>
-                          <strong>Initial Evaluation</strong> (Location: OCENR – ENRO Office)<br />
+                          <strong>Initial Evaluation</strong> (Location: OCENR - ENRO Office)<br />
                           • Wait for instruction on evaluation.<br />
-                          • <em>City ENRO conducts initial evaluation of request and gives instructions to assigned personnel (15 mins).</em>
+                          •
+                          <em
+                            >City ENRO conducts initial evaluation of request and gives instructions
+                            to assigned personnel (15 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">City ENRO</span>
@@ -1987,14 +1806,21 @@
                       <tr>
                         <td><span class="step-badge">3</span></td>
                         <td>
-                          <strong>Document Evaluation &amp; Scheduling</strong> (Location: OCENR – Technical Office)<br />
+                          <strong>Document Evaluation &amp; Scheduling</strong> (Location: OCENR -
+                          Technical Office)<br />
                           • Wait for inspection schedule.<br />
-                          • <em>Personnel in-charge conducts document evaluation and schedules actual inspection date (1 day).</em>
+                          •
+                          <em
+                            >Personnel in-charge conducts document evaluation and schedules actual
+                            inspection date (1 day).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
-                            <span class="personnel-tag">Project Development Officer III / Technical Personnel</span>
+                            <span class="personnel-tag"
+                              >Project Development Officer III / Technical Personnel</span
+                            >
                           </div>
                         </td>
                       </tr>
@@ -2003,24 +1829,35 @@
                         <td>
                           <strong>Ocular Inspection</strong> (Location: Project Site)<br />
                           • Allow inspection of trees to be cut.<br />
-                          • <em>Technical personnel conduct ocular inspection to validate request (5 days, depending on complexity).</em><br />
+                          •
+                          <em
+                            >Technical personnel conduct ocular inspection to validate request (5
+                            days, depending on complexity).</em
+                          ><br />
                           • <em>Prepares necessary certification for City ENRO's signature.</em>
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
-                            <span class="personnel-tag">Project Development Officer III / Technical Personnel</span>
+                            <span class="personnel-tag"
+                              >Project Development Officer III / Technical Personnel</span
+                            >
                           </div>
                         </td>
                       </tr>
                       <tr>
                         <td><span class="step-badge">5</span></td>
                         <td>
-                          <strong>Review &amp; Signing of Certificate</strong> (Location: OCENR – ENRO Office)<br />
+                          <strong>Review &amp; Signing of Certificate</strong> (Location: OCENR -
+                          ENRO Office)<br />
                           • Wait for review and approval.<br />
-                          • <em>City ENRO checks and reviews Certificate of No Objection and signs certification if valid (10 mins).</em>
+                          •
+                          <em
+                            >City ENRO checks and reviews Certificate of No Objection and signs
+                            certification if valid (10 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">City ENRO</span>
@@ -2030,11 +1867,16 @@
                       <tr>
                         <td><span class="step-badge">6</span></td>
                         <td>
-                          <strong>Release of Certification</strong> (Location: OCENR – Front Desk)<br />
+                          <strong>Release of Certification</strong> (Location: OCENR - Front
+                          Desk)<br />
                           • Claim the Certificate of No Objection to Cut Tree.<br />
-                          • <em>Desk Officer records and releases signed certification to client to support DENR permit application (10 mins).</em>
+                          •
+                          <em
+                            >Desk Officer records and releases signed certification to client to
+                            support DENR permit application (10 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -2049,14 +1891,27 @@
 
             <!-- Service 3.2: Certification for Chainsaw Registration -->
             <div class="sub-service-card" id="chainsaw-registration">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-chainsaw-reg">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-chainsaw-reg"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-tools"></i> Securing of Certification for the Application for Chainsaw Registration</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face</span>
+                    <h3>
+                      <i class="bi bi-tools"></i> Securing of Certification for the Application for
+                      Chainsaw Registration
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    LGU certification required for owners and operators of chainsaws used in cutting trees prior to registering their units with the Department of Environment and Natural Resources (DENR).
+                    LGU certification required for owners and operators of chainsaws used in cutting
+                    trees prior to registering their units with the Department of Environment and
+                    Natural Resources (DENR).
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -2071,31 +1926,49 @@
               <div class="sub-service-body" id="sub-svc-chainsaw-reg">
                 <div class="req-summary-grid">
                   <div class="req-box">
-                    <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements (2 Original Copies)</h4>
+                    <h4>
+                      <i class="bi bi-file-earmark-check"></i> Checklist of Requirements (2 Original
+                      Copies)
+                    </h4>
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Letter of Request:</strong> Addressed to City Mayor, Attn: City ENRO (with mobile number).</span>
+                        <span
+                          ><strong>Letter of Request:</strong> Addressed to City Mayor, Attn: City
+                          ENRO (with mobile number).</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>DENR Registration:</strong> Certificate of Registration from DENR (for renewal).</span>
+                        <span
+                          ><strong>DENR Registration:</strong> Certificate of Registration from DENR
+                          (for renewal).</span
+                        >
                         <span class="source-tag">DENR</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Proof of Ownership:</strong> Official receipt/sales invoice or notarized Affidavit of Ownership.</span>
+                        <span
+                          ><strong>Proof of Ownership:</strong> Official receipt/sales invoice or
+                          notarized Affidavit of Ownership.</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Barangay Certification:</strong> Barangay Certification of chainsaw ownership.</span>
+                        <span
+                          ><strong>Barangay Certification:</strong> Barangay Certification of
+                          chainsaw ownership.</span
+                        >
                         <span class="source-tag">Barangay</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Photos &amp; Serial Stencil:</strong> Photos of whole unit &amp; serial number, plus physical stencil of serial number.</span>
+                        <span
+                          ><strong>Photos &amp; Serial Stencil:</strong> Photos of whole unit &amp;
+                          serial number, plus physical stencil of serial number.</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                     </ul>
@@ -2122,7 +1995,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Face-to-Face (Mayor's Office &amp; OCENR Front Desk)</div>
+                          <div class="metric-value">
+                            Face-to-Face (Mayor's Office &amp; OCENR Front Desk)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2144,12 +2019,22 @@
                       <tr>
                         <td><span class="step-badge">1</span></td>
                         <td>
-                          <strong>Filing of Request</strong> (Location: City Mayor's Office / OCENR Front Desk)<br />
-                          • Submit letter of request with complete requirements to City Mayor's Office and provide duplicate copy to OCENR Desk Officer.<br />
-                          • <em>Desk Officer receives and records letter, then forwards it to City ENRO (15 mins).</em><br />
-                          • <em>City ENRO conducts initial evaluation &amp; instructs concerned personnel.</em>
+                          <strong>Filing of Request</strong> (Location: City Mayor's Office / OCENR
+                          Front Desk)<br />
+                          • Submit letter of request with complete requirements to City Mayor's
+                          Office and provide duplicate copy to OCENR Desk Officer.<br />
+                          •
+                          <em
+                            >Desk Officer receives and records letter, then forwards it to City ENRO
+                            (15 mins).</em
+                          ><br />
+                          •
+                          <em
+                            >City ENRO conducts initial evaluation &amp; instructs concerned
+                            personnel.</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -2159,27 +2044,38 @@
                       <tr>
                         <td><span class="step-badge">2</span></td>
                         <td>
-                          <strong>Initial Technical Evaluation</strong> (Location: OCENR – ENRO Office)<br />
+                          <strong>Initial Technical Evaluation</strong> (Location: OCENR - ENRO
+                          Office)<br />
                           • Wait while documents and chainsaw details are evaluated.<br />
                           • <em>Desk Officer refers documents to personnel-in-charge.</em><br />
-                          • <em>Technical personnel evaluate requirements and prepare certification (30 mins).</em>
+                          •
+                          <em
+                            >Technical personnel evaluate requirements and prepare certification (30
+                            mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
-                            <span class="personnel-tag">Project Development Officer III / Technical Personnel</span>
+                            <span class="personnel-tag"
+                              >Project Development Officer III / Technical Personnel</span
+                            >
                           </div>
                         </td>
                       </tr>
                       <tr>
                         <td><span class="step-badge">3</span></td>
                         <td>
-                          <strong>Review &amp; Approval</strong> (Location: OCENR – ENRO Office)<br />
+                          <strong>Review &amp; Approval</strong> (Location: OCENR - ENRO Office)<br />
                           • Wait for final approval.<br />
-                          • <em>City ENRO checks, reviews, and signs certification if found valid (15 mins).</em>
+                          •
+                          <em
+                            >City ENRO checks, reviews, and signs certification if found valid (15
+                            mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">City ENRO</span>
@@ -2189,11 +2085,16 @@
                       <tr>
                         <td><span class="step-badge">4</span></td>
                         <td>
-                          <strong>Release of Certification</strong> (Location: OCENR – Front Desk)<br />
+                          <strong>Release of Certification</strong> (Location: OCENR - Front
+                          Desk)<br />
                           • Claim Certification for Chainsaw Registration.<br />
-                          • <em>Desk Officer records and releases signed certification to client to support DENR registration (10 mins).</em>
+                          •
+                          <em
+                            >Desk Officer records and releases signed certification to client to
+                            support DENR registration (10 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -2208,18 +2109,30 @@
 
             <!-- Service 3.3: Request for Tree Seedling -->
             <div class="sub-service-card" id="tree-seedling-request">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-tree-seedling">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-tree-seedling"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
                     <h3><i class="bi bi-flower2"></i> Request for Tree Seedlings</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face</span>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Free seedlings distribution for schools, civic organizations, businesses, and community groups conducting tree growing activities in Legazpi City.
+                    Free seedlings distribution for schools, civic organizations, businesses, and
+                    community groups conducting tree growing activities in Legazpi City.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
-                    <span>Tap to view seedling request letter, promissory undertaking, &amp; release steps</span>
+                    <span
+                      >Tap to view seedling request letter, promissory undertaking, &amp; release
+                      steps</span
+                    >
                   </div>
                 </div>
                 <div class="sub-service-chevron-btn" aria-hidden="true">
@@ -2234,12 +2147,18 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Letter of Request:</strong> Addressed to City Mayor, Attn: City ENRO (including focal person contact number and email).</span>
+                        <span
+                          ><strong>Letter of Request:</strong> Addressed to City Mayor, Attn: City
+                          ENRO (including focal person contact number and email).</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Promissory of Undertaking:</strong> Duly signed Promissory of Undertaking reflecting compliance conditions.</span>
+                        <span
+                          ><strong>Promissory of Undertaking:</strong> Duly signed Promissory of
+                          Undertaking reflecting compliance conditions.</span
+                        >
                         <span class="source-tag">OCENR</span>
                       </li>
                     </ul>
@@ -2266,7 +2185,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Face-to-Face (OCENR Front Desk &amp; Nursery)</div>
+                          <div class="metric-value">
+                            Face-to-Face (OCENR Front Desk &amp; Nursery)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2288,13 +2209,27 @@
                       <tr>
                         <td><span class="step-badge">1</span></td>
                         <td>
-                          <strong>Filing of Request</strong> (Location: City Mayor's Office / OCENR Front Desk)<br />
-                          • Submit letter of request (original to Mayor's Office, duplicate to OCENR Desk Officer).<br />
-                          • <em>Desk Officer receives, records, and forwards request to City ENRO (5 mins).</em><br />
-                          • <em>City ENRO evaluates request and checks seedling availability (5 mins).</em><br />
-                          • <em>Technical staff prepares a Promissory of Undertaking for client to sign (5 mins).</em>
+                          <strong>Filing of Request</strong> (Location: City Mayor's Office / OCENR
+                          Front Desk)<br />
+                          • Submit letter of request (original to Mayor's Office, duplicate to OCENR
+                          Desk Officer).<br />
+                          •
+                          <em
+                            >Desk Officer receives, records, and forwards request to City ENRO (5
+                            mins).</em
+                          ><br />
+                          •
+                          <em
+                            >City ENRO evaluates request and checks seedling availability (5
+                            mins).</em
+                          ><br />
+                          •
+                          <em
+                            >Technical staff prepares a Promissory of Undertaking for client to sign
+                            (5 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -2306,12 +2241,22 @@
                       <tr>
                         <td><span class="step-badge">2</span></td>
                         <td>
-                          <strong>Signing of Promissory of Undertaking</strong> (Location: OCENR Front Desk)<br />
-                          • Submit signed Promissory of Undertaking to the OCENR Desk Information Officer.<br />
-                          • <em>OCENR Desk Information Officer releases Seedling Withdrawal Slip signed by City ENRO (½ Day, depending on client availability).</em><br />
-                          • <em>Note: If ineligible or seedlings are unavailable, proper documentation of findings is provided.</em>
+                          <strong>Signing of Promissory of Undertaking</strong> (Location: OCENR
+                          Front Desk)<br />
+                          • Submit signed Promissory of Undertaking to the OCENR Desk Information
+                          Officer.<br />
+                          •
+                          <em
+                            >OCENR Desk Information Officer releases Seedling Withdrawal Slip signed
+                            by City ENRO (½ Day, depending on client availability).</em
+                          ><br />
+                          •
+                          <em
+                            >Note: If ineligible or seedlings are unavailable, proper documentation
+                            of findings is provided.</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -2323,9 +2268,13 @@
                         <td>
                           <strong>Claiming of Seedlings</strong> (Location: OCENR Nursery)<br />
                           • Present Seedling Withdrawal Slip and claim seedlings.<br />
-                          • <em>Nursery personnel prepare and release seedlings to client (15 mins).</em>
+                          •
+                          <em
+                            >Nursery personnel prepare and release seedlings to client (15
+                            mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Nursery Personnel</span>
@@ -2342,9 +2291,16 @@
           <!-- ========================================================================= -->
           <!-- CATEGORY TAB 4: PUBLIC ASSISTANCE & SEPTAGE                               -->
           <!-- ========================================================================= -->
-          <div class="service-content" id="public-assistance-septage" role="tabpanel" aria-labelledby="tab-public-assistance-septage">
+          <div
+            class="service-content"
+            id="public-assistance-septage"
+            role="tabpanel"
+            aria-labelledby="tab-public-assistance-septage"
+          >
             <div class="sub-service-controls">
-              <span class="sub-service-count"><i class="bi bi-collection"></i> 2 Services in this category</span>
+              <span class="sub-service-count"
+                ><i class="bi bi-collection"></i> 2 Services in this category</span
+              >
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
               </button>
@@ -2352,18 +2308,34 @@
 
             <!-- Service 4.1: Request for IEC Campaign -->
             <div class="sub-service-card" id="iec-campaign-request">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-iec-campaign">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-iec-campaign"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-megaphone"></i> Request for the Conduct of Information, Education and Communication (IEC) Campaign</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face</span>
+                    <h3>
+                      <i class="bi bi-megaphone"></i> Request for the Conduct of Information,
+                      Education and Communication (IEC) Campaign
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Educational lectures, technical orientations, and awareness campaigns on ecological solid waste management and environmental protection for schools, barangays, and private entities.
+                    Educational lectures, technical orientations, and awareness campaigns on
+                    ecological solid waste management and environmental protection for schools,
+                    barangays, and private entities.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
-                    <span>Tap to view speaker coordination, letter request requirements, &amp; timeline</span>
+                    <span
+                      >Tap to view speaker coordination, letter request requirements, &amp;
+                      timeline</span
+                    >
                   </div>
                 </div>
                 <div class="sub-service-chevron-btn" aria-hidden="true">
@@ -2378,7 +2350,11 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Letter of Request:</strong> Addressed to City Mayor, Attn: City ENRO (with focal person contact number, target audience, and preferred date).</span>
+                        <span
+                          ><strong>Letter of Request:</strong> Addressed to City Mayor, Attn: City
+                          ENRO (with focal person contact number, target audience, and preferred
+                          date).</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                     </ul>
@@ -2405,7 +2381,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Face-to-Face (Mayor's Office &amp; OCENR Office)</div>
+                          <div class="metric-value">
+                            Face-to-Face (Mayor's Office &amp; OCENR Office)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2427,11 +2405,17 @@
                       <tr>
                         <td><span class="step-badge">1</span></td>
                         <td>
-                          <strong>Filing of Request</strong> (Location: City Mayor's Office / OCENR Front Desk)<br />
-                          • Submit letter of request received at City Mayor's Office (Original Copy) and provide duplicate copy at OCENR to Desk Officer.<br />
-                          • <em>Desk Officer receives, records, and forwards letter to City ENRO (5 mins).</em>
+                          <strong>Filing of Request</strong> (Location: City Mayor's Office / OCENR
+                          Front Desk)<br />
+                          • Submit letter of request received at City Mayor's Office (Original Copy)
+                          and provide duplicate copy at OCENR to Desk Officer.<br />
+                          •
+                          <em
+                            >Desk Officer receives, records, and forwards letter to City ENRO (5
+                            mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -2441,11 +2425,15 @@
                       <tr>
                         <td><span class="step-badge">2</span></td>
                         <td>
-                          <strong>Evaluation of Request</strong> (Location: OCENR – ENRO Office)<br />
+                          <strong>Evaluation of Request</strong> (Location: OCENR - ENRO Office)<br />
                           • Wait for feedback.<br />
-                          • <em>City ENRO checks availability; if unavailable, another senior staff is designated for immediate action (5 mins).</em>
+                          •
+                          <em
+                            >City ENRO checks availability; if unavailable, another senior staff is
+                            designated for immediate action (5 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">City ENRO</span>
@@ -2455,11 +2443,16 @@
                       <tr>
                         <td><span class="step-badge">3</span></td>
                         <td>
-                          <strong>Coordination &amp; Scheduling</strong> (Location: OCENR – ENRO Office / Client Coordination)<br />
+                          <strong>Coordination &amp; Scheduling</strong> (Location: OCENR - ENRO
+                          Office / Client Coordination)<br />
                           • Client waits for confirmation.<br />
-                          • <em>Assigned personnel coordinates with requesting party to confirm schedule and resource speaker (10 mins).</em>
+                          •
+                          <em
+                            >Assigned personnel coordinates with requesting party to confirm
+                            schedule and resource speaker (10 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Resource Speaker</span>
@@ -2475,18 +2468,34 @@
 
             <!-- Service 4.2: Request for Septage Desludging -->
             <div class="sub-service-card" id="septage-management">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-septage">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-septage"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-droplet-half"></i> Request for Services Desludging / Syphoning of Septic Tanks</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face</span>
+                    <h3>
+                      <i class="bi bi-droplet-half"></i> Request for Services Desludging / Syphoning
+                      of Septic Tanks
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Septic tank inspection, pumping, and desludging services under Ordinance No. 0025-2015 ("Septage Management Code") for residential, commercial, public, and private structures.
+                    Septic tank inspection, pumping, and desludging services under Ordinance No.
+                    0025-2015 ("Septage Management Code") for residential, commercial, public, and
+                    private structures.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
-                    <span>Tap to view survey interview, CTO payment, &amp; vacuum truck dispatch steps</span>
+                    <span
+                      >Tap to view survey interview, CTO payment, &amp; vacuum truck dispatch
+                      steps</span
+                    >
                   </div>
                 </div>
                 <div class="sub-service-chevron-btn" aria-hidden="true">
@@ -2501,12 +2510,18 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Letter of Request:</strong> Written letter requesting septic tank desludging.</span>
+                        <span
+                          ><strong>Letter of Request:</strong> Written letter requesting septic tank
+                          desludging.</span
+                        >
                         <span class="source-tag">Client</span>
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Survey Form:</strong> Completely accomplished Septage Survey Form.</span>
+                        <span
+                          ><strong>Survey Form:</strong> Completely accomplished Septage Survey
+                          Form.</span
+                        >
                         <span class="source-tag">OCENR</span>
                       </li>
                     </ul>
@@ -2533,7 +2548,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Face-to-Face (OCENR, CTO &amp; Client Site)</div>
+                          <div class="metric-value">
+                            Face-to-Face (OCENR, CTO &amp; Client Site)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2542,7 +2559,10 @@
 
                 <!-- 1. EOP-Styled Legal Mandate Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Legal Mandate:</strong> Enacted under City Ordinance No. 0025-2015 ("Septage Management Code"), this program protects public health and water bodies across the territorial jurisdiction of Legazpi City. Actual vacuum truck operation depends on vehicle availability.
+                  <strong><i class="bi bi-info-circle"></i> Legal Mandate:</strong> Enacted under
+                  City Ordinance No. 0025-2015 ("Septage Management Code"), this program protects
+                  public health and water bodies across the territorial jurisdiction of Legazpi
+                  City. Actual vacuum truck operation depends on vehicle availability.
                 </div>
 
                 <!-- 4-Column Process Table -->
@@ -2562,9 +2582,13 @@
                         <td>
                           <strong>Initial Inquiry</strong> (Location: OCENR Front Desk)<br />
                           • Walk-in client proceeds to OCENR Information Desk.<br />
-                          • <em>Desk Officer refers client to technical personnel in charge of Septage Program (2 mins).</em>
+                          •
+                          <em
+                            >Desk Officer refers client to technical personnel in charge of Septage
+                            Program (2 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Administrative Personnel</span>
@@ -2576,9 +2600,13 @@
                         <td>
                           <strong>Survey Interview</strong> (Location: OCENR Office)<br />
                           • Answer survey questions.<br />
-                          • <em>Personnel interviews client and fills out the Survey Form (10 mins).</em>
+                          •
+                          <em
+                            >Personnel interviews client and fills out the Survey Form (10
+                            mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Surveyor / Coordinator</span>
@@ -2590,9 +2618,13 @@
                         <td>
                           <strong>Scheduling of Inspection</strong> (Location: OCENR Office)<br />
                           • Confirm site and structural details.<br />
-                          • <em>Coordinator schedules inspection of septic tank provided survey form is completely filled-out (5 mins).</em>
+                          •
+                          <em
+                            >Coordinator schedules inspection of septic tank provided survey form is
+                            completely filled-out (5 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Coordinator</span>
@@ -2604,9 +2636,13 @@
                         <td>
                           <strong>Septic Tank Inspection</strong> (Location: Client Site)<br />
                           • Wait for inspection team.<br />
-                          • <em>Personnel inspects septic tank and evaluates accessibility (30 mins average).</em>
+                          •
+                          <em
+                            >Personnel inspects septic tank and evaluates accessibility (30 mins
+                            average).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Surveyor / Coordinator</span>
@@ -2616,14 +2652,21 @@
                       <tr>
                         <td><span class="step-badge">5</span></td>
                         <td>
-                          <strong>Payment of Septage Fee</strong> (Location: City Treasurer's Office / City Engineer's Office)<br />
+                          <strong>Payment of Septage Fee</strong> (Location: City Treasurer's Office
+                          / City Engineer's Office)<br />
                           • Pay septage desludging fee.<br />
                           • <em>Coordinator issues Payment Order Form (POF) (5 mins).</em><br />
-                          • <em>Client pays septage fee at CTO/CEO and presents Official Receipt to OCENR (15 mins).</em>
+                          •
+                          <em
+                            >Client pays septage fee at CTO/CEO and presents Official Receipt to
+                            OCENR (15 mins).</em
+                          >
                         </td>
                         <td>
                           <span class="fee-tag">Computed in POF</span><br />
-                          <small style="color:#64748b">City Ord. No. 0025-2015</small>
+                          <small style="color: var(--color-text-light)"
+                            >City Ord. No. 0025-2015</small
+                          >
                         </td>
                         <td>
                           <div class="officer-stack">
@@ -2637,9 +2680,13 @@
                         <td>
                           <strong>Scheduling of Desludging</strong> (Location: OCENR Office)<br />
                           • Provide official receipt.<br />
-                          • <em>Coordinator schedules client for desludging service based on vacuum truck availability (5 mins).</em>
+                          •
+                          <em
+                            >Coordinator schedules client for desludging service based on vacuum
+                            truck availability (5 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Coordinator</span>
@@ -2652,12 +2699,18 @@
                         <td>
                           <strong>Desludging Operation</strong> (Location: Client Site)<br />
                           • Wait for desludging team on scheduled date.<br />
-                          • <em>Desludging team conducts desludging operation (1 hour average per trip).</em>
+                          •
+                          <em
+                            >Desludging team conducts desludging operation (1 hour average per
+                            trip).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
-                            <span class="personnel-tag">Desludging Team / Vacuum Truck Operator</span>
+                            <span class="personnel-tag"
+                              >Desludging Team / Vacuum Truck Operator</span
+                            >
                           </div>
                         </td>
                       </tr>
@@ -2666,9 +2719,13 @@
                         <td>
                           <strong>Completion &amp; Documentation</strong> (Location: Client Site)<br />
                           • Sign manifest form.<br />
-                          • <em>Coordinator prepares Manifest Form for client's signature to confirm completion (5 mins).</em>
+                          •
+                          <em
+                            >Coordinator prepares Manifest Form for client's signature to confirm
+                            completion (5 mins).</em
+                          >
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <div class="officer-stack">
                             <span class="personnel-tag">Coordinator</span>
@@ -2693,7 +2750,8 @@
               <span>OCENR Key Personnel &amp; Unit Officers</span>
             </h2>
             <p>
-              Frontline action officers and unit supervisors dedicated to serving environmental programs in Legazpi City.
+              Frontline action officers and unit supervisors dedicated to serving environmental
+              programs in Legazpi City.
             </p>
           </div>
 
@@ -2735,7 +2793,12 @@
             </div>
           </div>
 
-          <button type="button" class="staff-expand-btn" id="btn-toggle-staff" aria-expanded="false">
+          <button
+            type="button"
+            class="staff-expand-btn"
+            id="btn-toggle-staff"
+            aria-expanded="false"
+          >
             <i class="bi bi-chevron-down"></i>
             <span>View All Personnel (6)</span>
           </button>
@@ -2755,22 +2818,47 @@
 
             <div class="contact-card">
               <h4><i class="bi bi-telephone-fill"></i> Direct Contact Lines</h4>
-              <p><strong>OCENR Action Hotline:</strong> <a href="tel:09465990597">0946-599-0597</a></p>
-              <p><strong>Official Emails:</strong> <a href="mailto:eswm_ocenrlegazpi@yahoo.com">eswm_ocenrlegazpi@yahoo.com</a></p>
+              <p>
+                <strong>OCENR Action Hotline:</strong> <a href="tel:09465990597">0946-599-0597</a>
+              </p>
+              <p>
+                <strong>Official Emails:</strong>
+                <a href="mailto:eswm_ocenrlegazpi@yahoo.com">eswm_ocenrlegazpi@yahoo.com</a>
+              </p>
               <p><strong>Head of Office:</strong> Engr. Linno Benju Q. Calleja, OIC - City ENRO</p>
             </div>
 
             <div class="contact-card">
               <h4><i class="bi bi-chat-dots"></i> Feedback Mechanism</h4>
-              <p>Accomplish the Feedback Form at the OCENR Frontline Desk, then place it inside the suggestion box or personally hand it over to the Officer of the Day (OD).</p>
-              <p>The Administrative Division verifies queries within one (1) working day and informs clients via email, text, or call to continually improve public services.</p>
+              <p>
+                Accomplish the Feedback Form at the OCENR Frontline Desk, then place it inside the
+                suggestion box or personally hand it over to the Officer of the Day (OD).
+              </p>
+              <p>
+                The Administrative Division verifies queries within one (1) working day and informs
+                clients via email, text, or call to continually improve public services.
+              </p>
             </div>
 
             <div class="contact-card">
-              <h4><i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) &amp; CCB</h4>
-              <p><strong>ARTA Complaints Email:</strong> <a href="mailto:complaints@arta.gov.ph">complaints@arta.gov.ph</a> | 1-ARTA (2782)</p>
-              <p><strong>Presidential Complaint Center (PCC):</strong> Hotline 8888 | <a href="mailto:pcc@malacanang.gov.ph">pcc@malacanang.gov.ph</a></p>
-              <p><strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS) | <a href="mailto:email@contactcenterngbayan.gov.ph">email@contactcenterngbayan.gov.ph</a></p>
+              <h4>
+                <i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) &amp;
+                CCB
+              </h4>
+              <p>
+                <strong>ARTA Complaints Email:</strong>
+                <a href="mailto:complaints@arta.gov.ph">complaints@arta.gov.ph</a> | 1-ARTA (2782)
+              </p>
+              <p>
+                <strong>Presidential Complaint Center (PCC):</strong> Hotline 8888 |
+                <a href="mailto:pcc@malacanang.gov.ph">pcc@malacanang.gov.ph</a>
+              </p>
+              <p>
+                <strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS) |
+                <a href="mailto:email@contactcenterngbayan.gov.ph"
+                  >email@contactcenterngbayan.gov.ph</a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -2779,13 +2867,14 @@
       <!-- 5. Data Source Section (White Background - Exact BPLO Hub Spec) -->
       <section class="bpl-section">
         <div class="container">
-          <p class="data-source" style="text-align: center; margin: 0;">
+          <p class="data-source" style="text-align: center; margin: 0">
             <i class="bi bi-info-circle"></i> Source:
             <a
               href="https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-ENVIRONMENT-AND-NARURAL-RESOURCES-CITIZEN_S-CHARTER-2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              >Legazpi Office of the City Environmental and Natural Resources (OCENR) Citizen's Charter 2026</a
+              >Legazpi Office of the City Environmental and Natural Resources (OCENR) Citizen's
+              Charter 2026</a
             >
           </p>
         </div>
@@ -2799,11 +2888,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi City with transparent access to municipal services, environmental programs, and local governance.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -2835,10 +2925,9 @@
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
-              <li><a href="../services/business">Business Services</a></li>
-              <li><a href="../services/environment">Environment Services</a></li>
-              <li><a href="../services/agriculture">Agriculture Services</a></li>
-              <li><a href="../government/">Government Directory</a></li>
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -2850,38 +2939,100 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a>
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Open Data Philippines</a
+                >
               </li>
               <li>
-                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
               </li>
               <li>
-                <a href="https://albay.gov.ph" target="_blank" rel="noopener noreferrer">Province of Albay</a>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
               </li>
               <li>
-                <a href="https://denr.gov.ph" target="_blank" rel="noopener noreferrer">DENR Official Portal</a>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
               </li>
               <li>
-                <a href="https://legazpi.gov.ph" target="_blank" rel="noopener noreferrer">Legazpi City Official Portal</a>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
+                >
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div class="footer-cost" role="status">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
+            >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
@@ -2889,7 +3040,7 @@
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer"
-              >All public information sourced from official government portals &amp; the Legazpi City Citizen's Charter.</span
+              >All public information sourced from official government portals.</span
             >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>
@@ -2906,7 +3057,7 @@
         const contents = document.querySelectorAll('.service-content');
 
         function switchCategoryTab(targetId) {
-          tabs.forEach(tab => {
+          tabs.forEach((tab) => {
             if (tab.getAttribute('data-tab') === targetId) {
               tab.classList.add('active');
               tab.setAttribute('aria-selected', 'true');
@@ -2916,7 +3067,7 @@
             }
           });
 
-          contents.forEach(content => {
+          contents.forEach((content) => {
             if (content.id === targetId) {
               content.classList.add('active');
             } else {
@@ -2926,7 +3077,7 @@
           updateToggleAllButtons();
         }
 
-        tabs.forEach(tab => {
+        tabs.forEach((tab) => {
           tab.addEventListener('click', () => {
             const target = tab.getAttribute('data-tab');
             switchCategoryTab(target);
@@ -2935,15 +3086,15 @@
 
         // Sub-Modality Switching (Inside ESWM Virtual & Face-to-Face Cards)
         const modalityContainers = document.querySelectorAll('.sub-service-card');
-        modalityContainers.forEach(card => {
+        modalityContainers.forEach((card) => {
           const mBtns = card.querySelectorAll('.modality-btn');
           const mPanes = card.querySelectorAll('.modality-pane');
-          mBtns.forEach(btn => {
+          mBtns.forEach((btn) => {
             btn.addEventListener('click', () => {
               const targetPaneId = btn.getAttribute('data-target');
-              mBtns.forEach(b => b.classList.remove('active'));
+              mBtns.forEach((b) => b.classList.remove('active'));
               btn.classList.add('active');
-              mPanes.forEach(pane => {
+              mPanes.forEach((pane) => {
                 if (pane.id === targetPaneId) {
                   pane.classList.add('active');
                 } else {
@@ -2965,13 +3116,13 @@
         }
 
         const headers = document.querySelectorAll('.sub-service-header');
-        headers.forEach(header => {
+        headers.forEach((header) => {
           header.addEventListener('click', () => {
             const card = header.closest('.sub-service-card');
             if (card) toggleCard(card);
           });
 
-          header.addEventListener('keydown', e => {
+          header.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
               const card = header.closest('.sub-service-card');
@@ -2987,7 +3138,7 @@
           const toggleBtn = activeContent.querySelector('.btn-toggle-all');
           if (!toggleBtn) return;
           const cards = activeContent.querySelectorAll('.sub-service-card');
-          const allOpen = Array.from(cards).every(c => c.classList.contains('is-open'));
+          const allOpen = Array.from(cards).every((c) => c.classList.contains('is-open'));
           if (allOpen) {
             toggleBtn.setAttribute('aria-expanded', 'true');
             toggleBtn.innerHTML = '<i class="bi bi-arrows-collapse"></i> <span>Collapse All</span>';
@@ -2998,14 +3149,14 @@
         }
 
         const toggleAllBtns = document.querySelectorAll('.btn-toggle-all');
-        toggleAllBtns.forEach(btn => {
+        toggleAllBtns.forEach((btn) => {
           btn.addEventListener('click', () => {
             const activeContent = btn.closest('.service-content');
             if (!activeContent) return;
             const cards = activeContent.querySelectorAll('.sub-service-card');
             const isCurrentlyExpanded = btn.getAttribute('aria-expanded') === 'true';
 
-            cards.forEach(card => {
+            cards.forEach((card) => {
               const header = card.querySelector('.sub-service-header');
               if (isCurrentlyExpanded) {
                 card.classList.remove('is-open');
@@ -3036,11 +3187,13 @@
             if (isExpanded) {
               staffExtraContainer.classList.remove('show');
               staffToggleBtn.setAttribute('aria-expanded', 'false');
-              staffToggleBtn.innerHTML = '<i class="bi bi-chevron-down"></i> <span>View All Personnel (6)</span>';
+              staffToggleBtn.innerHTML =
+                '<i class="bi bi-chevron-down"></i> <span>View All Personnel (6)</span>';
             } else {
               staffExtraContainer.classList.add('show');
               staffToggleBtn.setAttribute('aria-expanded', 'true');
-              staffToggleBtn.innerHTML = '<i class="bi bi-chevron-up"></i> <span>Show Key Officers Only (Top 3)</span>';
+              staffToggleBtn.innerHTML =
+                '<i class="bi bi-chevron-up"></i> <span>Show Key Officers Only (Top 3)</span>';
             }
           });
         }

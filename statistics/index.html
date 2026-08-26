@@ -88,16 +88,20 @@
         (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
       ) {
         navigator.serviceWorker.getRegistrations().then(function (regs) {
-          regs.forEach(function (r) { r.unregister(); });
+          regs.forEach(function (r) {
+            r.unregister();
+          });
         });
         if ('caches' in window) {
           caches.keys().then(function (names) {
-            names.forEach(function (n) { caches.delete(n); });
+            names.forEach(function (n) {
+              caches.delete(n);
+            });
           });
         }
       }
     </script>
-      <script>
+    <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -108,11 +112,9 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link"
-      >Skip to main content</a
-    >
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-                        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -146,7 +148,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -158,16 +159,11 @@
             />
           </a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Services</a
-              >
+              <a href="../services/" aria-haspopup="true" aria-expanded="false">Services</a>
               <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
@@ -191,15 +187,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -241,8 +242,7 @@
         <div class="container">
           <div class="stats-hero-content">
             <span class="stats-hero-badge"
-              ><i class="bi bi-bar-chart-fill"></i>
-              <span>City Data</span></span
+              ><i class="bi bi-bar-chart-fill"></i> <span>City Data</span></span
             >
             <h1>City Statistics</h1>
             <p>Data and statistics about Legazpi City, Albay</p>
@@ -287,10 +287,7 @@
         <div class="container">
           <div class="section-header-minimal section-header-with-actions">
             <div>
-              <span class="section-tag"
-                ><i class="bi bi-cash-stack"></i>
-                <span>Finance</span></span
-              >
+              <span class="section-tag"><i class="bi bi-cash-stack"></i> <span>Finance</span></span>
               <h2>City Income</h2>
               <p id="finance-subtitle">5-year Financial Standing based on Annual SRE (2021-2025)</p>
             </div>
@@ -407,13 +404,10 @@
 
           <p class="data-source">
             <i class="bi bi-info-circle"></i> Source:
-            <a
-              href="https://blgf.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
               >Bureau of Local Government Finance (BLGF)</a
             >
-            – <span id="finance-source-dataset">2025 SRE Data</span>
+            - <span id="finance-source-dataset">2025 SRE Data</span>
           </p>
         </div>
       </section>
@@ -422,13 +416,9 @@
       <section class="stats-section stats-trends animate-on-scroll">
         <div class="container">
           <div class="section-header-minimal">
-            <span class="section-tag"
-              ><i class="bi bi-graph-up"></i> <span>Growth</span></span
-            >
+            <span class="section-tag"><i class="bi bi-graph-up"></i> <span>Growth</span></span>
             <h2>Population Trends</h2>
-            <p>
-              Historical growth from 1990 to 2024
-            </p>
+            <p>Historical growth from 1990 to 2024</p>
           </div>
 
           <div class="trends-summary">
@@ -453,10 +443,7 @@
 
           <p class="data-source">
             <i class="bi bi-info-circle"></i> Source:
-            <a
-              href="https://psa.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://psa.gov.ph/" target="_blank" rel="noopener noreferrer"
               >Philippine Statistics Authority (PSA)</a
             >
           </p>
@@ -468,8 +455,7 @@
         <div class="container">
           <div class="section-header-minimal">
             <span class="section-tag"
-              ><i class="bi bi-pie-chart-fill"></i>
-              <span>Distribution</span></span
+              ><i class="bi bi-pie-chart-fill"></i> <span>Distribution</span></span
             >
             <h2>Population by Barangay</h2>
             <p>2024 Census of Population</p>
@@ -496,7 +482,7 @@
                     id="barangaySearchClear"
                     class="search-clear-btn"
                     aria-label="Clear search"
-                    style="display: none;"
+                    style="display: none"
                   >
                     <i class="bi bi-x"></i>
                   </button>
@@ -506,7 +492,13 @@
                 </div>
               </div>
 
-              <div id="barangayListContainer" class="distribution-list">
+              <div
+                id="barangayListContainer"
+                class="distribution-list"
+                tabindex="0"
+                role="region"
+                aria-label="Barangay population distribution list"
+              >
                 <!-- Dynamically populated from data/barangays.json -->
               </div>
             </div>
@@ -514,10 +506,7 @@
 
           <p class="data-source">
             <i class="bi bi-info-circle"></i> Source:
-            <a
-              href="https://psa.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://psa.gov.ph/" target="_blank" rel="noopener noreferrer"
               >Philippine Statistics Authority (PSA)</a
             >
             - 2024 Census
@@ -530,13 +519,10 @@
         <div class="container">
           <div class="section-header-minimal">
             <span class="section-tag"
-              ><i class="bi bi-briefcase-fill"></i>
-              <span>Economy</span></span
+              ><i class="bi bi-briefcase-fill"></i> <span>Economy</span></span
             >
             <h2>Economic Indicators</h2>
-            <p>
-              Key economic data and business statistics
-            </p>
+            <p>Key economic data and business statistics</p>
           </div>
 
           <div class="economy-grid">
@@ -582,9 +568,7 @@
               <div class="sc-row">
                 <div class="sc-meta">
                   <span class="sc-dot sc-color-trade"></span>
-                  <span class="sc-name"
-                    >Trade &amp; Commerce</span
-                  >
+                  <span class="sc-name">Trade &amp; Commerce</span>
                 </div>
                 <span class="sc-pct">30%</span>
                 <div class="sc-track">
@@ -616,10 +600,7 @@
 
           <p class="data-source">
             <i class="bi bi-info-circle"></i> Source:
-            <a
-              href="https://blgf.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
               >Bureau of Local Government Finance (BLGF)</a
             >
             - 2023
@@ -632,13 +613,10 @@
         <div class="container">
           <div class="section-header-minimal">
             <span class="section-tag"
-              ><i class="bi bi-graph-down-arrow"></i>
-              <span>Poverty</span></span
+              ><i class="bi bi-graph-down-arrow"></i> <span>Poverty</span></span
             >
             <h2>Poverty Statistics</h2>
-            <p>
-              2018, 2021 & 2023 City and Municipal Level Poverty Estimates across Albay
-            </p>
+            <p>2018, 2021 & 2023 City and Municipal Level Poverty Estimates across Albay</p>
           </div>
 
           <!-- Legazpi 3-Year Trend Summary Cards -->
@@ -651,7 +629,7 @@
                 <span class="plc-val">13.8</span>
                 <span class="plc-unit">%</span>
               </div>
-              <div class="plc-bar"><div class="plc-fill" style="width: 13.8%;"></div></div>
+              <div class="plc-bar"><div class="plc-fill" style="width: 13.8%"></div></div>
               <div class="plc-meta">
                 <span class="plc-ci"><i class="bi bi-shield-check"></i> 90% CI: 11.7% - 15.8%</span>
                 <span class="plc-rank"><i class="bi bi-award"></i> #2 in Albay</span>
@@ -666,7 +644,7 @@
                 <span class="plc-val">17.6</span>
                 <span class="plc-unit">%</span>
               </div>
-              <div class="plc-bar"><div class="plc-fill" style="width: 17.6%;"></div></div>
+              <div class="plc-bar"><div class="plc-fill" style="width: 17.6%"></div></div>
               <div class="plc-meta">
                 <span class="plc-ci"><i class="bi bi-shield-check"></i> 90% CI: 15.9% - 19.3%</span>
                 <span class="plc-rank"><i class="bi bi-award"></i> #2 in Albay</span>
@@ -675,8 +653,7 @@
 
             <div class="poverty-legazpi-card plc-highlighted">
               <span class="poverty-badge"
-                ><i class="bi bi-check-circle-fill"></i>
-                <span>Lowest</span></span
+                ><i class="bi bi-check-circle-fill"></i> <span>Lowest</span></span
               >
               <div class="plc-header">
                 <span class="plc-year plc-badge-year">2023 (Latest)</span>
@@ -684,12 +661,18 @@
               <div class="plc-rate">
                 <span class="plc-val">16.3</span>
                 <span class="plc-unit">%</span>
-                <span class="plc-trend-badge"><i class="bi bi-arrow-down-right"></i> -1.3% vs 2021</span>
+                <span class="plc-trend-badge"
+                  ><i class="bi bi-arrow-down-right"></i> -1.3% vs 2021</span
+                >
               </div>
-              <div class="plc-bar"><div class="plc-fill fill-accent" style="width: 16.3%;"></div></div>
+              <div class="plc-bar">
+                <div class="plc-fill fill-accent" style="width: 16.3%"></div>
+              </div>
               <div class="plc-meta">
                 <span class="plc-ci"><i class="bi bi-shield-check"></i> 90% CI: 14.4% - 18.3%</span>
-                <span class="plc-rank rank-gold"><i class="bi bi-trophy-fill"></i> #1 in Albay</span>
+                <span class="plc-rank rank-gold"
+                  ><i class="bi bi-trophy-fill"></i> #1 in Albay</span
+                >
               </div>
             </div>
           </div>
@@ -698,14 +681,20 @@
           <div class="poverty-chart-card animate-on-scroll">
             <div class="poverty-chart-header">
               <div class="pch-info">
-                <h4><i class="bi bi-bar-chart-fill"></i> Albay LGUs Poverty Incidence Comparison</h4>
-                <p>Municipal & City-level poverty incidence estimates ranked from lowest to highest</p>
+                <h4>
+                  <i class="bi bi-bar-chart-fill"></i> Albay LGUs Poverty Incidence Comparison
+                </h4>
+                <p>
+                  Municipal & City-level poverty incidence estimates ranked from lowest to highest
+                </p>
               </div>
               <div class="pch-controls">
                 <div class="poverty-year-switcher" role="group" aria-label="Poverty Year Selection">
                   <button type="button" class="poverty-year-btn" data-year="2018">2018</button>
                   <button type="button" class="poverty-year-btn" data-year="2021">2021</button>
-                  <button type="button" class="poverty-year-btn active" data-year="2023">2023</button>
+                  <button type="button" class="poverty-year-btn active" data-year="2023">
+                    2023
+                  </button>
                 </div>
               </div>
             </div>
@@ -734,7 +723,11 @@
             <div class="poverty-chart-footer">
               <div class="pcf-insight">
                 <i class="bi bi-info-circle-fill"></i>
-                <span id="povertyInsightText">In 2023, <strong>Legazpi City</strong> recorded the lowest poverty incidence in the entire Province of Albay at <strong>16.3%</strong>, well below the provincial average of <strong>27.1%</strong>.</span>
+                <span id="povertyInsightText"
+                  >In 2023, <strong>Legazpi City</strong> recorded the lowest poverty incidence in
+                  the entire Province of Albay at <strong>16.3%</strong>, well below the provincial
+                  average of <strong>27.1%</strong>.</span
+                >
               </div>
             </div>
           </div>
@@ -757,8 +750,7 @@
         <div class="container">
           <div class="section-header-minimal">
             <span class="section-tag"
-              ><i class="bi bi-trophy-fill"></i>
-              <span>Competitiveness</span></span
+              ><i class="bi bi-trophy-fill"></i> <span>Competitiveness</span></span
             >
             <h2>Legazpi Competitive Index</h2>
             <p>
@@ -830,9 +822,7 @@
             <div class="cmci-chart-container">
               <h4>
                 <i class="bi bi-bar-chart-line"></i>
-                <span
-                  >Key Indicators Trend (2014-2024)</span
-                >
+                <span>Key Indicators Trend (2014-2024)</span>
               </h4>
               <div class="chart-wrapper">
                 <canvas id="cmciOverviewChart"></canvas>
@@ -944,9 +934,7 @@
             <div class="cmci-chart-container">
               <h4>
                 <i class="bi bi-graph-up"></i>
-                <span
-                  >Government Efficiency Trend</span
-                >
+                <span>Government Efficiency Trend</span>
               </h4>
               <div class="chart-wrapper">
                 <canvas id="cmciGovernmentChart"></canvas>
@@ -1114,10 +1102,7 @@
 
           <p class="data-source">
             <i class="bi bi-info-circle"></i> Source:
-            <a
-              href="https://cmci.dti.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
               >DTI Cities and Municipalities Competitiveness Index (CMCI)</a
             >
           </p>
@@ -1131,13 +1116,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
-            <p
-              class="footer-tagline"
-            >
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+            <p class="footer-tagline">
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -1170,8 +1154,8 @@
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
-              <li><a href="../service-details/city-civil-registrar">City Civil Registrar Hub</a></li>
-              <li><a href="../service-details/business-permits-licensing">BPLO Hub</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -1183,19 +1167,36 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://data.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
               </li>
               <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
                 <a
-                  href="https://www.foi.gov.ph/"
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Freedom of Information</a
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -1208,18 +1209,58 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
@@ -1234,7 +1275,6 @@
         </div>
       </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>

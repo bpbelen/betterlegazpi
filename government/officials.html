@@ -95,7 +95,7 @@
         color: #0369a1;
       }
     </style>
-      <script>
+    <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -107,11 +107,9 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link"
-      >Skip to main content</a
-    >
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-                        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -145,8 +143,6 @@
       </div>
     </div>
 
-    
-
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -158,16 +154,11 @@
             />
           </a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Services</a
-              >
+              <a href="../services/" aria-haspopup="true" aria-expanded="false">Services</a>
               <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
@@ -191,15 +182,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -229,8 +225,7 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="./">Government</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="./">Government</a><span>/</span>
           <span aria-current="page">Officials</span>
         </nav>
       </div>
@@ -250,33 +245,123 @@
           <!-- Executive Branch -->
           <div class="grid grid-2 mb-5">
             <!-- Mayor Card -->
-            <div class="card text-center h-100" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-              <div class="card-body" style="padding: 1.5rem;">
-                <div class="avatar-placeholder" style="width: 80px; height: 80px; background: #e0f2fe; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
-                  <i class="bi bi-person-badge-fill" style="font-size: 2.5rem; color: var(--color-primary);"></i>
+            <div
+              class="card text-center h-100"
+              style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)"
+            >
+              <div class="card-body" style="padding: 1.5rem">
+                <div
+                  class="avatar-placeholder"
+                  style="
+                    width: 80px;
+                    height: 80px;
+                    background: #e0f2fe;
+                    border-radius: 50%;
+                    margin: 0 auto 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <i
+                    class="bi bi-person-badge-fill"
+                    style="font-size: 2.5rem; color: var(--color-primary)"
+                  ></i>
                 </div>
-                <h4 class="card-title mb-1" style="font-size: 1.25rem; font-weight: 700;">Hon. Hisham B. Ismail</h4>
-                <span class="badge" style="background: var(--color-primary); color: white; padding: 4px 14px; border-radius: 50px; font-size: 0.8rem;">City Mayor</span>
-                <div class="official-contacts mt-3" style="font-size: 0.85rem; border-top: 1px solid #eee; padding-top: 10px;">
-                  <p class="mb-1"><i class="bi bi-envelope"></i> <a href="mailto:legazpicitymayorsoffice@gmail.com" style="color: var(--color-text);">legazpicitymayorsoffice@gmail.com</a></p>
-                  <p class="mb-1"><i class="bi bi-phone"></i> <a href="tel:09274143768" style="color: var(--color-text);">0927 414 3768 (GLOBE)</a></p>
-                  <p class="mb-0"><i class="bi bi-phone"></i> <a href="tel:09122983504" style="color: var(--color-text);">0912 298 3504 (TNT)</a></p>
+                <h4 class="card-title mb-1" style="font-size: 1.25rem; font-weight: 700">
+                  Hon. Hisham B. Ismail
+                </h4>
+                <span
+                  class="badge"
+                  style="
+                    background: var(--color-primary);
+                    color: white;
+                    padding: 4px 14px;
+                    border-radius: 50px;
+                    font-size: 0.8rem;
+                  "
+                  >City Mayor</span
+                >
+                <div
+                  class="official-contacts mt-3"
+                  style="font-size: 0.85rem; border-top: 1px solid #eee; padding-top: 10px"
+                >
+                  <p class="mb-1">
+                    <i class="bi bi-envelope"></i>
+                    <a
+                      href="mailto:legazpicitymayorsoffice@gmail.com"
+                      style="color: var(--color-text)"
+                      >legazpicitymayorsoffice@gmail.com</a
+                    >
+                  </p>
+                  <p class="mb-1">
+                    <i class="bi bi-phone"></i>
+                    <a href="tel:09274143768" style="color: var(--color-text)"
+                      >0927 414 3768 (GLOBE)</a
+                    >
+                  </p>
+                  <p class="mb-0">
+                    <i class="bi bi-phone"></i>
+                    <a href="tel:09122983504" style="color: var(--color-text)"
+                      >0912 298 3504 (TNT)</a
+                    >
+                  </p>
                 </div>
               </div>
             </div>
 
             <!-- Vice Mayor Card -->
-            <div class="card text-center h-100" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-              <div class="card-body" style="padding: 1.5rem;">
-                <div class="avatar-placeholder" style="width: 80px; height: 80px; background: #e0f2fe; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
-                  <i class="bi bi-person-badge-fill" style="font-size: 2.5rem; color: var(--color-primary);"></i>
+            <div
+              class="card text-center h-100"
+              style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)"
+            >
+              <div class="card-body" style="padding: 1.5rem">
+                <div
+                  class="avatar-placeholder"
+                  style="
+                    width: 80px;
+                    height: 80px;
+                    background: #e0f2fe;
+                    border-radius: 50%;
+                    margin: 0 auto 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <i
+                    class="bi bi-person-badge-fill"
+                    style="font-size: 2.5rem; color: var(--color-primary)"
+                  ></i>
                 </div>
-                <h4 class="card-title mb-1" style="font-size: 1.25rem; font-weight: 700;">Hon. Luis Felipe L. Gutierrez</h4>
-                <span class="badge" style="background: var(--color-primary); color: white; padding: 4px 14px; border-radius: 50px; font-size: 0.8rem;">City Vice Mayor</span>
-                <div class="official-contacts mt-3" style="font-size: 0.85rem; border-top: 1px solid #eee; padding-top: 10px;">
-                  <p class="mb-1" style="opacity: 0.6;"><i class="bi bi-envelope"></i> <span>Unlisted</span></p>
-                  <p class="mb-1"><i class="bi bi-telephone"></i> <a href="tel:0528205199" style="color: var(--color-text);">(052) 820-5199</a></p>
-                  <p class="mb-0" style="opacity: 0.6;"><i class="bi bi-phone"></i> <span>Unlisted</span></p>
+                <h4 class="card-title mb-1" style="font-size: 1.25rem; font-weight: 700">
+                  Hon. Luis Felipe L. Gutierrez
+                </h4>
+                <span
+                  class="badge"
+                  style="
+                    background: var(--color-primary);
+                    color: white;
+                    padding: 4px 14px;
+                    border-radius: 50px;
+                    font-size: 0.8rem;
+                  "
+                  >City Vice Mayor</span
+                >
+                <div
+                  class="official-contacts mt-3"
+                  style="font-size: 0.85rem; border-top: 1px solid #eee; padding-top: 10px"
+                >
+                  <p class="mb-1" style="opacity: 0.6">
+                    <i class="bi bi-envelope"></i> <span>Unlisted</span>
+                  </p>
+                  <p class="mb-1">
+                    <i class="bi bi-telephone"></i>
+                    <a href="tel:0528205199" style="color: var(--color-text)">(052) 820-5199</a>
+                  </p>
+                  <p class="mb-0" style="opacity: 0.6">
+                    <i class="bi bi-phone"></i> <span>Unlisted</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -284,99 +369,162 @@
 
           <!-- Sangguniang Panlungsod Members (Restored Clean Cards with Icon Bulleted Committees) -->
           <h3 class="text-center mt-5 mb-4">Sangguniang Panlungsod Members</h3>
-          <div class="grid grid-3" style="gap: var(--spacing-md);">
+          <div class="grid grid-3" style="gap: var(--spacing-md)">
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Alan O. Rañola</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-shop"></i> <span>Trade & Commerce</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-shield-check"></i> <span>Good Governance, Public Ethics & Accountability</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-camera"></i> <span>Tourism, Culture & Heritage</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-shop"></i> <span>Trade & Commerce</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-shield-check"></i>
+                  <span>Good Governance, Public Ethics & Accountability</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-camera"></i> <span>Tourism, Culture & Heritage</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Lourence M. Beltran</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-cash-stack"></i> <span>Finance & Appropriations</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-hammer"></i> <span>Public Works & Infrastructure</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-controller"></i> <span>Games, Amusement & Entertainment</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-cash-stack"></i> <span>Finance & Appropriations</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-hammer"></i> <span>Public Works & Infrastructure</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-controller"></i> <span>Games, Amusement & Entertainment</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Ismael B. Buban IV</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-tree"></i> <span>Agriculture</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-heart-pulse"></i> <span>Social Welfare & Protection</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-people"></i> <span>CSOs & People's Empowerment</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-tree"></i> <span>Agriculture</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-heart-pulse"></i> <span>Social Welfare & Protection</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-people"></i> <span>CSOs & People's Empowerment</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Charlton S. Lajara</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-calculator"></i> <span>Ways & Means</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-flower1"></i> <span>Environmental Protection</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-shield-shaded"></i> <span>Public Order, Safety & Civil Defense</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-calculator"></i> <span>Ways & Means</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-flower1"></i> <span>Environmental Protection</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-shield-shaded"></i>
+                  <span>Public Order, Safety & Civil Defense</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Vicente F. Baltazar III</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-laptop"></i> <span>ICT & E-Governance</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-globe"></i> <span>Sisterhood, Inter-LGU & International Relations</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-laptop"></i> <span>ICT & E-Governance</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-globe"></i>
+                  <span>Sisterhood, Inter-LGU & International Relations</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Maria Paz Salud C. Imperial</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-gender-female"></i> <span>Women, Children & Family Welfare</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-hospital"></i> <span>Health & Sanitation</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-person-arms-up"></i> <span>Solo Parents, PWDs & Vulnerable Groups</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-gender-female"></i> <span>Women, Children & Family Welfare</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-hospital"></i> <span>Health & Sanitation</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-person-arms-up"></i>
+                  <span>Solo Parents, PWDs & Vulnerable Groups</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Alexander U. Jao</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-person-heart"></i> <span>Senior Citizens Affairs</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-bullseye"></i> <span>Sustainable Development Goals (SDG)</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-person-heart"></i> <span>Senior Citizens Affairs</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-bullseye"></i> <span>Sustainable Development Goals (SDG)</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Joseph Philip L. Lee</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-buildings"></i> <span>Cooperatives, Livelihood & Employment</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-book"></i> <span>Education, Science, Technology & Arts</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-cloud-lightning-rain"></i> <span>DRRM & Climate Change Adaptation</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-buildings"></i> <span>Cooperatives, Livelihood & Employment</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-book"></i> <span>Education, Science, Technology & Arts</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-cloud-lightning-rain"></i>
+                  <span>DRRM & Climate Change Adaptation</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Renato A. Valladolid</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-hammer"></i> <span>Human Rights & Social Justice</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-water"></i> <span>Fisheries & Aquatic Resources</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-hammer"></i> <span>Human Rights & Social Justice</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-water"></i> <span>Fisheries & Aquatic Resources</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Roberto Rafael N. Lucila II</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-journal-text"></i> <span>Laws, Rules & Oversight</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-houses"></i> <span>Urban Planning, Housing & Resettlement</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-lightning-charge"></i> <span>Public Utilities & Energy</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-journal-text"></i> <span>Laws, Rules & Oversight</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-houses"></i> <span>Urban Planning, Housing & Resettlement</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-lightning-charge"></i> <span>Public Utilities & Energy</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card councilor-card--liga">
               <h4 class="councilor-name">Atty. Amore Rex B. Rañeses</h4>
-              <span class="councilor-badge councilor-badge--liga">Liga ng mga Barangay President</span>
+              <span class="councilor-badge councilor-badge--liga"
+                >Liga ng mga Barangay President</span
+              >
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-geo-alt"></i> <span>Barangay Affairs</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-geo-alt"></i> <span>Barangay Affairs</span>
+                </li>
               </ul>
               <span class="councilor-ex-officio-badge">EX-OFFICIO MEMBER</span>
             </div>
@@ -384,7 +532,9 @@
               <h4 class="councilor-name">John Nicolas C. Garbin</h4>
               <span class="councilor-badge councilor-badge--sk">PPSK President</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-trophy"></i> <span>Youth & Sports Development</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-trophy"></i> <span>Youth & Sports Development</span>
+                </li>
               </ul>
               <span class="councilor-ex-officio-badge">EX-OFFICIO MEMBER</span>
             </div>
@@ -392,7 +542,17 @@
 
           <!-- Simple Source Credit Line (Centered & Enlarged) -->
           <div class="source-credit-simple">
-            <i class="bi bi-info-circle"></i> Source: <a href="https://legazpi.gov.ph/executive/" target="_blank" rel="noopener noreferrer">City Government of Legazpi - Directory</a> &bull; <a href="https://legazpi.gov.ph/about-us/legislative/" target="_blank" rel="noopener noreferrer">City Government of Legazpi - Legislative</a>
+            <i class="bi bi-info-circle"></i> Source:
+            <a href="https://legazpi.gov.ph/executive/" target="_blank" rel="noopener noreferrer"
+              >City Government of Legazpi - Directory</a
+            >
+            &bull;
+            <a
+              href="https://legazpi.gov.ph/about-us/legislative/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >City Government of Legazpi - Legislative</a
+            >
           </div>
         </div>
       </section>
@@ -409,11 +569,12 @@
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi City with transparent access to municipal services, programs, and public funds.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
-                href="https://www.facebook.com/betterlegazpi"
+                href="https://www.facebook.com/betterlegazpi.org"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -421,60 +582,70 @@
                 ><i class="bi bi-facebook"></i
               ></a>
               <a
-                href="https://github.com/bpbelen/betterlegazpi"
+                href="https://www.linkedin.com/company/betterlegazpi/"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
-                ><i class="bi bi-github"></i
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://discord.com/invite/betterlegazpi"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                ><i class="bi bi-discord"></i
               ></a>
             </div>
           </div>
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
-              <li>
-                <a href="../accessibility/">Accessibility</a>
-              </li>
+              <li><a href="../accessibility/">Accessibility</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Official Portals</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://legazpi.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Official Legazpi City Portal</a
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Open Data Philippines</a
+                >
+              </li>
+              <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
                 >
               </li>
               <li>
                 <a
-                  href="https://legazpi.gov.ph/executive/"
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Executive Directory</a
+                  >LGU Legazpi Facebook</a
                 >
               </li>
               <li>
-                <a
-                  href="https://legazpi.gov.ph/about-us/legislative/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Sangguniang Panlungsod</a
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
                 >
               </li>
               <li>
-                <a
-                  href="https://legazpi.gov.ph/directory/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >City Office Directory</a
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -487,18 +658,58 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
               href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">

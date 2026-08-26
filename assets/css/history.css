@@ -2,45 +2,48 @@
    BetterLegazpi - History Page Stylesheet (Modern Heritage & Editorial)
    ========================================================================== */
 
+/* history.css tokens are now aliases onto the global :root scale in style.css,
+   so the accent, surfaces, and shadows stay in lockstep with the rest of the site.
+   Call sites (--hist-*) are left in place to avoid touching ~50 selectors. */
 :root {
-  --hist-terracotta: #c2410c;
+  --hist-terracotta: var(--color-accent);
   --hist-terracotta-dark: #9a3412;
   --hist-terracotta-light: #ffedd5;
   --hist-terracotta-border: #fed7aa;
-  --hist-obsidian: #0f172a;
-  --hist-navy: #0032a0;
-  --hist-navy-dark: #002170;
-  --hist-surface: #ffffff;
-  --hist-surface-alt: #f8fafc;
-  --hist-surface-muted: #f1f5f9;
-  --hist-border: #e2e8f0;
-  --hist-border-light: #f1f5f9;
-  --hist-text-primary: #0f172a;
-  --hist-text-secondary: #475569;
-  --hist-text-muted: #64748b;
-  --hist-card-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
-  --hist-card-shadow-hover: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
-  --hist-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --hist-obsidian: var(--color-text);
+  --hist-navy: var(--color-primary);
+  --hist-navy-dark: var(--color-primary-dark);
+  --hist-surface: var(--color-bg);
+  --hist-surface-alt: var(--color-bg-alt);
+  --hist-surface-muted: var(--color-bg-muted);
+  --hist-border: var(--color-border);
+  --hist-border-light: var(--color-bg-muted);
+  --hist-text-primary: var(--color-text);
+  --hist-text-secondary: var(--color-text-light);
+  --hist-text-muted: var(--color-text-light);
+  --hist-card-shadow: var(--shadow-sm);
+  --hist-card-shadow-hover: var(--shadow-md);
+  --hist-transition: all var(--duration-slow) var(--ease-out);
 }
 
-[data-theme="dark"] {
-  --hist-terracotta: #ea580c;
-  --hist-terracotta-dark: #c2410c;
+[data-theme='dark'] {
+  --hist-terracotta: var(--color-accent);
+  --hist-terracotta-dark: var(--color-accent);
   --hist-terracotta-light: #431407;
   --hist-terracotta-border: #7c2d12;
-  --hist-obsidian: #f8fafc;
-  --hist-navy: #38bdf8;
-  --hist-navy-dark: #0284c7;
-  --hist-surface: #1e293b;
-  --hist-surface-alt: #0f172a;
-  --hist-surface-muted: #334155;
-  --hist-border: #334155;
-  --hist-border-light: #1e293b;
-  --hist-text-primary: #f8fafc;
-  --hist-text-secondary: #cbd5e1;
-  --hist-text-muted: #94a3b8;
-  --hist-card-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.3);
-  --hist-card-shadow-hover: 0 10px 25px -3px rgba(0, 0, 0, 0.45);
+  --hist-obsidian: var(--color-text);
+  --hist-navy: var(--color-primary);
+  --hist-navy-dark: var(--color-primary-dark);
+  --hist-surface: var(--color-bg);
+  --hist-surface-alt: var(--color-bg-alt);
+  --hist-surface-muted: var(--color-bg-muted);
+  --hist-border: var(--color-border);
+  --hist-border-light: var(--color-bg);
+  --hist-text-primary: var(--color-text);
+  --hist-text-secondary: var(--color-text-light);
+  --hist-text-muted: var(--color-text-light);
+  --hist-card-shadow: var(--shadow-sm);
+  --hist-card-shadow-hover: var(--shadow-md);
 }
 
 /* --------------------------------------------------------------------------
@@ -60,103 +63,40 @@
 }
 
 /* --------------------------------------------------------------------------
-   Hero Section
+   Segmented View Switcher Control (sits below the shared .page-header)
    -------------------------------------------------------------------------- */
-.history-hero {
-  background: linear-gradient(145deg, #0b1528 0%, #1e293b 60%, #2a1b14 100%);
-  color: #ffffff;
-  padding: 56px 0 48px 0;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.view-switcher-section {
+  background: var(--hist-surface-alt);
+  border-bottom: 1px solid var(--hist-border);
+  padding: var(--spacing-md) 0;
 }
 
-.history-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: radial-gradient(circle at 80% 20%, rgba(234, 88, 12, 0.15) 0%, transparent 50%),
-                    radial-gradient(circle at 20% 80%, rgba(0, 50, 160, 0.2) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.history-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.history-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(234, 88, 12, 0.2);
-  border: 1px solid rgba(251, 146, 60, 0.35);
-  color: #fed7aa;
-  padding: 6px 14px;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  margin-bottom: 20px;
-}
-
-.history-hero h1 {
-  font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  margin-bottom: 16px;
-}
-
-.history-tagline {
-  font-size: clamp(1.05rem, 1.5vw + 0.5rem, 1.25rem);
-  color: #cbd5e1;
-  line-height: 1.6;
-  margin-bottom: 28px;
-  font-weight: 400;
-}
-
-.history-tagline strong {
-  color: #fb923c;
-}
-
-/* --------------------------------------------------------------------------
-   Segmented View Switcher Control
-   -------------------------------------------------------------------------- */
 .view-switcher-container {
   display: flex;
   justify-content: center;
-  margin-top: 12px;
 }
 
 .view-switcher {
   display: inline-flex;
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 9999px;
+  background: var(--hist-surface);
+  border: 1px solid var(--hist-border);
+  border-radius: var(--radius-pill);
   padding: 6px;
   gap: 6px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--hist-card-shadow);
 }
 
 .view-switch-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 10px 22px;
-  border-radius: 9999px;
+  min-height: 44px;
+  border-radius: var(--radius-pill);
   border: none;
   background: transparent;
-  color: #cbd5e1;
+  color: var(--hist-text-secondary);
   font-family: inherit;
   font-size: 0.95rem;
   font-weight: 600;
@@ -166,21 +106,26 @@
 }
 
 .view-switch-btn:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--hist-text-primary);
+  background: var(--hist-surface-alt);
 }
 
 .view-switch-btn.active {
-  background: var(--hist-terracotta);
+  background: var(--color-accent-solid);
   color: #ffffff;
-  box-shadow: 0 2px 10px rgba(194, 65, 12, 0.4);
+  box-shadow: var(--hist-card-shadow);
 }
 
 .view-switch-btn .badge-pill {
   font-size: 0.75rem;
   padding: 2px 8px;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-pill);
+  background: var(--hist-surface-muted);
+  color: var(--hist-text-secondary);
+}
+
+.view-switch-btn.active .badge-pill {
+  background: rgba(0, 0, 0, 0.25);
   color: #ffffff;
 }
 
@@ -194,7 +139,9 @@
   background: var(--hist-surface);
   border-bottom: 1px solid var(--hist-border);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background-color var(--duration-base) ease,
+    border-color var(--duration-base) ease;
 }
 
 .reading-toolbar {
@@ -217,12 +164,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   font-weight: 600;
   color: var(--hist-text-secondary);
   background: var(--hist-surface-muted);
   padding: 6px 12px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--hist-border);
 }
 
@@ -245,7 +192,8 @@
 .reading-search-input {
   width: 100%;
   padding: 6px 32px 6px 34px;
-  border-radius: 6px;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--hist-border);
   background: var(--hist-surface-alt);
   color: var(--hist-text-primary);
@@ -269,7 +217,7 @@
   color: var(--hist-text-muted);
   cursor: pointer;
   padding: 4px;
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   display: none;
 }
 
@@ -282,14 +230,16 @@
 .toolbar-action-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 6px 12px;
-  border-radius: 6px;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--hist-border);
   background: var(--hist-surface-alt);
   color: var(--hist-text-secondary);
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   font-weight: 500;
   cursor: pointer;
   transition: var(--hist-transition);
@@ -305,14 +255,14 @@
    Quick Facts & City Seal Bento Grid
    -------------------------------------------------------------------------- */
 .history-bento-section {
-  padding: 48px 0 36px 0;
+  padding: var(--spacing-xl) 0;
   background: var(--hist-surface-alt);
   border-bottom: 1px solid var(--hist-border);
 }
 
 .section-headline {
   text-align: center;
-  max-width: 680px;
+  max-width: var(--measure);
   margin: 0 auto 36px auto;
 }
 
@@ -339,7 +289,7 @@
 .bento-card {
   background: var(--hist-surface);
   border: 1px solid var(--hist-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px;
   box-shadow: var(--hist-card-shadow);
   transition: var(--hist-transition);
@@ -352,10 +302,18 @@
   border-color: var(--hist-terracotta-border);
 }
 
-.bento-col-4 { grid-column: span 4; }
-.bento-col-6 { grid-column: span 6; }
-.bento-col-8 { grid-column: span 8; }
-.bento-col-12 { grid-column: span 12; }
+.bento-col-4 {
+  grid-column: span 4;
+}
+.bento-col-6 {
+  grid-column: span 6;
+}
+.bento-col-8 {
+  grid-column: span 8;
+}
+.bento-col-12 {
+  grid-column: span 12;
+}
 
 .bento-card-header {
   display: flex;
@@ -367,7 +325,7 @@
 .bento-card-icon {
   width: 42px;
   height: 42px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -385,7 +343,7 @@
 }
 
 .bento-card-subtitle {
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   color: var(--hist-text-muted);
 }
 
@@ -397,7 +355,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   padding: 2px 8px;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   background: var(--hist-terracotta);
   color: #ffffff;
   margin-left: 8px;
@@ -422,7 +380,7 @@
   gap: 20px;
   background: var(--hist-surface-alt);
   border: 1px solid var(--hist-border);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 16px 20px;
   margin-bottom: 20px;
 }
@@ -432,7 +390,7 @@
   width: 110px;
   height: 110px;
   min-width: 110px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   background: #ffffff;
   padding: 6px;
   border: 2px solid var(--hist-terracotta-border);
@@ -446,7 +404,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
 }
 
 .city-seal-info h4 {
@@ -457,7 +415,7 @@
 }
 
 .city-seal-info p {
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   color: var(--hist-text-secondary);
   line-height: 1.45;
   margin: 0;
@@ -469,7 +427,7 @@
 .facts-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.92rem;
+  font-size: 0.9375rem;
 }
 
 .facts-table tr {
@@ -512,7 +470,7 @@
 
 .seal-item-card {
   padding: 12px 14px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--hist-surface-alt);
   border: 1px solid var(--hist-border);
   display: flex;
@@ -530,7 +488,7 @@
 .seal-icon-box {
   width: 34px;
   height: 34px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: rgba(194, 65, 12, 0.12);
   color: var(--hist-terracotta);
   display: flex;
@@ -596,7 +554,7 @@ a.timeline-node:hover *,
    Visual Milestone Timeline
    -------------------------------------------------------------------------- */
 .history-timeline-section {
-  padding: 48px 0;
+  padding: var(--spacing-xl) 0;
   background: var(--hist-surface);
   border-bottom: 1px solid var(--hist-border);
 }
@@ -634,7 +592,7 @@ a.timeline-node:hover *,
   width: 220px;
   background: var(--hist-surface-alt);
   border: 1px solid var(--hist-border);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 16px;
   box-shadow: var(--hist-card-shadow);
   transition: var(--hist-transition);
@@ -658,7 +616,7 @@ a.timeline-node:hover *,
   transform: translateX(-50%);
   width: 18px;
   height: 18px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   background: var(--hist-surface);
   border: 4px solid var(--hist-terracotta);
   box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.2);
@@ -672,7 +630,7 @@ a.timeline-node:hover *,
 
 .timeline-year {
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   font-weight: 700;
   color: var(--hist-terracotta);
   margin-bottom: 6px;
@@ -687,7 +645,7 @@ a.timeline-node:hover *,
 }
 
 .timeline-node-desc {
-  font-size: 0.825rem;
+  font-size: var(--fs-sm);
   color: var(--hist-text-secondary);
   line-height: 1.45;
   margin: 0;
@@ -697,7 +655,7 @@ a.timeline-node:hover *,
    Narrative Content Area (Concise vs Comprehensive)
    -------------------------------------------------------------------------- */
 .history-narrative-section {
-  padding: 56px 0 72px 0;
+  padding: var(--spacing-xl) 0;
   background: var(--hist-surface);
 }
 
@@ -712,8 +670,14 @@ a.timeline-node:hover *,
 }
 
 @keyframes fadeInView {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -727,7 +691,7 @@ a.timeline-node:hover *,
 .concise-lead-card {
   background: var(--hist-surface-alt);
   border: 1px solid var(--hist-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 32px;
   margin-bottom: 36px;
   box-shadow: var(--hist-card-shadow);
@@ -753,7 +717,7 @@ a.timeline-node:hover *,
 
 .concise-highlight-card {
   padding: 20px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   background: var(--hist-surface);
   border: 1px solid var(--hist-border);
   box-shadow: var(--hist-card-shadow);
@@ -773,7 +737,7 @@ a.timeline-node:hover *,
 }
 
 .concise-highlight-desc {
-  font-size: 0.92rem;
+  font-size: 0.9375rem;
   color: var(--hist-text-secondary);
   line-height: 1.55;
   margin: 0;
@@ -797,14 +761,14 @@ a.timeline-node:hover *,
   overflow-y: auto;
   background: var(--hist-surface-alt);
   border: 1px solid var(--hist-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 20px;
   box-shadow: var(--hist-card-shadow);
   scrollbar-width: thin;
 }
 
 .chapter-sidebar-title {
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -826,7 +790,7 @@ a.timeline-node:hover *,
   align-items: center;
   gap: 10px;
   padding: 8px 12px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--hist-text-secondary);
@@ -876,11 +840,11 @@ a.timeline-node:hover *,
 
 .mobile-era-pill {
   padding: 6px 14px;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   background: var(--hist-surface-muted);
   border: 1px solid var(--hist-border);
   color: var(--hist-text-secondary);
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   font-weight: 600;
   white-space: nowrap;
   text-decoration: none;
@@ -917,7 +881,7 @@ a.timeline-node:hover *,
 
 .chapter-era-badge {
   display: inline-block;
-  font-size: 0.825rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   color: var(--hist-terracotta);
   text-transform: uppercase;
@@ -954,7 +918,7 @@ a.timeline-node:hover *,
 .history-callout {
   background: var(--hist-surface-alt);
   border: 1px solid var(--hist-border);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 20px 24px;
   margin: 28px 0;
   display: flex;
@@ -983,7 +947,7 @@ a.timeline-node:hover *,
    Scholarly Discrepancies & References Section
    -------------------------------------------------------------------------- */
 .scholarly-section {
-  padding: 48px 0 64px 0;
+  padding: var(--spacing-xl) 0;
   background: var(--hist-surface-alt);
   border-top: 1px solid var(--hist-border);
 }
@@ -991,7 +955,7 @@ a.timeline-node:hover *,
 .discrepancy-card {
   background: var(--hist-surface);
   border: 1px solid var(--hist-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 32px;
   margin-bottom: 32px;
   box-shadow: var(--hist-card-shadow);
@@ -1007,7 +971,7 @@ a.timeline-node:hover *,
 .discrepancy-header-icon {
   width: 38px;
   height: 38px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--hist-terracotta-light);
   color: var(--hist-terracotta);
   display: flex;
@@ -1057,7 +1021,7 @@ a.timeline-node:hover *,
 .references-card {
   background: var(--hist-surface);
   border: 1px solid var(--hist-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 28px 32px;
   box-shadow: var(--hist-card-shadow);
 }
@@ -1085,7 +1049,7 @@ a.timeline-node:hover *,
 }
 
 .citation-list li::before {
-  content: '—';
+  content: '-';
   position: absolute;
   left: 0;
   color: var(--hist-text-muted);
@@ -1094,6 +1058,7 @@ a.timeline-node:hover *,
 .citation-list a {
   color: var(--hist-terracotta);
   word-break: break-all;
+  text-decoration: underline;
 }
 
 .citation-list a:hover {
@@ -1102,9 +1067,9 @@ a.timeline-node:hover *,
 
 .disclaimer-banner {
   background: var(--hist-surface-muted);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 16px 20px;
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   line-height: 1.55;
   color: var(--hist-text-muted);
   border: 1px solid var(--hist-border);
@@ -1117,10 +1082,10 @@ mark.history-search-highlight {
   background: #fef08a;
   color: #713f12;
   padding: 1px 3px;
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
 }
 
-[data-theme="dark"] mark.history-search-highlight {
+[data-theme='dark'] mark.history-search-highlight {
   background: #854d0e;
   color: #fef9c3;
 }
@@ -1133,36 +1098,42 @@ mark.history-search-highlight {
     grid-template-columns: 240px minmax(0, 1fr);
     gap: 32px;
   }
-  
-  .bento-col-4 { grid-column: span 6; }
-  .bento-col-8 { grid-column: span 12; }
+
+  .bento-col-4 {
+    grid-column: span 6;
+  }
+  .bento-col-8 {
+    grid-column: span 12;
+  }
 }
 
 @media (max-width: 840px) {
   .comprehensive-layout {
     grid-template-columns: 1fr;
   }
-  
+
   .chapter-sidebar {
     display: none;
   }
-  
+
   .mobile-era-bar {
     display: flex;
   }
-  
-  .bento-col-6 { grid-column: span 12; }
-  
+
+  .bento-col-6 {
+    grid-column: span 12;
+  }
+
   .reading-toolbar {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .reading-search-box {
     max-width: 100%;
     min-width: 100%;
   }
-  
+
   .reading-meta-group,
   .reading-actions-group {
     justify-content: space-between;
@@ -1171,26 +1142,40 @@ mark.history-search-highlight {
 }
 
 @media (max-width: 640px) {
-  .history-hero {
-    padding: 36px 0 32px 0;
+  .view-switcher {
+    flex-direction: column;
+    width: 100%;
   }
-  
+
   .view-switch-btn {
+    width: 100%;
     padding: 8px 16px;
     font-size: 0.875rem;
   }
-  
+
   .timeline-node {
     width: 180px;
   }
-  
+
   .concise-lead-card {
     padding: 20px;
   }
-  
+
   .discrepancy-card,
   .references-card {
     padding: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Section Rhythm (matches the sitewide .section desktop bump in style.css)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .history-bento-section,
+  .history-timeline-section,
+  .history-narrative-section,
+  .scholarly-section {
+    padding: 64px 0;
   }
 }
 
@@ -1202,7 +1187,7 @@ mark.history-search-highlight {
   .hotline-bar,
   .site-header,
   .info-bar,
-  .view-switcher-container,
+  .view-switcher-section,
   .reading-toolbar-wrapper,
   .chapter-sidebar,
   .mobile-era-bar,
@@ -1211,29 +1196,17 @@ mark.history-search-highlight {
   .toolbar-action-btn {
     display: none !important;
   }
-  
+
   body {
     background: #ffffff !important;
     color: #000000 !important;
   }
-  
-  .history-hero {
-    background: none !important;
-    color: #000000 !important;
-    padding: 20px 0 !important;
-    border-bottom: 2px solid #000000 !important;
-  }
-  
-  .history-hero h1,
-  .history-tagline {
-    color: #000000 !important;
-  }
-  
+
   .history-view-container {
     display: block !important;
     opacity: 1 !important;
   }
-  
+
   .chapter-block {
     page-break-inside: avoid;
   }

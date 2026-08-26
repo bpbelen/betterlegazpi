@@ -14,18 +14,12 @@
       content="CSWDO Legazpi, City Social Welfare and Development Office, CSWDO Citizen's Charter, AICS financial assistance Legazpi, medical assistance Legazpi, burial assistance, educational aid, Certificate of Indigency, Social Case Study Report, PhilHealth UHC indigent, Solo Parent ID RA 11861, Legazpi City Albay"
     />
     <meta name="robots" content="index, follow" />
-    <link
-      rel="canonical"
-      href="https://betterlegazpi.org/service-details/cswdo-services"
-    />
+    <link rel="canonical" href="https://betterlegazpi.org/service-details/cswdo-services" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://betterlegazpi.org/service-details/cswdo-services"
-    />
+    <meta property="og:url" content="https://betterlegazpi.org/service-details/cswdo-services" />
     <meta
       property="og:title"
-      content="CSWDO Citizen's Charter — City Social Welfare and Development Office | BetterLegazpi.org"
+      content="CSWDO Citizen's Charter. City Social Welfare and Development Office | BetterLegazpi.org"
     />
     <meta
       property="og:description"
@@ -56,16 +50,8 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-hub.css" />
     <style>
-      .bpl-section {
-        padding: 40px 0;
-      }
-      .bpl-section.alt-bg {
-        background: var(--color-bg-alt);
-      }
-      .section-header {
-        margin-bottom: 24px;
-      }
       .section-header h2 {
         font-size: 1.25rem;
         color: var(--color-text);
@@ -77,252 +63,6 @@
         white-space: nowrap;
         flex-shrink: 0;
       }
-      .section-header h2 i {
-        color: var(--color-primary);
-        font-size: 1.15rem;
-      }
-      .section-header p {
-        color: var(--color-text-light);
-        font-size: 0.875rem;
-        margin: 0;
-        line-height: 1.5;
-      }
-      .quick-stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-        margin-bottom: 24px;
-      }
-      .stat-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        text-align: center;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .stat-card i {
-        font-size: 1.15rem;
-        color: var(--color-primary);
-        margin-bottom: 4px;
-      }
-      .stat-card h4 {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin-bottom: 2px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .stat-card p {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
-      .service-tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 28px;
-        justify-content: center;
-        background: transparent;
-        border: none;
-        padding: 0;
-      }
-      .service-tab {
-        padding: 10px 20px;
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 8px;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--color-text);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .service-tab:hover {
-        border-color: var(--color-primary);
-        color: var(--color-primary);
-      }
-      .service-tab.active {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
-        color: white;
-        box-shadow: 0 2px 6px rgba(0, 50, 160, 0.2);
-      }
-      .service-tab.active i {
-        color: white;
-      }
-      .service-content {
-        display: none;
-      }
-      .service-content.active {
-        display: block;
-      }
-      .sub-service-controls {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 4px 2px;
-      }
-      .sub-service-count {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: #64748b;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .sub-service-count i {
-        color: var(--color-primary);
-      }
-      .btn-toggle-all {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        border-radius: 6px;
-        padding: 6px 14px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--color-primary);
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-      }
-      .btn-toggle-all:hover {
-        background: rgba(0, 50, 160, 0.06);
-        border-color: var(--color-primary);
-      }
-      .sub-service-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        margin-bottom: 14px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-        overflow: hidden;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      }
-      .sub-service-card:hover {
-        border-color: rgba(0, 50, 160, 0.22);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-      }
-      .sub-service-card.is-open {
-        border-color: rgba(0, 50, 160, 0.25);
-        box-shadow: 0 4px 14px rgba(0, 50, 160, 0.05);
-      }
-      .sub-service-card:last-child {
-        margin-bottom: 0;
-      }
-      .sub-service-header {
-        padding: 18px 20px;
-        cursor: pointer;
-        user-select: none;
-        background: var(--color-white, #ffffff);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 14px;
-        transition: background 0.15s ease;
-        margin-bottom: 0;
-        border-bottom: none;
-      }
-      .sub-service-header:hover {
-        background: #f8faff;
-      }
-      .sub-service-header:focus-visible {
-        outline: 2px solid var(--color-primary);
-        outline-offset: -2px;
-      }
-      .sub-service-header-left {
-        flex: 1;
-        min-width: 0;
-      }
-      .sub-service-title-wrap {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px 12px;
-        margin-bottom: 6px;
-      }
-      .sub-service-header h3 {
-        font-size: 1.0625rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .sub-service-header h3 i {
-        color: var(--color-primary);
-      }
-      .sub-service-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 3px 10px;
-        background: rgba(0, 50, 160, 0.08);
-        color: var(--color-primary);
-        border-radius: 20px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-      }
-      .sub-service-desc {
-        color: #475569;
-        font-size: 0.8125rem;
-        line-height: 1.45;
-        margin: 0 0 6px 0;
-      }
-      .sub-service-teaser {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-        color: var(--color-primary);
-      }
-      .sub-service-chevron-btn {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: #f1f5f9;
-        color: #475569;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        transition: all 0.25s ease;
-        border: none;
-        font-size: 0.8125rem;
-      }
-      .sub-service-card:hover .sub-service-chevron-btn {
-        background: rgba(0, 50, 160, 0.1);
-        color: var(--color-primary);
-      }
-      .sub-service-card.is-open .sub-service-chevron-btn {
-        background: var(--color-primary);
-        color: white;
-        transform: rotate(180deg);
-      }
-      .sub-service-body {
-        display: none;
-        padding: 20px;
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
-        background: var(--color-bg-alt, #f8f9fa);
-      }
-      .sub-service-card.is-open .sub-service-body {
-        display: block;
-      }
 
       /* Requirements Checklist & Boxes */
       .req-summary-grid {
@@ -331,24 +71,7 @@
         gap: 16px;
         margin-bottom: 18px;
       }
-      .req-box {
-        background: var(--color-bg-alt, #f8fafc);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-      }
-      .req-box h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 12px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .req-box h4 i {
-        color: var(--color-primary);
-      }
+
       .req-subheading {
         font-size: 0.71875rem;
         font-weight: 700;
@@ -359,34 +82,7 @@
         padding-bottom: 4px;
         border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
       }
-      .req-subheading:first-of-type {
-        margin-top: 0;
-      }
-      .req-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .req-list li {
-        font-size: 0.8125rem;
-        color: #334155;
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        line-height: 1.45;
-      }
-      .req-list li i {
-        color: var(--color-primary);
-        font-size: 0.875rem;
-        margin-top: 2px;
-        flex-shrink: 0;
-      }
-      .req-list li strong {
-        color: var(--color-text);
-      }
+
       .req-badge-conditional {
         display: inline-block;
         padding: 2px 6px;
@@ -400,13 +96,15 @@
         margin-right: 4px;
         vertical-align: middle;
       }
+
       [data-theme='dark'] .req-badge-conditional {
         background: rgba(245, 158, 11, 0.2);
         color: #fbbf24;
       }
+
       .source-tag {
         font-size: 0.6875rem;
-        color: #64748b;
+        color: var(--color-text-light);
         background: rgba(0, 0, 0, 0.04);
         padding: 2px 6px;
         border-radius: 4px;
@@ -427,13 +125,16 @@
         padding: 10px 14px;
         border-radius: 6px;
       }
+
       .eop-note strong {
         color: var(--color-text);
       }
+
       .eop-note i {
         color: var(--color-primary);
         margin-right: 3px;
       }
+
       [data-theme='dark'] .eop-note {
         background: rgba(0, 50, 160, 0.12);
         color: #94a3b8;
@@ -445,45 +146,6 @@
         flex-direction: column;
         gap: 8px;
       }
-      .metric-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 6px;
-        padding: 10px 12px;
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      .metric-icon {
-        width: 30px;
-        height: 30px;
-        background: rgba(0, 50, 160, 0.05);
-        color: var(--color-primary);
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.95rem;
-        flex-shrink: 0;
-        margin-top: 1px;
-      }
-      .metric-content {
-        flex: 1;
-      }
-      .metric-label {
-        font-size: 0.625rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: var(--color-text-light);
-        letter-spacing: 0.5px;
-        margin-bottom: 2px;
-      }
-      .metric-value {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        line-height: 1.4;
-      }
 
       /* Category Boxes (for Solo Parent 13 Categories Breakdown) */
       .solo-categories-grid {
@@ -492,12 +154,14 @@
         gap: 10px;
         margin-top: 12px;
       }
+
       .solo-cat-card {
         background: var(--color-white, #ffffff);
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 6px;
         padding: 10px 12px;
       }
+
       .solo-cat-card h5 {
         font-size: 0.75rem;
         font-weight: 700;
@@ -507,6 +171,7 @@
         align-items: center;
         gap: 6px;
       }
+
       .solo-cat-card ul {
         list-style: disc;
         padding-left: 16px;
@@ -515,11 +180,13 @@
         flex-direction: column;
         gap: 3px;
       }
+
       .solo-cat-card ul li {
         font-size: 0.71875rem;
         color: #475569;
         line-height: 1.4;
       }
+
       [data-theme='dark'] .solo-cat-card ul li {
         color: #94a3b8;
       }
@@ -537,17 +204,7 @@
         margin-top: 10px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
       }
-      .process-table th {
-        background: var(--color-primary);
-        color: white;
-        padding: 12px 14px;
-        text-align: left;
-        font-weight: 600;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
-      }
+
       .process-table td {
         padding: 14px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -555,26 +212,7 @@
         line-height: 1.5;
         color: var(--color-text);
       }
-      .process-table tr:last-child td {
-        border-bottom: none;
-      }
-      .process-table tbody tr:hover {
-        background: rgba(0, 50, 160, 0.015);
-      }
-      .step-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        background: var(--color-primary);
-        color: white;
-        font-size: 0.75rem;
-        font-weight: 700;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0, 50, 160, 0.15);
-      }
-      
+
       /* Officer Stack & Rectangle Badges */
       .officer-stack {
         display: flex;
@@ -582,6 +220,7 @@
         gap: 5px;
         align-items: flex-start;
       }
+
       .personnel-tag {
         display: inline-block;
         background: rgba(0, 50, 160, 0.08);
@@ -593,14 +232,15 @@
         line-height: 1.35;
         border: 1px solid rgba(0, 50, 160, 0.12);
       }
-      
+
       /* Fee Tag Style */
       .fee-tag {
-        color: #16a34a;
+        color: #15803d;
         font-weight: 700;
         font-size: 0.8125rem;
         display: inline-block;
       }
+
       [data-theme='dark'] .fee-tag {
         color: #4ade80;
       }
@@ -611,61 +251,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 12px;
       }
-      .staff-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .staff-card h4 {
-        font-size: 0.8125rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 3px 0;
-      }
-      .staff-card .staff-role {
-        font-size: 0.75rem;
-        color: var(--color-primary);
-        font-weight: 600;
-        margin: 0 0 2px 0;
-      }
-      .staff-card p {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-      }
-      .staff-expand-btn {
-        margin: 20px auto 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        background: white;
-        color: var(--color-primary);
-        border: 1px solid rgba(0, 50, 160, 0.2);
-        padding: 8px 20px;
-        border-radius: 20px;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .staff-expand-btn:hover {
-        background: rgba(0, 50, 160, 0.05);
-        border-color: var(--color-primary);
-      }
+
       [data-theme='dark'] .staff-expand-btn {
         background: #1e293b;
         color: #60a5fa;
         border-color: rgba(96, 165, 250, 0.3);
-      }
-      .staff-extra {
-        display: none;
-      }
-      .staff-extra.show {
-        display: contents;
       }
 
       /* 4 Contact & ARTA Cards (BPLO Spec 2x2 Grid) */
@@ -674,42 +264,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
       }
-      .contact-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .contact-card h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 10px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .contact-card h4 i {
-        color: var(--color-primary);
-      }
-      .contact-card p {
-        font-size: 0.8125rem;
-        color: #475569;
-        margin: 0 0 6px 0;
-        line-height: 1.45;
-      }
-      .contact-card p:last-child {
-        margin-bottom: 0;
-      }
-      .contact-card a {
-        color: var(--color-primary);
-        text-decoration: none;
-        font-weight: 600;
-      }
-      .contact-card a:hover {
-        text-decoration: underline;
-      }
+
       [data-theme='dark'] .contact-card p {
         color: #94a3b8;
       }
@@ -725,11 +280,12 @@
           grid-template-columns: repeat(2, 1fr);
         }
       }
+
       @media (max-width: 768px) {
         .quick-stats {
           grid-template-columns: repeat(2, 1fr);
         }
-        
+
         /* Mobile Card Transformation for Process Tables */
         .table-responsive {
           overflow-x: visible;
@@ -773,7 +329,7 @@
           padding: 0;
           border: none;
         }
-        
+
         /* 1. Step Header Pill */
         .process-table td:nth-child(1) {
           display: flex;
@@ -783,14 +339,14 @@
           border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
         .process-table td:nth-child(1)::after {
-          content: "STEP DETAILS";
+          content: 'STEP DETAILS';
           font-weight: 700;
           font-size: 0.6875rem;
           letter-spacing: 0.5px;
           text-transform: uppercase;
           color: var(--color-primary);
         }
-        
+
         /* 2. Client & Agency Action */
         .process-table td:nth-child(2) {
           font-size: 0.84375rem;
@@ -798,7 +354,7 @@
           line-height: 1.5;
         }
         .process-table td:nth-child(2)::before {
-          content: "📋 Action Details";
+          content: '📋 Action Details';
           display: block;
           font-size: 0.6875rem;
           font-weight: 700;
@@ -824,7 +380,7 @@
           padding-top: 2px;
         }
         .process-table td:nth-child(3)::before {
-          content: "💰 Fees:";
+          content: '💰 Fees:';
           font-weight: 700;
           font-size: 0.71875rem;
           color: var(--color-text-light, #64748b);
@@ -842,7 +398,7 @@
           font-size: 0.78125rem;
         }
         .process-table td:nth-child(4)::before {
-          content: "📍 Officer:";
+          content: '📍 Officer:';
           font-weight: 700;
           font-size: 0.71875rem;
           color: var(--color-text-light, #64748b);
@@ -850,19 +406,6 @@
           letter-spacing: 0.4px;
           width: 100%;
           margin-bottom: 2px;
-        }
-      }
-      @media (max-width: 575px) {
-        .quick-stats,
-        .staff-grid {
-          grid-template-columns: 1fr;
-        }
-        .service-tabs {
-          flex-direction: column;
-        }
-        .service-tab {
-          text-align: center;
-          justify-content: center;
         }
       }
     </style>
@@ -878,9 +421,9 @@
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <!-- Hotline Bar (Matching BPLO Hub) -->
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -914,7 +457,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -925,14 +467,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -958,15 +497,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -997,8 +541,7 @@
       <!-- Breadcrumbs -->
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="../services/">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="../services/">Services</a><span>/</span>
           <a href="../services/social-services">Social Services</a><span>/</span>
           <span aria-current="page">CSWDO Citizen's Charter</span>
         </nav>
@@ -1011,7 +554,8 @@
             <span class="page-header-badge"><i class="bi bi-heart-pulse"></i> CSWDO</span>
             <h1>City Social Welfare and Development Office</h1>
             <p class="page-header-desc">
-              Your consolidated guide in social welfare programs, financial aids, and other forms of assistance for the residents of Legazpi City.
+              Your consolidated guide in social welfare programs, financial aids, and other forms of
+              assistance for the residents of Legazpi City.
             </p>
           </div>
         </div>
@@ -1034,7 +578,7 @@
             <div class="stat-card">
               <i class="bi bi-clock"></i>
               <h4>Hours</h4>
-              <p>8:00 AM – 5:00 PM (Mon–Fri)</p>
+              <p>8:00 AM - 5:00 PM (Mon-Fri)</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-telephone"></i>
@@ -1054,7 +598,8 @@
               <span>CSWDO Frontline Services</span>
             </h2>
             <p>
-              Select a functional category to explore requirements, process workflows, and guidelines under the CSWDO Citizen's Charter.
+              Select a functional category to explore requirements, process workflows, and
+              guidelines under the CSWDO Citizen's Charter.
             </p>
           </div>
 
@@ -1098,11 +643,20 @@
           <!-- ========================================================================= -->
           <!-- CATEGORY TAB 1: FINANCIAL & CRISIS ASSISTANCE                             -->
           <!-- ========================================================================= -->
-          <div class="service-content active" id="financial-crisis" role="tabpanel" aria-labelledby="tab-financial-crisis">
+          <div
+            class="service-content active"
+            id="financial-crisis"
+            role="tabpanel"
+            aria-labelledby="tab-financial-crisis"
+          >
             <div class="sub-service-controls">
               <div>
-                <span class="sub-service-count"><i class="bi bi-collection"></i> 2 Services in this category</span>
-                <p style="margin: 4px 0 0 0; font-size: 0.8125rem; color: var(--color-text-light);">Help for families facing sudden hardship, medical, or funeral costs.</p>
+                <span class="sub-service-count"
+                  ><i class="bi bi-collection"></i> 2 Services in this category</span
+                >
+                <p style="margin: 4px 0 0 0; font-size: 0.8125rem; color: var(--color-text-light)">
+                  Help for families facing sudden hardship, medical, or funeral costs.
+                </p>
               </div>
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
@@ -1111,14 +665,28 @@
 
             <!-- Service 1.1: Limited Financial Assistance / AICS -->
             <div class="sub-service-card is-open" id="financial-assistance-aics">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="true" aria-controls="sub-svc-aics">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="true"
+                aria-controls="sub-svc-aics"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-cash-coin"></i> Limited Financial Assistance / Assistance to Individuals in Crisis Situations (AICS)</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face &amp; Field Validation</span>
+                    <h3>
+                      <i class="bi bi-cash-coin"></i> Limited Financial Assistance / Assistance to
+                      Individuals in Crisis Situations (AICS)
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face &amp; Field Validation</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Limited cash assistance extended to clients in crisis due to death, illness, calamity, and other disasters that befell the family. Includes assistance for medical needs, hospitalization, transportation, education, burial, and crisis livelihood.
+                    Limited cash assistance extended to clients in crisis due to death, illness,
+                    calamity, and other disasters that befell the family. Includes assistance for
+                    medical needs, hospitalization, transportation, education, burial, and crisis
+                    livelihood.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1137,31 +705,58 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Proof of Identity:</strong> 1 valid government-issued photo ID with date of birth (National ID, UMID, Driver's License, Voter's, 4Ps, or Barangay ID; original for verification).</span>
+                        <span
+                          ><strong>Proof of Identity:</strong> 1 valid government-issued photo ID
+                          with date of birth (National ID, UMID, Driver's License, Voter's, 4Ps, or
+                          Barangay ID; original for verification).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Barangay Certification:</strong> 1 original Barangay Certificate of Indigency or Residency.</span>
+                        <span
+                          ><strong>Barangay Certification:</strong> 1 original Barangay Certificate
+                          of Indigency or Residency.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>CSWDO Form:</strong> Certificate of Eligibility (CE) form provided by CSWDO upon intake.</span>
+                        <span
+                          ><strong>CSWDO Form:</strong> Certificate of Eligibility (CE) form
+                          provided by CSWDO upon intake.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Medical Aid</span> <strong>Medical Documents:</strong> Medical Certificate, abstract, doctor's prescription, laboratory order, or hospital billing statement.</span>
+                        <span
+                          ><span class="req-badge-conditional">Medical Aid</span>
+                          <strong>Medical Documents:</strong> Medical Certificate, abstract,
+                          doctor's prescription, laboratory order, or hospital billing
+                          statement.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Educational Aid</span> <strong>Enrollment Record:</strong> 1 copy of Certificate of Enrolment from the School Registrar.</span>
+                        <span
+                          ><span class="req-badge-conditional">Educational Aid</span>
+                          <strong>Enrollment Record:</strong> 1 copy of Certificate of Enrolment
+                          from the School Registrar.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Burial Aid</span> <strong>Death Record:</strong> 1 registered Death Certificate from Local Civil Registrar (LCR) / PSA.</span>
+                        <span
+                          ><span class="req-badge-conditional">Burial Aid</span>
+                          <strong>Death Record:</strong> 1 registered Death Certificate from Local
+                          Civil Registrar (LCR) / PSA.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">If Representative</span> <strong>Authorization:</strong> Signed authorization letter and valid ID of the authorized claimant listed in the CE.</span>
+                        <span
+                          ><span class="req-badge-conditional">If Representative</span>
+                          <strong>Authorization:</strong> Signed authorization letter and valid ID
+                          of the authorized claimant listed in the CE.</span
+                        >
                       </li>
                     </ul>
                   </div>
@@ -1187,7 +782,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Walk-in (CSWDO Reception) • Field Assessment • EDAS Releasing</div>
+                          <div class="metric-value">
+                            Walk-in (CSWDO Reception) • Field Assessment • EDAS Releasing
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1196,7 +793,11 @@
 
                 <!-- Policy Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Program Overview:</strong> AICS provides direct emergency financial support to families in crisis. If the client is outside the city or unable to appear due to medical appointments, an authorization letter together with valid identification must be provided to the authorized family representative indicated in the Certificate of Eligibility (CE).
+                  <strong><i class="bi bi-info-circle"></i> Program Overview:</strong> AICS provides
+                  direct emergency financial support to families in crisis. If the client is outside
+                  the city or unable to appear due to medical appointments, an authorization letter
+                  together with valid identification must be provided to the authorized family
+                  representative indicated in the Certificate of Eligibility (CE).
                 </div>
 
                 <!-- Process Table for AICS -->
@@ -1216,12 +817,14 @@
                         <td><span class="step-badge">1</span></td>
                         <td>
                           <strong>Submit Request</strong><br />
-                          Submit request for financial assistance and present initial identification.
+                          Submit request for financial assistance and present initial
+                          identification.
                         </td>
                         <td>
-                          Search for client's General Intake Sheet (GIS) in database &amp; files and route client to the concerned section.
+                          Search for client's General Intake Sheet (GIS) in database &amp; files and
+                          route client to the concerned section.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Reception Desk Staff</span>
                         </td>
@@ -1233,11 +836,17 @@
                           Submit for interview and present the required documents.
                         </td>
                         <td>
-                          Conduct detailed interview and assessment of case. If client is not qualified, inform him/her immediately after the assessment.<br /><br />
-                          <strong>2.1</strong> If client is qualified, gather collateral information thru home visits (if needed), phone calls and texts and refer the case of qualified client with complete document to Emergency / Disaster Assistance Section (EDAS) for assistance.<br /><br />
-                          <strong>2.2</strong> Prepare Certificate of Eligibility (CE) for client to sign and submit CE with complete documents to Admin Division as basis for cash advance.
+                          Conduct detailed interview and assessment of case. If client is not
+                          qualified, inform him/her immediately after the assessment.<br /><br />
+                          <strong>2.1</strong> If client is qualified, gather collateral information
+                          thru home visits (if needed), phone calls and texts and refer the case of
+                          qualified client with complete document to Emergency / Disaster Assistance
+                          Section (EDAS) for assistance.<br /><br />
+                          <strong>2.2</strong> Prepare Certificate of Eligibility (CE) for client to
+                          sign and submit CE with complete documents to Admin Division as basis for
+                          cash advance.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Social Welfare Officer / Case Worker</span>
                         </td>
@@ -1249,11 +858,14 @@
                           Wait for the worker's information of the schedule of release.
                         </td>
                         <td>
-                          Submit a batch of CEs to the Head of Office and City Mayor's Office for signatures.<br /><br />
-                          <strong>3.1</strong> Upon receipt of signed CEs, prepare and process cash advance.<br /><br />
-                          <strong>3.3</strong> As soon as fund is available, inform Emergency / Disaster Assistance Section (EDAS) re: availability of such.
+                          Submit a batch of CEs to the Head of Office and City Mayor's Office for
+                          signatures.<br /><br />
+                          <strong>3.1</strong> Upon receipt of signed CEs, prepare and process cash
+                          advance.<br /><br />
+                          <strong>3.3</strong> As soon as fund is available, inform Emergency /
+                          Disaster Assistance Section (EDAS) re: availability of such.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Administrative Officer / City Mayor</span>
                         </td>
@@ -1262,13 +874,19 @@
                         <td><span class="step-badge">4</span></td>
                         <td>
                           <strong>Claim Financial Assistance</strong><br />
-                          Claim cash assistance. <em>(In case you are outside the City, inform CSWDO when you can return, or leave an authorization letter with your ID to an authorized family member listed in the CE).</em>
+                          Claim cash assistance.
+                          <em
+                            >(In case you are outside the City, inform CSWDO when you can return, or
+                            leave an authorization letter with your ID to an authorized family
+                            member listed in the CE).</em
+                          >
                         </td>
                         <td>
-                          Emergency / Disaster Assistance Section (EDAS) to inform all clients to claim their assistance and/or coordinate with sections re: the same.<br /><br />
+                          Emergency / Disaster Assistance Section (EDAS) to inform all clients to
+                          claim their assistance and/or coordinate with sections re: the same.<br /><br />
                           <strong>4.1</strong> Release financial assistance to client.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">EDAS Staff / Disbursing Officer</span>
                         </td>
@@ -1281,18 +899,34 @@
 
             <!-- Service 1.2: Issuance of Certificate of Indigency / Case Study / Referral -->
             <div class="sub-service-card is-open" id="certificate-indigency-case-study">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="true" aria-controls="sub-svc-indigency">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="true"
+                aria-controls="sub-svc-indigency"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-file-earmark-text"></i> Issuance of Certificate of Indigency / Assessment Report / Social Case Study Report / Referral</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face &amp; Home Visit</span>
+                    <h3>
+                      <i class="bi bi-file-earmark-text"></i> Issuance of Certificate of Indigency /
+                      Assessment Report / Social Case Study Report / Referral
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face &amp; Home Visit</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Issuance of official documents by registered social workers to clients exploring resources of other agencies/institutions for education, burial, medical, counseling, psychiatric, legal aid, birth/marriage certificate correction, shelter, and livelihood.
+                    Issuance of official documents by registered social workers to clients exploring
+                    resources of other agencies/institutions for education, burial, medical,
+                    counseling, psychiatric, legal aid, birth/marriage certificate correction,
+                    shelter, and livelihood.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
-                    <span>Tap to view requirements, partner institutions, &amp; 3-step process</span>
+                    <span
+                      >Tap to view requirements, partner institutions, &amp; 3-step process</span
+                    >
                   </div>
                 </div>
                 <div class="sub-service-chevron-btn" aria-hidden="true">
@@ -1307,31 +941,58 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Proof of Identity:</strong> 1 valid government-issued photo ID with date of birth (National ID, UMID, Driver's License, Voter's, 4Ps, or Barangay ID; original for verification).</span>
+                        <span
+                          ><strong>Proof of Identity:</strong> 1 valid government-issued photo ID
+                          with date of birth (National ID, UMID, Driver's License, Voter's, 4Ps, or
+                          Barangay ID; original for verification).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Barangay Certification:</strong> 1 original Barangay Certificate of Indigency or Residency.</span>
+                        <span
+                          ><strong>Barangay Certification:</strong> 1 original Barangay Certificate
+                          of Indigency or Residency.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Burial Aid</span> <strong>Burial Documents:</strong> 1 copy of Death Certificate AND City Mayor's recommendation note.</span>
+                        <span
+                          ><span class="req-badge-conditional">Burial Aid</span>
+                          <strong>Burial Documents:</strong> 1 copy of Death Certificate AND City
+                          Mayor's recommendation note.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Medical Aid</span> <strong>Medical Record:</strong> Medical Certificate, clinical abstract, or hospital bill.</span>
+                        <span
+                          ><span class="req-badge-conditional">Medical Aid</span>
+                          <strong>Medical Record:</strong> Medical Certificate, clinical abstract,
+                          or hospital bill.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Educational Aid</span> <strong>Enrollment Proof:</strong> 1 original Certificate of Enrolment from School Registrar.</span>
+                        <span
+                          ><span class="req-badge-conditional">Educational Aid</span>
+                          <strong>Enrollment Proof:</strong> 1 original Certificate of Enrolment
+                          from School Registrar.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Legal Aid</span> <strong>Legal Issue Evidence:</strong> Proof or documentation of dispute/case (for IBP / PAO referral).</span>
+                        <span
+                          ><span class="req-badge-conditional">Legal Aid</span>
+                          <strong>Legal Issue Evidence:</strong> Proof or documentation of
+                          dispute/case (for IBP / PAO referral).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Clerical Correction</span> <strong>Civil Registry:</strong> Marriage Contract or Birth Certificate (for PSA / LCR correction).</span>
+                        <span
+                          ><span class="req-badge-conditional">Clerical Correction</span>
+                          <strong>Civil Registry:</strong> Marriage Contract or Birth Certificate
+                          (for PSA / LCR correction).</span
+                        >
                       </li>
                     </ul>
                   </div>
@@ -1357,7 +1018,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Walk-in (Assessment Desk) • Home Visit Validation</div>
+                          <div class="metric-value">
+                            Walk-in (Assessment Desk) • Home Visit Validation
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1366,7 +1029,19 @@
 
                 <!-- Policy & Partner Agencies Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Institutional Partnerships &amp; Home Visits:</strong> Documents issued under this service are used to explore external funding and services from partner agencies including <strong>Simon of Cyrene, Provincial Social Welfare and Development Office (PSWDO), DSWD, Philippine Charity Sweepstakes Office (PCSO), Integrated Bar of the Philippines (IBP), Public Attorney's Office (PAO)</strong>, and affiliated hospitals/NGOs. A collateral interview and home visit are conducted prior to issuance; if CSWDO already has an updated record on file, the home visit procedure is omitted.
+                  <strong
+                    ><i class="bi bi-info-circle"></i> Institutional Partnerships &amp; Home
+                    Visits:</strong
+                  >
+                  Documents issued under this service are used to explore external funding and
+                  services from partner agencies including
+                  <strong
+                    >Simon of Cyrene, Provincial Social Welfare and Development Office (PSWDO),
+                    DSWD, Philippine Charity Sweepstakes Office (PCSO), Integrated Bar of the
+                    Philippines (IBP), Public Attorney's Office (PAO)</strong
+                  >, and affiliated hospitals/NGOs. A collateral interview and home visit are
+                  conducted prior to issuance; if CSWDO already has an updated record on file, the
+                  home visit procedure is omitted.
                 </div>
 
                 <!-- 4-Column Process Table -->
@@ -1390,9 +1065,10 @@
                           Submit request for certification, social case study report, or referral.
                         </td>
                         <td>
-                          Search for client's General Intake Sheet (GIS) in database &amp; files and route client to the concerned section.
+                          Search for client's General Intake Sheet (GIS) in database &amp; files and
+                          route client to the concerned section.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Reception Desk Staff</span>
                         </td>
@@ -1404,11 +1080,15 @@
                           Submit for Interview and present the required documents.
                         </td>
                         <td>
-                          Conduct detailed interview and assessment of case. If client is not qualified, inform him/her immediately after the assessment.<br /><br />
-                          <strong>2.1</strong> If client is qualified, gather collateral information thru home visits (if needed), phone calls and texts.<br /><br />
-                          <strong>2.2</strong> Prepare the Certificate of Indigency / assessment report / social case study report / referral for signature of Head of Office.
+                          Conduct detailed interview and assessment of case. If client is not
+                          qualified, inform him/her immediately after the assessment.<br /><br />
+                          <strong>2.1</strong> If client is qualified, gather collateral information
+                          thru home visits (if needed), phone calls and texts.<br /><br />
+                          <strong>2.2</strong> Prepare the Certificate of Indigency / assessment
+                          report / social case study report / referral for signature of Head of
+                          Office.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Social Welfare Officer / Case Worker</span>
                         </td>
@@ -1420,9 +1100,10 @@
                           Claim the requested document.
                         </td>
                         <td>
-                          Issue Certificate of Indigency / assessment report / social case study report / referral with instructions on how to proceed.
+                          Issue Certificate of Indigency / assessment report / social case study
+                          report / referral with instructions on how to proceed.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Officer-of-the-Day</span>
                         </td>
@@ -1437,11 +1118,20 @@
           <!-- ========================================================================= -->
           <!-- CATEGORY TAB 2: HEALTH COVERAGE SUPPORT                                   -->
           <!-- ========================================================================= -->
-          <div class="service-content" id="health-coverage" role="tabpanel" aria-labelledby="tab-health-coverage">
+          <div
+            class="service-content"
+            id="health-coverage"
+            role="tabpanel"
+            aria-labelledby="tab-health-coverage"
+          >
             <div class="sub-service-controls">
               <div>
-                <span class="sub-service-count"><i class="bi bi-collection"></i> 1 Service in this category</span>
-                <p style="margin: 4px 0 0 0; font-size: 0.8125rem; color: var(--color-text-light);">Help accessing subsidized or free healthcare enrollment.</p>
+                <span class="sub-service-count"
+                  ><i class="bi bi-collection"></i> 1 Service in this category</span
+                >
+                <p style="margin: 4px 0 0 0; font-size: 0.8125rem; color: var(--color-text-light)">
+                  Help accessing subsidized or free healthcare enrollment.
+                </p>
               </div>
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
@@ -1450,14 +1140,27 @@
 
             <!-- Service 2.1: PhilHealth Universal Health Care Assessment -->
             <div class="sub-service-card is-open" id="philhealth-uhc-assessment">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="true" aria-controls="sub-svc-philhealth">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="true"
+                aria-controls="sub-svc-philhealth"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-heart-pulse-fill"></i> Philhealth Universal Health Care – Certification of Financial Capability/Incapability</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face Assessment</span>
+                    <h3>
+                      <i class="bi bi-heart-pulse-fill"></i> Philhealth Universal Health Care -
+                      Certification of Financial Capability/Incapability
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face Assessment</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Enrolment of new members and renewal of old members through certification issued by a CSWDO Social Worker after thorough assessment in accordance with Department of Health (DOH) classification of indigence under the Universal Health Care Act.
+                    Enrolment of new members and renewal of old members through certification issued
+                    by a CSWDO Social Worker after thorough assessment in accordance with Department
+                    of Health (DOH) classification of indigence under the Universal Health Care Act.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1476,23 +1179,41 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Proof of Identity:</strong> 1 valid government-issued photo ID with date of birth (National ID, UMID, Driver's License, Voter's, 4Ps, or Barangay ID; original for verification).</span>
+                        <span
+                          ><strong>Proof of Identity:</strong> 1 valid government-issued photo ID
+                          with date of birth (National ID, UMID, Driver's License, Voter's, 4Ps, or
+                          Barangay ID; original for verification).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Barangay Certification:</strong> 1 original Barangay Certificate of Indigency.</span>
+                        <span
+                          ><strong>Barangay Certification:</strong> 1 original Barangay Certificate
+                          of Indigency.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Civil Registry Documents:</strong> Marriage Contract (if married) and updated Birth Certificate (PSA / LCR; original to be returned).</span>
+                        <span
+                          ><strong>Civil Registry Documents:</strong> Marriage Contract (if married)
+                          and updated Birth Certificate (PSA / LCR; original to be returned).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">If Confined</span> <strong>Confinement Proof:</strong> Proof of confinement or medical care availment from the hospital/facility (if applicable).</span>
+                        <span
+                          ><span class="req-badge-conditional">If Confined</span>
+                          <strong>Confinement Proof:</strong> Proof of confinement or medical care
+                          availment from the hospital/facility (if applicable).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">If Representative</span> <strong>Authorization:</strong> Signed authorization letter and valid ID of the representative.</span>
+                        <span
+                          ><span class="req-badge-conditional">If Representative</span>
+                          <strong>Authorization:</strong> Signed authorization letter and valid ID
+                          of the representative.</span
+                        >
                       </li>
                     </ul>
                   </div>
@@ -1518,7 +1239,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Walk-in (Face-to-Face Assessment) • Frontline Releasing</div>
+                          <div class="metric-value">
+                            Walk-in (Face-to-Face Assessment) • Frontline Releasing
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1527,7 +1250,11 @@
 
                 <!-- Policy Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Universal Health Care Coverage:</strong> For over 13 years, the City Government has prioritized the enrolment of indigent families in PhilHealth. With the enactment of the Universal Health Care Law in 2019, LGU coverage has expanded to all qualified underprivileged residents in Legazpi City, including college students and non-working dependents.
+                  <strong><i class="bi bi-info-circle"></i> Universal Health Care Coverage:</strong>
+                  For over 13 years, the City Government has prioritized the enrolment of indigent
+                  families in PhilHealth. With the enactment of the Universal Health Care Law in
+                  2019, LGU coverage has expanded to all qualified underprivileged residents in
+                  Legazpi City, including college students and non-working dependents.
                 </div>
 
                 <!-- Process Table for PhilHealth -->
@@ -1550,9 +1277,10 @@
                           Submit request for PhilHealth financial capability assessment.
                         </td>
                         <td>
-                          Search for client's General Intake Sheet (GIS) in database &amp; files and route client to the concerned section.
+                          Search for client's General Intake Sheet (GIS) in database &amp; files and
+                          route client to the concerned section.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Reception Desk Staff</span>
                         </td>
@@ -1566,9 +1294,10 @@
                         <td>
                           Conduct detailed interview and assessment of case.<br /><br />
                           <strong>2.1</strong> Validation.<br /><br />
-                          <strong>2.2</strong> Prepare the Certificate of Financial Assessment for signature of Head of Office.
+                          <strong>2.2</strong> Prepare the Certificate of Financial Assessment for
+                          signature of Head of Office.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Social Welfare Officer / Case Worker</span>
                         </td>
@@ -1580,9 +1309,10 @@
                           Claim document.
                         </td>
                         <td>
-                          Issue Certificate of Financial Assessment with instructions on how to proceed.
+                          Issue Certificate of Financial Assessment with instructions on how to
+                          proceed.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">EDAS Staff</span>
                         </td>
@@ -1597,11 +1327,20 @@
           <!-- ========================================================================= -->
           <!-- CATEGORY TAB 3: FAMILY & PARENTING SUPPORT                                -->
           <!-- ========================================================================= -->
-          <div class="service-content" id="family-parenting" role="tabpanel" aria-labelledby="tab-family-parenting">
+          <div
+            class="service-content"
+            id="family-parenting"
+            role="tabpanel"
+            aria-labelledby="tab-family-parenting"
+          >
             <div class="sub-service-controls">
               <div>
-                <span class="sub-service-count"><i class="bi bi-collection"></i> 1 Service in this category</span>
-                <p style="margin: 4px 0 0 0; font-size: 0.8125rem; color: var(--color-text-light);">Recognition and benefits for parents raising children on their own.</p>
+                <span class="sub-service-count"
+                  ><i class="bi bi-collection"></i> 1 Service in this category</span
+                >
+                <p style="margin: 4px 0 0 0; font-size: 0.8125rem; color: var(--color-text-light)">
+                  Recognition and benefits for parents raising children on their own.
+                </p>
               </div>
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
@@ -1610,18 +1349,30 @@
 
             <!-- Service 3.1: Issuance of Solo Parents IDs -->
             <div class="sub-service-card is-open" id="solo-parents-id">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="true" aria-controls="sub-svc-solo-parent">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="true"
+                aria-controls="sub-svc-solo-parent"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
                     <h3><i class="bi bi-people-fill"></i> Issuance of Solo Parents ID</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face &amp; Home Visitation</span>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face &amp; Home Visitation</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Registration, assessment, RA 11861 welfare orientation, and issuance of Solo Parent Identification Cards granting discounts, subsidies, and educational benefits to qualified solo parents in Legazpi City.
+                    Registration, assessment, RA 11861 welfare orientation, and issuance of Solo
+                    Parent Identification Cards granting discounts, subsidies, and educational
+                    benefits to qualified solo parents in Legazpi City.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
-                    <span>Tap to view 13 category requirements, benefits, &amp; 5-step process</span>
+                    <span
+                      >Tap to view 13 category requirements, benefits, &amp; 5-step process</span
+                    >
                   </div>
                 </div>
                 <div class="sub-service-chevron-btn" aria-hidden="true">
@@ -1636,31 +1387,54 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Proof of Identity:</strong> 1 valid government-issued photo ID with date of birth (National ID, UMID, Driver's License, Voter's, 4Ps, or Barangay ID; original for verification).</span>
+                        <span
+                          ><strong>Proof of Identity:</strong> 1 valid government-issued photo ID
+                          with date of birth (National ID, UMID, Driver's License, Voter's, 4Ps, or
+                          Barangay ID; original for verification).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Birth Certificate:</strong> 1 original or certified copy of Child/Children's Birth Certificate (PSA / LCR).</span>
+                        <span
+                          ><strong>Birth Certificate:</strong> 1 original or certified copy of
+                          Child/Children's Birth Certificate (PSA / LCR).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Barangay Certificate:</strong> 1 original Barangay Certificate of Residency in Legazpi City.</span>
+                        <span
+                          ><strong>Barangay Certificate:</strong> 1 original Barangay Certificate of
+                          Residency in Legazpi City.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>ID Photographs:</strong> 2 pieces 1x1 recent identical ID pictures.</span>
+                        <span
+                          ><strong>ID Photographs:</strong> 2 pieces 1x1 recent identical ID
+                          pictures.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Sworn Affidavit:</strong> Notarized sworn affidavit declaring no cohabitation and sole parental custody/care (PAO / Private Attorney).</span>
+                        <span
+                          ><strong>Sworn Affidavit:</strong> Notarized sworn affidavit declaring no
+                          cohabitation and sole parental custody/care (PAO / Private
+                          Attorney).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Income Proof:</strong> Income Tax Return (ITR) for employed parents, or BIR Certificate of Tax Exemption for non-working parents.</span>
+                        <span
+                          ><strong>Income Proof:</strong> Income Tax Return (ITR) for employed
+                          parents, or BIR Certificate of Tax Exemption for non-working
+                          parents.</span
+                        >
                       </li>
                     </ul>
 
-                    <div class="req-subheading" style="margin-top: 24px; padding-top: 4px;">Additional Category-Specific Requirements</div>
+                    <div class="req-subheading" style="margin-top: 24px; padding-top: 4px">
+                      Additional Category-Specific Requirements
+                    </div>
                     <div class="solo-categories-grid">
                       <div class="solo-cat-card">
                         <h5><i class="bi bi-tag-fill"></i> Cat 1: Rape</h5>
@@ -1679,14 +1453,18 @@
                       <div class="solo-cat-card">
                         <h5><i class="bi bi-tag-fill"></i> Cat 3: Detention of Spouse</h5>
                         <ul>
-                          <li>Certificate of detention or certificate of sentence for ≥3 months (BJMP)</li>
+                          <li>
+                            Certificate of detention or certificate of sentence for ≥3 months (BJMP)
+                          </li>
                           <li>Affidavit of Cohabitation (PAO / Private Attorney)</li>
                         </ul>
                       </div>
                       <div class="solo-cat-card">
                         <h5><i class="bi bi-tag-fill"></i> Cat 4: Incapacity of Spouse</h5>
                         <ul>
-                          <li>Medical abstract/record of incapacity issued within 3 months (Doctor)</li>
+                          <li>
+                            Medical abstract/record of incapacity issued within 3 months (Doctor)
+                          </li>
                           <li>Affidavit of Cohabitation (PAO / Private Attorney)</li>
                         </ul>
                       </div>
@@ -1694,21 +1472,30 @@
                         <h5><i class="bi bi-tag-fill"></i> Cat 5: Legal Separation</h5>
                         <ul>
                           <li>Marriage Certificate (PSA / LCR)</li>
-                          <li>Judicial decree of legal separation, or Affidavit of 2 disinterested persons (Court/PAO)</li>
+                          <li>
+                            Judicial decree of legal separation, or Affidavit of 2 disinterested
+                            persons (Court/PAO)
+                          </li>
                         </ul>
                       </div>
                       <div class="solo-cat-card">
                         <h5><i class="bi bi-tag-fill"></i> Cat 6: Annulment / Divorce</h5>
                         <ul>
                           <li>Marriage Certificate (PSA / LCR)</li>
-                          <li>Judicial decree of nullity/annulment or foreign divorce granting sole care (Court)</li>
+                          <li>
+                            Judicial decree of nullity/annulment or foreign divorce granting sole
+                            care (Court)
+                          </li>
                         </ul>
                       </div>
                       <div class="solo-cat-card">
                         <h5><i class="bi bi-tag-fill"></i> Cat 7: Abandonment</h5>
                         <ul>
                           <li>Marriage Certificate or affidavit of applicant (PSA / LCR)</li>
-                          <li>Affidavit of 2 disinterested persons attesting abandonment (PAO/Attorney)</li>
+                          <li>
+                            Affidavit of 2 disinterested persons attesting abandonment
+                            (PAO/Attorney)
+                          </li>
                           <li>Police or barangay record of abandonment (PNP / Barangay)</li>
                         </ul>
                       </div>
@@ -1725,20 +1512,30 @@
                         <h5><i class="bi bi-tag-fill"></i> Cat 10: Unmarried Parent</h5>
                         <ul>
                           <li>Certificate of No Marriage - CENOMAR (PSA / LCR)</li>
-                          <li>Affidavit of a barangay official attesting residency and parental care</li>
+                          <li>
+                            Affidavit of a barangay official attesting residency and parental care
+                          </li>
                         </ul>
                       </div>
                       <div class="solo-cat-card">
                         <h5><i class="bi bi-tag-fill"></i> Cat 11: Foster / Adoption</h5>
                         <ul>
-                          <li>Proof of legal guardianship, foster care, or adoption decree (DSWD / Court)</li>
-                          <li>Affidavit of a barangay official attesting residency and parental care</li>
+                          <li>
+                            Proof of legal guardianship, foster care, or adoption decree (DSWD /
+                            Court)
+                          </li>
+                          <li>
+                            Affidavit of a barangay official attesting residency and parental care
+                          </li>
                         </ul>
                       </div>
                       <div class="solo-cat-card">
                         <h5><i class="bi bi-tag-fill"></i> Cat 12: Loss of Parents</h5>
                         <ul>
-                          <li>Death certificate of parents/guardian, or police/barangay records of disappearance ≥6 months (PSA/LCR/Barangay)</li>
+                          <li>
+                            Death certificate of parents/guardian, or police/barangay records of
+                            disappearance ≥6 months (PSA/LCR/Barangay)
+                          </li>
                           <li>Affidavit of a barangay official attesting residency and status</li>
                         </ul>
                       </div>
@@ -1773,7 +1570,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Solo Parent Unit (Walk-in &amp; RA 11861 Orientation)</div>
+                          <div class="metric-value">
+                            Solo Parent Unit (Walk-in &amp; RA 11861 Orientation)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1782,7 +1581,14 @@
 
                 <!-- Policy Note -->
                 <div class="eop-note">
-                  <strong><i class="bi bi-info-circle"></i> Republic Act No. 11861 (Expanded Solo Parents Welfare Act):</strong> All applicants undergo mandatory orientation on RA 11861 provisions. Registered solo parents are entitled to 10% discount and VAT exemption on baby essentials, 7 days paid parental leave for employed parents, monthly financial subsidy for minimum wage earners, and scholarship prioritization.
+                  <strong
+                    ><i class="bi bi-info-circle"></i> Republic Act No. 11861 (Expanded Solo Parents
+                    Welfare Act):</strong
+                  >
+                  All applicants undergo mandatory orientation on RA 11861 provisions. Registered
+                  solo parents are entitled to 10% discount and VAT exemption on baby essentials, 7
+                  days paid parental leave for employed parents, monthly financial subsidy for
+                  minimum wage earners, and scholarship prioritization.
                 </div>
 
                 <!-- 4-Column Process Table -->
@@ -1805,10 +1611,8 @@
                           <strong>Submit Request</strong><br />
                           Proceed to reception and submit request for Solo Parent ID.
                         </td>
-                        <td>
-                          Assist client to Solo Parent Unit.
-                        </td>
-                        <td>—</td>
+                        <td>Assist client to Solo Parent Unit.</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Reception Desk Staff</span>
                         </td>
@@ -1820,11 +1624,13 @@
                           Submit for interview/assessment and orientation.
                         </td>
                         <td>
-                          Ask questions to determine if qualified. If client is not qualified, inform him/her immediately after the assessment.<br /><br />
-                          <strong>2.1</strong> Conduct orientation on RA 11861 (Expanded Solo Parents Welfare Act).<br /><br />
+                          Ask questions to determine if qualified. If client is not qualified,
+                          inform him/her immediately after the assessment.<br /><br />
+                          <strong>2.1</strong> Conduct orientation on RA 11861 (Expanded Solo
+                          Parents Welfare Act).<br /><br />
                           <strong>2.2</strong> Issue application and list of requirements.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Solo Parent Focal Person / SWO</span>
                         </td>
@@ -1833,12 +1639,17 @@
                         <td><span class="step-badge">3</span></td>
                         <td>
                           <strong>Wait for Field Validation</strong><br />
-                          Wait. <em>(Make sure to answer the questions and provide accurate information).</em>
+                          Wait.
+                          <em
+                            >(Make sure to answer the questions and provide accurate
+                            information).</em
+                          >
                         </td>
                         <td>
-                          Conduct collateral information through home visits (if needed) / phone calls / texts.
+                          Conduct collateral information through home visits (if needed) / phone
+                          calls / texts.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Social Welfare Officer / Assistant</span>
                         </td>
@@ -1850,10 +1661,12 @@
                           Submission of application and requirements.
                         </td>
                         <td>
-                          If client is qualified: Receive and review of application with requirements.<br /><br />
-                          <strong>4.1</strong> Process Solo Parent ID and submit to Head of Office and City Mayor for signatures.
+                          If client is qualified: Receive and review of application with
+                          requirements.<br /><br />
+                          <strong>4.1</strong> Process Solo Parent ID and submit to Head of Office
+                          and City Mayor for signatures.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">CSWDO Head / City Mayor</span>
                         </td>
@@ -1868,7 +1681,7 @@
                           Inform client to claim ID.<br /><br />
                           <strong>5.1</strong> Issue Solo Parent ID.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Social Welfare Assistant</span>
                         </td>
@@ -1891,7 +1704,8 @@
               <span>CSWDO Key Personnel</span>
             </h2>
             <p>
-              Dedicated public servants ensuring compassionate delivery of social welfare programs in Legazpi City.
+              Dedicated public servants ensuring compassionate delivery of social welfare programs
+              in Legazpi City.
             </p>
           </div>
 
@@ -1956,7 +1770,9 @@
                 <p>Case Intake, Collateral Visits &amp; Assessment</p>
               </div>
               <div class="staff-card">
-                <h4>Feoby Fynn F. Balete, Sharmel M. Belaza, Kyla Chantele Azotea, Hony Lyn E. Neptuno</h4>
+                <h4>
+                  Feoby Fynn F. Balete, Sharmel M. Belaza, Kyla Chantele Azotea, Hony Lyn E. Neptuno
+                </h4>
                 <p class="staff-role">Section Staff</p>
                 <p>Intake, Case Assessment &amp; Validation</p>
               </div>
@@ -1983,28 +1799,64 @@
               <h4><i class="bi bi-geo-alt-fill"></i> Office Address &amp; Location</h4>
               <p><strong>City Social Welfare and Development Office (CSWDO)</strong></p>
               <p>Purok 3-Barriada, Barangay 38-Gogon, Legazpi City, Albay</p>
-              <p>Hours: Monday to Friday, 8:00 AM – 5:00 PM</p>
+              <p>Hours: Monday to Friday, 8:00 AM - 5:00 PM</p>
             </div>
 
             <div class="contact-card">
               <h4><i class="bi bi-telephone-fill"></i> Direct Contact Lines</h4>
-              <p><strong>Head of Office Hotline:</strong> <a href="tel:09776300317">0977-6300317</a></p>
-              <p><strong>Inquiries &amp; Follow-ups:</strong> <a href="tel:09392820158">0939-2820158</a></p>
-              <p><strong>Official Emails:</strong> <a href="mailto:cswdolegazpi@yahoo.com">cswdolegazpi@yahoo.com</a> | <a href="mailto:cswdo.leg@legazpi.gov.ph">cswdo.leg@legazpi.gov.ph</a></p>
-              <p><strong>Head of Office:</strong> Cecilia E. Arcilla, City Social Welfare and Development Officer</p>
+              <p>
+                <strong>Head of Office Hotline:</strong> <a href="tel:09776300317">0977-6300317</a>
+              </p>
+              <p>
+                <strong>Inquiries &amp; Follow-ups:</strong>
+                <a href="tel:09392820158">0939-2820158</a>
+              </p>
+              <p>
+                <strong>Official Emails:</strong>
+                <a href="mailto:cswdolegazpi@yahoo.com">cswdolegazpi@yahoo.com</a> |
+                <a href="mailto:cswdo.leg@legazpi.gov.ph">cswdo.leg@legazpi.gov.ph</a>
+              </p>
+              <p>
+                <strong>Head of Office:</strong> Cecilia E. Arcilla, City Social Welfare and
+                Development Officer
+              </p>
             </div>
 
             <div class="contact-card">
               <h4><i class="bi bi-chat-dots"></i> Feedback &amp; Complaints Mechanism</h4>
-              <p><strong>To send feedback:</strong> Answer the Customer Feedback Form and drop it at the Suggestion Box near the CSWDO Information Desk. Opened daily at 4:30 PM by the Info Desk Officer; answers forwarded within three (3) days.</p>
-              <p><strong>To file a complaint:</strong> Text/call <a href="tel:09776300317">0977-6300317</a>, email <a href="mailto:cswdo.leg@legazpi.gov.ph">cswdo.leg@legazpi.gov.ph</a>, or fill out the Customer Feedback Form. Handled promptly by the Administrative Officer IV / Complaints Officer with formal resolution report.</p>
+              <p>
+                <strong>To send feedback:</strong> Answer the Customer Feedback Form and drop it at
+                the Suggestion Box near the CSWDO Information Desk. Opened daily at 4:30 PM by the
+                Info Desk Officer; answers forwarded within three (3) days.
+              </p>
+              <p>
+                <strong>To file a complaint:</strong> Text/call
+                <a href="tel:09776300317">0977-6300317</a>, email
+                <a href="mailto:cswdo.leg@legazpi.gov.ph">cswdo.leg@legazpi.gov.ph</a>, or fill out
+                the Customer Feedback Form. Handled promptly by the Administrative Officer IV /
+                Complaints Officer with formal resolution report.
+              </p>
             </div>
 
             <div class="contact-card">
-              <h4><i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) &amp; CCB</h4>
-              <p><strong>ARTA Complaints Email:</strong> <a href="mailto:complaints@arta.gov.ph">complaints@arta.gov.ph</a> | 1-ARTA (2782)</p>
-              <p><strong>Presidential Complaint Center (PCC):</strong> Hotline 8888 | <a href="mailto:pcc@malacanang.gov.ph">pcc@malacanang.gov.ph</a></p>
-              <p><strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS) | <a href="mailto:email@contactcenterngbayan.gov.ph">email@contactcenterngbayan.gov.ph</a></p>
+              <h4>
+                <i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) &amp;
+                CCB
+              </h4>
+              <p>
+                <strong>ARTA Complaints Email:</strong>
+                <a href="mailto:complaints@arta.gov.ph">complaints@arta.gov.ph</a> | 1-ARTA (2782)
+              </p>
+              <p>
+                <strong>Presidential Complaint Center (PCC):</strong> Hotline 8888 |
+                <a href="mailto:pcc@malacanang.gov.ph">pcc@malacanang.gov.ph</a>
+              </p>
+              <p>
+                <strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS) |
+                <a href="mailto:email@contactcenterngbayan.gov.ph"
+                  >email@contactcenterngbayan.gov.ph</a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -2013,7 +1865,7 @@
       <!-- 5. Data Source Section (White Background - Exact BPLO Hub Spec) -->
       <section class="bpl-section">
         <div class="container">
-          <p class="data-source" style="text-align: center; margin: 0;">
+          <p class="data-source" style="text-align: center; margin: 0">
             <i class="bi bi-info-circle"></i> Source:
             <a
               href="https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-SOCIAL-WELFARE-AND-DEVELOPMENT-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
@@ -2033,11 +1885,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi City with transparent access to municipal services, social welfare programs, and local governance.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -2069,11 +1922,9 @@
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
-              <li><a href="../services/business">Business Services</a></li>
-              <li><a href="../services/environment">Environment Services</a></li>
-              <li><a href="../services/agriculture">Agriculture Services</a></li>
-              <li><a href="../services/social-services">Social Services</a></li>
-              <li><a href="../government/">Government Directory</a></li>
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -2085,38 +1936,100 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a>
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Open Data Philippines</a
+                >
               </li>
               <li>
-                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
               </li>
               <li>
-                <a href="https://albay.gov.ph" target="_blank" rel="noopener noreferrer">Province of Albay</a>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
               </li>
               <li>
-                <a href="https://dswd.gov.ph" target="_blank" rel="noopener noreferrer">DSWD Official Portal</a>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
               </li>
               <li>
-                <a href="https://legazpi.gov.ph" target="_blank" rel="noopener noreferrer">Legazpi City Official Portal</a>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
+                >
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div class="footer-cost" role="status">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
+            >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
@@ -2124,7 +2037,7 @@
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer"
-              >All public information sourced from official government portals &amp; the Legazpi City Citizen's Charter.</span
+              >All public information sourced from official government portals.</span
             >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>
@@ -2141,7 +2054,7 @@
         const contents = document.querySelectorAll('.service-content');
 
         function switchCategoryTab(targetId) {
-          tabs.forEach(tab => {
+          tabs.forEach((tab) => {
             if (tab.getAttribute('data-tab') === targetId) {
               tab.classList.add('active');
               tab.setAttribute('aria-selected', 'true');
@@ -2151,7 +2064,7 @@
             }
           });
 
-          contents.forEach(content => {
+          contents.forEach((content) => {
             if (content.id === targetId) {
               content.classList.add('active');
             } else {
@@ -2198,13 +2111,13 @@
         }
 
         const headers = document.querySelectorAll('.sub-service-header');
-        headers.forEach(header => {
+        headers.forEach((header) => {
           header.addEventListener('click', () => {
             const card = header.closest('.sub-service-card');
             if (card) toggleCard(card);
           });
 
-          header.addEventListener('keydown', e => {
+          header.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
               const card = header.closest('.sub-service-card');
@@ -2220,7 +2133,7 @@
           const toggleBtn = activeContent.querySelector('.btn-toggle-all');
           if (!toggleBtn) return;
           const cards = activeContent.querySelectorAll('.sub-service-card');
-          const allOpen = Array.from(cards).every(c => c.classList.contains('is-open'));
+          const allOpen = Array.from(cards).every((c) => c.classList.contains('is-open'));
           if (allOpen) {
             toggleBtn.setAttribute('aria-expanded', 'true');
             toggleBtn.innerHTML = '<i class="bi bi-arrows-collapse"></i> <span>Collapse All</span>';
@@ -2231,14 +2144,14 @@
         }
 
         const toggleAllBtns = document.querySelectorAll('.btn-toggle-all');
-        toggleAllBtns.forEach(btn => {
+        toggleAllBtns.forEach((btn) => {
           btn.addEventListener('click', () => {
             const activeContent = btn.closest('.service-content');
             if (!activeContent) return;
             const cards = activeContent.querySelectorAll('.sub-service-card');
             const isCurrentlyExpanded = btn.getAttribute('aria-expanded') === 'true';
 
-            cards.forEach(card => {
+            cards.forEach((card) => {
               const header = card.querySelector('.sub-service-header');
               if (isCurrentlyExpanded) {
                 card.classList.remove('is-open');
@@ -2269,11 +2182,13 @@
             if (isExpanded) {
               staffExtraContainer.classList.remove('show');
               staffToggleBtn.setAttribute('aria-expanded', 'false');
-              staffToggleBtn.innerHTML = '<i class="bi bi-chevron-down"></i> <span>View All Personnel (12)</span>';
+              staffToggleBtn.innerHTML =
+                '<i class="bi bi-chevron-down"></i> <span>View All Personnel (12)</span>';
             } else {
               staffExtraContainer.classList.add('show');
               staffToggleBtn.setAttribute('aria-expanded', 'true');
-              staffToggleBtn.innerHTML = '<i class="bi bi-chevron-up"></i> <span>Show Key Officers Only (Top 3)</span>';
+              staffToggleBtn.innerHTML =
+                '<i class="bi bi-chevron-up"></i> <span>Show Key Officers Only (Top 3)</span>';
             }
           });
         }
@@ -2282,21 +2197,22 @@
         function handleHashNavigation() {
           if (!window.location.hash) return;
           const rawHash = window.location.hash.substring(1);
-          let targetElement = document.getElementById(rawHash) || document.querySelector(window.location.hash);
-          
+          let targetElement =
+            document.getElementById(rawHash) || document.querySelector(window.location.hash);
+
           if (!targetElement) {
             const aliasMap = {
-              'aics': 'financial-assistance-aics',
+              aics: 'financial-assistance-aics',
               'financial-assistance': 'financial-assistance-aics',
               'financial-assistance-aics': 'financial-assistance-aics',
               'financial-crisis': 'financial-crisis',
-              'indigency': 'certificate-indigency-case-study',
+              indigency: 'certificate-indigency-case-study',
               'case-study': 'certificate-indigency-case-study',
               'case-study-indigency': 'certificate-indigency-case-study',
               'certificate-indigency-case-study': 'certificate-indigency-case-study',
               'indigency-case-study': 'certificate-indigency-case-study',
               'health-coverage': 'health-coverage',
-              'philhealth': 'philhealth-uhc-assessment',
+              philhealth: 'philhealth-uhc-assessment',
               'philhealth-uhc': 'philhealth-uhc-assessment',
               'philhealth-uhc-assessment': 'philhealth-uhc-assessment',
               'philhealth-financial-capability': 'philhealth-uhc-assessment',
@@ -2304,7 +2220,7 @@
               'solo-parent': 'solo-parents-id',
               'solo-parents': 'solo-parents-id',
               'solo-parent-id': 'solo-parents-id',
-              'solo-parents-id': 'solo-parents-id'
+              'solo-parents-id': 'solo-parents-id',
             };
             const mappedId = aliasMap[rawHash.toLowerCase()];
             if (mappedId) {

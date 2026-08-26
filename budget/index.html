@@ -79,7 +79,7 @@
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/transparency-v2.css" />
-      <script>
+    <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -90,10 +90,8 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link"
-      >Skip to main content</a
-    >
-                        <!-- Hotline Bar -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -127,7 +125,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -139,16 +136,11 @@
             />
           </a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Services</a
-              >
+              <a href="../services/" aria-haspopup="true" aria-expanded="false">Services</a>
               <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
@@ -172,15 +164,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -218,13 +215,10 @@
         <div class="container">
           <div class="trans-hero-content-v2">
             <span class="trans-hero-badge-v2"
-              ><i class="bi bi-shield-check"></i>
-              <span>Financial Transparency</span></span
+              ><i class="bi bi-shield-check"></i> <span>Financial Transparency</span></span
             >
             <h1>Budget & Financial Transparency</h1>
-            <p>
-              Tracking municipal finances and projects for accountability
-            </p>
+            <p>Tracking municipal finances and projects for accountability</p>
           </div>
         </div>
       </section>
@@ -233,15 +227,10 @@
           <div class="sre-header-v2">
             <div class="sre-title-group">
               <span class="sre-label"
-                ><i class="bi bi-graph-up-arrow"></i>
-                <span>Financial Report</span></span
+                ><i class="bi bi-graph-up-arrow"></i> <span>Financial Report</span></span
               >
-              <h2>
-                Statement of Receipts & Expenditures
-              </h2>
-              <p>
-                FY 2024 quarterly financial performance
-              </p>
+              <h2>Statement of Receipts & Expenditures</h2>
+              <p>FY 2024 quarterly financial performance</p>
             </div>
             <div class="sre-period-toggle" role="tablist" aria-label="Select fiscal quarter">
               <button
@@ -298,27 +287,21 @@
               <div class="sre-metric-icon"><i class="bi bi-arrow-up-circle"></i></div>
               <div class="sre-metric-data">
                 <span class="sre-metric-value" id="sre-total-expense">₱127.60 M</span>
-                <span class="sre-metric-label"
-                  >Total Expenditures</span
-                >
+                <span class="sre-metric-label">Total Expenditures</span>
               </div>
             </div>
             <div class="sre-metric-card sre-metric-net">
               <div class="sre-metric-icon"><i class="bi bi-plus-slash-minus"></i></div>
               <div class="sre-metric-data">
                 <span class="sre-metric-value" id="sre-net-income">₱587.78 M</span>
-                <span class="sre-metric-label"
-                  >Net Operating Income</span
-                >
+                <span class="sre-metric-label">Net Operating Income</span>
               </div>
             </div>
             <div class="sre-metric-card sre-metric-balance">
               <div class="sre-metric-icon"><i class="bi bi-wallet2"></i></div>
               <div class="sre-metric-data">
                 <span class="sre-metric-value" id="sre-fund-balance">₱2,048.79 M</span>
-                <span class="sre-metric-label"
-                  >Fund Balance (End)</span
-                >
+                <span class="sre-metric-label">Fund Balance (End)</span>
               </div>
             </div>
           </div>
@@ -389,9 +372,7 @@
                           ><i class="bi bi-chevron-right sre-chevron"></i>
                           <span>Local Sources</span></span
                         >
-                        <span class="sre-item-detail"
-                          >Tax & Non-Tax Revenue</span
-                        >
+                        <span class="sre-item-detail">Tax & Non-Tax Revenue</span>
                       </div>
                       <div class="sre-item-values">
                         <span class="sre-item-amount" id="sre-income-local">₱462.70 M</span>
@@ -581,9 +562,7 @@
                           ><i class="bi bi-chevron-right sre-chevron"></i>
                           <span>External Sources</span></span
                         >
-                        <span class="sre-item-detail"
-                          >National Tax Allotment & Grants</span
-                        >
+                        <span class="sre-item-detail">National Tax Allotment & Grants</span>
                       </div>
                       <div class="sre-item-values">
                         <span class="sre-item-amount" id="sre-income-external">₱252.68 M</span>
@@ -670,12 +649,8 @@
                   <div class="sre-breakdown-item" data-type="gps">
                     <span class="sre-item-indicator sre-indicator-gps"></span>
                     <div class="sre-item-info">
-                      <span class="sre-item-name"
-                        >General Public Services</span
-                      >
-                      <span class="sre-item-detail"
-                        >Administration & Operations</span
-                      >
+                      <span class="sre-item-name">General Public Services</span>
+                      <span class="sre-item-detail">Administration & Operations</span>
                     </div>
                     <div class="sre-item-values">
                       <span class="sre-item-amount" id="sre-exp-gps">₱73.35 M</span>
@@ -698,9 +673,7 @@
                           ><i class="bi bi-chevron-right sre-chevron"></i>
                           <span>Social Services</span></span
                         >
-                        <span class="sre-item-detail"
-                          >Health, Education, Welfare & Housing</span
-                        >
+                        <span class="sre-item-detail">Health, Education, Welfare & Housing</span>
                       </div>
                       <div class="sre-item-values">
                         <span class="sre-item-amount" id="sre-exp-social">₱29.16 M</span>
@@ -761,12 +734,8 @@
                   <div class="sre-breakdown-item" data-type="economic">
                     <span class="sre-item-indicator sre-indicator-economic"></span>
                     <div class="sre-item-info">
-                      <span class="sre-item-name"
-                        >Economic Services</span
-                      >
-                      <span class="sre-item-detail"
-                        >Infrastructure & Development</span
-                      >
+                      <span class="sre-item-name">Economic Services</span>
+                      <span class="sre-item-detail">Infrastructure & Development</span>
                     </div>
                     <div class="sre-item-values">
                       <span class="sre-item-amount" id="sre-exp-economic">₱25.08 M</span>
@@ -778,12 +747,8 @@
                   <div class="sre-breakdown-item" data-type="debt">
                     <span class="sre-item-indicator sre-indicator-debt"></span>
                     <div class="sre-item-info">
-                      <span class="sre-item-name"
-                        >Debt Service</span
-                      >
-                      <span class="sre-item-detail"
-                        >Interest & Charges</span
-                      >
+                      <span class="sre-item-name">Debt Service</span>
+                      <span class="sre-item-detail">Interest & Charges</span>
                     </div>
                     <div class="sre-item-values">
                       <span class="sre-item-amount" id="sre-exp-debt">₱0.00 M</span>
@@ -804,7 +769,7 @@
               <div class="finance-sre-cta-text">
                 <h4>5-Year Annual SRE Standing</h4>
                 <p>
-                  Do you want to see Legazpi City's 5-year annual financial standing (2021–2025) and
+                  Do you want to see Legazpi City's 5-year annual financial standing (2021-2025) and
                   IRA dependency?
                 </p>
               </div>
@@ -817,10 +782,7 @@
 
           <p class="sre-source">
             <i class="bi bi-info-circle"></i> Source:
-            <a
-              href="https://blgf.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
               >Bureau of Local Government Finance (BLGF)</a
             >
           </p>
@@ -831,12 +793,12 @@
         <div class="container">
           <div class="infra-header-v5">
             <span class="infra-label-v5"
-              ><i class="bi bi-shield-exclamation"></i>
-              <span>Special Scrutiny</span></span
+              ><i class="bi bi-shield-exclamation"></i> <span>Special Scrutiny</span></span
             >
             <h2>The Flood Control Watch</h2>
             <p>
-              Flood control structure projects completed from July 2022 to May 2025 from the DPWH Flood Control Projects
+              Flood control structure projects completed from July 2022 to May 2025 from the DPWH
+              Flood Control Projects
             </p>
           </div>
           <div id="sumbong-projects-container"></div>
@@ -849,7 +811,7 @@
               rel="noopener noreferrer"
               >Sumbong sa Pangulo</a
             >
-            <span style="margin: 0 6px; opacity: 0.5;">•</span>
+            <span style="margin: 0 6px; opacity: 0.5">•</span>
             <span>Last updated: August 16, 2026</span>
           </p>
         </div>
@@ -859,14 +821,9 @@
         <div class="container">
           <div class="infra-header-v5">
             <span class="infra-label-v5"
-              ><i class="bi bi-building"></i>
-              <span
-                >National Government Projects</span
-              ></span
+              ><i class="bi bi-building"></i> <span>National Government Projects</span></span
             >
-            <h2>
-              DPWH Infrastructure Projects in Legazpi City
-            </h2>
+            <h2>DPWH Infrastructure Projects in Legazpi City</h2>
             <p>
               Implementing Agency: DPWH Albay 2nd District Engineering Office / Regional Office V
             </p>
@@ -876,13 +833,10 @@
 
           <p class="sre-source dpwh-source-margin">
             <i class="bi bi-info-circle"></i> Source:
-            <a
-              href="https://transparency.dpwh.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://transparency.dpwh.gov.ph/" target="_blank" rel="noopener noreferrer"
               >DPWH Transparency Portal</a
             >
-            <span style="margin: 0 6px; opacity: 0.5;">•</span>
+            <span style="margin: 0 6px; opacity: 0.5">•</span>
             <span>Last updated: August 16, 2026</span>
           </p>
         </div>
@@ -894,13 +848,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
-            <p
-              class="footer-tagline"
-            >
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+            <p class="footer-tagline">
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -933,8 +886,8 @@
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
-              <li><a href="../service-details/city-civil-registrar">City Civil Registrar Hub</a></li>
-              <li><a href="../service-details/business-permits-licensing">BPLO Hub</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -946,19 +899,36 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://data.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
               </li>
               <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
                 <a
-                  href="https://www.foi.gov.ph/"
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Freedom of Information</a
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -971,18 +941,58 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">

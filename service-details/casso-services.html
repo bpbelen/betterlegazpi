@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://betterlegazpi.org/service-details/casso-services" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://betterlegazpi.org/service-details/casso-services" />
-    <meta property="og:title" content="CAssO Hub — City Assessor's Office | BetterLegazpi.org" />
+    <meta property="og:title" content="CAssO Hub: City Assessor's Office | BetterLegazpi.org" />
     <meta
       property="og:description"
       content="Official Citizen's Charter for Legazpi City CAssO: Real property assessment, tax declarations, land records, tax mapping, and certifications."
@@ -26,7 +26,7 @@
       content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>CAssO Hub — City Assessor's Office | BetterLegazpi.org</title>
+    <title>CAssO Hub: City Assessor's Office | BetterLegazpi.org</title>
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,322 +47,8 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-hub.css" />
     <style>
-      .bpl-section {
-        padding: 40px 0;
-      }
-      .bpl-section.alt-bg {
-        background: var(--color-bg-alt);
-      }
-      .section-header {
-        margin-bottom: 24px;
-      }
-      .section-header h2 {
-        font-size: 1.25rem;
-        color: var(--color-text);
-        margin-bottom: 6px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 700;
-      }
-      .section-header h2 i {
-        color: var(--color-primary);
-        font-size: 1.15rem;
-      }
-      .section-header p {
-        color: var(--color-text-light);
-        font-size: 0.875rem;
-        margin: 0;
-        line-height: 1.5;
-      }
-      .quick-stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-        margin-bottom: 24px;
-      }
-      .stat-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        text-align: center;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .stat-card i {
-        font-size: 1.15rem;
-        color: var(--color-primary);
-        margin-bottom: 4px;
-      }
-      .stat-card h4 {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin-bottom: 2px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .stat-card p {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
-      .service-tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 28px;
-        justify-content: center;
-        background: transparent;
-        border: none;
-        padding: 0;
-      }
-      .service-tab {
-        padding: 10px 20px;
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 8px;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--color-text);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .service-tab:hover {
-        border-color: var(--color-primary);
-        color: var(--color-primary);
-      }
-      .service-tab.active {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
-        color: white;
-        box-shadow: 0 2px 6px rgba(0, 50, 160, 0.2);
-      }
-      .service-tab.active i {
-        color: white;
-      }
-      .service-content {
-        display: none;
-      }
-      .service-content.active {
-        display: block;
-      }
-      .sub-service-controls {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 4px 2px;
-      }
-      .sub-service-count {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: #64748b;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .sub-service-count i {
-        color: var(--color-primary);
-      }
-      .btn-toggle-all {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        border-radius: 6px;
-        padding: 6px 14px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--color-primary);
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-      }
-      .btn-toggle-all:hover {
-        background: rgba(0, 50, 160, 0.06);
-        border-color: var(--color-primary);
-      }
-      .sub-service-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        margin-bottom: 14px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-        overflow: hidden;
-        transition:
-          border-color 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-      .sub-service-card:hover {
-        border-color: rgba(0, 50, 160, 0.22);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-      }
-      .sub-service-card.is-open {
-        border-color: rgba(0, 50, 160, 0.25);
-        box-shadow: 0 4px 14px rgba(0, 50, 160, 0.05);
-      }
-      .sub-service-card:last-child {
-        margin-bottom: 0;
-      }
-      .sub-service-header {
-        padding: 18px 20px;
-        cursor: pointer;
-        user-select: none;
-        background: var(--color-white, #ffffff);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 14px;
-        transition: background 0.15s ease;
-        margin-bottom: 0;
-        border-bottom: none;
-      }
-      .sub-service-header:hover {
-        background: #f8faff;
-      }
-      .sub-service-header:focus-visible {
-        outline: 2px solid var(--color-primary);
-        outline-offset: -2px;
-      }
-      .sub-service-header-left {
-        flex: 1;
-        min-width: 0;
-      }
-      .sub-service-title-wrap {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px 12px;
-        margin-bottom: 6px;
-      }
-      .sub-service-header h3 {
-        font-size: 1.0625rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .sub-service-header h3 i {
-        color: var(--color-primary);
-      }
-      .sub-service-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 3px 10px;
-        background: rgba(0, 50, 160, 0.08);
-        color: var(--color-primary);
-        border-radius: 20px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-      }
-      .sub-service-desc {
-        color: #475569;
-        font-size: 0.8125rem;
-        line-height: 1.45;
-        margin: 0 0 6px 0;
-      }
-      .sub-service-teaser {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-        color: var(--color-primary);
-      }
-      .sub-service-chevron-btn {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: #f1f5f9;
-        color: #475569;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        transition: all 0.25s ease;
-        border: none;
-        font-size: 0.8125rem;
-      }
-      .sub-service-card:hover .sub-service-chevron-btn {
-        background: rgba(0, 50, 160, 0.1);
-        color: var(--color-primary);
-      }
-      .sub-service-card.is-open .sub-service-chevron-btn {
-        background: var(--color-primary);
-        color: white;
-        transform: rotate(180deg);
-      }
-      .sub-service-body {
-        display: none;
-        padding: 20px;
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
-        background: var(--color-bg-alt, #f8f9fa);
-      }
-      .sub-service-card.is-open .sub-service-body {
-        display: block;
-      }
-      .req-summary-grid {
-        display: grid;
-        grid-template-columns: 1.7fr 1fr;
-        gap: 16px;
-        margin-bottom: 18px;
-      }
-      .req-box {
-        background: var(--color-bg-alt, #f8fafc);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-      }
-      .req-box h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 12px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .req-box h4 i {
-        color: var(--color-primary);
-      }
-      .req-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .req-list li {
-        font-size: 0.8125rem;
-        color: #334155;
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        line-height: 1.45;
-      }
-      .req-list li i {
-        color: var(--color-primary);
-        font-size: 0.875rem;
-        margin-top: 2px;
-        flex-shrink: 0;
-      }
-      .req-list li strong {
-        color: var(--color-text);
-      }
       .summary-box {
         background: var(--color-bg-alt, #f8fafc);
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -371,6 +57,7 @@
         display: flex;
         flex-direction: column;
       }
+
       .summary-box h4 {
         font-size: 0.875rem;
         font-weight: 700;
@@ -380,232 +67,11 @@
         align-items: center;
         gap: 8px;
       }
+
       .summary-box h4 i {
         color: var(--color-primary);
       }
-      .summary-metrics {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .metric-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 6px;
-        padding: 10px 12px;
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      .metric-icon {
-        width: 30px;
-        height: 30px;
-        background: rgba(0, 50, 160, 0.05);
-        color: var(--color-primary);
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.95rem;
-        flex-shrink: 0;
-        margin-top: 1px;
-      }
-      .metric-content {
-        flex: 1;
-      }
-      .metric-label {
-        font-size: 0.625rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: var(--color-text-light);
-        letter-spacing: 0.5px;
-        margin-bottom: 2px;
-      }
-      .metric-value {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        line-height: 1.4;
-      }
-      .process-table {
-        width: 100%;
-        table-layout: fixed;
-        border-collapse: collapse;
-        background: var(--color-white, #ffffff);
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        font-size: 0.8125rem;
-        margin-top: 10px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
-      }
-      .process-table th {
-        background: var(--color-primary);
-        color: white;
-        padding: 12px 14px;
-        text-align: left;
-        font-weight: 600;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
-      }
-      .process-table td {
-        padding: 14px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-        vertical-align: top;
-        line-height: 1.5;
-      }
-      .process-table tr:last-child td {
-        border-bottom: none;
-      }
-      .process-table tbody tr:hover {
-        background: rgba(0, 50, 160, 0.015);
-      }
-      .step-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        background: var(--color-primary);
-        color: white;
-        font-size: 0.75rem;
-        font-weight: 700;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0, 50, 160, 0.15);
-      }
-      .personnel-tag {
-        display: inline-block;
-        background: rgba(0, 50, 160, 0.08);
-        color: var(--color-primary);
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 0.6875rem;
-        font-weight: 600;
-        margin: 2px 0;
-      }
-      .fee-tag {
-        color: #166534;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        background: transparent;
-        border: none;
-        padding: 0;
-        display: inline-block;
-      }
-      .req-badge-conditional {
-        display: inline-flex;
-        align-items: center;
-        background: #fef3c7;
-        color: #92400e;
-        border: 1px solid #fde68a;
-        padding: 1px 6px;
-        border-radius: 4px;
-        font-size: 0.65625rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-        margin-right: 4px;
-        flex-shrink: 0;
-      }
-      .staff-expand-btn {
-        margin: 20px auto 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        background: white;
-        color: var(--color-primary);
-        border: 1px solid rgba(0, 50, 160, 0.2);
-        padding: 8px 20px;
-        border-radius: 20px;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .staff-expand-btn:hover {
-        background: rgba(0, 50, 160, 0.05);
-        border-color: var(--color-primary);
-      }
-      .staff-extra {
-        display: none;
-      }
-      .staff-extra.show {
-        display: contents;
-      }
-      .contact-info-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-      }
-      .contact-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .contact-card h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 10px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .contact-card h4 i {
-        color: var(--color-primary);
-      }
-      .contact-card p {
-        font-size: 0.8125rem;
-        color: #475569;
-        margin: 0 0 6px 0;
-        line-height: 1.45;
-      }
-      .contact-card p:last-child {
-        margin-bottom: 0;
-      }
-      .contact-card a {
-        color: var(--color-primary);
-        text-decoration: none;
-        font-weight: 600;
-      }
-      .contact-card a:hover {
-        text-decoration: underline;
-      }
-      .staff-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
-      .staff-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .staff-card h4 {
-        font-size: 0.8125rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 3px 0;
-      }
-      .staff-card .staff-role {
-        font-size: 0.75rem;
-        color: var(--color-primary);
-        font-weight: 600;
-        margin: 0 0 2px 0;
-      }
-      .staff-card p {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-      }
+
       @media (min-width: 769px) {
         .section-header {
           display: flex;
@@ -620,15 +86,7 @@
           text-align: right;
         }
       }
-      @media (max-width: 992px) {
-        .req-summary-grid,
-        .contact-info-grid {
-          grid-template-columns: 1fr;
-        }
-        .staff-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
+
       @media (max-width: 768px) {
         .quick-stats {
           grid-template-columns: repeat(2, 1fr);
@@ -778,19 +236,6 @@
           margin-bottom: 2px;
         }
       }
-      @media (max-width: 575px) {
-        .quick-stats,
-        .staff-grid {
-          grid-template-columns: 1fr;
-        }
-        .service-tabs {
-          flex-direction: column;
-        }
-        .service-tab {
-          text-align: center;
-          justify-content: center;
-        }
-      }
     </style>
     <script>
       (function () {
@@ -805,7 +250,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -839,7 +284,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -850,14 +294,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -883,15 +324,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -957,7 +403,7 @@
             <div class="stat-card">
               <i class="bi bi-clock"></i>
               <h4>Hours</h4>
-              <p>8:00 AM – 5:00 PM (Mon–Fri)</p>
+              <p>8:00 AM - 5:00 PM (Mon-Fri)</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-telephone"></i>
@@ -1191,7 +637,7 @@
                           Frontline Officer checks completeness of documents and forwards docket to
                           the City Assessor.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                       <tr>
@@ -1221,7 +667,7 @@
                           Frontline Officer segregates docket files, records release in the logbook,
                           and releases official new Tax Declaration to client.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -1357,7 +803,7 @@
                           Frontline Officer checks completeness and forwards docket to City
                           Assessor.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                       <tr>
@@ -1386,7 +832,7 @@
                           prepares FAAS, assigns PIN in Tax Mapping, encodes in ETRACS, and secures
                           City Assessor approval.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Assessment &amp; Mapping Team</span></td>
                       </tr>
                       <tr>
@@ -1399,7 +845,7 @@
                           Frontline Officer segregates documents, logs transaction, and releases new
                           Tax Declaration for building/machinery.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -1544,7 +990,7 @@
                           Frontline Officer receives and verifies document completeness, then
                           endorses to City Assessor.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                       <tr>
@@ -1572,7 +1018,7 @@
                           Frontline Officer segregates newly generated Tax Declarations, logs
                           transaction, and releases documents.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -1685,7 +1131,7 @@
                           Frontline Officer checks completeness and refers request to City Assessor
                           for approval and calendar of inspection.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                       <tr>
@@ -1700,7 +1146,7 @@
                           FAAS, assigns TD number in Tax Mapping, encodes in ETRACS, and signs new
                           TD.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Appraisal &amp; Inspection Team</span></td>
                       </tr>
                       <tr>
@@ -1713,7 +1159,7 @@
                           Frontline Officer segregates documents and releases updated Tax
                           Declaration.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -1854,7 +1300,7 @@
                           Frontline Officer checks completeness and verifies record of Tax
                           Declaration in the ETRACS system.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                       <tr>
@@ -1881,7 +1327,7 @@
                           Frontline Officer stamps seal, records in logbook, and releases certified
                           true copy of Tax Declaration.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -1998,7 +1444,7 @@
                           Frontline Officer receives request, verifies property database, and
                           prepares payment order.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                       <tr>
@@ -2025,7 +1471,7 @@
                           Frontline Officer dry-seals the certification and releases document to
                           client.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -2146,7 +1592,7 @@
                           Frontline Officer checks system; City Assessor approves request; Research
                           Division accesses historical archives and traces ownership lineage.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Research Division</span></td>
                       </tr>
                       <tr>
@@ -2172,7 +1618,7 @@
                           Frontline Officer discusses findings with client and releases official
                           traceback documents.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -2287,7 +1733,7 @@
                           Frontline Officer receives request, clarifies queries, and endorses client
                           to Tax Mapping Section.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                       <tr>
@@ -2301,7 +1747,7 @@
                           Tax Mapping Staff searches digital GIS/cadastral roll, locates subject
                           lot, and displays interactive map on client TV screen.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Tax Mapping Staff</span></td>
                       </tr>
                     </tbody>
@@ -2451,7 +1897,7 @@
                           Frontline Officer screens documents; City Assessor approves annotation
                           request.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                       <tr>
@@ -2478,7 +1924,7 @@
                           Frontline Officer releases certified true copy of annotated Tax
                           Declaration.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -2601,7 +2047,7 @@
                           roll; ETRACS prints new TD; Records cancels old TD; City Assessor signs
                           new TD.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Evaluation &amp; Mapping Team</span></td>
                       </tr>
                       <tr>
@@ -2614,7 +2060,7 @@
                           Frontline Officer releases new Tax Declaration reflecting updated property
                           classification and assessment level.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -2732,7 +2178,7 @@
                           &amp; Mapping teams verify records, prepare corrected FAAS, encode in
                           ETRACS, cancel previous TD, and sign new TD.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Mapping &amp; Appraisal Staff</span></td>
                       </tr>
                       <tr>
@@ -2744,7 +2190,7 @@
                         <td>
                           Frontline Officer releases corrected Tax Declaration to property owner.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -2863,7 +2309,7 @@
                         <td>
                           Frontline Officer checks completeness and refers docket to City Assessor.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                       <tr>
@@ -2890,7 +2336,7 @@
                           Frontline Officer releases updated Tax Declaration free of cancelled
                           annotation.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Officer</span></td>
                       </tr>
                     </tbody>
@@ -3108,12 +2554,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi City with transparent access to municipal services,
-              real property assessments, and local governance.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -3145,9 +2591,9 @@
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
-              <li><a href="../services/business">Business Services</a></li>
-              <li><a href="../services/tax-payments">Tax &amp; Payments</a></li>
-              <li><a href="../government/">Government Directory</a></li>
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -3156,24 +2602,8 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Online Portals</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
-              <li>
-                <a
-                  href="https://www.filipizen.com/partners/albay_legazpi/rptis/billing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Filipizen Real Property Tax Billing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.filipizen.com/partners/albay_legazpi/bpls/billing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Filipizen Business Tax Billing</a
-                >
-              </li>
               <li>
                 <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
@@ -3185,26 +2615,90 @@
                 >
               </li>
               <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
                 <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
                   >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div class="footer-cost" role="status">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
+            >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i> <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i> <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
@@ -3212,8 +2706,7 @@
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer"
-              >All public information sourced from official government portals &amp; the Legazpi
-              City Assessor's Office Citizen's Charter.</span
+              >All public information sourced from official government portals.</span
             >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>

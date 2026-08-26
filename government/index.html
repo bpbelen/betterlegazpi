@@ -112,7 +112,7 @@
         background: white;
         padding: 16px 20px;
         border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         border: 1px solid #e2e8f0;
       }
       .bgy-search-wrap {
@@ -127,7 +127,9 @@
         border: 1px solid #cbd5e1;
         font-size: 0.95rem;
         font-family: inherit;
-        transition: border-color 0.2s, box-shadow 0.2s;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
       }
       .bgy-search-input:focus {
         outline: none;
@@ -186,7 +188,7 @@
         background: white;
         border-radius: 12px;
         border: 1px solid #e2e8f0;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
         padding: 16px 18px;
         display: flex;
         flex-direction: column;
@@ -197,11 +199,13 @@
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
       .barangay-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
       }
       .barangay-card-header {
         display: flex;
@@ -330,7 +334,7 @@
         border-color: var(--color-primary, #c2410c);
       }
     </style>
-      <script>
+    <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -342,11 +346,9 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link"
-      >Skip to main content</a
-    >
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-                        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -380,7 +382,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -393,16 +394,11 @@
           </a>
         </div>
 
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Services</a
-              >
+              <a href="../services/" aria-haspopup="true" aria-expanded="false">Services</a>
               <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
@@ -427,15 +423,20 @@
           </ul>
         </nav>
 
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -477,8 +478,7 @@
         <div class="container">
           <div class="page-header-content">
             <span class="page-header-badge"
-              ><i class="bi bi-building-fill"></i>
-              <span>Government</span></span
+              ><i class="bi bi-building-fill"></i> <span>Government</span></span
             >
             <h1>Government Structure & Officials</h1>
             <p class="page-header-desc">
@@ -509,17 +509,12 @@
                 font-size: 0.875rem;
                 margin-bottom: var(--spacing-sm);
               "
-              ><i class="bi bi-star-fill"></i>
-              <span>City Leadership</span></span
+              ><i class="bi bi-star-fill"></i> <span>City Leadership</span></span
             >
-            <h3
-              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
-            >
+            <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">
               Executive Officials
             </h3>
-            <p
-              style="color: var(--color-text-light)"
-            >
+            <p style="color: var(--color-text-light)">
               The executive officials leading Legazpi City's governance
             </p>
           </div>
@@ -530,9 +525,7 @@
             <div class="executive-card">
               <div class="executive-card-header">
                 <span class="executive-badge">City Mayor</span>
-                <h4 class="executive-name">
-                  Hon. Hisham B. Ismail
-                </h4>
+                <h4 class="executive-name">Hon. Hisham B. Ismail</h4>
               </div>
               <div class="executive-card-body">
                 <div class="executive-contacts">
@@ -540,8 +533,12 @@
                     ><i class="bi bi-envelope"></i>
                     <span>legazpicitymayorsoffice@gmail.com</span></a
                   >
-                  <a href="tel:09274143768"><i class="bi bi-phone"></i> <span>0927 414 3768 (GLOBE)</span></a>
-                  <a href="tel:09122983504"><i class="bi bi-phone"></i> <span>0912 298 3504 (TNT)</span></a>
+                  <a href="tel:09274143768"
+                    ><i class="bi bi-phone"></i> <span>0927 414 3768 (GLOBE)</span></a
+                  >
+                  <a href="tel:09122983504"
+                    ><i class="bi bi-phone"></i> <span>0912 298 3504 (TNT)</span></a
+                  >
                 </div>
               </div>
             </div>
@@ -549,18 +546,20 @@
             <!-- Vice Mayor Card -->
             <div class="executive-card">
               <div class="executive-card-header">
-                <span class="executive-badge"
-                  >City Vice Mayor</span
-                >
-                <h4 class="executive-name">
-                  Hon. Luis Felipe L. Gutierrez
-                </h4>
+                <span class="executive-badge">City Vice Mayor</span>
+                <h4 class="executive-name">Hon. Luis Felipe L. Gutierrez</h4>
               </div>
               <div class="executive-card-body">
                 <div class="executive-contacts">
-                  <a style="pointer-events: none; opacity: 0.6;"><i class="bi bi-envelope"></i> <span>Unlisted</span></a>
-                  <a href="tel:0528205199"><i class="bi bi-telephone"></i> <span>(052) 820-5199</span></a>
-                  <a style="pointer-events: none; opacity: 0.6;"><i class="bi bi-phone"></i> <span>Unlisted</span></a>
+                  <a style="pointer-events: none; opacity: 0.6"
+                    ><i class="bi bi-envelope"></i> <span>Unlisted</span></a
+                  >
+                  <a href="tel:0528205199"
+                    ><i class="bi bi-telephone"></i> <span>(052) 820-5199</span></a
+                  >
+                  <a style="pointer-events: none; opacity: 0.6"
+                    ><i class="bi bi-phone"></i> <span>Unlisted</span></a
+                  >
                 </div>
               </div>
             </div>
@@ -568,7 +567,10 @@
 
           <!-- Simple Executive Source Line (Centered & Enlarged) -->
           <div class="source-credit-simple">
-            <i class="bi bi-info-circle"></i> Source: <a href="https://legazpi.gov.ph/executive/" target="_blank" rel="noopener noreferrer">City Government of Legazpi - Directory</a>
+            <i class="bi bi-info-circle"></i> Source:
+            <a href="https://legazpi.gov.ph/executive/" target="_blank" rel="noopener noreferrer"
+              >City Government of Legazpi - Directory</a
+            >
           </div>
         </div>
       </section>
@@ -590,12 +592,9 @@
                 font-size: 0.875rem;
                 margin-bottom: var(--spacing-sm);
               "
-              ><i class="bi bi-people-fill"></i>
-              <span>Legislative Branch</span></span
+              ><i class="bi bi-people-fill"></i> <span>Legislative Branch</span></span
             >
-            <h3
-              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
-            >
+            <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">
               Sangguniang Panlungsod Members
             </h3>
             <p style="color: var(--color-text-light)">
@@ -609,94 +608,157 @@
               <h4 class="councilor-name">Hon. Alan O. Rañola</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-shop"></i> <span>Trade & Commerce</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-shield-check"></i> <span>Good Governance, Public Ethics & Accountability</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-camera"></i> <span>Tourism, Culture & Heritage</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-shop"></i> <span>Trade & Commerce</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-shield-check"></i>
+                  <span>Good Governance, Public Ethics & Accountability</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-camera"></i> <span>Tourism, Culture & Heritage</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Lourence M. Beltran</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-cash-stack"></i> <span>Finance & Appropriations</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-hammer"></i> <span>Public Works & Infrastructure</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-controller"></i> <span>Games, Amusement & Entertainment</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-cash-stack"></i> <span>Finance & Appropriations</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-hammer"></i> <span>Public Works & Infrastructure</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-controller"></i> <span>Games, Amusement & Entertainment</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Ismael B. Buban IV</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-tree"></i> <span>Agriculture</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-heart-pulse"></i> <span>Social Welfare & Protection</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-people"></i> <span>CSOs & People's Empowerment</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-tree"></i> <span>Agriculture</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-heart-pulse"></i> <span>Social Welfare & Protection</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-people"></i> <span>CSOs & People's Empowerment</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Charlton S. Lajara</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-calculator"></i> <span>Ways & Means</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-flower1"></i> <span>Environmental Protection</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-shield-shaded"></i> <span>Public Order, Safety & Civil Defense</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-calculator"></i> <span>Ways & Means</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-flower1"></i> <span>Environmental Protection</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-shield-shaded"></i>
+                  <span>Public Order, Safety & Civil Defense</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Vicente F. Baltazar III</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-laptop"></i> <span>ICT & E-Governance</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-globe"></i> <span>Sisterhood, Inter-LGU & International Relations</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-laptop"></i> <span>ICT & E-Governance</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-globe"></i>
+                  <span>Sisterhood, Inter-LGU & International Relations</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Maria Paz Salud C. Imperial</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-gender-female"></i> <span>Women, Children & Family Welfare</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-hospital"></i> <span>Health & Sanitation</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-person-arms-up"></i> <span>Solo Parents, PWDs & Vulnerable Groups</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-gender-female"></i> <span>Women, Children & Family Welfare</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-hospital"></i> <span>Health & Sanitation</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-person-arms-up"></i>
+                  <span>Solo Parents, PWDs & Vulnerable Groups</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Alexander U. Jao</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-person-heart"></i> <span>Senior Citizens Affairs</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-bullseye"></i> <span>Sustainable Development Goals (SDG)</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-person-heart"></i> <span>Senior Citizens Affairs</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-bullseye"></i> <span>Sustainable Development Goals (SDG)</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Joseph Philip L. Lee</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-buildings"></i> <span>Cooperatives, Livelihood & Employment</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-book"></i> <span>Education, Science, Technology & Arts</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-cloud-lightning-rain"></i> <span>DRRM & Climate Change Adaptation</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-buildings"></i> <span>Cooperatives, Livelihood & Employment</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-book"></i> <span>Education, Science, Technology & Arts</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-cloud-lightning-rain"></i>
+                  <span>DRRM & Climate Change Adaptation</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Renato A. Valladolid</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-hammer"></i> <span>Human Rights & Social Justice</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-water"></i> <span>Fisheries & Aquatic Resources</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-hammer"></i> <span>Human Rights & Social Justice</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-water"></i> <span>Fisheries & Aquatic Resources</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Roberto Rafael N. Lucila II</h4>
               <span class="councilor-badge">SP Member</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-journal-text"></i> <span>Laws, Rules & Oversight</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-houses"></i> <span>Urban Planning, Housing & Resettlement</span></li>
-                <li class="councilor-committee-item"><i class="bi bi-lightning-charge"></i> <span>Public Utilities & Energy</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-journal-text"></i> <span>Laws, Rules & Oversight</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-houses"></i> <span>Urban Planning, Housing & Resettlement</span>
+                </li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-lightning-charge"></i> <span>Public Utilities & Energy</span>
+                </li>
               </ul>
             </div>
             <div class="councilor-card councilor-card--liga">
               <h4 class="councilor-name">Atty. Amore Rex B. Rañeses</h4>
-              <span class="councilor-badge councilor-badge--liga">Liga ng mga Barangay President</span>
+              <span class="councilor-badge councilor-badge--liga"
+                >Liga ng mga Barangay President</span
+              >
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-geo-alt"></i> <span>Barangay Affairs</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-geo-alt"></i> <span>Barangay Affairs</span>
+                </li>
               </ul>
               <span class="councilor-ex-officio-badge">EX-OFFICIO MEMBER</span>
             </div>
@@ -704,7 +766,9 @@
               <h4 class="councilor-name">John Nicolas C. Garbin</h4>
               <span class="councilor-badge councilor-badge--sk">PPSK President</span>
               <ul class="councilor-committees-list">
-                <li class="councilor-committee-item"><i class="bi bi-trophy"></i> <span>Youth & Sports Development</span></li>
+                <li class="councilor-committee-item">
+                  <i class="bi bi-trophy"></i> <span>Youth & Sports Development</span>
+                </li>
               </ul>
               <span class="councilor-ex-officio-badge">EX-OFFICIO MEMBER</span>
             </div>
@@ -712,7 +776,13 @@
 
           <!-- Simple Legislative Source Line (Centered & Enlarged) -->
           <div class="source-credit-simple">
-            <i class="bi bi-info-circle"></i> Source: <a href="https://legazpi.gov.ph/about-us/legislative/" target="_blank" rel="noopener noreferrer">City Government of Legazpi - Legislative</a>
+            <i class="bi bi-info-circle"></i> Source:
+            <a
+              href="https://legazpi.gov.ph/about-us/legislative/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >City Government of Legazpi - Legislative</a
+            >
           </div>
         </div>
       </section>
@@ -734,14 +804,9 @@
                 font-size: 0.875rem;
                 margin-bottom: var(--spacing-sm);
               "
-              ><i class="bi bi-building-fill"></i>
-              <span>Executive Branch</span></span
+              ><i class="bi bi-building-fill"></i> <span>Executive Branch</span></span
             >
-            <h3
-              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
-            >
-              Executive Offices
-            </h3>
+            <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">Executive Offices</h3>
             <p style="color: var(--color-text-light)">
               Directory and official contact details of Legazpi City government departments
             </p>
@@ -755,7 +820,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Business Permits & Licensing (BPLO)</h4>
                 <p class="dept-card-desc">For business permits</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Asuncion C. Viñas (BPLO Head)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Asuncion C. Viñas (BPLO Head)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0915-872-7722</span>
                   <span><i class="bi bi-envelope"></i> legpermit@gmail.com</span>
@@ -770,7 +837,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Accounting Office (CAccO)</h4>
                 <p class="dept-card-desc">For city accounting & audit</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Gloria E. Aringo, CPA (City Accountant)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Gloria E. Aringo, CPA (City Accountant)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-telephone"></i> (052) 742-3700</span>
                   <span><i class="bi bi-envelope"></i> lgulegazpi2020@gmail.com</span>
@@ -785,7 +854,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Administrator's Office (CAO)</h4>
                 <p class="dept-card-desc">For city administration</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Grace R. Bachiller (City Administrator)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Grace R. Bachiller (City Administrator)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0919-364-8292</span>
                   <span><i class="bi bi-envelope"></i> chitoante@yahoo.com</span>
@@ -800,7 +871,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Agriculture Services (CASO)</h4>
                 <p class="dept-card-desc">For agriculture & fisheries</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Sheila R. Nas (City Agriculturist)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Sheila R. Nas (City Agriculturist)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-telephone"></i> (052) 820-5015</span>
                   <span><i class="bi bi-envelope"></i> agri.legazpi@gmail.com</span>
@@ -815,7 +888,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Anti-Drug Abuse Council (CADAC)</h4>
                 <p class="dept-card-desc">For anti-drug programs</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Debbie A. Baltasar (OIC)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Debbie A. Baltasar (OIC)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0912-252-6865</span>
                   <span><i class="bi bi-envelope"></i> Legazpicadac@gmail.com</span>
@@ -830,7 +905,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Assessor's Office (OCAS)</h4>
                 <p class="dept-card-desc">For property assessments</p>
-                <span class="dept-card-head" style="opacity: 0.6;"><i class="bi bi-person-fill"></i> Unlisted</span>
+                <span class="dept-card-head" style="opacity: 0.6"
+                  ><i class="bi bi-person-fill"></i> Unlisted</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-telephone"></i> (052) 742-6882</span>
                   <span><i class="bi bi-envelope"></i> legazpi.assessorsoffice@gmail.com</span>
@@ -845,7 +922,10 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Civil Registrar's Office (CCRO)</h4>
                 <p class="dept-card-desc">For civil certificates</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Priscilla L. Galicia (City Civil Registrar)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Priscilla L. Galicia (City Civil
+                  Registrar)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-telephone"></i> (052) 742-5000</span>
                   <span><i class="bi bi-envelope"></i> ccro.legazpi@gmail.com</span>
@@ -860,7 +940,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Disaster Risk Reduction & Mgmt. (CDRRMO)</h4>
                 <p class="dept-card-desc">For disaster response</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Engr. Miladee N. Azur (CDRRMO Head)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Engr. Miladee N. Azur (CDRRMO Head)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0926-383-3744</span>
                   <span><i class="bi bi-envelope"></i> cdrrmo.legazpi@gmail.com</span>
@@ -875,7 +957,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Engineering Office (CEO)</h4>
                 <p class="dept-card-desc">For building permits</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Engr. Clemente A. Ibo (City Engineer)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Engr. Clemente A. Ibo (City Engineer)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0998-983-3073</span>
                   <span><i class="bi bi-envelope"></i> ceolegazpiad1@gmail.com</span>
@@ -890,7 +974,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Environment & Natural Resources (OCENR)</h4>
                 <p class="dept-card-desc">For environment & sanitation</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Engr. Linno Benju Q. Calleja (OIC)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Engr. Linno Benju Q. Calleja (OIC)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0946-599-0597</span>
                   <span><i class="bi bi-envelope"></i> ocenr.leg@legazpi.gov.ph</span>
@@ -905,7 +991,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Health Office (CHO)</h4>
                 <p class="dept-card-desc">For public health services</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Dr. Francis Gerald A. Gomez (OIC)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Dr. Francis Gerald A. Gomez (OIC)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0977-183-3638</span>
                   <span><i class="bi bi-envelope"></i> cholegazpi@gmail.com</span>
@@ -920,7 +1008,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Human Resource Management (CHRMO)</h4>
                 <p class="dept-card-desc">For human resources</p>
-                <span class="dept-card-head" style="opacity: 0.6;"><i class="bi bi-person-fill"></i> Unlisted</span>
+                <span class="dept-card-head" style="opacity: 0.6"
+                  ><i class="bi bi-person-fill"></i> Unlisted</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0999-883-3285</span>
                   <span><i class="bi bi-envelope"></i> chrmo.legazpicity@gmail.com</span>
@@ -935,7 +1025,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Legal Office (CLO)</h4>
                 <p class="dept-card-desc">For legal services</p>
-                <span class="dept-card-head" style="opacity: 0.6;"><i class="bi bi-person-fill"></i> Unlisted</span>
+                <span class="dept-card-head" style="opacity: 0.6"
+                  ><i class="bi bi-person-fill"></i> Unlisted</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0956-862-8647</span>
                   <span><i class="bi bi-envelope"></i> legazpicitylegaloffice@gmail.com</span>
@@ -950,7 +1042,10 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Planning & Dev. Office (CPDO)</h4>
                 <p class="dept-card-desc">For urban planning & zoning</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Arch. Joseph B. Esplana (CPDO Coordinator)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Arch. Joseph B. Esplana (CPDO
+                  Coordinator)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-telephone"></i> (052) 742-3701</span>
                   <span><i class="bi bi-envelope"></i> cpdo.legazpi@gmail.com</span>
@@ -965,7 +1060,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Social Welfare & Dev. (CSWDO)</h4>
                 <p class="dept-card-desc">For social welfare & aid</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Cecilia E. Arcilla, RSW (CSWDO Head)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Cecilia E. Arcilla, RSW (CSWDO Head)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0916-284-0885</span>
                   <span><i class="bi bi-envelope"></i> cswdo.legazpicity@gmail.com</span>
@@ -980,7 +1077,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Tourism Services Division (CTSD)</h4>
                 <p class="dept-card-desc">For tourism promotion</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Ricky A. Loterte (OIC)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Ricky A. Loterte (OIC)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-telephone"></i> (052) 742-5000</span>
                   <span><i class="bi bi-envelope"></i> tourism.legazpi@gmail.com</span>
@@ -995,7 +1094,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Treasurer's Office (CTO)</h4>
                 <p class="dept-card-desc">For taxes & revenue</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Constance S. Oliveros (City Treasurer)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Constance S. Oliveros (City Treasurer)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-telephone"></i> (052) 201-9487</span>
                   <span><i class="bi bi-envelope"></i> cto_leg@yahoo.com</span>
@@ -1010,7 +1111,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Gender & Development Division (GAD)</h4>
                 <p class="dept-card-desc">For women & gender affairs</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Dr. Marites T. Pasa (OIC)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Dr. Marites T. Pasa (OIC)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0912-158-3909</span>
                   <span><i class="bi bi-envelope"></i> gadlegazpihb1@gmail.com</span>
@@ -1025,7 +1128,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Legazpi City Hospital (LCH)</h4>
                 <p class="dept-card-desc">For clinical care</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Dr. Lady Ann T. Serrano (OIC)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Dr. Lady Ann T. Serrano (OIC)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0917-517-178</span>
                   <span><i class="bi bi-envelope"></i> legazpicityhospital.ph@gmail.com</span>
@@ -1040,7 +1145,10 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Office of the City Veterinarian (OCVET)</h4>
                 <p class="dept-card-desc">For veterinary & pet care</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Dr. Francis Gerald A. Gomez (City Veterinarian)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Dr. Francis Gerald A. Gomez (City
+                  Veterinarian)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-telephone"></i> (052) 820-5015</span>
                   <span><i class="bi bi-envelope"></i> vet.legazpi@gmail.com</span>
@@ -1055,7 +1163,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Persons with Disability Affairs (PDAO)</h4>
                 <p class="dept-card-desc">For PWD affairs & benefits</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Catalina Z. Maraña (OIC)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Catalina Z. Maraña (OIC)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-phone"></i> 0916-284-0885</span>
                   <span><i class="bi bi-envelope"></i> pdao.legazpicity@gmail.com</span>
@@ -1070,7 +1180,9 @@
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Public Employment Service Office (PESO)</h4>
                 <p class="dept-card-desc">For jobs & employment</p>
-                <span class="dept-card-head"><i class="bi bi-person-fill"></i> Diosdado R. Rañeses (PESO Head)</span>
+                <span class="dept-card-head"
+                  ><i class="bi bi-person-fill"></i> Diosdado R. Rañeses (PESO Head)</span
+                >
                 <div class="dept-card-contacts">
                   <span><i class="bi bi-telephone"></i> (052) 820-7671</span>
                   <span><i class="bi bi-envelope"></i> pesolegazpi@gmail.com</span>
@@ -1082,7 +1194,10 @@
 
           <!-- Simple Departments Source Line (Centered & Enlarged) -->
           <div class="source-credit-simple">
-            <i class="bi bi-info-circle"></i> Source: <a href="https://legazpi.gov.ph/directory/" target="_blank" rel="noopener noreferrer">City Government of Legazpi - Executive</a>
+            <i class="bi bi-info-circle"></i> Source:
+            <a href="https://legazpi.gov.ph/directory/" target="_blank" rel="noopener noreferrer"
+              >City Government of Legazpi - Executive</a
+            >
           </div>
         </div>
       </section>
@@ -1108,16 +1223,14 @@
                 font-size: 0.875rem;
                 margin-bottom: var(--spacing-sm);
               "
-              ><i class="bi bi-geo-alt-fill"></i>
-              <span>Barangay Units</span></span
+              ><i class="bi bi-geo-alt-fill"></i> <span>Barangay Units</span></span
             >
-            <h3
-              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
-            >
+            <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">
               Barangays of Legazpi
             </h3>
             <p style="color: var(--color-text-light)">
-              Directory of all 70 Barangays in Legazpi City with Punong Barangays and SK Chairpersons (Term 2023–2026)
+              Directory of all 70 Barangays in Legazpi City with Punong Barangays and SK
+              Chairpersons (Term 2023-2026)
             </p>
           </div>
 
@@ -1134,20 +1247,45 @@
               />
             </div>
             <div class="bgy-filter-btns">
-              <button type="button" class="bgy-filter-btn active" data-filter="all">All (70)</button>
+              <button type="button" class="bgy-filter-btn active" data-filter="all">
+                All (70)
+              </button>
               <button type="button" class="bgy-filter-btn" data-filter="urban">Urban (45)</button>
               <button type="button" class="bgy-filter-btn" data-filter="rural">Rural (25)</button>
             </div>
           </div>
 
-          <div id="bgyEmptyNotice" style="display: none; text-align: center; padding: 40px; background: white; border-radius: 12px; border: 1px dashed #cbd5e1; margin-bottom: 24px;">
-            <i class="bi bi-search" style="font-size: 2rem; color: #94a3b8; display: block; margin-bottom: 8px;"></i>
-            <p style="font-weight: 600; color: #475569; margin: 0;">No barangays match your search query.</p>
+          <div
+            id="bgyEmptyNotice"
+            style="
+              display: none;
+              text-align: center;
+              padding: 40px;
+              background: white;
+              border-radius: 12px;
+              border: 1px dashed #cbd5e1;
+              margin-bottom: 24px;
+            "
+          >
+            <i
+              class="bi bi-search"
+              style="font-size: 2rem; color: #94a3b8; display: block; margin-bottom: 8px"
+            ></i>
+            <p style="font-weight: 600; color: #475569; margin: 0">
+              No barangays match your search query.
+            </p>
           </div>
 
           <!-- Barangays Grid (70 Cards) -->
           <div id="barangayGrid">
-            <div class="barangay-card" data-bgy-num="1" data-name="bgy. 1 - em's barrio" data-pb="hon. veronica s. geraldino" data-sk="anidene dashi d. armenta" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="1"
+              data-name="bgy. 1 - em's barrio"
+              data-pb="hon. veronica s. geraldino"
+              data-sk="anidene dashi d. armenta"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 1 - Em's Barrio</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1163,11 +1301,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 3,259 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 1 - Em's Barrio"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 1 - Em's Barrio"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="2" data-name="bgy. 2 - em's barrio south" data-pb="hon. milagros b. bal" data-sk="aljon s. alvarado" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="2"
+              data-name="bgy. 2 - em's barrio south"
+              data-pb="hon. milagros b. bal"
+              data-sk="aljon s. alvarado"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 2 - Em's Barrio South</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1183,11 +1333,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,416 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 2 - Em's Barrio South"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 2 - Em's Barrio South"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="3" data-name="bgy. 3 - em's barrio east" data-pb="hon. jose t. pispis" data-sk="lowella mae c. apuac" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="3"
+              data-name="bgy. 3 - em's barrio east"
+              data-pb="hon. jose t. pispis"
+              data-sk="lowella mae c. apuac"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 3 - Em's Barrio East</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1203,11 +1365,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 945 (2024)</span>
-                  <a href="tel:09814619092" class="bgy-call-btn" aria-label="Call Bgy. 3 - Em's Barrio East"><i class="bi bi-phone-fill"></i> 09814619092</a>
+                  <a
+                    href="tel:09814619092"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 3 - Em's Barrio East"
+                    ><i class="bi bi-phone-fill"></i> 09814619092</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="4" data-name="bgy. 4 - sagpon pob." data-pb="hon. gibsen salvador e. de leoz" data-sk="jonnalyn p. aringo" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="4"
+              data-name="bgy. 4 - sagpon pob."
+              data-pb="hon. gibsen salvador e. de leoz"
+              data-sk="jonnalyn p. aringo"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 4 - Sagpon Pob.</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1223,11 +1397,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 975 (2024)</span>
-                  <a href="tel:09516995291" class="bgy-call-btn" aria-label="Call Bgy. 4 - Sagpon Pob."><i class="bi bi-phone-fill"></i> 09516995291</a>
+                  <a
+                    href="tel:09516995291"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 4 - Sagpon Pob."
+                    ><i class="bi bi-phone-fill"></i> 09516995291</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="5" data-name="bgy. 5 - sagmin pob." data-pb="hon. lorena a. vargas" data-sk="regine r. lombes" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="5"
+              data-name="bgy. 5 - sagmin pob."
+              data-pb="hon. lorena a. vargas"
+              data-sk="regine r. lombes"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 5 - Sagmin Pob.</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1243,11 +1429,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,037 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 5 - Sagmin Pob."><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 5 - Sagmin Pob."
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="6" data-name="bgy. 6 - bañadero pob." data-pb="hon. arthur r. marco" data-sk="franz vincent b. reynoso" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="6"
+              data-name="bgy. 6 - bañadero pob."
+              data-pb="hon. arthur r. marco"
+              data-sk="franz vincent b. reynoso"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 6 - Bañadero Pob.</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1263,11 +1461,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,289 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 6 - Bañadero Pob."><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 6 - Bañadero Pob."
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="7" data-name="bgy. 7 - baño" data-pb="hon. domingo alberto d. pasano jr." data-sk="kristian angelo o. soloria" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="7"
+              data-name="bgy. 7 - baño"
+              data-pb="hon. domingo alberto d. pasano jr."
+              data-sk="kristian angelo o. soloria"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 7 - Baño</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1283,11 +1493,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 559 (2024)</span>
-                  <a href="tel:0527421409" class="bgy-call-btn" aria-label="Call Bgy. 7 - Baño"><i class="bi bi-phone-fill"></i> (052) 742-1409</a>
+                  <a href="tel:0527421409" class="bgy-call-btn" aria-label="Call Bgy. 7 - Baño"
+                    ><i class="bi bi-phone-fill"></i> (052) 742-1409</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="8" data-name="bgy. 8 - bagumbayan" data-pb="hon. amore rex b. rañeses" data-sk="neiljan c. alianza" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="8"
+              data-name="bgy. 8 - bagumbayan"
+              data-pb="hon. amore rex b. rañeses"
+              data-sk="neiljan c. alianza"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 8 - Bagumbayan</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1303,11 +1522,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,564 (2024)</span>
-                  <a href="tel:8304636" class="bgy-call-btn" aria-label="Call Bgy. 8 - Bagumbayan"><i class="bi bi-phone-fill"></i> 830-4636</a>
+                  <a href="tel:8304636" class="bgy-call-btn" aria-label="Call Bgy. 8 - Bagumbayan"
+                    ><i class="bi bi-phone-fill"></i> 830-4636</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="9" data-name="bgy. 9 - pinaric" data-pb="hon. roy a. nañoz" data-sk="steven marc red l. sabdao" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="9"
+              data-name="bgy. 9 - pinaric"
+              data-pb="hon. roy a. nañoz"
+              data-sk="steven marc red l. sabdao"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 9 - Pinaric</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1323,11 +1551,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,414 (2024)</span>
-                  <a href="tel:09308119357" class="bgy-call-btn" aria-label="Call Bgy. 9 - Pinaric"><i class="bi bi-phone-fill"></i> 09308119357</a>
+                  <a href="tel:09308119357" class="bgy-call-btn" aria-label="Call Bgy. 9 - Pinaric"
+                    ><i class="bi bi-phone-fill"></i> 09308119357</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="10" data-name="bgy. 10 - cabugao" data-pb="hon. victor r. lapasaran" data-sk="mary rose d. quiles" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="10"
+              data-name="bgy. 10 - cabugao"
+              data-pb="hon. victor r. lapasaran"
+              data-sk="mary rose d. quiles"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 10 - Cabugao</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -1343,11 +1580,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 452 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 10 - Cabugao"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 10 - Cabugao"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="11" data-name="bgy. 11 - maoyod pob." data-pb="hon. mark joel o. beguiras" data-sk="trisha jane b. guiterrez" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="11"
+              data-name="bgy. 11 - maoyod pob."
+              data-pb="hon. mark joel o. beguiras"
+              data-sk="trisha jane b. guiterrez"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 11 - Maoyod Pob.</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1363,11 +1612,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,505 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 11 - Maoyod Pob."><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 11 - Maoyod Pob."
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="12" data-name="bgy. 12 - tula-tula" data-pb="hon. miguelito a. barcoma" data-sk="ma. louisa a. araneta" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="12"
+              data-name="bgy. 12 - tula-tula"
+              data-pb="hon. miguelito a. barcoma"
+              data-sk="ma. louisa a. araneta"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 12 - Tula-tula</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1383,11 +1644,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,041 (2024)</span>
-                  <a href="tel:0936161381" class="bgy-call-btn" aria-label="Call Bgy. 12 - Tula-tula"><i class="bi bi-phone-fill"></i> 0936161381</a>
+                  <a
+                    href="tel:0936161381"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 12 - Tula-tula"
+                    ><i class="bi bi-phone-fill"></i> 0936161381</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="13" data-name="bgy. 13 - ilawod west pob." data-pb="hon. ma. lourdes f. baltazar" data-sk="qyara milse a. caño" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="13"
+              data-name="bgy. 13 - ilawod west pob."
+              data-pb="hon. ma. lourdes f. baltazar"
+              data-sk="qyara milse a. caño"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 13 - Ilawod West Pob.</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1403,11 +1676,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 365 (2024)</span>
-                  <a href="tel:09751738902" class="bgy-call-btn" aria-label="Call Bgy. 13 - Ilawod West Pob."><i class="bi bi-phone-fill"></i> 09751738902</a>
+                  <a
+                    href="tel:09751738902"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 13 - Ilawod West Pob."
+                    ><i class="bi bi-phone-fill"></i> 09751738902</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="14" data-name="bgy. 14 - ilawod pob." data-pb="hon. gerald a. ayque" data-sk="maria patricia e. hurtado" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="14"
+              data-name="bgy. 14 - ilawod pob."
+              data-pb="hon. gerald a. ayque"
+              data-sk="maria patricia e. hurtado"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 14 - Ilawod Pob.</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1423,11 +1708,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 719 (2024)</span>
-                  <a href="tel:09953606107" class="bgy-call-btn" aria-label="Call Bgy. 14 - Ilawod Pob."><i class="bi bi-phone-fill"></i> 09953606107</a>
+                  <a
+                    href="tel:09953606107"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 14 - Ilawod Pob."
+                    ><i class="bi bi-phone-fill"></i> 09953606107</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="15" data-name="bgy. 15 - ilawod east pob." data-pb="hon. erlim a. azotea" data-sk="kenneth w. manila" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="15"
+              data-name="bgy. 15 - ilawod east pob."
+              data-pb="hon. erlim a. azotea"
+              data-sk="kenneth w. manila"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 15 - Ilawod East Pob.</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1443,11 +1740,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,386 (2024)</span>
-                  <a href="tel:09305283465" class="bgy-call-btn" aria-label="Call Bgy. 15 - Ilawod East Pob."><i class="bi bi-phone-fill"></i> 09305283465</a>
+                  <a
+                    href="tel:09305283465"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 15 - Ilawod East Pob."
+                    ><i class="bi bi-phone-fill"></i> 09305283465</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="16" data-name="bgy. 16 - kawit-east washington drive" data-pb="hon. jonathan g. rodenas" data-sk="julius e. gandol" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="16"
+              data-name="bgy. 16 - kawit-east washington drive"
+              data-pb="hon. jonathan g. rodenas"
+              data-sk="julius e. gandol"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 16 - Kawit-East Washington Drive</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1463,11 +1772,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 5,420 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 16 - Kawit-East Washington Drive"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 16 - Kawit-East Washington Drive"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="17" data-name="bgy. 17 - rizal street., ilawod" data-pb="hon. benito b. chan" data-sk="luke franz s. buitre" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="17"
+              data-name="bgy. 17 - rizal street., ilawod"
+              data-pb="hon. benito b. chan"
+              data-sk="luke franz s. buitre"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 17 - Rizal Street., Ilawod</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1483,11 +1804,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,365 (2024)</span>
-                  <a href="tel:0524131047" class="bgy-call-btn" aria-label="Call Bgy. 17 - Rizal Street., Ilawod"><i class="bi bi-phone-fill"></i> (052) 413-1047</a>
+                  <a
+                    href="tel:0524131047"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 17 - Rizal Street., Ilawod"
+                    ><i class="bi bi-phone-fill"></i> (052) 413-1047</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="18" data-name="bgy. 18 - cabagñan west" data-pb="hon. rowena a. olimpo" data-sk="nathaniel b. arao" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="18"
+              data-name="bgy. 18 - cabagñan west"
+              data-pb="hon. rowena a. olimpo"
+              data-sk="nathaniel b. arao"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 18 - Cabagñan West</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1503,11 +1836,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 4,133 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 18 - Cabagñan West"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 18 - Cabagñan West"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="19" data-name="bgy. 19 - cabagñan" data-pb="hon. john b. macalampad" data-sk="antonio camillo b. repillo" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="19"
+              data-name="bgy. 19 - cabagñan"
+              data-pb="hon. john b. macalampad"
+              data-sk="antonio camillo b. repillo"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 19 - Cabagñan</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -1523,11 +1868,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,611 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 19 - Cabagñan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 19 - Cabagñan"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="20" data-name="bgy. 20 - cabagñan east" data-pb="hon. fabian b. batalla jr." data-sk="carmela may d. acerado" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="20"
+              data-name="bgy. 20 - cabagñan east"
+              data-pb="hon. fabian b. batalla jr."
+              data-sk="carmela may d. acerado"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 20 - Cabagñan East</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1543,11 +1900,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 707 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 20 - Cabagñan East"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 20 - Cabagñan East"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="21" data-name="bgy. 21 - binanuahan west" data-pb="hon. jose t. abiera" data-sk="chelsea azenith p. ortal" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="21"
+              data-name="bgy. 21 - binanuahan west"
+              data-pb="hon. jose t. abiera"
+              data-sk="chelsea azenith p. ortal"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 21 - Binanuahan West</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1563,11 +1932,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 770 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 21 - Binanuahan West"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 21 - Binanuahan West"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="22" data-name="bgy. 22 - binanuahan east" data-pb="hon. jerry a. grageda" data-sk="christine h. reñevo" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="22"
+              data-name="bgy. 22 - binanuahan east"
+              data-pb="hon. jerry a. grageda"
+              data-sk="christine h. reñevo"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 22 - Binanuahan East</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1583,11 +1964,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,861 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 22 - Binanuahan East"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 22 - Binanuahan East"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="23" data-name="bgy. 23 - imperial court subd." data-pb="hon. edgar b. bejer" data-sk="jhon anthony j. morauda" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="23"
+              data-name="bgy. 23 - imperial court subd."
+              data-pb="hon. edgar b. bejer"
+              data-sk="jhon anthony j. morauda"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 23 - Imperial Court Subd.</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1603,11 +1996,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,202 (2024)</span>
-                  <a href="tel:09122025648" class="bgy-call-btn" aria-label="Call Bgy. 23 - Imperial Court Subd."><i class="bi bi-phone-fill"></i> 09122025648</a>
+                  <a
+                    href="tel:09122025648"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 23 - Imperial Court Subd."
+                    ><i class="bi bi-phone-fill"></i> 09122025648</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="24" data-name="bgy. 24 - rizal street" data-pb="hon. ricardo v. abunda" data-sk="loryden f. abella" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="24"
+              data-name="bgy. 24 - rizal street"
+              data-pb="hon. ricardo v. abunda"
+              data-sk="loryden f. abella"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 24 - Rizal Street</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -1623,11 +2028,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,826 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 24 - Rizal Street"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 24 - Rizal Street"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="25" data-name="bgy. 25 - lapu-lapu" data-pb="hon. ma. karren c. valdez" data-sk="mark justin a. padilla" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="25"
+              data-name="bgy. 25 - lapu-lapu"
+              data-pb="hon. ma. karren c. valdez"
+              data-sk="mark justin a. padilla"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 25 - Lapu-lapu</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1643,11 +2060,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,730 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 25 - Lapu-lapu"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 25 - Lapu-lapu"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="26" data-name="bgy. 26 - dinagaan" data-pb="hon. julia d. agao" data-sk="jamaica b. abunda" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="26"
+              data-name="bgy. 26 - dinagaan"
+              data-pb="hon. julia d. agao"
+              data-sk="jamaica b. abunda"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 26 - Dinagaan</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1663,11 +2092,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 534 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 26 - Dinagaan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 26 - Dinagaan"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="27" data-name="bgy. 27 - victory village south" data-pb="hon. basilia a. capino" data-sk="mark stephen m. abinion" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="27"
+              data-name="bgy. 27 - victory village south"
+              data-pb="hon. basilia a. capino"
+              data-sk="mark stephen m. abinion"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 27 - Victory Village South</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1683,11 +2124,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,451 (2024)</span>
-                  <a href="tel:09776320556" class="bgy-call-btn" aria-label="Call Bgy. 27 - Victory Village South"><i class="bi bi-phone-fill"></i> 09776320556</a>
+                  <a
+                    href="tel:09776320556"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 27 - Victory Village South"
+                    ><i class="bi bi-phone-fill"></i> 09776320556</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="28" data-name="bgy. 28 - victory village north" data-pb="hon. antonio l. loveriza" data-sk="prince khalid d. dao" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="28"
+              data-name="bgy. 28 - victory village north"
+              data-pb="hon. antonio l. loveriza"
+              data-sk="prince khalid d. dao"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 28 - Victory Village North</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1703,11 +2156,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,487 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 28 - Victory Village North"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 28 - Victory Village North"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="29" data-name="bgy. 29 - sabang" data-pb="hon. ismael g. santillan" data-sk="danica l. almayda" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="29"
+              data-name="bgy. 29 - sabang"
+              data-pb="hon. ismael g. santillan"
+              data-sk="danica l. almayda"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 29 - Sabang</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1723,11 +2188,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,894 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 29 - Sabang"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 29 - Sabang"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="30" data-name="bgy. 30 - pigcale" data-pb="hon. fernando a. lopez" data-sk="joyce h. lesano" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="30"
+              data-name="bgy. 30 - pigcale"
+              data-pb="hon. fernando a. lopez"
+              data-sk="joyce h. lesano"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 30 - Pigcale</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1743,11 +2220,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,210 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 30 - Pigcale"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 30 - Pigcale"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="31" data-name="bgy. 31 - centro-baybay" data-pb="hon. teresita l. empig" data-sk="ivy mae t. aranel" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="31"
+              data-name="bgy. 31 - centro-baybay"
+              data-pb="hon. teresita l. empig"
+              data-sk="ivy mae t. aranel"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 31 - Centro-Baybay</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1763,11 +2252,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,088 (2024)</span>
-                  <a href="tel:09070127231" class="bgy-call-btn" aria-label="Call Bgy. 31 - Centro-Baybay"><i class="bi bi-phone-fill"></i> 09070127231</a>
+                  <a
+                    href="tel:09070127231"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 31 - Centro-Baybay"
+                    ><i class="bi bi-phone-fill"></i> 09070127231</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="32" data-name="bgy. 32 - san roque" data-pb="hon. bill b. atento" data-sk="james kim r. barcelon" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="32"
+              data-name="bgy. 32 - san roque"
+              data-pb="hon. bill b. atento"
+              data-sk="james kim r. barcelon"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 32 - San Roque</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1783,11 +2284,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 5,452 (2024)</span>
-                  <a href="tel:09171120318" class="bgy-call-btn" aria-label="Call Bgy. 32 - San Roque"><i class="bi bi-phone-fill"></i> 09171120318</a>
+                  <a
+                    href="tel:09171120318"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 32 - San Roque"
+                    ><i class="bi bi-phone-fill"></i> 09171120318</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="33" data-name="bgy. 33 - pnr-peñaranda st.-iraya" data-pb="hon. marife d. velasco" data-sk="julius l. boyon" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="33"
+              data-name="bgy. 33 - pnr-peñaranda st.-iraya"
+              data-pb="hon. marife d. velasco"
+              data-sk="julius l. boyon"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 33 - PNR-Peñaranda St.-Iraya</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1803,11 +2316,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,887 (2024)</span>
-                  <a href="tel:09636753741" class="bgy-call-btn" aria-label="Call Bgy. 33 - PNR-Peñaranda St.-Iraya"><i class="bi bi-phone-fill"></i> 09636753741</a>
+                  <a
+                    href="tel:09636753741"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 33 - PNR-Peñaranda St.-Iraya"
+                    ><i class="bi bi-phone-fill"></i> 09636753741</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="34" data-name="bgy. 34 - oro site-magallanes st." data-pb="hon. mariano oriel a. maddela" data-sk="jose howard b. guan" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="34"
+              data-name="bgy. 34 - oro site-magallanes st."
+              data-pb="hon. mariano oriel a. maddela"
+              data-sk="jose howard b. guan"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 34 - Oro Site-Magallanes St.</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1823,11 +2348,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,140 (2024)</span>
-                  <a href="tel:0524808766" class="bgy-call-btn" aria-label="Call Bgy. 34 - Oro Site-Magallanes St."><i class="bi bi-phone-fill"></i> (052) 480-8766</a>
+                  <a
+                    href="tel:0524808766"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 34 - Oro Site-Magallanes St."
+                    ><i class="bi bi-phone-fill"></i> (052) 480-8766</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="35" data-name="bgy. 35 - tinago" data-pb="hon. sayri r. sayco" data-sk="carmela c. hernandez" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="35"
+              data-name="bgy. 35 - tinago"
+              data-pb="hon. sayri r. sayco"
+              data-sk="carmela c. hernandez"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 35 - Tinago</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1843,11 +2380,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 340 (2024)</span>
-                  <a href="tel:09395968501" class="bgy-call-btn" aria-label="Call Bgy. 35 - Tinago"><i class="bi bi-phone-fill"></i> 09395968501</a>
+                  <a href="tel:09395968501" class="bgy-call-btn" aria-label="Call Bgy. 35 - Tinago"
+                    ><i class="bi bi-phone-fill"></i> 09395968501</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="36" data-name="bgy. 36 - kapantawan" data-pb="hon. eric sim b. brizuela" data-sk="neilfred d. abad" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="36"
+              data-name="bgy. 36 - kapantawan"
+              data-pb="hon. eric sim b. brizuela"
+              data-sk="neilfred d. abad"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 36 - Kapantawan</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1863,11 +2409,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 404 (2024)</span>
-                  <a href="tel:0528207009" class="bgy-call-btn" aria-label="Call Bgy. 36 - Kapantawan"><i class="bi bi-phone-fill"></i> (052) 820-7009</a>
+                  <a
+                    href="tel:0528207009"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 36 - Kapantawan"
+                    ><i class="bi bi-phone-fill"></i> (052) 820-7009</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="37" data-name="bgy. 37 - bitano" data-pb="hon. bernard y. pacardo" data-sk="phoebe diane p. cruel" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="37"
+              data-name="bgy. 37 - bitano"
+              data-pb="hon. bernard y. pacardo"
+              data-sk="phoebe diane p. cruel"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 37 - Bitano</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1883,11 +2441,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 7,546 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 37 - Bitano"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 37 - Bitano"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="38" data-name="bgy. 38 - gogon" data-pb="hon. ma. theresa s. naz" data-sk="angelica a. nacion" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="38"
+              data-name="bgy. 38 - gogon"
+              data-pb="hon. ma. theresa s. naz"
+              data-sk="angelica a. nacion"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 38 - Gogon</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1903,11 +2473,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 6,534 (2024)</span>
-                  <a href="tel:09257136784" class="bgy-call-btn" aria-label="Call Bgy. 38 - Gogon"><i class="bi bi-phone-fill"></i> 09257136784</a>
+                  <a href="tel:09257136784" class="bgy-call-btn" aria-label="Call Bgy. 38 - Gogon"
+                    ><i class="bi bi-phone-fill"></i> 09257136784</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="39" data-name="bgy. 39 - bonot" data-pb="hon. reynaldo h. bendicio" data-sk="kim dino o. serrano" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="39"
+              data-name="bgy. 39 - bonot"
+              data-pb="hon. reynaldo h. bendicio"
+              data-sk="kim dino o. serrano"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 39 - Bonot</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1923,11 +2502,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,375 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 39 - Bonot"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 39 - Bonot"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="40" data-name="bgy. 40 - cruzada" data-pb="hon. edsil n. llaguno" data-sk="lawrence grant l. oliva" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="40"
+              data-name="bgy. 40 - cruzada"
+              data-pb="hon. edsil n. llaguno"
+              data-sk="lawrence grant l. oliva"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 40 - Cruzada</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1943,11 +2534,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 7,030 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 40 - Cruzada"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 40 - Cruzada"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="41" data-name="bgy. 41 - bogtong" data-pb="hon. joel a. ador" data-sk="fatima a. hagos" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="41"
+              data-name="bgy. 41 - bogtong"
+              data-pb="hon. joel a. ador"
+              data-sk="fatima a. hagos"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 41 - Bogtong</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1963,11 +2566,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 5,389 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 41 - Bogtong"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 41 - Bogtong"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="42" data-name="bgy. 42 - rawis" data-pb="hon. joel a. orosco" data-sk="keneth l. pinon" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="42"
+              data-name="bgy. 42 - rawis"
+              data-pb="hon. joel a. orosco"
+              data-sk="keneth l. pinon"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 42 - Rawis</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -1983,11 +2598,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 10,330 (2024)</span>
-                  <a href="tel:09106022923" class="bgy-call-btn" aria-label="Call Bgy. 42 - Rawis"><i class="bi bi-phone-fill"></i> 09106022923</a>
+                  <a href="tel:09106022923" class="bgy-call-btn" aria-label="Call Bgy. 42 - Rawis"
+                    ><i class="bi bi-phone-fill"></i> 09106022923</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="43" data-name="bgy. 43 - tamaoyan" data-pb="hon. sylvia m. del agua" data-sk="joseph b. baronia" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="43"
+              data-name="bgy. 43 - tamaoyan"
+              data-pb="hon. sylvia m. del agua"
+              data-sk="joseph b. baronia"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 43 - Tamaoyan</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2003,11 +2627,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,809 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 43 - Tamaoyan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 43 - Tamaoyan"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="44" data-name="bgy. 44 - pawa" data-pb="hon. tito c. villanueva" data-sk="arjay a. dino" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="44"
+              data-name="bgy. 44 - pawa"
+              data-pb="hon. tito c. villanueva"
+              data-sk="arjay a. dino"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 44 - Pawa</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2023,11 +2659,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 4,585 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 44 - Pawa"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 44 - Pawa"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="45" data-name="bgy. 45 - dita" data-pb="hon. romeo a. almayda jr." data-sk="john nicolas c. garbin" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="45"
+              data-name="bgy. 45 - dita"
+              data-pb="hon. romeo a. almayda jr."
+              data-sk="john nicolas c. garbin"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 45 - Dita</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2043,11 +2691,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,167 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 45 - Dita"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 45 - Dita"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="46" data-name="bgy. 46 - san joaquin" data-pb="hon. amelia a. dela torre" data-sk="lhenard khen a. dino" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="46"
+              data-name="bgy. 46 - san joaquin"
+              data-pb="hon. amelia a. dela torre"
+              data-sk="lhenard khen a. dino"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 46 - San Joaquin</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2063,11 +2723,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,903 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 46 - San Joaquin"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 46 - San Joaquin"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="47" data-name="bgy. 47 - arimbay" data-pb="hon. wilhelmina m. budao" data-sk="danica mae n. biago" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="47"
+              data-name="bgy. 47 - arimbay"
+              data-pb="hon. wilhelmina m. budao"
+              data-sk="danica mae n. biago"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 47 - Arimbay</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2083,11 +2755,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 4,085 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 47 - Arimbay"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 47 - Arimbay"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="48" data-name="bgy. 48 - bagong abre" data-pb="hon. dindo d. nuñez" data-sk="ma. bernadeth b. bañares" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="48"
+              data-name="bgy. 48 - bagong abre"
+              data-pb="hon. dindo d. nuñez"
+              data-sk="ma. bernadeth b. bañares"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 48 - Bagong Abre</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2103,11 +2787,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,675 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 48 - Bagong Abre"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 48 - Bagong Abre"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="49" data-name="bgy. 49 - bigaa" data-pb="hon. ricardo a. arienda" data-sk="james paul simon n. arienda" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="49"
+              data-name="bgy. 49 - bigaa"
+              data-pb="hon. ricardo a. arienda"
+              data-sk="james paul simon n. arienda"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 49 - Bigaa</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -2123,11 +2819,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 7,287 (2024)</span>
-                  <a href="tel:09158717790" class="bgy-call-btn" aria-label="Call Bgy. 49 - Bigaa"><i class="bi bi-phone-fill"></i> 09158717790</a>
+                  <a href="tel:09158717790" class="bgy-call-btn" aria-label="Call Bgy. 49 - Bigaa"
+                    ><i class="bi bi-phone-fill"></i> 09158717790</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="50" data-name="bgy. 50 - padang" data-pb="hon. harold l. bembenuto" data-sk="desiree ayala" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="50"
+              data-name="bgy. 50 - padang"
+              data-pb="hon. harold l. bembenuto"
+              data-sk="desiree ayala"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 50 - Padang</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2143,11 +2848,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,949 (2024)</span>
-                  <a href="tel:09068516780" class="bgy-call-btn" aria-label="Call Bgy. 50 - Padang"><i class="bi bi-phone-fill"></i> 09068516780</a>
+                  <a href="tel:09068516780" class="bgy-call-btn" aria-label="Call Bgy. 50 - Padang"
+                    ><i class="bi bi-phone-fill"></i> 09068516780</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="51" data-name="bgy. 51 - buyuan" data-pb="hon. ronaldo b. miña sr." data-sk="regine s. abrique" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="51"
+              data-name="bgy. 51 - buyuan"
+              data-pb="hon. ronaldo b. miña sr."
+              data-sk="regine s. abrique"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 51 - Buyuan</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2163,11 +2877,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 4,200 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 51 - Buyuan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 51 - Buyuan"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="52" data-name="bgy. 52 - matanag" data-pb="hon. hilario a. atun" data-sk="dale xendrick b. neptuno" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="52"
+              data-name="bgy. 52 - matanag"
+              data-pb="hon. hilario a. atun"
+              data-sk="dale xendrick b. neptuno"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 52 - Matanag</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2183,11 +2909,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,904 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 52 - Matanag"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 52 - Matanag"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="53" data-name="bgy. 53 - bonga" data-pb="hon. chona m. miña" data-sk="precy a. nuñez" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="53"
+              data-name="bgy. 53 - bonga"
+              data-pb="hon. chona m. miña"
+              data-sk="precy a. nuñez"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 53 - Bonga</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2203,11 +2941,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 4,308 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 53 - Bonga"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 53 - Bonga"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="54" data-name="bgy. 54 - mabinit" data-pb="hon. dennis p. nuñez" data-sk="mark ivan l. armario" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="54"
+              data-name="bgy. 54 - mabinit"
+              data-pb="hon. dennis p. nuñez"
+              data-sk="mark ivan l. armario"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 54 - Mabinit</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2223,11 +2973,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,699 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 54 - Mabinit"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 54 - Mabinit"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="55" data-name="bgy. 55 - estanza" data-pb="hon. danilo d. agripa" data-sk="mark a. agripa" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="55"
+              data-name="bgy. 55 - estanza"
+              data-pb="hon. danilo d. agripa"
+              data-sk="mark a. agripa"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 55 - Estanza</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2243,11 +3005,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 4,963 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 55 - Estanza"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 55 - Estanza"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="56" data-name="bgy. 56 - taysan" data-pb="hon. benjamin d. rosin" data-sk="antoniette a. arganda" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="56"
+              data-name="bgy. 56 - taysan"
+              data-pb="hon. benjamin d. rosin"
+              data-sk="antoniette a. arganda"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 56 - Taysan</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -2263,11 +3037,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 20,017 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 56 - Taysan"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 56 - Taysan"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="57" data-name="bgy. 57 - dap-dap" data-pb="hon. glenn j. barcelon" data-sk="ma. maxine a. castillo" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="57"
+              data-name="bgy. 57 - dap-dap"
+              data-pb="hon. glenn j. barcelon"
+              data-sk="ma. maxine a. castillo"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 57 - Dap-dap</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2283,11 +3069,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,746 (2024)</span>
-                  <a href="tel:0527425763" class="bgy-call-btn" aria-label="Call Bgy. 57 - Dap-dap"><i class="bi bi-phone-fill"></i> (052) 742-5763</a>
+                  <a href="tel:0527425763" class="bgy-call-btn" aria-label="Call Bgy. 57 - Dap-dap"
+                    ><i class="bi bi-phone-fill"></i> (052) 742-5763</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="58" data-name="bgy. 58 - buragwis" data-pb="hon. maria cristina p. ajero" data-sk="camila remoto" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="58"
+              data-name="bgy. 58 - buragwis"
+              data-pb="hon. maria cristina p. ajero"
+              data-sk="camila remoto"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 58 - Buragwis</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2303,11 +3098,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 4,329 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 58 - Buragwis"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 58 - Buragwis"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="59" data-name="bgy. 59 - puro" data-pb="hon. henyl b. olimpo" data-sk="ma. ellyne h. apin" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="59"
+              data-name="bgy. 59 - puro"
+              data-pb="hon. henyl b. olimpo"
+              data-sk="ma. ellyne h. apin"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 59 - Puro</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -2323,11 +3130,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 5,215 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 59 - Puro"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 59 - Puro"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="60" data-name="bgy. 60 - lamba" data-pb="hon. norberto m. abion" data-sk="chris l. presentacion" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="60"
+              data-name="bgy. 60 - lamba"
+              data-pb="hon. norberto m. abion"
+              data-sk="chris l. presentacion"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 60 - Lamba</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2343,11 +3162,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,453 (2024)</span>
-                  <a href="tel:0527423913" class="bgy-call-btn" aria-label="Call Bgy. 60 - Lamba"><i class="bi bi-phone-fill"></i> (052) 742-3913</a>
+                  <a href="tel:0527423913" class="bgy-call-btn" aria-label="Call Bgy. 60 - Lamba"
+                    ><i class="bi bi-phone-fill"></i> (052) 742-3913</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="61" data-name="bgy. 61 - maslog" data-pb="hon. niño albert c. berjuega" data-sk="algenbert p. gribialde" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="61"
+              data-name="bgy. 61 - maslog"
+              data-pb="hon. niño albert c. berjuega"
+              data-sk="algenbert p. gribialde"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 61 - Maslog</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -2363,11 +3191,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 5,320 (2024)</span>
-                  <a href="tel:0527420611" class="bgy-call-btn" aria-label="Call Bgy. 61 - Maslog"><i class="bi bi-phone-fill"></i> (052) 742-0611</a>
+                  <a href="tel:0527420611" class="bgy-call-btn" aria-label="Call Bgy. 61 - Maslog"
+                    ><i class="bi bi-phone-fill"></i> (052) 742-0611</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="62" data-name="bgy. 62 - homapon" data-pb="hon. fidel a. botin sr." data-sk="angela a. serrano" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="62"
+              data-name="bgy. 62 - homapon"
+              data-pb="hon. fidel a. botin sr."
+              data-sk="angela a. serrano"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 62 - Homapon</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -2383,11 +3220,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 5,250 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 62 - Homapon"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 62 - Homapon"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="63" data-name="bgy. 63 - mariawa" data-pb="hon. anabelle a. teope" data-sk="mark owen a. manoriña" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="63"
+              data-name="bgy. 63 - mariawa"
+              data-pb="hon. anabelle a. teope"
+              data-sk="mark owen a. manoriña"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 63 - Mariawa</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2403,11 +3252,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,026 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 63 - Mariawa"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 63 - Mariawa"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="64" data-name="bgy. 64 - bagacay" data-pb="hon. dennis a. alamo" data-sk="mark owen d. alapan" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="64"
+              data-name="bgy. 64 - bagacay"
+              data-pb="hon. dennis a. alamo"
+              data-sk="mark owen d. alapan"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 64 - Bagacay</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2423,11 +3284,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,869 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 64 - Bagacay"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 64 - Bagacay"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="65" data-name="bgy. 65 - imalnod" data-pb="hon. beberlyn a. bitancur" data-sk="bridalyn claire m. trilles" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="65"
+              data-name="bgy. 65 - imalnod"
+              data-pb="hon. beberlyn a. bitancur"
+              data-sk="bridalyn claire m. trilles"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 65 - Imalnod</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2443,11 +3316,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,798 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 65 - Imalnod"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 65 - Imalnod"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="66" data-name="bgy. 66 - banquerohan" data-pb="hon. crispin a. botin" data-sk="mark justine l. jacob" data-type="urban">
+            <div
+              class="barangay-card"
+              data-bgy-num="66"
+              data-name="bgy. 66 - banquerohan"
+              data-pb="hon. crispin a. botin"
+              data-sk="mark justine l. jacob"
+              data-type="urban"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 66 - Banquerohan</h4>
                 <span class="badge badge-urban">Urban</span>
@@ -2463,11 +3348,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 8,918 (2024)</span>
-                  <a href="tel:09091238701" class="bgy-call-btn" aria-label="Call Bgy. 66 - Banquerohan"><i class="bi bi-phone-fill"></i> 09091238701</a>
+                  <a
+                    href="tel:09091238701"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 66 - Banquerohan"
+                    ><i class="bi bi-phone-fill"></i> 09091238701</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="67" data-name="bgy. 67 - bariis" data-pb="hon. jesse m. aycardo" data-sk="charles a. leron" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="67"
+              data-name="bgy. 67 - bariis"
+              data-pb="hon. jesse m. aycardo"
+              data-sk="charles a. leron"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 67 - Bariis</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2483,11 +3380,20 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,739 (2024)</span>
-                  <a href="tel:09664594639" class="bgy-call-btn" aria-label="Call Bgy. 67 - Bariis"><i class="bi bi-phone-fill"></i> 09664594639</a>
+                  <a href="tel:09664594639" class="bgy-call-btn" aria-label="Call Bgy. 67 - Bariis"
+                    ><i class="bi bi-phone-fill"></i> 09664594639</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="68" data-name="bgy. 68 - san francisco" data-pb="hon. ronaldo p. aringo" data-sk="jhacel a. aringo" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="68"
+              data-name="bgy. 68 - san francisco"
+              data-pb="hon. ronaldo p. aringo"
+              data-sk="jhacel a. aringo"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 68 - San Francisco</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2503,11 +3409,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 2,322 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 68 - San Francisco"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 68 - San Francisco"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="69" data-name="bgy. 69 - buenavista" data-pb="hon. rogelio a. leron" data-sk="rendell a. ramos" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="69"
+              data-name="bgy. 69 - buenavista"
+              data-pb="hon. rogelio a. leron"
+              data-sk="rendell a. ramos"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 69 - Buenavista</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2523,11 +3441,23 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 1,419 (2024)</span>
-                  <a href="tel:09564267369" class="bgy-call-btn" aria-label="Call Bgy. 69 - Buenavista"><i class="bi bi-phone-fill"></i> 09564267369</a>
+                  <a
+                    href="tel:09564267369"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 69 - Buenavista"
+                    ><i class="bi bi-phone-fill"></i> 09564267369</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="barangay-card" data-bgy-num="70" data-name="bgy. 70 - cagbacong" data-pb="hon. gladwyn t. candia" data-sk="dominic g. asilo" data-type="rural">
+            <div
+              class="barangay-card"
+              data-bgy-num="70"
+              data-name="bgy. 70 - cagbacong"
+              data-pb="hon. gladwyn t. candia"
+              data-sk="dominic g. asilo"
+              data-type="rural"
+            >
               <div class="barangay-card-header">
                 <h4 class="barangay-name">Bgy. 70 - Cagbacong</h4>
                 <span class="badge badge-rural">Rural</span>
@@ -2543,7 +3473,12 @@
                 </div>
                 <div class="bgy-footer-row">
                   <span class="bgy-pop"><i class="bi bi-people"></i> 3,019 (2024)</span>
-                  <a style="pointer-events: none; opacity: 0.6;" class="bgy-call-btn" aria-label="Call Bgy. 70 - Cagbacong"><i class="bi bi-phone-fill"></i> Unlisted</a>
+                  <a
+                    style="pointer-events: none; opacity: 0.6"
+                    class="bgy-call-btn"
+                    aria-label="Call Bgy. 70 - Cagbacong"
+                    ><i class="bi bi-phone-fill"></i> Unlisted</a
+                  >
                 </div>
               </div>
             </div>
@@ -2551,7 +3486,20 @@
 
           <!-- Simple Barangay Source Line (Centered & Enlarged) -->
           <div class="source-credit-simple">
-            <i class="bi bi-info-circle"></i> Sources: <a href="https://www.dilg.gov.ph/barangay-officials-directory/search" target="_blank" rel="noopener noreferrer">DILG Barangay Officials Directory</a> &bull; <a href="https://psa.gov.ph/content/2024-census-population-popcen-population-counts-declared-official-president" target="_blank" rel="noopener noreferrer">PSA Census of Population (2024)</a>
+            <i class="bi bi-info-circle"></i> Sources:
+            <a
+              href="https://www.dilg.gov.ph/barangay-officials-directory/search"
+              target="_blank"
+              rel="noopener noreferrer"
+              >DILG Barangay Officials Directory</a
+            >
+            &bull;
+            <a
+              href="https://psa.gov.ph/content/2024-census-population-popcen-population-counts-declared-official-president"
+              target="_blank"
+              rel="noopener noreferrer"
+              >PSA Census of Population (2024)</a
+            >
           </div>
         </div>
       </section>
@@ -2568,11 +3516,12 @@
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi City with transparent access to municipal services, programs, and public funds.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
-                href="https://www.facebook.com/betterlegazpi"
+                href="https://www.facebook.com/betterlegazpi.org"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -2580,18 +3529,29 @@
                 ><i class="bi bi-facebook"></i
               ></a>
               <a
-                href="https://github.com/bpbelen/betterlegazpi"
+                href="https://www.linkedin.com/company/betterlegazpi/"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
-                ><i class="bi bi-github"></i
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://discord.com/invite/betterlegazpi"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                ><i class="bi bi-discord"></i
               ></a>
             </div>
           </div>
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -2600,46 +3560,39 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Official Portals</h4>
+            <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://legazpi.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Official Legazpi City Portal</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://legazpi.gov.ph/executive/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Executive Directory</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://legazpi.gov.ph/about-us/legislative/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Sangguniang Panlungsod</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://legazpi.gov.ph/directory/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >City Office Directory</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://data.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
+                >
+              </li>
+              <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -2652,18 +3605,58 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
               href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
@@ -2678,7 +3671,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Interactive Barangay Filter & Search Script -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -2699,9 +3691,10 @@
             const cardType = card.getAttribute('data-type') || '';
             const cardNum = card.getAttribute('data-bgy-num') || '';
 
-            const matchesSearch = !currentQuery || 
-              cardName.includes(currentQuery) || 
-              cardPb.includes(currentQuery) || 
+            const matchesSearch =
+              !currentQuery ||
+              cardName.includes(currentQuery) ||
+              cardPb.includes(currentQuery) ||
               cardSk.includes(currentQuery) ||
               cardNum === currentQuery;
 

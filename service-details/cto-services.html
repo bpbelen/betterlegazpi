@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://betterlegazpi.org/service-details/cto-services" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://betterlegazpi.org/service-details/cto-services" />
-    <meta property="og:title" content="CTO Hub — City Treasurer's Office | BetterLegazpi.org" />
+    <meta property="og:title" content="CTO Hub: City Treasurer's Office | BetterLegazpi.org" />
     <meta
       property="og:description"
       content="Official Citizen's Charter for Legazpi City CTO: Real property taxes, business taxes, community tax certificates, transfer tax, and Treasury services."
@@ -26,7 +26,7 @@
       content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>CTO Hub — City Treasurer's Office | BetterLegazpi.org</title>
+    <title>CTO Hub: City Treasurer's Office | BetterLegazpi.org</title>
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,461 +47,8 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-hub.css" />
     <style>
-      .bpl-section {
-        padding: 40px 0;
-      }
-      .bpl-section.alt-bg {
-        background: var(--color-bg-alt);
-      }
-      .section-header {
-        margin-bottom: 24px;
-      }
-      .section-header h2 {
-        font-size: 1.25rem;
-        color: var(--color-text);
-        margin-bottom: 6px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 700;
-      }
-      .section-header h2 i {
-        color: var(--color-primary);
-        font-size: 1.15rem;
-      }
-      .section-header p {
-        color: var(--color-text-light);
-        font-size: 0.875rem;
-        margin: 0;
-        line-height: 1.5;
-      }
-      .quick-stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-        margin-bottom: 24px;
-      }
-      .stat-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        text-align: center;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .stat-card i {
-        font-size: 1.15rem;
-        color: var(--color-primary);
-        margin-bottom: 4px;
-      }
-      .stat-card h4 {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin-bottom: 2px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .stat-card p {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
-      .service-tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 28px;
-        justify-content: center;
-        background: transparent;
-        border: none;
-        padding: 0;
-      }
-      .service-tab {
-        padding: 10px 20px;
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 8px;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--color-text);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .service-tab:hover {
-        border-color: var(--color-primary);
-        color: var(--color-primary);
-      }
-      .service-tab.active {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
-        color: white;
-        box-shadow: 0 2px 6px rgba(0, 50, 160, 0.2);
-      }
-      .service-tab.active i {
-        color: white;
-      }
-      .service-content {
-        display: none;
-      }
-      .service-content.active {
-        display: block;
-      }
-      .sub-service-controls {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 4px 2px;
-      }
-      .sub-service-count {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: #64748b;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .sub-service-count i {
-        color: var(--color-primary);
-      }
-      .btn-toggle-all {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        border-radius: 6px;
-        padding: 6px 14px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--color-primary);
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-      }
-      .btn-toggle-all:hover {
-        background: rgba(0, 50, 160, 0.06);
-        border-color: var(--color-primary);
-      }
-      .sub-service-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        margin-bottom: 14px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-        overflow: hidden;
-        transition:
-          border-color 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-      .sub-service-card:hover {
-        border-color: rgba(0, 50, 160, 0.22);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-      }
-      .sub-service-card.is-open {
-        border-color: rgba(0, 50, 160, 0.25);
-        box-shadow: 0 4px 14px rgba(0, 50, 160, 0.05);
-      }
-      .sub-service-card:last-child {
-        margin-bottom: 0;
-      }
-      .sub-service-header {
-        padding: 18px 20px;
-        cursor: pointer;
-        user-select: none;
-        background: var(--color-white, #ffffff);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 14px;
-        transition: background 0.15s ease;
-        margin-bottom: 0;
-        border-bottom: none;
-      }
-      .sub-service-header:hover {
-        background: #f8faff;
-      }
-      .sub-service-header:focus-visible {
-        outline: 2px solid var(--color-primary);
-        outline-offset: -2px;
-      }
-      .sub-service-header-left {
-        flex: 1;
-        min-width: 0;
-      }
-      .sub-service-title-wrap {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px 12px;
-        margin-bottom: 6px;
-      }
-      .sub-service-header h3 {
-        font-size: 1.0625rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .sub-service-header h3 i {
-        color: var(--color-primary);
-      }
-      .sub-service-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 3px 10px;
-        background: rgba(0, 50, 160, 0.08);
-        color: var(--color-primary);
-        border-radius: 20px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-      }
-      .sub-service-desc {
-        color: #475569;
-        font-size: 0.8125rem;
-        line-height: 1.45;
-        margin: 0 0 6px 0;
-      }
-      .sub-service-teaser {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-        color: var(--color-primary);
-      }
-      .sub-service-chevron-btn {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: #f1f5f9;
-        color: #475569;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        transition: all 0.25s ease;
-        border: none;
-        font-size: 0.8125rem;
-      }
-      .sub-service-card:hover .sub-service-chevron-btn {
-        background: rgba(0, 50, 160, 0.1);
-        color: var(--color-primary);
-      }
-      .sub-service-card.is-open .sub-service-chevron-btn {
-        background: var(--color-primary);
-        color: white;
-        transform: rotate(180deg);
-      }
-      .sub-service-body {
-        display: none;
-        padding: 20px;
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
-        background: var(--color-bg-alt, #f8f9fa);
-      }
-      .sub-service-card.is-open .sub-service-body {
-        display: block;
-      }
-      .req-summary-grid {
-        display: grid;
-        grid-template-columns: 1.7fr 1fr;
-        gap: 16px;
-        margin-bottom: 18px;
-      }
-      .req-box {
-        background: var(--color-bg-alt, #f8fafc);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-      }
-      .req-box h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 12px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .req-box h4 i {
-        color: var(--color-primary);
-      }
-      .req-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .req-list li {
-        font-size: 0.8125rem;
-        color: #334155;
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        line-height: 1.45;
-      }
-      .req-list li i {
-        color: var(--color-primary);
-        font-size: 0.875rem;
-        margin-top: 2px;
-        flex-shrink: 0;
-      }
-      .req-list li strong {
-        color: var(--color-text);
-      }
-      .summary-metrics {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .metric-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 6px;
-        padding: 10px 12px;
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      .metric-icon {
-        width: 30px;
-        height: 30px;
-        background: rgba(0, 50, 160, 0.05);
-        color: var(--color-primary);
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.95rem;
-        flex-shrink: 0;
-        margin-top: 1px;
-      }
-      .metric-content {
-        flex: 1;
-      }
-      .metric-label {
-        font-size: 0.625rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: var(--color-text-light);
-        letter-spacing: 0.5px;
-        margin-bottom: 2px;
-      }
-      .metric-value {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        line-height: 1.4;
-      }
-      .process-table {
-        width: 100%;
-        table-layout: fixed;
-        border-collapse: collapse;
-        background: var(--color-white, #ffffff);
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        font-size: 0.8125rem;
-        margin-top: 10px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
-      }
-      .process-table th {
-        background: var(--color-primary);
-        color: white;
-        padding: 12px 14px;
-        text-align: left;
-        font-weight: 600;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
-      }
-      .process-table td {
-        padding: 14px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-        vertical-align: top;
-        line-height: 1.5;
-      }
-      .process-table tr:last-child td {
-        border-bottom: none;
-      }
-      .process-table tbody tr:hover {
-        background: rgba(0, 50, 160, 0.015);
-      }
-      .step-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        background: var(--color-primary);
-        color: white;
-        font-size: 0.75rem;
-        font-weight: 700;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0, 50, 160, 0.15);
-      }
-      .personnel-tag {
-        display: inline-block;
-        background: rgba(0, 50, 160, 0.08);
-        color: var(--color-primary);
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 0.6875rem;
-        font-weight: 600;
-        margin: 2px 0;
-      }
-      .time-tag {
-        color: var(--color-text-light);
-        font-size: 0.75rem;
-        font-weight: 500;
-      }
-      .fee-tag {
-        color: #166534;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        background: transparent;
-        border: none;
-        padding: 0;
-        display: inline-block;
-      }
-      .fee-note {
-        font-size: 0.78125rem;
-        color: var(--color-text-light, #64748b);
-        font-weight: 500;
-        display: inline-block;
-        line-height: 1.35;
-      }
-      .req-badge-conditional {
-        display: inline-flex;
-        align-items: center;
-        background: #fef3c7;
-        color: #92400e;
-        border: 1px solid #fde68a;
-        padding: 1px 6px;
-        border-radius: 4px;
-        font-size: 0.65625rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-        margin-right: 4px;
-        flex-shrink: 0;
-      }
-
       /* Embedded Reference & Fee Tables */
       .ref-table {
         width: 100%;
@@ -513,6 +60,7 @@
         font-size: 0.8125rem;
         margin-top: 14px;
       }
+
       .ref-table th {
         background: #1e293b;
         color: #ffffff;
@@ -522,14 +70,17 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
       }
+
       .ref-table td {
         padding: 10px 14px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         color: #334155;
       }
+
       .ref-table tr:last-child td {
         border-bottom: none;
       }
+
       .ref-table tbody tr:nth-child(even) {
         background: #f8fafc;
       }
@@ -547,6 +98,7 @@
         overflow: hidden;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
       }
+
       .bento-schedule-header {
         background: var(--color-primary);
         color: #ffffff;
@@ -557,6 +109,7 @@
         flex-wrap: wrap;
         gap: 8px;
       }
+
       .bento-schedule-header h5 {
         margin: 0;
         font-size: 0.84375rem;
@@ -567,6 +120,7 @@
         color: #ffffff;
         letter-spacing: 0.2px;
       }
+
       .bento-ordinance-badge {
         font-size: 0.6875rem;
         padding: 2px 8px;
@@ -575,12 +129,15 @@
         color: #ffffff;
         font-weight: 600;
       }
+
       .bento-category-block {
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       }
+
       .bento-category-block:last-child {
         border-bottom: none;
       }
+
       .bento-category-title {
         background: #f8fafc;
         padding: 9px 16px;
@@ -592,14 +149,17 @@
         gap: 8px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.04);
       }
+
       .bento-category-title i {
         color: var(--color-primary);
       }
+
       .bento-items-list {
         display: flex;
         flex-direction: column;
         background: #ffffff;
       }
+
       .bento-item-row {
         display: flex;
         align-items: center;
@@ -609,12 +169,15 @@
         transition: background 0.15s ease;
         gap: 12px;
       }
+
       .bento-item-row:last-child {
         border-bottom: none;
       }
+
       .bento-item-row:hover {
         background: rgba(0, 50, 160, 0.02);
       }
+
       .bento-item-desc {
         font-size: 0.8125rem;
         color: #334155;
@@ -623,10 +186,12 @@
         gap: 8px;
         font-weight: 500;
       }
+
       .bento-item-desc i {
         color: #94a3b8;
         font-size: 0.6875rem;
       }
+
       .price-pill {
         display: inline-flex;
         align-items: center;
@@ -639,6 +204,7 @@
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         white-space: nowrap;
       }
+
       .status-pill {
         display: inline-flex;
         align-items: center;
@@ -651,11 +217,13 @@
         text-transform: uppercase;
         letter-spacing: 0.3px;
       }
+
       .status-pill.free {
         background: #f0fdf4;
         color: #166534;
         border: 1px solid #bbf7d0;
       }
+
       .status-pill.condition {
         background: #fffbeb;
         color: #92400e;
@@ -666,12 +234,14 @@
       .forms-matrix-wrap {
         margin-top: 16px;
       }
+
       .forms-matrix-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
         gap: 14px;
         margin-top: 10px;
       }
+
       .forms-bento-card {
         background: #ffffff;
         border-radius: 8px;
@@ -681,6 +251,7 @@
         display: flex;
         flex-direction: column;
       }
+
       .forms-bento-card-header {
         padding: 11px 16px;
         display: flex;
@@ -690,6 +261,7 @@
         background: #f8fafc;
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
       }
+
       .forms-bento-card-header h5 {
         margin: 0;
         font-size: 0.84375rem;
@@ -699,9 +271,11 @@
         align-items: center;
         gap: 8px;
       }
+
       .forms-bento-card-header h5 i {
         color: var(--color-primary);
       }
+
       .forms-header-badge {
         font-size: 0.65625rem;
         font-weight: 600;
@@ -711,6 +285,7 @@
         color: var(--color-primary);
         border: 1px solid rgba(0, 50, 160, 0.12);
       }
+
       .forms-bento-card-body {
         padding: 12px;
         display: flex;
@@ -719,6 +294,7 @@
         flex: 1;
         background: #ffffff;
       }
+
       .form-micro-card {
         display: flex;
         align-items: flex-start;
@@ -729,11 +305,13 @@
         border-radius: 6px;
         transition: all 0.15s ease;
       }
+
       .form-micro-card:hover {
         background: #ffffff;
         border-color: rgba(0, 50, 160, 0.2);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
       }
+
       .form-code-pill {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 0.71875rem;
@@ -746,19 +324,22 @@
         color: var(--color-primary);
         border: 1px solid rgba(0, 50, 160, 0.12);
       }
+
       .form-meta {
         flex: 1;
         min-width: 0;
       }
+
       .form-title {
         font-size: 0.78125rem;
         font-weight: 700;
         color: #1e293b;
         margin: 0 0 2px 0;
       }
+
       .form-purpose {
         font-size: 0.71875rem;
-        color: #64748b;
+        color: var(--color-text-light);
         margin: 0;
         line-height: 1.35;
       }
@@ -772,6 +353,7 @@
         overflow: hidden;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
       }
+
       .ptr-interactive-header {
         background: var(--color-primary);
         color: #ffffff;
@@ -782,6 +364,7 @@
         flex-wrap: wrap;
         gap: 10px;
       }
+
       .ptr-interactive-header h5 {
         margin: 0;
         font-size: 0.84375rem;
@@ -791,11 +374,13 @@
         align-items: center;
         gap: 8px;
       }
+
       .ptr-search-wrap {
         position: relative;
         width: 100%;
         max-width: 320px;
       }
+
       .ptr-search-wrap i {
         position: absolute;
         left: 10px;
@@ -806,6 +391,7 @@
         pointer-events: none;
         transition: color 0.15s ease;
       }
+
       .ptr-search-input {
         width: 100%;
         padding: 6px 12px 6px 30px;
@@ -817,26 +403,32 @@
         outline: none;
         transition: all 0.2s ease;
       }
+
       .ptr-search-input::placeholder {
         color: rgba(255, 255, 255, 0.75);
       }
+
       .ptr-search-input:focus {
         background: #ffffff;
         color: var(--color-text);
         border-color: #ffffff;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
+
       .ptr-search-wrap:focus-within i {
         color: var(--color-primary);
       }
+
       .ptr-tier-section {
         padding: 14px 16px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         background: #ffffff;
       }
+
       .ptr-tier-section:last-child {
         border-bottom: none;
       }
+
       .ptr-section-title-wrap {
         display: flex;
         align-items: center;
@@ -845,6 +437,7 @@
         flex-wrap: wrap;
         gap: 6px;
       }
+
       .ptr-section-title {
         font-size: 0.8125rem;
         font-weight: 700;
@@ -854,19 +447,23 @@
         align-items: center;
         gap: 6px;
       }
+
       .ptr-section-title i {
         color: var(--color-primary);
       }
+
       .ptr-section-subtitle {
         font-size: 0.6875rem;
-        color: #64748b;
+        color: var(--color-text-light);
         margin: 2px 0 0 0;
       }
+
       .ptr-tier-cards-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 12px;
       }
+
       .ptr-tier-card {
         background: #f8fafc;
         border: 1px solid rgba(0, 0, 0, 0.05);
@@ -877,9 +474,11 @@
         gap: 8px;
         transition: border-color 0.15s ease;
       }
+
       .ptr-tier-card:hover {
         border-color: rgba(0, 50, 160, 0.2);
       }
+
       .ptr-tier-header {
         display: flex;
         align-items: center;
@@ -887,11 +486,13 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         padding-bottom: 6px;
       }
+
       .ptr-tier-name {
         font-size: 0.78125rem;
         font-weight: 700;
         color: #334155;
       }
+
       .ptr-price-tag {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 0.78125rem;
@@ -902,11 +503,13 @@
         padding: 2px 7px;
         border-radius: 4px;
       }
+
       .prof-chips-wrap {
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
       }
+
       .prof-chip {
         font-size: 0.71875rem;
         font-weight: 500;
@@ -917,11 +520,13 @@
         border-radius: 12px;
         transition: all 0.15s ease;
       }
+
       .prof-chip:hover {
         background: rgba(0, 50, 160, 0.06);
         color: var(--color-primary);
         border-color: rgba(0, 50, 160, 0.2);
       }
+
       .prof-chip.highlight {
         background: var(--color-primary) !important;
         color: #ffffff !important;
@@ -929,16 +534,19 @@
         font-weight: 600;
         box-shadow: 0 2px 6px rgba(0, 50, 160, 0.25);
       }
+
       .prof-chip.dimmed {
         opacity: 0.35;
       }
+
       .ptr-no-match {
         display: none;
         padding: 10px;
         text-align: center;
         font-size: 0.75rem;
-        color: #64748b;
+        color: var(--color-text-light);
       }
+
       .online-notice-box {
         background: #eff6ff;
         border: 1px solid #bfdbfe;
@@ -949,136 +557,34 @@
         align-items: flex-start;
         gap: 12px;
       }
+
       .online-notice-box i {
         color: #2563eb;
         font-size: 1.25rem;
         margin-top: 2px;
         flex-shrink: 0;
       }
+
       .online-notice-box h5 {
         margin: 0 0 4px 0;
         font-size: 0.875rem;
         color: #1e3a8a;
         font-weight: 700;
       }
+
       .online-notice-box p {
         margin: 0;
         font-size: 0.8125rem;
         color: #1e40af;
         line-height: 1.45;
       }
+
       .online-notice-box a {
         color: #1d4ed8;
         font-weight: 700;
         text-decoration: underline;
       }
 
-      .staff-expand-btn {
-        margin: 20px auto 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        background: white;
-        color: var(--color-primary);
-        border: 1px solid rgba(0, 50, 160, 0.2);
-        padding: 8px 20px;
-        border-radius: 20px;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .staff-expand-btn:hover {
-        background: rgba(0, 50, 160, 0.05);
-        border-color: var(--color-primary);
-      }
-      .staff-extra {
-        display: none;
-      }
-      .staff-extra.show {
-        display: contents;
-      }
-      .contact-info-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-      }
-      .contact-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .contact-card h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 10px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .contact-card h4 i {
-        color: var(--color-primary);
-      }
-      .contact-card p {
-        font-size: 0.8125rem;
-        color: #475569;
-        margin: 0 0 6px 0;
-        line-height: 1.45;
-      }
-      .contact-card p:last-child {
-        margin-bottom: 0;
-      }
-      .contact-card a {
-        color: var(--color-primary);
-        text-decoration: none;
-        font-weight: 600;
-      }
-      .contact-card a:hover {
-        text-decoration: underline;
-      }
-      .staff-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
-      .staff-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .staff-card h4 {
-        font-size: 0.8125rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 3px 0;
-      }
-      .staff-card .staff-role {
-        font-size: 0.75rem;
-        color: var(--color-primary);
-        font-weight: 600;
-        margin: 0 0 2px 0;
-      }
-      .staff-card p {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-      }
-      @media (max-width: 992px) {
-        .req-summary-grid,
-        .contact-info-grid {
-          grid-template-columns: 1fr;
-        }
-        .staff-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
       @media (max-width: 768px) {
         .quick-stats {
           grid-template-columns: repeat(2, 1fr);
@@ -1228,19 +734,6 @@
           margin-bottom: 2px;
         }
       }
-      @media (max-width: 575px) {
-        .quick-stats,
-        .staff-grid {
-          grid-template-columns: 1fr;
-        }
-        .service-tabs {
-          flex-direction: column;
-        }
-        .service-tab {
-          text-align: center;
-          justify-content: center;
-        }
-      }
 
       /* Option 1: 2-Column Desktop Grid with Compact Sticky Sidebar */
       .cto-layout {
@@ -1249,9 +742,11 @@
         gap: 24px;
         align-items: start;
       }
+
       .cto-main {
         min-width: 0;
       }
+
       .cto-sidebar {
         position: sticky;
         top: 90px;
@@ -1259,6 +754,7 @@
         flex-direction: column;
         gap: 16px;
       }
+
       @media (max-width: 1023px) {
         .cto-layout {
           grid-template-columns: 1fr;
@@ -1281,18 +777,22 @@
         scrollbar-width: thin;
         scrollbar-color: rgba(0, 50, 160, 0.2) transparent;
       }
+
       .story-sidebar::-webkit-scrollbar {
         width: 4px;
       }
+
       .story-sidebar::-webkit-scrollbar-thumb {
         background: rgba(0, 50, 160, 0.2);
         border-radius: 4px;
       }
+
       .story-sidebar-header {
         margin-bottom: 8px;
         padding-bottom: 8px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
       }
+
       .story-sidebar-header h3 {
         font-size: 0.8125rem;
         font-weight: 700;
@@ -1302,13 +802,15 @@
         align-items: center;
         gap: 6px;
       }
+
       .story-sidebar-header h3 i {
         color: var(--color-primary);
         font-size: 0.9375rem;
       }
+
       .story-sidebar-desc {
         font-size: 0.6875rem;
-        color: #64748b;
+        color: var(--color-text-light);
         margin: 0;
         line-height: 1.35;
       }
@@ -1319,6 +821,7 @@
         flex-direction: column;
         gap: 5px;
       }
+
       .story-group {
         border: 1px solid rgba(0, 0, 0, 0.07);
         border-radius: 6px;
@@ -1326,13 +829,16 @@
         overflow: hidden;
         transition: all 0.15s ease;
       }
+
       .story-group:hover {
         border-color: rgba(0, 50, 160, 0.25);
       }
+
       .story-group.is-open {
         border-color: rgba(0, 50, 160, 0.25);
         box-shadow: 0 1px 4px rgba(0, 50, 160, 0.04);
       }
+
       .story-accordion-header {
         width: 100%;
         padding: 6px 8px;
@@ -1349,16 +855,19 @@
         text-align: left;
         transition: all 0.15s ease;
       }
+
       .story-accordion-header:hover {
         background: rgba(0, 50, 160, 0.04);
-        color: var(--color-primary);
+        color: var(--color-primary-solid);
       }
+
       .story-group.is-open .story-accordion-header {
         background: rgba(0, 50, 160, 0.06);
-        color: var(--color-primary);
+        color: var(--color-primary-solid);
         font-weight: 700;
         border-bottom: 1px solid rgba(0, 50, 160, 0.08);
       }
+
       .story-group-title {
         display: flex;
         align-items: center;
@@ -1368,22 +877,26 @@
         text-overflow: ellipsis;
         flex: 1;
       }
+
       .story-group-title i {
         color: var(--color-primary);
         font-size: 0.8125rem;
         flex-shrink: 0;
       }
+
       .story-group-title span {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
+
       .story-chevron {
         font-size: 0.5625rem;
         color: #94a3b8;
         transition: transform 0.15s ease;
         flex-shrink: 0;
       }
+
       .story-group.is-open .story-chevron {
         transform: rotate(180deg);
         color: var(--color-primary);
@@ -1394,9 +907,11 @@
         display: none;
         background: #ffffff;
       }
+
       .story-group.is-open .story-accordion-body {
         display: block;
       }
+
       .story-links-list {
         list-style: none;
         padding: 3px 4px;
@@ -1405,6 +920,7 @@
         flex-direction: column;
         gap: 1px;
       }
+
       .user-story-link {
         display: flex;
         align-items: center;
@@ -1423,12 +939,14 @@
         text-align: left;
         overflow: hidden;
       }
+
       .user-story-link i {
         color: var(--color-primary);
         font-size: 0.5rem;
         flex-shrink: 0;
         transition: transform 0.12s ease;
       }
+
       .user-story-link span {
         white-space: nowrap;
         overflow: hidden;
@@ -1436,13 +954,16 @@
         display: block;
         flex: 1;
       }
+
       .user-story-link:hover {
         background: rgba(0, 50, 160, 0.07);
         color: var(--color-primary);
       }
+
       .user-story-link:hover i {
         transform: translateX(2px);
       }
+
       .user-story-link:active {
         background: rgba(0, 50, 160, 0.12);
       }
@@ -1454,6 +975,7 @@
         gap: 4px;
         align-items: center;
       }
+
       .personnel-tag {
         display: inline-flex;
         align-items: center;
@@ -1484,6 +1006,7 @@
           border-color: rgba(0, 0, 0, 0.08);
         }
       }
+
       .sub-service-card.story-highlight {
         animation: storyPulse 2s ease;
         border-color: var(--color-primary) !important;
@@ -1502,7 +1025,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -1536,7 +1059,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -1547,14 +1069,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -1580,15 +1099,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -1654,7 +1178,7 @@
             <div class="stat-card">
               <i class="bi bi-clock"></i>
               <h4>Hours</h4>
-              <p>8:00 AM – 5:00 PM (Mon–Fri)</p>
+              <p>8:00 AM - 5:00 PM (Mon-Fri)</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-telephone"></i>
@@ -1844,7 +1368,7 @@
                               <strong>Verbally state the name of the business</strong><br />
                               State business name to the designated officer at Business Tax Division
                               (<strong>Window 1</strong>).<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em
                                   >Note: Senior Citizens, PWDs, Pregnant, and Nursing Mothers
                                   proceed to Courtesy Lane (<strong>Window 2</strong>).</em
@@ -1856,7 +1380,7 @@
                               using <strong>ETRACS</strong>.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 2 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">LTOO IV</span>
@@ -1879,7 +1403,7 @@
                               Print business tax bill statement from ETRACS.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 3 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Business Tax Officer</span>
@@ -1898,7 +1422,7 @@
                               Form.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 2 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Business Tax Officer</span>
@@ -2056,7 +1580,7 @@
                               BPLO Staff prints the final version of the application form and
                               business tax assessment.
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide III (BPLO)</span>
@@ -2072,7 +1596,7 @@
                             <td>
                               Release business tax assessment together with the Feedback Form.
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide III (BPLO)</span>
@@ -2187,7 +1711,7 @@
                               tax and statutory penalties (10 mins).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 11 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">LTOO IV</span>
@@ -2207,7 +1731,7 @@
                               Print the previous year's delinquency tax assessment.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 1 minute</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Business Tax Officer</span>
@@ -2225,7 +1749,7 @@
                               Feedback Form.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 1 minute</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Business Tax Officer</span>
@@ -2338,7 +1862,7 @@
                               <strong>Proceed to Cash Receipts Division</strong><br />
                               1.1 Request for queue number ticket.<br />
                               1.2 Wait for number to be flashed on queuing monitor.<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em
                                   >Note: Priority lane for Senior Citizens, PWDs, Pregnant, and
                                   Nursing Mothers is at <strong>Window 1</strong>.</em
@@ -2349,7 +1873,7 @@
                               Provide client with queue number ticket.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 2 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide I</span>
@@ -2366,7 +1890,7 @@
                               Receive and verify the tax order of payment in the system.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 1 minute</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Sr. Admin Asst II</span>
@@ -2556,7 +2080,7 @@
                               Submit complete closure documents at Business Tax Division (<strong
                                 >Window 5</strong
                               >).<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em>Courtesy lane: <strong>Window 4</strong>.</em></small
                               >
                             </td>
@@ -2584,7 +2108,7 @@
                               Print and release Order of Payment.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 2 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Officer I</span>
@@ -2623,7 +2147,7 @@
                               Certification for Business Retirement (1 min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 3 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">LTOO IV</span>
@@ -2760,7 +2284,7 @@
                             <td>
                               <strong>Submit request form and requirements</strong><br />
                               Submit at Land Tax Division (<strong>Window 1</strong>).<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em>Courtesy lane: <strong>Window 2</strong>.</em></small
                               >
                             </td>
@@ -2769,7 +2293,7 @@
                               bill using <strong>ETRACS</strong>.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 2 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">LRCO III</span>
@@ -2789,7 +2313,7 @@
                               Print real property tax bill statement.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 5 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Land Tax Officer</span>
@@ -2807,7 +2331,7 @@
                               Form.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 2 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Land Tax Officer</span>
@@ -2961,7 +2485,7 @@
                               <strong>Submit transfer documents &amp; request computation</strong
                               ><br />
                               Submit at Land Tax Division (<strong>Window 5</strong>).<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em>Courtesy lane: <strong>Window 4</strong>.</em></small
                               >
                             </td>
@@ -2995,7 +2519,7 @@
                               Print transfer tax assessment.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 1 minute</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Land Tax Officer</span>
@@ -3012,7 +2536,7 @@
                               Release transfer tax assessment together with the Feedback Form.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 1 minute</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Land Tax Officer</span>
@@ -3121,7 +2645,7 @@
                               <strong>Proceed to Cash Receipts Division</strong><br />
                               1.1 Request for queue number ticket.<br />
                               1.2 Wait for number to be flashed on queuing monitor.<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em>Courtesy lane: <strong>Window 1</strong>.</em></small
                               >
                             </td>
@@ -3129,7 +2653,7 @@
                               Provide client with queue number ticket.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 2 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide I</span>
@@ -3146,7 +2670,7 @@
                               Receive and verify tax order of payment in system.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 1 minute</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Sr. Admin Asst II</span>
@@ -3272,7 +2796,7 @@
                             <td>
                               <strong>Proceed to Cash Receipts Division</strong><br />
                               Request queue ticket and wait for calling.<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em>Courtesy lane: <strong>Window 1</strong>.</em></small
                               >
                             </td>
@@ -3280,7 +2804,7 @@
                               Provide client with queue number ticket.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 2 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide I</span>
@@ -3297,7 +2821,7 @@
                               Receive and verify the tax order of payment.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 1 minute</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Sr. Admin Asst II</span>
@@ -3454,7 +2978,7 @@
                             <td>
                               <strong>Submit documentary requirements</strong><br />
                               Submit at Land Tax Division (<strong>Window 5</strong>).<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em>Courtesy lane: <strong>Window 4</strong>.</em></small
                               >
                             </td>
@@ -3464,7 +2988,7 @@
                               <em>(If delinquent, client settles basic tax first).</em>
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 4 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">LRCO IV</span>
@@ -3484,7 +3008,7 @@
                               Print and release Order of Payment.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 2 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Land Tax Officer</span>
@@ -3522,7 +3046,7 @@
                               clearance (1 min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 7 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">City Treasurer</span>
@@ -3665,7 +3189,7 @@
                               <strong>Request queue ticket &amp; Data Sheet</strong><br />
                               Proceed to Cash Receipts; fill out Individual / Corporation Data Sheet
                               and wait.<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em>Courtesy lane: <strong>Window 1</strong>.</em></small
                               >
                             </td>
@@ -3673,7 +3197,7 @@
                               Provide client with queue number ticket and Information Data Sheet.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 1 minute</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide I</span>
@@ -3691,7 +3215,7 @@
                               due.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 4 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Sr. Admin Asst II</span>
@@ -3834,7 +3358,7 @@
                             <td>
                               <strong>Request queue ticket &amp; Data Form</strong><br />
                               Proceed to Cash Receipts; fill out PTR / Occupation Form.<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em>Courtesy lane: <strong>Window 1</strong>.</em></small
                               >
                             </td>
@@ -3842,7 +3366,7 @@
                               Provide client with queue ticket and data sheet.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 1 minute</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide I</span>
@@ -3859,7 +3383,7 @@
                               Receive form; verify PRC license / occupation details; compute fee.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 4 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Sr. Admin Asst II</span>
@@ -4152,7 +3676,7 @@
                               Prepare and release Order of Payment.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 3 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag"
@@ -4166,12 +3690,12 @@
                             <td>
                               <strong>Proceed to Cash Receipts Division</strong><br />
                               Request queue number ticket.<br />
-                              <small style="color: #64748b"
+                              <small style="color: var(--color-text-light)"
                                 ><em>Courtesy lane: <strong>Window 1</strong>.</em></small
                               >
                             </td>
                             <td>Provide client with queue number ticket.</td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide I</span>
@@ -4240,7 +3764,7 @@
                           Measures
                         </h3>
                         <span class="sub-service-badge"
-                          ><i class="bi bi-clock-history"></i> Simple • 12–14 Minutes</span
+                          ><i class="bi bi-clock-history"></i> Simple • 12-14 Minutes</span
                         >
                       </div>
                       <p class="sub-service-desc">
@@ -4304,7 +3828,7 @@
                             <div class="metric-content">
                               <div class="metric-label">Standard Fees</div>
                               <div class="metric-value">
-                                ₱25.00 – ₱200.00 (City Ord. No. 0013-2007)
+                                ₱25.00-₱200.00 (City Ord. No. 0013-2007)
                               </div>
                             </div>
                           </div>
@@ -4344,7 +3868,7 @@
                               fees) (2 mins); print order of payment (1 min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 3 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Officer I</span>
@@ -4380,7 +3904,7 @@
                               Receive receipt (1 min); calibrate and seal instrument (3 mins).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 4 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Officer I</span>
@@ -4422,7 +3946,7 @@
                               station and calibrate pumps (3 mins).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 7 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Cash Receipts Staff</span>
@@ -4591,7 +4115,7 @@
                           Claims
                         </h3>
                         <span class="sub-service-badge"
-                          ><i class="bi bi-clock-history"></i> Simple • 5–13 Minutes</span
+                          ><i class="bi bi-clock-history"></i> Simple • 5-13 Minutes</span
                         >
                       </div>
                       <p class="sub-service-desc">
@@ -4693,7 +4217,7 @@
                               Draw check and verify fund allocation.
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 5 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide I</span>
@@ -4714,7 +4238,7 @@
                                 <i class="bi bi-stopwatch"></i> 6 minutes (11m total)
                               </div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">LRCO II</span>
@@ -4738,7 +4262,7 @@
                                 <i class="bi bi-stopwatch"></i> 8 minutes (13m total)
                               </div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Asst VI</span>
@@ -4759,7 +4283,7 @@
                               transfer approval (1 min); approve fund transfer (2 mins).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 5 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">RCC II</span>
@@ -4883,7 +4407,7 @@
                               min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 5 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">ISA III</span>
@@ -4923,7 +4447,7 @@
                               to Auditor (1 min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 7 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">ISA III</span>
@@ -4943,7 +4467,7 @@
                               advise return to CTO (1 min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 6 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">City Auditor</span>
@@ -4962,7 +4486,7 @@
                               together with copy of Invoice and RIV (3 mins).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 4 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">ISA III</span>
@@ -5085,7 +4609,7 @@
                               &amp; logbook (2 mins); advise to Auditor (1 min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 9 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">ISA III</span>
@@ -5105,7 +4629,7 @@
                               return to CTO (1 min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 6 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">City Auditor</span>
@@ -5123,7 +4647,7 @@
                               requested (2 mins).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 3 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">ISA III</span>
@@ -5248,7 +4772,7 @@
                               (1 min); advise to proceed to Administrative Division (1 min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 5 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">Admin Aide VI</span>
@@ -5268,7 +4792,7 @@
                               min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 10 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">ISA III</span>
@@ -5288,7 +4812,7 @@
                               return to CTO (1 min).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 6 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">City Auditor</span>
@@ -5306,7 +4830,7 @@
                               form together with copy of Invoice and RIV (2 mins).
                               <div class="time-tag"><i class="bi bi-stopwatch"></i> 3 minutes</div>
                             </td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>
                               <div class="personnel-tag-group">
                                 <span class="personnel-tag">ISA III</span>
@@ -5332,7 +4856,7 @@
                           </div>
                           <div class="forms-bento-card-body">
                             <div class="form-micro-card">
-                              <span class="form-code-pill">AF 55 A – F</span>
+                              <span class="form-code-pill">AF 55 A - F</span>
                               <div class="form-meta">
                                 <div class="form-title">Cash Tickets (Various Denominations)</div>
                                 <div class="form-purpose">
@@ -6149,12 +5673,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi City with transparent access to municipal services,
-              business permits, and local governance.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -6186,9 +5710,9 @@
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
-              <li><a href="../services/business">Business Services</a></li>
-              <li><a href="../services/tax-payments">Tax Payments</a></li>
-              <li><a href="../government/">Government Directory</a></li>
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -6200,22 +5724,6 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://www.filipizen.com/partners/albay_legazpi/rptis/billing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Filipizen Real Property Tax</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.filipizen.com/partners/albay_legazpi/bpls/billing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Filipizen Business Billing</a
-                >
-              </li>
-              <li>
                 <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
@@ -6226,26 +5734,90 @@
                 >
               </li>
               <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
                 <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
                   >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div class="footer-cost" role="status">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
+            >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i> <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i> <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
@@ -6253,8 +5825,7 @@
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer"
-              >All public information sourced from official government portals &amp; the Legazpi
-              City Citizen's Charter.</span
+              >All public information sourced from official government portals.</span
             >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>

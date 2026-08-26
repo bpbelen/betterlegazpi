@@ -257,66 +257,69 @@
       </nav>
     </div>
 
-    <!-- Hero Section -->
-    <section class="tourism-hero">
+    <!-- Page Header -->
+    <section class="page-header">
       <div class="container">
-        <div class="tourism-hero__inner">
-          <div class="tourism-hero__badge">
+        <div class="page-header-content">
+          <span class="page-header-badge">
             <i class="bi bi-compass-fill"></i>
             <span>City of Fun &amp; Adventure • Legazpi City</span>
-          </div>
-          <h1 class="tourism-hero__title">Experience <span>Legazpi City</span></h1>
-          <p class="tourism-hero__subtitle">
-            From the majestic peak of Mayon Volcano and thrilling volcanic lava trail rides to fiery Bicolano cuisine, accredited stays, and serene seaside promenades.
+          </span>
+          <h1>Experience Legazpi City</h1>
+          <p class="page-header-desc">
+            From the majestic peak of Mayon Volcano and thrilling volcanic lava trail rides to fiery
+            Bicolano cuisine, accredited stays, and serene seaside promenades.
           </p>
-
-          <!-- Quick Jump Category Navigation Gateway -->
-          <div class="tourism-hero-gateways">
-            <a href="attractions" class="tourism-hero-gateway-pill">
-              <i class="bi bi-geo-alt-fill"></i> Top Attractions
-            </a>
-            <a href="experience" class="tourism-hero-gateway-pill">
-              <i class="bi bi-compass-fill"></i> Adventures &amp; ATV
-            </a>
-            <a href="food" class="tourism-hero-gateway-pill">
-              <i class="bi bi-cup-hot-fill"></i> Cuisine &amp; Dining
-            </a>
-            <a href="accommodations" class="tourism-hero-gateway-pill">
-              <i class="bi bi-building-fill"></i> Where to Stay
-            </a>
-            <a href="landmarks" class="tourism-hero-gateway-pill">
-              <i class="bi bi-camera-fill"></i> Scenic Landmarks
-            </a>
-          </div>
-
-          <!-- Real-Time Stats Grid -->
-          <div class="tourism-stats-grid">
-            <div class="tourism-stat-pill">
-              <i class="bi bi-collection-fill"></i>
-              <span>344+ Destinations</span>
-            </div>
-            <div class="tourism-stat-pill">
-              <i class="bi bi-geo-alt-fill"></i>
-              <span>28 Tourist Attractions</span>
-            </div>
-            <div class="tourism-stat-pill">
-              <i class="bi bi-cup-hot-fill"></i>
-              <span>240 Dining Spots</span>
-            </div>
-            <div class="tourism-stat-pill">
-              <i class="bi bi-compass-fill"></i>
-              <span>8 Outdoor Adventures</span>
-            </div>
-            <div class="tourism-stat-pill">
-              <i class="bi bi-building-fill"></i>
-              <span>58 Accredited Stays</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    
+    <!-- Quick Jump Category Navigation & Stats -->
+    <section class="tourism-gateway-section">
+      <div class="container">
+        <div class="tourism-hero-gateways">
+          <a href="attractions" class="tourism-hero-gateway-pill">
+            <i class="bi bi-geo-alt-fill"></i> Top Attractions
+          </a>
+          <a href="experience" class="tourism-hero-gateway-pill">
+            <i class="bi bi-compass-fill"></i> Adventures &amp; ATV
+          </a>
+          <a href="food" class="tourism-hero-gateway-pill">
+            <i class="bi bi-cup-hot-fill"></i> Cuisine &amp; Dining
+          </a>
+          <a href="accommodations" class="tourism-hero-gateway-pill">
+            <i class="bi bi-building-fill"></i> Where to Stay
+          </a>
+          <a href="landmarks" class="tourism-hero-gateway-pill">
+            <i class="bi bi-camera-fill"></i> Scenic Landmarks
+          </a>
+        </div>
+
+        <!-- Real-Time Stats Grid -->
+        <div class="tourism-stats-grid">
+          <div class="tourism-stat-pill">
+            <i class="bi bi-collection-fill"></i>
+            <span>344+ Destinations</span>
+          </div>
+          <div class="tourism-stat-pill">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>28 Tourist Attractions</span>
+          </div>
+          <div class="tourism-stat-pill">
+            <i class="bi bi-cup-hot-fill"></i>
+            <span>240 Dining Spots</span>
+          </div>
+          <div class="tourism-stat-pill">
+            <i class="bi bi-compass-fill"></i>
+            <span>8 Outdoor Adventures</span>
+          </div>
+          <div class="tourism-stat-pill">
+            <i class="bi bi-building-fill"></i>
+            <span>58 Accredited Stays</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Main Showcase Content -->
     <main id="main-content">
@@ -329,7 +332,9 @@
                 <i class="bi bi-stars"></i> Iconic Sights
               </span>
               <h2>Must-Visit Tourist Attractions</h2>
-              <p>The iconic volcanic, natural, historic, and religious centerpieces of Legazpi City.</p>
+              <p>
+                The iconic volcanic, natural, historic, and religious centerpieces of Legazpi City.
+              </p>
             </div>
             <a href="attractions" class="tourism-section-header__link">
               <span>View All 28 Attractions</span>
@@ -347,19 +352,30 @@
                   alt="Mayon Volcano, Legazpi City"
                   class="tourism-featured-card__img"
                   loading="eager"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
                 <div class="tourism-featured-card__overlay"></div>
                 <div class="tourism-featured-card__badges">
                   <span class="tourism-badge tourism-badge--category">Natural Wonder</span>
                   <span class="tourism-badge tourism-badge--subcategory">World Heritage Icon</span>
                 </div>
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-featured-card__body">
                 <h3 class="tourism-featured-card__title">Mayon Volcano</h3>
                 <p class="tourism-featured-card__desc">
-                  World-renowned for its majestic, perfectly symmetrical cone shape standing 2,463 meters tall. Dominates the skyline of Legazpi City and offers unforgettable vistas, sunrise trails, and eco-adventure excursions.
+                  World-renowned for its majestic, perfectly symmetrical cone shape standing 2,463
+                  meters tall. Dominates the skyline of Legazpi City and offers unforgettable
+                  vistas, sunrise trails, and eco-adventure excursions.
                 </p>
                 <div class="tourism-card__meta">
                   <div class="tourism-meta-item">
@@ -376,7 +392,7 @@
                   >
                     <i class="bi bi-geo-alt"></i>
                     <span>Open in Google Maps</span>
-                    <i class="bi bi-box-arrow-up-right" style="font-size: 0.8rem;"></i>
+                    <i class="bi bi-box-arrow-up-right" style="font-size: 0.8rem"></i>
                   </a>
                 </div>
               </div>
@@ -390,23 +406,35 @@
                   alt="Ligñon Hill Nature Park"
                   class="tourism-featured-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
                 <div class="tourism-featured-card__overlay"></div>
                 <div class="tourism-featured-card__badges">
                   <span class="tourism-badge tourism-badge--category">Nature &amp; History</span>
                   <span class="tourism-badge tourism-badge--subcategory">360° Viewdeck</span>
                 </div>
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-featured-card__body">
                 <h3 class="tourism-featured-card__title">Ligñon Hill Nature Park</h3>
                 <p class="tourism-featured-card__desc">
-                  A 156-meter volcanic hill overlooking Legazpi City, Albay Gulf, and Mayon Volcano with historical WWII Japanese tunnels, ziplining, and trekking.
+                  A 156-meter volcanic hill overlooking Legazpi City, Albay Gulf, and Mayon Volcano
+                  with historical WWII Japanese tunnels, ziplining, and trekking.
                 </p>
                 <div class="tourism-card__meta">
                   <div class="tourism-meta-item">
-                    <span class="barangay-tag"><i class="bi bi-pin-map-fill"></i> Bgy. 41 - Bogtong</span>
+                    <span class="barangay-tag"
+                      ><i class="bi bi-pin-map-fill"></i> Bgy. 41 - Bogtong</span
+                    >
                   </div>
                 </div>
                 <div class="tourism-card__actions">
@@ -431,22 +459,34 @@
                   alt="Albay Cathedral"
                   class="tourism-featured-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
                 <div class="tourism-featured-card__overlay"></div>
                 <div class="tourism-featured-card__badges">
                   <span class="tourism-badge tourism-badge--category">Religious Heritage</span>
                 </div>
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-featured-card__body">
                 <h3 class="tourism-featured-card__title">Albay Cathedral</h3>
                 <p class="tourism-featured-card__desc">
-                  The Cathedral of St. Gregory the Great is the historic Episcopal Seat of the Roman Catholic Diocese of Legazpi in Old Albay District.
+                  The Cathedral of St. Gregory the Great is the historic Episcopal Seat of the Roman
+                  Catholic Diocese of Legazpi in Old Albay District.
                 </p>
                 <div class="tourism-card__meta">
                   <div class="tourism-meta-item">
-                    <span class="barangay-tag"><i class="bi bi-pin-map-fill"></i> Bgy. 11 - Peñaranda</span>
+                    <span class="barangay-tag"
+                      ><i class="bi bi-pin-map-fill"></i> Bgy. 11 - Peñaranda</span
+                    >
                   </div>
                 </div>
                 <div class="tourism-card__actions">
@@ -471,22 +511,34 @@
                   alt="Kapuntukan Hill (Sleeping Lion)"
                   class="tourism-featured-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
                 <div class="tourism-featured-card__overlay"></div>
                 <div class="tourism-featured-card__badges">
                   <span class="tourism-badge tourism-badge--category">Natural Landmark</span>
                 </div>
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-featured-card__body">
                 <h3 class="tourism-featured-card__title">Kapuntukan Hill (Sleeping Lion)</h3>
                 <p class="tourism-featured-card__desc">
-                  Scenic hill silhouette resembling a sleeping lion, offering sweeping panoramas of Legazpi Port, Albay Gulf, and Legazpi Boulevard.
+                  Scenic hill silhouette resembling a sleeping lion, offering sweeping panoramas of
+                  Legazpi Port, Albay Gulf, and Legazpi Boulevard.
                 </p>
                 <div class="tourism-card__meta">
                   <div class="tourism-meta-item">
-                    <span class="barangay-tag"><i class="bi bi-pin-map-fill"></i> Bgy. 24 - Dapdap</span>
+                    <span class="barangay-tag"
+                      ><i class="bi bi-pin-map-fill"></i> Bgy. 24 - Dapdap</span
+                    >
                   </div>
                 </div>
                 <div class="tourism-card__actions">
@@ -511,18 +563,28 @@
                   alt="16 Dive Sites Albay Gulf"
                   class="tourism-featured-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
                 <div class="tourism-featured-card__overlay"></div>
                 <div class="tourism-featured-card__badges">
                   <span class="tourism-badge tourism-badge--category">Marine Sanctuary</span>
                 </div>
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-featured-card__body">
                 <h3 class="tourism-featured-card__title">16 Marine Dive Sites</h3>
                 <p class="tourism-featured-card__desc">
-                  Vibrant coral reefs, sea turtle sanctuaries, and rich marine biodiversity spanning Albay Gulf with crystal-clear visibility.
+                  Vibrant coral reefs, sea turtle sanctuaries, and rich marine biodiversity spanning
+                  Albay Gulf with crystal-clear visibility.
                 </p>
                 <div class="tourism-card__meta">
                   <div class="tourism-meta-item">
@@ -552,11 +614,14 @@
         <div class="container">
           <div class="tourism-section-header">
             <div class="tourism-section-header__text">
-              <span class="tourism-section-header__badge" style="background: rgba(234, 88, 12, 0.12); color: #ea580c;">
+              <span class="tourism-section-header__badge">
                 <i class="bi bi-lightning-charge-fill"></i> Thrill &amp; Eco-Tours
               </span>
               <h2>The Legazpi Experience</h2>
-              <p>Adrenaline-pumping volcano trail rides, volcanic rock climbs, aerial skywalks, and marine adventures.</p>
+              <p>
+                Adrenaline-pumping volcano trail rides, volcanic rock climbs, aerial skywalks, and
+                marine adventures.
+              </p>
             </div>
             <a href="experience" class="tourism-section-header__link">
               <span>View All 8 Adventures &amp; 16 Dive Sites</span>
@@ -573,23 +638,39 @@
                   alt="Mayon ATV Lava Trail Ride"
                   class="tourism-exp-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
                 <div class="tourism-featured-card__overlay"></div>
                 <div class="tourism-featured-card__badges">
-                  <span class="tourism-badge" style="background: #ea580c; color: #fff;">#1 Rated Adventure</span>
+                  <span
+                    class="tourism-badge"
+                    style="background: var(--color-accent-solid); color: #fff"
+                    >#1 Rated Adventure</span
+                  >
                   <span class="tourism-badge tourism-badge--category">All-Terrain ATV</span>
                 </div>
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-exp-card__body">
                 <h3 class="tourism-exp-card__title">Mayon ATV Lava Trail Ride</h3>
                 <p class="tourism-exp-card__desc">
-                  Drive an all-terrain vehicle through volcanic streams, rugged boulders, and pine slopes reaching the massive 2006 Black Lava Wall.
+                  Drive an all-terrain vehicle through volcanic streams, rugged boulders, and pine
+                  slopes reaching the massive 2006 Black Lava Wall.
                 </p>
                 <div class="tourism-card__meta">
                   <div class="tourism-meta-item">
-                    <span class="barangay-tag"><i class="bi bi-pin-map-fill"></i> Bgy. 65 - Mabinit / Pawa</span>
+                    <span class="barangay-tag"
+                      ><i class="bi bi-pin-map-fill"></i> Bgy. 65 - Mabinit / Pawa</span
+                    >
                   </div>
                 </div>
                 <div class="tourism-card__actions">
@@ -614,22 +695,34 @@
                   alt="Mayon Lava Wall Climbing"
                   class="tourism-exp-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
                 <div class="tourism-featured-card__overlay"></div>
                 <div class="tourism-featured-card__badges">
                   <span class="tourism-badge tourism-badge--category">Extreme Outdoor</span>
                 </div>
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-exp-card__body">
                 <h3 class="tourism-exp-card__title">Mayon Lava Wall Climbing</h3>
                 <p class="tourism-exp-card__desc">
-                  Climb the towering black basaltic volcanic lava wall for a front-row view of Mayon Volcano’s majestic summit.
+                  Climb the towering black basaltic volcanic lava wall for a front-row view of Mayon
+                  Volcano’s majestic summit.
                 </p>
                 <div class="tourism-card__meta">
                   <div class="tourism-meta-item">
-                    <span class="barangay-tag"><i class="bi bi-pin-map-fill"></i> Bgy. 65 - Mabinit</span>
+                    <span class="barangay-tag"
+                      ><i class="bi bi-pin-map-fill"></i> Bgy. 65 - Mabinit</span
+                    >
                   </div>
                 </div>
                 <div class="tourism-card__actions">
@@ -654,22 +747,34 @@
                   alt="Ligñon Hill & Embarcadero Zipline"
                   class="tourism-exp-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
                 <div class="tourism-featured-card__overlay"></div>
                 <div class="tourism-featured-card__badges">
                   <span class="tourism-badge tourism-badge--category">Aerial Zipline</span>
                 </div>
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-exp-card__body">
                 <h3 class="tourism-exp-card__title">Ligñon Hill &amp; Embarcadero Zipline</h3>
                 <p class="tourism-exp-card__desc">
-                  High-speed aerial glide giving you panoramic views of the entire cityscape and the ocean waters of Albay Gulf.
+                  High-speed aerial glide giving you panoramic views of the entire cityscape and the
+                  ocean waters of Albay Gulf.
                 </p>
                 <div class="tourism-card__meta">
                   <div class="tourism-meta-item">
-                    <span class="barangay-tag"><i class="bi bi-pin-map-fill"></i> Ligñon Hill / Embarcadero</span>
+                    <span class="barangay-tag"
+                      ><i class="bi bi-pin-map-fill"></i> Ligñon Hill / Embarcadero</span
+                    >
                   </div>
                 </div>
                 <div class="tourism-card__actions">
@@ -694,11 +799,14 @@
         <div class="container">
           <div class="tourism-section-header">
             <div class="tourism-section-header__text">
-              <span class="tourism-section-header__badge" style="background: rgba(5, 150, 105, 0.12); color: #059669;">
+              <span class="tourism-section-header__badge tourism-section-header__badge--emerald">
                 <i class="bi bi-fire"></i> Culinary Heritage
               </span>
-              <h2>Taste of Bicol — Signature Gastronomy</h2>
-              <p>Satisfy your taste buds with 9 legendary Bicolano dishes, spicy desserts, and innovative fusion delicacies.</p>
+              <h2>Taste of Bicol. Signature Gastronomy</h2>
+              <p>
+                Satisfy your taste buds with 9 legendary Bicolano dishes, spicy desserts, and
+                innovative fusion delicacies.
+              </p>
             </div>
             <a href="food" class="tourism-section-header__link">
               <span>Browse 240+ Restaurants</span>
@@ -715,14 +823,24 @@
                   alt="Spicy Sili Ice Cream"
                   class="tourism-delicacy-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-delicacy-card__body">
                 <h3 class="tourism-delicacy-card__title">Sili Ice Cream</h3>
                 <p class="tourism-delicacy-card__desc">
-                  World-famous creamy artisanal ice cream infused with local bird's eye chili, ranging from Level 1 to Volcano heat.
+                  World-famous creamy artisanal ice cream infused with local bird's eye chili,
+                  ranging from Level 1 to Volcano heat.
                 </p>
               </div>
             </article>
@@ -735,14 +853,24 @@
                   alt="Mayon Lava Cake"
                   class="tourism-delicacy-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-delicacy-card__body">
                 <h3 class="tourism-delicacy-card__title">Mayon Lava Cake</h3>
                 <p class="tourism-delicacy-card__desc">
-                  Decadent molten chocolate lava cake with a warm chili ganache core mimicking Mayon Volcano's glowing lava flow.
+                  Decadent molten chocolate lava cake with a warm chili ganache core mimicking Mayon
+                  Volcano's glowing lava flow.
                 </p>
               </div>
             </article>
@@ -755,14 +883,24 @@
                   alt="Pinangat Pasta"
                   class="tourism-delicacy-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-delicacy-card__body">
                 <h3 class="tourism-delicacy-card__title">Pinangat Pasta</h3>
                 <p class="tourism-delicacy-card__desc">
-                  Creative Bicolano fusion pasta tossed in rich coconut milk cream and tender simmered taro leaf pinangat.
+                  Creative Bicolano fusion pasta tossed in rich coconut milk cream and tender
+                  simmered taro leaf pinangat.
                 </p>
               </div>
             </article>
@@ -775,14 +913,24 @@
                   alt="Sili Halo-Halo"
                   class="tourism-delicacy-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-delicacy-card__body">
                 <h3 class="tourism-delicacy-card__title">Sili Halo-Halo</h3>
                 <p class="tourism-delicacy-card__desc">
-                  Classic Philippine shaved-ice refreshment crowned with fiery chili ice cream, sweet beans, and local fruits.
+                  Classic Philippine shaved-ice refreshment crowned with fiery chili ice cream,
+                  sweet beans, and local fruits.
                 </p>
               </div>
             </article>
@@ -795,14 +943,24 @@
                   alt="Pili Ensaymada"
                   class="tourism-delicacy-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-delicacy-card__body">
                 <h3 class="tourism-delicacy-card__title">Pili Ensaymada</h3>
                 <p class="tourism-delicacy-card__desc">
-                  Fluffy golden artisan brioche brushed with butter, grated cheese, and crowned with roasted Albay pili nuts.
+                  Fluffy golden artisan brioche brushed with butter, grated cheese, and crowned with
+                  roasted Albay pili nuts.
                 </p>
               </div>
             </article>
@@ -815,14 +973,24 @@
                   alt="Gulay na Pagulong"
                   class="tourism-delicacy-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-delicacy-card__body">
                 <h3 class="tourism-delicacy-card__title">Gulay na Pagulong</h3>
                 <p class="tourism-delicacy-card__desc">
-                  Authentic indigenous Bicolano vegetable medley slow-simmered in freshly pressed pure coconut milk.
+                  Authentic indigenous Bicolano vegetable medley slow-simmered in freshly pressed
+                  pure coconut milk.
                 </p>
               </div>
             </article>
@@ -835,14 +1003,24 @@
                   alt="Sili Cheesecake"
                   class="tourism-delicacy-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-delicacy-card__body">
                 <h3 class="tourism-delicacy-card__title">Sili Cheesecake</h3>
                 <p class="tourism-delicacy-card__desc">
-                  Silky baked cheesecake balancing sweet cream cheese with a subtle, lingering spicy Bicolano chili note.
+                  Silky baked cheesecake balancing sweet cream cheese with a subtle, lingering spicy
+                  Bicolano chili note.
                 </p>
               </div>
             </article>
@@ -855,14 +1033,24 @@
                   alt="Pancit-Dinuguan Combo"
                   class="tourism-delicacy-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-delicacy-card__body">
                 <h3 class="tourism-delicacy-card__title">Pancit-Dinuguan Combo</h3>
                 <p class="tourism-delicacy-card__desc">
-                  Time-honored Bicolano afternoon merienda pairing savory stir-fried noodles with rich savory dinuguan stew.
+                  Time-honored Bicolano afternoon merienda pairing savory stir-fried noodles with
+                  rich savory dinuguan stew.
                 </p>
               </div>
             </article>
@@ -875,14 +1063,24 @@
                   alt="Bicol Pili Nuts & Pastries"
                   class="tourism-delicacy-card__img"
                   loading="lazy"
-                  onerror="this.onerror=null; this.src='../assets/images/logo/legazpi-city-seal.png'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const a = this.parentElement.querySelector('.tourism-card__attribution'); if(a) a.remove();"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '../assets/images/logo/legazpi-city-seal.png';
+                    this.classList.add('tourism-seal-fallback-img');
+                    this.parentElement.classList.add('tourism-seal-fallback-media');
+                    const a = this.parentElement.querySelector('.tourism-card__attribution');
+                    if (a) a.remove();
+                  "
                 />
-                <span class="tourism-card__attribution"><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span>
+                <span class="tourism-card__attribution"
+                  ><i class="bi bi-camera-fill"></i> 2024 Travel Guide</span
+                >
               </div>
               <div class="tourism-delicacy-card__body">
                 <h3 class="tourism-delicacy-card__title">Pili Bread &amp; Pastries</h3>
                 <p class="tourism-delicacy-card__desc">
-                  Artisan loaves, pastillas, and crispy glazed sweets prepared with buttery, nutrient-dense local pili nuts.
+                  Artisan loaves, pastillas, and crispy glazed sweets prepared with buttery,
+                  nutrient-dense local pili nuts.
                 </p>
               </div>
             </article>
@@ -895,11 +1093,14 @@
         <div class="container">
           <div class="tourism-section-header">
             <div class="tourism-section-header__text">
-              <span class="tourism-section-header__badge" style="background: rgba(37, 99, 235, 0.12); color: #2563eb;">
+              <span class="tourism-section-header__badge tourism-section-header__badge--sky">
                 <i class="bi bi-gift-fill"></i> Orgullo de Legazpi
               </span>
               <h2>Local Pride &amp; Artisan Products</h2>
-              <p>Don't leave the city without bringing home authentic handcrafted souvenirs, abaca textiles, and wellness goods.</p>
+              <p>
+                Don't leave the city without bringing home authentic handcrafted souvenirs, abaca
+                textiles, and wellness goods.
+              </p>
             </div>
           </div>
 
@@ -908,9 +1109,12 @@
             <article class="tourism-product-card">
               <div class="tourism-product-icon"><i class="bi bi-gem"></i></div>
               <h3 class="tourism-product-title">Pinukpok (Abaca Silk)</h3>
-              <div class="tourism-product-origin"><i class="bi bi-geo-alt-fill"></i> Handwoven in Brgy. 66 Banquerohan</div>
+              <div class="tourism-product-origin">
+                <i class="bi bi-geo-alt-fill"></i> Handwoven in Brgy. 66 Banquerohan
+              </div>
               <p class="tourism-product-desc">
-                Known as Philippine abaca silk, Pinukpok is an exquisite hand-pounded natural fabric used for high-end Barong Tagalog, heirloom bridal attire, and luxury textiles.
+                Known as Philippine abaca silk, Pinukpok is an exquisite hand-pounded natural fabric
+                used for high-end Barong Tagalog, heirloom bridal attire, and luxury textiles.
               </p>
               <div class="tourism-product-outlets">
                 <strong>Where to Buy:</strong>
@@ -920,11 +1124,17 @@
 
             <!-- Pilinut Products -->
             <article class="tourism-product-card">
-              <div class="tourism-product-icon" style="background: rgba(5, 150, 105, 0.1); color: #059669;"><i class="bi bi-tree-fill"></i></div>
+              <div class="tourism-product-icon tourism-product-icon--emerald">
+                <i class="bi bi-tree-fill"></i>
+              </div>
               <h3 class="tourism-product-title">Pilinut Delights &amp; Skincare</h3>
-              <div class="tourism-product-origin"><i class="bi bi-geo-alt-fill"></i> Indigenous to Albay Region</div>
+              <div class="tourism-product-origin">
+                <i class="bi bi-geo-alt-fill"></i> Indigenous to Albay Region
+              </div>
               <p class="tourism-product-desc">
-                Harvested from Bicol's "Magic Tree", Pili is crafted into gourmet glazed sweets, mazapan, roasted snacks, as well as therapeutic cosmetic oils and organic wellness products.
+                Harvested from Bicol's "Magic Tree", Pili is crafted into gourmet glazed sweets,
+                mazapan, roasted snacks, as well as therapeutic cosmetic oils and organic wellness
+                products.
               </p>
               <div class="tourism-product-outlets">
                 <strong>Where to Buy:</strong>
@@ -934,11 +1144,16 @@
 
             <!-- Woven Abaca -->
             <article class="tourism-product-card">
-              <div class="tourism-product-icon" style="background: rgba(217, 119, 6, 0.1); color: #d97706;"><i class="bi bi-bag-heart-fill"></i></div>
+              <div class="tourism-product-icon tourism-product-icon--amber">
+                <i class="bi bi-bag-heart-fill"></i>
+              </div>
               <h3 class="tourism-product-title">Handwoven Abaca Crafts</h3>
-              <div class="tourism-product-origin"><i class="bi bi-geo-alt-fill"></i> Local Artisan Guilds</div>
+              <div class="tourism-product-origin">
+                <i class="bi bi-geo-alt-fill"></i> Local Artisan Guilds
+              </div>
               <p class="tourism-product-desc">
-                Durable eco-friendly bags, decorative home accents, dining placemats, slippers, and Mayon memorabilia masterfully handwoven by native Bicolano craftsmen.
+                Durable eco-friendly bags, decorative home accents, dining placemats, slippers, and
+                Mayon memorabilia masterfully handwoven by native Bicolano craftsmen.
               </p>
               <div class="tourism-product-outlets">
                 <strong>Where to Buy:</strong>
@@ -954,26 +1169,42 @@
         <div class="container">
           <div class="tourism-festival-feature">
             <div class="tourism-festival-content">
-              <span class="tourism-section-header__badge" style="background: rgba(234, 88, 12, 0.15); color: #ea580c; margin-bottom: 14px;">
+              <span class="tourism-section-header__badge" style="margin-bottom: 14px">
                 <i class="bi bi-trophy-fill"></i> Annual Cultural Festivity
               </span>
               <h3>Ibalong Festival Celebration</h3>
               <p>
-                A world-class non-religious cultural festival that celebrates the ancient Bicolano epic of Ibalon. Every August, the streets come alive with theatrical street dancing, colorful mask pageantry, and musical dramas depicting mythical warriors overcoming primeval beasts.
+                A world-class non-religious cultural festival that celebrates the ancient Bicolano
+                epic of Ibalon. Every August, the streets come alive with theatrical street dancing,
+                colorful mask pageantry, and musical dramas depicting mythical warriors overcoming
+                primeval beasts.
               </p>
               <div class="tourism-heroes-list">
-                <span class="tourism-hero-tag"><i class="bi bi-shield-shaded"></i> Baltog (First Chieftain)</span>
-                <span class="tourism-hero-tag"><i class="bi bi-shield-shaded"></i> Handiong (Brave Leader)</span>
-                <span class="tourism-hero-tag"><i class="bi bi-shield-shaded"></i> Bantong (Dragon Slayer)</span>
+                <span class="tourism-hero-tag"
+                  ><i class="bi bi-shield-shaded"></i> Baltog (First Chieftain)</span
+                >
+                <span class="tourism-hero-tag"
+                  ><i class="bi bi-shield-shaded"></i> Handiong (Brave Leader)</span
+                >
+                <span class="tourism-hero-tag"
+                  ><i class="bi bi-shield-shaded"></i> Bantong (Dragon Slayer)</span
+                >
               </div>
             </div>
 
             <div class="tourism-festival-highlight">
               <h4><i class="bi bi-calendar-event"></i> Festival Highlights</h4>
-              <p style="font-size: 0.88rem; color: var(--tourism-text-muted); margin: 0; line-height: 1.6;">
-                • Grand Ibalong Street Dance Parade &amp; Mask Competition<br>
-                • Mutya ng Ibalong Pageant<br>
-                • Epic Theater Re-enactments &amp; Cultural Night Shows<br>
+              <p
+                style="
+                  font-size: 0.88rem;
+                  color: var(--tourism-text-muted);
+                  margin: 0;
+                  line-height: 1.6;
+                "
+              >
+                • Grand Ibalong Street Dance Parade &amp; Mask Competition<br />
+                • Mutya ng Ibalong Pageant<br />
+                • Epic Theater Re-enactments &amp; Cultural Night Shows<br />
                 • Mayon Tri-Athlon &amp; Adventure Sports Circuit
               </p>
             </div>
@@ -984,13 +1215,16 @@
       <!-- 6. THE WARMTH OF LEGAZPEÑO HOSPITALITY -->
       <section class="tourism-section tourism-section--alt">
         <div class="container">
-          <div class="tourism-section-header" style="text-align: center; justify-content: center;">
-            <div class="tourism-section-header__text" style="max-width: 100%;">
-              <span class="tourism-section-header__badge" style="background: rgba(5, 150, 105, 0.12); color: #059669;">
+          <div class="tourism-section-header" style="text-align: center; justify-content: center">
+            <div class="tourism-section-header__text" style="max-width: 100%">
+              <span class="tourism-section-header__badge tourism-section-header__badge--emerald">
                 <i class="bi bi-heart-fill"></i> Brand of Service
               </span>
               <h2>The Warmth of Legazpeño Hospitality</h2>
-              <p>Be welcomed with the heartfelt hospitality of every Legazpeño and the City Tourism Services Unit.</p>
+              <p>
+                Be welcomed with the heartfelt hospitality of every Legazpeño and the City Tourism
+                Services Unit.
+              </p>
             </div>
           </div>
 
@@ -998,14 +1232,18 @@
             <div class="tourism-hospitality-card">
               <h3><i class="bi bi-person-arms-up"></i> The Mabuhay Gesture</h3>
               <p>
-                A core Filipino Brand of Service practice where hosts place a hand over the chest when welcoming visitors, expressing genuine warmth, sincerity, and pride in civic hospitality.
+                A core Filipino Brand of Service practice where hosts place a hand over the chest
+                when welcoming visitors, expressing genuine warmth, sincerity, and pride in civic
+                hospitality.
               </p>
             </div>
 
             <div class="tourism-hospitality-card">
               <h3><i class="bi bi-award-fill"></i> Welcome Lei &amp; Putong Ceremony</h3>
               <p>
-                Proudly made Bicol ceremonial craft traditions where esteemed guests are draped with a handcrafted native woven Lei necklace and crowned with the ceremonial Putong headdress.
+                Proudly made Bicol ceremonial craft traditions where esteemed guests are draped with
+                a handcrafted native woven Lei necklace and crowned with the ceremonial Putong
+                headdress.
               </p>
             </div>
           </div>
@@ -1017,23 +1255,31 @@
         <div class="container">
           <div class="tourism-section-header">
             <div class="tourism-section-header__text">
-              <span class="tourism-section-header__badge" style="background: rgba(124, 58, 237, 0.12); color: #7c3aed;">
+              <span class="tourism-section-header__badge tourism-section-header__badge--purple">
                 <i class="bi bi-map-fill"></i> Curated Routes
               </span>
               <h2>Suggested Travel Itineraries</h2>
-              <p>Carefully planned 1-day and 2-day routes combining top sights, thrilling adventures, and authentic dining.</p>
+              <p>
+                Carefully planned 1-day and 2-day routes combining top sights, thrilling adventures,
+                and authentic dining.
+              </p>
             </div>
           </div>
 
           <div class="tourism-itinerary-grid">
             <!-- 24-Hour Express Adventure -->
             <div class="tourism-itinerary-card">
-              <span class="tourism-itinerary-card__badge">1-Day Route • Adrenaline &amp; Flavors</span>
+              <span class="tourism-itinerary-card__badge"
+                >1-Day Route • Adrenaline &amp; Flavors</span
+              >
               <h3 class="tourism-itinerary-card__title">The 24-Hour Express Adventure</h3>
               <div class="tourism-itinerary-timeline">
                 <div class="tourism-itinerary-step">
                   <strong>06:00 AM • Sunrise Mayon ATV Lava Trail</strong>
-                  <span>Traverse rivers and volcanic boulders to the 2006 Black Lava Front in Brgy. Mabinit.</span>
+                  <span
+                    >Traverse rivers and volcanic boulders to the 2006 Black Lava Front in Brgy.
+                    Mabinit.</span
+                  >
                 </div>
                 <div class="tourism-itinerary-step">
                   <strong>11:30 AM • Authentic Bicolano Lunch</strong>
@@ -1041,33 +1287,48 @@
                 </div>
                 <div class="tourism-itinerary-step">
                   <strong>02:00 PM • Ligñon Hill &amp; Albay Cathedral</strong>
-                  <span>Take in 360° views, walk through WWII Japanese tunnels, and visit St. Gregory Cathedral.</span>
+                  <span
+                    >Take in 360° views, walk through WWII Japanese tunnels, and visit St. Gregory
+                    Cathedral.</span
+                  >
                 </div>
                 <div class="tourism-itinerary-step">
                   <strong>05:30 PM • Legazpi Boulevard Sunset &amp; Sili Ice Cream</strong>
-                  <span>Stroll Sawangan Park, snap photos at the JCI Super Marker, and enjoy evening coastal breeze.</span>
+                  <span
+                    >Stroll Sawangan Park, snap photos at the JCI Super Marker, and enjoy evening
+                    coastal breeze.</span
+                  >
                 </div>
               </div>
             </div>
 
             <!-- 48-Hour Heritage & Eco-Tour -->
             <div class="tourism-itinerary-card">
-              <span class="tourism-itinerary-card__badge" style="background: rgba(2, 132, 199, 0.12); color: #0284c7;">
+              <span class="tourism-itinerary-card__badge tourism-itinerary-card__badge--sky">
                 2-Day Route • Nature &amp; Culture
               </span>
               <h3 class="tourism-itinerary-card__title">The 48-Hour Heritage &amp; Eco-Trail</h3>
               <div class="tourism-itinerary-timeline">
                 <div class="tourism-itinerary-step">
                   <strong>Day 1 • Cultural Landmarks &amp; Waterfront</strong>
-                  <span>Explore Embarcadero de Legazpi, Kapuntukan Hill (Sleeping Lion), and sunset along the boulevard promenade.</span>
+                  <span
+                    >Explore Embarcadero de Legazpi, Kapuntukan Hill (Sleeping Lion), and sunset
+                    along the boulevard promenade.</span
+                  >
                 </div>
                 <div class="tourism-itinerary-step">
                   <strong>Day 2 Morning • Albay Gulf Marine Snorkeling</strong>
-                  <span>Snorkel protected coral reefs and observe sea turtles in pristine coastal marine sanctuaries.</span>
+                  <span
+                    >Snorkel protected coral reefs and observe sea turtles in pristine coastal
+                    marine sanctuaries.</span
+                  >
                 </div>
                 <div class="tourism-itinerary-step">
                   <strong>Day 2 Afternoon • Eco-Park &amp; Souvenir Center</strong>
-                  <span>Visit Doña Pepita Eco-Park and shop for authentic handcrafted Abaca products and Pili nuts.</span>
+                  <span
+                    >Visit Doña Pepita Eco-Park and shop for authentic handcrafted Abaca products
+                    and Pili nuts.</span
+                  >
                 </div>
               </div>
             </div>
@@ -1078,13 +1339,16 @@
       <!-- 8. EXPLORE BY CATEGORY GATEWAYS -->
       <section class="tourism-section tourism-section--alt">
         <div class="container">
-          <div class="tourism-section-header" style="text-align: center; justify-content: center;">
-            <div class="tourism-section-header__text" style="max-width: 100%;">
+          <div class="tourism-section-header" style="text-align: center; justify-content: center">
+            <div class="tourism-section-header__text" style="max-width: 100%">
               <span class="tourism-section-header__badge">
                 <i class="bi bi-folder-fill"></i> Complete Directories
               </span>
               <h2>Explore Legazpi by Category</h2>
-              <p>Browse full municipal directories with PSGC barangay search, contact numbers, and Google Maps links.</p>
+              <p>
+                Browse full municipal directories with PSGC barangay search, contact numbers, and
+                Google Maps links.
+              </p>
             </div>
           </div>
 
@@ -1096,15 +1360,17 @@
             </a>
 
             <a href="experience" class="tourism-gateway-card">
-              <div class="tourism-gateway-icon" style="background: rgba(234, 88, 12, 0.12); color: #ea580c;">
+              <div class="tourism-gateway-icon">
                 <i class="bi bi-compass-fill"></i>
               </div>
               <h3 class="tourism-gateway-title">The Experience</h3>
-              <span class="tourism-gateway-count">8 Adventures • ATV, Climb &amp; 16 Dive Reefs</span>
+              <span class="tourism-gateway-count"
+                >8 Adventures • ATV, Climb &amp; 16 Dive Reefs</span
+              >
             </a>
 
             <a href="food" class="tourism-gateway-card">
-              <div class="tourism-gateway-icon" style="background: rgba(5, 150, 105, 0.12); color: #059669;">
+              <div class="tourism-gateway-icon tourism-gateway-icon--emerald">
                 <i class="bi bi-cup-hot-fill"></i>
               </div>
               <h3 class="tourism-gateway-title">Cuisine &amp; Dining</h3>
@@ -1112,7 +1378,7 @@
             </a>
 
             <a href="accommodations" class="tourism-gateway-card">
-              <div class="tourism-gateway-icon" style="background: rgba(2, 132, 199, 0.12); color: #0284c7;">
+              <div class="tourism-gateway-icon tourism-gateway-icon--sky">
                 <i class="bi bi-building-fill"></i>
               </div>
               <h3 class="tourism-gateway-title">Where to Stay</h3>
@@ -1120,7 +1386,7 @@
             </a>
 
             <a href="landmarks" class="tourism-gateway-card">
-              <div class="tourism-gateway-icon" style="background: rgba(217, 119, 6, 0.12); color: #d97706;">
+              <div class="tourism-gateway-icon tourism-gateway-icon--amber">
                 <i class="bi bi-camera-fill"></i>
               </div>
               <h3 class="tourism-gateway-title">Scenic Landmarks</h3>
@@ -1132,7 +1398,15 @@
           <aside class="tourism-source-card" aria-label="Source Attribution">
             <i class="bi bi-shield-check"></i>
             <p>
-              <strong>Official Municipal Source:</strong> All tourist attractions, delicacies, food establishments, activities, accommodations, landmarks, and cultural guides are curated directly from the City Government of Legazpi Official Portal (<a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer">legazpi.gov.ph</a>) and the official <em>City of Fun and Adventure Travel Guide</em> (City Tourism Services Unit) cross-referenced with PSGC Barangay data for the community.
+              <strong>Official Municipal Source:</strong> All tourist attractions, delicacies, food
+              establishments, activities, accommodations, landmarks, and cultural guides are curated
+              directly from the City Government of Legazpi Official Portal (<a
+                href="https://legazpi.gov.ph/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >legazpi.gov.ph</a
+              >) and the official <em>City of Fun and Adventure Travel Guide</em> (City Tourism
+              Services Unit) cross-referenced with PSGC Barangay data for the community.
             </p>
           </aside>
         </div>
@@ -1140,17 +1414,18 @@
     </main>
 
     <!-- Footer -->
-                <footer class="site-footer">
+    <footer class="site-footer">
       <div class="container">
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -1184,9 +1459,7 @@
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
               <li><a href="../tourism/">Tourism &amp; Travel</a></li>
-              <li><a href="../government/">City Government</a></li>
-              <li><a href="../statistics/">Statistics &amp; Data</a></li>
-              <li><a href="../budget/">Transparency &amp; Budget</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -1198,27 +1471,36 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://data.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
               </li>
               <li>
-                <a
-                  href="https://www.foi.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
                   >Freedom of Information</a
                 >
               </li>
               <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
                 <a
-                  href="https://legazpi.gov.ph"
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >City Government of Legazpi</a
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -1231,18 +1513,58 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
               href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
@@ -1257,7 +1579,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Scripts -->
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>

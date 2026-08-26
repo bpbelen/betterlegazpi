@@ -47,13 +47,16 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-hub.css" />
     <style>
       .mswdo-section {
         padding: 40px 0;
       }
+
       .mswdo-section.alt-bg {
         background: var(--color-bg-alt);
       }
+
       .section-header {
         margin-bottom: 20px;
         display: flex;
@@ -62,6 +65,7 @@
         flex-wrap: wrap;
         gap: 12px;
       }
+
       .section-header h2 {
         font-size: 1.125rem;
         color: var(--color-text);
@@ -70,21 +74,25 @@
         align-items: center;
         gap: 8px;
       }
+
       .section-header h2 i {
         color: var(--color-primary);
         font-size: 1rem;
       }
+
       .section-header p {
         color: var(--color-text-light);
         font-size: 0.8125rem;
         margin: 0;
       }
+
       .quick-stats {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
         margin-bottom: 20px;
       }
+
       .stat-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -92,11 +100,13 @@
         padding: 12px;
         text-align: center;
       }
+
       .stat-card i {
         font-size: 1rem;
         color: var(--color-primary);
         margin-bottom: 4px;
       }
+
       .stat-card h4 {
         font-size: 0.625rem;
         color: var(--color-text-light);
@@ -104,18 +114,14 @@
         font-weight: 500;
         text-transform: uppercase;
       }
-      .stat-card p {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
+
       .req-summary-grid {
         display: grid;
         grid-template-columns: 1.8fr 1fr;
         gap: 14px;
         margin-bottom: 14px;
       }
+
       .req-subheading {
         font-size: 0.6875rem;
         font-weight: 700;
@@ -126,14 +132,7 @@
         padding-bottom: 3px;
         border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
       }
-      .req-subheading:first-of-type {
-        margin-top: 0;
-      }
-      .summary-metrics {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
+
       .metric-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -143,6 +142,7 @@
         align-items: flex-start;
         gap: 10px;
       }
+
       .metric-icon {
         width: 28px;
         height: 28px;
@@ -156,9 +156,7 @@
         flex-shrink: 0;
         margin-top: 2px;
       }
-      .metric-content {
-        flex: 1;
-      }
+
       .metric-label {
         font-size: 0.625rem;
         text-transform: uppercase;
@@ -167,18 +165,21 @@
         letter-spacing: 0.5px;
         margin-bottom: 3px;
       }
+
       .metric-value {
         font-size: 0.78125rem;
         font-weight: 600;
         color: var(--color-text);
         line-height: 1.4;
       }
+
       .metric-list {
         display: flex;
         flex-direction: column;
         gap: 4px;
         margin-top: 2px;
       }
+
       .metric-list-item {
         display: flex;
         align-items: flex-start;
@@ -187,12 +188,14 @@
         color: var(--color-text);
         line-height: 1.35;
       }
+
       .metric-list-item i {
         color: var(--color-primary);
         font-size: 0.6875rem;
         margin-top: 2px;
         flex-shrink: 0;
       }
+
       .metric-note {
         font-size: 0.6875rem;
         color: var(--color-text-light);
@@ -211,32 +214,39 @@
         border: 1px solid rgba(0, 0, 0, 0.06);
         font-size: 0.75rem;
       }
+
       .process-table th:nth-child(1),
       .process-table td:nth-child(1) {
         width: 4%;
         text-align: center;
       }
+
       .process-table th:nth-child(2),
       .process-table td:nth-child(2) {
         width: 18%;
       }
+
       .process-table th:nth-child(3),
       .process-table td:nth-child(3) {
         width: 28%;
       }
+
       .process-table th:nth-child(4),
       .process-table td:nth-child(4) {
         width: 18%; /* Enlarged Fees Column */
       }
+
       .process-table th:nth-child(5),
       .process-table td:nth-child(5) {
         width: 12%;
       }
+
       .process-table th:nth-child(6),
       .process-table td:nth-child(6) {
         width: 20%;
         padding-right: 12px;
       }
+
       .process-table th {
         background: var(--color-primary);
         color: white;
@@ -246,17 +256,17 @@
         font-size: 0.6875rem;
         text-transform: uppercase;
       }
+
       .process-table td {
         padding: 10px 10px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.04);
         vertical-align: top;
       }
-      .process-table tr:last-child td {
-        border-bottom: none;
-      }
+
       .process-table tr:hover {
         background: rgba(0, 50, 160, 0.02);
       }
+
       .step-badge {
         display: inline-flex;
         align-items: center;
@@ -269,11 +279,13 @@
         font-weight: 700;
         border-radius: 4px;
       }
+
       .client-step-text {
         font-weight: 600;
         color: var(--color-text);
         line-height: 1.35;
       }
+
       .agency-action-text {
         color: var(--color-text-light);
         font-weight: 400;
@@ -281,6 +293,7 @@
         line-height: 1.4;
         margin-bottom: 3px;
       }
+
       .agency-action-text:last-child {
         margin-bottom: 0;
       }
@@ -291,6 +304,7 @@
         flex-direction: column;
         gap: 3px;
       }
+
       .fee-tier-item {
         font-size: 0.71875rem;
         line-height: 1.3;
@@ -322,6 +336,7 @@
         line-height: 1.35;
         max-width: 100%;
       }
+
       .service-tabs {
         display: flex;
         flex-wrap: nowrap;
@@ -331,6 +346,7 @@
         overflow-x: auto;
         padding-bottom: 4px;
       }
+
       .service-tab {
         padding: 8px 12px;
         background: white;
@@ -346,27 +362,20 @@
         white-space: nowrap;
         flex-shrink: 0;
       }
-      .service-tab:hover {
-        border-color: var(--color-primary);
-        color: var(--color-primary);
-      }
+
       .service-tab.active {
         background: var(--color-primary);
         border-color: var(--color-primary);
         color: white;
       }
-      .service-content {
-        display: none;
-      }
-      .service-content.active {
-        display: block;
-      }
+
       .req-box {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         padding: 16px;
       }
+
       .req-box h3 {
         font-size: 0.875rem;
         color: var(--color-text);
@@ -375,9 +384,11 @@
         align-items: center;
         gap: 8px;
       }
+
       .req-box h3 i {
         color: var(--color-primary);
       }
+
       .category-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -385,6 +396,7 @@
         margin-top: 10px;
         margin-bottom: 14px;
       }
+
       .category-card {
         background: rgba(0, 50, 160, 0.02);
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -393,20 +405,24 @@
         cursor: pointer;
         transition: all 0.2s ease;
       }
+
       .category-card:hover {
         border-color: var(--color-primary);
         background: rgba(0, 50, 160, 0.04);
       }
+
       .category-card.active {
         background: rgba(0, 50, 160, 0.07);
         border: 2px solid var(--color-primary);
       }
+
       .category-card h5 {
         font-size: 0.75rem;
         font-weight: 700;
         color: var(--color-primary);
         margin-bottom: 4px;
       }
+
       .category-req-list {
         margin: 6px 0 0 0;
         padding: 0;
@@ -414,6 +430,7 @@
         font-size: 0.6875rem;
         color: var(--color-text);
       }
+
       .category-req-list li {
         margin-bottom: 3px;
         line-height: 1.35;
@@ -421,15 +438,18 @@
         align-items: flex-start;
         gap: 5px;
       }
+
       .category-req-list li i {
         color: var(--color-primary);
         font-size: 0.75rem;
         flex-shrink: 0;
         margin-top: 1px;
       }
+
       .sub-table {
         display: none;
       }
+
       .sub-table.active {
         display: table;
       }
@@ -441,9 +461,10 @@
         gap: 10px;
         margin-top: 10px;
       }
+
       .permit-type-card {
-        background: white;
-        border: 1px solid rgba(0, 0, 0, 0.08);
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
         border-radius: 8px;
         padding: 10px 12px;
         text-align: center;
@@ -456,15 +477,18 @@
         transition: all 0.2s ease;
         min-height: 72px;
       }
+
       .permit-type-card:hover {
         border-color: var(--color-primary);
         box-shadow: 0 3px 10px rgba(0, 50, 160, 0.08);
         transform: translateY(-1px);
       }
+
       .permit-type-card i {
         font-size: 1.15rem;
         color: var(--color-primary);
       }
+
       .permit-type-card h5 {
         font-size: 0.6875rem;
         font-weight: 400;
@@ -473,38 +497,26 @@
         line-height: 1.25;
       }
 
-      .staff-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
       .staff-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         padding: 14px;
       }
+
       .staff-card h4 {
         font-size: 0.8125rem;
         margin: 0 0 4px 0;
         color: var(--color-text);
       }
-      .staff-card p {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-      }
-      .contact-info-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-      }
+
       .contact-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         padding: 16px;
       }
+
       .contact-card h4 {
         font-size: 0.875rem;
         color: var(--color-text);
@@ -513,19 +525,19 @@
         align-items: center;
         gap: 8px;
       }
-      .contact-card h4 i {
-        color: var(--color-primary);
-      }
+
       .contact-card p {
         font-size: 0.75rem;
         margin-bottom: 6px;
         line-height: 1.4;
       }
+
       @media (max-width: 992px) {
         .permit-types-grid {
           grid-template-columns: repeat(3, 1fr);
         }
       }
+
       @media (max-width: 768px) {
         .quick-stats {
           grid-template-columns: repeat(2, 1fr);
@@ -546,13 +558,14 @@
           grid-template-columns: 1fr;
         }
       }
+
       @media (max-width: 480px) {
         .permit-types-grid {
           grid-template-columns: 1fr;
         }
       }
     </style>
-      <script>
+    <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -566,7 +579,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -600,7 +613,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -611,14 +623,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -644,15 +653,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -682,8 +696,7 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="../services/">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="../services/">Services</a><span>/</span>
           <a href="../services/infrastructure">Infrastructure</a><span>/</span>
           <span aria-current="page">City Engineering Office</span>
         </nav>
@@ -696,7 +709,8 @@
             <span class="page-header-badge"><i class="bi bi-hammer"></i> CEO</span>
             <h1>City Engineering Office</h1>
             <p class="page-header-desc">
-              Your consolidated guide in building permits, occupancy certificates, and structural evaluation in Legazpi City
+              Your consolidated guide in building permits, occupancy certificates, and structural
+              evaluation in Legazpi City
             </p>
           </div>
         </div>
@@ -736,17 +750,28 @@
           <!-- Section Header -->
           <div class="section-header">
             <h2><i class="bi bi-gear-wide-connected"></i> CEO Services</h2>
-            <p>Select a service below to view the detailed requirements, process, and turn-around time</p>
+            <p>
+              Select a service below to view the detailed requirements, process, and turn-around
+              time
+            </p>
           </div>
 
           <!-- Service Tabs (6 Key Services - Single Line) -->
           <div class="service-tabs">
-            <button class="service-tab active" data-tab="event-permits">Public Space Permits</button>
-            <button class="service-tab" data-tab="construction-permits">Construction Permits</button>
+            <button class="service-tab active" data-tab="event-permits">
+              Public Space Permits
+            </button>
+            <button class="service-tab" data-tab="construction-permits">
+              Construction Permits
+            </button>
             <button class="service-tab" data-tab="engineering-design">Engineering Design</button>
-            <button class="service-tab" data-tab="inspection-certificates">Inspection & Compliance</button>
+            <button class="service-tab" data-tab="inspection-certificates">
+              Inspection & Compliance
+            </button>
             <button class="service-tab" data-tab="repair-maintenance">Repair & Maintenance</button>
-            <button class="service-tab" data-tab="community-assistance">Community Assistance</button>
+            <button class="service-tab" data-tab="community-assistance">
+              Community Assistance
+            </button>
           </div>
 
           <!-- TAB 1: Public Space Permits -->
@@ -756,25 +781,53 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">Select Service Sub-Category</div>
                 <div class="category-grid">
-                  <div class="category-card active" data-sub="truck-ban" data-time="1 day, 1 hour & ten minutes" data-fee="₱750 (Class A, below 4,500 kg) | ₱1,000 (Class B, 4,500-12,000 kg) | ₱1,250 (Class C, above 12,000 kg)" data-type="Simple Transaction (Government to Client)">
+                  <div
+                    class="category-card active"
+                    data-sub="truck-ban"
+                    data-time="1 day, 1 hour & ten minutes"
+                    data-fee="₱750 (Class A, below 4,500 kg) | ₱1,000 (Class B, 4,500-12,000 kg) | ₱1,250 (Class C, above 12,000 kg)"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
                     <h5>Special Permit for Truck Ban</h5>
                     <ul class="category-req-list">
                       <li><i class="bi bi-check2-circle"></i> One (1) copy of Letter Request</li>
                       <li><i class="bi bi-check2-circle"></i> One (1) copy of OR / CR</li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="road-use" data-time="1 hour & 55 minutes" data-fee="₱350.00 / day of activity" data-type="Simple Transaction (G2C, G2B, G2G)">
-                    <h5>Permit for Use of Roads (Motorcade, Parade, Fun Run, Recorrida, Road Closure)</h5>
+                  <div
+                    class="category-card"
+                    data-sub="road-use"
+                    data-time="1 hour & 55 minutes"
+                    data-fee="₱350.00 / day of activity"
+                    data-type="Simple Transaction (G2C, G2B, G2G)"
+                  >
+                    <h5>
+                      Permit for Use of Roads (Motorcade, Parade, Fun Run, Recorrida, Road Closure)
+                    </h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> One (1) copy of Letter Request with endorsement from City Mayor's Office</li>
-                      <li><i class="bi bi-check2-circle"></i> One (1) copy of route of the activity</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> One (1) copy of Letter Request with
+                        endorsement from City Mayor's Office
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> One (1) copy of route of the activity
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="banner-permit" data-time="1 day, 1 hour & five minutes" data-fee="₱24.00 / sq.m. / week per piece (+ dismantling fee)" data-type="Simple Transaction (Government to Client)">
+                  <div
+                    class="category-card"
+                    data-sub="banner-permit"
+                    data-time="1 day, 1 hour & five minutes"
+                    data-fee="₱24.00 / sq.m. / week per piece (+ dismantling fee)"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
                     <h5>Permit for Hanging of Banners/Tarpaulins/Streamers</h5>
                     <ul class="category-req-list">
                       <li><i class="bi bi-check2-circle"></i> One (1) copy of Letter Request</li>
-                      <li><i class="bi bi-check2-circle"></i> Actual streamers/banners/tarpaulins to be hanged</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Actual streamers/banners/tarpaulins to
+                        be hanged
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -795,9 +848,15 @@
                       <div class="metric-label">Fees</div>
                       <div class="metric-value" id="event-fee">
                         <div class="metric-list">
-                          <div class="metric-list-item"><i class="bi bi-dash"></i> ₱750 (Class A: below 4,500 kg)</div>
-                          <div class="metric-list-item"><i class="bi bi-dash"></i> ₱1,000 (Class B: 4,500-12,000 kg)</div>
-                          <div class="metric-list-item"><i class="bi bi-dash"></i> ₱1,250 (Class C: above 12,000 kg)</div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-dash"></i> ₱750 (Class A: below 4,500 kg)
+                          </div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-dash"></i> ₱1,000 (Class B: 4,500-12,000 kg)
+                          </div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-dash"></i> ₱1,250 (Class C: above 12,000 kg)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -806,7 +865,9 @@
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="event-type">Simple Transaction (Government to Client)</div>
+                      <div class="metric-value" id="event-type">
+                        Simple Transaction (Government to Client)
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -828,9 +889,15 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits letter request together with OR / CR</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receives and verifies submitted documents</div>
+                    <span class="client-step-text"
+                      >Submits letter request together with OR / CR</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Receives and verifies submitted documents
+                    </div>
                     <div class="agency-action-text">1.2 Prepares assessment of payment</div>
                   </td>
                   <td>Free</td>
@@ -844,7 +911,9 @@
                     <div class="agency-action-text">2.1 Receives payment</div>
                     <div class="agency-action-text">2.2 Prepares permit</div>
                     <div class="agency-action-text">2.3 Checks / reviews / countersigns permit</div>
-                    <div class="agency-action-text">2.4 Recommends to the City Mayor for approval</div>
+                    <div class="agency-action-text">
+                      2.4 Recommends to the City Mayor for approval
+                    </div>
                     <div class="agency-action-text">2.5 Approves permit</div>
                   </td>
                   <td>
@@ -856,7 +925,9 @@
                   </td>
                   <td>
                     1 day, 50 minutes*
-                    <span class="caveat-note">*May be lesser time depending on the availability of the City Mayor</span>
+                    <span class="caveat-note"
+                      >*May be lesser time depending on the availability of the City Mayor</span
+                    >
                   </td>
                   <td>
                     <span class="personnel-tag">Cashier</span>
@@ -883,12 +954,20 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits letter request together with the route of the activity</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receives and verifies submitted documents</div>
+                    <span class="client-step-text"
+                      >Submits letter request together with the route of the activity</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Receives and verifies submitted documents
+                    </div>
                     <div class="agency-action-text">1.2 Refers request to City Engineer</div>
                     <div class="agency-action-text">1.3 Verify request for initial approval</div>
-                    <div class="agency-action-text">1.4 Refers request to Administrative Division</div>
+                    <div class="agency-action-text">
+                      1.4 Refers request to Administrative Division
+                    </div>
                   </td>
                   <td>Free</td>
                   <td>30 minutes</td>
@@ -901,7 +980,9 @@
                   <td><span class="step-badge">2</span></td>
                   <td><span class="client-step-text">Payment of fees</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 Prepares permit and assessment of payment</div>
+                    <div class="agency-action-text">
+                      2.1 Prepares permit and assessment of payment
+                    </div>
                     <div class="agency-action-text">2.2 Checks / reviews / countersigns permit</div>
                     <div class="agency-action-text">2.3 Approval of assessment of payment</div>
                     <div class="agency-action-text">2.4 Receive payment</div>
@@ -935,7 +1016,11 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits letter request together with actual banners / tarpaulins</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Submits letter request together with actual banners / tarpaulins</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">1.1 Receives and verifies</div>
                     <div class="agency-action-text">1.2 Refers request to City Engineer</div>
@@ -982,77 +1067,213 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">Select Permit Sub-Category</div>
                 <div class="category-grid">
-                  <div class="category-card active" data-sub="bldg-permit" data-time="8 hours 15 mins (Simple) | 15+ days (Highly-Technical)" data-fee="Based on Order of Payment (Consolidated Order of Payment prepared by Assessor)" data-type="Highly Technical (G2C, G2B, G2G)">
+                  <div
+                    class="category-card active"
+                    data-sub="bldg-permit"
+                    data-time="8 hours 15 mins (Simple) | 15+ days (Highly-Technical)"
+                    data-fee="Based on Order of Payment (Consolidated Order of Payment prepared by Assessor)"
+                    data-type="Highly Technical (G2C, G2B, G2G)"
+                  >
                     <h5>Building Permit Application</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Four (4) copies of duly accomplished and notarized Application Form for Building Permit</li>
-                      <li><i class="bi bi-check2-circle"></i> Proof of lot/property ownership (certified true copy of OCT/TCT; Deed of Sale, Lease Contract, etc.)</li>
-                      <li><i class="bi bi-check2-circle"></i> Geodetic Engineer Certification & Four (4) sets of Survey/Design Plans signed and sealed</li>
-                      <li><i class="bi bi-check2-circle"></i> Structural Analysis (3 sets), Electrical Analysis (3 sets), and Bill of Materials (4 sets)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Four (4) copies of duly accomplished and
+                        notarized Application Form for Building Permit
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Proof of lot/property ownership
+                        (certified true copy of OCT/TCT; Deed of Sale, Lease Contract, etc.)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Geodetic Engineer Certification & Four
+                        (4) sets of Survey/Design Plans signed and sealed
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Structural Analysis (3 sets), Electrical
+                        Analysis (3 sets), and Bill of Materials (4 sets)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="occupancy-app" data-time="8 hours 15 mins (Simple) | 15+ days (Highly-Technical)" data-fee="Based on Order of Payment (Consolidated Order of Payment prepared by Assessor)" data-type="Highly Technical (G2C, G2B, G2G)">
+                  <div
+                    class="category-card"
+                    data-sub="occupancy-app"
+                    data-time="8 hours 15 mins (Simple) | 15+ days (Highly-Technical)"
+                    data-fee="Based on Order of Payment (Consolidated Order of Payment prepared by Assessor)"
+                    data-type="Highly Technical (G2C, G2B, G2G)"
+                  >
                     <h5>Certificate of Occupancy Application</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Three (3) copies of Application Form & Certificate of Completion signed by Engineer/Architect</li>
-                      <li><i class="bi bi-check2-circle"></i> Three (3) sets of As-Built Plans & Geodetic Engineer Certification</li>
-                      <li><i class="bi bi-check2-circle"></i> Construction Logbook with photographs & Fire Safety Inspection Certificate (FSIC)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Three (3) copies of Application Form &
+                        Certificate of Completion signed by Engineer/Architect
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Three (3) sets of As-Built Plans &
+                        Geodetic Engineer Certification
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Construction Logbook with photographs &
+                        Fire Safety Inspection Certificate (FSIC)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="electrical-permit" data-time="3 days, 4 hours, 30 minutes plus releasing" data-fee="Based on Order of Payment" data-type="Complex (G2C, G2B, G2G)">
+                  <div
+                    class="category-card"
+                    data-sub="electrical-permit"
+                    data-time="3 days, 4 hours, 30 minutes plus releasing"
+                    data-fee="Based on Order of Payment"
+                    data-type="Complex (G2C, G2B, G2G)"
+                  >
                     <h5>Electrical/Temporary Wiring Permit & CFEI/CEI</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of Electrical Permit Application Form</li>
-                      <li><i class="bi bi-check2-circle"></i> Electrical Design Plan signed and sealed by PEE & Proof of lot ownership</li>
-                      <li><i class="bi bi-check2-circle"></i> Location Sketch, Structure Photographs, and Barangay Clearance</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of
+                        Electrical Permit Application Form
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Electrical Design Plan signed and sealed
+                        by PEE & Proof of lot ownership
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Location Sketch, Structure Photographs,
+                        and Barangay Clearance
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="mechanical-permit" data-time="2 days, 5 hours plus releasing" data-fee="Based on Order of Payment" data-type="Complex (G2C, G2B, G2G)">
+                  <div
+                    class="category-card"
+                    data-sub="mechanical-permit"
+                    data-time="2 days, 5 hours plus releasing"
+                    data-fee="Based on Order of Payment"
+                    data-type="Complex (G2C, G2B, G2G)"
+                  >
                     <h5>Mechanical Permit Application</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of Mechanical Permit Application Form</li>
-                      <li><i class="bi bi-check2-circle"></i> Five (5) sets of Mechanical Design Plans, Specs & Bill of Materials signed by PME</li>
-                      <li><i class="bi bi-check2-circle"></i> Design Computation (elevators), Heat Load Calculation (HVAC), Hydraulic Calculation (sprinklers)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of
+                        Mechanical Permit Application Form
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Five (5) sets of Mechanical Design
+                        Plans, Specs & Bill of Materials signed by PME
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Design Computation (elevators), Heat
+                        Load Calculation (HVAC), Hydraulic Calculation (sprinklers)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="mechanical-operate" data-time="3 hours, 30 minutes" data-fee="Based on Order of Payment" data-type="Complex (G2C, G2B, G2G)">
+                  <div
+                    class="category-card"
+                    data-sub="mechanical-operate"
+                    data-time="3 hours, 30 minutes"
+                    data-fee="Based on Order of Payment"
+                    data-type="Complex (G2C, G2B, G2G)"
+                  >
                     <h5>Mechanical Permit to Operate Application</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Approved Mechanical Permit & Approved Mechanical Plans</li>
-                      <li><i class="bi bi-check2-circle"></i> Two (2) copies of PME Safety Certification under RA 8495</li>
-                      <li><i class="bi bi-check2-circle"></i> Two (2) copies of Test Results (Weight/Trip, Hydro, Emission, Pneumatic, Nitrogen)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Approved Mechanical Permit & Approved
+                        Mechanical Plans
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Two (2) copies of PME Safety
+                        Certification under RA 8495
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Two (2) copies of Test Results
+                        (Weight/Trip, Hydro, Emission, Pneumatic, Nitrogen)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="demolition-permit" data-time="2 days, 6 hours, 30 minutes plus releasing" data-fee="Based on Order of Payment" data-type="Complex (G2C, G2B, G2G)">
+                  <div
+                    class="category-card"
+                    data-sub="demolition-permit"
+                    data-time="2 days, 6 hours, 30 minutes plus releasing"
+                    data-fee="Based on Order of Payment"
+                    data-type="Complex (G2C, G2B, G2G)"
+                  >
                     <h5>Demolition Permit Application</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of notarized Demolition Permit Application</li>
-                      <li><i class="bi bi-check2-circle"></i> Five (5) sets of Demolition Plans signed by Architect/Civil Engineer</li>
-                      <li><i class="bi bi-check2-circle"></i> Geodetic Engineer Certification, Proof of ownership, Building pictures & GSO Clearance</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of
+                        notarized Demolition Permit Application
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Five (5) sets of Demolition Plans signed
+                        by Architect/Civil Engineer
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Geodetic Engineer Certification, Proof
+                        of ownership, Building pictures & GSO Clearance
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="excavation-prep" data-time="2 days, 6 hours, 30 minutes plus releasing" data-fee="Based on Order of Payment" data-type="Complex (G2C, G2B, G2G)">
+                  <div
+                    class="category-card"
+                    data-sub="excavation-prep"
+                    data-time="2 days, 6 hours, 30 minutes plus releasing"
+                    data-fee="Based on Order of Payment"
+                    data-type="Complex (G2C, G2B, G2G)"
+                  >
                     <h5>Excavation and Ground Preparation Permit Application</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of Excavation Permit Application Form</li>
-                      <li><i class="bi bi-check2-circle"></i> Five (5) sets of Building Plans & Structural Analysis signed by Civil/Structural Engineer</li>
-                      <li><i class="bi bi-check2-circle"></i> Geodetic Certification, Construction Logbook & CPDO Zoning Clearance</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of
+                        Excavation Permit Application Form
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Five (5) sets of Building Plans &
+                        Structural Analysis signed by Civil/Structural Engineer
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Geodetic Certification, Construction
+                        Logbook & CPDO Zoning Clearance
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="scaffolding-permit" data-time="2 days, 6 hours, 30 minutes plus releasing" data-fee="Based on Order of Payment" data-type="Complex (G2C, G2B, G2G)">
+                  <div
+                    class="category-card"
+                    data-sub="scaffolding-permit"
+                    data-time="2 days, 6 hours, 30 minutes plus releasing"
+                    data-fee="Based on Order of Payment"
+                    data-type="Complex (G2C, G2B, G2G)"
+                  >
                     <h5>Temporary Sidewalk Enclosure and Scaffolding Permit Application</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of Sidewalk Enclosure / Scaffolding Application</li>
-                      <li><i class="bi bi-check2-circle"></i> Five (5) sets of Building Plans signed by Architect/Civil Engineer</li>
-                      <li><i class="bi bi-check2-circle"></i> DPWH Clearance (if along national road)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Letter of intent & Four (4) copies of
+                        Sidewalk Enclosure / Scaffolding Application
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Five (5) sets of Building Plans signed
+                        by Architect/Civil Engineer
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> DPWH Clearance (if along national road)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="roadcut-excavation" data-time="6 hours, 45 minutes" data-fee="Based on Order of Payment" data-type="Simple (G2C, G2B, G2G)">
+                  <div
+                    class="category-card"
+                    data-sub="roadcut-excavation"
+                    data-time="6 hours, 45 minutes"
+                    data-fee="Based on Order of Payment"
+                    data-type="Simple (G2C, G2B, G2G)"
+                  >
                     <h5>Excavation Permit Application (Maintenance Division)</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Letter of Intent/Request & Three (3) copies of Excavation Permit Application</li>
-                      <li><i class="bi bi-check2-circle"></i> Three (3) sets of Estimated Cost, Construction Schedule (PERT-CPM), & Street Plans</li>
-                      <li><i class="bi bi-check2-circle"></i> Traffic Re-routing Maps & As-Built Plans</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Letter of Intent/Request & Three (3)
+                        copies of Excavation Permit Application
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Three (3) sets of Estimated Cost,
+                        Construction Schedule (PERT-CPM), & Street Plans
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Traffic Re-routing Maps & As-Built Plans
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1066,8 +1287,12 @@
                       <div class="metric-label">Total Processing Time</div>
                       <div class="metric-value" id="const-time">
                         <div class="metric-list">
-                          <div class="metric-list-item"><i class="bi bi-clock"></i> 8 hours 15 mins (Simple)</div>
-                          <div class="metric-list-item"><i class="bi bi-clock-history"></i> 15+ days (Highly-Technical)</div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-clock"></i> 8 hours 15 mins (Simple)
+                          </div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-clock-history"></i> 15+ days (Highly-Technical)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1076,14 +1301,19 @@
                     <div class="metric-icon"><i class="bi bi-cash-stack"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
-                      <div class="metric-value" id="const-fee">Based on Order of Payment (Consolidated Order of Payment prepared by Assessor)</div>
+                      <div class="metric-value" id="const-fee">
+                        Based on Order of Payment (Consolidated Order of Payment prepared by
+                        Assessor)
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="const-type">Highly Technical (G2C, G2B, G2G)</div>
+                      <div class="metric-value" id="const-type">
+                        Highly Technical (G2C, G2B, G2G)
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1105,11 +1335,22 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit the Application Form and Documentary Requirements (Window B)</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receive Application Form and Documentary Requirements</div>
-                    <div class="agency-action-text">1.2 Review Application Form and Documentary Requirements</div>
-                    <div class="agency-action-text">1.3 If compliant, issue Claim Stub; if non-compliant, issue Checklist of Deficiencies</div>
+                    <span class="client-step-text"
+                      >Submit the Application Form and Documentary Requirements (Window B)</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Receive Application Form and Documentary Requirements
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Review Application Form and Documentary Requirements
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 If compliant, issue Claim Stub; if non-compliant, issue Checklist of
+                      Deficiencies
+                    </div>
                     <div class="agency-action-text">1.4 Zoning Review and Evaluation</div>
                     <div class="agency-action-text">1.6 Technical Review and Evaluation</div>
                     <div class="agency-action-text">1.8 Prepare Consolidated Order of Payment</div>
@@ -1117,7 +1358,9 @@
                   <td>Free</td>
                   <td>
                     5 days (Complex)*
-                    <span class="caveat-note">*Up to 15 days for Highly-Technical Applications</span>
+                    <span class="caveat-note"
+                      >*Up to 15 days for Highly-Technical Applications</span
+                    >
                   </td>
                   <td>
                     <span class="personnel-tag">Receiving Clerk</span>
@@ -1130,10 +1373,16 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Receive Order of Payment and Pay Fees (Window A or Online)</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receive Order of Payment and Pay Fees (Window A or Online)</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">2.1 Pay Fees and Charges</div>
-                    <div class="agency-action-text">2.2 Prepare Permits and Clearances for Issuance</div>
+                    <div class="agency-action-text">
+                      2.2 Prepare Permits and Clearances for Issuance
+                    </div>
                     <div class="agency-action-text">2.3 Recommend Issuance of Building Permit</div>
                     <div class="agency-action-text">2.4 Approve Issuance of Building Permit</div>
                   </td>
@@ -1148,8 +1397,17 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Receive Building Permit, Locational & Fire Clearances (Window C)</span></td>
-                  <td><div class="agency-action-text">Release Building Permit, Locational Clearance and Fire Safety Evaluation Clearance</div></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receive Building Permit, Locational & Fire Clearances (Window C)</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      Release Building Permit, Locational Clearance and Fire Safety Evaluation
+                      Clearance
+                    </div>
+                  </td>
                   <td>Free</td>
                   <td>15 minutes</td>
                   <td><span class="personnel-tag">Releasing Clerk</span></td>
@@ -1171,10 +1429,18 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit Application Form and Documentary Requirements (Window B)</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receive Application Form and Documentary Requirements</div>
-                    <div class="agency-action-text">1.2 Review Application Form and Documentary Requirements</div>
+                    <span class="client-step-text"
+                      >Submit Application Form and Documentary Requirements (Window B)</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Receive Application Form and Documentary Requirements
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Review Application Form and Documentary Requirements
+                    </div>
                     <div class="agency-action-text">1.4 Joint Site Inspection</div>
                     <div class="agency-action-text">1.5 Technical Review and Evaluation</div>
                     <div class="agency-action-text">1.7 Prepare Consolidated Order of Payment</div>
@@ -1182,7 +1448,9 @@
                   <td>Free</td>
                   <td>
                     5 days (Complex)*
-                    <span class="caveat-note">*Up to 15 days for Highly-Technical Applications</span>
+                    <span class="caveat-note"
+                      >*Up to 15 days for Highly-Technical Applications</span
+                    >
                   </td>
                   <td>
                     <span class="personnel-tag">Receiving Clerk</span>
@@ -1194,12 +1462,20 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Receive Order of Payment and Pay Fees (Window A or Online)</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receive Order of Payment and Pay Fees (Window A or Online)</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">2.1 Pay Fees and Charges</div>
                     <div class="agency-action-text">2.2 Prepare Permits for Issuance</div>
-                    <div class="agency-action-text">2.3 Recommend Issuance of Certificate of Occupancy</div>
-                    <div class="agency-action-text">2.4 Approve Issuance of Certificate of Occupancy</div>
+                    <div class="agency-action-text">
+                      2.3 Recommend Issuance of Certificate of Occupancy
+                    </div>
+                    <div class="agency-action-text">
+                      2.4 Approve Issuance of Certificate of Occupancy
+                    </div>
                   </td>
                   <td>Based on Order of Payment</td>
                   <td>3 hours, 15 minutes</td>
@@ -1212,8 +1488,16 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Receive Certificate of Occupancy & FSIC (Window C)</span></td>
-                  <td><div class="agency-action-text">Release Certificate of Occupancy and Fire Safety Inspection Certificate</div></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receive Certificate of Occupancy & FSIC (Window C)</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      Release Certificate of Occupancy and Fire Safety Inspection Certificate
+                    </div>
+                  </td>
                   <td>Free</td>
                   <td>15 minutes</td>
                   <td><span class="personnel-tag">Releasing Clerk</span></td>
@@ -1235,7 +1519,11 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit Application Form and Documentary Requirements (Window E)</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Submit Application Form and Documentary Requirements (Window E)</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">1.1 Receive Application Form</div>
                     <div class="agency-action-text">1.2 Review Application Form</div>
@@ -1261,7 +1549,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span></td>
+                  <td>
+                    <span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span>
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Pay Fees and Charges</div>
                     <div class="agency-action-text">3.2 Prepare Permit for Issuance</div>
@@ -1277,8 +1567,17 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">4</span></td>
-                  <td><span class="client-step-text">Receive Wiring Permit & CFEI/CEI (Window E)</span></td>
-                  <td><div class="agency-action-text">Release Temporary/Permanent Wiring Permit and Certificate of Electrical Inspection</div></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receive Wiring Permit & CFEI/CEI (Window E)</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      Release Temporary/Permanent Wiring Permit and Certificate of Electrical
+                      Inspection
+                    </div>
+                  </td>
                   <td>Free</td>
                   <td>15 minutes</td>
                   <td><span class="personnel-tag">Clerk</span></td>
@@ -1300,7 +1599,11 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit Application Form and Documentary Requirements (Window B)</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Submit Application Form and Documentary Requirements (Window B)</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">1.1 Receive Application Form</div>
                     <div class="agency-action-text">1.2 Review Application Form</div>
@@ -1325,7 +1628,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span></td>
+                  <td>
+                    <span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span>
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Pay Fees and Charges</div>
                     <div class="agency-action-text">3.2 Prepare Permit for Issuance</div>
@@ -1340,7 +1645,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">4</span></td>
-                  <td><span class="client-step-text">Receive Mechanical Permit (Window C)</span></td>
+                  <td>
+                    <span class="client-step-text">Receive Mechanical Permit (Window C)</span>
+                  </td>
                   <td><div class="agency-action-text">Release Mechanical Permit</div></td>
                   <td>Free</td>
                   <td>15 minutes</td>
@@ -1363,8 +1670,16 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit Application Form and Documentary Requirements (Window B)</span></td>
-                  <td><div class="agency-action-text">1.1 Receive Application Form and Documentary Requirements</div></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Submit Application Form and Documentary Requirements (Window B)</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Receive Application Form and Documentary Requirements
+                    </div>
+                  </td>
                   <td>Free</td>
                   <td>15 minutes</td>
                   <td><span class="personnel-tag">Receiving Clerk</span></td>
@@ -1379,7 +1694,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span></td>
+                  <td>
+                    <span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span>
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Pay Fees and Charges</div>
                     <div class="agency-action-text">3.2 Prepare Permit for Issuance</div>
@@ -1394,8 +1711,14 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">4</span></td>
-                  <td><span class="client-step-text">Receive Mechanical Permit to Operate (Window C)</span></td>
-                  <td><div class="agency-action-text">Release Mechanical Permit to Operate</div></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receive Mechanical Permit to Operate (Window C)</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">Release Mechanical Permit to Operate</div>
+                  </td>
                   <td>Free</td>
                   <td>15 minutes</td>
                   <td><span class="personnel-tag">Clerk</span></td>
@@ -1417,7 +1740,11 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit Application Form and Documentary Requirements (Window B)</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Submit Application Form and Documentary Requirements (Window B)</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">1.1 Receive Application Form</div>
                     <div class="agency-action-text">1.2 Review Application Form</div>
@@ -1442,7 +1769,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span></td>
+                  <td>
+                    <span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span>
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Pay Fees and Charges</div>
                     <div class="agency-action-text">3.2 Prepare Permit for Issuance</div>
@@ -1457,7 +1786,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">4</span></td>
-                  <td><span class="client-step-text">Receive Demolition Permit (Window C)</span></td>
+                  <td>
+                    <span class="client-step-text">Receive Demolition Permit (Window C)</span>
+                  </td>
                   <td><div class="agency-action-text">Release Demolition Permit</div></td>
                   <td>Free</td>
                   <td>15 minutes</td>
@@ -1480,7 +1811,11 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit Application Form and Documentary Requirements (Window B)</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Submit Application Form and Documentary Requirements (Window B)</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">1.1 Receive Application Form</div>
                     <div class="agency-action-text">1.2 Review Application Form</div>
@@ -1505,7 +1840,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span></td>
+                  <td>
+                    <span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span>
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Pay Fees and Charges</div>
                     <div class="agency-action-text">3.2 Prepare Permit for Issuance</div>
@@ -1520,8 +1857,16 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">4</span></td>
-                  <td><span class="client-step-text">Receive Excavation and Ground Prep Permit (Window C)</span></td>
-                  <td><div class="agency-action-text">Release Excavation and Ground Preparation Permit</div></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receive Excavation and Ground Prep Permit (Window C)</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      Release Excavation and Ground Preparation Permit
+                    </div>
+                  </td>
                   <td>Free</td>
                   <td>15 minutes</td>
                   <td><span class="personnel-tag">Clerk</span></td>
@@ -1543,7 +1888,11 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit Application Form and Documentary Requirements (Window B)</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Submit Application Form and Documentary Requirements (Window B)</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">1.1 Receive Application Form</div>
                     <div class="agency-action-text">1.2 Review Application Form</div>
@@ -1568,7 +1917,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span></td>
+                  <td>
+                    <span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span>
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Pay Fees and Charges</div>
                     <div class="agency-action-text">3.2 Prepare Permit for Issuance</div>
@@ -1583,8 +1934,16 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">4</span></td>
-                  <td><span class="client-step-text">Receive Sidewalk Enclosure and/or Scaffolding Permit (Window C)</span></td>
-                  <td><div class="agency-action-text">Release Temporary Sidewalk Enclosure Permit and/or Scaffolding Permit</div></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receive Sidewalk Enclosure and/or Scaffolding Permit (Window C)</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      Release Temporary Sidewalk Enclosure Permit and/or Scaffolding Permit
+                    </div>
+                  </td>
                   <td>Free</td>
                   <td>15 minutes</td>
                   <td><span class="personnel-tag">Clerk</span></td>
@@ -1606,7 +1965,11 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit Application Form and Documentary Requirements</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Submit Application Form and Documentary Requirements</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">1.1 Receive Application Form</div>
                     <div class="agency-action-text">1.2 Review Application Form</div>
@@ -1633,7 +1996,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span></td>
+                  <td>
+                    <span class="client-step-text">Pay Fees and Charges (Window A - Cashier)</span>
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Pay Fees and Charges</div>
                     <div class="agency-action-text">3.2 Prepare Permit for Issuance</div>
@@ -1666,42 +2031,100 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">Select Service Sub-Category</div>
                 <div class="category-grid">
-                  <div class="category-card active" data-sub="pow-estimates" data-time="13 days, 2 hours & 30 mins (1-Storey) | 19 days, 2 hours & 30 mins (2-Storey)" data-fee="Free" data-type="Highly Technical Transaction (Government to Government)">
+                  <div
+                    class="category-card active"
+                    data-sub="pow-estimates"
+                    data-time="13 days, 2 hours & 30 mins (1-Storey) | 19 days, 2 hours & 30 mins (2-Storey)"
+                    data-fee="Free"
+                    data-type="Highly Technical Transaction (Government to Government)"
+                  >
                     <h5>Preparation of Program of Works and Estimates (One/Two-Storey Building)</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> One (1) copy of Letter Request/Referral</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> One (1) copy of Letter Request/Referral
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="pow-three-storey" data-time="26 days, 2 hours & 30 minutes" data-fee="Free" data-type="Highly Technical Transaction (Government to Government)">
+                  <div
+                    class="category-card"
+                    data-sub="pow-three-storey"
+                    data-time="26 days, 2 hours & 30 minutes"
+                    data-fee="Free"
+                    data-type="Highly Technical Transaction (Government to Government)"
+                  >
                     <h5>Preparation of Program of Works and Estimates (Three-Storey Building)</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> One (1) copy of Letter Request/Referral</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> One (1) copy of Letter Request/Referral
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="pow-roads-drainage" data-time="24 days, 6 hours & 30 minutes" data-fee="Free" data-type="Highly Technical Transaction (Government to Government)">
+                  <div
+                    class="category-card"
+                    data-sub="pow-roads-drainage"
+                    data-time="24 days, 6 hours & 30 minutes"
+                    data-fee="Free"
+                    data-type="Highly Technical Transaction (Government to Government)"
+                  >
                     <h5>Preparation of POW & Estimates (Roads and Drainages ≤ 1M Pesos)</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> One (1) copy of Letter Request/Referral</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> One (1) copy of Letter Request/Referral
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="pow-water-bridges" data-time="37 days, 2 hours & 30 minutes" data-fee="Free" data-type="Highly Technical Transaction (Government to Government)">
+                  <div
+                    class="category-card"
+                    data-sub="pow-water-bridges"
+                    data-time="37 days, 2 hours & 30 minutes"
+                    data-fee="Free"
+                    data-type="Highly Technical Transaction (Government to Government)"
+                  >
                     <h5>Preparation of POW & Estimates (Water System and Bridges)</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> One (1) copy of Letter Request/Referral</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> One (1) copy of Letter Request/Referral
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="pow-barangay" data-time="37 days, 2 hours & 30 minutes" data-fee="Free" data-type="Complex Transaction (Government to Government)">
+                  <div
+                    class="category-card"
+                    data-sub="pow-barangay"
+                    data-time="37 days, 2 hours & 30 minutes"
+                    data-fee="Free"
+                    data-type="Complex Transaction (Government to Government)"
+                  >
                     <h5>Preparation of Program of Works & Estimates (Barangay Projects)</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Letter Request - Barangay (requesting barangay)</li>
-                      <li><i class="bi bi-check2-circle"></i> Approved Barangay Resolution noted by City Mayor for Augmentation or City Funded Project</li>
-                      <li><i class="bi bi-check2-circle"></i> Letter of Consent (for projects to be constructed inside private property)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Letter Request - Barangay (requesting
+                        barangay)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Approved Barangay Resolution noted by
+                        City Mayor for Augmentation or City Funded Project
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Letter of Consent (for projects to be
+                        constructed inside private property)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="construction-plans" data-time="2 weeks (Simple) | Up to 2 Months (Complex)" data-fee="Free" data-type="Highly Technical Transaction (Government to Government)">
-                    <h5>Preparation of Construction Plans (Buildings & Special Flagship Projects)</h5>
+                  <div
+                    class="category-card"
+                    data-sub="construction-plans"
+                    data-time="2 weeks (Simple) | Up to 2 Months (Complex)"
+                    data-fee="Free"
+                    data-type="Highly Technical Transaction (Government to Government)"
+                  >
+                    <h5>
+                      Preparation of Construction Plans (Buildings & Special Flagship Projects)
+                    </h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Copy of referred letter request or as per instruction of Honorable Mayor and City Engineer</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Copy of referred letter request or as
+                        per instruction of Honorable Mayor and City Engineer
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1715,8 +2138,13 @@
                       <div class="metric-label">Total Processing Time</div>
                       <div class="metric-value" id="design-time">
                         <div class="metric-list">
-                          <div class="metric-list-item"><i class="bi bi-clock"></i> 13 days, 2 hours & 30 mins (1-Storey)</div>
-                          <div class="metric-list-item"><i class="bi bi-clock-history"></i> 19 days, 2 hours & 30 mins (2-Storey)</div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-clock"></i> 13 days, 2 hours & 30 mins (1-Storey)
+                          </div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-clock-history"></i> 19 days, 2 hours & 30 mins
+                            (2-Storey)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1726,14 +2154,18 @@
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
                       <div class="metric-value free" id="design-fee">Free</div>
-                      <div class="metric-note">Inter-government service provided free of charge</div>
+                      <div class="metric-note">
+                        Inter-government service provided free of charge
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="design-type">Highly Technical Transaction (Government to Government)</div>
+                      <div class="metric-value" id="design-type">
+                        Highly Technical Transaction (Government to Government)
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1770,7 +2202,9 @@
                   <td>Free</td>
                   <td>
                     13 days, 2 hrs, 30 mins (1-Storey)*
-                    <span class="caveat-note">*19 days, 2 hrs, 30 mins for Two-Storey Building</span>
+                    <span class="caveat-note"
+                      >*19 days, 2 hrs, 30 mins for Two-Storey Building</span
+                    >
                   </td>
                   <td>
                     <span class="personnel-tag">Receiving Clerk (Admin. Aide I)</span>
@@ -1909,9 +2343,13 @@
                   <td><span class="step-badge">1</span></td>
                   <td><span class="client-step-text">Submits request</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receives request and required documents</div>
+                    <div class="agency-action-text">
+                      1.1 Receives request and required documents
+                    </div>
                     <div class="agency-action-text">1.2 Refers request</div>
-                    <div class="agency-action-text">1.4 Inspects / verifies / prepares plan, estimate & POW</div>
+                    <div class="agency-action-text">
+                      1.4 Inspects / verifies / prepares plan, estimate & POW
+                    </div>
                     <div class="agency-action-text">1.5 Checks and recommends for approval</div>
                     <div class="agency-action-text">1.6 Approves and releases POW</div>
                   </td>
@@ -1941,20 +2379,32 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submit letter request or per instruction from Mayor and City Engineer</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Conference with stakeholders to ascertain requirements</div>
+                    <span class="client-step-text"
+                      >Submit letter request or per instruction from Mayor and City Engineer</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Conference with stakeholders to ascertain requirements
+                    </div>
                     <div class="agency-action-text">1.2 Conduct site inspection and assessment</div>
-                    <div class="agency-action-text">1.3 Research / benchmark and prepare preliminary design</div>
+                    <div class="agency-action-text">
+                      1.3 Research / benchmark and prepare preliminary design
+                    </div>
                     <div class="agency-action-text">1.4 Collate engineering design inputs</div>
-                    <div class="agency-action-text">1.5 Drafting of plans / drawing productions</div>
+                    <div class="agency-action-text">
+                      1.5 Drafting of plans / drawing productions
+                    </div>
                     <div class="agency-action-text">1.6 Review, checking and approval</div>
                     <div class="agency-action-text">1.7 Submission</div>
                   </td>
                   <td>Free</td>
                   <td>
                     2 weeks (Simple)*
-                    <span class="caveat-note">*Up to 4+ weeks or 2 months for Complex Flagship Projects</span>
+                    <span class="caveat-note"
+                      >*Up to 4+ weeks or 2 months for Complex Flagship Projects</span
+                    >
                   </td>
                   <td>
                     <span class="personnel-tag">Division Head</span>
@@ -1975,18 +2425,42 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">Select Service Sub-Category</div>
                 <div class="category-grid">
-                  <div class="category-card active" data-sub="annual-inspection" data-time="3 days, 1 hr. & 45 mins. (Simple) | 5 days, 1 hr. & 45 mins. (Complex)" data-fee="Assessed via ETRACS at BPLO (Payment at OTO)" data-type="Complex Transaction (Government to Client)">
+                  <div
+                    class="category-card active"
+                    data-sub="annual-inspection"
+                    data-time="3 days, 1 hr. & 45 mins. (Simple) | 5 days, 1 hr. & 45 mins. (Complex)"
+                    data-fee="Assessed via ETRACS at BPLO (Payment at OTO)"
+                    data-type="Complex Transaction (Government to Client)"
+                  >
                     <h5>Issuance of Certificate of Annual Inspection (Business Establishments)</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Business Permit Application (new applicant)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Business Permit Application (new
+                        applicant)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="final-inspection-brgy" data-time="3 days, 4 hours & 40 minutes" data-fee="Free" data-type="Complex Transaction (Government to Government)">
+                  <div
+                    class="category-card"
+                    data-sub="final-inspection-brgy"
+                    data-time="3 days, 4 hours & 40 minutes"
+                    data-fee="Free"
+                    data-type="Complex Transaction (Government to Government)"
+                  >
                     <h5>Issuance of Final Inspection Report to Completed Barangay Projects</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Letter Request - Barangay (requesting party)</li>
-                      <li><i class="bi bi-check2-circle"></i> Duly labelled pictures of completed project (before, during & after)</li>
-                      <li><i class="bi bi-check2-circle"></i> Certificate of completion and acceptance & Notice of commencement of work</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Letter Request - Barangay (requesting
+                        party)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Duly labelled pictures of completed
+                        project (before, during & after)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Certificate of completion and acceptance
+                        & Notice of commencement of work
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -2000,8 +2474,12 @@
                       <div class="metric-label">Total Processing Time</div>
                       <div class="metric-value" id="inspect-time">
                         <div class="metric-list">
-                          <div class="metric-list-item"><i class="bi bi-clock"></i> 3 days, 1 hr. & 45 mins. (Simple)</div>
-                          <div class="metric-list-item"><i class="bi bi-clock-history"></i> 5 days, 1 hr. & 45 mins. (Complex)</div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-clock"></i> 3 days, 1 hr. & 45 mins. (Simple)
+                          </div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-clock-history"></i> 5 days, 1 hr. & 45 mins. (Complex)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2010,14 +2488,18 @@
                     <div class="metric-icon"><i class="bi bi-cash-stack"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
-                      <div class="metric-value" id="inspect-fee">Assessed via ETRACS at BPLO (Payment at OTO)</div>
+                      <div class="metric-value" id="inspect-fee">
+                        Assessed via ETRACS at BPLO (Payment at OTO)
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="inspect-type">Complex Transaction (Government to Client)</div>
+                      <div class="metric-value" id="inspect-type">
+                        Complex Transaction (Government to Client)
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2041,16 +2523,22 @@
                   <td><span class="step-badge">1</span></td>
                   <td><span class="client-step-text">Submits Application @ BPLO</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Printing of submitted application with other docs</div>
+                    <div class="agency-action-text">
+                      1.1 Printing of submitted application with other docs
+                    </div>
                     <div class="agency-action-text">1.2 Inspects business establishment</div>
                     <div class="agency-action-text">1.3 Reviews / verifies compliances</div>
-                    <div class="agency-action-text">1.4(a) Assesses fees thru ETRACS if approved</div>
+                    <div class="agency-action-text">
+                      1.4(a) Assesses fees thru ETRACS if approved
+                    </div>
                     <div class="agency-action-text">1.4(b) Letter of Denial if disapproved</div>
                   </td>
                   <td>Free</td>
                   <td>
                     1 to 3 days (Simple)*
-                    <span class="caveat-note">*3 to 5 days for Complex Establishments (Hotels, Malls, Warehouses)</span>
+                    <span class="caveat-note"
+                      >*3 to 5 days for Complex Establishments (Hotels, Malls, Warehouses)</span
+                    >
                   </td>
                   <td>
                     <span class="personnel-tag">Receiving Clerk</span>
@@ -2062,9 +2550,15 @@
                   <td><span class="step-badge">2</span></td>
                   <td><span class="client-step-text">Payment of Fees</span></td>
                   <td>
-                    <div class="agency-action-text">1.5 Prepares certificate (if approved & paid)</div>
-                    <div class="agency-action-text">1.6 Checks / countersigns / Approve Certificate of Annual Inspection</div>
-                    <div class="agency-action-text">1.7(a) Releases Certificate of Annual Inspection / Letter of Denial</div>
+                    <div class="agency-action-text">
+                      1.5 Prepares certificate (if approved & paid)
+                    </div>
+                    <div class="agency-action-text">
+                      1.6 Checks / countersigns / Approve Certificate of Annual Inspection
+                    </div>
+                    <div class="agency-action-text">
+                      1.7(a) Releases Certificate of Annual Inspection / Letter of Denial
+                    </div>
                     <div class="agency-action-text">1.7(b) Delivery of Certificate / Letter</div>
                   </td>
                   <td>Free (paid at OTO counter)</td>
@@ -2096,13 +2590,23 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits request together with required documents</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receives / verifies request and required documents</div>
-                    <div class="agency-action-text">1.2 Refers request to Assistant City Engineer</div>
+                    <span class="client-step-text"
+                      >Submits request together with required documents</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Receives / verifies request and required documents
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Refers request to Assistant City Engineer
+                    </div>
                     <div class="agency-action-text">1.3 Assigns inspectors</div>
                     <div class="agency-action-text">1.4 Inspects / assesses completed project</div>
-                    <div class="agency-action-text">1.5 Prepares and releases inspection report</div>
+                    <div class="agency-action-text">
+                      1.5 Prepares and releases inspection report
+                    </div>
                   </td>
                   <td>Free</td>
                   <td>3 days, 4 hours, 40 minutes</td>
@@ -2125,19 +2629,37 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">Select Service Sub-Category</div>
                 <div class="category-grid">
-                  <div class="category-card active" data-sub="streetlight-repair" data-time="7 days" data-fee="Free" data-type="Complex Transaction (Government to Government)">
+                  <div
+                    class="category-card active"
+                    data-sub="streetlight-repair"
+                    data-time="7 days"
+                    data-fee="Free"
+                    data-type="Complex Transaction (Government to Government)"
+                  >
                     <h5>Repair & Maintenance of Streetlights and Other Electrical Facilities</h5>
                     <ul class="category-req-list">
                       <li><i class="bi bi-check2-circle"></i> Letter Request/referral</li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="vehicle-repair" data-time="7 days" data-fee="Free" data-type="Complex Transaction (Government to Government)">
+                  <div
+                    class="category-card"
+                    data-sub="vehicle-repair"
+                    data-time="7 days"
+                    data-fee="Free"
+                    data-type="Complex Transaction (Government to Government)"
+                  >
                     <h5>Repair and Maintenance of Service Vehicles and Heavy Equipments</h5>
                     <ul class="category-req-list">
                       <li><i class="bi bi-check2-circle"></i> Letter Request/referral</li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="road-drainage-repair" data-time="7 days" data-fee="Free" data-type="Complex Transaction (Government to Government / Government to Client)">
+                  <div
+                    class="category-card"
+                    data-sub="road-drainage-repair"
+                    data-time="7 days"
+                    data-fee="Free"
+                    data-type="Complex Transaction (Government to Government / Government to Client)"
+                  >
                     <h5>Repair, Improvement and Maintenance of Roads and Drainages</h5>
                     <ul class="category-req-list">
                       <li><i class="bi bi-check2-circle"></i> Letter Request/referral</li>
@@ -2160,14 +2682,18 @@
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
                       <div class="metric-value free" id="maint-fee">Free</div>
-                      <div class="metric-note">Public maintenance service provided free of charge</div>
+                      <div class="metric-note">
+                        Public maintenance service provided free of charge
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="maint-type">Complex Transaction (Government to Government)</div>
+                      <div class="metric-value" id="maint-type">
+                        Complex Transaction (Government to Government)
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2192,7 +2718,9 @@
                   <td><span class="client-step-text">Submits request</span></td>
                   <td>
                     <div class="agency-action-text">1.1 Receives request / referral</div>
-                    <div class="agency-action-text">1.2 Refers request / referral to section head</div>
+                    <div class="agency-action-text">
+                      1.2 Refers request / referral to section head
+                    </div>
                     <div class="agency-action-text">1.3 Assigns inspectors to validate needs</div>
                     <div class="agency-action-text">1.4 Inspects / assesses needs</div>
                     <div class="agency-action-text">1.5 Assigns action team</div>
@@ -2201,7 +2729,9 @@
                   <td>Free</td>
                   <td>
                     7 days*
-                    <span class="caveat-note">*Work duration depends on repair extent and materials needed</span>
+                    <span class="caveat-note"
+                      >*Work duration depends on repair extent and materials needed</span
+                    >
                   </td>
                   <td>
                     <span class="personnel-tag">Receiving Clerk (Admin. Aide I)</span>
@@ -2231,10 +2761,16 @@
                   <td><span class="client-step-text">Submits request</span></td>
                   <td>
                     <div class="agency-action-text">1.1 Receives request / referral</div>
-                    <div class="agency-action-text">1.2 Refers request / referral to division head</div>
-                    <div class="agency-action-text">1.3 Evaluates and prepares Pre-Repair Recommendation</div>
+                    <div class="agency-action-text">
+                      1.2 Refers request / referral to division head
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Evaluates and prepares Pre-Repair Recommendation
+                    </div>
                     <div class="agency-action-text">1.4 Commencement of work</div>
-                    <div class="agency-action-text">1.5 Prepares and submits Post-Repair Inspection Report</div>
+                    <div class="agency-action-text">
+                      1.5 Prepares and submits Post-Repair Inspection Report
+                    </div>
                   </td>
                   <td>Free</td>
                   <td>
@@ -2268,7 +2804,9 @@
                   <td><span class="client-step-text">Submits request</span></td>
                   <td>
                     <div class="agency-action-text">1.1 Receives request / referral</div>
-                    <div class="agency-action-text">1.2 Refers request / referral to division head</div>
+                    <div class="agency-action-text">
+                      1.2 Refers request / referral to division head
+                    </div>
                     <div class="agency-action-text">1.3 Assigns inspectors to validate needs</div>
                     <div class="agency-action-text">1.4 Inspects / assesses needs</div>
                     <div class="agency-action-text">1.5 Assigns action team</div>
@@ -2277,7 +2815,9 @@
                   <td>Free</td>
                   <td>
                     7 days*
-                    <span class="caveat-note">*Work duration depends on scope of road/canal repair</span>
+                    <span class="caveat-note"
+                      >*Work duration depends on scope of road/canal repair</span
+                    >
                   </td>
                   <td>
                     <span class="personnel-tag">Receiving Clerk (Admin. Aide I)</span>
@@ -2298,23 +2838,49 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">Select Service Sub-Category</div>
                 <div class="category-grid">
-                  <div class="category-card active" data-sub="research-assistance" data-time="1 day, 1 hour & five minutes" data-fee="Free" data-type="Simple Transaction (Government to Client)">
+                  <div
+                    class="category-card active"
+                    data-sub="research-assistance"
+                    data-time="1 day, 1 hour & five minutes"
+                    data-fee="Free"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
                     <h5>Assistance to Researchers</h5>
                     <ul class="category-req-list">
                       <li><i class="bi bi-check2-circle"></i> Letter Request/referral</li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="student-internship" data-time="2 hours and 25 minutes" data-fee="Free" data-type="Simple Transaction (Government to Client)">
-                    <h5>Assistance to Students on Immersion, Practicum & On-the-Job Training (OJT)</h5>
+                  <div
+                    class="category-card"
+                    data-sub="student-internship"
+                    data-time="2 hours and 25 minutes"
+                    data-fee="Free"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
+                    <h5>
+                      Assistance to Students on Immersion, Practicum & On-the-Job Training (OJT)
+                    </h5>
                     <ul class="category-req-list">
                       <li><i class="bi bi-check2-circle"></i> Letter Request / referral</li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="burial-permit" data-time="1 hour and 25 minutes" data-fee="Free" data-type="Simple Transaction (Government to Client)">
+                  <div
+                    class="category-card"
+                    data-sub="burial-permit"
+                    data-time="1 hour and 25 minutes"
+                    data-fee="Free"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
                     <h5>Certificate of Burial Accommodation</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Death Certificate - City Civil Registrar's Office</li>
-                      <li><i class="bi bi-check2-circle"></i> Payment Receipt of Death Certificate - City Treasurer's Office</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Death Certificate - City Civil
+                        Registrar's Office
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Payment Receipt of Death Certificate -
+                        City Treasurer's Office
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -2341,7 +2907,9 @@
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="comm-type">Simple Transaction (Government to Client)</div>
+                      <div class="metric-value" id="comm-type">
+                        Simple Transaction (Government to Client)
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2366,9 +2934,15 @@
                   <td><span class="client-step-text">Submits request / referral</span></td>
                   <td>
                     <div class="agency-action-text">1.1 Receives request / referral</div>
-                    <div class="agency-action-text">1.2 Refers request / referral to Administrative Officer</div>
-                    <div class="agency-action-text">1.3 Evaluates request and refers to division / section head</div>
-                    <div class="agency-action-text">1.4 Informs requesting party of the status of the request</div>
+                    <div class="agency-action-text">
+                      1.2 Refers request / referral to Administrative Officer
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Evaluates request and refers to division / section head
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 Informs requesting party of the status of the request
+                    </div>
                   </td>
                   <td>Free</td>
                   <td>1 day, 1 hour, 10 minutes</td>
@@ -2398,11 +2972,17 @@
                   <td><span class="client-step-text">Submits request/referral</span></td>
                   <td>
                     <div class="agency-action-text">1.1 Receives request / referral</div>
-                    <div class="agency-action-text">1.2 Refers request / referral to Administrative Officer</div>
-                    <div class="agency-action-text">1.3 Evaluates request and confers with division / section heads</div>
+                    <div class="agency-action-text">
+                      1.2 Refers request / referral to Administrative Officer
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Evaluates request and confers with division / section heads
+                    </div>
                     <div class="agency-action-text">1.4 Recommends request for approval</div>
                     <div class="agency-action-text">1.5 Approval of request</div>
-                    <div class="agency-action-text">1.6 Informs requesting party of the status of the request</div>
+                    <div class="agency-action-text">
+                      1.6 Informs requesting party of the status of the request
+                    </div>
                   </td>
                   <td>Free</td>
                   <td>2 hours, 25 minutes</td>
@@ -2433,10 +3013,18 @@
                   <td>
                     <div class="agency-action-text">1.1 Receive and verify documents</div>
                     <div class="agency-action-text">1.2 Review requirements</div>
-                    <div class="agency-action-text">1.3 Prepare Certificate of Burial Accommodation</div>
-                    <div class="agency-action-text">1.4 Review Certificate of Burial Accommodation</div>
-                    <div class="agency-action-text">1.5 Approve Certificate of Burial Accommodation</div>
-                    <div class="agency-action-text">1.6 Release Certificate of Burial Accommodation</div>
+                    <div class="agency-action-text">
+                      1.3 Prepare Certificate of Burial Accommodation
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 Review Certificate of Burial Accommodation
+                    </div>
+                    <div class="agency-action-text">
+                      1.5 Approve Certificate of Burial Accommodation
+                    </div>
+                    <div class="agency-action-text">
+                      1.6 Release Certificate of Burial Accommodation
+                    </div>
                   </td>
                   <td>Free</td>
                   <td>1 hour, 25 minutes</td>
@@ -2480,39 +3068,78 @@
               <i class="bi bi-house-check"></i>
               <h5>Certificate of Occupancy</h5>
             </div>
-            <div class="permit-type-card" data-tab="construction-permits" data-sub="electrical-permit">
+            <div
+              class="permit-type-card"
+              data-tab="construction-permits"
+              data-sub="electrical-permit"
+            >
               <i class="bi bi-lightning-charge"></i>
               <h5>Electrical/Temporary Wiring Permit</h5>
             </div>
-            <div class="permit-type-card" data-tab="construction-permits" data-sub="electrical-permit">
+            <div
+              class="permit-type-card"
+              data-tab="construction-permits"
+              data-sub="electrical-permit"
+            >
               <i class="bi bi-patch-check"></i>
-              <h5>Certificate of Final Electrical Inspection (CFEI) / Certificate of Electrical Inspection (CEI)</h5>
+              <h5>
+                Certificate of Final Electrical Inspection (CFEI) / Certificate of Electrical
+                Inspection (CEI)
+              </h5>
             </div>
-            <div class="permit-type-card" data-tab="construction-permits" data-sub="mechanical-permit">
+            <div
+              class="permit-type-card"
+              data-tab="construction-permits"
+              data-sub="mechanical-permit"
+            >
               <i class="bi bi-gear-wide"></i>
               <h5>Mechanical Permit</h5>
             </div>
-            <div class="permit-type-card" data-tab="construction-permits" data-sub="mechanical-operate">
+            <div
+              class="permit-type-card"
+              data-tab="construction-permits"
+              data-sub="mechanical-operate"
+            >
               <i class="bi bi-gear-wide-connected"></i>
               <h5>Mechanical Permit to Operate</h5>
             </div>
-            <div class="permit-type-card" data-tab="construction-permits" data-sub="demolition-permit">
+            <div
+              class="permit-type-card"
+              data-tab="construction-permits"
+              data-sub="demolition-permit"
+            >
               <i class="bi bi-hammer"></i>
               <h5>Demolition Permit</h5>
             </div>
-            <div class="permit-type-card" data-tab="construction-permits" data-sub="excavation-prep">
+            <div
+              class="permit-type-card"
+              data-tab="construction-permits"
+              data-sub="excavation-prep"
+            >
               <i class="bi bi-tools"></i>
               <h5>Excavation and Ground Preparation Permit (Building Permit Division)</h5>
             </div>
-            <div class="permit-type-card" data-tab="construction-permits" data-sub="roadcut-excavation">
+            <div
+              class="permit-type-card"
+              data-tab="construction-permits"
+              data-sub="roadcut-excavation"
+            >
               <i class="bi bi-cone-striped"></i>
-              <h5>Excavation Permit (Maintenance Division — separate application/process)</h5>
+              <h5>Excavation Permit (Maintenance Division, separate application/process)</h5>
             </div>
-            <div class="permit-type-card" data-tab="construction-permits" data-sub="scaffolding-permit">
+            <div
+              class="permit-type-card"
+              data-tab="construction-permits"
+              data-sub="scaffolding-permit"
+            >
               <i class="bi bi-sign-stop"></i>
               <h5>Temporary Sidewalk Enclosure and Occupancy Permit</h5>
             </div>
-            <div class="permit-type-card" data-tab="construction-permits" data-sub="scaffolding-permit">
+            <div
+              class="permit-type-card"
+              data-tab="construction-permits"
+              data-sub="scaffolding-permit"
+            >
               <i class="bi bi-bricks"></i>
               <h5>Scaffolding Permit</h5>
             </div>
@@ -2570,18 +3197,31 @@
             <div class="contact-card">
               <h4><i class="bi bi-telephone-fill"></i> Direct Contact Lines</h4>
               <p><strong>Office Hotline:</strong> <a href="tel:09989833073">0998-983-3073</a></p>
-              <p><strong>Official Email:</strong> <a href="mailto:ceolegazpiad1@gmail.com">ceolegazpiad1@gmail.com</a></p>
-              <p><strong>City Hall Trunkline:</strong> <a href="tel:0527423701">(052) 742-3701</a></p>
+              <p>
+                <strong>Official Email:</strong>
+                <a href="mailto:ceolegazpiad1@gmail.com">ceolegazpiad1@gmail.com</a>
+              </p>
+              <p>
+                <strong>City Hall Trunkline:</strong> <a href="tel:0527423701">(052) 742-3701</a>
+              </p>
             </div>
 
             <div class="contact-card">
               <h4><i class="bi bi-chat-dots"></i> Feedback Mechanism</h4>
-              <p>Fill out the Client Feedback Form available at the CEO Receiving Desk and drop it in the Public Suggestion Box.</p>
-              <p>Daily processing of feedback forms by the Admin Section with resolution within 3 working days.</p>
+              <p>
+                Fill out the Client Feedback Form available at the CEO Receiving Desk and drop it in
+                the Public Suggestion Box.
+              </p>
+              <p>
+                Daily processing of feedback forms by the Admin Section with resolution within 3
+                working days.
+              </p>
             </div>
 
             <div class="contact-card">
-              <h4><i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) & CCB</h4>
+              <h4>
+                <i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) & CCB
+              </h4>
               <p><strong>ARTA Complaints Email:</strong> complaints@arta.gov.ph | 1-ARTA (2782)</p>
               <p><strong>Presidential Complaint Center (PCC):</strong> 8888</p>
               <p><strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS)</p>
@@ -2593,7 +3233,7 @@
       <!-- Data Source Section -->
       <section class="mswdo-section alt-bg">
         <div class="container">
-          <p class="data-source" style="text-align: center; margin: 0;">
+          <p class="data-source" style="text-align: center; margin: 0">
             <i class="bi bi-info-circle"></i> Source:
             <a
               href="https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-ENGINEERING-OFFICE-CITIZENS-CHARTER-2026-1st-EDITION-1-1.pdf"
@@ -2613,21 +3253,46 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
-              <a href="https://www.facebook.com/betterlegazpi.org" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.linkedin.com/company/betterlegazpi/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-              <a href="https://discord.com/invite/qeSu7RJkjQ" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a>
+              <a
+                href="https://www.facebook.com/betterlegazpi.org"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/betterlegazpi/"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://discord.com/invite/betterlegazpi"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                ><i class="bi bi-discord"></i
+              ></a>
             </div>
           </div>
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -2638,14 +3303,100 @@
           <div class="footer-column">
             <h4>Resources</h4>
             <ul class="footer-links-new">
-              <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
-              <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
-              <li><a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Legazpi Portal</a></li>
+              <li>
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Open Data Philippines</a
+                >
+              </li>
+              <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div class="footer-cost" role="status" aria-label="Cost to the People of Legazpi: Zero Pesos">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
+            >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
+            <a
+              href="https://github.com/bpbelen/betterlegazpi"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
             </div>
           </div>
         </div>
@@ -2653,7 +3404,9 @@
           <div class="footer-copyright">
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
-            <span class="footer-copyright-disclaimer">All public information sourced from official Legazpi CEO Citizen's Charter.</span>
+            <span class="footer-copyright-disclaimer"
+              >All public information sourced from official government portals.</span
+            >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>
         </div>
@@ -2669,7 +3422,9 @@
         const targetContent = document.getElementById(tabId);
         if (targetTab && targetContent) {
           document.querySelectorAll('.service-tab').forEach((t) => t.classList.remove('active'));
-          document.querySelectorAll('.service-content').forEach((c) => c.classList.remove('active'));
+          document
+            .querySelectorAll('.service-content')
+            .forEach((c) => c.classList.remove('active'));
           targetTab.classList.add('active');
           targetContent.classList.add('active');
         }
@@ -2685,9 +3440,15 @@
       function formatMetricHTML(rawText, iconClass = 'bi-dash') {
         if (!rawText) return 'Free';
         if (rawText.includes('|')) {
-          const items = rawText.split('|').map((s) => s.trim()).filter(Boolean);
+          const items = rawText
+            .split('|')
+            .map((s) => s.trim())
+            .filter(Boolean);
           return `<div class="metric-list">${items
-            .map((item) => `<div class="metric-list-item"><i class="bi ${iconClass}"></i> ${item}</div>`)
+            .map(
+              (item) =>
+                `<div class="metric-list-item"><i class="bi ${iconClass}"></i> ${item}</div>`
+            )
             .join('')}</div>`;
         }
         return rawText;
@@ -2708,7 +3469,9 @@
 
             // Toggle sub-tables in this tab
             const subId = card.dataset.sub;
-            contentBlock.querySelectorAll('.sub-table').forEach((tbl) => tbl.classList.remove('active'));
+            contentBlock
+              .querySelectorAll('.sub-table')
+              .forEach((tbl) => tbl.classList.remove('active'));
             const targetTable = contentBlock.querySelector(`#sub-${subId}`);
             if (targetTable) {
               targetTable.classList.add('active');
@@ -2720,7 +3483,10 @@
             }
             if (metricFee && card.dataset.fee) {
               metricFee.innerHTML = formatMetricHTML(card.dataset.fee, 'bi-dash');
-              if (card.dataset.fee.toLowerCase().includes('free') || card.dataset.fee.toLowerCase().includes('none')) {
+              if (
+                card.dataset.fee.toLowerCase().includes('free') ||
+                card.dataset.fee.toLowerCase().includes('none')
+              ) {
                 metricFee.classList.add('free');
               } else {
                 metricFee.classList.remove('free');
@@ -2742,7 +3508,9 @@
             activateTab(tabId);
             const contentBlock = document.getElementById(tabId);
             if (contentBlock && subId) {
-              const targetCategoryCard = contentBlock.querySelector(`.category-card[data-sub="${subId}"]`);
+              const targetCategoryCard = contentBlock.querySelector(
+                `.category-card[data-sub="${subId}"]`
+              );
               if (targetCategoryCard) {
                 targetCategoryCard.click();
               }
@@ -2761,7 +3529,9 @@
         let targetSubCard = null;
 
         if (!targetTab) {
-          targetSubCard = document.querySelector(`.category-card[data-sub="${hash}"]`) || document.getElementById(hash);
+          targetSubCard =
+            document.querySelector(`.category-card[data-sub="${hash}"]`) ||
+            document.getElementById(hash);
           if (targetSubCard) {
             const parentContent = targetSubCard.closest('.service-content');
             if (parentContent) {
@@ -2774,7 +3544,9 @@
 
         if (targetTab && targetContent) {
           document.querySelectorAll('.service-tab').forEach((t) => t.classList.remove('active'));
-          document.querySelectorAll('.service-content').forEach((c) => c.classList.remove('active'));
+          document
+            .querySelectorAll('.service-content')
+            .forEach((c) => c.classList.remove('active'));
           targetTab.classList.add('active');
           targetContent.classList.add('active');
 

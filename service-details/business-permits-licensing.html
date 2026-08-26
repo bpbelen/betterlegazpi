@@ -22,7 +22,10 @@
       property="og:url"
       content="https://betterlegazpi.org/service-details/business-permits-licensing"
     />
-    <meta property="og:title" content="BPLO Hub — Business Permits & Licensing | BetterLegazpi.org" />
+    <meta
+      property="og:title"
+      content="BPLO Hub: Business Permits & Licensing | BetterLegazpi.org"
+    />
     <meta
       property="og:description"
       content="Official Citizen's Charter for Legazpi City BPLO: Business permits, renewals, certifications, MTOP, and Mayor's clearance."
@@ -32,7 +35,7 @@
       content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>BPLO Hub — Business Permits & Licensing Office | BetterLegazpi.org</title>
+    <title>BPLO Hub: Business Permits & Licensing Office | BetterLegazpi.org</title>
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,569 +56,13 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-hub.css" />
     <style>
-      .bpl-section {
-        padding: 40px 0;
-      }
-      .bpl-section.alt-bg {
-        background: var(--color-bg-alt);
-      }
-      .section-header {
-        margin-bottom: 24px;
-      }
-      .section-header h2 {
-        font-size: 1.25rem;
-        color: var(--color-text);
-        margin-bottom: 6px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 700;
-      }
-      .section-header h2 i {
-        color: var(--color-primary);
-        font-size: 1.15rem;
-      }
-      .section-header p {
-        color: var(--color-text-light);
-        font-size: 0.875rem;
-        margin: 0;
-        line-height: 1.5;
-      }
-      .quick-stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-        margin-bottom: 24px;
-      }
-      .stat-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        text-align: center;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .stat-card i {
-        font-size: 1.15rem;
-        color: var(--color-primary);
-        margin-bottom: 4px;
-      }
-      .stat-card h4 {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin-bottom: 2px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .stat-card p {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
-      .service-tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 28px;
-        justify-content: center;
-        background: transparent;
-        border: none;
-        padding: 0;
-      }
-      .service-tab {
-        padding: 10px 20px;
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 8px;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--color-text);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .service-tab:hover {
-        border-color: var(--color-primary);
-        color: var(--color-primary);
-      }
-      .service-tab.active {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
-        color: white;
-        box-shadow: 0 2px 6px rgba(0, 50, 160, 0.2);
-      }
-      .service-tab.active i {
-        color: white;
-      }
-      .service-content {
-        display: none;
-      }
-      .service-content.active {
-        display: block;
-      }
-      .sub-service-controls {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 4px 2px;
-      }
-      .sub-service-count {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: #64748b;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .sub-service-count i {
-        color: var(--color-primary);
-      }
-      .btn-toggle-all {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        border-radius: 6px;
-        padding: 6px 14px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--color-primary);
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-      }
-      .btn-toggle-all:hover {
-        background: rgba(0, 50, 160, 0.06);
-        border-color: var(--color-primary);
-      }
-      .sub-service-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        margin-bottom: 14px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-        overflow: hidden;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      }
-      .sub-service-card:hover {
-        border-color: rgba(0, 50, 160, 0.22);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-      }
-      .sub-service-card.is-open {
-        border-color: rgba(0, 50, 160, 0.25);
-        box-shadow: 0 4px 14px rgba(0, 50, 160, 0.05);
-      }
-      .sub-service-card:last-child {
-        margin-bottom: 0;
-      }
-      .sub-service-header {
-        padding: 18px 20px;
-        cursor: pointer;
-        user-select: none;
-        background: var(--color-white, #ffffff);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 14px;
-        transition: background 0.15s ease;
-        margin-bottom: 0;
-        border-bottom: none;
-      }
-      .sub-service-header:hover {
-        background: #f8faff;
-      }
-      .sub-service-header:focus-visible {
-        outline: 2px solid var(--color-primary);
-        outline-offset: -2px;
-      }
-      .sub-service-header-left {
-        flex: 1;
-        min-width: 0;
-      }
-      .sub-service-title-wrap {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px 12px;
-        margin-bottom: 6px;
-      }
-      .sub-service-header h3 {
-        font-size: 1.0625rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .sub-service-header h3 i {
-        color: var(--color-primary);
-      }
-      .sub-service-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 3px 10px;
-        background: rgba(0, 50, 160, 0.08);
-        color: var(--color-primary);
-        border-radius: 20px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-      }
-      .sub-service-desc {
-        color: #475569;
-        font-size: 0.8125rem;
-        line-height: 1.45;
-        margin: 0 0 6px 0;
-      }
-      .sub-service-teaser {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 0.71875rem;
-        font-weight: 600;
-        color: var(--color-primary);
-      }
-      .sub-service-chevron-btn {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: #f1f5f9;
-        color: #475569;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        transition: all 0.25s ease;
-        border: none;
-        font-size: 0.8125rem;
-      }
-      .sub-service-card:hover .sub-service-chevron-btn {
-        background: rgba(0, 50, 160, 0.1);
-        color: var(--color-primary);
-      }
-      .sub-service-card.is-open .sub-service-chevron-btn {
-        background: var(--color-primary);
-        color: white;
-        transform: rotate(180deg);
-      }
-      .sub-service-body {
-        display: none;
-        padding: 20px;
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
-        background: var(--color-bg-alt, #f8f9fa);
-      }
-      .sub-service-card.is-open .sub-service-body {
-        display: block;
-      }
-      .req-summary-grid {
-        display: grid;
-        grid-template-columns: 1.7fr 1fr;
-        gap: 16px;
-        margin-bottom: 18px;
-      }
-      .req-box {
-        background: var(--color-bg-alt, #f8fafc);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-      }
-      .req-box h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 12px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .req-box h4 i {
-        color: var(--color-primary);
-      }
-      .req-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .req-list li {
-        font-size: 0.8125rem;
-        color: #334155;
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        line-height: 1.45;
-      }
-      .req-list li i {
-        color: var(--color-primary);
-        font-size: 0.875rem;
-        margin-top: 2px;
-        flex-shrink: 0;
-      }
-      .req-list li strong {
-        color: var(--color-text);
-      }
-      .summary-metrics {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .metric-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 6px;
-        padding: 10px 12px;
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      .metric-icon {
-        width: 30px;
-        height: 30px;
-        background: rgba(0, 50, 160, 0.05);
-        color: var(--color-primary);
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.95rem;
-        flex-shrink: 0;
-        margin-top: 1px;
-      }
-      .metric-content {
-        flex: 1;
-      }
-      .metric-label {
-        font-size: 0.625rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: var(--color-text-light);
-        letter-spacing: 0.5px;
-        margin-bottom: 2px;
-      }
-      .metric-value {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        line-height: 1.4;
-      }
-      .process-table {
-        width: 100%;
-        table-layout: fixed;
-        border-collapse: collapse;
-        background: var(--color-white, #ffffff);
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        font-size: 0.8125rem;
-        margin-top: 10px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
-      }
-      .process-table th {
-        background: var(--color-primary);
-        color: white;
-        padding: 12px 14px;
-        text-align: left;
-        font-weight: 600;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
-      }
-      .process-table td {
-        padding: 14px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-        vertical-align: top;
-        line-height: 1.5;
-      }
-      .process-table tr:last-child td {
-        border-bottom: none;
-      }
-      .process-table tbody tr:hover {
-        background: rgba(0, 50, 160, 0.015);
-      }
-      .step-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        background: var(--color-primary);
-        color: white;
-        font-size: 0.75rem;
-        font-weight: 700;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0, 50, 160, 0.15);
-      }
-      .personnel-tag {
-        display: inline-block;
-        background: rgba(0, 50, 160, 0.08);
-        color: var(--color-primary);
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 0.6875rem;
-        font-weight: 600;
-        margin: 2px 0;
-      }
-      .time-tag {
-        color: var(--color-text-light);
-        font-size: 0.75rem;
-        font-weight: 500;
-      }
-      .fee-tag {
-        color: #166534;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        background: transparent;
-        border: none;
-        padding: 0;
-        display: inline-block;
-      }
-      .fee-note {
-        font-size: 0.78125rem;
-        color: var(--color-text-light, #64748b);
-        font-weight: 500;
-        display: inline-block;
-        line-height: 1.35;
-      }
-      .req-badge-conditional {
-        display: inline-flex;
-        align-items: center;
-        background: #fef3c7;
-        color: #92400e;
-        border: 1px solid #fde68a;
-        padding: 1px 6px;
-        border-radius: 4px;
-        font-size: 0.65625rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-        margin-right: 4px;
-        flex-shrink: 0;
-      }
-      .staff-expand-btn {
-        margin: 20px auto 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        background: white;
-        color: var(--color-primary);
-        border: 1px solid rgba(0, 50, 160, 0.2);
-        padding: 8px 20px;
-        border-radius: 20px;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-      }
-      .staff-expand-btn:hover {
-        background: rgba(0, 50, 160, 0.05);
-        border-color: var(--color-primary);
-      }
-      .staff-extra {
-        display: none;
-      }
-      .staff-extra.show {
-        display: contents;
-      }
-      .contact-info-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-      }
-      .contact-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 16px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .contact-card h4 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 10px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .contact-card h4 i {
-        color: var(--color-primary);
-      }
-      .contact-card p {
-        font-size: 0.8125rem;
-        color: #475569;
-        margin: 0 0 6px 0;
-        line-height: 1.45;
-      }
-      .contact-card p:last-child {
-        margin-bottom: 0;
-      }
-      .contact-card a {
-        color: var(--color-primary);
-        text-decoration: none;
-        font-weight: 600;
-      }
-      .contact-card a:hover {
-        text-decoration: underline;
-      }
-      .staff-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
-      .staff-card {
-        background: var(--color-white, #ffffff);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-      }
-      .staff-card h4 {
-        font-size: 0.8125rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin: 0 0 3px 0;
-      }
-      .staff-card .staff-role {
-        font-size: 0.75rem;
-        color: var(--color-primary);
-        font-weight: 600;
-        margin: 0 0 2px 0;
-      }
-      .staff-card p {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-      }
-      @media (max-width: 992px) {
-        .req-summary-grid,
-        .contact-info-grid {
-          grid-template-columns: 1fr;
-        }
-        .staff-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
       @media (max-width: 768px) {
         .quick-stats {
           grid-template-columns: repeat(2, 1fr);
         }
-        
+
         /* Mobile Card Transformation for Process Tables */
         .table-responsive {
           overflow-x: visible;
@@ -659,7 +106,7 @@
           padding: 0;
           border: none;
         }
-        
+
         /* 1. Step Header Pill */
         .process-table td:nth-child(1) {
           display: flex;
@@ -669,14 +116,14 @@
           border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
         .process-table td:nth-child(1)::after {
-          content: "STEP DETAILS";
+          content: 'STEP DETAILS';
           font-weight: 700;
           font-size: 0.6875rem;
           letter-spacing: 0.5px;
           text-transform: uppercase;
           color: var(--color-primary);
         }
-        
+
         /* 2. Client Action (Primary) */
         .process-table td:nth-child(2) {
           font-size: 0.84375rem;
@@ -684,7 +131,7 @@
           line-height: 1.5;
         }
         .process-table td:nth-child(2)::before {
-          content: "👤 Client Step";
+          content: '👤 Client Step';
           display: block;
           font-size: 0.6875rem;
           font-weight: 700;
@@ -698,7 +145,7 @@
           font-weight: 700;
           font-size: 0.875rem;
         }
-        
+
         /* 3. Agency Action (Subtle Callout) */
         .process-table td:nth-child(3) {
           background: var(--color-bg-alt, #f8fafc);
@@ -710,7 +157,7 @@
           line-height: 1.45;
         }
         .process-table td:nth-child(3)::before {
-          content: "🏛️ Agency Action";
+          content: '🏛️ Agency Action';
           display: block;
           font-size: 0.65625rem;
           font-weight: 700;
@@ -719,7 +166,7 @@
           color: var(--color-text-light, #64748b);
           margin-bottom: 4px;
         }
-        
+
         /* 4. Fees Meta Row */
         .process-table td:nth-child(4) {
           display: flex;
@@ -731,7 +178,7 @@
           padding-top: 2px;
         }
         .process-table td:nth-child(4)::before {
-          content: "💰 Fees:";
+          content: '💰 Fees:';
           font-weight: 700;
           font-size: 0.71875rem;
           color: var(--color-text-light, #64748b);
@@ -739,7 +186,7 @@
           letter-spacing: 0.4px;
           flex-shrink: 0;
         }
-        
+
         /* 5. Assigned Personnel / Lane */
         .process-table td:nth-child(5) {
           display: flex;
@@ -750,7 +197,7 @@
           font-size: 0.78125rem;
         }
         .process-table td:nth-child(5)::before {
-          content: "📍 Officer / Lane:";
+          content: '📍 Officer / Lane:';
           font-weight: 700;
           font-size: 0.71875rem;
           color: var(--color-text-light, #64748b);
@@ -760,22 +207,9 @@
           margin-bottom: 2px;
         }
       }
-      @media (max-width: 575px) {
-        .quick-stats,
-        .staff-grid {
-          grid-template-columns: 1fr;
-        }
-        .service-tabs {
-          flex-direction: column;
-        }
-        .service-tab {
-          text-align: center;
-          justify-content: center;
-        }
-      }
     </style>
     <script>
-      (function() {
+      (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
@@ -787,7 +221,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -821,7 +255,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -832,14 +265,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -865,15 +295,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -903,8 +338,7 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="../services/">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="../services/">Services</a><span>/</span>
           <a href="../services/business">Business</a><span>/</span>
           <span aria-current="page">BPLO Citizen's Charter</span>
         </nav>
@@ -916,7 +350,8 @@
             <span class="page-header-badge"><i class="bi bi-briefcase-fill"></i> BPLO</span>
             <h1>Business Permits and Licensing Office</h1>
             <p class="page-header-desc">
-              Your consolidated guide for business permits, renewals, clearances, and tricycle licensing in Legazpi City.
+              Your consolidated guide for business permits, renewals, clearances, and tricycle
+              licensing in Legazpi City.
             </p>
           </div>
         </div>
@@ -939,7 +374,7 @@
             <div class="stat-card">
               <i class="bi bi-clock"></i>
               <h4>Hours</h4>
-              <p>8:00 AM – 5:00 PM (Mon–Fri)</p>
+              <p>8:00 AM - 5:00 PM (Mon-Fri)</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-telephone"></i>
@@ -959,7 +394,8 @@
               <span>BPLO Frontline Services</span>
             </h2>
             <p>
-              Select a service category to view detailed requirements, step-by-step processes, and turn-around times.
+              Select a service category to view detailed requirements, step-by-step processes, and
+              turn-around times.
             </p>
           </div>
 
@@ -995,17 +431,24 @@
               aria-controls="misc-permits"
               id="tab-misc-permits"
             >
-              <i class="bi bi-card-checklist" aria-hidden="true"></i> Miscellaneous Permits &amp; Clearances
+              <i class="bi bi-card-checklist" aria-hidden="true"></i> Miscellaneous Permits &amp;
+              Clearances
             </button>
           </div>
 
           <!-- ========================================== -->
           <!-- TAB 1: BUSINESS PERMITS                    -->
           <!-- ========================================== -->
-          <div class="service-content active" id="business-permits" role="tabpanel" aria-labelledby="tab-biz-permits">
-            
+          <div
+            class="service-content active"
+            id="business-permits"
+            role="tabpanel"
+            aria-labelledby="tab-biz-permits"
+          >
             <div class="sub-service-controls">
-              <span class="sub-service-count"><i class="bi bi-collection"></i> 4 Services in this category</span>
+              <span class="sub-service-count"
+                ><i class="bi bi-collection"></i> 4 Services in this category</span
+              >
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
               </button>
@@ -1013,14 +456,24 @@
 
             <!-- 1.1 New Business Permit -->
             <div class="sub-service-card">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-new-biz">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-new-biz"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
                     <h3><i class="bi bi-plus-circle"></i> New Business Permit Application</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face (Lane 2) or Online</span>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face (Lane 2) or Online</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Issuance of Mayor's Permit to operate a new commercial establishment in Legazpi City. Walk-in applications are submitted via Lane 2, or processed online via the city's official Filipizen portal.
+                    Issuance of Mayor's Permit to operate a new commercial establishment in Legazpi
+                    City. Walk-in applications are submitted via Lane 2, or processed online via the
+                    city's official Filipizen portal.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1039,27 +492,48 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Application Form:</strong> 1 original duly filled-out Unified Application Form (UAF).</span>
+                        <span
+                          ><strong>Application Form:</strong> 1 original duly filled-out Unified
+                          Application Form (UAF).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Location Sketch:</strong> 1 original copy of Sketch of Business Location.</span>
+                        <span
+                          ><strong>Location Sketch:</strong> 1 original copy of Sketch of Business
+                          Location.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Certificate of Occupancy:</strong> 1 original &amp; 1 photocopy of Certificate of Occupancy of the new space/building.</span>
+                        <span
+                          ><strong>Certificate of Occupancy:</strong> 1 original &amp; 1 photocopy
+                          of Certificate of Occupancy of the new space/building.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Business Registration:</strong> 1 original &amp; 1 photocopy of DTI (Sole Prop), SEC (Corp/Partnership), or CDA (Cooperative) Certificate.</span>
+                        <span
+                          ><strong>Business Registration:</strong> 1 original &amp; 1 photocopy of
+                          DTI (Sole Prop), SEC (Corp/Partnership), or CDA (Cooperative)
+                          Certificate.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">If Leased</span> <strong>Tenancy Proof:</strong> 1 original Notarized Lease Contract or Letter of Authorization/Consent from owner.</span>
+                        <span
+                          ><span class="req-badge-conditional">If Leased</span>
+                          <strong>Tenancy Proof:</strong> 1 original Notarized Lease Contract or
+                          Letter of Authorization/Consent from owner.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Market Stalls Only</span> <strong>Market Clearance:</strong> 1 original &amp; 1 photocopy of Market Clearance.</span>
+                        <span
+                          ><span class="req-badge-conditional">Market Stalls Only</span>
+                          <strong>Market Clearance:</strong> 1 original &amp; 1 photocopy of Market
+                          Clearance.</span
+                        >
                       </li>
                     </ul>
                   </div>
@@ -1085,7 +559,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Lane 2 (Intake) • Lane 9 (Releasing) / Online (Filipizen)</div>
+                          <div class="metric-value">
+                            Lane 2 (Intake) • Lane 9 (Releasing) / Online (Filipizen)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1109,12 +585,15 @@
                         <td><span class="step-badge">1</span></td>
                         <td>
                           <strong>Submit Application &amp; Requirements</strong><br />
-                          Submit documents to <strong>Lane 2</strong> (or upload PDF/image files online at <code>filipizen.com</code>).
+                          Submit documents to <strong>Lane 2</strong> (or upload PDF/image files
+                          online at <code>filipizen.com</code>).
                         </td>
                         <td>
-                          Action Officer encodes data, electronically submits for BPLO approval; CTO Assessor assesses taxes/fees; BPLO Staff prints application form, Tax Order of Payment (TOP), and feedback form.
+                          Action Officer encodes data, electronically submits for BPLO approval; CTO
+                          Assessor assesses taxes/fees; BPLO Staff prints application form, Tax
+                          Order of Payment (TOP), and feedback form.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Lane 2 Action Officer</span>
                         </td>
@@ -1123,14 +602,18 @@
                         <td><span class="step-badge">2</span></td>
                         <td>
                           <strong>Pay Taxes &amp; Fees</strong><br />
-                          Proceed to City Treasurer's Office or pay online via Land Bank, DBP, GCash, Maya, Visa, or Mastercard using the TOP assessment record.
+                          Proceed to City Treasurer's Office or pay online via Land Bank, DBP,
+                          GCash, Maya, Visa, or Mastercard using the TOP assessment record.
                         </td>
                         <td>
-                          CTO Collector receives payment and issues Official Receipt (or payment gateway processes e-payment).
+                          CTO Collector receives payment and issues Official Receipt (or payment
+                          gateway processes e-payment).
                         </td>
                         <td>
                           <span class="fee-tag">Computed in TOP</span><br />
-                          <small style="color:#64748b">City Ord. No. 13-2007</small>
+                          <small style="color: var(--color-text-light)"
+                            >City Ord. No. 13-2007</small
+                          >
                         </td>
                         <td>
                           <span class="personnel-tag">CTO Revenue Collector</span>
@@ -1140,12 +623,14 @@
                         <td><span class="step-badge">3</span></td>
                         <td>
                           <strong>Claim Business Permit &amp; Clearances</strong><br />
-                          Proceed to <strong>BPLO Lane 9 (Releasing Area)</strong> and submit completed Feedback Form (or receive e-copy via email).
+                          Proceed to <strong>BPLO Lane 9 (Releasing Area)</strong> and submit
+                          completed Feedback Form (or receive e-copy via email).
                         </td>
                         <td>
-                          Releasing Officer issues Locational Clearance, Mayor's Permit to operate, Business Plate, and Official Sticker.
+                          Releasing Officer issues Locational Clearance, Mayor's Permit to operate,
+                          Business Plate, and Official Sticker.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Lane 9 Releasing Officer</span>
                         </td>
@@ -1158,14 +643,24 @@
 
             <!-- 1.2 Renewal of Business Permit -->
             <div class="sub-service-card">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-renew-biz">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-renew-biz"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
                     <h3><i class="bi bi-arrow-repeat"></i> Renewal of Business Permit</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face (Lanes 1, 3–7) or Online</span>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face (Lanes 1, 3-7) or Online</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Annual renewal of existing business permits in Legazpi City. Walk-in transactions are handled through dedicated lane routing (Priority, Express, and Bulk lanes), and online renewal is supported through BIN lookup.
+                    Annual renewal of existing business permits in Legazpi City. Walk-in
+                    transactions are handled through dedicated lane routing (Priority, Express, and
+                    Bulk lanes), and online renewal is supported through BIN lookup.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1184,19 +679,34 @@
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><strong>Proof of Income:</strong> 1 original &amp; 1 photocopy of latest BIR income tax return or Audited Financial Statement (AFS).</span>
+                        <span
+                          ><strong>Proof of Income:</strong> 1 original &amp; 1 photocopy of latest
+                          BIR income tax return or Audited Financial Statement (AFS).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Market Stalls Only</span> <strong>Market Clearance:</strong> 1 original copy for Market Stall Holders (returned upon permit release).</span>
+                        <span
+                          ><span class="req-badge-conditional">Market Stalls Only</span>
+                          <strong>Market Clearance:</strong> 1 original copy for Market Stall
+                          Holders (returned upon permit release).</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Pawnshops &amp; MSBs</span> <strong>Authority to Operate:</strong> 1 original &amp; 1 photocopy of Certificate of Authority (JMC No. 1 s. 2019) or BSP Letter Code.</span>
+                        <span
+                          ><span class="req-badge-conditional">Pawnshops &amp; MSBs</span>
+                          <strong>Authority to Operate:</strong> 1 original &amp; 1 photocopy of
+                          Certificate of Authority (JMC No. 1 s. 2019) or BSP Letter Code.</span
+                        >
                       </li>
                       <li>
                         <i class="bi bi-check-circle"></i>
-                        <span><span class="req-badge-conditional">Online Renewal</span> <strong>BIN Account:</strong> Business Identification Number (BIN) from previous permit barcode.</span>
+                        <span
+                          ><span class="req-badge-conditional">Online Renewal</span>
+                          <strong>BIN Account:</strong> Business Identification Number (BIN) from
+                          previous permit barcode.</span
+                        >
                       </li>
                     </ul>
                   </div>
@@ -1222,7 +732,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Lanes 1, 3–7 (Intake) • Lane 9 (Releasing) / Online (Filipizen)</div>
+                          <div class="metric-value">
+                            Lanes 1, 3-7 (Intake) • Lane 9 (Releasing) / Online (Filipizen)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1245,12 +757,14 @@
                         <td><span class="step-badge">1</span></td>
                         <td>
                           <strong>Submit Renewal Documents</strong><br />
-                          Present documents to designated renewal lane (Lane 1, 3, 4, 6, or 7) or input BIN online at Filipizen.
+                          Present documents to designated renewal lane (Lane 1, 3, 4, 6, or 7) or
+                          input BIN online at Filipizen.
                         </td>
                         <td>
-                          Action Officer encodes data, submits electronically for BPLO approval, CTO Assessor calculates taxes/fees, prints final application &amp; TOP.
+                          Action Officer encodes data, submits electronically for BPLO approval, CTO
+                          Assessor calculates taxes/fees, prints final application &amp; TOP.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Designated Renewal Lane Officer</span>
                         </td>
@@ -1259,14 +773,18 @@
                         <td><span class="step-badge">2</span></td>
                         <td>
                           <strong>Pay Computed Taxes &amp; Fees</strong><br />
-                          Pay at CTO Cashier or via partner banks (Land Bank, DBP) / e-wallets (GCash, Maya).
+                          Pay at CTO Cashier or via partner banks (Land Bank, DBP) / e-wallets
+                          (GCash, Maya).
                         </td>
                         <td>
-                          CTO Collector prepares and issues Official Receipt; directs applicant to Lane 9.
+                          CTO Collector prepares and issues Official Receipt; directs applicant to
+                          Lane 9.
                         </td>
                         <td>
                           <span class="fee-tag">Computed in TOP</span><br />
-                          <small style="color:#64748b">City Ord. No. 13-2007</small>
+                          <small style="color: var(--color-text-light)"
+                            >City Ord. No. 13-2007</small
+                          >
                         </td>
                         <td>
                           <span class="personnel-tag">CTO Revenue Collector</span>
@@ -1276,12 +794,14 @@
                         <td><span class="step-badge">3</span></td>
                         <td>
                           <strong>Claim Business Permit</strong><br />
-                          Proceed to <strong>Lane 9 (Releasing)</strong> with completed Feedback Form.
+                          Proceed to <strong>Lane 9 (Releasing)</strong> with completed Feedback
+                          Form.
                         </td>
                         <td>
-                          Releasing Officer issues Renewed Business Permit, sticker, plate, and regulatory clearances.
+                          Releasing Officer issues Renewed Business Permit, sticker, plate, and
+                          regulatory clearances.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Lane 9 Releasing Officer</span>
                         </td>
@@ -1294,14 +814,25 @@
 
             <!-- 1.3 Additional Line of Business -->
             <div class="sub-service-card">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-add-line">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-add-line"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-briefcase"></i> Additional Line of Business (Same Location)</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face (Lane 5) or Online</span>
+                    <h3>
+                      <i class="bi bi-briefcase"></i> Additional Line of Business (Same Location)
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face (Lane 5) or Online</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Registration of supplementary commercial activities or products at an existing permitted business location in Legazpi City.
+                    Registration of supplementary commercial activities or products at an existing
+                    permitted business location in Legazpi City.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1318,10 +849,36 @@
                   <div class="req-box">
                     <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
                     <ul class="req-list">
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Application Form:</strong> 1 copy of duly filled-out Application Form.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Location Sketch:</strong> 1 copy of Sketch of Business Location.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Business Registration:</strong> 1 photocopy of DTI/SEC/CDA Certificate.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><span class="req-badge-conditional">Market / Leased Space</span> <strong>Clearance / Lease:</strong> Market clearance or property owner authorization / lease contract (lessor must have valid rental permit).</span></li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Application Form:</strong> 1 copy of duly filled-out Application
+                          Form.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Location Sketch:</strong> 1 copy of Sketch of Business
+                          Location.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Business Registration:</strong> 1 photocopy of DTI/SEC/CDA
+                          Certificate.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><span class="req-badge-conditional">Market / Leased Space</span>
+                          <strong>Clearance / Lease:</strong> Market clearance or property owner
+                          authorization / lease contract (lessor must have valid rental
+                          permit).</span
+                        >
+                      </li>
                     </ul>
                   </div>
                   <div class="req-box">
@@ -1345,7 +902,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Lane 5 (Intake) • Lane 9 (Releasing) / Email</div>
+                          <div class="metric-value">
+                            Lane 5 (Intake) • Lane 9 (Releasing) / Email
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1368,10 +927,14 @@
                         <td><span class="step-badge">1</span></td>
                         <td>
                           <strong>Submit Application &amp; Requirements</strong><br />
-                          Submit requirements to <strong>Lane 5</strong> (or email form to <code>legpermit2@gmail.com</code>).
+                          Submit requirements to <strong>Lane 5</strong> (or email form to
+                          <code>legpermit2@gmail.com</code>).
                         </td>
-                        <td>Encodes data, routes for electronic assessment, prints TOP and feedback form.</td>
-                        <td>—</td>
+                        <td>
+                          Encodes data, routes for electronic assessment, prints TOP and feedback
+                          form.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Lane 5 Action Officer</span></td>
                       </tr>
                       <tr>
@@ -1388,10 +951,11 @@
                         <td><span class="step-badge">3</span></td>
                         <td>
                           <strong>Claim Updated Permit</strong><br />
-                          Claim updated permit at <strong>Lane 9</strong> upon submitting Feedback Form.
+                          Claim updated permit at <strong>Lane 9</strong> upon submitting Feedback
+                          Form.
                         </td>
                         <td>Releases updated Mayor's Permit with additional line.</td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Lane 9 Releasing Officer</span></td>
                       </tr>
                     </tbody>
@@ -1402,14 +966,23 @@
 
             <!-- 1.4 Transfer of Business Location -->
             <div class="sub-service-card">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-transfer-loc">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-transfer-loc"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
                     <h3><i class="bi bi-arrows-move"></i> Transfer of Business Location</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face (Lane 5)</span>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face (Lane 5)</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Updating permit records and clearances when relocating an existing business establishment to a new physical site within Legazpi City.
+                    Updating permit records and clearances when relocating an existing business
+                    establishment to a new physical site within Legazpi City.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1426,12 +999,49 @@
                   <div class="req-box">
                     <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
                     <ul class="req-list">
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Application Form:</strong> 1 copy of duly filled-out Application Form.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>New Site Sketch:</strong> 1 copy of Sketch of Business Location (New Site).</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Certificate of Occupancy:</strong> 1 original Certificate of Occupancy of the new space/building.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Business Registration:</strong> 1 photocopy of DTI/SEC/CDA Certificate.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Fire Safety Certificate (FSIC):</strong> 1 original FSIC for occupancy (with fire insurance policy if available).</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><span class="req-badge-conditional">If Leased</span> <strong>Lease Contract:</strong> Valid Lease Contract from owner (lessor must hold valid business permit).</span></li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Application Form:</strong> 1 copy of duly filled-out Application
+                          Form.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>New Site Sketch:</strong> 1 copy of Sketch of Business Location
+                          (New Site).</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Certificate of Occupancy:</strong> 1 original Certificate of
+                          Occupancy of the new space/building.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Business Registration:</strong> 1 photocopy of DTI/SEC/CDA
+                          Certificate.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Fire Safety Certificate (FSIC):</strong> 1 original FSIC for
+                          occupancy (with fire insurance policy if available).</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><span class="req-badge-conditional">If Leased</span>
+                          <strong>Lease Contract:</strong> Valid Lease Contract from owner (lessor
+                          must hold valid business permit).</span
+                        >
+                      </li>
                     </ul>
                   </div>
                   <div class="req-box">
@@ -1480,8 +1090,11 @@
                           <strong>Submit Relocation Requirements</strong><br />
                           Submit relocation requirements to <strong>Lane 5</strong>.
                         </td>
-                        <td>Action Officer verifies documents, encodes data, prints TOP and feedback form.</td>
-                        <td>—</td>
+                        <td>
+                          Action Officer verifies documents, encodes data, prints TOP and feedback
+                          form.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Lane 5 Action Officer</span></td>
                       </tr>
                       <tr>
@@ -1498,10 +1111,13 @@
                         <td><span class="step-badge">3</span></td>
                         <td>
                           <strong>Claim Relocated Permit</strong><br />
-                          Proceed to <strong>Lane 9</strong> with Official Receipt and Feedback Form.
+                          Proceed to <strong>Lane 9</strong> with Official Receipt and Feedback
+                          Form.
                         </td>
-                        <td>Releases updated Mayor's Permit, business plate/sticker for new location.</td>
-                        <td>—</td>
+                        <td>
+                          Releases updated Mayor's Permit, business plate/sticker for new location.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Lane 9 Releasing Officer</span></td>
                       </tr>
                     </tbody>
@@ -1509,16 +1125,21 @@
                 </div>
               </div>
             </div>
-
           </div>
 
           <!-- ========================================== -->
           <!-- TAB 2: DOCUMENT SERVICES                   -->
           <!-- ========================================== -->
-          <div class="service-content" id="document-services" role="tabpanel" aria-labelledby="tab-doc-services">
-            
+          <div
+            class="service-content"
+            id="document-services"
+            role="tabpanel"
+            aria-labelledby="tab-doc-services"
+          >
             <div class="sub-service-controls">
-              <span class="sub-service-count"><i class="bi bi-collection"></i> 2 Services in this category</span>
+              <span class="sub-service-count"
+                ><i class="bi bi-collection"></i> 2 Services in this category</span
+              >
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
               </button>
@@ -1526,14 +1147,27 @@
 
             <!-- 2.1 Certified True Copy -->
             <div class="sub-service-card">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-ctc">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-ctc"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-file-earmark-check"></i> Certified True Copy of Business Permit</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Frontline Counter)</span>
+                    <h3>
+                      <i class="bi bi-file-earmark-check"></i> Certified True Copy of Business
+                      Permit
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Walk-in (Frontline Counter)</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Authentication and issuance of official certified true copies of existing Legazpi City Mayor's Permits and business documents for legal, banking, or regulatory compliance.
+                    Authentication and issuance of official certified true copies of existing
+                    Legazpi City Mayor's Permits and business documents for legal, banking, or
+                    regulatory compliance.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1550,9 +1184,27 @@
                   <div class="req-box">
                     <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
                     <ul class="req-list">
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Document for Authentication:</strong> 1 original and 1 photocopy of the document to be authenticated.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Request Form:</strong> Duly accomplished Request Form (provided at frontline).</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Feedback Form:</strong> Accomplished Feedback Form upon claiming.</span></li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Document for Authentication:</strong> 1 original and 1 photocopy
+                          of the document to be authenticated.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Request Form:</strong> Duly accomplished Request Form (provided
+                          at frontline).</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Feedback Form:</strong> Accomplished Feedback Form upon
+                          claiming.</span
+                        >
+                      </li>
                     </ul>
                   </div>
                   <div class="req-box">
@@ -1601,8 +1253,11 @@
                           <strong>Submit Document for Authentication</strong><br />
                           Submit requirements and fill out request form with receiving officer.
                         </td>
-                        <td>Checks requirements, provides feedback form, instructs client to pay at CTO.</td>
-                        <td>—</td>
+                        <td>
+                          Checks requirements, provides feedback form, instructs client to pay at
+                          CTO.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Frontline Receiving Officer</span></td>
                       </tr>
                       <tr>
@@ -1621,8 +1276,10 @@
                           <strong>Claim Certified True Copy</strong><br />
                           Return to BPLO, submit Official Receipt and Feedback Form.
                         </td>
-                        <td>Forwards to Head of Office for signature; releases authenticated document.</td>
-                        <td>—</td>
+                        <td>
+                          Forwards to Head of Office for signature; releases authenticated document.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Lane 9 Releasing Officer</span></td>
                       </tr>
                     </tbody>
@@ -1633,14 +1290,25 @@
 
             <!-- 2.2 Certification of Business Record -->
             <div class="sub-service-card">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-biz-record">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-biz-record"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-file-earmark-text"></i> Certification of Business Record</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Action Officer)</span>
+                    <h3>
+                      <i class="bi bi-file-earmark-text"></i> Certification of Business Record
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Walk-in (Action Officer)</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Verification and official certification of business records, operational history, or registry status on file with the Legazpi City BPLO.
+                    Verification and official certification of business records, operational
+                    history, or registry status on file with the Legazpi City BPLO.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1657,9 +1325,24 @@
                   <div class="req-box">
                     <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
                     <ul class="req-list">
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Request Form:</strong> Duly filled-out Request Form.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Official Receipt:</strong> Official Receipt of payment from the City Treasurer's Office.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Feedback Form:</strong> Accomplished Feedback Form upon claiming.</span></li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span><strong>Request Form:</strong> Duly filled-out Request Form.</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Official Receipt:</strong> Official Receipt of payment from the
+                          City Treasurer's Office.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Feedback Form:</strong> Accomplished Feedback Form upon
+                          claiming.</span
+                        >
+                      </li>
                     </ul>
                   </div>
                   <div class="req-box">
@@ -1708,8 +1391,10 @@
                           <strong>Submit Record Verification Request</strong><br />
                           Fill out request form and submit to Action Officer.
                         </td>
-                        <td>Checks request form, issues feedback form, advises client to pay at CTO.</td>
-                        <td>—</td>
+                        <td>
+                          Checks request form, issues feedback form, advises client to pay at CTO.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">BPLO Action Officer</span></td>
                       </tr>
                       <tr>
@@ -1728,8 +1413,11 @@
                           <strong>Claim Official Certification</strong><br />
                           Return to BPLO, present Official Receipt and Feedback Form.
                         </td>
-                        <td>Action Officer verifies payment and releases the official certification of business record.</td>
-                        <td>—</td>
+                        <td>
+                          Action Officer verifies payment and releases the official certification of
+                          business record.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">BPLO Action Officer</span></td>
                       </tr>
                     </tbody>
@@ -1737,16 +1425,21 @@
                 </div>
               </div>
             </div>
-
           </div>
 
           <!-- ========================================== -->
           <!-- TAB 3: MISC PERMITS & CLEARANCES          -->
           <!-- ========================================== -->
-          <div class="service-content" id="misc-permits" role="tabpanel" aria-labelledby="tab-misc-permits">
-            
+          <div
+            class="service-content"
+            id="misc-permits"
+            role="tabpanel"
+            aria-labelledby="tab-misc-permits"
+          >
             <div class="sub-service-controls">
-              <span class="sub-service-count"><i class="bi bi-collection"></i> 3 Services in this category</span>
+              <span class="sub-service-count"
+                ><i class="bi bi-collection"></i> 3 Services in this category</span
+              >
               <button type="button" class="btn-toggle-all" aria-expanded="false">
                 <i class="bi bi-arrows-expand"></i> <span>Expand All</span>
               </button>
@@ -1754,14 +1447,25 @@
 
             <!-- 3.1 Non-Revenue Miscellaneous Permit -->
             <div class="sub-service-card">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-non-rev">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-non-rev"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
-                    <h3><i class="bi bi-file-earmark-diff"></i> Non-Revenue Miscellaneous Permit</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Walk-in (Officer of the Day)</span>
+                    <h3>
+                      <i class="bi bi-file-earmark-diff"></i> Non-Revenue Miscellaneous Permit
+                    </h3>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Walk-in (Officer of the Day)</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Issuance of special non-revenue permits and municipal endorsements upon prior clearance from the City Engineering Office (CEO).
+                    Issuance of special non-revenue permits and municipal endorsements upon prior
+                    clearance from the City Engineering Office (CEO).
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1778,9 +1482,27 @@
                   <div class="req-box">
                     <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
                     <ul class="req-list">
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Letter Request:</strong> 1 original Letter Request addressed to BPLO Head.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>CEO Endorsement:</strong> 1 original Endorsement from City Engineering Office (CEO).</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Feedback Form:</strong> Accomplished Feedback Form upon release.</span></li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Letter Request:</strong> 1 original Letter Request addressed to
+                          BPLO Head.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>CEO Endorsement:</strong> 1 original Endorsement from City
+                          Engineering Office (CEO).</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Feedback Form:</strong> Accomplished Feedback Form upon
+                          release.</span
+                        >
+                      </li>
                     </ul>
                   </div>
                   <div class="req-box">
@@ -1804,7 +1526,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Officer of the Day • City Engineering Clearance</div>
+                          <div class="metric-value">
+                            Officer of the Day • City Engineering Clearance
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1829,8 +1553,10 @@
                           <strong>Present CEO Endorsement</strong><br />
                           Present CEO endorsement to Officer of the Day.
                         </td>
-                        <td>Receives endorsement, gives feedback form, prepares document in 2 copies.</td>
-                        <td>—</td>
+                        <td>
+                          Receives endorsement, gives feedback form, prepares document in 2 copies.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Officer of the Day</span></td>
                       </tr>
                       <tr>
@@ -1849,8 +1575,11 @@
                           <strong>Claim Approved Permit</strong><br />
                           Present Official Receipt and sign duplicate copy for office filing.
                         </td>
-                        <td>Forwards to Head of Office for signature; releases original copy to client.</td>
-                        <td>—</td>
+                        <td>
+                          Forwards to Head of Office for signature; releases original copy to
+                          client.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Officer of the Day</span></td>
                       </tr>
                     </tbody>
@@ -1861,14 +1590,24 @@
 
             <!-- 3.2 Mayor's Tricycle Operators' Permit (MTOP) -->
             <div class="sub-service-card">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-mtop">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-mtop"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
                     <h3><i class="bi bi-bicycle"></i> Mayor's Tricycle Operators' Permit (MTOP)</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Lane 11 (Inspection) &amp; Lane 10 (Releasing)</span>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Lane 11 (Inspection) &amp; Lane 10
+                      (Releasing)</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Franchise licensing, annual renewal, motor substitution, and transfer for motorized tricycle-for-hire units operating within Legazpi City.
+                    Franchise licensing, annual renewal, motor substitution, and transfer for
+                    motorized tricycle-for-hire units operating within Legazpi City.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -1885,11 +1624,44 @@
                   <div class="req-box">
                     <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
                     <ul class="req-list">
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Application Form:</strong> 1 duly filled-out MTOP Application Form.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Cedula:</strong> 1 original copy of Community Tax Certificate.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><span class="req-badge-conditional">If Changing Motor</span> <strong>Dropping &amp; Substitution:</strong> 1 original copy of Dropping and Substitution documents.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><span class="req-badge-conditional">Renewal / Transfer</span> <strong>Franchise Certificate:</strong> 1 original copy of Franchise Certificate.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><span class="req-badge-conditional">Family / Estate</span> <strong>Proof of Relation:</strong> Marriage/birth certificate (if filed by immediate family) or death certificate (if holder is deceased).</span></li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Application Form:</strong> 1 duly filled-out MTOP Application
+                          Form.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Cedula:</strong> 1 original copy of Community Tax
+                          Certificate.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><span class="req-badge-conditional">If Changing Motor</span>
+                          <strong>Dropping &amp; Substitution:</strong> 1 original copy of Dropping
+                          and Substitution documents.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><span class="req-badge-conditional">Renewal / Transfer</span>
+                          <strong>Franchise Certificate:</strong> 1 original copy of Franchise
+                          Certificate.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><span class="req-badge-conditional">Family / Estate</span>
+                          <strong>Proof of Relation:</strong> Marriage/birth certificate (if filed
+                          by immediate family) or death certificate (if holder is deceased).</span
+                        >
+                      </li>
                     </ul>
                   </div>
                   <div class="req-box">
@@ -1913,7 +1685,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Lane 11 (PSO Inspection) • Lane 10 (Releasing)</div>
+                          <div class="metric-value">
+                            Lane 11 (PSO Inspection) • Lane 10 (Releasing)
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1936,12 +1710,16 @@
                         <td><span class="step-badge">1</span></td>
                         <td>
                           <strong>Submit Requirements &amp; Vehicle Inspection</strong><br />
-                          Present requirements to <strong>Lane 11</strong>, proceed to defined inspection area for PSO roadworthiness check, and return vehicle inspection report.
+                          Present requirements to <strong>Lane 11</strong>, proceed to defined
+                          inspection area for PSO roadworthiness check, and return vehicle
+                          inspection report.
                         </td>
                         <td>
-                          Action Officer verifies documents, issues vehicle inspection report form; PSO inspects unit; verifies report, issues Order of Payment &amp; feedback form.
+                          Action Officer verifies documents, issues vehicle inspection report form;
+                          PSO inspects unit; verifies report, issues Order of Payment &amp; feedback
+                          form.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Lane 11 / PSO Inspector</span>
                         </td>
@@ -1952,12 +1730,12 @@
                           <strong>Pay MTOP Fees</strong><br />
                           Proceed to City Treasurer's Office to pay assessed fees.
                         </td>
-                        <td>
-                          CTO Collector receives payment and issues Official Receipt.
-                        </td>
+                        <td>CTO Collector receives payment and issues Official Receipt.</td>
                         <td>
                           <span class="fee-tag">Per TOP List</span><br />
-                          <small style="color:#64748b">City Ord. No. 13-2007</small>
+                          <small style="color: var(--color-text-light)"
+                            >City Ord. No. 13-2007</small
+                          >
                         </td>
                         <td><span class="personnel-tag">CTO Revenue Collector</span></td>
                       </tr>
@@ -1965,12 +1743,14 @@
                         <td><span class="step-badge">3</span></td>
                         <td>
                           <strong>Claim MTOP &amp; Sticker</strong><br />
-                          Proceed to <strong>Lane 10 (Releasing MTOP)</strong>, submit Official Receipt and Feedback Form, and sign logbook.
+                          Proceed to <strong>Lane 10 (Releasing MTOP)</strong>, submit Official
+                          Receipt and Feedback Form, and sign logbook.
                         </td>
                         <td>
-                          Encodes and prints Mayor's Permit in 2 copies, routes for signature (BPLO &amp; Local Chief Executive), releases permit and official sticker.
+                          Encodes and prints Mayor's Permit in 2 copies, routes for signature (BPLO
+                          &amp; Local Chief Executive), releases permit and official sticker.
                         </td>
-                        <td>—</td>
+                        <td>N/A</td>
                         <td>
                           <span class="personnel-tag">Lane 10 Releasing Officer</span>
                         </td>
@@ -1983,14 +1763,23 @@
 
             <!-- 3.3 Mayor's Clearance -->
             <div class="sub-service-card">
-              <div class="sub-service-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sub-svc-clearance">
+              <div
+                class="sub-service-header"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-controls="sub-svc-clearance"
+              >
                 <div class="sub-service-header-left">
                   <div class="sub-service-title-wrap">
                     <h3><i class="bi bi-patch-check"></i> Mayor's Clearance</h3>
-                    <span class="sub-service-badge"><i class="bi bi-geo-alt"></i> Face-to-Face (Lane 8)</span>
+                    <span class="sub-service-badge"
+                      ><i class="bi bi-geo-alt"></i> Face-to-Face (Lane 8)</span
+                    >
                   </div>
                   <p class="sub-service-desc">
-                    Official municipal clearance issued by the City Mayor for local employment, overseas travel, firearm licensing, and other legal transactions.
+                    Official municipal clearance issued by the City Mayor for local employment,
+                    overseas travel, firearm licensing, and other legal transactions.
                   </p>
                   <div class="sub-service-teaser">
                     <i class="bi bi-plus-circle-dotted"></i>
@@ -2007,11 +1796,42 @@
                   <div class="req-box">
                     <h4><i class="bi bi-file-earmark-check"></i> Checklist of Requirements</h4>
                     <ul class="req-list">
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Police Clearance:</strong> 1 original copy of Police Clearance.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>Barangay Clearance:</strong> 1 original copy of Barangay Clearance.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>City Court Clearance:</strong> 1 original copy of City Court Clearance.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><strong>City Prosecutor's Clearance:</strong> 1 original copy of City Prosecutor's Clearance.</span></li>
-                      <li><i class="bi bi-check-circle"></i> <span><span class="req-badge-conditional">Note</span> <strong>Clearance Retention:</strong> All original clearances are returned to the applicant together with the issued Mayor's Clearance.</span></li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Police Clearance:</strong> 1 original copy of Police
+                          Clearance.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>Barangay Clearance:</strong> 1 original copy of Barangay
+                          Clearance.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>City Court Clearance:</strong> 1 original copy of City Court
+                          Clearance.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><strong>City Prosecutor's Clearance:</strong> 1 original copy of City
+                          Prosecutor's Clearance.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span
+                          ><span class="req-badge-conditional">Note</span>
+                          <strong>Clearance Retention:</strong> All original clearances are returned
+                          to the applicant together with the issued Mayor's Clearance.</span
+                        >
+                      </li>
                     </ul>
                   </div>
                   <div class="req-box">
@@ -2035,7 +1855,9 @@
                         <div class="metric-icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="metric-content">
                           <div class="metric-label">Mode of Transaction</div>
-                          <div class="metric-value">Lane 8 (Intake &amp; Releasing) • City Mayor's Office</div>
+                          <div class="metric-value">
+                            Lane 8 (Intake &amp; Releasing) • City Mayor's Office
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2060,8 +1882,11 @@
                           <strong>Submit Clearance Requirements</strong><br />
                           Submit 4 original clearances to <strong>Lane 8</strong> and sign logbook.
                         </td>
-                        <td>Action Officer checks completeness, encodes/prints clearance in 2 copies, issues feedback form, directs to CTO.</td>
-                        <td>—</td>
+                        <td>
+                          Action Officer checks completeness, encodes/prints clearance in 2 copies,
+                          issues feedback form, directs to CTO.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Lane 8 Action Officer</span></td>
                       </tr>
                       <tr>
@@ -2078,10 +1903,14 @@
                         <td><span class="step-badge">3</span></td>
                         <td>
                           <strong>Claim Signed Clearance</strong><br />
-                          Return to <strong>Lane 8</strong>, submit OR &amp; Feedback Form, affix signature and thumbmark.
+                          Return to <strong>Lane 8</strong>, submit OR &amp; Feedback Form, affix
+                          signature and thumbmark.
                         </td>
-                        <td>Action Officer secures BPLO initial, releases document &amp; original requirements, directs client to City Mayor's Office for final signature.</td>
-                        <td>—</td>
+                        <td>
+                          Action Officer secures BPLO initial, releases document &amp; original
+                          requirements, directs client to City Mayor's Office for final signature.
+                        </td>
+                        <td>N/A</td>
                         <td><span class="personnel-tag">Lane 8 Action Officer</span></td>
                       </tr>
                     </tbody>
@@ -2089,9 +1918,7 @@
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </section>
 
@@ -2104,7 +1931,8 @@
               <span>BPLO Key Personnel &amp; Lane Officers</span>
             </h2>
             <p>
-              Frontline action officers and lane supervisors dedicated to serving business taxpayers in Legazpi City.
+              Frontline action officers and lane supervisors dedicated to serving business taxpayers
+              in Legazpi City.
             </p>
           </div>
           <div class="staff-grid" id="staff-grid-container">
@@ -2112,7 +1940,7 @@
             <div class="staff-card">
               <h4>Ms. Asuncion C. Viñas</h4>
               <p class="staff-role">Head of Office</p>
-              <p>REA, REB, CGDH I – BPLO</p>
+              <p>REA, REB, CGDH I - BPLO</p>
             </div>
             <div class="staff-card">
               <h4>Kristine M. Torres</h4>
@@ -2130,7 +1958,7 @@
               <div class="staff-card">
                 <h4>Joanelli E. Alejo</h4>
                 <p class="staff-role">Admin. Assistant V</p>
-                <p>Lane 4 (Express Lane — Fast-Track Renewals)</p>
+                <p>Lane 4 (Express Lane. Fast-Track Renewals)</p>
               </div>
               <div class="staff-card">
                 <h4>Rolando A. Abion, Jr.</h4>
@@ -2145,12 +1973,12 @@
               <div class="staff-card">
                 <h4>Carlos A. Banton</h4>
                 <p class="staff-role">Admin. Aide VI</p>
-                <p>Lane 1 (Priority Lane — Senior, PWD, Pregnant)</p>
+                <p>Lane 1 (Priority Lane. Senior, PWD, Pregnant)</p>
               </div>
               <div class="staff-card">
                 <h4>Amelia A. Arevalo</h4>
                 <p class="staff-role">Admin. Assistant I</p>
-                <p>Lane 3 (Bulk Lane — Multiple Applications)</p>
+                <p>Lane 3 (Bulk Lane. Multiple Applications)</p>
               </div>
               <div class="staff-card">
                 <h4>Jose J. Kallos, Jr.</h4>
@@ -2165,17 +1993,22 @@
               <div class="staff-card">
                 <h4>Rebecca S. Añonuevo</h4>
                 <p class="staff-role">Admin. Aide II</p>
-                <p>Lane 9 (Releasing Area — Permits, Plates &amp; Stickers)</p>
+                <p>Lane 9 (Releasing Area. Permits, Plates &amp; Stickers)</p>
               </div>
               <div class="staff-card">
                 <h4>Roviean Q. Monreal &amp; Georgina F. Dela Cruz</h4>
                 <p class="staff-role">Admin. Aide I &amp; II</p>
-                <p>Lane 10 &amp; 11 (MTOP — Tricycle Permitting &amp; Releasing)</p>
+                <p>Lane 10 &amp; 11 (MTOP. Tricycle Permitting &amp; Releasing)</p>
               </div>
             </div>
           </div>
 
-          <button type="button" class="staff-expand-btn" id="btn-toggle-staff" aria-expanded="false">
+          <button
+            type="button"
+            class="staff-expand-btn"
+            id="btn-toggle-staff"
+            aria-expanded="false"
+          >
             <i class="bi bi-chevron-down"></i>
             <span>View All Staff &amp; Lane Officers (12)</span>
           </button>
@@ -2195,22 +2028,48 @@
 
             <div class="contact-card">
               <h4><i class="bi bi-telephone-fill"></i> Direct Contact Lines</h4>
-              <p><strong>BPLO Action Hotline:</strong> <a href="tel:09158727722">0915-872-7722</a></p>
-              <p><strong>Official Emails:</strong> <a href="mailto:legpermit2@gmail.com">legpermit2@gmail.com</a> | <a href="mailto:legbplo@gmail.com">legbplo@gmail.com</a></p>
+              <p>
+                <strong>BPLO Action Hotline:</strong> <a href="tel:09158727722">0915-872-7722</a>
+              </p>
+              <p>
+                <strong>Official Emails:</strong>
+                <a href="mailto:legpermit2@gmail.com">legpermit2@gmail.com</a> |
+                <a href="mailto:legbplo@gmail.com">legbplo@gmail.com</a>
+              </p>
               <p><strong>Head of Office:</strong> Ms. Asuncion C. Viñas, REA, REB, CGDH I</p>
             </div>
 
             <div class="contact-card">
               <h4><i class="bi bi-chat-dots"></i> Feedback Mechanism</h4>
-              <p>Accomplish the Client Satisfaction Measurement (CSM) feedback form issued during transactions or available at Lane 9.</p>
-              <p>Feedback is collated quarterly for CHRMO and submitted under the Harmonized CSM to ARTA to continually improve service delivery.</p>
+              <p>
+                Accomplish the Client Satisfaction Measurement (CSM) feedback form issued during
+                transactions or available at Lane 9.
+              </p>
+              <p>
+                Feedback is collated quarterly for CHRMO and submitted under the Harmonized CSM to
+                ARTA to continually improve service delivery.
+              </p>
             </div>
 
             <div class="contact-card">
-              <h4><i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) &amp; CCB</h4>
-              <p><strong>ARTA Complaints Email:</strong> <a href="mailto:complaints@arta.gov.ph">complaints@arta.gov.ph</a> | 1-ARTA (2782)</p>
-              <p><strong>Presidential Complaint Center (PCC):</strong> Hotline 8888 | <a href="mailto:pcc@malacanang.gov.ph">pcc@malacanang.gov.ph</a></p>
-              <p><strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS) | <a href="mailto:email@contactcenterngbayan.gov.ph">email@contactcenterngbayan.gov.ph</a></p>
+              <h4>
+                <i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) &amp;
+                CCB
+              </h4>
+              <p>
+                <strong>ARTA Complaints Email:</strong>
+                <a href="mailto:complaints@arta.gov.ph">complaints@arta.gov.ph</a> | 1-ARTA (2782)
+              </p>
+              <p>
+                <strong>Presidential Complaint Center (PCC):</strong> Hotline 8888 |
+                <a href="mailto:pcc@malacanang.gov.ph">pcc@malacanang.gov.ph</a>
+              </p>
+              <p>
+                <strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS) |
+                <a href="mailto:email@contactcenterngbayan.gov.ph"
+                  >email@contactcenterngbayan.gov.ph</a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -2219,7 +2078,7 @@
       <!-- Data Source Section (White Background) -->
       <section class="bpl-section">
         <div class="container">
-          <p class="data-source" style="text-align: center; margin: 0;">
+          <p class="data-source" style="text-align: center; margin: 0">
             <i class="bi bi-info-circle"></i> Source:
             <a
               href="https://legazpi.gov.ph/wp-content/uploads/2026/07/BUSINESS-PERMITS-AND-LICENSING-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
@@ -2239,11 +2098,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi City with transparent access to municipal services, business permits, and local governance.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -2275,9 +2135,9 @@
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
-              <li><a href="../services/business">Business Services</a></li>
-              <li><a href="../services/tax-payments">Tax Payments</a></li>
-              <li><a href="../government/">Government Directory</a></li>
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -2289,30 +2149,6 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://www.filipizen.com/partners/albay_legazpi/bpls/billing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Filipizen Online Billing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.filipizen.com/partners/albay_legazpi/bpls/newbusiness"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Filipizen New Business</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.filipizen.com/partners/albay_legazpi/bpls/renewbusiness"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Filipizen Permit Renewal</a
-                >
-              </li>
-              <li>
                 <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
@@ -2323,28 +2159,90 @@
                 >
               </li>
               <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
                 <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
                   >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div class="footer-cost" role="status">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
+            >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
@@ -2352,7 +2250,7 @@
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer"
-              >All public information sourced from official government portals &amp; the Legazpi City Citizen's Charter.</span
+              >All public information sourced from official government portals.</span
             >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>
@@ -2412,8 +2310,8 @@
           const toggleBtn = tabContainer.querySelector('.btn-toggle-all');
           if (!toggleBtn) return;
           const cards = tabContainer.querySelectorAll('.sub-service-card');
-          const allOpen = Array.from(cards).every(card => card.classList.contains('is-open'));
-          
+          const allOpen = Array.from(cards).every((card) => card.classList.contains('is-open'));
+
           if (allOpen) {
             toggleBtn.setAttribute('aria-expanded', 'true');
             toggleBtn.innerHTML = '<i class="bi bi-arrows-collapse"></i> <span>Collapse All</span>';
@@ -2492,11 +2390,13 @@
             if (isExpanded) {
               staffExtraContainer.classList.remove('show');
               staffToggleBtn.setAttribute('aria-expanded', 'false');
-              staffToggleBtn.innerHTML = '<i class="bi bi-chevron-down"></i> <span>View All Staff &amp; Lane Officers (12)</span>';
+              staffToggleBtn.innerHTML =
+                '<i class="bi bi-chevron-down"></i> <span>View All Staff &amp; Lane Officers (12)</span>';
             } else {
               staffExtraContainer.classList.add('show');
               staffToggleBtn.setAttribute('aria-expanded', 'true');
-              staffToggleBtn.innerHTML = '<i class="bi bi-chevron-up"></i> <span>Show Key Officers Only (Top 3)</span>';
+              staffToggleBtn.innerHTML =
+                '<i class="bi bi-chevron-up"></i> <span>Show Key Officers Only (Top 3)</span>';
             }
           });
         }

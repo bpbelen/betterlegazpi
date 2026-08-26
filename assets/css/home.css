@@ -1,0 +1,597 @@
+/* ==========================================================================
+   BetterLegazpi - Home Page Stylesheet
+   Glassmorphism hero + service-card system, plus the History summary widget
+   ========================================================================== */
+
+:root {
+  --glass-bg-light: rgba(255, 255, 255, 0.78);
+  --glass-bg-dark: rgba(15, 23, 42, 0.82);
+  --glass-border-light: rgba(255, 255, 255, 0.45);
+  --glass-border-dark: rgba(255, 255, 255, 0.12);
+  --glass-shadow:
+    0 16px 40px -8px rgba(0, 0, 0, 0.08), 0 0 1px 1px rgba(255, 255, 255, 0.2) inset;
+  --glass-blur: blur(20px) saturate(180%);
+  /* Aliased onto the sitewide radius scale rather than reinventing off-scale
+     values (was 9999px / 20px, vs. the site's --radius-pill / --radius-lg). */
+  --pill-radius: var(--radius-pill);
+  --primary-gradient: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);
+}
+
+[data-theme='dark'] {
+  --glass-bg-light: rgba(15, 23, 42, 0.85);
+  --glass-border-light: rgba(255, 255, 255, 0.1);
+  --glass-shadow:
+    0 16px 40px -8px rgba(0, 0, 0, 0.45), 0 0 1px 1px rgba(255, 255, 255, 0.06) inset;
+}
+
+.glass-card {
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border-light);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 20px 48px -10px rgba(194, 65, 12, 0.15),
+    0 0 1px 1px rgba(255, 255, 255, 0.3) inset;
+}
+
+.glass-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 18px;
+  min-height: 44px;
+  border-radius: var(--pill-radius);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none !important;
+  text-align: center;
+}
+
+[data-theme='dark'] .glass-pill {
+  background: rgba(30, 41, 59, 0.75);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+}
+
+.glass-pill:hover {
+  background: rgba(194, 65, 12, 0.15);
+  border-color: var(--color-accent-text);
+  color: #c2410c !important;
+  transform: scale(1.03);
+}
+
+.glass-pill:active {
+  transform: scale(0.97);
+}
+
+/* Hero V3 Glassmorphism, Ibalong-inspired backdrop (art: Boyet Abrenica) */
+.home-hero-v3 {
+  position: relative;
+  padding: 88px 0 68px;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.75) 100%),
+    url('../images/banners/home-hero-boyet-abrenica.webp') center center / cover no-repeat;
+  overflow: visible;
+}
+
+/* The hero card sits over a photo in both themes, so its glass tint is
+   theme-independent: a dark, low-opacity navy that lets the backdrop's
+   color and shapes bleed through as blurred texture (the point of
+   glassmorphism), with light text throughout to keep contrast solid
+   regardless of what part of the photo shows behind it. */
+.hero-glass-container {
+  padding: 48px;
+  background: rgba(15, 23, 42, 0.42);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  position: relative;
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .hero-glass-container {
+    padding: 28px 20px;
+  }
+}
+
+.hero-photo-credit {
+  position: absolute;
+  bottom: 12px;
+  right: 18px;
+  z-index: 10;
+}
+
+.hero-photo-credit a {
+  font-size: 0.72rem;
+  padding: 4px 12px;
+  opacity: 0.85;
+  color: var(--color-text);
+  border-radius: var(--pill-radius);
+}
+
+[data-theme='dark'] .hero-photo-credit a {
+  color: #cbd5e1;
+}
+
+.hero-title-v3 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  /* "BetterLegazpi.org" is a single unbreakable 17-character token at
+     ~35px, so on a 320px phone the text overflowed its box by 35px and
+     dragged the whole page sideways. `break-word` only breaks a word
+     that cannot fit on a line of its own, so wider screens are
+     unaffected. */
+  overflow-wrap: break-word;
+  /* Always the light-on-dark-glass gradient, in both themes, since the
+     card is a fixed dark tint over the hero photo regardless of theme. */
+  background: linear-gradient(135deg, #f8fafc 0%, #fb923c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+}
+
+.hero-glass-container .home-hero-v3-text > p,
+.hero-quick-access-label {
+  color: #f1f5f9 !important;
+}
+
+.hero-quick-access {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.hero-quick-access-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Smaller pill size scoped to this row only; .glass-pill keeps its normal
+   size everywhere else it's used (eyebrow badges, photo credit, etc.). */
+.hero-quick-access .glass-pill {
+  padding: 6px 14px;
+  /* min-height stays 44px (the sitewide touch-target floor at mobile) even
+     though the pill looks smaller now, thanks to the tighter padding/font. */
+  font-size: 0.8rem;
+}
+
+.hero-search-glass {
+  position: relative;
+  margin: 32px 0 20px;
+  z-index: 50;
+}
+
+.hero-search-input-glass {
+  width: 100%;
+  padding: 18px 60px 18px 24px;
+  font-size: 1.05rem;
+  border-radius: var(--pill-radius);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .hero-search-input-glass {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #f8fafc;
+}
+
+.hero-search-input-glass:focus {
+  border-color: var(--color-accent-text);
+  box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.2);
+}
+
+.hero-search-btn-glass {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  color: white !important;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-search-btn-glass:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 16px rgba(194, 65, 12, 0.3);
+}
+
+/* Primary Button Text Contrast Fix */
+.btn.btn-primary {
+  background: var(--primary-gradient) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(194, 65, 12, 0.35);
+}
+
+.btn.btn-primary:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(194, 65, 12, 0.45);
+}
+
+/* 6th Card - View All Services Contrast Fix */
+.home-service-card--all.glass-card {
+  background: var(--primary-gradient) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.home-service-card--all.glass-card .home-service-content h3,
+.home-service-card--all.glass-card .home-service-content p,
+.home-service-card--all.glass-card .home-service-arrow {
+  color: #ffffff !important;
+}
+
+.home-service-card--all.glass-card .home-service-icon {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+
+/* Top-edge light-catch highlight, layered onto the existing glass shadow
+   for a more physical sense of a refracting edge. */
+.glass-card,
+.hero-glass-container {
+  box-shadow:
+    var(--glass-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+[data-theme='dark'] .glass-card,
+[data-theme='dark'] .hero-glass-container {
+  box-shadow:
+    var(--glass-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Reduced-transparency fallback: swap every glass surface for an opaque
+   one and drop the blur, per prefers-reduced-transparency. --color-bg
+   is already theme-reactive, so one rule covers both themes. */
+@media (prefers-reduced-transparency: reduce) {
+  .glass-card,
+  .hero-glass-container,
+  .glass-pill,
+  .hero-search-input-glass {
+    background: var(--color-bg) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   History Summary Widget
+   -------------------------------------------------------------------------- */
+.history-section {
+  background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+}
+
+.history-section .home-stats-v2-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.history-section .home-stats-v2-header h2 i {
+  color: var(--color-accent-text);
+}
+
+.history-content {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: start;
+}
+
+.history-timeline {
+  position: relative;
+  padding-left: 36px;
+}
+
+.history-timeline::before {
+  content: '';
+  position: absolute;
+  left: 13px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, #c2410c 0%, rgba(194, 65, 12, 0.2) 100%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Icon lives on the timeline marker itself now, kept separate from the
+   year pill (was fused inside it), so the two read as distinct pieces. */
+.timeline-marker {
+  position: absolute;
+  left: -36px;
+  top: 8px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-gradient);
+  color: white;
+  font-size: 0.75rem;
+  border: 2px solid var(--color-bg);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.2);
+}
+
+.timeline-content {
+  padding: 18px 22px;
+}
+
+.timeline-year {
+  display: inline-block;
+  background: var(--primary-gradient);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--pill-radius);
+  margin-bottom: 8px;
+}
+
+.history-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 100px;
+}
+
+.history-card {
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.history-card-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .history-content {
+    grid-template-columns: 1fr;
+  }
+
+  .history-summary {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .history-card {
+    flex: 1 1 280px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tourism Spotlight (glassmorphism, same recipe as the hero)
+   -------------------------------------------------------------------------- */
+.tourism-spotlight-photo {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: url('https://cdn.tatlerasia.com/tatlerasia/i/2024/05/20180347-img-5042_cover_1600x1200.jpg')
+    center 30% / cover no-repeat;
+}
+
+.tourism-spotlight-glass {
+  position: relative;
+  padding: 40px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.tourism-spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  align-items: center;
+}
+
+.tourism-spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  background: rgba(234, 88, 12, 0.25);
+  border: 1px solid rgba(251, 146, 60, 0.45);
+  color: #ffedd5;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.tourism-spotlight-heading {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  line-height: 1.2;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #f8fafc 0%, #fb923c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tourism-spotlight-text {
+  color: #f1f5f9;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.tourism-spotlight-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Theme-independent light pills, since this card's dark tint doesn't change
+   with the site theme (same reasoning as the hero's glass-pill treatment). */
+.tourism-spotlight-glass .glass-pill {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.tourism-spotlight-glass .glass-pill:hover {
+  background: rgba(234, 88, 12, 0.35) !important;
+  border-color: #fb923c !important;
+  color: #ffffff !important;
+}
+
+.tourism-spotlight-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.tourism-spotlight-stat {
+  padding: 18px;
+  text-align: center;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.tourism-spotlight-stat-num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fb923c;
+  margin-bottom: 4px;
+}
+
+.tourism-spotlight-stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+/* --------------------------------------------------------------------------
+   Light-mode fallback for plain .glass-card usages on a white section
+   -------------------------------------------------------------------------- */
+/* These three combine .glass-card with no opaque override of their own
+   (unlike .home-service-card, .home-stat-card, .home-leader-card, .map-card,
+   which all set their own solid background). Because this stylesheet loads
+   after style.css, .glass-card's rule now wins cascade ties over any
+   same-specificity override in style.css -- harmless where the override was
+   already a near-white color, but these three had none at all and washed
+   out to near-invisible against a plain white/light section. */
+.home-fb,
+.history-card,
+.timeline-content {
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+[data-theme='dark'] .home-fb,
+[data-theme='dark'] .history-card,
+[data-theme='dark'] .timeline-content {
+  background: var(--glass-bg-light);
+  border-color: var(--glass-border-light);
+}
+
+/* --------------------------------------------------------------------------
+   Leadership contact rows -- full-width no-fill outline pills, replacing the
+   old glass-pill wrapper (which read as washed-out on a solid-white card
+   since the pill's own translucent fill barely showed) and the icon-circle
+   iteration before it (no icons, per direction). Border reuses the role
+   badge's own (soft, 10%-tint) fill color -- the saturated accent-text color
+   read as too bold for an outline -- so the pill's own text stays plain
+   body-text color.
+   -------------------------------------------------------------------------- */
+.home-leader-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+  min-height: 44px;
+  padding: 8px 18px;
+  border: 1.5px solid rgba(194, 65, 12, 0.1);
+  border-radius: var(--pill-radius);
+  /* !important: the sitewide [data-theme='dark'] a:not(.btn) rule otherwise
+     wins on specificity and forces link-blue text onto these anchors. */
+  color: var(--color-text) !important;
+  text-decoration: none !important;
+  transition: background 0.2s ease;
+}
+
+a.home-leader-contact-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] a.home-leader-contact-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}

@@ -110,232 +110,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- Apple-style Glassmorphism & High-End Visual Design System -->
-    <style>
-      :root {
-        --glass-bg-light: rgba(255, 255, 255, 0.78);
-        --glass-bg-dark: rgba(15, 23, 42, 0.82);
-        --glass-border-light: rgba(255, 255, 255, 0.45);
-        --glass-border-dark: rgba(255, 255, 255, 0.12);
-        --glass-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.08), 0 0 1px 1px rgba(255, 255, 255, 0.2) inset;
-        --glass-blur: blur(20px) saturate(180%);
-        --pill-radius: 9999px;
-        --card-radius: 20px;
-        --primary-gradient: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);
-      }
-
-      [data-theme='dark'] {
-        --glass-bg-light: rgba(15, 23, 42, 0.85);
-        --glass-border-light: rgba(255, 255, 255, 0.1);
-        --glass-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.45), 0 0 1px 1px rgba(255, 255, 255, 0.06) inset;
-      }
-
-      .glass-card {
-        background: var(--glass-bg-light);
-        backdrop-filter: var(--glass-blur);
-        -webkit-backdrop-filter: var(--glass-blur);
-        border: 1px solid var(--glass-border-light);
-        box-shadow: var(--glass-shadow);
-        border-radius: var(--card-radius);
-        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-      }
-
-      .glass-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 20px 48px -10px rgba(194, 65, 12, 0.15), 0 0 1px 1px rgba(255, 255, 255, 0.3) inset;
-      }
-
-      .glass-pill {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 8px 18px;
-        border-radius: var(--pill-radius);
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.45);
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: var(--color-text);
-        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        text-decoration: none !important;
-        text-align: center;
-      }
-
-      [data-theme='dark'] .glass-pill {
-        background: rgba(30, 41, 59, 0.75);
-        border-color: rgba(255, 255, 255, 0.12);
-        color: #f8fafc;
-      }
-
-      .glass-pill:hover {
-        background: rgba(194, 65, 12, 0.15);
-        border-color: #c2410c;
-        color: #c2410c !important;
-        transform: scale(1.03);
-      }
-
-      .glass-pill:active {
-        transform: scale(0.97);
-      }
-
-      /* Hero V3 Glassmorphism Override with Tatler Asia Mayon Backdrop */
-      .home-hero-v3 {
-        position: relative;
-        padding: 88px 0 68px;
-        background: linear-gradient(180deg, rgba(15, 23, 42, 0.52) 0%, rgba(15, 23, 42, 0.85) 100%),
-                    url('https://cdn.tatlerasia.com/tatlerasia/i/2024/05/20180347-img-5042_cover_1600x1200.jpg') center 40%/cover no-repeat;
-        overflow: visible;
-      }
-
-      .hero-glass-container {
-        padding: 48px;
-        background: var(--glass-bg-light);
-        backdrop-filter: var(--glass-blur);
-        -webkit-backdrop-filter: var(--glass-blur);
-        border: 1px solid var(--glass-border-light);
-        border-radius: 28px;
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
-        position: relative;
-        overflow: visible;
-      }
-
-      @media (max-width: 768px) {
-        .hero-glass-container {
-          padding: 28px 20px;
-        }
-      }
-
-      .hero-photo-credit {
-        position: absolute;
-        bottom: 12px;
-        right: 18px;
-        z-index: 10;
-      }
-
-      .hero-photo-credit a {
-        font-size: 0.72rem;
-        padding: 4px 12px;
-        opacity: 0.85;
-        color: var(--color-text);
-        border-radius: var(--pill-radius);
-      }
-
-      [data-theme='dark'] .hero-photo-credit a {
-        color: #cbd5e1;
-      }
-
-      .hero-title-v3 {
-        font-size: clamp(2.2rem, 5vw, 3.5rem);
-        font-weight: 800;
-        letter-spacing: -0.03em;
-        line-height: 1.1;
-        /* "BetterLegazpi.org" is a single unbreakable 17-character token at
-           ~35px, so on a 320px phone the text overflowed its box by 35px and
-           dragged the whole page sideways. `break-word` only breaks a word
-           that cannot fit on a line of its own, so wider screens are
-           unaffected. */
-        overflow-wrap: break-word;
-        background: linear-gradient(135deg, #1e293b 0%, #c2410c 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 16px;
-      }
-
-      [data-theme='dark'] .hero-title-v3 {
-        background: linear-gradient(135deg, #f8fafc 0%, #fb923c 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .hero-search-glass {
-        position: relative;
-        margin: 32px 0 20px;
-        z-index: 50;
-      }
-
-      .hero-search-input-glass {
-        width: 100%;
-        padding: 18px 60px 18px 24px;
-        font-size: 1.05rem;
-        border-radius: var(--pill-radius);
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        backdrop-filter: blur(12px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-        outline: none;
-        transition: all 0.3s ease;
-      }
-
-      [data-theme='dark'] .hero-search-input-glass {
-        background: rgba(15, 23, 42, 0.9);
-        border-color: rgba(255, 255, 255, 0.18);
-        color: #f8fafc;
-      }
-
-      .hero-search-input-glass:focus {
-        border-color: #c2410c;
-        box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.2);
-      }
-
-      .hero-search-btn-glass {
-        position: absolute;
-        right: 8px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        background: var(--primary-gradient);
-        color: white !important;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .hero-search-btn-glass:hover {
-        transform: translateY(-50%) scale(1.05);
-        box-shadow: 0 6px 16px rgba(194, 65, 12, 0.3);
-      }
-
-      /* Primary Button Text Contrast Fix */
-      .btn.btn-primary {
-        background: var(--primary-gradient) !important;
-        color: #ffffff !important;
-        border: none !important;
-        box-shadow: 0 4px 14px rgba(194, 65, 12, 0.35);
-      }
-
-      .btn.btn-primary:hover {
-        background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%) !important;
-        color: #ffffff !important;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(194, 65, 12, 0.45);
-      }
-
-      /* 6th Card - View All Services Contrast Fix */
-      .home-service-card--all.glass-card {
-        background: var(--primary-gradient) !important;
-        border: 1px solid rgba(255, 255, 255, 0.25) !important;
-      }
-
-      .home-service-card--all.glass-card .home-service-content h3,
-      .home-service-card--all.glass-card .home-service-content p,
-      .home-service-card--all.glass-card .home-service-arrow {
-        color: #ffffff !important;
-      }
-
-      .home-service-card--all.glass-card .home-service-icon {
-        background: rgba(255, 255, 255, 0.22) !important;
-        color: #ffffff !important;
-      }
-    </style>
-
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
@@ -365,7 +139,10 @@
           "@type": "AdministrativeArea",
           "name": "Legazpi City, Albay"
         },
-        "sameAs": ["https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/", "https://legazpi.gov.ph"]
+        "sameAs": [
+          "https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/",
+          "https://legazpi.gov.ph"
+        ]
       }
     </script>
     <script type="application/ld+json">
@@ -388,6 +165,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/accessibility.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
     <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
@@ -477,7 +255,12 @@
         </nav>
 
         <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
@@ -518,10 +301,11 @@
           <div class="hero-glass-container">
             <div class="home-hero-v3-text">
               <h1 class="hero-title-v3">Welcome to BetterLegazpi.org</h1>
-              <p style="font-size: 1.15rem; opacity: 0.9; max-width: 65ch; line-height: 1.6;">
-                Access municipal services, government updates, transparency reports, and public resources for the people of Legazpi City, Albay.
+              <p style="font-size: 1.15rem; opacity: 0.9; max-width: 65ch; line-height: 1.6">
+                Access municipal services, government updates, transparency reports, and public
+                resources for the people of Legazpi City, Albay.
               </p>
-              
+
               <div class="hero-search-glass">
                 <form class="search-form" role="search" action="services/">
                   <input
@@ -534,17 +318,23 @@
                     autocomplete="off"
                   />
                   <button type="submit" class="hero-search-btn-glass" aria-label="Submit search">
-                    <i class="bi bi-search" style="font-size: 1.1rem;"></i>
+                    <i class="bi bi-search" style="font-size: 1.1rem"></i>
                   </button>
                 </form>
               </div>
 
-              <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 16px;">
-                <span style="font-size: 0.85rem; font-weight: 600; opacity: 0.75;">Popular Quick Access:</span>
-                <a href="service-details/city-civil-registrar.html#on-time-birth" class="glass-pill">
+              <div class="hero-quick-access">
+                <span class="hero-quick-access-label">Popular Quick Access:</span>
+                <a
+                  href="service-details/city-civil-registrar.html#on-time-birth"
+                  class="glass-pill"
+                >
                   <i class="bi bi-file-earmark-person"></i> Birth Certificate
                 </a>
-                <a href="service-details/business-permits-licensing.html#new-business" class="glass-pill">
+                <a
+                  href="service-details/business-permits-licensing.html#new-business"
+                  class="glass-pill"
+                >
                   <i class="bi bi-briefcase"></i> Business Permit
                 </a>
                 <a href="service-details/cto-services.html#service-7" class="glass-pill">
@@ -553,25 +343,39 @@
                 <a href="services/health" class="glass-pill">
                   <i class="bi bi-heart-pulse"></i> Health Facilities
                 </a>
-                <a href="tourism/" class="glass-pill" style="border-color: rgba(194, 65, 12, 0.4); color: #c2410c;">
+                <a href="tourism/" class="glass-pill">
                   <i class="bi bi-compass-fill"></i> Tourism &amp; Attractions
                 </a>
               </div>
 
-              <div style="display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap;">
-                <a href="services/" class="btn btn-primary" style="border-radius: var(--pill-radius); padding: 12px 28px; font-weight: 600;">
-                  <i class="bi bi-grid-fill" style="margin-right: 6px;"></i> Browse All Services
+              <div style="display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap">
+                <a
+                  href="services/"
+                  class="btn btn-primary"
+                  style="border-radius: var(--pill-radius); padding: 12px 28px; font-weight: 600"
+                >
+                  <i class="bi bi-grid-fill" style="margin-right: 6px"></i> Browse All Services
                 </a>
-                <a href="contact/" class="btn btn-outline" style="border-radius: var(--pill-radius); padding: 12px 28px; font-weight: 600;">
-                  <i class="bi bi-telephone-outbound" style="margin-right: 6px;"></i> Contact Us
+                <a
+                  href="contact/"
+                  class="btn btn-outline"
+                  style="border-radius: var(--pill-radius); padding: 12px 28px; font-weight: 600"
+                >
+                  <i class="bi bi-telephone-outbound" style="margin-right: 6px"></i> Contact Us
                 </a>
               </div>
             </div>
 
-            <!-- Photo credit badge -->
+            <!-- Art credit badge -->
             <div class="hero-photo-credit">
-              <a href="https://www.tatlerasia.com" target="_blank" rel="noopener noreferrer" class="glass-pill" title="Mayon Volcano, Legazpi City">
-                <i class="bi bi-camera-fill"></i> Photo: Tatler Asia
+              <a
+                href="https://dateline-ibalon.com/2022/12/the-heroic-art-of-boyet-abrenica/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="glass-pill"
+                title="Ibalong-inspired illustration by Boyet Abrenica"
+              >
+                <i class="bi bi-palette-fill"></i> Art: Boyet Abrenica
               </a>
             </div>
           </div>
@@ -639,56 +443,74 @@
       </section>
 
       <!-- Explore Legazpi Tourism Spotlight -->
-      <section class="section" style="padding-top: 0;">
+      <section class="section" style="padding-top: 0">
         <div class="container">
-          <div class="glass-card" style="position: relative; overflow: hidden; padding: 40px; border-radius: 28px; background: linear-gradient(135deg, rgba(194, 65, 12, 0.08) 0%, rgba(234, 88, 12, 0.03) 100%), var(--glass-bg-light); border: 1px solid rgba(194, 65, 12, 0.25);">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center;">
-              <div>
-                <div style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px; border-radius: 9999px; background: rgba(194, 65, 12, 0.12); color: #c2410c; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 14px;">
-                  <i class="bi bi-compass-fill"></i> Tourism &amp; City Guide
+          <div class="tourism-spotlight-photo">
+            <div class="tourism-spotlight-glass">
+              <div class="tourism-spotlight-grid">
+                <div>
+                  <span class="tourism-spotlight-badge">
+                    <i class="bi bi-compass-fill"></i> Tourism &amp; City Guide
+                  </span>
+                  <h2 class="tourism-spotlight-heading">
+                    Discover 330+ Tourist Spots, Dining &amp; Adventures
+                  </h2>
+                  <p class="tourism-spotlight-text">
+                    Explore Mayon Volcano viewpoints, famous Bicolano cuisine (Pinangat, Sili Ice
+                    Cream), ATV lava trail tours, accredited hotels, and coastal parks with live
+                    PSGC barangay search and Google Maps directions.
+                  </p>
+                  <div class="tourism-spotlight-ctas">
+                    <a href="tourism/" class="btn btn-primary" style="border-radius: var(--pill-radius); font-weight: 600">
+                      <i class="bi bi-compass-fill" style="margin-right: 6px"></i> Explore Tourism
+                      Portal
+                    </a>
+                    <a href="tourism/attractions" class="glass-pill">
+                      <i class="bi bi-geo-alt-fill"></i> Attractions
+                    </a>
+                    <a href="tourism/experience" class="glass-pill">
+                      <i class="bi bi-compass-fill"></i> The Experience
+                    </a>
+                    <a href="tourism/food" class="glass-pill">
+                      <i class="bi bi-cup-hot-fill"></i> Food &amp; Dining
+                    </a>
+                    <a href="tourism/accommodations" class="glass-pill">
+                      <i class="bi bi-building-fill"></i> Where to Stay
+                    </a>
+                  </div>
                 </div>
-                <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 12px; line-height: 1.2;">
-                  Discover 330+ Tourist Spots, Dining &amp; Adventures
-                </h2>
-                <p style="color: var(--color-text-light); font-size: 0.98rem; line-height: 1.6; margin-bottom: 24px;">
-                  Explore Mayon Volcano viewpoints, famous Bicolano cuisine (Pinangat, Sili Ice Cream), ATV lava trail tours, accredited hotels, and coastal parks with live PSGC barangay search and Google Maps directions.
-                </p>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                  <a href="tourism/" class="btn btn-primary" style="border-radius: var(--pill-radius); padding: 12px 24px; font-weight: 600;">
-                    <i class="bi bi-compass-fill" style="margin-right: 6px;"></i> Explore Tourism Portal
-                  </a>
-                  <a href="tourism/attractions" class="glass-pill" style="padding: 10px 18px;">
-                    <i class="bi bi-geo-alt-fill"></i> Attractions
-                  </a>
-                  <a href="tourism/experience" class="glass-pill" style="padding: 10px 18px;">
-                    <i class="bi bi-compass-fill"></i> The Experience
-                  </a>
-                  <a href="tourism/food" class="glass-pill" style="padding: 10px 18px;">
-                    <i class="bi bi-cup-hot-fill"></i> Food &amp; Dining
-                  </a>
-                  <a href="tourism/accommodations" class="glass-pill" style="padding: 10px 18px;">
-                    <i class="bi bi-building-fill"></i> Where to Stay
-                  </a>
+                <div class="tourism-spotlight-stats">
+                  <div class="tourism-spotlight-stat">
+                    <div class="tourism-spotlight-stat-num">14</div>
+                    <div class="tourism-spotlight-stat-label">Tourist Attractions</div>
+                  </div>
+                  <div class="tourism-spotlight-stat">
+                    <div class="tourism-spotlight-stat-num">240+</div>
+                    <div class="tourism-spotlight-stat-label">Food &amp; Dining</div>
+                  </div>
+                  <div class="tourism-spotlight-stat">
+                    <div class="tourism-spotlight-stat-num">9</div>
+                    <div class="tourism-spotlight-stat-label">Adventures &amp; ATV</div>
+                  </div>
+                  <div class="tourism-spotlight-stat">
+                    <div class="tourism-spotlight-stat-num">60+</div>
+                    <div class="tourism-spotlight-stat-label">Accredited Stays</div>
+                  </div>
                 </div>
               </div>
-              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
-                <div class="glass-card" style="padding: 18px; text-align: center; border-radius: 18px;">
-                  <div style="font-size: 1.8rem; font-weight: 800; color: #c2410c; margin-bottom: 4px;">14</div>
-                  <div style="font-size: 0.85rem; font-weight: 600;">Tourist Attractions</div>
-                </div>
-                <div class="glass-card" style="padding: 18px; text-align: center; border-radius: 18px;">
-                  <div style="font-size: 1.8rem; font-weight: 800; color: #ea580c; margin-bottom: 4px;">240+</div>
-                  <div style="font-size: 0.85rem; font-weight: 600;">Food &amp; Dining</div>
-                </div>
-                <div class="glass-card" style="padding: 18px; text-align: center; border-radius: 18px;">
-                  <div style="font-size: 1.8rem; font-weight: 800; color: #059669; margin-bottom: 4px;">9</div>
-                  <div style="font-size: 0.85rem; font-weight: 600;">Adventures &amp; ATV</div>
-                </div>
-                <div class="glass-card" style="padding: 18px; text-align: center; border-radius: 18px;">
-                  <div style="font-size: 1.8rem; font-weight: 800; color: #0284c7; margin-bottom: 4px;">60+</div>
-                  <div style="font-size: 0.85rem; font-weight: 600;">Accredited Stays</div>
-                </div>
-              </div>
+            </div>
+
+            <!-- Art credit badge -->
+            <div class="hero-photo-credit">
+              <a
+                href="https://www.tatlerasia.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="glass-pill"
+                title="Mayon Volcano, Legazpi City"
+              >
+                <i class="bi bi-camera-fill"></i> Photo: Tatler Asia
+              </a>
             </div>
           </div>
         </div>
@@ -754,7 +576,7 @@
               </div>
             </div>
             <div class="map-column">
-              <div class="map-card glass-card" style="padding: 16px;">
+              <div class="map-card glass-card" style="padding: 16px">
                 <div
                   id="map-container"
                   role="application"
@@ -799,197 +621,104 @@
           <div class="history-content">
             <div class="history-timeline">
               <div class="timeline-item" data-year="1587">
-                <div class="timeline-marker"></div>
+                <div class="timeline-marker"><i class="bi bi-water" aria-hidden="true"></i></div>
                 <div class="timeline-content glass-card">
                   <span class="timeline-year">1587</span>
                   <p>
-                    Legazpi originated as <strong>Sawangan</strong>, a small fishing and farming settlement on Albay Gulf placed under Franciscan care.
+                    Legazpi originated as <strong>Sawangan</strong>, a small fishing and farming
+                    settlement on Albay Gulf placed under Franciscan care.
                   </p>
                 </div>
               </div>
               <div class="timeline-item" data-year="1814">
-                <div class="timeline-marker"></div>
+                <div class="timeline-marker"><i class="bi bi-fire" aria-hidden="true"></i></div>
                 <div class="timeline-content glass-card">
                   <span class="timeline-year">1814</span>
                   <p>
-                    Catastrophic eruption of <strong>Mayon Volcano</strong> on February 1 destroyed Sawangan. Survivors later established <strong>Binanuahan</strong>.
+                    Catastrophic eruption of <strong>Mayon Volcano</strong> on February 1 destroyed
+                    Sawangan. Survivors later established <strong>Binanuahan</strong>.
                   </p>
                 </div>
               </div>
               <div class="timeline-item" data-year="1856">
-                <div class="timeline-marker"></div>
+                <div class="timeline-marker"><i class="bi bi-file-earmark-text-fill" aria-hidden="true"></i></div>
                 <div class="timeline-content glass-card">
                   <span class="timeline-year">1856</span>
                   <p>
-                    Officially named <strong>Legazpi</strong> by Royal Decree on September 22, 1856, in honor of Spanish conquistador <em>Miguel López de Legazpi</em>.
+                    Officially named <strong>Legazpi</strong> by Royal Decree on September 22, 1856,
+                    in honor of Spanish conquistador <em>Miguel López de Legazpi</em>.
                   </p>
                 </div>
               </div>
               <div class="timeline-item" data-year="1892">
-                <div class="timeline-marker"></div>
+                <div class="timeline-marker"><i class="bi bi-bank" aria-hidden="true"></i></div>
                 <div class="timeline-content glass-card">
                   <span class="timeline-year">1892</span>
                   <p>
-                    Achieved <strong>first cityhood status</strong> under the Becerra Law, combining Legazpi, Albay, and Daraga.
+                    Achieved <strong>first cityhood status</strong> under the Becerra Law, combining
+                    Legazpi, Albay, and Daraga.
                   </p>
                 </div>
               </div>
               <div class="timeline-item" data-year="1959">
-                <div class="timeline-marker"></div>
+                <div class="timeline-marker"><i class="bi bi-patch-check-fill" aria-hidden="true"></i></div>
                 <div class="timeline-content glass-card">
                   <span class="timeline-year">1959</span>
                   <p>
-                    Cityhood restored permanently under <strong>Republic Act No. 2234</strong> on June 12, 1959, serving as the official city charter.
+                    Cityhood restored permanently under <strong>Republic Act No. 2234</strong> on
+                    June 12, 1959, serving as the official city charter.
                   </p>
                 </div>
               </div>
               <div class="timeline-item" data-year="Present">
-                <div class="timeline-marker"></div>
+                <div class="timeline-marker"><i class="bi bi-star-fill" aria-hidden="true"></i></div>
                 <div class="timeline-content glass-card">
                   <span class="timeline-year">Present</span>
                   <p>
-                    Legazpi stands as the <strong>Regional Administrative Capital</strong> of the Bicol Region (Region V) and premier tourism hub.
+                    Legazpi stands as the <strong>Regional Administrative Capital</strong> of the
+                    Bicol Region (Region V) and premier tourism hub.
                   </p>
                 </div>
               </div>
             </div>
             <div class="history-summary">
               <div class="history-card glass-card">
-                <div class="history-card-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+                <div class="history-card-icon">
+                  <i class="bi bi-shield-check" aria-hidden="true"></i>
+                </div>
                 <div class="history-card-content">
                   <h4>Regional Capital</h4>
-                  <p>Designated administrative hub of Bicol Region, hosting national government agencies and regional offices.</p>
+                  <p>
+                    Designated administrative hub of Bicol Region, hosting national government
+                    agencies and regional offices.
+                  </p>
                 </div>
               </div>
               <div class="history-card glass-card">
-                <div class="history-card-icon"><i class="bi bi-compass" aria-hidden="true"></i></div>
+                <div class="history-card-icon">
+                  <i class="bi bi-compass" aria-hidden="true"></i>
+                </div>
                 <div class="history-card-content">
                   <h4>City of Fun &amp; Adventure</h4>
-                  <p>Famous for Mayon Volcano's iconic majestic cone, Embarcadero waterfront, and vibrant eco-tourism.</p>
+                  <p>
+                    Famous for Mayon Volcano's iconic majestic cone, Embarcadero waterfront, and
+                    vibrant eco-tourism.
+                  </p>
                 </div>
               </div>
               <div class="history-card glass-card">
                 <div class="history-card-icon"><i class="bi bi-award" aria-hidden="true"></i></div>
                 <div class="history-card-content">
                   <h4>Top Competitive City</h4>
-                  <p>Consistently recognized among the nation's most competitive, resilient, and business-friendly component cities.</p>
+                  <p>
+                    Consistently recognized among the nation's most competitive, resilient, and
+                    business-friendly component cities.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <style>
-          .history-section {
-            background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
-          }
-          .history-section .home-stats-v2-header h2 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-          }
-          .history-section .home-stats-v2-header h2 i {
-            color: #c2410c;
-          }
-          .history-content {
-            display: grid;
-            grid-template-columns: 1fr 340px;
-            gap: 32px;
-            align-items: start;
-          }
-          .history-timeline {
-            position: relative;
-            padding-left: 28px;
-          }
-          .history-timeline::before {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 8px;
-            bottom: 8px;
-            width: 2px;
-            background: linear-gradient(
-              180deg,
-              #c2410c 0%,
-              rgba(194, 65, 12, 0.2) 100%
-            );
-            border-radius: 2px;
-          }
-          .timeline-item {
-            position: relative;
-            padding-bottom: 20px;
-          }
-          .timeline-item:last-child {
-            padding-bottom: 0;
-          }
-          .timeline-marker {
-            position: absolute;
-            left: -28px;
-            top: 14px;
-            width: 14px;
-            height: 14px;
-            background: var(--color-bg);
-            border: 3px solid #c2410c;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            z-index: 1;
-          }
-          .timeline-item:hover .timeline-marker {
-            background: #c2410c;
-            transform: scale(1.25);
-            box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.2);
-          }
-          .timeline-content {
-            padding: 18px 22px;
-          }
-          .timeline-year {
-            display: inline-block;
-            background: var(--primary-gradient);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: var(--pill-radius);
-            margin-bottom: 8px;
-          }
-          .history-summary {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            position: sticky;
-            top: 100px;
-          }
-          .history-card {
-            padding: 20px;
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-          }
-          .history-card-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--primary-gradient);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: white;
-            font-size: 1.25rem;
-          }
-          @media (max-width: 900px) {
-            .history-content {
-              grid-template-columns: 1fr;
-            }
-            .history-summary {
-              position: static;
-              flex-direction: row;
-              flex-wrap: wrap;
-            }
-            .history-card {
-              flex: 1 1 280px;
-            }
-          }
-        </style>
       </section>
 
       <!-- Latest Updates Section (Official Facebook Page Feed) -->
@@ -1001,26 +730,45 @@
               <i class="bi bi-arrow-right"></i> <span>View News Archive</span>
             </a>
           </div>
-          <div class="home-fb glass-card" style="padding: 32px;">
+          <div class="home-fb glass-card" style="padding: 32px">
             <div class="home-fb-intro">
-              <span class="home-fb-eyebrow glass-pill" style="margin-bottom: 12px;">
-                <i class="bi bi-facebook" aria-hidden="true" style="color: #1877f2;"></i> Official Facebook Page
-              </span>
-              <h3 class="home-fb-title" style="font-size: 1.6rem; font-weight: 700; margin-bottom: 12px;">
-                Real-time updates, straight from City Government of Legazpi
+              <h3
+                class="home-fb-title"
+                style="font-size: 1.6rem; font-weight: 700; margin-bottom: 12px"
+              >
+                Real-time updates, straight from City Government of Legazpi's Facebook Page
               </h3>
-              <p class="home-fb-text" style="opacity: 0.9; line-height: 1.6; margin-bottom: 20px;">
-                Follow the Official City Government of Legazpi Facebook Page for the latest public announcements, weather advisories, local events, and community updates.
+              <p class="home-fb-text" style="opacity: 0.9; line-height: 1.6; margin-bottom: 20px">
+                Follow us for the latest public announcements, weather advisories, local events,
+                and community updates.
               </p>
-              <ul class="home-fb-points" style="margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px;">
+              <ul
+                class="home-fb-points"
+                style="margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px"
+              >
                 <li>
-                  <i class="bi bi-megaphone-fill" aria-hidden="true" style="color: #c2410c;"></i> Official announcements &amp; advisories
+                  <i
+                    class="bi bi-megaphone-fill"
+                    aria-hidden="true"
+                    style="color: var(--color-accent-text)"
+                  ></i>
+                  Official announcements &amp; advisories
                 </li>
                 <li>
-                  <i class="bi bi-calendar-event-fill" aria-hidden="true" style="color: #c2410c;"></i> Events &amp; community programs
+                  <i
+                    class="bi bi-calendar-event-fill"
+                    aria-hidden="true"
+                    style="color: var(--color-accent-text)"
+                  ></i>
+                  Events &amp; community programs
                 </li>
                 <li>
-                  <i class="bi bi-broadcast" aria-hidden="true" style="color: #c2410c;"></i> Live posts straight from LGU Legazpi
+                  <i
+                    class="bi bi-broadcast"
+                    aria-hidden="true"
+                    style="color: var(--color-accent-text)"
+                  ></i>
+                  Live posts straight from LGU Legazpi
                 </li>
               </ul>
               <a
@@ -1028,14 +776,22 @@
                 href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style="border-radius: var(--pill-radius); padding: 12px 24px;"
+                style="border-radius: var(--pill-radius); padding: 12px 24px"
               >
-                <i class="bi bi-facebook" aria-hidden="true" style="margin-right: 6px;"></i> Visit Official Facebook Page
+                <i class="bi bi-facebook" aria-hidden="true" style="margin-right: 6px"></i> Visit
+                Official Facebook Page
               </a>
             </div>
 
             <div class="home-fb-feed">
-              <div class="fb-plugin-wrap" style="border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border-light);">
+              <div
+                class="fb-plugin-wrap"
+                style="
+                  border-radius: 16px;
+                  overflow: hidden;
+                  border: 1px solid var(--glass-border-light);
+                "
+              >
                 <iframe
                   src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FCity-Government-of-Legazpi-61565693764942%2F&amp;tabs=timeline&amp;width=500&amp;height=700&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true"
                   width="500"
@@ -1045,17 +801,18 @@
                   frameborder="0"
                   allowfullscreen="true"
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  title="City Government of Legazpi Official Facebook Page — Live Updates"
+                  title="City Government of Legazpi Official Facebook Page. Live Updates"
                 ></iframe>
               </div>
-              <p class="home-fb-fallback" style="margin-top: 12px; font-size: 0.875rem;">
+              <p class="home-fb-fallback" style="margin-top: 12px; font-size: 0.875rem">
                 Can't see the live feed?
                 <a
                   href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style="color: #c2410c; text-decoration: underline;"
-                >Open directly on Facebook</a>
+                  style="color: var(--color-accent-text); text-decoration: underline"
+                  >Open directly on Facebook</a
+                >
               </p>
             </div>
           </div>
@@ -1073,33 +830,97 @@
             </a>
           </div>
           <div class="home-leadership-grid">
-            <div class="home-leader-card glass-card" style="padding: 28px; text-align: center; display: flex; flex-direction: column; align-items: center;">
-              <div class="home-leader-badge glass-pill" style="margin-bottom: 12px; background: rgba(194, 65, 12, 0.1); color: #c2410c; font-weight: 600;">
+            <div
+              class="home-leader-card glass-card"
+              style="
+                padding: 28px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              "
+            >
+              <div
+                class="home-leader-badge glass-pill"
+                style="
+                  margin-bottom: 12px;
+                  background: rgba(194, 65, 12, 0.1);
+                  color: var(--color-accent-badge-text);
+                  font-weight: 600;
+                "
+              >
                 City Mayor
               </div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 14px; text-align: center;">Hon. Hisham B. Ismail</h3>
-              <div class="home-leader-contacts" style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 10px;">
-                <a href="mailto:legazpicitymayorsoffice@gmail.com" class="glass-pill" style="width: 100%; max-width: 360px; justify-content: center; text-align: center;">
-                  <i class="bi bi-envelope"></i>
-                  <span>legazpicitymayorsoffice@gmail.com</span>
+              <h3
+                style="font-size: 1.5rem; font-weight: 700; margin-bottom: 14px; text-align: center"
+              >
+                Hon. Hisham B. Ismail
+              </h3>
+              <div
+                class="home-leader-contacts"
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  width: 100%;
+                  gap: 10px;
+                "
+              >
+                <a
+                  href="mailto:legazpicitymayorsoffice@gmail.com"
+                  class="home-leader-contact-item"
+                >
+                  legazpicitymayorsoffice@gmail.com
                 </a>
-                <a href="tel:09274143768" class="glass-pill" style="width: 100%; max-width: 360px; justify-content: center; text-align: center;">
-                  <i class="bi bi-telephone"></i> <span>(0927) 414 3768</span>
+                <a href="tel:09274143768" class="home-leader-contact-item">
+                  (0927) 414 3768
                 </a>
               </div>
             </div>
-            <div class="home-leader-card glass-card" style="padding: 28px; text-align: center; display: flex; flex-direction: column; align-items: center;">
-              <div class="home-leader-badge glass-pill" style="margin-bottom: 12px; background: rgba(194, 65, 12, 0.1); color: #c2410c; font-weight: 600;">
+            <div
+              class="home-leader-card glass-card"
+              style="
+                padding: 28px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              "
+            >
+              <div
+                class="home-leader-badge glass-pill"
+                style="
+                  margin-bottom: 12px;
+                  background: rgba(194, 65, 12, 0.1);
+                  color: var(--color-accent-badge-text);
+                  font-weight: 600;
+                "
+              >
                 City Vice Mayor
               </div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 14px; text-align: center;">Hon. Luis Felipe L. Gutierrez</h3>
-              <div class="home-leader-contacts" style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 10px;">
-                <span class="glass-pill" style="opacity: 0.65; cursor: default; width: 100%; max-width: 360px; justify-content: center; text-align: center;">
-                  <i class="bi bi-envelope"></i>
-                  <span>Unlisted</span>
+              <h3
+                style="font-size: 1.5rem; font-weight: 700; margin-bottom: 14px; text-align: center"
+              >
+                Hon. Luis Felipe L. Gutierrez
+              </h3>
+              <div
+                class="home-leader-contacts"
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  width: 100%;
+                  gap: 10px;
+                "
+              >
+                <span
+                  class="home-leader-contact-item"
+                  style="cursor: default; color: var(--color-text-light)"
+                >
+                  Unlisted
                 </span>
-                <a href="tel:0528205199" class="glass-pill" style="width: 100%; max-width: 360px; justify-content: center; text-align: center;">
-                  <i class="bi bi-telephone"></i> <span>(052) 820-5199</span>
+                <a href="tel:0528205199" class="home-leader-contact-item">
+                  (052) 820-5199
                 </a>
               </div>
             </div>
@@ -1121,15 +942,35 @@
               <div class="home-contact-v2-icon"><i class="bi bi-telephone-fill"></i></div>
               <div class="home-contact-v2-content">
                 <h3>Mobile (Globe)</h3>
-                <p class="home-contact-v2-value" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">0927 414 3768</p>
+                <p
+                  class="home-contact-v2-value"
+                  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+                >
+                  0927 414 3768
+                </p>
                 <span class="home-contact-v2-note">Mon-Fri: 8:00 AM - 5:00 PM</span>
               </div>
             </a>
-            <a href="mailto:legazpicitymayorsoffice@gmail.com" class="home-contact-v2-card glass-card">
+            <a
+              href="mailto:legazpicitymayorsoffice@gmail.com"
+              class="home-contact-v2-card glass-card"
+            >
               <div class="home-contact-v2-icon"><i class="bi bi-envelope-fill"></i></div>
               <div class="home-contact-v2-content">
                 <h3>Email</h3>
-                <p class="home-contact-v2-value" style="font-size: clamp(0.78rem, 0.95vw, 0.88rem); letter-spacing: -0.2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="legazpicitymayorsoffice@gmail.com">legazpicitymayorsoffice@gmail.com</p>
+                <p
+                  class="home-contact-v2-value"
+                  style="
+                    font-size: clamp(0.78rem, 0.95vw, 0.88rem);
+                    letter-spacing: -0.2px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                  title="legazpicitymayorsoffice@gmail.com"
+                >
+                  legazpicitymayorsoffice@gmail.com
+                </p>
                 <span class="home-contact-v2-note">Response within 24 hours</span>
               </div>
             </a>
@@ -1137,7 +978,12 @@
               <div class="home-contact-v2-icon"><i class="bi bi-geo-alt-fill"></i></div>
               <div class="home-contact-v2-content">
                 <h3>Address</h3>
-                <p class="home-contact-v2-value" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Legazpi City Hall</p>
+                <p
+                  class="home-contact-v2-value"
+                  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+                >
+                  Legazpi City Hall
+                </p>
                 <span class="home-contact-v2-note">Rizal St., Legazpi City, Albay 4500</span>
               </div>
             </div>
@@ -1156,28 +1002,40 @@
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
-                href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                href="https://www.facebook.com/betterlegazpi.org"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-              ><i class="bi bi-facebook"></i></a>
+                ><i class="bi bi-facebook"></i
+              ></a>
               <a
-                href="https://betterlegazpi.org"
+                href="https://www.linkedin.com/company/betterlegazpi/"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Website"
-              ><i class="bi bi-globe"></i></a>
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://discord.com/invite/betterlegazpi"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                ><i class="bi bi-discord"></i
+              ></a>
             </div>
           </div>
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
+              <li><a href="services/">Services Directory</a></li>
               <li><a href="tourism/">Tourism &amp; Travel</a></li>
               <li><a href="history/">History</a></li>
               <li><a href="sitemap/">Sitemap</a></li>
@@ -1191,22 +1049,37 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a>
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Open Data Philippines</a
+                >
               </li>
               <li>
-                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
               </li>
               <li>
-                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Legazpi Portal</a>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
               </li>
               <li>
-                <a href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/" target="_blank" rel="noopener noreferrer">LGU Legazpi Facebook</a>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
               </li>
               <li>
-                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">BLGF Portal</a>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
               </li>
               <li>
-                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer">CMCI DTI Portal</a>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
+                >
               </li>
             </ul>
           </div>
@@ -1235,7 +1108,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abakada.org"
-              ><img
+                ><img
                   src="assets/images/logo/abakada-footer.svg"
                   alt="Abakada.org"
                   class="footer-partner-logo"
@@ -1248,7 +1121,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-              ><img
+                ><img
                   src="assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
@@ -1261,7 +1134,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-              ><img
+                ><img
                   src="assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
@@ -1276,13 +1149,14 @@
           <div class="footer-copyright">
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
-            <span class="footer-copyright-disclaimer">All public information sourced from official government portals.</span>
+            <span class="footer-copyright-disclaimer"
+              >All public information sourced from official government portals.</span
+            >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>
         </div>
       </div>
     </footer>
-
     <!-- Volunteer Recruitment Popup -->
     <div
       id="vol-popup-overlay"
@@ -1308,10 +1182,15 @@
             draggable="false"
           />
           <h2 id="vol-popup-title" class="vol-popup-title">Be Part of Something Greater</h2>
-          <p class="vol-popup-header-sub">Legazpi City, Albay deserves a world-class digital government. Help us build it.</p>
+          <p class="vol-popup-header-sub">
+            Legazpi City, Albay deserves a world-class digital government. Help us build it.
+          </p>
         </div>
         <div class="vol-popup-body">
-          <p class="vol-popup-lead">We are looking for passionate <strong>Legazpeños</strong> who want to serve their community through their craft.</p>
+          <p class="vol-popup-lead">
+            We are looking for passionate <strong>Legazpeños</strong> who want to serve their
+            community through their craft.
+          </p>
           <div class="vol-popup-roles" role="list">
             <div class="vol-popup-role" role="listitem">
               <i class="bi bi-code-slash" aria-hidden="true"></i>
@@ -1335,11 +1214,7 @@
             </div>
           </div>
           <div class="vol-popup-actions">
-            <a
-              href="mailto:volunteer@betterlegazpi.org"
-              class="vol-popup-cta"
-              rel="noopener"
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="vol-popup-cta" rel="noopener">
               <i class="bi bi-envelope-heart-fill" aria-hidden="true"></i>
               I Want to Volunteer
             </a>

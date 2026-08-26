@@ -47,13 +47,16 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-        <style>
+    <link rel="stylesheet" href="../assets/css/service-hub.css" />
+    <style>
       .mswdo-section {
         padding: 40px 0;
       }
+
       .mswdo-section.alt-bg {
         background: var(--color-bg-alt);
       }
+
       .section-header {
         margin-bottom: 20px;
         display: flex;
@@ -62,6 +65,7 @@
         flex-wrap: wrap;
         gap: 12px;
       }
+
       .section-header h2 {
         font-size: 1.125rem;
         color: var(--color-text);
@@ -70,21 +74,25 @@
         align-items: center;
         gap: 8px;
       }
+
       .section-header h2 i {
         color: var(--color-primary);
         font-size: 1rem;
       }
+
       .section-header p {
         color: var(--color-text-light);
         font-size: 0.8125rem;
         margin: 0;
       }
+
       .quick-stats {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
         margin-bottom: 20px;
       }
+
       .stat-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -92,11 +100,13 @@
         padding: 12px;
         text-align: center;
       }
+
       .stat-card i {
         font-size: 1rem;
         color: var(--color-primary);
         margin-bottom: 4px;
       }
+
       .stat-card h4 {
         font-size: 0.625rem;
         color: var(--color-text-light);
@@ -104,18 +114,14 @@
         font-weight: 500;
         text-transform: uppercase;
       }
-      .stat-card p {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
+
       .req-summary-grid {
         display: grid;
         grid-template-columns: 1.8fr 1fr;
         gap: 14px;
         margin-bottom: 14px;
       }
+
       .req-subheading {
         font-size: 0.6875rem;
         font-weight: 700;
@@ -126,14 +132,7 @@
         padding-bottom: 3px;
         border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
       }
-      .req-subheading:first-of-type {
-        margin-top: 0;
-      }
-      .summary-metrics {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
+
       .metric-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -143,6 +142,7 @@
         align-items: flex-start;
         gap: 10px;
       }
+
       .metric-icon {
         width: 28px;
         height: 28px;
@@ -156,9 +156,7 @@
         flex-shrink: 0;
         margin-top: 2px;
       }
-      .metric-content {
-        flex: 1;
-      }
+
       .metric-label {
         font-size: 0.625rem;
         text-transform: uppercase;
@@ -167,21 +165,25 @@
         letter-spacing: 0.5px;
         margin-bottom: 3px;
       }
+
       .metric-value {
         font-size: 0.78125rem;
         font-weight: 600;
         color: var(--color-text);
         line-height: 1.4;
       }
+
       .metric-value.free {
         color: var(--color-text);
       }
+
       .metric-list {
         display: flex;
         flex-direction: column;
         gap: 4px;
         margin-top: 2px;
       }
+
       .metric-list-item {
         display: flex;
         align-items: flex-start;
@@ -190,18 +192,21 @@
         color: var(--color-text);
         line-height: 1.35;
       }
+
       .metric-list-item i {
         color: var(--color-primary);
         font-size: 0.6875rem;
         margin-top: 2px;
         flex-shrink: 0;
       }
+
       .metric-note {
         font-size: 0.6875rem;
         color: var(--color-text-light);
         line-height: 1.3;
         margin-top: 2px;
       }
+
       .process-table {
         width: 100%;
         table-layout: fixed;
@@ -212,32 +217,39 @@
         border: 1px solid rgba(0, 0, 0, 0.06);
         font-size: 0.75rem;
       }
+
       .process-table th:nth-child(1),
       .process-table td:nth-child(1) {
         width: 4%;
         text-align: center;
       }
+
       .process-table th:nth-child(2),
       .process-table td:nth-child(2) {
         width: 18%;
       }
+
       .process-table th:nth-child(3),
       .process-table td:nth-child(3) {
         width: 28%;
       }
+
       .process-table th:nth-child(4),
       .process-table td:nth-child(4) {
         width: 18%;
       }
+
       .process-table th:nth-child(5),
       .process-table td:nth-child(5) {
         width: 12%;
       }
+
       .process-table th:nth-child(6),
       .process-table td:nth-child(6) {
         width: 20%;
         padding-right: 12px;
       }
+
       .process-table th {
         background: var(--color-primary);
         color: white;
@@ -247,17 +259,17 @@
         font-size: 0.6875rem;
         text-transform: uppercase;
       }
+
       .process-table td {
         padding: 10px 10px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.04);
         vertical-align: top;
       }
-      .process-table tr:last-child td {
-        border-bottom: none;
-      }
+
       .process-table tr:hover {
         background: rgba(0, 50, 160, 0.02);
       }
+
       .step-badge {
         display: inline-flex;
         align-items: center;
@@ -270,11 +282,13 @@
         font-weight: 700;
         border-radius: 4px;
       }
+
       .client-step-text {
         font-weight: 600;
         color: var(--color-text);
         line-height: 1.35;
       }
+
       .agency-action-text {
         color: var(--color-text-light);
         font-weight: 400;
@@ -282,20 +296,24 @@
         line-height: 1.4;
         margin-bottom: 3px;
       }
+
       .agency-action-text:last-child {
         margin-bottom: 0;
       }
+
       .fee-tier-list {
         display: flex;
         flex-direction: column;
         gap: 3px;
       }
+
       .fee-tier-item {
         font-size: 0.71875rem;
         line-height: 1.3;
         color: var(--color-text);
         word-break: break-word;
       }
+
       .caveat-note {
         font-size: 0.65rem;
         color: var(--color-text-light);
@@ -304,6 +322,7 @@
         line-height: 1.25;
         font-style: italic;
       }
+
       .personnel-tag {
         display: inline-block;
         background: rgba(0, 50, 160, 0.06);
@@ -318,6 +337,7 @@
         line-height: 1.35;
         max-width: 100%;
       }
+
       .service-tabs {
         display: flex;
         flex-wrap: wrap;
@@ -325,6 +345,7 @@
         margin-bottom: 20px;
         justify-content: center;
       }
+
       .service-tab {
         padding: 8px 12px;
         background: white;
@@ -340,27 +361,20 @@
         white-space: nowrap;
         flex-shrink: 0;
       }
-      .service-tab:hover {
-        border-color: var(--color-primary);
-        color: var(--color-primary);
-      }
+
       .service-tab.active {
         background: var(--color-primary);
         border-color: var(--color-primary);
         color: white;
       }
-      .service-content {
-        display: none;
-      }
-      .service-content.active {
-        display: block;
-      }
+
       .req-box {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         padding: 16px;
       }
+
       .req-box h3 {
         font-size: 0.875rem;
         color: var(--color-text);
@@ -369,9 +383,11 @@
         align-items: center;
         gap: 8px;
       }
+
       .req-box h3 i {
         color: var(--color-primary);
       }
+
       .category-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -379,6 +395,7 @@
         margin-top: 10px;
         margin-bottom: 14px;
       }
+
       .category-card {
         background: rgba(0, 50, 160, 0.02);
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -387,20 +404,24 @@
         cursor: pointer;
         transition: all 0.2s ease;
       }
+
       .category-card:hover {
         border-color: var(--color-primary);
         background: rgba(0, 50, 160, 0.04);
       }
+
       .category-card.active {
         background: rgba(0, 50, 160, 0.07);
         border: 2px solid var(--color-primary);
       }
+
       .category-card h5 {
         font-size: 0.75rem;
         font-weight: 700;
         color: var(--color-primary);
         margin-bottom: 4px;
       }
+
       .category-req-list {
         margin: 6px 0 0 0;
         padding: 0;
@@ -408,6 +429,7 @@
         font-size: 0.6875rem;
         color: var(--color-text);
       }
+
       .category-req-list li {
         margin-bottom: 3px;
         line-height: 1.35;
@@ -415,29 +437,29 @@
         align-items: flex-start;
         gap: 5px;
       }
+
       .category-req-list li i {
         color: var(--color-primary);
         font-size: 0.75rem;
         flex-shrink: 0;
         margin-top: 1px;
       }
+
       .sub-table {
         display: none;
       }
+
       .sub-table.active {
         display: table;
       }
-      .contact-info-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-      }
+
       .contact-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         padding: 16px;
       }
+
       .contact-card h4 {
         font-size: 0.8125rem;
         margin: 0 0 6px 0;
@@ -446,14 +468,13 @@
         align-items: center;
         gap: 6px;
       }
-      .contact-card h4 i {
-        color: var(--color-primary);
-      }
+
       .contact-card p {
         font-size: 0.75rem;
         color: var(--color-text-light);
         margin: 3px 0;
       }
+
       @media (max-width: 992px) {
         .req-summary-grid,
         .category-grid,
@@ -461,6 +482,7 @@
           grid-template-columns: 1fr;
         }
       }
+
       @media (max-width: 768px) {
         .quick-stats {
           grid-template-columns: repeat(2, 1fr);
@@ -469,49 +491,41 @@
           font-size: 0.6875rem;
         }
         .service-tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 20px;
-        justify-content: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 20px;
+          justify-content: center;
+        }
       }
-      }
-    
-      .staff-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
+
       .staff-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         padding: 14px;
       }
+
       .staff-card h4 {
         font-size: 0.8125rem;
         margin: 0 0 4px 0;
         color: var(--color-text);
         font-weight: 700;
       }
-      .staff-card p {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-      }
+
       @media (max-width: 992px) {
         .staff-grid {
           grid-template-columns: repeat(2, 1fr);
         }
       }
+
       @media (max-width: 576px) {
         .staff-grid {
           grid-template-columns: 1fr;
         }
       }
-
     </style>
-      <script>
+    <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -525,7 +539,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -559,7 +573,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -570,14 +583,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -603,15 +613,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -641,8 +656,7 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="../services/">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="../services/">Services</a><span>/</span>
           <a href="../services/infrastructure">Infrastructure</a><span>/</span>
           <span aria-current="page">CPDO Services</span>
         </nav>
@@ -654,7 +668,8 @@
             <span class="page-header-badge"><i class="bi bi-building"></i> CPDO</span>
             <h1>City Planning & Development Office</h1>
             <p class="page-header-desc">
-              Your consolidated guide in urban planning, locational clearance, and subdivision development permits in Legazpi City
+              Your consolidated guide in urban planning, locational clearance, and subdivision
+              development permits in Legazpi City
             </p>
           </div>
         </div>
@@ -691,17 +706,27 @@
       <!-- CPDO Services Section (Grey Background) -->
       <section class="mswdo-section alt-bg">
         <div class="container">
-
           <!-- Section Header -->
           <div class="section-header">
             <h2><i class="bi bi-grid-3x3-gap"></i> CPDO Services</h2>
-            <p>Select a service below to view the detailed requirements, process, and turn-around time</p>
+            <p>
+              Select a service below to view the detailed requirements, process, and turn-around
+              time
+            </p>
           </div>
-<div class="service-tabs">
-            <button class="service-tab active" data-tab="backline-comm">Internal Communications</button>
-            <button class="service-tab" data-tab="locational-clearances">Locational Clearances</button>
-            <button class="service-tab" data-tab="land-development">Land Development Approvals</button>
-            <button class="service-tab" data-tab="housing-land-tenure">Housing & Land Tenure Programs</button>
+          <div class="service-tabs">
+            <button class="service-tab active" data-tab="backline-comm">
+              Internal Communications
+            </button>
+            <button class="service-tab" data-tab="locational-clearances">
+              Locational Clearances
+            </button>
+            <button class="service-tab" data-tab="land-development">
+              Land Development Approvals
+            </button>
+            <button class="service-tab" data-tab="housing-land-tenure">
+              Housing & Land Tenure Programs
+            </button>
             <button class="service-tab" data-tab="certifications-tab">Certifications</button>
             <button class="service-tab" data-tab="planning-research">Community Assistance</button>
           </div>
@@ -713,17 +738,42 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">SELECT SERVICE SUB-CATEGORY</div>
                 <div class="category-grid">
-                  
-                  <div class="category-card active" data-sub="incoming-comm" data-time="3 Days (Max)" data-fee="FREE (₱0.00)" data-type="Simple Transaction (Backline Service)">
+                  <div
+                    class="category-card active"
+                    data-sub="incoming-comm"
+                    data-time="3 Days (Max)"
+                    data-fee="FREE (₱0.00)"
+                    data-type="Simple Transaction (Backline Service)"
+                  >
                     <h5>Incoming Communications</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Official Letters, Transmittals, or Memos (1 original copy)</li><li><i class="bi bi-check2-circle"></i> Attachments & Supporting Documents (all relevant annexes)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Official Letters, Transmittals, or Memos
+                        (1 original copy)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Attachments & Supporting Documents (all
+                        relevant annexes)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="outgoing-comm" data-time="3 Days (Max)" data-fee="FREE (₱0.00)" data-type="Simple Transaction (Backline Service)">
+                  <div
+                    class="category-card"
+                    data-sub="outgoing-comm"
+                    data-time="3 Days (Max)"
+                    data-fee="FREE (₱0.00)"
+                    data-type="Simple Transaction (Backline Service)"
+                  >
                     <h5>Outgoing Communications</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Official Letters, Transmittals, or Memos (1 signed original)</li><li><i class="bi bi-check2-circle"></i> Recipient details (Addressee name, office address, email)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Official Letters, Transmittals, or Memos
+                        (1 signed original)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Recipient details (Addressee name,
+                        office address, email)
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -749,14 +799,15 @@
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="backline-comm-type">Simple Transaction (Backline Service)</div>
+                      <div class="metric-value" id="backline-comm-type">
+                        Simple Transaction (Backline Service)
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            
             <!-- Process Table for Incoming Communications -->
             <table class="process-table sub-table active" id="sub-incoming-comm">
               <thead>
@@ -772,43 +823,56 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits Communication (physically or electronically) to CPDO-Administrative Section or email / FB Page</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receives and records Communication in Logbook</div><div class="agency-action-text">1.2 Forwards to Office Head / Assistant / OIC for appropriate action</div><div class="agency-action-text">1.3 Referred to Concerned Personnel</div>
+                    <span class="client-step-text"
+                      >Submits Communication (physically or electronically) to CPDO-Administrative
+                      Section or email / FB Page</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Receives and records Communication in Logbook
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Forwards to Office Head / Assistant / OIC for appropriate action
+                    </div>
+                    <div class="agency-action-text">1.3 Referred to Concerned Personnel</div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>3 days (max)</td>
                   <td>
                     <span class="personnel-tag">Administrative Assistant I</span>
-<span class="personnel-tag">Administrative Aide IV</span>
-<span class="personnel-tag">Administrative Aide I</span>
-
+                    <span class="personnel-tag">Administrative Aide IV</span>
+                    <span class="personnel-tag">Administrative Aide I</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
                   <td><span class="client-step-text">Payment of fees</span></td>
                   <td>
-                    <div class="agency-action-text">2.0 Payment for this particular service is not applicable</div>
+                    <div class="agency-action-text">
+                      2.0 Payment for this particular service is not applicable
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Unlisted</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
                   <td><span class="client-step-text">Receive response / action</span></td>
                   <td>
-                    <div class="agency-action-text">3.0 Concerned Personnel acts upon Communication and dispatches reply/endorsement</div>
+                    <div class="agency-action-text">
+                      3.0 Concerned Personnel acts upon Communication and dispatches
+                      reply/endorsement
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CPDO Admin Staff</span>
-
                   </td>
                 </tr>
               </tbody>
@@ -828,44 +892,52 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Admin Staff receives outgoing communication from division</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Admin Staff receives outgoing communication and records in logbook</div>
+                    <span class="client-step-text"
+                      >Admin Staff receives outgoing communication from division</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Admin Staff receives outgoing communication and records in logbook
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>3 days (max)</td>
                   <td>
                     <span class="personnel-tag">Administrative Officer IV</span>
-<span class="personnel-tag">Administrative Assistant I</span>
-<span class="personnel-tag">Administrative Aide IV</span>
-<span class="personnel-tag">Administrative Aide I</span>
-
+                    <span class="personnel-tag">Administrative Assistant I</span>
+                    <span class="personnel-tag">Administrative Aide IV</span>
+                    <span class="personnel-tag">Administrative Aide I</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
                   <td><span class="client-step-text">Payment of fees</span></td>
                   <td>
-                    <div class="agency-action-text">2.0 Payment for this particular service is not applicable</div>
+                    <div class="agency-action-text">
+                      2.0 Payment for this particular service is not applicable
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Unlisted</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
                   <td><span class="client-step-text">Addressee receives communication</span></td>
                   <td>
-                    <div class="agency-action-text">3.0 Admin Staff forwards to Driver/Concerned Personnel for immediate dispatch or sends to addressee's email</div>
+                    <div class="agency-action-text">
+                      3.0 Admin Staff forwards to Driver/Concerned Personnel for immediate dispatch
+                      or sends to addressee's email
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CPDO Dispatch Personnel / Driver</span>
-
                   </td>
                 </tr>
               </tbody>
@@ -878,29 +950,153 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">SELECT SERVICE SUB-CATEGORY</div>
                 <div class="category-grid">
-                  
-                  <div class="category-card active" data-sub="locational-new-business" data-time="1 Day (Max)" data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance No. 14-0011-2019)" data-type="Simple Transaction (Government to Client)">
-                    <h5>Locational Clearance — New Business Permit Application</h5>
+                  <div
+                    class="category-card active"
+                    data-sub="locational-new-business"
+                    data-time="1 Day (Max)"
+                    data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance No. 14-0011-2019)"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
+                    <h5>Locational Clearance. New Business Permit Application</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Application Form for Business/Mayor's Permit (duly filled-out in JPEG)</li><li><i class="bi bi-check2-circle"></i> 1 page Sketch / Drawing of proposed business location</li><li><i class="bi bi-check2-circle"></i> 1 copy of Barangay Business Clearance</li><li><i class="bi bi-check2-circle"></i> Contract of Lease / Letter of Authorization / Consent / Affidavit of Undertaking (if property not owned)</li><li><i class="bi bi-check2-circle"></i> 1 copy of Occupancy Permit or Certification (for building where business is located)</li><li><i class="bi bi-check2-circle"></i> 1 original copy of previous Locational Clearance (if existing business with changes)</li><li><i class="bi bi-check2-circle"></i> 1 copy of DTI / SEC Certificate / CDA Registration</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Application Form for Business/Mayor's
+                        Permit (duly filled-out in JPEG)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 page Sketch / Drawing of proposed
+                        business location
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy of Barangay Business Clearance
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Contract of Lease / Letter of
+                        Authorization / Consent / Affidavit of Undertaking (if property not owned)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy of Occupancy Permit or
+                        Certification (for building where business is located)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original copy of previous Locational
+                        Clearance (if existing business with changes)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy of DTI / SEC Certificate / CDA
+                        Registration
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="locational-renewal-business" data-time="1 Day (Max)" data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)" data-type="Simple Transaction (Government to Client)">
-                    <h5>Locational Clearance — Business Permit Renewal</h5>
+                  <div
+                    class="category-card"
+                    data-sub="locational-renewal-business"
+                    data-time="1 Day (Max)"
+                    data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
+                    <h5>Locational Clearance. Business Permit Renewal</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 copy Application Form for Business Permit Renewal with updated gross income and employee count</li><li><i class="bi bi-check2-circle"></i> 1 set Sketch / Vicinity Plan of proposed business location</li><li><i class="bi bi-check2-circle"></i> 1 copy Barangay Business Clearance</li><li><i class="bi bi-check2-circle"></i> Contract of Lease / Authorization / Consent (if property not owned)</li><li><i class="bi bi-check2-circle"></i> 1 copy Affidavit of Non-Objection / Deed of Undertaking (if applicable)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Application Form for Business
+                        Permit Renewal with updated gross income and employee count
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 set Sketch / Vicinity Plan of proposed
+                        business location
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Barangay Business Clearance
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Contract of Lease / Authorization /
+                        Consent (if property not owned)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Affidavit of Non-Objection / Deed
+                        of Undertaking (if applicable)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="locational-building-permit" data-time="1 Day (Max)" data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)" data-type="Simple Transaction (Government to Client)">
-                    <h5>Locational Clearance — Building Permit</h5>
+                  <div
+                    class="category-card"
+                    data-sub="locational-building-permit"
+                    data-time="1 Day (Max)"
+                    data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
+                    <h5>Locational Clearance. Building Permit</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 copy Notarized Unified Application Form for Building Permit</li><li><i class="bi bi-check2-circle"></i> 1 set of Building & Site Development Plans (signed & sealed by Architect/Engineers and Owner)</li><li><i class="bi bi-check2-circle"></i> 1 copy Latest Certified True Copy of Land Title (TCT blue copy)</li><li><i class="bi bi-check2-circle"></i> 1 copy Latest Certified True Copy of Tax Declaration</li><li><i class="bi bi-check2-circle"></i> 1 copy Latest Realty Tax Clearance</li><li><i class="bi bi-check2-circle"></i> 1 copy Bill of Materials / Quantities / Cost Estimate (signed & sealed)</li><li><i class="bi bi-check2-circle"></i> Contract of Lease / Authorization / SPA / Corporate Resolution (if property not owned / corporate)</li><li><i class="bi bi-check2-circle"></i> 1 copy Environmental Compliance Certificate (ECC) / Height Clearance (if applicable)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Notarized Unified Application
+                        Form for Building Permit
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 set of Building & Site Development
+                        Plans (signed & sealed by Architect/Engineers and Owner)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Latest Certified True Copy of
+                        Land Title (TCT blue copy)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Latest Certified True Copy of Tax
+                        Declaration
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Latest Realty Tax Clearance
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Bill of Materials / Quantities /
+                        Cost Estimate (signed & sealed)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Contract of Lease / Authorization / SPA
+                        / Corporate Resolution (if property not owned / corporate)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Environmental Compliance
+                        Certificate (ECC) / Height Clearance (if applicable)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="palc-application" data-time="33 Days (Max)" data-fee="Processing Fee: ₱360/ha (PD 957) | ₱90/ha (BP 220 Socialized) | ₱216/ha (BP 220 Economic) | Inspection Fee: ₱1,500/ha" data-type="Highly Technical Transaction (Frontline Service)">
+                  <div
+                    class="category-card"
+                    data-sub="palc-application"
+                    data-time="33 Days (Max)"
+                    data-fee="Processing Fee: ₱360/ha (PD 957) | ₱90/ha (BP 220 Socialized) | ₱216/ha (BP 220 Economic) | Inspection Fee: ₱1,500/ha"
+                    data-type="Highly Technical Transaction (Frontline Service)"
+                  >
                     <h5>Preliminary Application for Locational Clearance (PALC)</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 6 sets Subdivision Scheme/Plan (signed and sealed by Geodetic Engineer)</li><li><i class="bi bi-check2-circle"></i> 1 Certified True Copy + 5 xerox copies of Title (TCT)</li><li><i class="bi bi-check2-circle"></i> 1 Certified True Copy + 5 xerox copies of Tax Declaration</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Tax Clearance</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Non-Tenancy Certification / Waiver</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of SP Resolution on land re-classification (if agricultural)</li><li><i class="bi bi-check2-circle"></i> Deed of Sale / Donation / Settlement / SPA / Site Zoning Certificate (1 original + 5 xerox)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 6 sets Subdivision Scheme/Plan (signed
+                        and sealed by Geodetic Engineer)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 Certified True Copy + 5 xerox copies
+                        of Title (TCT)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 Certified True Copy + 5 xerox copies
+                        of Tax Declaration
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Tax
+                        Clearance
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of
+                        Non-Tenancy Certification / Waiver
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of SP
+                        Resolution on land re-classification (if agricultural)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Deed of Sale / Donation / Settlement /
+                        SPA / Site Zoning Certificate (1 original + 5 xerox)
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -919,22 +1115,26 @@
                     <div class="metric-icon"><i class="bi bi-cash-stack"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
-                      <div class="metric-value" id="locational-clearances-fee">Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance No. 14-0011-2019)</div>
+                      <div class="metric-value" id="locational-clearances-fee">
+                        Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance No.
+                        14-0011-2019)
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="locational-clearances-type">Simple Transaction (Government to Client)</div>
+                      <div class="metric-value" id="locational-clearances-type">
+                        Simple Transaction (Government to Client)
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            
-            <!-- Process Table for Locational Clearance — New Business Permit Application -->
+            <!-- Process Table for Locational Clearance. New Business Permit Application -->
             <table class="process-table sub-table active" id="sub-locational-new-business">
               <thead>
                 <tr>
@@ -949,50 +1149,80 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits / sends e-file copy of documentary requirements at legazpicpdo@gmail.com / CPDO</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 ZD Staff acknowledges receipt of submitted application forwarded by Business Center (BPLO)</div><div class="agency-action-text">1.2 If INCOMPLETE/DEFICIENT, ZD Staff issues Notice of Deficiency via email</div><div class="agency-action-text">1.3 If COMPLETE, ZD Staff issues Zoning Fee Order of Payment and processes application for review and approval of Zoning Officer and CPDC</div><div class="agency-action-text">1.4 If non-conforming, ZD Staff prepares Notice of Denial for CPDC signature</div>
+                    <span class="client-step-text"
+                      >Submits / sends e-file copy of documentary requirements at
+                      legazpicpdo@gmail.com / CPDO</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 ZD Staff acknowledges receipt of submitted application forwarded by
+                      Business Center (BPLO)
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 If INCOMPLETE/DEFICIENT, ZD Staff issues Notice of Deficiency via email
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 If COMPLETE, ZD Staff issues Zoning Fee Order of Payment and processes
+                      application for review and approval of Zoning Officer and CPDC
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 If non-conforming, ZD Staff prepares Notice of Denial for CPDC signature
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>1 day max.</td>
                   <td>
                     <span class="personnel-tag">Zoning Inspector I</span>
-<span class="personnel-tag">Zoning Officer I</span>
-<span class="personnel-tag">Zoning Officer II</span>
-<span class="personnel-tag">Zoning Officer III</span>
-<span class="personnel-tag">CPDC / Zoning Administrator</span>
-
+                    <span class="personnel-tag">Zoning Officer I</span>
+                    <span class="personnel-tag">Zoning Officer II</span>
+                    <span class="personnel-tag">Zoning Officer III</span>
+                    <span class="personnel-tag">CPDC / Zoning Administrator</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Zoning Fee included in ONE-TIME ASSESSMENT OF FEES issued by BPLO at CTO or Online</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 ZD Staff prepares transmittal and transmits approved locational clearance to BPLO</div>
+                    <span class="client-step-text"
+                      >Pays Zoning Fee included in ONE-TIME ASSESSMENT OF FEES issued by BPLO at CTO
+                      or Online</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 ZD Staff prepares transmittal and transmits approved locational clearance
+                      to BPLO
+                    </div>
                   </td>
                   <td>Assessed Fee</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
-                    <span class="personnel-tag">Revenue Collection Officer (City Treasurer's Office)</span>
-
+                    <span class="personnel-tag"
+                      >Revenue Collection Officer (City Treasurer's Office)</span
+                    >
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Receives Locational Clearance upon release of Mayor's/Business Permit at BPLO</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receives Locational Clearance upon release of Mayor's/Business Permit at
+                      BPLO</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Releasing of Documents</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Releasing Officer (BPLO)</span>
-
                   </td>
                 </tr>
               </tbody>
             </table>
-            <!-- Process Table for Locational Clearance — Business Permit Renewal -->
+            <!-- Process Table for Locational Clearance. Business Permit Renewal -->
             <table class="process-table sub-table" id="sub-locational-renewal-business">
               <thead>
                 <tr>
@@ -1007,50 +1237,70 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits renewal application online or at CPDO desk</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 ZD Staff acknowledges receipt of submitted application</div><div class="agency-action-text">1.2 If INCOMPLETE/DEFICIENT, ZD Staff issues Notice of Deficiency</div><div class="agency-action-text">1.3 If COMPLETE, ZD Staff issues Order of Payment and processes locational clearance for approval of CPDC</div>
+                    <span class="client-step-text"
+                      >Submits renewal application online or at CPDO desk</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 ZD Staff acknowledges receipt of submitted application
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 If INCOMPLETE/DEFICIENT, ZD Staff issues Notice of Deficiency
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 If COMPLETE, ZD Staff issues Order of Payment and processes locational
+                      clearance for approval of CPDC
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>1 day max.</td>
                   <td>
                     <span class="personnel-tag">Zoning Inspector I</span>
-<span class="personnel-tag">Zoning Officer I</span>
-<span class="personnel-tag">Zoning Officer II</span>
-<span class="personnel-tag">Zoning Officer III</span>
-<span class="personnel-tag">CPDC / Zoning Administrator</span>
-
+                    <span class="personnel-tag">Zoning Officer I</span>
+                    <span class="personnel-tag">Zoning Officer II</span>
+                    <span class="personnel-tag">Zoning Officer III</span>
+                    <span class="personnel-tag">CPDC / Zoning Administrator</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Zoning Fee in One-Time Assessment at CTO or Online</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 ZD Staff transmits approved locational clearance to BPLO</div>
+                    <span class="client-step-text"
+                      >Pays Zoning Fee in One-Time Assessment at CTO or Online</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 ZD Staff transmits approved locational clearance to BPLO
+                    </div>
                   </td>
                   <td>Assessed Fee</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Receives Locational Clearance upon release of Business Permit at BPLO</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receives Locational Clearance upon release of Business Permit at BPLO</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Releasing</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">BPLO Releasing Officer</span>
-
                   </td>
                 </tr>
               </tbody>
             </table>
-            <!-- Process Table for Locational Clearance — Building Permit -->
+            <!-- Process Table for Locational Clearance. Building Permit -->
             <table class="process-table sub-table" id="sub-locational-building-permit">
               <thead>
                 <tr>
@@ -1065,44 +1315,73 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Creates new application in Legazpi website (Online Services) and submits docs to OBO / CEO</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 OBO Staff evaluates then forwards application to ZD-OBO Staff via ETRACS</div><div class="agency-action-text">1.2 ZD Staff acknowledges receipt of submitted application</div><div class="agency-action-text">1.3 If INCOMPLETE/DEFICIENT, ZD Staff issues Notice of Deficiency via email</div><div class="agency-action-text">1.4 If COMPLETE, ZD Staff issues Order of Payment and processes application for approval of CPDC</div><div class="agency-action-text">1.5 If non-conforming, ZD Staff prepares Notice of Denial</div>
+                    <span class="client-step-text"
+                      >Creates new application in Legazpi website (Online Services) and submits docs
+                      to OBO / CEO</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 OBO Staff evaluates then forwards application to ZD-OBO Staff via ETRACS
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 ZD Staff acknowledges receipt of submitted application
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 If INCOMPLETE/DEFICIENT, ZD Staff issues Notice of Deficiency via email
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 If COMPLETE, ZD Staff issues Order of Payment and processes application
+                      for approval of CPDC
+                    </div>
+                    <div class="agency-action-text">
+                      1.5 If non-conforming, ZD Staff prepares Notice of Denial
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>1 day max.</td>
                   <td>
                     <span class="personnel-tag">Zoning Officer I</span>
-<span class="personnel-tag">Zoning Officer II</span>
-<span class="personnel-tag">Zoning Officer III</span>
-<span class="personnel-tag">CPDC / Zoning Administrator</span>
-
+                    <span class="personnel-tag">Zoning Officer II</span>
+                    <span class="personnel-tag">Zoning Officer III</span>
+                    <span class="personnel-tag">CPDC / Zoning Administrator</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays zoning fees at City Treasurer's Office or Online Services</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 Receives payment and issues e-file copy of approved Locational Clearance via email through OBO-OSSCP</div>
+                    <span class="client-step-text"
+                      >Pays zoning fees at City Treasurer's Office or Online Services</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 Receives payment and issues e-file copy of approved Locational Clearance
+                      via email through OBO-OSSCP
+                    </div>
                   </td>
                   <td>Assessed Fee</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Receives e-file copy of Locational Clearance upon release of Building Permit from OBO</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receives e-file copy of Locational Clearance upon release of Building Permit
+                      from OBO</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Releasing</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">OBO Releasing Officer</span>
-
                   </td>
                 </tr>
               </tbody>
@@ -1122,46 +1401,90 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits Application for PALC to CPDO-HHRD</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 HHRD receives application; if complete, officially receives docs</div><div class="agency-action-text">1.2 Forwards transmittal to City Legal Office (CLO) and City Engineering Office (CEO) for comments</div><div class="agency-action-text">1.3 Conducts ocular site inspection and prepares Inspection Report</div><div class="agency-action-text">1.4 Endorses to City Mayor's Office (CMO) for transmittal to Sangguniang Panlungsod (SP)</div><div class="agency-action-text">1.5 Attends SP Committee Hearing to present PALC technicality and recommend approval</div><div class="agency-action-text">1.6 Upon receipt of SP Resolution approving PALC, issues Order of Payment and prepares plan for CPDC & Mayor signatures</div>
+                    <span class="client-step-text">Submits Application for PALC to CPDO-HHRD</span>
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 HHRD receives application; if complete, officially receives docs
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Forwards transmittal to City Legal Office (CLO) and City Engineering
+                      Office (CEO) for comments
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Conducts ocular site inspection and prepares Inspection Report
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 Endorses to City Mayor's Office (CMO) for transmittal to Sangguniang
+                      Panlungsod (SP)
+                    </div>
+                    <div class="agency-action-text">
+                      1.5 Attends SP Committee Hearing to present PALC technicality and recommend
+                      approval
+                    </div>
+                    <div class="agency-action-text">
+                      1.6 Upon receipt of SP Resolution approving PALC, issues Order of Payment and
+                      prepares plan for CPDC & Mayor signatures
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>33 days (max)</td>
                   <td>
                     <span class="personnel-tag">City Mayor</span>
-<span class="personnel-tag">CPDC Head</span>
-<span class="personnel-tag">HHRO V (HHRD Head)</span>
-<span class="personnel-tag">HHRO II</span>
-<span class="personnel-tag">Draftswoman I</span>
-
+                    <span class="personnel-tag">CPDC Head</span>
+                    <span class="personnel-tag">HHRO V (HHRD Head)</span>
+                    <span class="personnel-tag">HHRO II</span>
+                    <span class="personnel-tag">Draftswoman I</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Processing Fee and Inspection Fee at City Treasurer's Office</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Collector receives payment and issues Official Receipt</div><div class="agency-action-text">2.2 Applicant returns to HHRD for validation and recording of receipts</div>
+                    <span class="client-step-text"
+                      >Pays Processing Fee and Inspection Fee at City Treasurer's Office</span
+                    >
                   </td>
-                  <td><div class="fee-tier-list"><div class="fee-tier-item">Processing Fee: ₱360/ha (PD957)</div><div class="fee-tier-item">₱90/ha (BP220-Soc)</div><div class="fee-tier-item">₱216/ha (BP220-Econ)</div><div class="fee-tier-item">Inspection Fee: ₱1,500/ha</div></div></td>
-                  <td>—</td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Collector receives payment and issues Official Receipt
+                    </div>
+                    <div class="agency-action-text">
+                      2.2 Applicant returns to HHRD for validation and recording of receipts
+                    </div>
+                  </td>
+                  <td>
+                    <div class="fee-tier-list">
+                      <div class="fee-tier-item">Processing Fee: ₱360/ha (PD957)</div>
+                      <div class="fee-tier-item">₱90/ha (BP220-Soc)</div>
+                      <div class="fee-tier-item">₱216/ha (BP220-Econ)</div>
+                      <div class="fee-tier-item">Inspection Fee: ₱1,500/ha</div>
+                    </div>
+                  </td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Proceeds to CPDO, submits Feedback Form, and receives Approved PALC Plan & Mayor's Certification</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 CPDO-HHRD releases approved PALC plan together with City Mayor Certification approving the same</div>
+                    <span class="client-step-text"
+                      >Proceeds to CPDO, submits Feedback Form, and receives Approved PALC Plan &
+                      Mayor's Certification</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 CPDO-HHRD releases approved PALC plan together with City Mayor
+                      Certification approving the same
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Draftswoman I</span>
-<span class="personnel-tag">HHRO II</span>
-
+                    <span class="personnel-tag">HHRO II</span>
                   </td>
                 </tr>
               </tbody>
@@ -1174,23 +1497,121 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">SELECT SERVICE SUB-CATEGORY</div>
                 <div class="category-grid">
-                  
-                  <div class="category-card active" data-sub="simple-subdivision" data-time="33 Days (Max)" data-fee="Processing Fee: ₱2,880.00 / Hectare | Inspection Fee: ₱1,500.00 / Hectare" data-type="Highly Technical Transaction (Frontline Service)">
+                  <div
+                    class="category-card active"
+                    data-sub="simple-subdivision"
+                    data-time="33 Days (Max)"
+                    data-fee="Processing Fee: ₱2,880.00 / Hectare | Inspection Fee: ₱1,500.00 / Hectare"
+                    data-type="Highly Technical Transaction (Frontline Service)"
+                  >
                     <h5>Simple Subdivision Approval (SSA)</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 6 sets Subdivision Scheme/Plan (signed and sealed by Geodetic Engineer)</li><li><i class="bi bi-check2-circle"></i> 1 Certified True Copy + 5 xerox copies of Title (TCT)</li><li><i class="bi bi-check2-circle"></i> 1 Certified True Copy + 5 xerox copies of Tax Declaration</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Tax Clearance</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Deed of Sale / Donation / Settlement / SPA</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Site Zoning / Land Use Classification Certificate</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Barangay Resolution / Certification supporting project</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 6 sets Subdivision Scheme/Plan (signed
+                        and sealed by Geodetic Engineer)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 Certified True Copy + 5 xerox copies
+                        of Title (TCT)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 Certified True Copy + 5 xerox copies
+                        of Tax Declaration
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Tax
+                        Clearance
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Deed of
+                        Sale / Donation / Settlement / SPA
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Site
+                        Zoning / Land Use Classification Certificate
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies of Barangay
+                        Resolution / Certification supporting project
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="development-permit" data-time="33 Days (Max)" data-fee="Processing Fee: ₱2,880/ha (PD 957) | ₱600/ha (BP 220 Soc) | ₱1,440/ha (BP 220 Econ) | Inspection Fee: ₱1,500/ha" data-type="Highly Technical Transaction (Frontline Service)">
+                  <div
+                    class="category-card"
+                    data-sub="development-permit"
+                    data-time="33 Days (Max)"
+                    data-fee="Processing Fee: ₱2,880/ha (PD 957) | ₱600/ha (BP 220 Soc) | ₱1,440/ha (BP 220 Econ) | Inspection Fee: ₱1,500/ha"
+                    data-type="Highly Technical Transaction (Frontline Service)"
+                  >
                     <h5>Development Permit (DP) Application</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 6 sets Complete Engineering Plans (signed and sealed: Topographic, Site Dev, Road, Drainage/Sewer, Water, Power, Site Grading)</li><li><i class="bi bi-check2-circle"></i> 6 copies Project Feasibility Studies</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies Water Supply Certification / Application (LCWD / NWRC)</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies Power Supply Certification / Application (ALECO)</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies Bill of Materials, Specification, and Cost Estimate</li><li><i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies Land Conversion Order & Environmental Compliance Certificate (ECC)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 6 sets Complete Engineering Plans
+                        (signed and sealed: Topographic, Site Dev, Road, Drainage/Sewer, Water,
+                        Power, Site Grading)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 6 copies Project Feasibility Studies
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies Water Supply
+                        Certification / Application (LCWD / NWRC)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies Power Supply
+                        Certification / Application (ALECO)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies Bill of
+                        Materials, Specification, and Cost Estimate
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 5 xerox copies Land
+                        Conversion Order & Environmental Compliance Certificate (ECC)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="land-reclassification" data-time="33 Working Days (Max)" data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)" data-type="Complex Transaction (Government to Client)">
+                  <div
+                    class="category-card"
+                    data-sub="land-reclassification"
+                    data-time="33 Working Days (Max)"
+                    data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)"
+                    data-type="Complex Transaction (Government to Client)"
+                  >
                     <h5>Land Use Reclassification / Rezoning</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 copy Request / Letter of Intent specifying justification for land-use reclassification</li><li><i class="bi bi-check2-circle"></i> 1 copy Narrative Description of development plan describing detail for reclassification</li><li><i class="bi bi-check2-circle"></i> 1 set 5R Photographs of all corners of landholdings</li><li><i class="bi bi-check2-circle"></i> 1 copy Certification from Dept. of Agriculture (marginally suitable / not economically viable for agriculture)</li><li><i class="bi bi-check2-circle"></i> 1 copy Certification from MARO (no agrarian reform beneficiaries / protest)</li><li><i class="bi bi-check2-circle"></i> 1 copy Certification from PCA & NIA (coconut planted status & irrigation facility coverage)</li><li><i class="bi bi-check2-circle"></i> 1 Blueprint / Copy of Lot Plan with vicinity map (certified by Geodetic Engineer)</li><li><i class="bi bi-check2-circle"></i> Certified TCT, Tax Dec, Tax Clearance, and Barangay Resolution interposing no objection</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Request / Letter of Intent
+                        specifying justification for land-use reclassification
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Narrative Description of
+                        development plan describing detail for reclassification
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 set 5R Photographs of all corners of
+                        landholdings
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Certification from Dept. of
+                        Agriculture (marginally suitable / not economically viable for agriculture)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Certification from MARO (no
+                        agrarian reform beneficiaries / protest)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Certification from PCA & NIA
+                        (coconut planted status & irrigation facility coverage)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 Blueprint / Copy of Lot Plan with
+                        vicinity map (certified by Geodetic Engineer)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Certified TCT, Tax Dec, Tax Clearance,
+                        and Barangay Resolution interposing no objection
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1209,21 +1630,31 @@
                     <div class="metric-icon"><i class="bi bi-cash-stack"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
-                      <div class="metric-value" id="land-development-fee"><div class="metric-list"><div class="metric-list-item"><i class="bi bi-dash"></i> Processing Fee: ₱2,880.00 / Hectare</div><div class="metric-list-item"><i class="bi bi-dash"></i> Inspection Fee: ₱1,500.00 / Hectare</div></div></div>
+                      <div class="metric-value" id="land-development-fee">
+                        <div class="metric-list">
+                          <div class="metric-list-item">
+                            <i class="bi bi-dash"></i> Processing Fee: ₱2,880.00 / Hectare
+                          </div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-dash"></i> Inspection Fee: ₱1,500.00 / Hectare
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="land-development-type">Highly Technical Transaction (Frontline Service)</div>
+                      <div class="metric-value" id="land-development-type">
+                        Highly Technical Transaction (Frontline Service)
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            
             <!-- Process Table for Simple Subdivision Approval (SSA) -->
             <table class="process-table sub-table active" id="sub-simple-subdivision">
               <thead>
@@ -1239,46 +1670,84 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits application for SSA to CPDO-HHRD</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 HHRD receives application; if complete, officially receives application</div><div class="agency-action-text">1.2 Forwards transmittal letter to CLO and CEO for comments and recommendations</div><div class="agency-action-text">1.3 Conducts ocular site inspection and prepares Inspection Report</div><div class="agency-action-text">1.4 Prepares endorsement letter to City Mayor's Office for SP endorsement</div><div class="agency-action-text">1.5 Attends SP Committee Hearing and presents technicality of SSA application</div><div class="agency-action-text">1.6 Upon receipt of SP Resolution, issues Order of Payment and prepares plan for CPDC & Mayor signatures</div>
+                    <span class="client-step-text">Submits application for SSA to CPDO-HHRD</span>
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 HHRD receives application; if complete, officially receives application
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Forwards transmittal letter to CLO and CEO for comments and
+                      recommendations
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Conducts ocular site inspection and prepares Inspection Report
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 Prepares endorsement letter to City Mayor's Office for SP endorsement
+                    </div>
+                    <div class="agency-action-text">
+                      1.5 Attends SP Committee Hearing and presents technicality of SSA application
+                    </div>
+                    <div class="agency-action-text">
+                      1.6 Upon receipt of SP Resolution, issues Order of Payment and prepares plan
+                      for CPDC & Mayor signatures
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>33 days (max)</td>
                   <td>
                     <span class="personnel-tag">City Mayor</span>
-<span class="personnel-tag">CPDC Head</span>
-<span class="personnel-tag">HHRO V (HHRD Head)</span>
-<span class="personnel-tag">HHRO II</span>
-<span class="personnel-tag">Draftswoman I</span>
-
+                    <span class="personnel-tag">CPDC Head</span>
+                    <span class="personnel-tag">HHRO V (HHRD Head)</span>
+                    <span class="personnel-tag">HHRO II</span>
+                    <span class="personnel-tag">Draftswoman I</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Processing Fee (₱2,880/ha) and Inspection Fee (₱1,500/ha) at CTO</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Collector receives payment and issues Official Receipt</div><div class="agency-action-text">2.2 Returns to HHRD for validation</div>
+                    <span class="client-step-text"
+                      >Pays Processing Fee (₱2,880/ha) and Inspection Fee (₱1,500/ha) at CTO</span
+                    >
                   </td>
-                  <td><div class="fee-tier-list"><div class="fee-tier-item">Processing Fee: ₱2,880.00/Has.</div><div class="fee-tier-item">Inspection Fee: ₱1,500.00/Has.</div></div></td>
-                  <td>—</td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Collector receives payment and issues Official Receipt
+                    </div>
+                    <div class="agency-action-text">2.2 Returns to HHRD for validation</div>
+                  </td>
+                  <td>
+                    <div class="fee-tier-list">
+                      <div class="fee-tier-item">Processing Fee: ₱2,880.00/Has.</div>
+                      <div class="fee-tier-item">Inspection Fee: ₱1,500.00/Has.</div>
+                    </div>
+                  </td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Submits Feedback Form and receives Approved Subdivision Plan & Mayor's Certification</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 CPDO-HHRD releases approved Subdivision Plan together with City Mayor Certification</div>
+                    <span class="client-step-text"
+                      >Submits Feedback Form and receives Approved Subdivision Plan & Mayor's
+                      Certification</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 CPDO-HHRD releases approved Subdivision Plan together with City Mayor
+                      Certification
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Draftswoman I</span>
-<span class="personnel-tag">HHRO II</span>
-
+                    <span class="personnel-tag">HHRO II</span>
                   </td>
                 </tr>
               </tbody>
@@ -1298,46 +1767,85 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits Application for Development Permit to CPDO-HHRD</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 HHRD receives application and engineering plans</div><div class="agency-action-text">1.2 Routes transmittal to CLO & CEO for comments</div><div class="agency-action-text">1.3 Conducts ocular site inspection and prepares Inspection Report</div><div class="agency-action-text">1.4 Endorses to City Mayor for SP Committee Hearing</div><div class="agency-action-text">1.5 Attends SP Committee Hearing to recommend DP approval</div><div class="agency-action-text">1.6 Receives SP Resolution approving DP, issues Order of Payment, and prepares plans for CPDC & Mayor signatures</div>
+                    <span class="client-step-text"
+                      >Submits Application for Development Permit to CPDO-HHRD</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 HHRD receives application and engineering plans
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Routes transmittal to CLO & CEO for comments
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Conducts ocular site inspection and prepares Inspection Report
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 Endorses to City Mayor for SP Committee Hearing
+                    </div>
+                    <div class="agency-action-text">
+                      1.5 Attends SP Committee Hearing to recommend DP approval
+                    </div>
+                    <div class="agency-action-text">
+                      1.6 Receives SP Resolution approving DP, issues Order of Payment, and prepares
+                      plans for CPDC & Mayor signatures
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>33 days (max)</td>
                   <td>
                     <span class="personnel-tag">City Mayor</span>
-<span class="personnel-tag">CPDC Head</span>
-<span class="personnel-tag">HHRO V (HHRD Head)</span>
-<span class="personnel-tag">HHRO II</span>
-<span class="personnel-tag">Draftswoman I</span>
-
+                    <span class="personnel-tag">CPDC Head</span>
+                    <span class="personnel-tag">HHRO V (HHRD Head)</span>
+                    <span class="personnel-tag">HHRO II</span>
+                    <span class="personnel-tag">Draftswoman I</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Processing Fee and Inspection Fee at City Treasurer's Office</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Collector receives payment and issues Official Receipt</div>
+                    <span class="client-step-text"
+                      >Pays Processing Fee and Inspection Fee at City Treasurer's Office</span
+                    >
                   </td>
-                  <td><div class="fee-tier-list"><div class="fee-tier-item">Processing Fee: ₱2,880/ha (PD957)</div><div class="fee-tier-item">₱600/ha (BP220-Soc)</div><div class="fee-tier-item">₱1,440/ha (BP220-Econ)</div><div class="fee-tier-item">Inspection Fee: ₱1,500/ha</div></div></td>
-                  <td>—</td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Collector receives payment and issues Official Receipt
+                    </div>
+                  </td>
+                  <td>
+                    <div class="fee-tier-list">
+                      <div class="fee-tier-item">Processing Fee: ₱2,880/ha (PD957)</div>
+                      <div class="fee-tier-item">₱600/ha (BP220-Soc)</div>
+                      <div class="fee-tier-item">₱1,440/ha (BP220-Econ)</div>
+                      <div class="fee-tier-item">Inspection Fee: ₱1,500/ha</div>
+                    </div>
+                  </td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Receives approved Development Plan and Mayor's Approval Certification</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 CPDO-HHRD releases approved Development Plan together with City Mayor Certification</div>
+                    <span class="client-step-text"
+                      >Receives approved Development Plan and Mayor's Approval Certification</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 CPDO-HHRD releases approved Development Plan together with City Mayor
+                      Certification
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Draftswoman I</span>
-<span class="personnel-tag">HHRO II</span>
-
+                    <span class="personnel-tag">HHRO II</span>
                   </td>
                 </tr>
               </tbody>
@@ -1357,46 +1865,72 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits / sends e-file application at legazpicpdo@gmail.com / CPDO</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 ZD Staff acknowledges receipt of application</div><div class="agency-action-text">1.2 If INCOMPLETE, issues Notice of Deficiency</div><div class="agency-action-text">1.3 If COMPLETE, issues Order of Payment and prepares certification for Mayor's signature</div>
+                    <span class="client-step-text"
+                      >Submits / sends e-file application at legazpicpdo@gmail.com / CPDO</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 ZD Staff acknowledges receipt of application
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 If INCOMPLETE, issues Notice of Deficiency
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 If COMPLETE, issues Order of Payment and prepares certification for
+                      Mayor's signature
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>33 working days (max)</td>
                   <td>
                     <span class="personnel-tag">Zoning Inspector I</span>
-<span class="personnel-tag">Zoning Officer I</span>
-<span class="personnel-tag">Zoning Officer II</span>
-<span class="personnel-tag">Zoning Officer III</span>
-<span class="personnel-tag">CPDC / Zoning Admin</span>
-<span class="personnel-tag">City Mayor</span>
-
+                    <span class="personnel-tag">Zoning Officer I</span>
+                    <span class="personnel-tag">Zoning Officer II</span>
+                    <span class="personnel-tag">Zoning Officer III</span>
+                    <span class="personnel-tag">CPDC / Zoning Admin</span>
+                    <span class="personnel-tag">City Mayor</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Filing Fee at City Treasurer's Office or Online Services</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Revenue Collection Officer receives payment and issues Official Receipt</div>
+                    <span class="client-step-text"
+                      >Pays Filing Fee at City Treasurer's Office or Online Services</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Revenue Collection Officer receives payment and issues Official
+                      Receipt
+                    </div>
                   </td>
                   <td>Assessed Fee</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Informed of scheduled SP Committee Hearing on application</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 Upon receipt of signed endorsement, application is forwarded to Sangguniang Panlungsod</div>
+                    <span class="client-step-text"
+                      >Informed of scheduled SP Committee Hearing on application</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 Upon receipt of signed endorsement, application is forwarded to
+                      Sangguniang Panlungsod
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
-                    <span class="personnel-tag">SP Committee on Urban Planning, Housing & Resettlement</span>
-
+                    <span class="personnel-tag"
+                      >SP Committee on Urban Planning, Housing & Resettlement</span
+                    >
                   </td>
                 </tr>
               </tbody>
@@ -1409,17 +1943,63 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">SELECT SERVICE SUB-CATEGORY</div>
                 <div class="category-grid">
-                  
-                  <div class="category-card active" data-sub="msla-patent-housing" data-time="15 Days (Max)" data-fee="Certification Fee: ₱216.00 | Inspection Fee: ₱1,500.00" data-type="Highly Technical Transaction (Frontline Service)">
-                    <h5>Miscellaneous Sales / Lease Application (MSL/A) & Residential Free Patent</h5>
+                  <div
+                    class="category-card active"
+                    data-sub="msla-patent-housing"
+                    data-time="15 Days (Max)"
+                    data-fee="Certification Fee: ₱216.00 | Inspection Fee: ₱1,500.00"
+                    data-type="Highly Technical Transaction (Frontline Service)"
+                  >
+                    <h5>
+                      Miscellaneous Sales / Lease Application (MSL/A) & Residential Free Patent
+                    </h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 original + 2 copies Letter of Request to CPDO or email legazpicpdo@gmail.com stating reason</li><li><i class="bi bi-check2-circle"></i> Reference documents from DENR-PENRO</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 2 copies Letter of Request
+                        to CPDO or email legazpicpdo@gmail.com stating reason
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Reference documents from DENR-PENRO
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="housing-4ph-program" data-time="1 Day (Max)" data-fee="FREE (₱0.00)" data-type="Simple Transaction (Frontline Service)">
+                  <div
+                    class="category-card"
+                    data-sub="housing-4ph-program"
+                    data-time="1 Day (Max)"
+                    data-fee="FREE (₱0.00)"
+                    data-type="Simple Transaction (Frontline Service)"
+                  >
                     <h5>Pambansang Pabahay Para sa Pilipino (4PH) Housing Program</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 2 sets Duly filled-out 4PH Housing Loan Application Form</li><li><i class="bi bi-check2-circle"></i> 1 copy Proof of Income (payslip / ITR)</li><li><i class="bi bi-check2-circle"></i> 1 xerox copy Philippine Government ID with 3 specimen signatures</li><li><i class="bi bi-check2-circle"></i> 1 original + 1 xerox copy PSA Birth Certificate</li><li><i class="bi bi-check2-circle"></i> 1 original Notarized Omnibus Sworn Statement / Affidavit as First-time Homeowner</li><li><i class="bi bi-check2-circle"></i> 1 original Barangay Certificate</li><li><i class="bi bi-check2-circle"></i> 1 original Certification from Urban Poor Affairs Office (UPAO)</li><li><i class="bi bi-check2-circle"></i> 1 original Certification from City Assessor's Office</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 2 sets Duly filled-out 4PH Housing Loan
+                        Application Form
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Proof of Income (payslip / ITR)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 xerox copy Philippine Government ID
+                        with 3 specimen signatures
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 1 xerox copy PSA Birth
+                        Certificate
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original Notarized Omnibus Sworn
+                        Statement / Affidavit as First-time Homeowner
+                      </li>
+                      <li><i class="bi bi-check2-circle"></i> 1 original Barangay Certificate</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original Certification from Urban Poor
+                        Affairs Office (UPAO)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original Certification from City
+                        Assessor's Office
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1438,21 +2018,31 @@
                     <div class="metric-icon"><i class="bi bi-cash-stack"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
-                      <div class="metric-value" id="housing-land-tenure-fee"><div class="metric-list"><div class="metric-list-item"><i class="bi bi-dash"></i> Certification Fee: ₱216.00</div><div class="metric-list-item"><i class="bi bi-dash"></i> Inspection Fee: ₱1,500.00</div></div></div>
+                      <div class="metric-value" id="housing-land-tenure-fee">
+                        <div class="metric-list">
+                          <div class="metric-list-item">
+                            <i class="bi bi-dash"></i> Certification Fee: ₱216.00
+                          </div>
+                          <div class="metric-list-item">
+                            <i class="bi bi-dash"></i> Inspection Fee: ₱1,500.00
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="housing-land-tenure-type">Highly Technical Transaction (Frontline Service)</div>
+                      <div class="metric-value" id="housing-land-tenure-type">
+                        Highly Technical Transaction (Frontline Service)
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            
             <!-- Process Table for Miscellaneous Sales / Lease Application (MSL/A) & Residential Free Patent -->
             <table class="process-table sub-table active" id="sub-msla-patent-housing">
               <thead>
@@ -1468,45 +2058,74 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits Letter of Request and DENR-PENRO reference documents to CPDO</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 CPDC acknowledges receipt and refers to HHRD for proper action</div><div class="agency-action-text">1.2 HHRD refers for site inspection</div><div class="agency-action-text">1.3 HHRD conducts ocular site inspection and prepares Inspection Report</div><div class="agency-action-text">1.4 HHRD prepares endorsement to CENRO for CPDC review and signature</div>
+                    <span class="client-step-text"
+                      >Submits Letter of Request and DENR-PENRO reference documents to CPDO</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 CPDC acknowledges receipt and refers to HHRD for proper action
+                    </div>
+                    <div class="agency-action-text">1.2 HHRD refers for site inspection</div>
+                    <div class="agency-action-text">
+                      1.3 HHRD conducts ocular site inspection and prepares Inspection Report
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 HHRD prepares endorsement to CENRO for CPDC review and signature
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>15 days (max)</td>
                   <td>
                     <span class="personnel-tag">CPDC Head</span>
-<span class="personnel-tag">HHRO V (HHRD Head)</span>
-<span class="personnel-tag">Draftswoman I</span>
-<span class="personnel-tag">Draftsman IV</span>
-
+                    <span class="personnel-tag">HHRO V (HHRD Head)</span>
+                    <span class="personnel-tag">Draftswoman I</span>
+                    <span class="personnel-tag">Draftsman IV</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Certification Fee (₱216.00) and Inspection Fee (₱1,500.00) at CTO</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Collector receives payment and issues Official Receipt</div><div class="agency-action-text">2.2 Returns to HHRD for validation</div>
+                    <span class="client-step-text"
+                      >Pays Certification Fee (₱216.00) and Inspection Fee (₱1,500.00) at CTO</span
+                    >
                   </td>
-                  <td><div class="fee-tier-list"><div class="fee-tier-item">Certification Fee: ₱216.00</div><div class="fee-tier-item">Inspection Fee: ₱1,500.00</div></div></td>
-                  <td>—</td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Collector receives payment and issues Official Receipt
+                    </div>
+                    <div class="agency-action-text">2.2 Returns to HHRD for validation</div>
+                  </td>
+                  <td>
+                    <div class="fee-tier-list">
+                      <div class="fee-tier-item">Certification Fee: ₱216.00</div>
+                      <div class="fee-tier-item">Inspection Fee: ₱1,500.00</div>
+                    </div>
+                  </td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Submits Feedback Form and receives LGU Endorsement / Certification</span></td>
                   <td>
-                    <div class="agency-action-text">3.0 CPDO-HHRD releases ENDORSEMENT / CERTIFICATION as part of DENR application requirement</div>
+                    <span class="client-step-text"
+                      >Submits Feedback Form and receives LGU Endorsement / Certification</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.0 CPDO-HHRD releases ENDORSEMENT / CERTIFICATION as part of DENR application
+                      requirement
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Draftswoman I</span>
-<span class="personnel-tag">HHRO II</span>
-
+                    <span class="personnel-tag">HHRO II</span>
                   </td>
                 </tr>
               </tbody>
@@ -1526,17 +2145,26 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits 4PH application to CPDO-HHRD</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 HHRD receives application; if complete, officially receives application</div><div class="agency-action-text">1.2 If incomplete, issues Notice of Deficiency for immediate compliance</div><div class="agency-action-text">1.3 Records and endorses application to housing developer for evaluation</div>
+                    <span class="client-step-text">Submits 4PH application to CPDO-HHRD</span>
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 HHRD receives application; if complete, officially receives application
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 If incomplete, issues Notice of Deficiency for immediate compliance
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Records and endorses application to housing developer for evaluation
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>1 day (max)</td>
                   <td>
                     <span class="personnel-tag">HHRO V (HHRD Head)</span>
-<span class="personnel-tag">HHRO II</span>
-<span class="personnel-tag">Draftswoman I</span>
-
+                    <span class="personnel-tag">HHRO II</span>
+                    <span class="personnel-tag">Draftswoman I</span>
                   </td>
                 </tr>
                 <tr>
@@ -1546,25 +2174,30 @@
                     <div class="agency-action-text">2.0 No Payment Required</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Unlisted</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Endorsed to Pag-IBIG Fund for assessment / evaluation</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 CPDO-HHRD facilitates document processing and loan evaluation with Pag-IBIG Fund</div>
+                    <span class="client-step-text"
+                      >Endorsed to Pag-IBIG Fund for assessment / evaluation</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 CPDO-HHRD facilitates document processing and loan evaluation with
+                      Pag-IBIG Fund
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Draftswoman I</span>
-<span class="personnel-tag">HHRO II</span>
-<span class="personnel-tag">HHRD Housing Staff</span>
-
+                    <span class="personnel-tag">HHRO II</span>
+                    <span class="personnel-tag">HHRD Housing Staff</span>
                   </td>
                 </tr>
               </tbody>
@@ -1577,41 +2210,162 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">SELECT SERVICE SUB-CATEGORY</div>
                 <div class="category-grid">
-                  
-                  <div class="category-card active" data-sub="site-zoning-cert" data-time="1 Day (Max)" data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)" data-type="Simple Transaction (Government to Client)">
+                  <div
+                    class="category-card active"
+                    data-sub="site-zoning-cert"
+                    data-time="1 Day (Max)"
+                    data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
                     <h5>Site Zoning / Land Use Certification</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 copy Request / Letter of Intent for land-use certification specifying reason</li><li><i class="bi bi-check2-circle"></i> 1 Blueprint / Copy of Lot Plan with vicinity map (signed & sealed by Geodetic Engineer)</li><li><i class="bi bi-check2-circle"></i> 1 copy Latest Certified Copy of Title (TCT)</li><li><i class="bi bi-check2-circle"></i> 1 copy Latest Certified Tax Declaration</li><li><i class="bi bi-check2-circle"></i> 1 copy Latest Realty Tax Clearance</li><li><i class="bi bi-check2-circle"></i> 1 copy Brief Summary of Project (signed by owner, for ECC/CNC applications)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Request / Letter of Intent for
+                        land-use certification specifying reason
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 Blueprint / Copy of Lot Plan with
+                        vicinity map (signed & sealed by Geodetic Engineer)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Latest Certified Copy of Title
+                        (TCT)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Latest Certified Tax Declaration
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Latest Realty Tax Clearance
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Brief Summary of Project (signed
+                        by owner, for ECC/CNC applications)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="lgu-endorsements-cert" data-time="1 Working Day (Max)" data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)" data-type="Simple Transaction (Government to Client)">
+                  <div
+                    class="category-card"
+                    data-sub="lgu-endorsements-cert"
+                    data-time="1 Working Day (Max)"
+                    data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
                     <h5>LGU Endorsements and Other Certifications</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 copy Request / Letter of Intent specifying reason</li><li><i class="bi bi-check2-circle"></i> 1 Blueprint / Copy of Lot Plan with vicinity map (transferred in electronic files)</li><li><i class="bi bi-check2-circle"></i> 1 copy Certified Copy of Title (TCT)</li><li><i class="bi bi-check2-circle"></i> 1 copy Certified Tax Declaration & Realty Tax Clearance</li><li><i class="bi bi-check2-circle"></i> Contract of Lease / Deed of Sale (if property not owned)</li><li><i class="bi bi-check2-circle"></i> 1 copy Notarized Application for Quarry Permit from PG-ENRO (for quarry permit)</li><li><i class="bi bi-check2-circle"></i> Barangay Resolution / Clearance interposing no objection</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Request / Letter of Intent
+                        specifying reason
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 Blueprint / Copy of Lot Plan with
+                        vicinity map (transferred in electronic files)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Certified Copy of Title (TCT)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Certified Tax Declaration &
+                        Realty Tax Clearance
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Contract of Lease / Deed of Sale (if
+                        property not owned)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Notarized Application for Quarry
+                        Permit from PG-ENRO (for quarry permit)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Barangay Resolution / Clearance
+                        interposing no objection
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="da-certification-lgu" data-time="3 Working Days (Max, excl. DA processing)" data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)" data-type="Simple Transaction (Government to Client)">
+                  <div
+                    class="category-card"
+                    data-sub="da-certification-lgu"
+                    data-time="3 Working Days (Max, excl. DA processing)"
+                    data-fee="Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)"
+                    data-type="Simple Transaction (Government to Client)"
+                  >
                     <h5>LGU Request for Dept. of Agriculture Certification</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 copy Letter Request for LGU application for DA Certification</li><li><i class="bi bi-check2-circle"></i> 1 Blueprint / Copy of Lot Plan with vicinity map</li><li><i class="bi bi-check2-circle"></i> 1 copy Certified Copy of Title (TCT)</li><li><i class="bi bi-check2-circle"></i> 1 copy Certified Tax Declaration & Realty Tax Clearance</li><li><i class="bi bi-check2-circle"></i> 1 set Panoramic Photos of site (facing N, E, W, S taken within 1 month)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Letter Request for LGU
+                        application for DA Certification
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 Blueprint / Copy of Lot Plan with
+                        vicinity map
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Certified Copy of Title (TCT)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 copy Certified Tax Declaration &
+                        Realty Tax Clearance
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 set Panoramic Photos of site (facing
+                        N, E, W, S taken within 1 month)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="certified-copy-docs" data-time="3 Days (Max)" data-fee="Certification Fee: ₱216.00 | Certified Copy Fee: ₱50.00 (Bond size) | ₱100.00 (Plan)" data-type="Simple Transaction (Frontline Service)">
+                  <div
+                    class="category-card"
+                    data-sub="certified-copy-docs"
+                    data-time="3 Days (Max)"
+                    data-fee="Certification Fee: ₱216.00 | Certified Copy Fee: ₱50.00 (Bond size) | ₱100.00 (Plan)"
+                    data-type="Simple Transaction (Frontline Service)"
+                  >
                     <h5>Certified True Copy of SSA, Development Permit & Other Housing Docs</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 original + 2 copies Letter of Request to CPDO or email legazpicpdo@gmail.com stating purpose</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 2 copies Letter of Request
+                        to CPDO or email legazpicpdo@gmail.com stating purpose
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="project-certification-ppd" data-time="1 Day" data-fee="FREE (₱0.00)" data-type="Simple Transaction (Frontline Service)">
+                  <div
+                    class="category-card"
+                    data-sub="project-certification-ppd"
+                    data-time="1 Day"
+                    data-fee="FREE (₱0.00)"
+                    data-type="Simple Transaction (Frontline Service)"
+                  >
                     <h5>Issuance of Certification for Project</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> For Barangay Project: SB Resolution requesting fund release, Program of Works, Shopping docs</li><li><i class="bi bi-check2-circle"></i> For City/Province Augmentation Fund: SB Resolution, Draft MOA, Program of Works</li><li><i class="bi bi-check2-circle"></i> For City Projects: Program of Works, Shopping docs</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> For Barangay Project: SB Resolution
+                        requesting fund release, Program of Works, Shopping docs
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> For City/Province Augmentation Fund: SB
+                        Resolution, Draft MOA, Program of Works
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> For City Projects: Program of Works,
+                        Shopping docs
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="birth-marriage-location" data-time="3 Days (Max)" data-fee="Certification Fee: ₱50.00" data-type="Simple Transaction (Backline Service)">
-                    <h5>Issuance of Certification — Location on Birth/Marriage Certificate</h5>
+                  <div
+                    class="category-card"
+                    data-sub="birth-marriage-location"
+                    data-time="3 Days (Max)"
+                    data-fee="Certification Fee: ₱50.00"
+                    data-type="Simple Transaction (Backline Service)"
+                  >
+                    <h5>Issuance of Certification. Location on Birth/Marriage Certificate</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 original Letter Request + 2 duplicate copies</li><li><i class="bi bi-check2-circle"></i> 1 Photocopy of Birth / Marriage Certificate</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original Letter Request + 2 duplicate
+                        copies
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 Photocopy of Birth / Marriage
+                        Certificate
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1630,21 +2384,24 @@
                     <div class="metric-icon"><i class="bi bi-cash-stack"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
-                      <div class="metric-value" id="certifications-tab-fee">Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)</div>
+                      <div class="metric-value" id="certifications-tab-fee">
+                        Assessed Fee (per City Ordinance No. 13-2007 & City Zoning Ordinance)
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="certifications-tab-type">Simple Transaction (Government to Client)</div>
+                      <div class="metric-value" id="certifications-tab-type">
+                        Simple Transaction (Government to Client)
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            
             <!-- Process Table for Site Zoning / Land Use Certification -->
             <table class="process-table sub-table active" id="sub-site-zoning-cert">
               <thead>
@@ -1660,47 +2417,68 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits / sends e-file application at legazpicpdo@gmail.com / CPDO</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 ZD Staff acknowledges receipt of application</div><div class="agency-action-text">1.2 If INCOMPLETE, issues Notice of Deficiency</div><div class="agency-action-text">1.3 If COMPLETE, issues Order of Payment and prepares certification for CPDC signature</div>
+                    <span class="client-step-text"
+                      >Submits / sends e-file application at legazpicpdo@gmail.com / CPDO</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 ZD Staff acknowledges receipt of application
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 If INCOMPLETE, issues Notice of Deficiency
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 If COMPLETE, issues Order of Payment and prepares certification for CPDC
+                      signature
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>1 day max.</td>
                   <td>
                     <span class="personnel-tag">Zoning Inspector I</span>
-<span class="personnel-tag">Zoning Officer I</span>
-<span class="personnel-tag">Zoning Officer II</span>
-<span class="personnel-tag">Zoning Officer III</span>
-<span class="personnel-tag">CPDC / Zoning Administrator</span>
-
+                    <span class="personnel-tag">Zoning Officer I</span>
+                    <span class="personnel-tag">Zoning Officer II</span>
+                    <span class="personnel-tag">Zoning Officer III</span>
+                    <span class="personnel-tag">CPDC / Zoning Administrator</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Certification Fee at City Treasurer's Office or Online Services</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Revenue Collection Officer receives payment and issues Official Receipt</div>
+                    <span class="client-step-text"
+                      >Pays Certification Fee at City Treasurer's Office or Online Services</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Revenue Collection Officer receives payment and issues Official
+                      Receipt
+                    </div>
                   </td>
                   <td>Assessed Fee</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Receives certification through email or walk-in</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Receives certification through email or walk-in</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Releasing of Certification</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Zoning Inspector I</span>
-<span class="personnel-tag">Zoning Officer I</span>
-<span class="personnel-tag">Zoning Officer II</span>
-
+                    <span class="personnel-tag">Zoning Officer I</span>
+                    <span class="personnel-tag">Zoning Officer II</span>
                   </td>
                 </tr>
               </tbody>
@@ -1720,45 +2498,63 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits e-file application at legazpicpdo@gmail.com / CPDO</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 ZD Staff acknowledges receipt of application</div><div class="agency-action-text">1.2 If INCOMPLETE, issues Notice of Deficiency</div><div class="agency-action-text">1.3 If COMPLETE, issues Order of Payment and prepares certification for CPDC signature</div>
+                    <span class="client-step-text"
+                      >Submits e-file application at legazpicpdo@gmail.com / CPDO</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 ZD Staff acknowledges receipt of application
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 If INCOMPLETE, issues Notice of Deficiency
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 If COMPLETE, issues Order of Payment and prepares certification for CPDC
+                      signature
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>1 working day max.</td>
                   <td>
                     <span class="personnel-tag">Zoning Inspector I</span>
-<span class="personnel-tag">Zoning Officer I</span>
-<span class="personnel-tag">Zoning Officer II</span>
-<span class="personnel-tag">Zoning Officer III</span>
-<span class="personnel-tag">CPDC / Zoning Administrator</span>
-
+                    <span class="personnel-tag">Zoning Officer I</span>
+                    <span class="personnel-tag">Zoning Officer II</span>
+                    <span class="personnel-tag">Zoning Officer III</span>
+                    <span class="personnel-tag">CPDC / Zoning Administrator</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Certification Fee at City Treasurer's Office or Online Services</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Collector receives payment and issues Official Receipt</div>
+                    <span class="client-step-text"
+                      >Pays Certification Fee at City Treasurer's Office or Online Services</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Collector receives payment and issues Official Receipt
+                    </div>
                   </td>
                   <td>Assessed Fee</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Receives certification through email</span></td>
+                  <td>
+                    <span class="client-step-text">Receives certification through email</span>
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 Releasing</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Zoning Inspector I</span>
-
                   </td>
                 </tr>
               </tbody>
@@ -1778,35 +2574,55 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits / sends e-file application at legazpicpdo@gmail.com / CPDO</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 ZD Staff acknowledges receipt of application</div><div class="agency-action-text">1.2 If INCOMPLETE, issues Notice of Deficiency</div><div class="agency-action-text">1.3 If COMPLETE, prepares documentary requirements for review and approval of City Mayor</div>
+                    <span class="client-step-text"
+                      >Submits / sends e-file application at legazpicpdo@gmail.com / CPDO</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 ZD Staff acknowledges receipt of application
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 If INCOMPLETE, issues Notice of Deficiency
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 If COMPLETE, prepares documentary requirements for review and approval of
+                      City Mayor
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>3 working days max.</td>
                   <td>
                     <span class="personnel-tag">Zoning Inspector I</span>
-<span class="personnel-tag">Zoning Officer I</span>
-<span class="personnel-tag">Zoning Officer II</span>
-<span class="personnel-tag">Zoning Officer III</span>
-<span class="personnel-tag">CPDC / Zoning Administrator</span>
-<span class="personnel-tag">City Mayor</span>
-
+                    <span class="personnel-tag">Zoning Officer I</span>
+                    <span class="personnel-tag">Zoning Officer II</span>
+                    <span class="personnel-tag">Zoning Officer III</span>
+                    <span class="personnel-tag">CPDC / Zoning Administrator</span>
+                    <span class="personnel-tag">City Mayor</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Receives DA Certification through email</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 Upon receipt of signed application letter, application is submitted to DA Region 5 email and applicant email</div><div class="agency-action-text">2.2 Upon receipt of DA Certification, ZD Staff provides copy to applicant via email</div>
+                    <span class="client-step-text">Receives DA Certification through email</span>
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 Upon receipt of signed application letter, application is submitted to DA
+                      Region 5 email and applicant email
+                    </div>
+                    <div class="agency-action-text">
+                      2.2 Upon receipt of DA Certification, ZD Staff provides copy to applicant via
+                      email
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Zoning Inspector I</span>
-<span class="personnel-tag">Zoning Officer I</span>
-<span class="personnel-tag">Zoning Officer II</span>
-
+                    <span class="personnel-tag">Zoning Officer I</span>
+                    <span class="personnel-tag">Zoning Officer II</span>
                   </td>
                 </tr>
               </tbody>
@@ -1826,46 +2642,73 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits Letter of Request to CPDO or email legazpicpdo@gmail.com</span></td>
                   <td>
-                    <div class="agency-action-text">1.0 CPDC acknowledges receipt and refers to HHRD</div><div class="agency-action-text">2.0 HHRD acknowledges receipt</div><div class="agency-action-text">3.0 HHRD issues Order of Payment of fees</div><div class="agency-action-text">4.0 HHRD records, retrieves, stamps 'Certified True Copy' and forwards to CPDC for signature</div>
+                    <span class="client-step-text"
+                      >Submits Letter of Request to CPDO or email legazpicpdo@gmail.com</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.0 CPDC acknowledges receipt and refers to HHRD
+                    </div>
+                    <div class="agency-action-text">2.0 HHRD acknowledges receipt</div>
+                    <div class="agency-action-text">3.0 HHRD issues Order of Payment of fees</div>
+                    <div class="agency-action-text">
+                      4.0 HHRD records, retrieves, stamps 'Certified True Copy' and forwards to CPDC
+                      for signature
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>3 days (max)</td>
                   <td>
                     <span class="personnel-tag">CPDC Head</span>
-<span class="personnel-tag">HHRO V (HHRD Head)</span>
-<span class="personnel-tag">HHRO II</span>
-<span class="personnel-tag">Draftswoman I</span>
-<span class="personnel-tag">Draftsman IV</span>
-
+                    <span class="personnel-tag">HHRO V (HHRD Head)</span>
+                    <span class="personnel-tag">HHRO II</span>
+                    <span class="personnel-tag">Draftswoman I</span>
+                    <span class="personnel-tag">Draftsman IV</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Certification Fee (₱216.00) and Certified Copy Fee (₱50/₱100) at CTO</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Collector receives payment and issues Official Receipt</div>
+                    <span class="client-step-text"
+                      >Pays Certification Fee (₱216.00) and Certified Copy Fee (₱50/₱100) at
+                      CTO</span
+                    >
                   </td>
-                  <td><div class="fee-tier-list"><div class="fee-tier-item">Certification Fee: ₱216.00</div><div class="fee-tier-item">Certified Copy Fee: ₱50.00 (Bond)</div><div class="fee-tier-item">₱100.00 (Plan)</div></div></td>
-                  <td>—</td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Collector receives payment and issues Official Receipt
+                    </div>
+                  </td>
+                  <td>
+                    <div class="fee-tier-list">
+                      <div class="fee-tier-item">Certification Fee: ₱216.00</div>
+                      <div class="fee-tier-item">Certified Copy Fee: ₱50.00 (Bond)</div>
+                      <div class="fee-tier-item">₱100.00 (Plan)</div>
+                    </div>
+                  </td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Submits Feedback Form and receives requested certified true copy documents</span></td>
+                  <td>
+                    <span class="client-step-text"
+                      >Submits Feedback Form and receives requested certified true copy
+                      documents</span
+                    >
+                  </td>
                   <td>
                     <div class="agency-action-text">3.1 CPDO-HHRD releases requested document</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Draftswoman I</span>
-<span class="personnel-tag">HHRO II</span>
-
+                    <span class="personnel-tag">HHRO II</span>
                   </td>
                 </tr>
               </tbody>
@@ -1885,16 +2728,30 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits required project document set to PPD</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receiving personnel refers applicant/documents to technical staff in-charge</div><div class="agency-action-text">1.2 Technical staff evaluates completeness and compliance of submitted requirements</div><div class="agency-action-text">1.3 Technical staff and head sign checklist/certification forms if complete and listed in AIP/BDIP</div>
+                    <span class="client-step-text"
+                      >Submits required project document set to PPD</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Receiving personnel refers applicant/documents to technical staff
+                      in-charge
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Technical staff evaluates completeness and compliance of submitted
+                      requirements
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Technical staff and head sign checklist/certification forms if complete
+                      and listed in AIP/BDIP
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>1 day</td>
                   <td>
                     <span class="personnel-tag">PPD Technical Staff</span>
-<span class="personnel-tag">PPD Division Head</span>
-
+                    <span class="personnel-tag">PPD Division Head</span>
                   </td>
                 </tr>
                 <tr>
@@ -1904,28 +2761,33 @@
                     <div class="agency-action-text">2.1 Not Applicable</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Unlisted</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Submits Feedback Form and receives approved Project Certification</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 CPDO-PPD releases approved/certified documents upon submission of Client Feedback Form</div>
+                    <span class="client-step-text"
+                      >Submits Feedback Form and receives approved Project Certification</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 CPDO-PPD releases approved/certified documents upon submission of Client
+                      Feedback Form
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">PPD Technical Staff</span>
-
                   </td>
                 </tr>
               </tbody>
             </table>
-            <!-- Process Table for Issuance of Certification — Location on Birth/Marriage Certificate -->
+            <!-- Process Table for Issuance of Certification. Location on Birth/Marriage Certificate -->
             <table class="process-table sub-table" id="sub-birth-marriage-location">
               <thead>
                 <tr>
@@ -1940,45 +2802,69 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits Request Letter with attachment of photocopy of Birth/Marriage Certificate to CPDO-RESD</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 RESD Staff receives and evaluates request</div><div class="agency-action-text">1.2 RESD Staff issues Order of Payment</div><div class="agency-action-text">1.3 After payment, RESD Staff records Official Receipt</div><div class="agency-action-text">1.4 RESD Staff prepares certification for review and signature of ACPDC and CPDC</div>
+                    <span class="client-step-text"
+                      >Submits Request Letter with attachment of photocopy of Birth/Marriage
+                      Certificate to CPDO-RESD</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 RESD Staff receives and evaluates request
+                    </div>
+                    <div class="agency-action-text">1.2 RESD Staff issues Order of Payment</div>
+                    <div class="agency-action-text">
+                      1.3 After payment, RESD Staff records Official Receipt
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 RESD Staff prepares certification for review and signature of ACPDC and
+                      CPDC
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>3 days (max)</td>
                   <td>
                     <span class="personnel-tag">Planning Officer IV (RESD Head)</span>
-<span class="personnel-tag">Planning Officer III</span>
-<span class="personnel-tag">Statistician I</span>
-
+                    <span class="personnel-tag">Planning Officer III</span>
+                    <span class="personnel-tag">Statistician I</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays Certification Fee (₱50.00) at City Treasurer's Office</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Collector receives payment and issues Official Receipt</div>
+                    <span class="client-step-text"
+                      >Pays Certification Fee (₱50.00) at City Treasurer's Office</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Collector receives payment and issues Official Receipt
+                    </div>
                   </td>
                   <td>Certification Fee: ₱50.00</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Submits Feedback Form and receives signed Location Certification</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 CPDO-RESD releases approved and signed Certification</div>
+                    <span class="client-step-text"
+                      >Submits Feedback Form and receives signed Location Certification</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 CPDO-RESD releases approved and signed Certification
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Planning Officer IV</span>
-<span class="personnel-tag">Planning Officer III</span>
-<span class="personnel-tag">Statistician I</span>
-
+                    <span class="personnel-tag">Planning Officer III</span>
+                    <span class="personnel-tag">Statistician I</span>
                   </td>
                 </tr>
               </tbody>
@@ -1991,29 +2877,85 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">SELECT SERVICE SUB-CATEGORY</div>
                 <div class="category-grid">
-                  
-                  <div class="category-card active" data-sub="bdp-planning-process" data-time="1 Day" data-fee="FREE (₱0.00)" data-type="Simple Transaction (Frontline Service)">
+                  <div
+                    class="category-card active"
+                    data-sub="bdp-planning-process"
+                    data-time="1 Day"
+                    data-fee="FREE (₱0.00)"
+                    data-type="Simple Transaction (Frontline Service)"
+                  >
                     <h5>Barangay Development Planning Process</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 2 copies Barangay IRA Certification (Current year)</li><li><i class="bi bi-check2-circle"></i> 2 copies BDIP (3 rolling years) and AIP for succeeding year</li><li><i class="bi bi-check2-circle"></i> 2 copies BDC & SB Resolutions approving BDIP, AIP, 20% Development Fund, and GAD Budget & Accomplishment Report</li><li><i class="bi bi-check2-circle"></i> 2 copies Barangay Development Plan (BDP) for 3 years</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 2 copies Barangay IRA Certification
+                        (Current year)
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 2 copies BDIP (3 rolling years) and AIP
+                        for succeeding year
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 2 copies BDC & SB Resolutions approving
+                        BDIP, AIP, 20% Development Fund, and GAD Budget & Accomplishment Report
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 2 copies Barangay Development Plan (BDP)
+                        for 3 years
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="assistance-researcher-ppd" data-time="1 Day" data-fee="FREE (₱0.00)" data-type="Simple Transaction (Frontline Service)">
+                  <div
+                    class="category-card"
+                    data-sub="assistance-researcher-ppd"
+                    data-time="1 Day"
+                    data-fee="FREE (₱0.00)"
+                    data-type="Simple Transaction (Frontline Service)"
+                  >
                     <h5>Assistance to Researcher / Data Request</h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> Submit Letter of Intent / Request (walk-in: 1 original + 2 duplicate copies, or online: legazpicpdo@gmail.com)</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Submit Letter of Intent / Request
+                        (walk-in: 1 original + 2 duplicate copies, or online: legazpicpdo@gmail.com)
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="tech-assistance-spd" data-time="3 Days (Max)" data-fee="Certified copy: ₱50/pg | Photocopy: ₱5/pg | Computer Generated Maps: ₱50 - ₱200" data-type="Simple Transaction (Frontline Service)">
-                    <h5>Technical Assistance to Researchers, Students, Stakeholders & General Public</h5>
+                  <div
+                    class="category-card"
+                    data-sub="tech-assistance-spd"
+                    data-time="3 Days (Max)"
+                    data-fee="Certified copy: ₱50/pg | Photocopy: ₱5/pg | Computer Generated Maps: ₱50 - ₱200"
+                    data-type="Simple Transaction (Frontline Service)"
+                  >
+                    <h5>
+                      Technical Assistance to Researchers, Students, Stakeholders & General Public
+                    </h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 original + 2 copies Letter of Request to CPDO or email legazpicpdo@gmail.com stating nature of request</li><li><i class="bi bi-check2-circle"></i> USB / Portable Hard Drive for electronic map files</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 2 copies Letter of Request
+                        to CPDO or email legazpicpdo@gmail.com stating nature of request
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> USB / Portable Hard Drive for electronic
+                        map files
+                      </li>
                     </ul>
                   </div>
-                  <div class="category-card" data-sub="data-request-resd" data-time="3 Days (Max)" data-fee="Maps: ₱50 - ₱3,000 (Plotter) | Land Info: ₱20 - ₱125 | Copies: ₱35 - ₱50/pg" data-type="Simple Transaction (Backline Service)">
-                    <h5>Data Requests / Assistance to Researchers — Socio-Economic Profiles, Maps, Projects</h5>
+                  <div
+                    class="category-card"
+                    data-sub="data-request-resd"
+                    data-time="3 Days (Max)"
+                    data-fee="Maps: ₱50 - ₱3,000 (Plotter) | Land Info: ₱20 - ₱125 | Copies: ₱35 - ₱50/pg"
+                    data-type="Simple Transaction (Backline Service)"
+                  >
+                    <h5>
+                      Data Requests / Assistance to Researchers. Socio-Economic Profiles, Maps,
+                      Projects
+                    </h5>
                     <ul class="category-req-list">
-                      <li><i class="bi bi-check2-circle"></i> 1 original + 2 duplicate copies Letter of Request to CPDO or email legazpicpdo@gmail.com stating nature of request</li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> 1 original + 2 duplicate copies Letter
+                        of Request to CPDO or email legazpicpdo@gmail.com stating nature of request
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -2039,14 +2981,15 @@
                     <div class="metric-icon"><i class="bi bi-diagram-3-fill"></i></div>
                     <div class="metric-content">
                       <div class="metric-label">Classification & Type</div>
-                      <div class="metric-value" id="planning-research-type">Simple Transaction (Frontline Service)</div>
+                      <div class="metric-value" id="planning-research-type">
+                        Simple Transaction (Frontline Service)
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            
             <!-- Process Table for Barangay Development Planning Process -->
             <table class="process-table sub-table active" id="sub-bdp-planning-process">
               <thead>
@@ -2062,15 +3005,25 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits required BDP/AIP documents to PPD</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receiving personnel refers applicant/documents to technical staff in-charge</div><div class="agency-action-text">1.2 Technical staff evaluates completeness, correctness, and compliance</div><div class="agency-action-text">1.3 Technical staff and head sign checklist/certification forms if complete</div>
+                    <span class="client-step-text">Submits required BDP/AIP documents to PPD</span>
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 Receiving personnel refers applicant/documents to technical staff
+                      in-charge
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Technical staff evaluates completeness, correctness, and compliance
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Technical staff and head sign checklist/certification forms if complete
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>1 day</td>
                   <td>
                     <span class="personnel-tag">PPD Technical Staff</span>
-
                   </td>
                 </tr>
                 <tr>
@@ -2080,23 +3033,27 @@
                     <div class="agency-action-text">2.1 Not Applicable</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Unlisted</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Submits Feedback Form and receives approved planning documents</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 CPDO-PPD releases approved/certified documents</div>
+                    <span class="client-step-text"
+                      >Submits Feedback Form and receives approved planning documents</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 CPDO-PPD releases approved/certified documents
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">PPD Technical Staff</span>
-
                   </td>
                 </tr>
               </tbody>
@@ -2118,15 +3075,29 @@
                   <td><span class="step-badge">1</span></td>
                   <td><span class="client-step-text">Submits letter-request to PPD</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 Receives letter-request and office head refers to PPD staff in-charge</div><div class="agency-action-text">1.2 Acknowledges receipt and evaluates availability of requested data</div><div class="agency-action-text">1.3 Coordinates with researcher, retrieves, consolidates, and prepares documents</div><div class="agency-action-text">1.4 Discusses with researcher and presents documents (for walk-in)</div><div class="agency-action-text">1.5 Finalizes reply / transmittal letter signed by office head</div>
+                    <div class="agency-action-text">
+                      1.1 Receives letter-request and office head refers to PPD staff in-charge
+                    </div>
+                    <div class="agency-action-text">
+                      1.2 Acknowledges receipt and evaluates availability of requested data
+                    </div>
+                    <div class="agency-action-text">
+                      1.3 Coordinates with researcher, retrieves, consolidates, and prepares
+                      documents
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 Discusses with researcher and presents documents (for walk-in)
+                    </div>
+                    <div class="agency-action-text">
+                      1.5 Finalizes reply / transmittal letter signed by office head
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>1 day</td>
                   <td>
                     <span class="personnel-tag">Planning Officer IV (PPD Head)</span>
-<span class="personnel-tag">Planning Officer III</span>
-<span class="personnel-tag">Planning Officer I</span>
-
+                    <span class="personnel-tag">Planning Officer III</span>
+                    <span class="personnel-tag">Planning Officer I</span>
                   </td>
                 </tr>
                 <tr>
@@ -2136,25 +3107,29 @@
                     <div class="agency-action-text">2.1 Not Applicable</div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Unlisted</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Submits Feedback Form and receives requested research documents</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 CPDO-PPD releases requested documents via walk-in or email</div>
+                    <span class="client-step-text"
+                      >Submits Feedback Form and receives requested research documents</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 CPDO-PPD releases requested documents via walk-in or email
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Planning Officer IV</span>
-<span class="personnel-tag">Planning Officer III</span>
-<span class="personnel-tag">Planning Officer I</span>
-
+                    <span class="personnel-tag">Planning Officer III</span>
+                    <span class="personnel-tag">Planning Officer I</span>
                   </td>
                 </tr>
               </tbody>
@@ -2174,49 +3149,81 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits Letter of Request to CPDO-SPD</span></td>
                   <td>
-                    <div class="agency-action-text">1.0 CPDC acknowledges receipt and refers to Special Projects Division</div><div class="agency-action-text">2.0 SPD Division Chief assigns task to technical staff</div><div class="agency-action-text">3.0 Schedules interview date if requested</div><div class="agency-action-text">4.0 Issues Order of Payment for maps/photocopies</div><div class="agency-action-text">5.0 Prepares requested documents / transfers electronic files to USB</div><div class="agency-action-text">6.0 Advises party to complete CSM Report Form</div>
+                    <span class="client-step-text">Submits Letter of Request to CPDO-SPD</span>
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.0 CPDC acknowledges receipt and refers to Special Projects Division
+                    </div>
+                    <div class="agency-action-text">
+                      2.0 SPD Division Chief assigns task to technical staff
+                    </div>
+                    <div class="agency-action-text">3.0 Schedules interview date if requested</div>
+                    <div class="agency-action-text">
+                      4.0 Issues Order of Payment for maps/photocopies
+                    </div>
+                    <div class="agency-action-text">
+                      5.0 Prepares requested documents / transfers electronic files to USB
+                    </div>
+                    <div class="agency-action-text">
+                      6.0 Advises party to complete CSM Report Form
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>3 days (max)</td>
                   <td>
                     <span class="personnel-tag">HHRO III</span>
-<span class="personnel-tag">Project Development Officer II</span>
-<span class="personnel-tag">Project Development Officer IV</span>
-
+                    <span class="personnel-tag">Project Development Officer II</span>
+                    <span class="personnel-tag">Project Development Officer IV</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays copying / mapping fee at City Treasurer's Office</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Collector receives payment and issues Official Receipt</div>
+                    <span class="client-step-text"
+                      >Pays copying / mapping fee at City Treasurer's Office</span
+                    >
                   </td>
-                  <td><div class="fee-tier-list"><div class="fee-tier-item">Certified copy: ₱50/pg</div><div class="fee-tier-item">Photocopy: ₱5/pg</div><div class="fee-tier-item">Maps: ₱50 - ₱200</div></div></td>
-                  <td>—</td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Collector receives payment and issues Official Receipt
+                    </div>
+                  </td>
+                  <td>
+                    <div class="fee-tier-list">
+                      <div class="fee-tier-item">Certified copy: ₱50/pg</div>
+                      <div class="fee-tier-item">Photocopy: ₱5/pg</div>
+                      <div class="fee-tier-item">Maps: ₱50 - ₱200</div>
+                    </div>
+                  </td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Completes CSM Report Form and receives requested documents / USB files</span></td>
                   <td>
-                    <div class="agency-action-text">3.0 CPDO-SPD releases requested documents upon submission of CSM Report</div>
+                    <span class="client-step-text"
+                      >Completes CSM Report Form and receives requested documents / USB files</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.0 CPDO-SPD releases requested documents upon submission of CSM Report
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">HHRO III</span>
-<span class="personnel-tag">Project Development Officer II</span>
-
+                    <span class="personnel-tag">Project Development Officer II</span>
                   </td>
                 </tr>
               </tbody>
             </table>
-            <!-- Process Table for Data Requests / Assistance to Researchers — Socio-Economic Profiles, Maps, Projects -->
+            <!-- Process Table for Data Requests / Assistance to Researchers. Socio-Economic Profiles, Maps, Projects -->
             <table class="process-table sub-table" id="sub-data-request-resd">
               <thead>
                 <tr>
@@ -2231,45 +3238,74 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td><span class="client-step-text">Submits Request Letter physically or electronically to CPDO-RESD</span></td>
                   <td>
-                    <div class="agency-action-text">1.1 RESD Staff receives and evaluates request</div><div class="agency-action-text">1.2 RESD Staff issues Order of Payment</div><div class="agency-action-text">1.3 After payment, records Official Receipt</div><div class="agency-action-text">1.4 Prepares / retrieves requested data, socio-economic profiles, or GIS maps</div>
+                    <span class="client-step-text"
+                      >Submits Request Letter physically or electronically to CPDO-RESD</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      1.1 RESD Staff receives and evaluates request
+                    </div>
+                    <div class="agency-action-text">1.2 RESD Staff issues Order of Payment</div>
+                    <div class="agency-action-text">
+                      1.3 After payment, records Official Receipt
+                    </div>
+                    <div class="agency-action-text">
+                      1.4 Prepares / retrieves requested data, socio-economic profiles, or GIS maps
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
                   <td>3 days (max)</td>
                   <td>
                     <span class="personnel-tag">Planning Officer IV (RESD Head)</span>
-<span class="personnel-tag">Planning Officer III</span>
-<span class="personnel-tag">Statistician I</span>
-
+                    <span class="personnel-tag">Planning Officer III</span>
+                    <span class="personnel-tag">Statistician I</span>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td><span class="client-step-text">Pays map / land info fees at City Treasurer's Office</span></td>
                   <td>
-                    <div class="agency-action-text">2.1 CTO Collector receives payment and issues Official Receipt</div>
+                    <span class="client-step-text"
+                      >Pays map / land info fees at City Treasurer's Office</span
+                    >
                   </td>
-                  <td><div class="fee-tier-list"><div class="fee-tier-item">Maps: ₱50 - ₱3,000</div><div class="fee-tier-item">Land Info: ₱20 - ₱125</div><div class="fee-tier-item">Copies: ₱35 - ₱50/pg</div></div></td>
-                  <td>—</td>
+                  <td>
+                    <div class="agency-action-text">
+                      2.1 CTO Collector receives payment and issues Official Receipt
+                    </div>
+                  </td>
+                  <td>
+                    <div class="fee-tier-list">
+                      <div class="fee-tier-item">Maps: ₱50 - ₱3,000</div>
+                      <div class="fee-tier-item">Land Info: ₱20 - ₱125</div>
+                      <div class="fee-tier-item">Copies: ₱35 - ₱50/pg</div>
+                    </div>
+                  </td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">CTO Revenue Collection Officer</span>
-
                   </td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td><span class="client-step-text">Submits Feedback Form and receives maps, land info printouts, or digital files</span></td>
                   <td>
-                    <div class="agency-action-text">3.1 CPDO-RESD releases requested data and maps</div>
+                    <span class="client-step-text"
+                      >Submits Feedback Form and receives maps, land info printouts, or digital
+                      files</span
+                    >
+                  </td>
+                  <td>
+                    <div class="agency-action-text">
+                      3.1 CPDO-RESD releases requested data and maps
+                    </div>
                   </td>
                   <td>FREE (₱0.00)</td>
-                  <td>—</td>
+                  <td>N/A</td>
                   <td>
                     <span class="personnel-tag">Planning Officer IV</span>
-<span class="personnel-tag">Planning Officer III</span>
-<span class="personnel-tag">Statistician I</span>
-
+                    <span class="personnel-tag">Planning Officer III</span>
+                    <span class="personnel-tag">Statistician I</span>
                   </td>
                 </tr>
               </tbody>
@@ -2277,7 +3313,6 @@
           </div>
         </div>
       </section>
-
 
       <!-- Office Personnel Section (White Background - CSWDO Style) -->
       <section class="mswdo-section">
@@ -2287,11 +3322,13 @@
               <i class="bi bi-people"></i>
               <span>Office Personnel</span>
             </h2>
-            <p>Key personnel handling city planning, land-use, zoning, and housing development services</p>
+            <p>
+              Key personnel handling city planning, land-use, zoning, and housing development
+              services
+            </p>
           </div>
 
           <div class="staff-grid">
-            
             <div class="staff-card">
               <h4>EnP. Jocelyn M. Codorniz</h4>
               <p>City Government Department Head I / CPDC Head</p>
@@ -2406,18 +3443,31 @@
             <div class="contact-card">
               <h4><i class="bi bi-telephone-fill"></i> Direct Contact Lines</h4>
               <p><strong>Office Phone:</strong> <a href="tel:0527423701">(052) 742-3701</a></p>
-              <p><strong>Official Email:</strong> <a href="mailto:cpdo.legazpi@gmail.com">cpdo.legazpi@gmail.com</a></p>
-              <p><strong>City Hall Trunkline:</strong> <a href="tel:0527423701">(052) 742-3701</a></p>
+              <p>
+                <strong>Official Email:</strong>
+                <a href="mailto:cpdo.legazpi@gmail.com">cpdo.legazpi@gmail.com</a>
+              </p>
+              <p>
+                <strong>City Hall Trunkline:</strong> <a href="tel:0527423701">(052) 742-3701</a>
+              </p>
             </div>
 
             <div class="contact-card">
               <h4><i class="bi bi-chat-dots"></i> Feedback Mechanism</h4>
-              <p>Fill out the Client Feedback Form available at the CPDO Receiving Desk and drop it in the Suggestion Box.</p>
-              <p>Public feedbacks are reviewed daily and referred to division heads for response within 3 days.</p>
+              <p>
+                Fill out the Client Feedback Form available at the CPDO Receiving Desk and drop it
+                in the Suggestion Box.
+              </p>
+              <p>
+                Public feedbacks are reviewed daily and referred to division heads for response
+                within 3 days.
+              </p>
             </div>
 
             <div class="contact-card">
-              <h4><i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) & CCB</h4>
+              <h4>
+                <i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) & CCB
+              </h4>
               <p><strong>ARTA Complaints Email:</strong> complaints@arta.gov.ph | 1-ARTA (2782)</p>
               <p><strong>Presidential Complaint Center (PCC):</strong> 8888</p>
               <p><strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS)</p>
@@ -2429,7 +3479,7 @@
       <!-- Data Source Section -->
       <section class="mswdo-section">
         <div class="container">
-          <p class="data-source" style="text-align: center; margin: 0;">
+          <p class="data-source" style="text-align: center; margin: 0">
             <i class="bi bi-info-circle"></i> Source:
             <a
               href="https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-PLANNING-AND-DEVELOPMENT-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
@@ -2449,21 +3499,46 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
-              <a href="https://www.facebook.com/betterlegazpi.org" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.linkedin.com/company/betterlegazpi/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-              <a href="https://discord.com/invite/qeSu7RJkjQ" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a>
+              <a
+                href="https://www.facebook.com/betterlegazpi.org"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/betterlegazpi/"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://discord.com/invite/betterlegazpi"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                ><i class="bi bi-discord"></i
+              ></a>
             </div>
           </div>
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -2474,14 +3549,100 @@
           <div class="footer-column">
             <h4>Resources</h4>
             <ul class="footer-links-new">
-              <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
-              <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
-              <li><a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Legazpi Portal</a></li>
+              <li>
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Open Data Philippines</a
+                >
+              </li>
+              <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div class="footer-cost" role="status" aria-label="Cost to the People of Legazpi: Zero Pesos">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
+            >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
+            <a
+              href="https://github.com/bpbelen/betterlegazpi"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
             </div>
           </div>
         </div>
@@ -2489,7 +3650,9 @@
           <div class="footer-copyright">
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
-            <span class="footer-copyright-disclaimer">All public information sourced from official Legazpi CPDO Citizen's Charter.</span>
+            <span class="footer-copyright-disclaimer"
+              >All public information sourced from official government portals.</span
+            >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>
         </div>
@@ -2505,7 +3668,9 @@
         const targetContent = document.getElementById(tabId);
         if (targetTab && targetContent) {
           document.querySelectorAll('.service-tab').forEach((t) => t.classList.remove('active'));
-          document.querySelectorAll('.service-content').forEach((c) => c.classList.remove('active'));
+          document
+            .querySelectorAll('.service-content')
+            .forEach((c) => c.classList.remove('active'));
           targetTab.classList.add('active');
           targetContent.classList.add('active');
         }
@@ -2520,9 +3685,15 @@
       function formatMetricHTML(rawText, iconClass) {
         if (!rawText) return '';
         if (rawText.includes('|')) {
-          const items = rawText.split('|').map((s) => s.trim()).filter(Boolean);
+          const items = rawText
+            .split('|')
+            .map((s) => s.trim())
+            .filter(Boolean);
           return `<div class="metric-list">${items
-            .map((item) => `<div class="metric-list-item"><i class="bi ${iconClass}"></i> ${item}</div>`)
+            .map(
+              (item) =>
+                `<div class="metric-list-item"><i class="bi ${iconClass}"></i> ${item}</div>`
+            )
             .join('')}</div>`;
         }
         return rawText;
@@ -2541,7 +3712,9 @@
             card.classList.add('active');
 
             const subId = card.dataset.sub;
-            contentBlock.querySelectorAll('.sub-table').forEach((tbl) => tbl.classList.remove('active'));
+            contentBlock
+              .querySelectorAll('.sub-table')
+              .forEach((tbl) => tbl.classList.remove('active'));
             const targetTable = contentBlock.querySelector(`#sub-${subId}`);
             if (targetTable) {
               targetTable.classList.add('active');
@@ -2552,7 +3725,10 @@
             }
             if (metricFee && card.dataset.fee) {
               metricFee.innerHTML = formatMetricHTML(card.dataset.fee, 'bi-dash');
-              if (card.dataset.fee.toLowerCase().includes('free') || card.dataset.fee.toLowerCase().includes('not applicable')) {
+              if (
+                card.dataset.fee.toLowerCase().includes('free') ||
+                card.dataset.fee.toLowerCase().includes('not applicable')
+              ) {
                 metricFee.classList.add('free');
               } else {
                 metricFee.classList.remove('free');
@@ -2574,7 +3750,9 @@
         let targetSubCard = null;
 
         if (!targetTab) {
-          targetSubCard = document.querySelector(`.category-card[data-sub="${hash}"]`) || document.getElementById(hash);
+          targetSubCard =
+            document.querySelector(`.category-card[data-sub="${hash}"]`) ||
+            document.getElementById(hash);
           if (targetSubCard) {
             const parentContent = targetSubCard.closest('.service-content');
             if (parentContent) {
@@ -2587,7 +3765,9 @@
 
         if (targetTab && targetContent) {
           document.querySelectorAll('.service-tab').forEach((t) => t.classList.remove('active'));
-          document.querySelectorAll('.service-content').forEach((c) => c.classList.remove('active'));
+          document
+            .querySelectorAll('.service-content')
+            .forEach((c) => c.classList.remove('active'));
           targetTab.classList.add('active');
           targetContent.classList.add('active');
 

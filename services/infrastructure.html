@@ -81,7 +81,7 @@
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <script>
-      (function() {
+      (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
@@ -92,11 +92,9 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link"
-      >Skip to main content</a
-    >
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -130,7 +128,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -141,14 +138,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -174,15 +168,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -212,8 +211,7 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="./">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="./">Services</a><span>/</span>
           <span aria-current="page">Infrastructure</span>
         </nav>
       </div>
@@ -221,8 +219,7 @@
         <div class="container">
           <div class="page-header-content">
             <span class="page-header-badge"
-              ><i class="bi bi-building-fill-gear"></i>
-              <span>Infrastructure Services</span></span
+              ><i class="bi bi-building-fill-gear"></i> <span>Infrastructure Services</span></span
             >
             <h1>Infrastructure Services</h1>
             <p class="page-header-desc">
@@ -236,24 +233,45 @@
       <section class="section">
         <div class="container">
           <!-- Category 1: Starting New Construction -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-building-add" style="color: var(--color-primary);"></i>
+          <div style="margin-bottom: var(--spacing-lg)">
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-building-add" style="color: var(--color-primary)"></i>
                 <span>Starting New Construction</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Essential permits and clearances required when building new residential or commercial structures in Legazpi.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Essential permits and clearances required when building new residential or
+                commercial structures in Legazpi.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/cpdo-services.html#locational-building-permit" class="service-item-card">
+              <a
+                href="../service-details/cpdo-services.html#locational-building-permit"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-geo-alt-fill"></i>
                   <span>Locational & Zoning Clearance</span>
                 </h3>
                 <p class="service-item-desc">
-                  Verify land use compliance and secure mandatory zoning clearance prior to building permit application
+                  Verify land use compliance and secure mandatory zoning clearance prior to building
+                  permit application
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Assessed Fee</span>
@@ -267,7 +285,8 @@
                   <span>Building Permit Issuance</span>
                 </h3>
                 <p class="service-item-desc">
-                  Submit architectural, structural, electrical, and plumbing plans for official building construction approval
+                  Submit architectural, structural, electrical, and plumbing plans for official
+                  building construction approval
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Assessed Fee</span>
@@ -275,13 +294,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/ceo-services.html#occupancy-app" class="service-item-card">
+              <a
+                href="../service-details/ceo-services.html#occupancy-app"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-house-check"></i>
                   <span>Certificate of Occupancy</span>
                 </h3>
                 <p class="service-item-desc">
-                  Obtain final inspection clearance and occupancy certificate upon completion of building construction
+                  Obtain final inspection clearance and occupancy certificate upon completion of
+                  building construction
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Assessed Fee</span>
@@ -292,24 +315,45 @@
           </div>
 
           <!-- Category 2: Specialized Permits & Structural Work -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-tools" style="color: var(--color-primary);"></i>
+          <div style="margin-bottom: var(--spacing-lg)">
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-tools" style="color: var(--color-primary)"></i>
                 <span>Specialized Permits & Structural Work</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Permits for specialized equipment, utility connections, structural renovations, and demolition projects.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Permits for specialized equipment, utility connections, structural renovations, and
+                demolition projects.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/ceo-services.html#mechanical-permit" class="service-item-card">
+              <a
+                href="../service-details/ceo-services.html#mechanical-permit"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-gear-wide-connected"></i>
                   <span>Ancillary & Mechanical Permits</span>
                 </h3>
                 <p class="service-item-desc">
-                  Secure permits for mechanical equipment, elevators, HVAC, sanitary, and plumbing installations
+                  Secure permits for mechanical equipment, elevators, HVAC, sanitary, and plumbing
+                  installations
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Assessed Fee</span>
@@ -317,13 +361,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/ceo-services.html#electrical-permit" class="service-item-card">
+              <a
+                href="../service-details/ceo-services.html#electrical-permit"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-lightning-charge-fill"></i>
                   <span>Electrical Inspection & CFEI</span>
                 </h3>
                 <p class="service-item-desc">
-                  Request Certificate of Final Electrical Inspection and power connection authorization
+                  Request Certificate of Final Electrical Inspection and power connection
+                  authorization
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Assessed Fee</span>
@@ -331,13 +379,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/ceo-services.html#demolition-permit" class="service-item-card">
+              <a
+                href="../service-details/ceo-services.html#demolition-permit"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-building-gear"></i>
                   <span>Demolition & Structural Repair</span>
                 </h3>
                 <p class="service-item-desc">
-                  Process permits for building demolition, major structural renovations, alterations, and excavation
+                  Process permits for building demolition, major structural renovations,
+                  alterations, and excavation
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Assessed Fee</span>
@@ -349,23 +401,44 @@
 
           <!-- Category 3: Land & Property Development -->
           <div>
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-map-fill" style="color: var(--color-primary);"></i>
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-map-fill" style="color: var(--color-primary)"></i>
                 <span>Land & Property Development</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Services for land development, subdivision approvals, spatial planning, and official zoning certifications.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Services for land development, subdivision approvals, spatial planning, and official
+                zoning certifications.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/cpdo-services.html#development-permit" class="service-item-card">
+              <a
+                href="../service-details/cpdo-services.html#development-permit"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-diagram-3-fill"></i>
                   <span>Subdivision Development Permit</span>
                 </h3>
                 <p class="service-item-desc">
-                  Request evaluation and approval for residential, commercial, or industrial land development & subdivisions
+                  Request evaluation and approval for residential, commercial, or industrial land
+                  development & subdivisions
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Assessed Fee</span>
@@ -373,13 +446,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/cpdo-services.html#site-zoning-cert" class="service-item-card">
+              <a
+                href="../service-details/cpdo-services.html#site-zoning-cert"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-card-checklist"></i>
                   <span>Zoning & Land Use Certification</span>
                 </h3>
                 <p class="service-item-desc">
-                  Obtain spatial planning data, land use classification certificates, and zoning map extracts
+                  Obtain spatial planning data, land use classification certificates, and zoning map
+                  extracts
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> ₱100.00</span>
@@ -387,13 +464,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/cpdo-services.html#land-reclassification" class="service-item-card">
+              <a
+                href="../service-details/cpdo-services.html#land-reclassification"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-layers-half"></i>
                   <span>Site Plan & Land Reclassification</span>
                 </h3>
                 <p class="service-item-desc">
-                  Apply for complex site development plan review, land reclassification, or special zoning variances
+                  Apply for complex site development plan review, land reclassification, or special
+                  zoning variances
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Assessed Fee</span>
@@ -408,9 +489,7 @@
       <!-- Responsible Offices Section -->
       <section class="section section-compact bg-alt">
         <div class="container">
-          <h2 class="section-title-sm">
-            Responsible Offices
-          </h2>
+          <h2 class="section-title-sm">Responsible Offices</h2>
           <div class="office-cards-grid">
             <a href="../service-details/ceo-services.html" class="office-card">
               <div class="office-card-icon">
@@ -419,7 +498,8 @@
               <div class="office-card-content">
                 <h3 class="office-card-title">City Engineering Office</h3>
                 <p class="office-card-desc">
-                  Process building permits, structural inspections, occupancy certificates, and municipal infrastructure projects
+                  Process building permits, structural inspections, occupancy certificates, and
+                  municipal infrastructure projects
                 </p>
               </div>
               <div class="office-card-arrow">
@@ -434,7 +514,8 @@
               <div class="office-card-content">
                 <h3 class="office-card-title">City Planning & Development Office</h3>
                 <p class="office-card-desc">
-                  Manage locational clearances, zoning compliance, subdivision development permits, and urban planning
+                  Manage locational clearances, zoning compliance, subdivision development permits,
+                  and urban planning
                 </p>
               </div>
               <div class="office-card-arrow">
@@ -452,11 +533,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -476,7 +558,7 @@
                 ><i class="bi bi-linkedin"></i
               ></a>
               <a
-                href="https://discord.com/invite/qeSu7RJkjQ"
+                href="https://discord.com/invite/betterlegazpi"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -488,12 +570,13 @@
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
-              <li>
-                <a href="../accessibility/">Accessibility</a>
-              </li>
+              <li><a href="../accessibility/">Accessibility</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
@@ -501,27 +584,36 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://data.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
               </li>
               <li>
-                <a
-                  href="https://www.foi.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
                   >Freedom of Information</a
                 >
               </li>
               <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
                 <a
-                  href="https://legazpi.gov.ph/"
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Official LGU Legazpi Portal</a
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -533,6 +625,58 @@
               aria-label="Cost to the People of Legazpi: Zero Pesos"
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
+            <a
+              href="https://github.com/bpbelen/betterlegazpi"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
             </div>
           </div>
         </div>

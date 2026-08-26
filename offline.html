@@ -97,7 +97,7 @@
         font-weight: 600;
         text-decoration: none;
         /* These are emergency numbers on the page shown when the visitor has
-           no connection — they must be easy to hit under pressure. As a bare
+           no connection, they must be easy to hit under pressure. As a bare
            inline link, "911" measured 22x21px, below the 24x24 WCAG 2.5.8 AA
            floor and well under the 44px guideline. The negative margin keeps
            the digits visually flush right while the tap area extends past
@@ -169,27 +169,27 @@
           color: #8b949e;
         }
       }
-      [data-theme="dark"] body {
+      [data-theme='dark'] body {
         background: #090a0f;
         color: #f0f6fc;
       }
-      [data-theme="dark"] .hotlines {
+      [data-theme='dark'] .hotlines {
         background: #16181f;
         border-color: rgba(255, 255, 255, 0.08);
       }
-      [data-theme="dark"] .hotline-label {
+      [data-theme='dark'] .hotline-label {
         color: #c9d1d9;
       }
-      [data-theme="dark"] .hotline-number {
+      [data-theme='dark'] .hotline-number {
         color: #4f8eff;
       }
-      [data-theme="dark"] .hotlines h2 {
+      [data-theme='dark'] .hotlines h2 {
         color: #4f8eff;
       }
-      [data-theme="dark"] .hotline-list li {
+      [data-theme='dark'] .hotline-list li {
         border-bottom-color: rgba(255, 255, 255, 0.05);
       }
-      [data-theme="dark"] .subtitle {
+      [data-theme='dark'] .subtitle {
         color: #8b949e;
       }
     </style>
@@ -204,9 +204,7 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link"
-      >Skip to main content</a
-    >
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <main id="main-content" class="container" role="main">
       <svg class="logo" viewBox="0 0 200 60" aria-label="BetterLegazpi" role="img">
@@ -231,9 +229,7 @@
       </p>
 
       <div class="hotlines">
-        <h2>
-          Emergency Hotlines - Legazpi City, Albay
-        </h2>
+        <h2>Emergency Hotlines - Legazpi City, Albay</h2>
         <ul class="hotline-list" aria-label="Emergency contact numbers">
           <li>
             <span class="hotline-label">Legazpi Command Center</span>
@@ -262,9 +258,42 @@
         </ul>
       </div>
 
-      <div style="margin-top: 1rem; display: flex; gap: 10px; justify-content: center; align-items: center;">
+      <div
+        style="
+          margin-top: 1rem;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+        "
+      >
         <button class="retry-btn" onclick="window.location.reload()">Try Again</button>
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode" style="background: transparent; border: 1px solid currentColor; color: inherit; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer;" onclick="const isD = document.documentElement.getAttribute('data-theme') === 'dark'; if (isD) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); } else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }">🌓 Dark Mode</button>
+        <button
+          id="theme-toggle"
+          class="theme-toggle-btn"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+          style="
+            background: transparent;
+            border: 1px solid currentColor;
+            color: inherit;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+          "
+          onclick="
+            const isD = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isD) {
+              document.documentElement.removeAttribute('data-theme');
+              localStorage.setItem('theme', 'light');
+            } else {
+              document.documentElement.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+            }
+          "
+        >
+          🌓 Dark Mode
+        </button>
       </div>
     </main>
   </body>

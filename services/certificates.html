@@ -77,7 +77,7 @@
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <script>
-      (function() {
+      (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
@@ -88,11 +88,9 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link"
-      >Skip to main content</a
-    >
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -126,7 +124,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -137,14 +134,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -170,15 +164,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -208,8 +207,7 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="./">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="./">Services</a><span>/</span>
           <span aria-current="page">Certificates</span>
         </nav>
       </div>
@@ -217,12 +215,12 @@
         <div class="container">
           <div class="page-header-content">
             <span class="page-header-badge"
-              ><i class="bi bi-file-earmark-text-fill"></i>
-              <span>Certificates</span></span
+              ><i class="bi bi-file-earmark-text-fill"></i> <span>Certificates</span></span
             >
             <h1>Certificates &amp; Vital Records</h1>
             <p class="page-header-desc">
-              Official documents for birth, death, marriage, legal instruments, and other vital records in Legazpi City.
+              Official documents for birth, death, marriage, legal instruments, and other vital
+              records in Legazpi City.
             </p>
           </div>
         </div>
@@ -232,24 +230,45 @@
       <section class="section">
         <div class="container">
           <!-- Category 1: Starting a family -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-balloon-heart" style="color: var(--color-primary);"></i>
+          <div style="margin-bottom: var(--spacing-lg)">
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-balloon-heart" style="color: var(--color-primary)"></i>
                 <span>Starting a family</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Register a new birth, legitimize children born prior to marriage, or fix errors on a child's birth record.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Register a new birth, legitimize children born prior to marriage, or fix errors on a
+                child's birth record.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/city-civil-registrar.html#on-time-birth" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#on-time-birth"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-file-earmark-text"></i>
                   <span>Register a New Baby</span>
                 </h3>
                 <p class="service-item-desc">
-                  On-time or delayed birth registration, including the Birth Registration Assistance Project (BRAP) for indigent and IP families.
+                  On-time or delayed birth registration, including the Birth Registration Assistance
+                  Project (BRAP) for indigent and IP families.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (On-time/BRAP) / ₱150</span>
@@ -257,69 +276,102 @@
                 </div>
               </a>
 
-              <a href="../service-details/city-civil-registrar.html#legitimation-birth" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#legitimation-birth"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-people-fill"></i>
                   <span>Legitimize a Child Born Before Marriage</span>
                 </h3>
                 <p class="service-item-desc">
-                  Legitimation by subsequent marriage of parents and affidavits to establish paternal rights and surname (RA 9255).
+                  Legitimation by subsequent marriage of parents and affidavits to establish
+                  paternal rights and surname (RA 9255).
                 </p>
                 <div class="service-item-meta">
-                  <span><strong>Fee:</strong> ₱300.00 – ₱500.00</span>
+                  <span><strong>Fee:</strong> ₱300.00-₱500.00</span>
                   <span><strong>Time:</strong> 40 mins</span>
                 </div>
               </a>
 
-              <a href="../service-details/city-civil-registrar.html#ra-9048" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#ra-9048"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-pen"></i>
                   <span>Fix Wrong Entry on Child's Birth Record</span>
                 </h3>
                 <p class="service-item-desc">
-                  Administrative petition to correct misspelled names, gender marks, or birth dates under RA 9048 / RA 10172 without court litigation.
+                  Administrative petition to correct misspelled names, gender marks, or birth dates
+                  under RA 9048 / RA 10172 without court litigation.
                 </p>
                 <div class="service-item-meta">
-                  <span><strong>Fee:</strong> ₱1,000.00 – ₱3,000.00</span>
-                  <span><strong>Time:</strong> 10–15 days</span>
+                  <span><strong>Fee:</strong> ₱1,000.00-₱3,000.00</span>
+                  <span><strong>Time:</strong> 10-15 days</span>
                 </div>
               </a>
             </div>
           </div>
 
           <!-- Category 2: Getting married -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-hearts" style="color: var(--color-primary);"></i>
+          <div style="margin-bottom: var(--spacing-lg)">
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-hearts" style="color: var(--color-primary)"></i>
                 <span>Getting married</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Marriage license application, legal requirements, and registration of solemnized marriage ceremonies.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Marriage license application, legal requirements, and registration of solemnized
+                marriage ceremonies.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/city-civil-registrar.html#marriage-license" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#marriage-license"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-heart-fill"></i>
                   <span>Apply for a Marriage License</span>
                 </h3>
                 <p class="service-item-desc">
-                  Filing of legal marriage license application for couples intending to marry, including the mandatory 10-day publication notice.
+                  Filing of legal marriage license application for couples intending to marry,
+                  including the mandatory 10-day publication notice.
                 </p>
                 <div class="service-item-meta">
-                  <span><strong>Fee:</strong> ₱300.00 – ₱350.00</span>
+                  <span><strong>Fee:</strong> ₱300.00-₱350.00</span>
                   <span><strong>Time:</strong> 10 days posting + 30 mins</span>
                 </div>
               </a>
 
-              <a href="../service-details/city-civil-registrar.html#on-time-marriage" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#on-time-marriage"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-hearts"></i>
                   <span>Register Marriage Ceremony</span>
                 </h3>
                 <p class="service-item-desc">
-                  Registration of marriage certificate after solemnization by priest, minister, or judge (on-time or delayed/reconstruction).
+                  Registration of marriage certificate after solemnization by priest, minister, or
+                  judge (on-time or delayed/reconstruction).
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (On-time) / ₱150 (Delayed)</span>
@@ -330,41 +382,66 @@
           </div>
 
           <!-- Category 3: A relationship or life status changes -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-journal-bookmark-fill" style="color: var(--color-primary);"></i>
+          <div style="margin-bottom: var(--spacing-lg)">
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-journal-bookmark-fill" style="color: var(--color-primary)"></i>
                 <span>A relationship or life status changes</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Record court judgments, legal separations, judicial adoptions, and subsequent registry corrections or annotations.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Record court judgments, legal separations, judicial adoptions, and subsequent
+                registry corrections or annotations.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/city-civil-registrar.html#court-decrees" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#court-decrees"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-file-earmark-ruled"></i>
                   <span>Register a Court Decree</span>
                 </h3>
                 <p class="service-item-desc">
-                  Official registration and annotation of court judgments — annulment, declaration of nullity, legal separation, and adoption.
+                  Official registration and annotation of court judgments, annulment, declaration of
+                  nullity, legal separation, and adoption.
                 </p>
                 <div class="service-item-meta">
-                  <span><strong>Fee:</strong> ₱500.00 – ₱1,000.00</span>
+                  <span><strong>Fee:</strong> ₱500.00-₱1,000.00</span>
                   <span><strong>Time:</strong> 1 hour (2 days)</span>
                 </div>
               </a>
 
-              <a href="../service-details/city-civil-registrar.html#legal-instruments" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#legal-instruments"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-pen-fill"></i>
                   <span>Correct or Supplement Civil Records</span>
                 </h3>
                 <p class="service-item-desc">
-                  Registration of supplemental reports, affidavits, paternity acknowledgments, and legal instruments after the fact.
+                  Registration of supplemental reports, affidavits, paternity acknowledgments, and
+                  legal instruments after the fact.
                 </p>
                 <div class="service-item-meta">
-                  <span><strong>Fee:</strong> ₱200.00 – ₱300.00</span>
+                  <span><strong>Fee:</strong> ₱200.00-₱300.00</span>
                   <span><strong>Time:</strong> 30 mins</span>
                 </div>
               </a>
@@ -372,38 +449,63 @@
           </div>
 
           <!-- Category 4: A death in the family -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-flower1" style="color: var(--color-primary);"></i>
+          <div style="margin-bottom: var(--spacing-lg)">
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-flower1" style="color: var(--color-primary)"></i>
                 <span>A death in the family</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Death certificate registration, burial clearances, and certified copies required for bereavement claims.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Death certificate registration, burial clearances, and certified copies required for
+                bereavement claims.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/city-civil-registrar.html#on-time-death" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#on-time-death"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-file-earmark-x"></i>
                   <span>Register a Death</span>
                 </h3>
                 <p class="service-item-desc">
-                  Registration of death certificate within 48 hours (on-time) or delayed reporting, including burial and transfer permits.
+                  Registration of death certificate within 48 hours (on-time) or delayed reporting,
+                  including burial and transfer permits.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (Burial: ₱50) / ₱150 (Delayed)</span>
-                  <span><strong>Time:</strong> 25 mins – 1 hr</span>
+                  <span><strong>Time:</strong> 25 mins - 1 hr</span>
                 </div>
               </a>
 
-              <a href="../service-details/city-civil-registrar.html#issuance-ctc" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#issuance-ctc"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-file-earmark-check"></i>
                   <span>Certified Copies for Estate &amp; Benefits</span>
                 </h3>
                 <p class="service-item-desc">
-                  Fast-track issuance of certified true copies and death certifications for estate settlement, insurance, and GSIS/SSS claims.
+                  Fast-track issuance of certified true copies and death certifications for estate
+                  settlement, insurance, and GSIS/SSS claims.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> ₱100.00 / copy</span>
@@ -415,23 +517,44 @@
 
           <!-- Category 5: Proving who you are, later in life -->
           <div>
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-person-vcard" style="color: var(--color-primary);"></i>
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-person-vcard" style="color: var(--color-primary)"></i>
                 <span>Proving who you are, later in life</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Request certified copies, verify records online, and advance endorse documents to the PSA central database.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Request certified copies, verify records online, and advance endorse documents to
+                the PSA central database.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/city-civil-registrar.html#issuance-ctc" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#issuance-ctc"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-file-earmark-text-fill"></i>
                   <span>Request Certified True Copies (CTC)</span>
                 </h3>
                 <p class="service-item-desc">
-                  Official certified copies or local transcripts (Form 1A, 2A, 3A) for passport, employment, retirement, and legal identification.
+                  Official certified copies or local transcripts (Form 1A, 2A, 3A) for passport,
+                  employment, retirement, and legal identification.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> ₱100.00 / copy</span>
@@ -439,27 +562,35 @@
                 </div>
               </a>
 
-              <a href="../service-details/city-civil-registrar.html#email-inquiries" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#email-inquiries"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-envelope-at-fill"></i>
                   <span>Verify &amp; Inquire Online (Email-Assisted)</span>
                 </h3>
                 <p class="service-item-desc">
-                  Check archive availability, verify records, and confirm document requirements via email before traveling to the office.
+                  Check archive availability, verify records, and confirm document requirements via
+                  email before traveling to the office.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (₱0.00)</span>
-                  <span><strong>Time:</strong> 1–2 working days</span>
+                  <span><strong>Time:</strong> 1-2 working days</span>
                 </div>
               </a>
 
-              <a href="../service-details/city-civil-registrar.html#psa-endorsement" class="service-item-card">
+              <a
+                href="../service-details/city-civil-registrar.html#psa-endorsement"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-send-check"></i>
                   <span>PSA Endorsement of Records</span>
                 </h3>
                 <p class="service-item-desc">
-                  Advance electronic endorsement and dispatch of local civil registry records to PSA so your record shows up nationally.
+                  Advance electronic endorsement and dispatch of local civil registry records to PSA
+                  so your record shows up nationally.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> ₱150.00</span>
@@ -474,20 +605,17 @@
       <!-- Responsible Offices -->
       <section class="section section-compact bg-alt">
         <div class="container">
-          <h2 class="section-title-sm">
-            Responsible Offices
-          </h2>
+          <h2 class="section-title-sm">Responsible Offices</h2>
           <div class="office-cards-grid">
             <a href="../service-details/city-civil-registrar" class="office-card">
               <div class="office-card-icon">
                 <i class="bi bi-building"></i>
               </div>
               <div class="office-card-content">
-                <h3 class="office-card-title">
-                  OCCR Services
-                </h3>
+                <h3 class="office-card-title">OCCR Services</h3>
                 <p class="office-card-desc">
-                  Register vital life events, apply for marriage licenses, legitimize children, correct records under RA 9048/10172, and request certified copies.
+                  Register vital life events, apply for marriage licenses, legitimize children,
+                  correct records under RA 9048/10172, and request certified copies.
                 </p>
               </div>
               <div class="office-card-arrow">
@@ -505,13 +633,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
-            <p
-              class="footer-tagline"
-            >
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+            <p class="footer-tagline">
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -544,8 +671,8 @@
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
-              <li><a href="../service-details/city-civil-registrar">City Civil Registrar Hub</a></li>
-              <li><a href="../service-details/business-permits-licensing">BPLO Hub</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -557,19 +684,36 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://data.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
               </li>
               <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
                 <a
-                  href="https://www.foi.gov.ph/"
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Freedom of Information</a
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -582,18 +726,58 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">

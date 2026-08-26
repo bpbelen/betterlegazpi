@@ -87,9 +87,9 @@
     max-height: 0;
     overflow: hidden;
     transition:
-      max-height 0.3s ease,
-      opacity 0.3s ease,
-      padding 0.3s ease,
+      max-height var(--duration-slow) ease,
+      opacity var(--duration-slow) ease,
+      padding var(--duration-slow) ease,
       visibility 0s linear 0.3s;
     opacity: 0;
     visibility: hidden;
@@ -105,9 +105,9 @@
     opacity: 1;
     visibility: visible;
     transition:
-      max-height 0.3s ease,
-      opacity 0.3s ease,
-      padding 0.3s ease,
+      max-height var(--duration-slow) ease,
+      opacity var(--duration-slow) ease,
+      padding var(--duration-slow) ease,
       visibility 0s linear 0s;
     padding-top: var(--spacing-sm);
     border-top-color: var(--color-bg-alt);
@@ -123,7 +123,7 @@
     display: block;
     padding: 12px 16px;
     border-radius: 6px;
-    transition: background-color 0.15s ease;
+    transition: background-color var(--duration-fast) ease;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -155,7 +155,7 @@
   }
 
   .main-nav .has-dropdown > a::after {
-    transition: transform 0.2s ease;
+    transition: transform var(--duration-base) ease;
     margin-left: auto;
     flex-shrink: 0;
   }
@@ -177,8 +177,8 @@
     max-height: 0;
     overflow: hidden;
     transition:
-      max-height 0.25s ease,
-      padding 0.25s ease;
+      max-height var(--duration-slow) ease,
+      padding var(--duration-slow) ease;
   }
 
   .main-nav .has-dropdown.dropdown-open .dropdown-menu {
@@ -569,6 +569,8 @@
   cursor: pointer;
   padding: 0.5rem;
   line-height: 1;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .mobile-menu-toggle:focus {
@@ -606,12 +608,12 @@
   background-color: rgba(255, 255, 255, 0.1);
   color: #cccccc;
   font-size: 1.25rem;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .social-links a:hover {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: #ffffff;
   transform: translateY(-2px);
 }
 

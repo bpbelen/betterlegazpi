@@ -81,7 +81,7 @@
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <script>
-      (function() {
+      (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
@@ -92,11 +92,9 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link"
-      >Skip to main content</a
-    >
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-                        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -130,7 +128,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -141,14 +138,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -174,15 +168,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -212,17 +211,14 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="./">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="./">Services</a><span>/</span>
           <span aria-current="page">Business</span>
         </nav>
       </div>
       <section class="page-header">
         <div class="container">
           <div class="page-header-content">
-            <span class="page-header-badge"
-              ><i class="bi bi-shop"></i> <span>Business</span></span
-            >
+            <span class="page-header-badge"><i class="bi bi-shop"></i> <span>Business</span></span>
             <h1>Business Services</h1>
             <p class="page-header-desc">
               Permits, licenses, and support for businesses in Legazpi City
@@ -236,13 +232,10 @@
         <div class="container">
           <div class="online-services-header">
             <span class="online-badge"
-              ><i class="bi bi-globe"></i>
-              <span>Online Services via Filipizen</span></span
+              ><i class="bi bi-globe"></i> <span>Online Services via Filipizen</span></span
             >
             <h2>Online Business Transactions</h2>
-            <p>
-              Complete your business transactions online through the official Filipizen portal
-            </p>
+            <p>Complete your business transactions online through the official Filipizen portal</p>
           </div>
           <div class="online-services-grid">
             <a
@@ -253,15 +246,10 @@
             >
               <div class="online-service-icon"><i class="bi bi-receipt"></i></div>
               <div class="online-service-content">
-                <h4>
-                  Business Online Billing & Payment
-                </h4>
-                <p>
-                  View and pay your business tax bills online
-                </p>
+                <h4>Business Online Billing & Payment</h4>
+                <p>View and pay your business tax bills online</p>
                 <span class="online-service-office"
-                  ><i class="bi bi-building"></i>
-                  <span>Legazpi City BPLO</span></span
+                  ><i class="bi bi-building"></i> <span>Legazpi City BPLO</span></span
                 >
               </div>
               <span class="online-service-link"><i class="bi bi-box-arrow-up-right"></i></span>
@@ -275,12 +263,9 @@
               <div class="online-service-icon"><i class="bi bi-plus-circle"></i></div>
               <div class="online-service-content">
                 <h4>New Business Application</h4>
-                <p>
-                  Apply for a new business permit online
-                </p>
+                <p>Apply for a new business permit online</p>
                 <span class="online-service-office"
-                  ><i class="bi bi-building"></i>
-                  <span>Legazpi City BPLO</span></span
+                  ><i class="bi bi-building"></i> <span>Legazpi City BPLO</span></span
                 >
               </div>
               <span class="online-service-link"><i class="bi bi-box-arrow-up-right"></i></span>
@@ -294,12 +279,9 @@
               <div class="online-service-icon"><i class="bi bi-arrow-repeat"></i></div>
               <div class="online-service-content">
                 <h4>Business Permit Renewal</h4>
-                <p>
-                  Renew your existing business permit online
-                </p>
+                <p>Renew your existing business permit online</p>
                 <span class="online-service-office"
-                  ><i class="bi bi-building"></i>
-                  <span>Legazpi City BPLO</span></span
+                  ><i class="bi bi-building"></i> <span>Legazpi City BPLO</span></span
                 >
               </div>
               <span class="online-service-link"><i class="bi bi-box-arrow-up-right"></i></span>
@@ -317,9 +299,7 @@
               <span>In-person Services</span>
             </span>
             <h2>Face-to-Face Business Transactions</h2>
-            <p>
-              Complete your business transactions in-person at the Legazpi City BPLO
-            </p>
+            <p>Complete your business transactions in-person at the Legazpi City BPLO</p>
           </div>
 
           <!-- Application Type Switcher Tabs -->
@@ -364,19 +344,31 @@
                   <span class="lane-badge-tag">Electronic Inter-Agency Routing</span>
                 </div>
               </div>
-              <p>Requirements submitted at the BPLO receiving desk are forwarded <strong>electronically by the BPLO</strong> to regulatory offices for endorsement and approval. Once approved, the application proceeds to Step 2.</p>
+              <p>
+                Requirements submitted at the BPLO receiving desk are forwarded
+                <strong>electronically by the BPLO</strong> to regulatory offices for endorsement
+                and approval. Once approved, the application proceeds to Step 2.
+              </p>
             </div>
 
             <!-- Structured Step Timeline: New Application -->
             <div class="in-person-steps-wrapper">
               <!-- Step 1: Expanded by Default -->
               <div class="step-card" id="new-step-1">
-                <div class="step-card-header" role="button" tabindex="0" aria-expanded="true" aria-controls="new-step-1-body">
+                <div
+                  class="step-card-header"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="true"
+                  aria-controls="new-step-1-body"
+                >
                   <div class="step-card-header-left">
                     <div class="step-badge">Step 1</div>
                     <div class="step-title-wrap">
                       <h3>Filing, Verification, Evaluation &amp; Assessment</h3>
-                      <span class="step-subtitle">BPLO Receiving Officer &amp; Regulatory Offices</span>
+                      <span class="step-subtitle"
+                        >BPLO Receiving Officer &amp; Regulatory Offices</span
+                      >
                     </div>
                   </div>
                   <div class="step-chevron-btn" aria-hidden="true">
@@ -385,17 +377,24 @@
                 </div>
                 <div class="step-card-body" id="new-step-1-body">
                   <p class="step-desc">
-                    Applicant submits 1 copy of the duly accomplished and signed Unified Application Form (UAF) along with mandatory requirements to the receiving officer.
+                    Applicant submits 1 copy of the duly accomplished and signed Unified Application
+                    Form (UAF) along with mandatory requirements to the receiving officer.
                   </p>
-                  
+
                   <div class="requirements-box">
-                    <h4 class="req-title"><i class="bi bi-file-earmark-check" aria-hidden="true"></i> Standard Unified Requirements (UAF):</h4>
+                    <h4 class="req-title">
+                      <i class="bi bi-file-earmark-check" aria-hidden="true"></i> Standard Unified
+                      Requirements (UAF):
+                    </h4>
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle" aria-hidden="true"></i>
                         <div>
                           <strong>Duly Filled-out Application Form (1 Original):</strong>
-                          <span>Accomplished and signed Unified Application Form (UAF) for accountability.</span>
+                          <span
+                            >Accomplished and signed Unified Application Form (UAF) for
+                            accountability.</span
+                          >
                         </div>
                       </li>
                       <li>
@@ -409,41 +408,66 @@
                         <i class="bi bi-check-circle" aria-hidden="true"></i>
                         <div>
                           <strong>Certificate of Occupancy (1 Original + 1 Photocopy):</strong>
-                          <span>Certificate of Occupancy of space/building where business is located. <em>(Original returned upon verification)</em></span>
+                          <span
+                            >Certificate of Occupancy of space/building where business is located.
+                            <em>(Original returned upon verification)</em></span
+                          >
                         </div>
                       </li>
                       <li>
                         <i class="bi bi-check-circle" aria-hidden="true"></i>
                         <div>
                           <strong>DTI / SEC / CDA Registration (1 Photocopy):</strong>
-                          <span>Certificate of Business Name Registration (DTI for sole proprietorship, SEC for corporation/partnership, CDA for cooperative).</span>
+                          <span
+                            >Certificate of Business Name Registration (DTI for sole proprietorship,
+                            SEC for corporation/partnership, CDA for cooperative).</span
+                          >
                         </div>
                       </li>
                     </ul>
                   </div>
 
                   <div class="requirements-box req-box-conditional">
-                    <h4 class="req-title req-title-warning"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Other Possible Requirements (As Applicable):</h4>
+                    <h4 class="req-title req-title-warning">
+                      <i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Other Possible
+                      Requirements (As Applicable):
+                    </h4>
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle icon-warning" aria-hidden="true"></i>
                         <div>
                           <strong>For Market Stall Holders:</strong>
-                          <span>1 Original copy of Market Clearance and 1 Photocopy of Contract of Lease.</span>
+                          <span
+                            >1 Original copy of Market Clearance and 1 Photocopy of Contract of
+                            Lease.</span
+                          >
                         </div>
                       </li>
                       <li>
                         <i class="bi bi-check-circle icon-warning" aria-hidden="true"></i>
                         <div>
                           <strong>If Business Location is Rented/Not Owned:</strong>
-                          <span>1 Photocopy of Valid Lease Contract / Authority / Certification from Property Owner, or Notice of Award. <em>(Building/space owner must have a valid business permit as lessor or real estate rental)</em></span>
+                          <span
+                            >1 Photocopy of Valid Lease Contract / Authority / Certification from
+                            Property Owner, or Notice of Award.
+                            <em
+                              >(Building/space owner must have a valid business permit as lessor or
+                              real estate rental)</em
+                            ></span
+                          >
                         </div>
                       </li>
                       <li>
                         <i class="bi bi-check-circle icon-warning" aria-hidden="true"></i>
                         <div>
-                          <strong>Evaluation Requirements (Determined upon application review):</strong>
-                          <span>• 1 Original copy of Affidavit of No Improvement / Electrical Plan <em>(for change of space use)</em><br>• 1 Original copy of Affidavit of Non-Objection / Manifestation</span>
+                          <strong
+                            >Evaluation Requirements (Determined upon application review):</strong
+                          >
+                          <span
+                            >• 1 Original copy of Affidavit of No Improvement / Electrical Plan
+                            <em>(for change of space use)</em><br />• 1 Original copy of Affidavit
+                            of Non-Objection / Manifestation</span
+                          >
                         </div>
                       </li>
                     </ul>
@@ -451,7 +475,8 @@
 
                   <div class="step-hub-link">
                     <a href="../service-details/business-permits-licensing#business-permits">
-                      <i class="bi bi-box-arrow-up-right"></i> View Full Checklist &amp; Lane Routing in BPLO Hub &rarr;
+                      <i class="bi bi-box-arrow-up-right"></i> View Full Checklist &amp; Lane
+                      Routing in BPLO Hub &rarr;
                     </a>
                   </div>
                 </div>
@@ -459,12 +484,20 @@
 
               <!-- Step 2: Collapsed by Default -->
               <div class="step-card collapsed" id="new-step-2">
-                <div class="step-card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="new-step-2-body">
+                <div
+                  class="step-card-header"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="new-step-2-body"
+                >
                   <div class="step-card-header-left">
                     <div class="step-badge">Step 2</div>
                     <div class="step-title-wrap">
                       <h3>Payment of Taxes &amp; Regulatory Charges</h3>
-                      <span class="step-subtitle">City Treasurer's Office &amp; Payment Partners</span>
+                      <span class="step-subtitle"
+                        >City Treasurer's Office &amp; Payment Partners</span
+                      >
                     </div>
                   </div>
                   <div class="step-chevron-btn" aria-hidden="true">
@@ -473,10 +506,14 @@
                 </div>
                 <div class="step-card-body" id="new-step-2-body">
                   <p class="step-desc">
-                    Applicant pays computed taxes and fees based on the issued Order of Payment (provided in hard copy, text, or email) at the City Treasurer's Office or online payment partners.
+                    Applicant pays computed taxes and fees based on the issued Order of Payment
+                    (provided in hard copy, text, or email) at the City Treasurer's Office or online
+                    payment partners.
                   </p>
                   <div class="payment-channels-box">
-                    <h4><i class="bi bi-wallet2" aria-hidden="true"></i> Available Payment Channels:</h4>
+                    <h4>
+                      <i class="bi bi-wallet2" aria-hidden="true"></i> Available Payment Channels:
+                    </h4>
                     <div class="payment-grid">
                       <div class="payment-chip">
                         <i class="bi bi-building" aria-hidden="true"></i>
@@ -505,7 +542,13 @@
 
               <!-- Step 3: Collapsed by Default -->
               <div class="step-card collapsed" id="new-step-3">
-                <div class="step-card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="new-step-3-body">
+                <div
+                  class="step-card-header"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="new-step-3-body"
+                >
                   <div class="step-card-header-left">
                     <div class="step-badge">Step 3</div>
                     <div class="step-title-wrap">
@@ -519,24 +562,39 @@
                 </div>
                 <div class="step-card-body" id="new-step-3-body">
                   <p class="step-desc">
-                    Applicant claims the official business permit, business plate, sticker, and regulatory clearances at BPLO Lane 9 upon presenting their completed Client Feedback Form.
+                    Applicant claims the official business permit, business plate, sticker, and
+                    regulatory clearances at BPLO Lane 9 upon presenting their completed Client
+                    Feedback Form.
                   </p>
                   <div class="deliverables-box">
                     <h4><i class="bi bi-box-seam" aria-hidden="true"></i> Documents Released:</h4>
                     <div class="deliverables-list">
-                      <span class="deliverable-badge"><i class="bi bi-award" aria-hidden="true"></i> Business Permit</span>
-                      <span class="deliverable-badge"><i class="bi bi-card-heading" aria-hidden="true"></i> Business Plate</span>
-                      <span class="deliverable-badge"><i class="bi bi-patch-check" aria-hidden="true"></i> Official Sticker</span>
-                      <span class="deliverable-badge"><i class="bi bi-shield-check" aria-hidden="true"></i> Regulatory Clearances</span>
+                      <span class="deliverable-badge"
+                        ><i class="bi bi-award" aria-hidden="true"></i> Business Permit</span
+                      >
+                      <span class="deliverable-badge"
+                        ><i class="bi bi-card-heading" aria-hidden="true"></i> Business Plate</span
+                      >
+                      <span class="deliverable-badge"
+                        ><i class="bi bi-patch-check" aria-hidden="true"></i> Official Sticker</span
+                      >
+                      <span class="deliverable-badge"
+                        ><i class="bi bi-shield-check" aria-hidden="true"></i> Regulatory
+                        Clearances</span
+                      >
                     </div>
                     <div class="location-notice">
                       <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                      <span><strong>Pickup Location:</strong> BPLO Lane 9 (Releasing) • Must present completed Client Feedback Form.</span>
+                      <span
+                        ><strong>Pickup Location:</strong> BPLO Lane 9 (Releasing) • Must present
+                        completed Client Feedback Form.</span
+                      >
                     </div>
                   </div>
                   <div class="step-hub-link">
                     <a href="../service-details/business-permits-licensing#business-permits">
-                      <i class="bi bi-box-arrow-up-right"></i> View Full Releasing Procedures in BPLO Hub &rarr;
+                      <i class="bi bi-box-arrow-up-right"></i> View Full Releasing Procedures in
+                      BPLO Hub &rarr;
                     </a>
                   </div>
                 </div>
@@ -550,7 +608,7 @@
             class="bplo-content-panel"
             role="tabpanel"
             aria-labelledby="tab-renewal"
-            style="display: none;"
+            style="display: none"
           >
             <!-- Quick Lanes Info Banner -->
             <div class="bplo-lanes-summary">
@@ -562,17 +620,22 @@
                     <span class="lane-badge-tag">Gender and Development (GAD) Priority</span>
                   </div>
                 </div>
-                <p>For Senior Citizens, Pregnant Women, PWDs, and Parents with young children (10 years old &amp; below).</p>
+                <p>
+                  For Senior Citizens, Pregnant Women, PWDs, and Parents with young children (10
+                  years old &amp; below).
+                </p>
               </div>
               <div class="lane-card express-lane">
                 <div class="lane-header">
                   <i class="bi bi-lightning-charge" aria-hidden="true"></i>
                   <div>
                     <h4>Express Lane</h4>
-                    <span class="lane-badge-tag">1 – 2 Applications</span>
+                    <span class="lane-badge-tag">1-2 Applications</span>
                   </div>
                 </div>
-                <p>Fast-track processing for applicants filing 1 to 2 business permit applications.</p>
+                <p>
+                  Fast-track processing for applicants filing 1 to 2 business permit applications.
+                </p>
               </div>
               <div class="lane-card bulk-lane">
                 <div class="lane-header">
@@ -582,7 +645,10 @@
                     <span class="lane-badge-tag">3+ Applications</span>
                   </div>
                 </div>
-                <p>Dedicated processing lane for applicants filing 3 or more business permit applications.</p>
+                <p>
+                  Dedicated processing lane for applicants filing 3 or more business permit
+                  applications.
+                </p>
               </div>
             </div>
 
@@ -590,12 +656,18 @@
             <div class="in-person-steps-wrapper">
               <!-- Step 1: Expanded by Default -->
               <div class="step-card" id="renewal-step-1">
-                <div class="step-card-header" role="button" tabindex="0" aria-expanded="true" aria-controls="renewal-step-1-body">
+                <div
+                  class="step-card-header"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="true"
+                  aria-controls="renewal-step-1-body"
+                >
                   <div class="step-card-header-left">
                     <div class="step-badge">Step 1</div>
                     <div class="step-title-wrap">
                       <h3>Filing, Verification &amp; Assessment</h3>
-                      <span class="step-subtitle">BPLO Receiving Officers (Lanes 1, 3–7)</span>
+                      <span class="step-subtitle">BPLO Receiving Officers (Lanes 1, 3-7)</span>
                     </div>
                   </div>
                   <div class="step-chevron-btn" aria-hidden="true">
@@ -604,44 +676,63 @@
                 </div>
                 <div class="step-card-body" id="renewal-step-1-body">
                   <p class="step-desc">
-                    Applicant submits all mandatory requirements for verification and assessment to the BPLO Receiving Officer in any of the assigned processing lanes (Priority, Express, or Bulk).
+                    Applicant submits all mandatory requirements for verification and assessment to
+                    the BPLO Receiving Officer in any of the assigned processing lanes (Priority,
+                    Express, or Bulk).
                   </p>
                   <div class="requirements-box">
-                    <h4 class="req-title"><i class="bi bi-file-earmark-check" aria-hidden="true"></i> Checklist of Requirements (Renewal):</h4>
+                    <h4 class="req-title">
+                      <i class="bi bi-file-earmark-check" aria-hidden="true"></i> Checklist of
+                      Requirements (Renewal):
+                    </h4>
                     <ul class="req-list">
                       <li>
                         <i class="bi bi-check-circle" aria-hidden="true"></i>
                         <div>
                           <strong>Proof of Income (Original + 1 Photocopy):</strong>
-                          <span>Latest Income Tax Return (ITR) from BIR or Audited Financial Statement. <em>(Original copy returned immediately upon verification)</em></span>
+                          <span
+                            >Latest Income Tax Return (ITR) from BIR or Audited Financial Statement.
+                            <em>(Original copy returned immediately upon verification)</em></span
+                          >
                         </div>
                       </li>
                       <li>
                         <i class="bi bi-check-circle" aria-hidden="true"></i>
                         <div>
                           <strong>Market Clearance (1 Original):</strong>
-                          <span>For Market Stall Holders only. <em>(Returned upon release of Mayor's Permit)</em></span>
+                          <span
+                            >For Market Stall Holders only.
+                            <em>(Returned upon release of Mayor's Permit)</em></span
+                          >
                         </div>
                       </li>
                       <li>
                         <i class="bi bi-check-circle" aria-hidden="true"></i>
                         <div>
                           <strong>Certificate of Authority (1 Photocopy):</strong>
-                          <span>Valid Certificate or Provisional Certificate of Authority for Head Office of Pawnshops and Money Service Business (Joint Memorandum Circular / JMC No. 1 S. 2019).</span>
+                          <span
+                            >Valid Certificate or Provisional Certificate of Authority for Head
+                            Office of Pawnshops and Money Service Business (Joint Memorandum
+                            Circular / JMC No. 1 S. 2019).</span
+                          >
                         </div>
                       </li>
                       <li>
                         <i class="bi bi-check-circle" aria-hidden="true"></i>
                         <div>
                           <strong>BSP Letter of Code Issuance (1 Photocopy):</strong>
-                          <span>For Pawnshops and Money Service Business branches other than the Head Office.</span>
+                          <span
+                            >For Pawnshops and Money Service Business branches other than the Head
+                            Office.</span
+                          >
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div class="step-hub-link">
                     <a href="../service-details/business-permits-licensing#business-permits">
-                      <i class="bi bi-box-arrow-up-right"></i> View Lane Matrix &amp; Turnaround Times in BPLO Hub &rarr;
+                      <i class="bi bi-box-arrow-up-right"></i> View Lane Matrix &amp; Turnaround
+                      Times in BPLO Hub &rarr;
                     </a>
                   </div>
                 </div>
@@ -649,12 +740,20 @@
 
               <!-- Step 2: Collapsed by Default -->
               <div class="step-card collapsed" id="renewal-step-2">
-                <div class="step-card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="renewal-step-2-body">
+                <div
+                  class="step-card-header"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="renewal-step-2-body"
+                >
                   <div class="step-card-header-left">
                     <div class="step-badge">Step 2</div>
                     <div class="step-title-wrap">
                       <h3>Pay Taxes &amp; Regulatory Charges</h3>
-                      <span class="step-subtitle">City Treasurer's Office &amp; Payment Partners</span>
+                      <span class="step-subtitle"
+                        >City Treasurer's Office &amp; Payment Partners</span
+                      >
                     </div>
                   </div>
                   <div class="step-chevron-btn" aria-hidden="true">
@@ -663,10 +762,14 @@
                 </div>
                 <div class="step-card-body" id="renewal-step-2-body">
                   <p class="step-desc">
-                    Applicant pays computed taxes and fees with reference to the issued Order of Payment (provided in hard copy, text, or email) at the Office of the City Treasurer or through partner payment channels.
+                    Applicant pays computed taxes and fees with reference to the issued Order of
+                    Payment (provided in hard copy, text, or email) at the Office of the City
+                    Treasurer or through partner payment channels.
                   </p>
                   <div class="payment-channels-box">
-                    <h4><i class="bi bi-wallet2" aria-hidden="true"></i> Available Payment Channels:</h4>
+                    <h4>
+                      <i class="bi bi-wallet2" aria-hidden="true"></i> Available Payment Channels:
+                    </h4>
                     <div class="payment-grid">
                       <div class="payment-chip">
                         <i class="bi bi-building" aria-hidden="true"></i>
@@ -695,7 +798,13 @@
 
               <!-- Step 3: Collapsed by Default -->
               <div class="step-card collapsed" id="renewal-step-3">
-                <div class="step-card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="renewal-step-3-body">
+                <div
+                  class="step-card-header"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="renewal-step-3-body"
+                >
                   <div class="step-card-header-left">
                     <div class="step-badge">Step 3</div>
                     <div class="step-title-wrap">
@@ -709,23 +818,34 @@
                 </div>
                 <div class="step-card-body" id="renewal-step-3-body">
                   <p class="step-desc">
-                    Applicant claims official business permit, business plate, and/or sticker at BPLO Lane 9 upon presenting their duly accomplished feedback form.
+                    Applicant claims official business permit, business plate, and/or sticker at
+                    BPLO Lane 9 upon presenting their duly accomplished feedback form.
                   </p>
                   <div class="deliverables-box">
                     <h4><i class="bi bi-box-seam" aria-hidden="true"></i> Documents Released:</h4>
                     <div class="deliverables-list">
-                      <span class="deliverable-badge"><i class="bi bi-award" aria-hidden="true"></i> Business Permit</span>
-                      <span class="deliverable-badge"><i class="bi bi-card-heading" aria-hidden="true"></i> Business Plate</span>
-                      <span class="deliverable-badge"><i class="bi bi-patch-check" aria-hidden="true"></i> Official Sticker</span>
+                      <span class="deliverable-badge"
+                        ><i class="bi bi-award" aria-hidden="true"></i> Business Permit</span
+                      >
+                      <span class="deliverable-badge"
+                        ><i class="bi bi-card-heading" aria-hidden="true"></i> Business Plate</span
+                      >
+                      <span class="deliverable-badge"
+                        ><i class="bi bi-patch-check" aria-hidden="true"></i> Official Sticker</span
+                      >
                     </div>
                     <div class="location-notice">
                       <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                      <span><strong>Pickup Location:</strong> BPLO Lane 9 (Releasing) • Must present completed Client Feedback Form.</span>
+                      <span
+                        ><strong>Pickup Location:</strong> BPLO Lane 9 (Releasing) • Must present
+                        completed Client Feedback Form.</span
+                      >
                     </div>
                   </div>
                   <div class="step-hub-link">
                     <a href="../service-details/business-permits-licensing#business-permits">
-                      <i class="bi bi-box-arrow-up-right"></i> View Full Releasing Guidelines in BPLO Hub &rarr;
+                      <i class="bi bi-box-arrow-up-right"></i> View Full Releasing Guidelines in
+                      BPLO Hub &rarr;
                     </a>
                   </div>
                 </div>
@@ -736,25 +856,25 @@
       </section>
 
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
           // Tab Switching Logic
           const tabBtns = Array.from(document.querySelectorAll('.bplo-tab-btn'));
-          
+
           function switchTab(btn) {
-            tabBtns.forEach(function(b) {
+            tabBtns.forEach(function (b) {
               b.classList.remove('active');
               b.setAttribute('aria-selected', 'false');
               b.setAttribute('tabindex', '-1');
             });
-            document.querySelectorAll('.bplo-content-panel').forEach(function(panel) {
+            document.querySelectorAll('.bplo-content-panel').forEach(function (panel) {
               panel.style.display = 'none';
             });
-            
+
             btn.classList.add('active');
             btn.setAttribute('aria-selected', 'true');
             btn.setAttribute('tabindex', '0');
             btn.focus();
-            
+
             const targetId = btn.getAttribute('data-target');
             const targetPanel = document.querySelector(targetId);
             if (targetPanel) {
@@ -762,9 +882,11 @@
             }
           }
 
-          tabBtns.forEach(function(btn, index) {
-            btn.addEventListener('click', function() { switchTab(btn); });
-            btn.addEventListener('keydown', function(e) {
+          tabBtns.forEach(function (btn, index) {
+            btn.addEventListener('click', function () {
+              switchTab(btn);
+            });
+            btn.addEventListener('keydown', function (e) {
               let nextIndex = null;
               if (e.key === 'ArrowRight') {
                 nextIndex = (index + 1) % tabBtns.length;
@@ -784,7 +906,7 @@
 
           // Accordion Step Cards Logic
           const stepHeaders = document.querySelectorAll('.step-card-header');
-          stepHeaders.forEach(function(header) {
+          stepHeaders.forEach(function (header) {
             function toggleStep() {
               const card = header.closest('.step-card');
               if (!card) return;
@@ -799,7 +921,7 @@
             }
 
             header.addEventListener('click', toggleStep);
-            header.addEventListener('keydown', function(e) {
+            header.addEventListener('keydown', function (e) {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 toggleStep();
@@ -812,20 +934,17 @@
       <!-- Responsible Offices -->
       <section class="section section-compact">
         <div class="container">
-          <h2 class="section-title-sm">
-            Responsible Offices
-          </h2>
+          <h2 class="section-title-sm">Responsible Offices</h2>
           <div class="office-cards-grid">
             <a href="../service-details/business-permits-licensing" class="office-card">
               <div class="office-card-icon">
                 <i class="bi bi-building"></i>
               </div>
               <div class="office-card-content">
-                <h3 class="office-card-title">
-                  BPLO Services
-                </h3>
+                <h3 class="office-card-title">BPLO Services</h3>
                 <p class="office-card-desc">
-                  Register new businesses, renew annual permits, obtain Mayor's clearances, and apply for MTOP.
+                  Register new businesses, renew annual permits, obtain Mayor's clearances, and
+                  apply for MTOP.
                 </p>
               </div>
               <div class="office-card-arrow">
@@ -842,13 +961,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
-            <p
-              class="footer-tagline"
-            >
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+            <p class="footer-tagline">
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -881,8 +999,8 @@
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
-              <li><a href="../service-details/city-civil-registrar">City Civil Registrar Hub</a></li>
-              <li><a href="../service-details/business-permits-licensing">BPLO Hub</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -894,19 +1012,36 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://data.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
               </li>
               <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
                 <a
-                  href="https://www.foi.gov.ph/"
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Freedom of Information</a
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -919,18 +1054,58 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">

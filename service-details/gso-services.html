@@ -47,13 +47,16 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-hub.css" />
     <style>
       .mswdo-section {
         padding: 40px 0;
       }
+
       .mswdo-section.alt-bg {
         background: var(--color-bg-alt);
       }
+
       .section-header {
         margin-bottom: 20px;
         display: flex;
@@ -62,6 +65,7 @@
         flex-wrap: wrap;
         gap: 12px;
       }
+
       .section-header h2 {
         font-size: 1.125rem;
         color: var(--color-text);
@@ -70,21 +74,25 @@
         align-items: center;
         gap: 8px;
       }
+
       .section-header h2 i {
         color: var(--color-primary);
         font-size: 1rem;
       }
+
       .section-header p {
         color: var(--color-text-light);
         font-size: 0.8125rem;
         margin: 0;
       }
+
       .quick-stats {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
         margin-bottom: 20px;
       }
+
       .stat-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -92,11 +100,13 @@
         padding: 12px;
         text-align: center;
       }
+
       .stat-card i {
         font-size: 1rem;
         color: var(--color-primary);
         margin-bottom: 4px;
       }
+
       .stat-card h4 {
         font-size: 0.625rem;
         color: var(--color-text-light);
@@ -104,18 +114,14 @@
         font-weight: 500;
         text-transform: uppercase;
       }
-      .stat-card p {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
+
       .req-summary-grid {
         display: grid;
         grid-template-columns: 1.8fr 1fr;
         gap: 14px;
         margin-bottom: 14px;
       }
+
       .req-subheading {
         font-size: 0.6875rem;
         font-weight: 700;
@@ -126,14 +132,7 @@
         padding-bottom: 3px;
         border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
       }
-      .req-subheading:first-of-type {
-        margin-top: 0;
-      }
-      .summary-metrics {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
+
       .metric-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
@@ -143,6 +142,7 @@
         align-items: center;
         gap: 10px;
       }
+
       .metric-icon {
         width: 28px;
         height: 28px;
@@ -155,9 +155,7 @@
         font-size: 0.875rem;
         flex-shrink: 0;
       }
-      .metric-content {
-        flex: 1;
-      }
+
       .metric-label {
         font-size: 0.625rem;
         text-transform: uppercase;
@@ -165,12 +163,14 @@
         color: var(--color-text-light);
         letter-spacing: 0.5px;
       }
+
       .metric-value {
         font-size: 0.8125rem;
         font-weight: 700;
         color: var(--color-text);
         margin-top: 1px;
       }
+
       .process-table {
         width: 100%;
         table-layout: fixed;
@@ -181,28 +181,34 @@
         border: 1px solid rgba(0, 0, 0, 0.06);
         font-size: 0.75rem;
       }
+
       .process-table th:nth-child(1),
       .process-table td:nth-child(1) {
         width: 5%;
         text-align: center;
       }
+
       .process-table th:nth-child(2),
       .process-table td:nth-child(2) {
         width: 43%;
       }
+
       .process-table th:nth-child(3),
       .process-table td:nth-child(3) {
         width: 12%;
       }
+
       .process-table th:nth-child(4),
       .process-table td:nth-child(4) {
         width: 15%;
       }
+
       .process-table th:nth-child(5),
       .process-table td:nth-child(5) {
         width: 25%;
         padding-right: 16px;
       }
+
       .process-table th {
         background: var(--color-primary);
         color: white;
@@ -212,17 +218,17 @@
         font-size: 0.6875rem;
         text-transform: uppercase;
       }
+
       .process-table td {
         padding: 10px 12px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.04);
         vertical-align: top;
       }
-      .process-table tr:last-child td {
-        border-bottom: none;
-      }
+
       .process-table tr:hover {
         background: rgba(0, 50, 160, 0.02);
       }
+
       .step-badge {
         display: inline-flex;
         align-items: center;
@@ -235,6 +241,7 @@
         font-weight: 700;
         border-radius: 4px;
       }
+
       .personnel-tag {
         display: block;
         background: rgba(0, 50, 160, 0.06);
@@ -247,6 +254,7 @@
         white-space: nowrap;
         width: fit-content;
       }
+
       .service-tabs {
         display: flex;
         flex-wrap: wrap;
@@ -254,6 +262,7 @@
         margin-bottom: 20px;
         justify-content: center;
       }
+
       .service-tab {
         padding: 8px 16px;
         background: white;
@@ -265,26 +274,24 @@
         cursor: pointer;
         transition: all 0.2s ease;
       }
+
       .service-tab:hover {
         border-color: var(--color-primary);
       }
+
       .service-tab.active {
         background: var(--color-primary);
         color: white;
         border-color: var(--color-primary);
       }
-      .service-content {
-        display: none;
-      }
-      .service-content.active {
-        display: block;
-      }
+
       .req-box {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         padding: 16px;
       }
+
       .req-box h3 {
         font-size: 0.875rem;
         color: var(--color-text);
@@ -293,51 +300,43 @@
         align-items: center;
         gap: 8px;
       }
+
       .req-box h3 i {
         color: var(--color-primary);
       }
+
       .req-box ul {
         margin: 0;
         padding-left: 18px;
         font-size: 0.75rem;
         color: var(--color-text);
       }
+
       .req-box li {
         margin-bottom: 6px;
         line-height: 1.4;
       }
-      .staff-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
+
       .staff-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         padding: 14px;
       }
+
       .staff-card h4 {
         font-size: 0.8125rem;
         margin: 0 0 4px 0;
         color: var(--color-text);
       }
-      .staff-card p {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-      }
-      .contact-info-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-      }
+
       .contact-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         padding: 16px;
       }
+
       .contact-card h4 {
         font-size: 0.875rem;
         color: var(--color-text);
@@ -346,14 +345,13 @@
         align-items: center;
         gap: 8px;
       }
-      .contact-card h4 i {
-        color: var(--color-primary);
-      }
+
       .contact-card p {
         font-size: 0.75rem;
         margin-bottom: 6px;
         line-height: 1.4;
       }
+
       @media (max-width: 768px) {
         .quick-stats {
           grid-template-columns: repeat(2, 1fr);
@@ -369,7 +367,7 @@
         }
       }
     </style>
-      <script>
+    <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -383,7 +381,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -417,7 +415,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -428,14 +425,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -461,15 +455,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -499,8 +498,7 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="../services/">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="../services/">Services</a><span>/</span>
           <a href="../services/infrastructure">Infrastructure</a><span>/</span>
           <span aria-current="page">General Services Office</span>
         </nav>
@@ -514,7 +512,8 @@
             >
             <h1>General Services Office (GSO) Services</h1>
             <p class="page-header-desc">
-              Property custodianship, supply logistics, motor pool maintenance, and city building upkeep in Legazpi City
+              Property custodianship, supply logistics, motor pool maintenance, and city building
+              upkeep in Legazpi City
             </p>
           </div>
         </div>
@@ -549,14 +548,21 @@
           <!-- Section Header -->
           <div class="section-header">
             <h2><i class="bi bi-tools"></i> GSO Services</h2>
-            <p>Select a service below to view the detailed requirements, process, and turn-around time</p>
+            <p>
+              Select a service below to view the detailed requirements, process, and turn-around
+              time
+            </p>
           </div>
 
           <!-- Service Tabs -->
           <div class="service-tabs">
-            <button class="service-tab active" data-tab="property-management">Property & Supply Management</button>
+            <button class="service-tab active" data-tab="property-management">
+              Property & Supply Management
+            </button>
             <button class="service-tab" data-tab="motor-pool">Motor Pool & Heavy Equipment</button>
-            <button class="service-tab" data-tab="building-maintenance">Building & Facility Upkeep</button>
+            <button class="service-tab" data-tab="building-maintenance">
+              Building & Facility Upkeep
+            </button>
           </div>
 
           <!-- Tab 1: Property & Supply Management -->
@@ -566,10 +572,19 @@
                 <h3><i class="bi bi-clipboard-check-fill"></i> Checklist of Requirements</h3>
                 <div class="req-subheading">Primary Document Requirements</div>
                 <ul>
-                  <li>Requisition and Issue Slip (RIS) signed by Requesting Department / Office Head (3 copies)</li>
-                  <li>Approved Purchase Request (PR) and Purchase Order (PO) for items for issuance</li>
-                  <li>Property Acknowledgement Receipt (PAR) for capital equipment & asset transfers</li>
-                  <li>Inventory Clearance Certificate for unserviceable property return or transfer</li>
+                  <li>
+                    Requisition and Issue Slip (RIS) signed by Requesting Department / Office Head
+                    (3 copies)
+                  </li>
+                  <li>
+                    Approved Purchase Request (PR) and Purchase Order (PO) for items for issuance
+                  </li>
+                  <li>
+                    Property Acknowledgement Receipt (PAR) for capital equipment & asset transfers
+                  </li>
+                  <li>
+                    Inventory Clearance Certificate for unserviceable property return or transfer
+                  </li>
                 </ul>
               </div>
               <div class="req-box">
@@ -615,28 +630,39 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td>Submit approved Requisition Slip (RIS) or Property Transfer form at GSO Supply Division.</td>
+                  <td>
+                    Submit approved Requisition Slip (RIS) or Property Transfer form at GSO Supply
+                    Division.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>10 minutes</td>
                   <td><span class="personnel-tag">Supply Receiving Officer</span></td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td>Stock inventory verification and item allocation by GSO Property Custodian.</td>
+                  <td>
+                    Stock inventory verification and item allocation by GSO Property Custodian.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>3 hours</td>
                   <td><span class="personnel-tag">Property Custodian</span></td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td>Inspection and turnover of requested supplies or asset items to requesting office representative.</td>
+                  <td>
+                    Inspection and turnover of requested supplies or asset items to requesting
+                    office representative.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>1 hour</td>
                   <td><span class="personnel-tag">Warehouse Keeper</span></td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">4</span></td>
-                  <td>Signing of Property Acknowledgement Receipt (PAR) and recording in COA asset registry.</td>
+                  <td>
+                    Signing of Property Acknowledgement Receipt (PAR) and recording in COA asset
+                    registry.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>15 minutes</td>
                   <td><span class="personnel-tag">Asset Inventory Officer</span></td>
@@ -673,7 +699,9 @@
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
                       <div class="metric-value free">FREE (₱0.00)</div>
-                      <div class="metric-note">Labor provided free for official LGU Legazpi vehicles</div>
+                      <div class="metric-note">
+                        Labor provided free for official LGU Legazpi vehicles
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
@@ -701,28 +729,39 @@
               <tbody>
                 <tr>
                   <td><span class="step-badge">1</span></td>
-                  <td>File Job Order Request for vehicle preventive maintenance or repair at GSO Motor Pool Section.</td>
+                  <td>
+                    File Job Order Request for vehicle preventive maintenance or repair at GSO Motor
+                    Pool Section.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>15 minutes</td>
                   <td><span class="personnel-tag">Motor Pool Receiving Clerk</span></td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td>Conduct technical diagnostic inspection and prepare repair cost assessment.</td>
+                  <td>
+                    Conduct technical diagnostic inspection and prepare repair cost assessment.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>3 hours</td>
                   <td><span class="personnel-tag">Master Mechanic</span></td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">3</span></td>
-                  <td>Execute mechanical, electrical, or body repair work on the city vehicle / heavy equipment.</td>
+                  <td>
+                    Execute mechanical, electrical, or body repair work on the city vehicle / heavy
+                    equipment.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>1.5 days</td>
                   <td><span class="personnel-tag">Motor Pool Technician Team</span></td>
                 </tr>
                 <tr>
                   <td><span class="step-badge">4</span></td>
-                  <td>Post-repair test drive, quality inspection, and release of repaired vehicle to assigned driver.</td>
+                  <td>
+                    Post-repair test drive, quality inspection, and release of repaired vehicle to
+                    assigned driver.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>30 minutes</td>
                   <td><span class="personnel-tag">Motor Pool Supervisor</span></td>
@@ -739,7 +778,10 @@
                 <div class="req-subheading">Primary Document Requirements</div>
                 <ul>
                   <li>Maintenance Work Order Request form signed by Office Head</li>
-                  <li>Details of facility defect (Electrical, Plumbing, Carpentry, Aircon, or Janitorial request)</li>
+                  <li>
+                    Details of facility defect (Electrical, Plumbing, Carpentry, Aircon, or
+                    Janitorial request)
+                  </li>
                   <li>Safety Inspection permit for major electrical or plumbing alterations</li>
                 </ul>
               </div>
@@ -758,7 +800,9 @@
                     <div class="metric-content">
                       <div class="metric-label">Fees</div>
                       <div class="metric-value free">FREE (₱0.00)</div>
-                      <div class="metric-note">Maintenance services covered by city building operations budget</div>
+                      <div class="metric-note">
+                        Maintenance services covered by city building operations budget
+                      </div>
                     </div>
                   </div>
                   <div class="metric-card">
@@ -793,7 +837,10 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">2</span></td>
-                  <td>Dispatch maintenance personnel (Electrician / Plumber / Carpenter) to office site.</td>
+                  <td>
+                    Dispatch maintenance personnel (Electrician / Plumber / Carpenter) to office
+                    site.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>1 hour</td>
                   <td><span class="personnel-tag">Facility Supervisor</span></td>
@@ -807,7 +854,9 @@
                 </tr>
                 <tr>
                   <td><span class="step-badge">4</span></td>
-                  <td>Sign Work Order completion sign-off by requesting department representative.</td>
+                  <td>
+                    Sign Work Order completion sign-off by requesting department representative.
+                  </td>
                   <td><span class="personnel-tag">Free</span></td>
                   <td>10 minutes</td>
                   <td><span class="personnel-tag">Requesting Office Representative</span></td>
@@ -868,18 +917,31 @@
             <div class="contact-card">
               <h4><i class="bi bi-telephone-fill"></i> Direct Contact Lines</h4>
               <p><strong>Office Phone:</strong> <a href="tel:0527423701">(052) 742-3701</a></p>
-              <p><strong>Official Email:</strong> <a href="mailto:gso.legazpi@gmail.com">gso.legazpi@gmail.com</a></p>
-              <p><strong>City Hall Trunkline:</strong> <a href="tel:0527423701">(052) 742-3701</a></p>
+              <p>
+                <strong>Official Email:</strong>
+                <a href="mailto:gso.legazpi@gmail.com">gso.legazpi@gmail.com</a>
+              </p>
+              <p>
+                <strong>City Hall Trunkline:</strong> <a href="tel:0527423701">(052) 742-3701</a>
+              </p>
             </div>
 
             <div class="contact-card">
               <h4><i class="bi bi-chat-dots"></i> Feedback Mechanism</h4>
-              <p>Fill out the Client Feedback Form available at the GSO Administrative Counter and drop it in the Suggestion Box.</p>
-              <p>Feedback is processed daily by the GSO Admin Section and addressed within 3 working days.</p>
+              <p>
+                Fill out the Client Feedback Form available at the GSO Administrative Counter and
+                drop it in the Suggestion Box.
+              </p>
+              <p>
+                Feedback is processed daily by the GSO Admin Section and addressed within 3 working
+                days.
+              </p>
             </div>
 
             <div class="contact-card">
-              <h4><i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) & CCB</h4>
+              <h4>
+                <i class="bi bi-exclamation-octagon-fill"></i> Anti-Red Tape Authority (ARTA) & CCB
+              </h4>
               <p><strong>ARTA Complaints Email:</strong> complaints@arta.gov.ph | 1-ARTA (2782)</p>
               <p><strong>Presidential Complaint Center (PCC):</strong> 8888</p>
               <p><strong>Contact Center ng Bayan (CCB):</strong> 0908-881-6565 (SMS)</p>
@@ -891,7 +953,7 @@
       <!-- Data Source Section -->
       <section class="mswdo-section">
         <div class="container">
-          <p class="data-source" style="text-align: center; margin: 0;">
+          <p class="data-source" style="text-align: center; margin: 0">
             <i class="bi bi-info-circle"></i> Source:
             <a
               href="https://legazpi.gov.ph/wp-content/uploads/2026/07/GENERAL-SERVICES-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
@@ -911,21 +973,46 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
-              <a href="https://www.facebook.com/betterlegazpi.org" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.linkedin.com/company/betterlegazpi/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-              <a href="https://discord.com/invite/qeSu7RJkjQ" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a>
+              <a
+                href="https://www.facebook.com/betterlegazpi.org"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/betterlegazpi/"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://discord.com/invite/betterlegazpi"
+                class="footer-social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                ><i class="bi bi-discord"></i
+              ></a>
             </div>
           </div>
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
+              <li><a href="../services/">Services Directory</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -936,14 +1023,100 @@
           <div class="footer-column">
             <h4>Resources</h4>
             <ul class="footer-links-new">
-              <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
-              <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
-              <li><a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Legazpi Portal</a></li>
+              <li>
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Open Data Philippines</a
+                >
+              </li>
+              <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div class="footer-cost" role="status" aria-label="Cost to the People of Legazpi: Zero Pesos">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
+            >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
+            <a
+              href="https://github.com/bpbelen/betterlegazpi"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
             </div>
           </div>
         </div>
@@ -951,7 +1124,9 @@
           <div class="footer-copyright">
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
-            <span class="footer-copyright-disclaimer">All public information sourced from official Legazpi GSO Citizen's Charter.</span>
+            <span class="footer-copyright-disclaimer"
+              >All public information sourced from official government portals.</span
+            >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>
         </div>
@@ -967,7 +1142,9 @@
         const targetContent = document.getElementById(tabId);
         if (targetTab && targetContent) {
           document.querySelectorAll('.service-tab').forEach((t) => t.classList.remove('active'));
-          document.querySelectorAll('.service-content').forEach((c) => c.classList.remove('active'));
+          document
+            .querySelectorAll('.service-content')
+            .forEach((c) => c.classList.remove('active'));
           targetTab.classList.add('active');
           targetContent.classList.add('active');
         }

@@ -32,7 +32,7 @@
   background: rgba(255, 255, 255, 0.15);
   color: white;
   padding: 8px 20px;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 16px;
@@ -69,14 +69,14 @@
 
 .metric-card {
   background: white;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   padding: 28px 24px;
   text-align: center;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.04);
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.6s var(--ease-out);
 }
 
 .metric-card.visible {
@@ -93,7 +93,7 @@
   width: 56px;
   height: 56px;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,7 +143,7 @@
   background: rgba(0, 50, 160, 0.08);
   color: var(--color-primary);
   padding: 6px 14px;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   font-size: 0.8125rem;
   font-weight: 600;
   margin-bottom: 12px;
@@ -180,24 +180,24 @@
   padding: 7px 16px;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--color-primary, #0032a0);
+  color: var(--color-primary);
   background-color: #ffffff;
   border: 1.5px solid rgba(0, 50, 160, 0.25);
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   outline: none;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .finance-year-select:hover {
-  border-color: var(--color-primary, #0032a0);
-  background-color: #f8fafc;
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-alt);
   transform: translateY(-1px);
 }
 
 .finance-year-select:focus {
-  border-color: var(--color-primary, #0032a0);
+  border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(0, 50, 160, 0.15);
 }
 
@@ -223,10 +223,10 @@
 
 .finance-card {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
+  transition: all var(--duration-slow) ease;
 }
 
 .finance-card:hover {
@@ -273,7 +273,7 @@
   align-items: center;
   gap: 3px;
   padding: 2px 7px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   font-size: 0.6875rem;
   font-weight: 600;
   line-height: 1.3;
@@ -302,12 +302,12 @@
 
 .finance-trend-badge.badge-neutral {
   background: rgba(100, 116, 139, 0.12);
-  color: #475569;
+  color: var(--color-text-light);
 }
 
 .finance-card-primary .finance-trend-badge.badge-neutral {
   background: rgba(255, 255, 255, 0.18);
-  color: #e2e8f0;
+  color: var(--color-border);
 }
 
 .finance-card-value {
@@ -325,7 +325,7 @@
 /* Income Breakdown */
 .income-breakdown {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px;
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -339,7 +339,7 @@
 .breakdown-bar {
   display: flex;
   height: 48px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--color-bg-alt);
 }
@@ -348,7 +348,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: width 1.2s var(--ease-out);
 }
 
 .breakdown-ira {
@@ -381,11 +381,11 @@
   gap: 20px;
   background: linear-gradient(135deg, #f0f7ff 0%, #e0effe 100%);
   border: 1px solid #bae6fd;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 18px 24px;
   margin-top: 24px;
   margin-bottom: 16px;
-  transition: all 0.3s ease;
+  transition: all var(--duration-slow) ease;
 }
 
 .finance-sre-cta:hover {
@@ -403,8 +403,8 @@
 .finance-sre-cta-icon {
   width: 42px;
   height: 42px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--color-primary, #0032a0) 0%, #0284c7 100%);
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0284c7 100%);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -416,13 +416,13 @@
 .finance-sre-cta-text h4 {
   font-size: 0.9375rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--color-text);
   margin: 0 0 2px 0;
 }
 
 .finance-sre-cta-text p {
   font-size: 0.8125rem;
-  color: #475569;
+  color: var(--color-text-light);
   margin: 0;
   line-height: 1.4;
 }
@@ -432,20 +432,20 @@
   align-items: center;
   gap: 8px;
   padding: 9px 16px;
-  background: var(--color-primary, #0032a0);
+  background: var(--color-primary-solid);
   color: #ffffff;
   font-size: 0.8125rem;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
   box-shadow: 0 2px 6px rgba(0, 50, 160, 0.2);
 }
 
 .finance-sre-cta-btn:hover {
-  background: #002270;
+  background: var(--color-primary-dark);
   color: #ffffff;
   transform: translateX(2px);
 }
@@ -472,7 +472,7 @@
 .legend-dot {
   width: 12px;
   height: 12px;
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
 }
 
 .legend-ira {
@@ -499,7 +499,7 @@
 
 .trend-stat {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 20px 32px;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.06);
@@ -544,7 +544,7 @@
 /* Chart Wrapper */
 .chart-wrapper {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   height: 400px;
@@ -564,7 +564,7 @@
 
 .distribution-chart {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   height: 420px;
@@ -585,7 +585,7 @@
   gap: 12px;
   background: white;
   padding: 12px 16px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
@@ -611,16 +611,16 @@
   font-size: 0.875rem;
   font-family: inherit;
   border: 1px solid #e5e7eb;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: #f9fafb;
   color: var(--color-text, #1f2937);
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
   outline: none;
 }
 
 .barangay-search-input:focus {
   background: white;
-  border-color: var(--color-primary, #0032a0);
+  border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(0, 50, 160, 0.12);
 }
 
@@ -636,21 +636,21 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  transition: color 0.15s ease;
+  border-radius: var(--radius-sm);
+  transition: color var(--duration-fast) ease;
 }
 
 .search-clear-btn:hover {
-  color: var(--color-danger, #d62828);
+  color: var(--color-danger);
 }
 
 .barangay-count-badge {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-primary, #0032a0);
+  color: var(--color-primary);
   background: rgba(0, 50, 160, 0.08);
   padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   white-space: nowrap;
 }
 
@@ -668,13 +668,13 @@
 }
 
 .distribution-list::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  border-radius: 3px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-sm);
 }
 
 .distribution-list::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
 }
 
 .distribution-list::-webkit-scrollbar-thumb:hover {
@@ -685,7 +685,7 @@
   text-align: center;
   padding: 36px 20px;
   background: white;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border: 1px dashed rgba(0, 0, 0, 0.12);
   color: var(--color-text-light, #6b7280);
 }
@@ -704,13 +704,13 @@
   gap: 12px;
   padding: 10px 16px;
   background: white;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border: 1px solid rgba(0, 0, 0, 0.04);
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .barangay-row:hover {
-  border-color: var(--color-primary, #0032a0);
+  border-color: var(--color-primary);
   box-shadow: 0 2px 8px rgba(0, 50, 160, 0.08);
   transform: translateX(2px);
 }
@@ -743,16 +743,16 @@
 .bar-wrap {
   height: 8px;
   background: var(--color-bg-alt, #f3f4f6);
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
 .bar-wrap .bar {
   height: 100%;
-  background: linear-gradient(90deg, #0032a0 0%, #00a3c8 100%);
-  border-radius: 4px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, #00a3c8 100%);
+  border-radius: var(--radius-sm);
   width: 0;
-  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: width 0.6s var(--ease-out);
 }
 
 .barangay-row .pop {
@@ -772,13 +772,13 @@
 
 .economy-card {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  transition: all 0.3s ease;
+  transition: all var(--duration-slow) ease;
 }
 
 .economy-card:hover {
@@ -790,7 +790,7 @@
   width: 48px;
   height: 48px;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -820,13 +820,13 @@
   color: var(--color-success);
   background: rgba(6, 167, 125, 0.1);
   padding: 4px 10px;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
 }
 
 /* Sectors Chart */
 .sectors-chart {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px;
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -853,11 +853,11 @@
   align-items: center;
   padding: 14px 16px;
   background: var(--color-bg-alt);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition:
-    background 0.2s ease,
-    box-shadow 0.2s ease;
+    background var(--duration-base) ease,
+    box-shadow var(--duration-base) ease;
 }
 
 .sc-row:hover {
@@ -885,9 +885,9 @@
 .sc-dot {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  transition: transform var(--duration-base) ease;
 }
 
 .sc-row:hover .sc-dot {
@@ -907,7 +907,7 @@
   grid-column: 2;
   grid-row: 1;
   text-align: right;
-  transition: transform 0.2s ease;
+  transition: transform var(--duration-base) ease;
 }
 
 .sc-track {
@@ -915,18 +915,18 @@
   grid-row: 2;
   height: 8px;
   background: rgba(0, 0, 0, 0.06);
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
 .sc-fill {
   height: 100%;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   width: 0;
   transition:
-    width 1s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.2s ease,
-    box-shadow 0.2s ease;
+    width 1s var(--ease-out),
+    filter var(--duration-base) ease,
+    box-shadow var(--duration-base) ease;
 }
 
 /* Sector color classes */
@@ -959,14 +959,14 @@
 
 .poverty-legazpi-card {
   background: white;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   padding: 24px 22px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
   position: relative;
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform var(--duration-slow) ease,
+    box-shadow var(--duration-slow) ease;
   display: flex;
   flex-direction: column;
 }
@@ -977,7 +977,7 @@
 }
 
 .poverty-legazpi-card.plc-highlighted {
-  border-color: #06a77d;
+  border-color: var(--color-success);
   background: linear-gradient(180deg, #ffffff 0%, #f0fdf8 100%);
   box-shadow: 0 4px 20px rgba(6, 167, 125, 0.14);
 }
@@ -993,20 +993,20 @@
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--color-text-light, #64748b);
-  background: var(--color-bg-alt, #f1f5f9);
+  background: var(--color-bg-alt, var(--color-bg-muted));
   padding: 4px 10px;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
 }
 
 .plc-badge-year {
   background: rgba(6, 167, 125, 0.12);
-  color: #06a77d;
+  color: var(--color-success);
 }
 
 .plc-rank {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #475569;
+  color: var(--color-text-light);
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -1016,7 +1016,7 @@
   color: #b45309;
   background: #fef3c7;
   padding: 3px 8px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-weight: 700;
 }
 
@@ -1031,13 +1031,13 @@
 .plc-val {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--color-primary, #0032a0);
+  color: var(--color-primary);
   line-height: 1;
   font-family: 'Outfit', 'Inter', sans-serif;
 }
 
 .plc-highlighted .plc-val {
-  color: #06a77d;
+  color: var(--color-success);
 }
 
 .plc-unit {
@@ -1052,7 +1052,7 @@
   background: #dcfce7;
   color: #15803d;
   padding: 3px 8px;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   margin-left: auto;
   display: inline-flex;
   align-items: center;
@@ -1061,21 +1061,21 @@
 
 .plc-bar {
   height: 8px;
-  background: #f1f5f9;
-  border-radius: 4px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   margin-bottom: 12px;
 }
 
 .plc-fill {
   height: 100%;
-  background: var(--color-primary, #0032a0);
-  border-radius: 4px;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
   transition: width 1s ease-out;
 }
 
 .plc-fill.fill-accent {
-  background: linear-gradient(90deg, #06a77d 0%, #10b981 100%);
+  background: linear-gradient(90deg, var(--color-success) 0%, #10b981 100%);
 }
 
 .plc-meta {
@@ -1095,7 +1095,7 @@
 
 .plc-highlight-tag {
   font-weight: 700;
-  color: #06a77d;
+  color: var(--color-success);
   text-transform: uppercase;
   font-size: 0.7rem;
   letter-spacing: 0.5px;
@@ -1106,10 +1106,10 @@
   position: absolute;
   top: -12px;
   right: -10px;
-  background: var(--color-success, #06a77d);
+  background: var(--color-success);
   color: white;
   padding: 6px 14px;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   font-size: 0.75rem;
   font-weight: 700;
   display: flex;
@@ -1122,7 +1122,7 @@
 /* Poverty Chart Card */
 .poverty-chart-card {
   background: white;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   padding: 28px 24px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
@@ -1151,7 +1151,7 @@
 }
 
 .pch-info h4 i {
-  color: var(--color-primary, #0032a0);
+  color: var(--color-primary);
 }
 
 .pch-info p {
@@ -1169,9 +1169,9 @@
 
 .poverty-year-switcher {
   display: inline-flex;
-  background: #f1f5f9;
+  background: var(--color-bg-muted);
   padding: 3px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
@@ -1179,21 +1179,21 @@
   border: none;
   background: transparent;
   padding: 6px 16px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-size: 0.825rem;
   font-weight: 600;
   color: #64748b;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .poverty-year-btn:hover {
-  color: var(--color-primary, #0032a0);
+  color: var(--color-primary);
 }
 
 .poverty-year-btn.active {
   background: white;
-  color: var(--color-primary, #0032a0);
+  color: var(--color-primary);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   font-weight: 700;
 }
@@ -1205,10 +1205,10 @@
   flex-wrap: wrap;
   margin-bottom: 16px;
   padding: 10px 14px;
-  background: #f8fafc;
-  border-radius: 10px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
   font-size: 0.8125rem;
-  color: #475569;
+  color: var(--color-text-light);
 }
 
 .legend-item {
@@ -1220,11 +1220,11 @@
 .legend-swatch {
   width: 14px;
   height: 14px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 
 .swatch-legazpi {
-  background: #0032a0;
+  background: var(--color-primary);
   box-shadow: 0 0 0 2px rgba(0, 50, 160, 0.25);
 }
 
@@ -1259,7 +1259,7 @@
   background: #f0f9ff;
   border: 1px solid #bae6fd;
   padding: 10px 14px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 
 .pcf-insight i {
@@ -1320,13 +1320,14 @@
 
 .data-source a {
   color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* Animations */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.8s var(--ease-out);
 }
 
 .animate-on-scroll.visible {
@@ -1479,7 +1480,7 @@ canvas {
   margin: -20px 0 0 -20px;
   border: 3px solid var(--color-bg-alt);
   border-top-color: var(--color-primary);
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   animation: spin 0.8s linear infinite;
 }
 
@@ -1502,7 +1503,7 @@ canvas {
 }
 
 .counting {
-  animation: countUp 0.3s ease-out;
+  animation: countUp var(--duration-slow) var(--ease-out);
 }
 
 /* ============================================
@@ -1529,12 +1530,12 @@ canvas {
   padding: 10px 18px;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--color-text);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all var(--duration-slow) ease;
 }
 
 .cmci-tab:hover {
@@ -1543,7 +1544,7 @@ canvas {
 }
 
 .cmci-tab.active {
-  background: var(--color-primary);
+  background: var(--color-primary-solid);
   border-color: var(--color-primary);
   color: white;
 }
@@ -1583,11 +1584,11 @@ canvas {
 
 .cmci-pillar-card {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 20px;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
+  transition: all var(--duration-slow) ease;
   cursor: pointer;
 }
 
@@ -1601,7 +1602,7 @@ canvas {
   width: 48px;
   height: 48px;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1635,7 +1636,7 @@ canvas {
   align-items: center;
   gap: 4px;
   padding: 3px 8px;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
 }
 
 .pillar-trend.trend-up {
@@ -1663,10 +1664,10 @@ canvas {
 
 .cmci-indicator-card {
   background: white;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 16px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: all 0.25s ease;
+  transition: all var(--duration-slow) ease;
 }
 
 .cmci-indicator-card:hover {
@@ -1700,16 +1701,16 @@ canvas {
 .indicator-bar {
   height: 6px;
   background: rgba(0, 50, 160, 0.08);
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
 .indicator-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
   width: 0;
-  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: width 1s var(--ease-out);
 }
 
 .indicator-fill.animated {
@@ -1719,7 +1720,7 @@ canvas {
 /* Chart Container */
 .cmci-chart-container {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px;
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -1761,14 +1762,14 @@ canvas {
   align-items: center;
   gap: 7px;
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: transparent;
   border: 1px solid transparent;
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--color-text);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
   user-select: none;
 }
 
@@ -1781,11 +1782,11 @@ canvas {
 .cmci-legend-item .legend-indicator {
   width: 9px;
   height: 9px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   background: var(--indicator-color, var(--color-primary));
   border: 2px solid white;
   box-shadow: 0 0 0 1.5px var(--indicator-color, var(--color-primary));
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
   flex-shrink: 0;
 }
 
@@ -1816,24 +1817,24 @@ canvas {
   align-items: center;
   gap: 4px;
   padding: 3px 10px;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   font-size: 0.6875rem;
   font-weight: 600;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
   color: #64748b;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .cmci-legend-btn:hover {
-  background: var(--color-primary);
+  background: var(--color-primary-solid);
   border-color: var(--color-primary);
   color: white;
 }
 
 .cmci-legend-btn.active {
-  background: var(--color-primary);
+  background: var(--color-primary-solid);
   border-color: var(--color-primary);
   color: white;
 }
@@ -1898,12 +1899,12 @@ canvas {
 .poverty-legazpi-card {
   position: relative;
   background: #fff;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
   padding: 20px;
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform var(--duration-slow) ease,
+    box-shadow var(--duration-slow) ease;
 }
 
 .poverty-legazpi-card:hover {
@@ -1934,7 +1935,7 @@ canvas {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 4px 10px;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35);
   animation: badgePulse 2s ease-in-out infinite;
 }
@@ -1964,7 +1965,7 @@ canvas {
 .plc-year {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #475569;
+  color: var(--color-text-light);
 }
 
 .plc-badge-year {
@@ -2001,7 +2002,7 @@ canvas {
 .plc-val {
   font-size: 2rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--color-text);
   line-height: 1;
 }
 
@@ -2021,23 +2022,23 @@ canvas {
   color: #059669;
   background: rgba(16, 185, 129, 0.1);
   padding: 2px 8px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   margin-left: 8px;
 }
 
 /* Mini progress bar */
 .plc-bar {
   height: 5px;
-  background: #f1f5f9;
-  border-radius: 3px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   margin-bottom: 10px;
 }
 
 .plc-fill {
   height: 100%;
-  background: linear-gradient(90deg, #0032a0, #0050d0);
-  border-radius: 3px;
+  background: linear-gradient(90deg, var(--color-primary), #0050d0);
+  border-radius: var(--radius-sm);
   transition: width 1s ease;
 }
 
@@ -2075,8 +2076,8 @@ canvas {
 /* --- Chart Card --- */
 .poverty-chart-card {
   background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
   padding: 24px;
   margin-bottom: 16px;
 }
@@ -2093,7 +2094,7 @@ canvas {
 .pch-info h4 {
   font-size: 1rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--color-text);
   margin: 0 0 4px;
   display: flex;
   align-items: center;
@@ -2101,7 +2102,7 @@ canvas {
 }
 
 .pch-info h4 i {
-  color: #0032a0;
+  color: var(--color-primary);
 }
 
 .pch-info p {
@@ -2119,10 +2120,10 @@ canvas {
 
 .poverty-year-switcher {
   display: flex;
-  background: #f1f5f9;
-  border-radius: 8px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--color-border);
 }
 
 .poverty-year-btn {
@@ -2134,16 +2135,16 @@ canvas {
   border: none;
   color: #64748b;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .poverty-year-btn:hover {
-  background: #e2e8f0;
+  background: var(--color-border);
   color: #334155;
 }
 
 .poverty-year-btn.active {
-  background: #0032a0;
+  background: var(--color-primary-solid);
   color: #fff;
   box-shadow: 0 2px 6px rgba(0, 50, 160, 0.25);
 }
@@ -2155,7 +2156,7 @@ canvas {
   gap: 16px;
   padding: 10px 0;
   margin-bottom: 12px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--color-bg-muted);
 }
 
 .legend-item {
@@ -2163,17 +2164,17 @@ canvas {
   align-items: center;
   gap: 6px;
   font-size: 0.75rem;
-  color: #475569;
+  color: var(--color-text-light);
 }
 
 .legend-swatch {
   width: 12px;
   height: 12px;
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
 }
 
 .swatch-legazpi {
-  background: #0032a0;
+  background: var(--color-primary);
 }
 
 .swatch-other {
@@ -2211,7 +2212,7 @@ canvas {
 /* Chart footer / insight */
 .poverty-chart-footer {
   padding-top: 12px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--color-bg-muted);
 }
 
 .pcf-insight {
@@ -2220,15 +2221,15 @@ canvas {
   gap: 8px;
   padding: 12px 16px;
   background: linear-gradient(135deg, #eff6ff, #f0fdf4);
-  border-radius: 10px;
-  border-left: 3px solid #0032a0;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-primary);
   font-size: 0.78rem;
   color: #334155;
   line-height: 1.6;
 }
 
 .pcf-insight i {
-  color: #0032a0;
+  color: var(--color-primary);
   font-size: 0.9rem;
   margin-top: 2px;
   flex-shrink: 0;
@@ -2243,7 +2244,7 @@ canvas {
 }
 
 .poverty-source a {
-  color: #0032a0;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
 }
@@ -2288,13 +2289,13 @@ canvas {
    STATISTICS DASHBOARD - DARK MODE THEME SYSTEM
    ========================================================================== */
 [data-theme='dark'] .stats-hero {
-  background: linear-gradient(135deg, #090a0f 0%, #16181f 100%);
+  background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 [data-theme='dark'] .stats-section,
 [data-theme='dark'] .stats-section:nth-child(even) {
-  background-color: #090a0f;
+  background-color: var(--color-bg-alt);
 }
 
 [data-theme='dark'] .metric-card,
@@ -2303,16 +2304,16 @@ canvas {
 [data-theme='dark'] .poverty-chart-card,
 [data-theme='dark'] .demographics-card,
 [data-theme='dark'] .poverty-legazpi-card {
-  background: #16181f !important;
+  background: var(--color-bg) !important;
   border: 1px solid rgba(255, 255, 255, 0.07) !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
-  color: #f0f6fc;
+  color: var(--color-text);
 }
 
 [data-theme='dark'] .metric-card:hover,
 [data-theme='dark'] .stat-card:hover,
 [data-theme='dark'] .chart-card:hover {
-  background: #1c1f28 !important;
+  background: var(--color-bg) !important;
   border-color: rgba(79, 142, 255, 0.35) !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
 }
@@ -2321,7 +2322,7 @@ canvas {
 [data-theme='dark'] .plc-val,
 [data-theme='dark'] .stat-value,
 [data-theme='dark'] .chart-title {
-  color: #f0f6fc !important;
+  color: var(--color-text) !important;
 }
 
 [data-theme='dark'] .metric-label,
@@ -2330,7 +2331,7 @@ canvas {
 [data-theme='dark'] .chart-subtitle,
 [data-theme='dark'] .poverty-source,
 [data-theme='dark'] .metric-source {
-  color: #8b949e !important;
+  color: var(--color-text-light) !important;
 }
 
 [data-theme='dark'] .section-tag,
@@ -2343,15 +2344,15 @@ canvas {
 
 [data-theme='dark'] .stat-table,
 [data-theme='dark'] .data-table {
-  background: #16181f;
-  color: #c9d1d9;
+  background: var(--color-bg);
+  color: var(--color-text-light);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme='dark'] .stat-table th,
 [data-theme='dark'] .data-table th {
-  background: #1c1f28;
-  color: #f0f6fc;
+  background: var(--color-bg);
+  color: var(--color-text);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 

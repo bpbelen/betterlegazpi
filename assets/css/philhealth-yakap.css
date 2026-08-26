@@ -4,172 +4,69 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. Sub-Hero & Page Banner
+   1. Key Metrics Strip (sits below the shared .page-header)
    -------------------------------------------------------------------------- */
-.yakap-hero-section {
-  position: relative;
-  background: linear-gradient(135deg, #002b80 0%, #0032a0 50%, #0052cc 100%);
-  color: #ffffff;
-  padding: var(--spacing-xl) 0 calc(var(--spacing-xl) + 1rem);
-  overflow: hidden;
-}
-
-.yakap-hero-section::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(6, 167, 125, 0.25) 0%, rgba(0, 50, 160, 0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.yakap-hero-section::after {
-  content: '';
-  position: absolute;
-  bottom: -30%;
-  left: -10%;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(247, 127, 0, 0.18) 0%, rgba(0, 50, 160, 0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.yakap-hero-inner {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: var(--spacing-lg);
-  align-items: center;
-}
-
-.yakap-hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #e0f2fe;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 9999px;
-  margin-bottom: var(--spacing-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.yakap-hero-badge i {
-  color: #34d399;
-  font-size: 1rem;
-}
-
-.yakap-hero-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.15;
-  color: #ffffff;
-  margin-bottom: var(--spacing-sm);
-  letter-spacing: -0.5px;
-}
-
-.yakap-hero-subtitle {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: var(--spacing-md);
-  max-width: 620px;
-}
-
-.yakap-hero-ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
 .yakap-btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  background: #06a77d;
-  color: #ffffff;
+  min-height: 44px;
+  background: var(--color-success-solid);
+  /* !important: the sitewide [data-theme='dark'] a:not(.btn) rule otherwise
+     wins on specificity, since this button's class isn't literally .btn. */
+  color: #ffffff !important;
   font-weight: 600;
   font-size: 0.95rem;
   padding: 12px 24px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
   box-shadow: 0 4px 12px rgba(6, 167, 125, 0.35);
 }
 
 .yakap-btn-primary:hover {
-  background: #059669;
-  color: #ffffff;
+  background: #065f46;
+  color: #ffffff !important;
   text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(6, 167, 125, 0.45);
 }
 
-.yakap-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 12px 22px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  text-decoration: none;
-  backdrop-filter: blur(6px);
-  transition: all 0.2s ease;
+.yakap-metrics-section {
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-md) 0;
 }
 
-.yakap-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.22);
-  color: #ffffff;
-  text-decoration: none;
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
-}
-
-/* Hero Key Metric Grid Cards */
 .yakap-hero-metrics {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
 .yakap-metric-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   padding: 18px 16px;
   display: flex;
   flex-direction: column;
   transition:
-    transform 0.25s ease,
-    background 0.25s ease;
+    transform var(--duration-slow) ease,
+    border-color var(--duration-slow) ease,
+    box-shadow var(--duration-slow) ease;
 }
 
 .yakap-metric-card:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .yakap-metric-icon {
   font-size: 1.5rem;
-  color: #6ee7b7;
+  color: var(--color-success);
   margin-bottom: 8px;
 }
 
@@ -177,12 +74,12 @@
   font-size: 1.75rem;
   font-weight: 800;
   line-height: 1.1;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .yakap-metric-label {
   font-size: 0.85rem;
-  color: #e2e8f0;
+  color: var(--color-text-light);
   margin-top: 4px;
   font-weight: 500;
 }
@@ -198,8 +95,8 @@
   z-index: 90;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   transition:
-    background 0.3s ease,
-    border-color 0.3s ease;
+    background var(--duration-slow) ease,
+    border-color var(--duration-slow) ease;
 }
 
 .yakap-subnav-items {
@@ -218,16 +115,18 @@
 .yakap-subnav-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   white-space: nowrap;
   padding: 8px 16px;
-  border-radius: 9999px;
+  min-height: 44px;
+  border-radius: var(--radius-pill);
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-text-light);
   text-decoration: none;
   background: transparent;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .yakap-subnav-link:hover {
@@ -238,7 +137,7 @@
 
 .yakap-subnav-link.active {
   color: #ffffff;
-  background: var(--color-primary);
+  background: var(--color-primary-solid);
 }
 
 /* --------------------------------------------------------------------------
@@ -247,8 +146,8 @@
 .yakap-notice-banner {
   background: #ecfdf5;
   border: 1px solid #a7f3d0;
-  border-left: 5px solid #06a77d;
-  border-radius: 8px;
+  border-left: 5px solid var(--color-success);
+  border-radius: var(--radius-md);
   padding: 16px 20px;
   margin: var(--spacing-md) 0;
   display: flex;
@@ -258,7 +157,7 @@
 
 .yakap-notice-icon {
   font-size: 1.5rem;
-  color: #06a77d;
+  color: var(--color-success);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -287,7 +186,7 @@
 
 .section-header-center {
   text-align: center;
-  max-width: 760px;
+  max-width: var(--measure);
   margin: 0 auto var(--spacing-lg);
 }
 
@@ -317,7 +216,7 @@
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   background: var(--color-bg-alt);
   border: 1px solid rgba(0, 0, 0, 0.08);
   font-family: var(--font-main);
@@ -325,16 +224,16 @@
   font-weight: 600;
   color: var(--color-text);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .yakap-tab-btn:hover {
-  background: #e2e8f0;
+  background: var(--color-border);
   border-color: #cbd5e1;
 }
 
 .yakap-tab-btn.active {
-  background: var(--color-primary);
+  background: var(--color-primary-solid);
   color: #ffffff;
   border-color: var(--color-primary);
   box-shadow: 0 4px 12px rgba(0, 50, 160, 0.25);
@@ -346,7 +245,7 @@
 
 .yakap-tab-pane {
   display: none;
-  animation: yakapFadeIn 0.3s ease forwards;
+  animation: yakapFadeIn var(--duration-slow) ease forwards;
 }
 
 .yakap-tab-pane.active {
@@ -367,7 +266,7 @@
 .yakap-pillar-card {
   background: var(--color-bg);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: var(--spacing-lg);
   box-shadow: var(--shadow-sm);
 }
@@ -384,7 +283,7 @@
 .yakap-pillar-icon-box {
   width: 52px;
   height: 52px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   background: #eff6ff;
   color: var(--color-primary);
   display: flex;
@@ -417,11 +316,11 @@
 .yakap-feature-box {
   background: var(--color-bg-alt);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 18px;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform var(--duration-base) ease,
+    box-shadow var(--duration-base) ease;
 }
 
 .yakap-feature-box:hover {
@@ -440,7 +339,7 @@
 }
 
 .yakap-feature-box h4 i {
-  color: #06a77d;
+  color: var(--color-success);
 }
 
 .yakap-feature-box p {
@@ -482,7 +381,7 @@
 .yakap-step-card {
   background: var(--color-bg);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 22px 16px 18px 16px;
   display: flex;
   flex-direction: column;
@@ -490,8 +389,8 @@
   z-index: 2;
   box-shadow: var(--shadow-sm);
   transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+    transform var(--duration-base) ease,
+    border-color var(--duration-base) ease;
 }
 
 .yakap-step-card:hover {
@@ -508,8 +407,8 @@
 .yakap-step-badge {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background: var(--color-primary);
+  border-radius: var(--radius-circle);
+  background: var(--color-primary-solid);
   color: #ffffff;
   font-weight: 800;
   font-size: 1.1rem;
@@ -550,7 +449,7 @@
   border: 1px solid #bbf7d0;
   color: #166534;
   padding: 8px 10px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-weight: 500;
 }
 
@@ -569,7 +468,7 @@
 .yakap-catalog-controls {
   background: var(--color-bg-alt);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 18px;
   margin-bottom: var(--spacing-lg);
   display: flex;
@@ -595,15 +494,15 @@
   width: 100%;
   padding: 12px 14px 12px 42px;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-family: var(--font-main);
   font-size: 0.95rem;
   background: var(--color-bg);
   color: var(--color-text);
   outline: none;
   transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color var(--duration-base) ease,
+    box-shadow var(--duration-base) ease;
 }
 
 .yakap-search-input:focus {
@@ -619,7 +518,7 @@
 
 .yakap-filter-pill {
   padding: 6px 14px;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--color-bg);
   font-family: var(--font-main);
@@ -627,16 +526,16 @@
   font-weight: 600;
   color: var(--color-text-light);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .yakap-filter-pill:hover {
-  background: #e2e8f0;
+  background: var(--color-border);
   color: var(--color-text);
 }
 
 .yakap-filter-pill.active {
-  background: var(--color-primary);
+  background: var(--color-primary-solid);
   color: #ffffff;
   border-color: var(--color-primary);
 }
@@ -659,10 +558,10 @@
 .yakap-cat-group {
   background: var(--color-bg);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: border-color 0.2s ease;
+  transition: border-color var(--duration-base) ease;
 }
 
 .yakap-cat-group.active {
@@ -679,11 +578,11 @@
   align-items: center;
   cursor: pointer;
   font-family: var(--font-main);
-  transition: background 0.2s ease;
+  transition: background var(--duration-base) ease;
 }
 
 .yakap-cat-header:hover {
-  background: #e2e8f0;
+  background: var(--color-border);
 }
 
 .yakap-cat-title-wrap {
@@ -705,14 +604,14 @@
   background: var(--color-bg);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 2px 8px;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   color: var(--color-text-light);
 }
 
 .yakap-cat-chevron {
   font-size: 1rem;
   color: var(--color-primary);
-  transition: transform 0.3s ease;
+  transition: transform var(--duration-slow) ease;
 }
 
 .yakap-cat-group.active .yakap-cat-chevron {
@@ -727,7 +626,7 @@
 
 .yakap-cat-group.active .yakap-cat-body {
   display: block;
-  animation: yakapFadeIn 0.25s ease forwards;
+  animation: yakapFadeIn var(--duration-slow) ease forwards;
 }
 
 /* Desktop view: automatically expand category sections with clean headers */
@@ -767,14 +666,14 @@
 .yakap-item-card {
   background: var(--color-bg);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
   display: flex;
   flex-direction: column;
   transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+    transform var(--duration-base) ease,
+    border-color var(--duration-base) ease;
 }
 
 .yakap-item-card:hover {
@@ -788,7 +687,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   padding: 3px 8px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -818,7 +717,7 @@
   color: #9d174d;
 }
 .tag-general {
-  background: #f1f5f9;
+  background: var(--color-bg-muted);
   color: #334155;
 }
 
@@ -839,7 +738,7 @@
 
 .yakap-item-subtext {
   font-size: 0.775rem;
-  color: #64748b;
+  color: var(--color-text-light);
   border-top: 1px dashed rgba(0, 0, 0, 0.08);
   padding-top: 6px;
   margin-top: auto;
@@ -863,14 +762,14 @@
 .yakap-fac-card {
   background: var(--color-bg);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 20px;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+    transform var(--duration-base) ease,
+    border-color var(--duration-base) ease;
 }
 
 .yakap-fac-card:hover {
@@ -889,7 +788,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   padding: 3px 10px;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   background: #eff6ff;
   color: #1d4ed8;
 }
@@ -897,7 +796,7 @@
 .yakap-fac-ownership {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #64748b;
+  color: var(--color-text-light);
 }
 
 .yakap-fac-name {
@@ -937,7 +836,7 @@
   background: var(--color-bg-alt);
   border: 1px solid rgba(0, 0, 0, 0.06);
   padding: 3px 8px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   color: var(--color-text-light);
 }
 
@@ -981,7 +880,7 @@
 .yakap-support-card {
   background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px;
   box-shadow: var(--shadow-sm);
   display: flex;
@@ -998,9 +897,9 @@
 .yakap-support-icon {
   width: 48px;
   height: 48px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   background: #e0f2fe;
-  color: #0284c7;
+  color: #0369a1;
   font-size: 1.4rem;
   display: flex;
   align-items: center;
@@ -1063,10 +962,10 @@
 .yakap-faq-item {
   background: var(--color-bg);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-  transition: border-color 0.2s ease;
+  transition: border-color var(--duration-base) ease;
 }
 
 .yakap-faq-item.active {
@@ -1093,7 +992,7 @@
 .yakap-faq-icon {
   font-size: 1.1rem;
   color: var(--color-primary);
-  transition: transform 0.3s ease;
+  transition: transform var(--duration-slow) ease;
   flex-shrink: 0;
 }
 
@@ -1137,7 +1036,7 @@
 .yakap-issuances-box {
   background: var(--color-bg-alt);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: var(--spacing-lg);
 }
 
@@ -1151,7 +1050,7 @@
 .yakap-issuance-item {
   background: var(--color-bg);
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 14px;
   display: flex;
   flex-direction: column;
@@ -1174,7 +1073,7 @@
 
 .yakap-issuance-link {
   font-size: 0.8rem;
-  color: #0284c7;
+  color: #0369a1;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -1190,9 +1089,9 @@
    11. Spotlight Banner on health.html
    -------------------------------------------------------------------------- */
 .yakap-spotlight-banner {
-  background: linear-gradient(135deg, #002b80 0%, #0032a0 100%);
+  background: linear-gradient(135deg, #002b80 0%, var(--color-primary) 100%);
   color: #ffffff;
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   padding: 28px 32px;
   margin: var(--spacing-lg) 0;
   display: grid;
@@ -1224,7 +1123,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   padding: 4px 10px;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -1233,15 +1132,15 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #06a77d;
+  background: var(--color-success);
   color: #ffffff;
   font-weight: 700;
   font-size: 0.95rem;
   padding: 14px 24px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   text-decoration: none;
   white-space: nowrap;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
   box-shadow: 0 4px 12px rgba(6, 167, 125, 0.35);
 }
 
@@ -1270,7 +1169,7 @@
 }
 
 [data-theme='dark'] .yakap-subnav-link.active {
-  background: #3b82f6;
+  background: #1d4ed8;
   color: #ffffff;
 }
 
@@ -1292,7 +1191,7 @@
 [data-theme='dark'] .yakap-catalog-section,
 [data-theme='dark'] .yakap-support-section,
 [data-theme='dark'] .yakap-issuances-section {
-  background: #0f172a;
+  background: var(--color-bg-alt);
 }
 
 [data-theme='dark'] .yakap-roadmap-section,
@@ -1304,7 +1203,7 @@
 [data-theme='dark'] .yakap-tab-btn {
   background: #1e293b;
   border-color: rgba(255, 255, 255, 0.1);
-  color: #e2e8f0;
+  color: var(--color-text-light);
 }
 
 [data-theme='dark'] .yakap-tab-btn:hover {
@@ -1333,7 +1232,7 @@
 }
 
 [data-theme='dark'] .yakap-feature-box {
-  background: #0f172a;
+  background: var(--color-bg-alt);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -1354,13 +1253,13 @@
 }
 
 [data-theme='dark'] .yakap-search-input {
-  background: #0f172a;
+  background: var(--color-bg-alt);
   border-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
 }
 
 [data-theme='dark'] .yakap-filter-pill {
-  background: #0f172a;
+  background: var(--color-bg-alt);
   border-color: rgba(255, 255, 255, 0.1);
   color: #94a3b8;
 }
@@ -1392,7 +1291,7 @@
 }
 
 [data-theme='dark'] .yakap-fac-service-pill {
-  background: #0f172a;
+  background: var(--color-bg-alt);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -1403,7 +1302,7 @@
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-left: 5px solid var(--color-primary);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 24px 28px;
   box-shadow: var(--shadow-sm);
   display: grid;
@@ -1426,7 +1325,7 @@
   font-size: 0.775rem;
   font-weight: 700;
   padding: 4px 10px;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
@@ -1464,7 +1363,7 @@
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 0.775rem;
   font-weight: 600;
   color: var(--color-text);
@@ -1481,22 +1380,22 @@
 }
 
 .yakap-spotlight-btn-primary {
-  background: var(--color-primary) !important;
+  background: var(--color-primary-solid) !important;
   color: #ffffff !important;
   font-weight: 600 !important;
   border: none !important;
   padding: 8px 18px !important;
-  border-radius: 6px !important;
+  border-radius: var(--radius-sm) !important;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 0.9rem;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .yakap-spotlight-btn-primary:hover {
-  background: #002270 !important;
+  background: var(--color-primary-dark) !important;
   color: #ffffff !important;
   transform: translateY(-1px);
 }
@@ -1506,14 +1405,14 @@
   color: var(--color-text) !important;
   border: 1px solid var(--color-border) !important;
   padding: 8px 16px !important;
-  border-radius: 6px !important;
+  border-radius: var(--radius-sm) !important;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 0.9rem;
   font-weight: 600 !important;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all var(--duration-base) ease;
 }
 
 .yakap-spotlight-btn-secondary:hover {
@@ -1531,13 +1430,13 @@
 .yakap-spotlight-metric-pill {
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border-light);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 10px 12px;
   display: flex;
   flex-direction: column;
   transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+    transform var(--duration-base) ease,
+    border-color var(--duration-base) ease;
 }
 
 .yakap-spotlight-metric-pill:hover {
@@ -1579,7 +1478,7 @@
 }
 
 [data-theme='dark'] .yakap-spotlight-metric-pill {
-  background: #0f172a;
+  background: var(--color-bg-alt);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -1588,13 +1487,13 @@
 }
 
 [data-theme='dark'] .yakap-mini-pill {
-  background: #0f172a;
+  background: var(--color-bg-alt);
   border-color: rgba(255, 255, 255, 0.1);
-  color: #e2e8f0;
+  color: var(--color-text-light);
 }
 
 [data-theme='dark'] .yakap-step-badge {
-  border-color: #0f172a;
+  border-color: var(--color-bg-alt);
   background: #2563eb;
   box-shadow: 0 0 0 2px #60a5fa;
 }
@@ -1607,9 +1506,8 @@
    13. Responsive Media Queries (Anti-Scroll & High-Density Mobile Modes)
    -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
-  .yakap-hero-inner {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+  .yakap-hero-metrics {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .yakap-spotlight-card {
@@ -1667,7 +1565,6 @@
 
 @media (max-width: 768px) {
   /* Reduce vertical spacing drastically on mobile */
-  .yakap-hero-section,
   .yakap-pillars-section,
   .yakap-roadmap-section,
   .yakap-catalog-section,
@@ -1692,23 +1589,7 @@
     line-height: 1.5;
   }
 
-  .yakap-hero-title {
-    font-size: 1.65rem;
-    margin-bottom: 6px;
-  }
-
-  .yakap-hero-subtitle {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 12px;
-  }
-
-  .yakap-hero-ctas {
-    gap: 8px;
-  }
-
-  .yakap-btn-primary,
-  .yakap-btn-secondary {
+  .yakap-btn-primary {
     padding: 9px 16px;
     font-size: 0.875rem;
   }
@@ -1716,7 +1597,6 @@
   .yakap-hero-metrics {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    margin-top: 8px;
   }
 
   .yakap-metric-card {
@@ -1904,5 +1784,17 @@
   .yakap-faq-question {
     padding: 12px 14px;
     font-size: 0.9rem;
+  }
+}
+
+/* Section Rhythm (matches the sitewide .section desktop bump in style.css) */
+@media (min-width: 768px) {
+  .yakap-pillars-section,
+  .yakap-roadmap-section,
+  .yakap-catalog-section,
+  .yakap-facilities-section,
+  .yakap-support-section,
+  .yakap-faq-section {
+    padding: 64px 0;
   }
 }

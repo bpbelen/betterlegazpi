@@ -77,7 +77,7 @@
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <script>
-      (function() {
+      (function () {
         const savedTheme = localStorage.getItem('theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
@@ -88,11 +88,9 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link"
-      >Skip to main content</a
-    >
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <!-- Hotline Bar -->
+    <!-- Hotline Bar -->
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
@@ -126,7 +124,6 @@
       </div>
     </div>
 
-    
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -137,14 +134,11 @@
               class="logo-img"
           /></a>
         </div>
-                <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a
-                href="../services/" class="active"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -170,15 +164,20 @@
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
-                <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </header>
 
-        <!-- Real-Time Info Bar -->
+    <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
         <div class="info-bar-inner" aria-live="polite" aria-atomic="false">
@@ -208,8 +207,7 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span>
-          <a href="./">Services</a><span>/</span>
+          <a href="../">Home</a><span>/</span> <a href="./">Services</a><span>/</span>
           <span aria-current="page">Employment</span>
         </nav>
       </div>
@@ -222,7 +220,8 @@
             >
             <h1>Employment &amp; Public Personnel Services</h1>
             <p class="page-header-desc">
-              Career opportunities, plantilla job applications, employee certifications, student internships, and HR administration in Legazpi City.
+              Career opportunities, plantilla job applications, employee certifications, student
+              internships, and HR administration in Legazpi City.
             </p>
           </div>
         </div>
@@ -232,24 +231,45 @@
       <section class="section">
         <div class="container">
           <!-- Category 1: Getting in -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-door-open-fill" style="color: var(--color-primary);"></i>
+          <div style="margin-bottom: var(--spacing-lg)">
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-door-open-fill" style="color: var(--color-primary)"></i>
                 <span>Getting in</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Applying for permanent civil service plantilla positions, student internships, or contract appointments.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Applying for permanent civil service plantilla positions, student internships, or
+                contract appointments.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/human-resource-management.html#recruitment-selection-placement" class="service-item-card">
+              <a
+                href="../service-details/human-resource-management.html#recruitment-selection-placement"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-person-check-fill"></i>
                   <span>Apply for a position in the city government</span>
                 </h3>
                 <p class="service-item-desc">
-                  Merit-based hiring for plantilla vacant positions adhering to CSC Qualification Standards and Equal Opportunity principles.
+                  Merit-based hiring for plantilla vacant positions adhering to CSC Qualification
+                  Standards and Equal Opportunity principles.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (₱0.00)</span>
@@ -257,13 +277,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/human-resource-management.html#ojt-immersion-deployment" class="service-item-card">
+              <a
+                href="../service-details/human-resource-management.html#ojt-immersion-deployment"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-mortarboard-fill"></i>
                   <span>Complete a work immersion/OJT placement</span>
                 </h3>
                 <p class="service-item-desc">
-                  Institutional MOA facilitation, orientation, department deployment, and Certificate of Completion for student interns.
+                  Institutional MOA facilitation, orientation, department deployment, and
+                  Certificate of Completion for student interns.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (₱0.00)</span>
@@ -271,13 +295,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/human-resource-management.html#contract-of-services-job-orders" class="service-item-card">
+              <a
+                href="../service-details/human-resource-management.html#contract-of-services-job-orders"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-file-earmark-text-fill"></i>
                   <span>Receive a COS/JO appointment</span>
                 </h3>
                 <p class="service-item-desc">
-                  Preparation, legal review, notarization, and endorsement of appointments for contract of service and job order personnel.
+                  Preparation, legal review, notarization, and endorsement of appointments for
+                  contract of service and job order personnel.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (₱0.00)</span>
@@ -288,24 +316,45 @@
           </div>
 
           <!-- Category 2: Being an employee -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-person-badge-fill" style="color: var(--color-primary);"></i>
+          <div style="margin-bottom: var(--spacing-lg)">
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-person-badge-fill" style="color: var(--color-primary)"></i>
                 <span>Being an employee</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Official employee certifications, certified government service histories, and learning &amp; development travel orders.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Official employee certifications, certified government service histories, and
+                learning &amp; development travel orders.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/human-resource-management.html#certificate-of-employment" class="service-item-card">
+              <a
+                href="../service-details/human-resource-management.html#certificate-of-employment"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-award-fill"></i>
                   <span>Request a Certificate of Employment</span>
                 </h3>
                 <p class="service-item-desc">
-                  Issuance of official Certificate of Employment (COE) with tenure and compensation details for active and former employees.
+                  Issuance of official Certificate of Employment (COE) with tenure and compensation
+                  details for active and former employees.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (₱0.00)</span>
@@ -313,13 +362,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/human-resource-management.html#service-record" class="service-item-card">
+              <a
+                href="../service-details/human-resource-management.html#service-record"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-journal-text"></i>
                   <span>Request a Service Record</span>
                 </h3>
                 <p class="service-item-desc">
-                  Official certified transcript of government employment history for promotions, loan applications, GSIS, and step increments.
+                  Official certified transcript of government employment history for promotions,
+                  loan applications, GSIS, and step increments.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (₱0.00)</span>
@@ -327,13 +380,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/human-resource-management.html#travel-orders-ld" class="service-item-card">
+              <a
+                href="../service-details/human-resource-management.html#travel-orders-ld"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-airplane-fill"></i>
                   <span>Get sent on official travel</span>
                 </h3>
                 <p class="service-item-desc">
-                  Preparation and certification of official travel orders for personnel participating in seminars, conventions, and trainings.
+                  Preparation and certification of official travel orders for personnel
+                  participating in seminars, conventions, and trainings.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (₱0.00)</span>
@@ -345,23 +402,44 @@
 
           <!-- Category 3: Leaving/winding down -->
           <div>
-            <div style="margin-bottom: var(--spacing-md); border-bottom: 2px solid var(--color-primary-light, #e5e7eb); padding-bottom: 8px;">
-              <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 10px; margin: 0;">
-                <i class="bi bi-box-arrow-right" style="color: var(--color-primary);"></i>
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-box-arrow-right" style="color: var(--color-primary)"></i>
                 <span>Leaving/winding down</span>
               </h2>
-              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0;">
-                Processing statutory employee leave applications, credit monetization, and terminal leave/retirement clearance.
+              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
+                Processing statutory employee leave applications, credit monetization, and terminal
+                leave/retirement clearance.
               </p>
             </div>
             <div class="grid grid-3">
-              <a href="../service-details/human-resource-management.html#leave-application" class="service-item-card">
+              <a
+                href="../service-details/human-resource-management.html#leave-application"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-calendar-plus-fill"></i>
                   <span>Apply for leaves</span>
                 </h3>
                 <p class="service-item-desc">
-                  Computation, auditing, and certification of statutory leaves (Vacation, Sick, Maternity/Paternity, Monetization, Forced).
+                  Computation, auditing, and certification of statutory leaves (Vacation, Sick,
+                  Maternity/Paternity, Monetization, Forced).
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (₱0.00)</span>
@@ -369,13 +447,17 @@
                 </div>
               </a>
 
-              <a href="../service-details/human-resource-management.html#processing-retirement" class="service-item-card">
+              <a
+                href="../service-details/human-resource-management.html#processing-retirement"
+                class="service-item-card"
+              >
                 <h3 class="service-item-title">
                   <i class="bi bi-person-check-fill"></i>
                   <span>Process optional or mandatory retirement</span>
                 </h3>
                 <p class="service-item-desc">
-                  Facilitates documentation, complete terminal leave credit computation, and clearance routing for retiring personnel.
+                  Facilitates documentation, complete terminal leave credit computation, and
+                  clearance routing for retiring personnel.
                 </p>
                 <div class="service-item-meta">
                   <span><strong>Fee:</strong> Free (₱0.00)</span>
@@ -390,20 +472,17 @@
       <!-- Responsible Offices -->
       <section class="section section-compact bg-alt">
         <div class="container">
-          <h2 class="section-title-sm">
-            Responsible Offices
-          </h2>
+          <h2 class="section-title-sm">Responsible Offices</h2>
           <div class="office-cards-grid">
             <a href="../service-details/human-resource-management" class="office-card">
               <div class="office-card-icon">
                 <i class="bi bi-building"></i>
               </div>
               <div class="office-card-content">
-                <h3 class="office-card-title">
-                  CHRMO Services
-                </h3>
+                <h3 class="office-card-title">CHRMO Services</h3>
                 <p class="office-card-desc">
-                  Explore job vacancies, submit plantilla and job order applications, request service records and COEs, and process retirement.
+                  Explore job vacancies, submit plantilla and job order applications, request
+                  service records and COEs, and process retirement.
                 </p>
               </div>
               <div class="office-card-arrow">
@@ -421,11 +500,12 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/better-solano-logo-white.svg"
-              alt="Better Legazpi logo"
+              alt="BetterLegazpi logo"
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi City.
+              Empowering the people of Legazpi with transparent access to the services, programs,
+              and public funds of LGU Legazpi City.
             </p>
             <div class="footer-social-new">
               <a
@@ -458,8 +538,8 @@
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
-              <li><a href="../service-details/human-resource-management">CHRMO Hub</a></li>
-              <li><a href="../service-details/city-civil-registrar">City Civil Registrar Hub</a></li>
+              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -471,19 +551,36 @@
             <h4>Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a
-                  href="https://data.gov.ph"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
                   >Open Data Philippines</a
                 >
               </li>
               <li>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
+              </li>
+              <li>
+                <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Official LGU Legazpi Portal</a
+                >
+              </li>
+              <li>
                 <a
-                  href="https://www.foi.gov.ph/"
+                  href="https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Freedom of Information</a
+                  >LGU Legazpi Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >BLGF Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >CMCI DTI Portal</a
                 >
               </li>
             </ul>
@@ -496,18 +593,58 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute"
-              ><i class="bi bi-envelope-heart"></i>
-              <span>Volunteer with us</span></a
-            >
+            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+              <i class="bi bi-envelope-heart"></i> Volunteer with us
+            </a>
             <a
-              href="https://github.com/BetterLegazpi/betterlegazpi"
+              href="https://github.com/bpbelen/betterlegazpi"
               class="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="bi bi-github"></i>
-              <span>Contribute code with us</span></a
             >
+              <i class="bi bi-github"></i> Contribute code with us
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://hivcareph.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HIV Care Philippines"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+              <a
+                href="https://bettergov.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BetterGov.ph"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
+              /></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom-new">
