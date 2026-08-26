@@ -20,9 +20,9 @@ var PRECACHE_URLS = [
   '/assets/css/home.css',
   '/assets/js/main.js',
   '/assets/js/info-bar.js',
-  '/assets/images/logo/better-solano-logo.svg',
-  '/assets/images/logo/better-solano-logo-white.svg',
-  '/assets/images/logo/favicon.svg',
+  '/assets/images/logo/betterlegazpi-logo.png',
+  '/assets/images/logo/betterlegazpi-logo-white.png',
+  '/assets/images/logo/betterlegazpi-favicon.png',
   '/assets/images/logo/favicon.ico',
   '/assets/images/logo/icon-192.png',
   '/assets/images/logo/icon-512.png',
@@ -242,8 +242,8 @@ self.addEventListener('push', function (event) {
   event.waitUntil(
     self.registration.showNotification(data.title || 'BetterLegazpi', {
       body: data.body || '',
-      icon: '/assets/images/logo/favicon.svg',
-      badge: '/assets/images/logo/favicon.svg',
+      icon: '/assets/images/logo/betterlegazpi-favicon.png',
+      badge: '/assets/images/logo/betterlegazpi-favicon.png',
       tag: data.tag || 'betterlegazpi-notification',
       data: { url: data.url || '/' },
     })

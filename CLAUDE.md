@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository context
 
-This repo is a **fork-in-progress of BetterSolano.org being retrofitted for LGU Legazpi City** ("BetterLegazpi.org"). Rebranding is incomplete: `package.json` is still named `bs-web`, the PWA shell still precaches `assets/images/logo/better-solano-logo.svg`, and "Solano" survives in `README.md`, several docs, and page copy. An occurrence of "Solano" may be a genuine leftover _or_ a deliberate reference to the upstream sibling project — check before "fixing" it, and don't assume every occurrence is a bug.
+This repo is a **fork-in-progress of BetterSolano.org being retrofitted for LGU Legazpi City** ("BetterLegazpi.org"). Rebranding is underway: `package.json` is still named `bs-web`, the PWA shell now precaches `assets/images/logo/betterlegazpi-logo.png`, and "Solano" survives in `README.md`, several docs, and historical page notes. An occurrence of "Solano" may be a genuine leftover _or_ a deliberate reference to the upstream sibling project — check before "fixing" it, and don't assume every occurrence is a bug.
 
 `CONTEXT.md` at the repo root is the shared glossary (route, clean URL, service/category/office, the three coexisting layout generations, theme, audit vs. CI tier). Read it before touching markup or CSS — it explains vocabulary this file assumes. Architecture decisions live in `docs/adr/`.
 

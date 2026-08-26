@@ -13,9 +13,9 @@
   "categories": ["government", "utilities"],
   "icons": [
     {
-      "src": "/assets/images/logo/favicon.svg",
+      "src": "/assets/images/logo/betterlegazpi-favicon.png",
       "sizes": "any",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any"
     },
     {
@@ -47,25 +47,25 @@
       "name": "Services",
       "short_name": "Services",
       "url": "/services/?source=pwa",
-      "icons": [{ "src": "/assets/images/logo/favicon.svg", "sizes": "any" }]
+      "icons": [{ "src": "/assets/images/logo/betterlegazpi-favicon.png", "sizes": "any" }]
     },
     {
       "name": "Contact & Hotlines",
       "short_name": "Contact",
       "url": "/contact/?source=pwa",
-      "icons": [{ "src": "/assets/images/logo/favicon.svg", "sizes": "any" }]
+      "icons": [{ "src": "/assets/images/logo/betterlegazpi-favicon.png", "sizes": "any" }]
     },
     {
       "name": "Government",
       "short_name": "Government",
       "url": "/government/?source=pwa",
-      "icons": [{ "src": "/assets/images/logo/favicon.svg", "sizes": "any" }]
+      "icons": [{ "src": "/assets/images/logo/betterlegazpi-favicon.png", "sizes": "any" }]
     },
     {
       "name": "Transparency",
       "short_name": "Budget",
       "url": "/budget/?source=pwa",
-      "icons": [{ "src": "/assets/images/logo/favicon.svg", "sizes": "any" }]
+      "icons": [{ "src": "/assets/images/logo/betterlegazpi-favicon.png", "sizes": "any" }]
     }
   ],
   "prefer_related_applications": false
