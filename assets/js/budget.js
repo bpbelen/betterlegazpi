@@ -1032,7 +1032,7 @@ function highlightChartSegment(type, highlight) {
 async function loadBudgetSREData() {
   try {
     const basePath = window.location.pathname.includes('/budget') ? '../' : './';
-    const response = await fetch(`${basePath}data/fiscal_transparency.json`);
+    const response = await fetch(`${basePath}data/fiscal-transparency.json`);
     if (!response.ok) return;
 
     const json = await response.json();

@@ -213,7 +213,7 @@ AddDefaultCharset UTF-8
 </FilesMatch>
 
 # Protect data directory (allow JSON for AJAX)
-<FilesMatch "^(officials|ordinances|resolutions|services|competitive-index|dpwh-projects|news|demographics|fiscal_transparency)\.json$">
+<FilesMatch "^(officials|ordinances|resolutions|services|competitive-index|dpwh-projects|news|demographics|fiscal-transparency)\.json$">
     Order allow,deny
     Allow from all
 </FilesMatch>

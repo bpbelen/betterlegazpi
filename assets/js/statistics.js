@@ -2261,7 +2261,7 @@ async function loadFiscalData() {
 
   try {
     const basePath = window.location.pathname.includes('/statistics') ? '../' : './';
-    const response = await fetch(`${basePath}data/fiscal_transparency.json`);
+    const response = await fetch(`${basePath}data/fiscal-transparency.json`);
     if (!response.ok) return;
 
     const data = await response.json();
