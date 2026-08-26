@@ -52,7 +52,7 @@ The site specs are driven by shared helpers rather than hardcoded lists — that
 - `lighthouse.yml` — builds `dist/`, serves it on :8080, runs a **mobile × desktop matrix** over 9 URLs. `.lighthouserc.json` (mobile) is all warnings; `.lighthouserc.desktop.json` gates `categories:accessibility` at `["error", {minScore: 0.9}]` — the only hard Lighthouse failure.
 - `facebook-sync.yml` — content sync (see `docs/facebook-sync.md`).
 
-Beyond Prettier and these specs there is no lint or type check for the plain HTML/JS. No pre-commit hook is installed despite README claims of one.
+Beyond Prettier and these specs there is no lint or type check for the plain HTML/JS. No pre-commit hook is installed.
 
 ## Architecture
 
