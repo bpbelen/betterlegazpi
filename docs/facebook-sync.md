@@ -5,7 +5,7 @@ them, and merges them into [`data/news.json`](../data/news.json) — which drive
 both the homepage **Latest Updates** and the **News** page. Runs on a schedule
 with no per-post manual work.
 
-- Engine: [`scripts/sync-facebook.js`](../scripts/sync-facebook.js)
+- Engine: [`scripts/data/sync-facebook.js`](../scripts/data/sync-facebook.js)
 - Scheduler: [`.github/workflows/facebook-sync.yml`](../.github/workflows/facebook-sync.yml)
 - Renderer: [`assets/js/news.js`](../assets/js/news.js) (unchanged — reads the merged file)
 
@@ -78,14 +78,14 @@ The engine accepts a saved Graph response via `FB_FIXTURE`, bypassing the networ
 
 ```bash
 # Save a sample Graph /posts response to fixture.json, then:
-FB_FIXTURE=fixture.json NEWS_JSON_PATH=/tmp/news.json node scripts/sync-facebook.js
+FB_FIXTURE=fixture.json NEWS_JSON_PATH=/tmp/news.json node scripts/data/sync-facebook.js
 ```
 
 Once a real token exists, dry-run against the live API without deploying:
 
 ```bash
 FB_PAGE_ID=<id> FB_ACCESS_TOKEN=<token> NEWS_JSON_PATH=/tmp/news.json \
-  node scripts/sync-facebook.js
+  node scripts/data/sync-facebook.js
 ```
 
 ## Optional upgrade: smarter categorization

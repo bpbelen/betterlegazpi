@@ -7,7 +7,7 @@
 #   - all HTML files (Ver. X.X.X pattern)
 #   - react-app/public/version.json sync
 #
-# Usage: ./scripts/version.sh [major|minor|patch]
+# Usage: ./scripts/build/version.sh [major|minor|patch]
 
 BUMP_TYPE=${1:-""}
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Cross-platform file copy with exclusions (rsync replacement).
- * Usage: node scripts/copy-dist.js <src> <dest>
+ * Usage: node scripts/build/copy-dist.js <src> <dest>
  */
 
 const fs = require('fs');
@@ -70,7 +70,7 @@ function copyDir(src, dest) {
 
 const [, , src, dest] = process.argv;
 if (!src || !dest) {
-  console.error('Usage: node scripts/copy-dist.js <src> <dest>');
+  console.error('Usage: node scripts/build/copy-dist.js <src> <dest>');
   process.exit(1);
 }
 

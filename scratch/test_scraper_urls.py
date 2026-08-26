@@ -1,7 +1,7 @@
 import urllib.request
 import re
 
-with open('scripts/scrape-tourism.js', 'r', encoding='utf-8') as f:
+with open('scripts/data/scrape-tourism.js', 'r', encoding='utf-8') as f:
     code = f.read()
 
 urls = re.findall(r"image_url:\s*'([^']+)'", code)

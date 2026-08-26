@@ -13,8 +13,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const VERSION_FILE = path.join(__dirname, '..', 'version.json');
-const PACKAGE_FILE = path.join(__dirname, '..', 'package.json');
+// this script lives at scripts/build/, so the repo root is two levels up
+const REPO_ROOT = path.join(__dirname, '..', '..');
+
+const VERSION_FILE = path.join(REPO_ROOT, 'version.json');
+const PACKAGE_FILE = path.join(REPO_ROOT, 'package.json');
 
 // Read current version
 let versionData;
@@ -29,7 +32,7 @@ const bumpType = process.argv[2] || '';
 
 if (!bumpType) {
   console.log('Current version: ' + versionData.version);
-  console.log('Usage: node scripts/bump-version.js [major|minor|patch]');
+  console.log('Usage: node scripts/build/bump-version.js [major|minor|patch]');
   process.exit(0);
 }
 
@@ -102,7 +105,7 @@ let filesUpdated = 0;
 const versionPattern = new RegExp('Ver\\. ' + oldVersion.replace(/\./g, '\\.'), 'g');
 
 htmlDirs.forEach(function (dir) {
-  const dirPath = path.join(__dirname, '..', dir);
+  const dirPath = path.join(REPO_ROOT, dir);
   if (!fs.existsSync(dirPath)) return;
 
   const files = fs.readdirSync(dirPath).filter(function (f) {
@@ -125,14 +128,14 @@ htmlDirs.forEach(function (dir) {
 console.log('Updated ' + filesUpdated + ' HTML file(s)');
 
 // Sync version.json to react-app/public/ (consumed by React Footer at runtime)
-var reactPublicVersion = path.join(__dirname, '..', 'react-app', 'public', 'version.json');
+var reactPublicVersion = path.join(REPO_ROOT, 'react-app', 'public', 'version.json');
 if (fs.existsSync(path.dirname(reactPublicVersion))) {
   fs.copyFileSync(VERSION_FILE, reactPublicVersion);
   console.log('Synced version.json → react-app/public/version.json');
 }
 
 // Sync version field in react-app/package.json
-var reactPkgFile = path.join(__dirname, '..', 'react-app', 'package.json');
+var reactPkgFile = path.join(REPO_ROOT, 'react-app', 'package.json');
 try {
   if (fs.existsSync(reactPkgFile)) {
     var reactPkg = JSON.parse(fs.readFileSync(reactPkgFile, 'utf8'));

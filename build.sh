@@ -31,7 +31,7 @@ echo "▶ [1/6] Version management..."
 if [ "$SKIP_BUMP" = false ]; then
     # bump-version.js: updates version.json → package.json → all HTML files
     #                  → react-app/public/version.json
-    node scripts/bump-version.js "$BUMP_TYPE"
+    node scripts/build/bump-version.js "$BUMP_TYPE"
 else
     echo "  Skipping bump (--no-bump). Current: $(node -e "console.log(require('./version.json').version)")"
 fi
@@ -86,7 +86,7 @@ if command -v rsync &>/dev/null; then
         . dist/
 else
     # Fallback: cross-platform Node.js copy (Windows / no rsync)
-    node scripts/copy-dist.js . dist
+    node scripts/build/copy-dist.js . dist
 fi
 echo "  Legacy files copied."
 

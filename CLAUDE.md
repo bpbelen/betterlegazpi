@@ -18,7 +18,7 @@ npm run build            # bash build.sh — bumps patch version, builds dist/ (
 npm run build -- --no-bump
 npm run build:minor / build:major
 npm run serve:dist       # serve dist/ on port 8080
-npm run version:check / version:patch / version:minor / version:major   # scripts/bump-version.js
+npm run version:check / version:patch / version:minor / version:major   # scripts/build/bump-version.js
 npm run format           # prettier --write .   (see the Windows warning below)
 npm run format:check
 npm run lighthouse       # lhci autorun (mobile config)
@@ -67,8 +67,8 @@ There is no templating layer, so header/nav/footer markup is **duplicated into e
 
 **Page structure.** Top-level directories each hold one topic's page(s):
 
-- `services/` — category landing pages (agriculture, business, certificates, education, employment, environment, health, infrastructure, social-services, tax-payments) plus `services/index.html`.
-- `service-details/` — per-office pages (e.g. `city-civil-registrar.html`, `cto-services.html`), linked from `data/services.json` entries. These carry large page-local `<style>` blocks.
+- `services/` — category landing pages only: the eleven routes reachable from the main nav and `services/index.html` (agriculture, business, certificates, education, employment, environment, health, infrastructure, social-services, tax-payments, utilities). A page covering one office or one programme belongs in `service-details/`, not here.
+- `service-details/` — per-office and per-programme pages (e.g. `city-civil-registrar.html`, `cto-services.html`, `philhealth-yakap.html`), linked from `data/services.json` entries or from their category page. These carry large page-local `<style>` blocks.
 - `tourism/` — attractions, landmarks, food, accommodations, experience.
 - `government/`, `legislative/`, `budget/`, `statistics/`, `news/`, `history/`, `contact/`, `faq/`, `sitemap/`, `accessibility/`, `terms/`, `privacy/` — one section each.
 - `admin/news-editor.html` — standalone admin tool, excluded from the production build (see `build.sh` rsync excludes).
@@ -77,11 +77,19 @@ There is no templating layer, so header/nav/footer markup is **duplicated into e
 
 **i18n — removed, planned for later.** The inherited `TranslationEngine` and its 1.1 MB `assets/js/translations.js` bundle are **gone**: no `data-i18n` attributes, no language toggle, no precache entry, no remaining reference. The site ships English-only. Per the note at `assets/js/main.js:520`, multi-language (English, Filipino, **Bicol**) is planned as **per-locale files fetched on demand**, not a single bundle loaded on every page. Do not add `data-i18n` attributes expecting them to work, and treat README's multi-language claims as describing BetterSolano, not this site.
 
-**PWA.** `sw.js` is a versioned service worker (currently `v5`) with a dual-cache strategy (`STATIC_CACHE` precache + `RUNTIME_CACHE`, FIFO-capped at 80 entries with a 7-day TTL), network-first navigation falling back to `offline.html`, and `skipWaiting`/`controllerchange` silent updates (no manual refresh prompt). `manifest.webmanifest` declares install metadata/shortcuts. Bumping the site version is what invalidates the SW cache — `version.json` is the single source of truth, synced by `scripts/bump-version.js` into `package.json` and every HTML file's footer.
+**PWA.** `sw.js` is a versioned service worker (currently `v5`) with a dual-cache strategy (`STATIC_CACHE` precache + `RUNTIME_CACHE`, FIFO-capped at 80 entries with a 7-day TTL), network-first navigation falling back to `offline.html`, and `skipWaiting`/`controllerchange` silent updates (no manual refresh prompt). `manifest.webmanifest` declares install metadata/shortcuts. Bumping the site version is what invalidates the SW cache — `version.json` is the single source of truth, synced by `scripts/build/bump-version.js` into `package.json` and every HTML file's footer.
 
-**Build (`build.sh`).** Six-stage bash pipeline: (1) version bump via `scripts/bump-version.js`, (2) clean `dist/`, (3) rsync-copy the static site into `dist/` excluding dev-only paths (`node_modules`, `react-app`, `admin`, `scripts`, `docs`, `*.md`, etc. — read the exclude list before assuming a file ships), (4) build the optional `react-app/` (Next.js) and merge only its `_next/` assets and `services/health.html` into `dist/` without overwriting other legacy pages, (5) minify HTML (html-minifier-terser) / CSS (clean-css) / JS (babel + terser), (6) set cPanel-appropriate permissions (755 dirs / 644 files). On Windows/no-rsync environments it falls back to `scripts/copy-dist.js`. There is no `react-app/` in this checkout, so stage 4 is a no-op; `--no-react` skips it explicitly.
+**Build (`build.sh`).** Six-stage bash pipeline: (1) version bump via `scripts/build/bump-version.js`, (2) clean `dist/`, (3) rsync-copy the static site into `dist/` excluding dev-only paths (`node_modules`, `react-app`, `admin`, `scripts`, `docs`, `*.md`, etc. — read the exclude list before assuming a file ships), (4) build the optional `react-app/` (Next.js) and merge only its `_next/` assets and `services/health.html` into `dist/` without overwriting other legacy pages, (5) minify HTML (html-minifier-terser) / CSS (clean-css) / JS (babel + terser), (6) set cPanel-appropriate permissions (755 dirs / 644 files). On Windows/no-rsync environments it falls back to `scripts/build/copy-dist.js`. There is no `react-app/` in this checkout, so stage 4 is a no-op; `--no-react` skips it explicitly.
 
-**Scratch and data-sourcing scripts.** `scratch/` holds one-off Python (NHFR health-facility scraping/parsing, link/data validators) that originally generated `data/health-facilities.json`; `scripts/` also carries tourism scrapers and photo-preparation scripts. None are part of the build or test pipeline, and none are guaranteed to still run against live endpoints. `tests/helpers/pages.js` excludes `scratch/` deliberately — the saved DOH pages there are third-party markup and findings against them are not actionable.
+**Scripts.** `scripts/` is split by what a file is _for_:
+
+- `scripts/build/` — load-bearing for `npm run build`: `bump-version.js`, `copy-dist.js`, `version.sh`. `bump-version.js` resolves the repo root as `__dirname/../..`; keep that in step if the file ever moves again.
+- `scripts/data/` — occasional jobs that regenerate files in `data/` or fetch photos (tourism scrapers, `generate-health-facilities.py`, `sync-facebook.js`). Only `sync-facebook.js` runs in CI.
+- `scripts/validate/` — standalone checkers (`verify-links.py`, `validate-ssot.py`, …) run by hand.
+
+None of `scripts/` ships — it is excluded from both build paths — and none of the data or validate scripts is guaranteed to still run against live endpoints.
+
+`scratch/` is throwaway exploration kept only as a record: ad-hoc probes against the DOH NHFR and legazpi.gov.ph endpoints. Nothing in the repo references it, `tests/helpers/pages.js` excludes it, and it is safe to delete wholesale. Don't add to it — a script worth keeping goes under `scripts/`.
 
 ## Agent skills
 
