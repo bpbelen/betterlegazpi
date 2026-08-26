@@ -14,3 +14,11 @@ blob-report/
 
 # Audit run output (input to docs/audits/*.md, regenerated on demand)
 audit-*.json
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Agent tooling: .claude/skills/ are symlinks into .agents/skills/
+.claude/skills/
+.impeccable/

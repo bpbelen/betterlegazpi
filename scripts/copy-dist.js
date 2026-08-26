@@ -35,7 +35,9 @@ const EXCLUDED = new Set([
   '.prettierignore',
   '.claude',
   '.impeccable',
-  'extracted_text.txt',
+  '.agents',
+  '__pycache__',
+  'skills-lock.json',
 ]);
 
 const EXCLUDED_EXT = new Set(['.backup', '.md']);

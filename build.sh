@@ -80,7 +80,9 @@ if command -v rsync &>/dev/null; then
         --exclude='.prettierignore' \
         --exclude='.claude' \
         --exclude='.impeccable' \
-        --exclude='extracted_text.txt' \
+        --exclude='.agents' \
+        --exclude='__pycache__' \
+        --exclude='skills-lock.json' \
         . dist/
 else
     # Fallback: cross-platform Node.js copy (Windows / no rsync)
