@@ -690,6 +690,31 @@
       "processingTime": "Instant",
       "office": "City Treasurer's Office",
       "url": "https://www.filipizen.com/partners/albay_legazpi/bpls/billing"
+    },
+    {
+      "id": "aleco-electric-service",
+      "title": "ALECO Electric Service Connection & Power Services",
+      "category": "Public Utilities",
+      "categoryId": "utilities",
+      "description": "Application requirements, payment channels, feeder coverage by barangay, and power outage advisories for Albay Electric Cooperative (ALECO).",
+      "keywords": ["electricity", "power", "aleco", "albay electric", "electric meter", "power outage", "feeder", "electric bill", "gcash aleco", "maya aleco", "cfei"],
+      "fee": "Connection & meter deposit fees apply",
+      "processingTime": "3 - 5 days",
+      "office": "Albay Electric Cooperative, Inc. (ALECO)",
+      "url": "services/utilities.html#electricity"
+    },
+    {
+      "id": "lcwd-water-service",
+      "title": "Legazpi City Water District (LCWD) Water Connection & Services",
+      "category": "Public Utilities",
+      "categoryId": "utilities",
+      "description": "New water service connection application, online/over-the-counter payments, water supply zones, and maintenance advisories for Legazpi City Water District.",
+      "keywords": ["water", "water district", "lcwd", "water connection", "water meter", "water leak", "water bill", "gcash lcwd", "water interruption", "pumping station"],
+      "fee": "Connection, inspection & deposit fees apply",
+      "processingTime": "2 - 4 days",
+      "office": "Legazpi City Water District (LCWD)",
+      "url": "services/utilities.html#water"
     }
   ]
 }
+

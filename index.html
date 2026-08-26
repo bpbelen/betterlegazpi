@@ -148,6 +148,7 @@
       .glass-pill {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         padding: 8px 18px;
         border-radius: var(--pill-radius);
@@ -160,6 +161,7 @@
         color: var(--color-text);
         transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         text-decoration: none !important;
+        text-align: center;
       }
 
       [data-theme='dark'] .glass-pill {
@@ -462,10 +464,12 @@
                 <li><a href="services/infrastructure">Infrastructure</a></li>
                 <li><a href="services/social-services">Social Services</a></li>
                 <li><a href="services/tax-payments">Tax &amp; Payments</a></li>
+                <li><a href="services/utilities">Utilities</a></li>
               </ul>
             </li>
             <li><a href="government/">Government</a></li>
             <li><a href="statistics/">Statistics</a></li>
+            <li><a href="tourism/">Tourism</a></li>
             <li><a href="budget/">Transparency</a></li>
             <li><a href="history/">History</a></li>
             <li><a href="contact/">Contact</a></li>
@@ -549,6 +553,9 @@
                 <a href="services/health" class="glass-pill">
                   <i class="bi bi-heart-pulse"></i> Health Facilities
                 </a>
+                <a href="tourism/" class="glass-pill" style="border-color: rgba(194, 65, 12, 0.4); color: #c2410c;">
+                  <i class="bi bi-compass-fill"></i> Tourism &amp; Attractions
+                </a>
               </div>
 
               <div style="display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap;">
@@ -627,6 +634,62 @@
               </div>
               <i class="bi bi-arrow-right home-service-arrow"></i>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Explore Legazpi Tourism Spotlight -->
+      <section class="section" style="padding-top: 0;">
+        <div class="container">
+          <div class="glass-card" style="position: relative; overflow: hidden; padding: 40px; border-radius: 28px; background: linear-gradient(135deg, rgba(194, 65, 12, 0.08) 0%, rgba(234, 88, 12, 0.03) 100%), var(--glass-bg-light); border: 1px solid rgba(194, 65, 12, 0.25);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center;">
+              <div>
+                <div style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px; border-radius: 9999px; background: rgba(194, 65, 12, 0.12); color: #c2410c; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 14px;">
+                  <i class="bi bi-compass-fill"></i> Tourism &amp; City Guide
+                </div>
+                <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 12px; line-height: 1.2;">
+                  Discover 330+ Tourist Spots, Dining &amp; Adventures
+                </h2>
+                <p style="color: var(--color-text-light); font-size: 0.98rem; line-height: 1.6; margin-bottom: 24px;">
+                  Explore Mayon Volcano viewpoints, famous Bicolano cuisine (Pinangat, Sili Ice Cream), ATV lava trail tours, accredited hotels, and coastal parks with live PSGC barangay search and Google Maps directions.
+                </p>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                  <a href="tourism/" class="btn btn-primary" style="border-radius: var(--pill-radius); padding: 12px 24px; font-weight: 600;">
+                    <i class="bi bi-compass-fill" style="margin-right: 6px;"></i> Explore Tourism Portal
+                  </a>
+                  <a href="tourism/attractions" class="glass-pill" style="padding: 10px 18px;">
+                    <i class="bi bi-geo-alt-fill"></i> Attractions
+                  </a>
+                  <a href="tourism/experience" class="glass-pill" style="padding: 10px 18px;">
+                    <i class="bi bi-compass-fill"></i> The Experience
+                  </a>
+                  <a href="tourism/food" class="glass-pill" style="padding: 10px 18px;">
+                    <i class="bi bi-cup-hot-fill"></i> Food &amp; Dining
+                  </a>
+                  <a href="tourism/accommodations" class="glass-pill" style="padding: 10px 18px;">
+                    <i class="bi bi-building-fill"></i> Where to Stay
+                  </a>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                <div class="glass-card" style="padding: 18px; text-align: center; border-radius: 18px;">
+                  <div style="font-size: 1.8rem; font-weight: 800; color: #c2410c; margin-bottom: 4px;">14</div>
+                  <div style="font-size: 0.85rem; font-weight: 600;">Tourist Attractions</div>
+                </div>
+                <div class="glass-card" style="padding: 18px; text-align: center; border-radius: 18px;">
+                  <div style="font-size: 1.8rem; font-weight: 800; color: #ea580c; margin-bottom: 4px;">240+</div>
+                  <div style="font-size: 0.85rem; font-weight: 600;">Food &amp; Dining</div>
+                </div>
+                <div class="glass-card" style="padding: 18px; text-align: center; border-radius: 18px;">
+                  <div style="font-size: 1.8rem; font-weight: 800; color: #059669; margin-bottom: 4px;">9</div>
+                  <div style="font-size: 0.85rem; font-weight: 600;">Adventures &amp; ATV</div>
+                </div>
+                <div class="glass-card" style="padding: 18px; text-align: center; border-radius: 18px;">
+                  <div style="font-size: 1.8rem; font-weight: 800; color: #0284c7; margin-bottom: 4px;">60+</div>
+                  <div style="font-size: 0.85rem; font-weight: 600;">Accredited Stays</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -792,17 +855,24 @@
             </div>
             <div class="history-summary">
               <div class="history-card glass-card">
-                <div class="history-card-icon"><i class="bi bi-shield-check"></i></div>
+                <div class="history-card-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
                 <div class="history-card-content">
                   <h4>Regional Capital</h4>
                   <p>Designated administrative hub of Bicol Region, hosting national government agencies and regional offices.</p>
                 </div>
               </div>
               <div class="history-card glass-card">
-                <div class="history-card-icon"><i class="bi bi-mountain"></i></div>
+                <div class="history-card-icon"><i class="bi bi-compass" aria-hidden="true"></i></div>
                 <div class="history-card-content">
                   <h4>City of Fun &amp; Adventure</h4>
                   <p>Famous for Mayon Volcano's iconic majestic cone, Embarcadero waterfront, and vibrant eco-tourism.</p>
+                </div>
+              </div>
+              <div class="history-card glass-card">
+                <div class="history-card-icon"><i class="bi bi-award" aria-hidden="true"></i></div>
+                <div class="history-card-content">
+                  <h4>Top Competitive City</h4>
+                  <p>Consistently recognized among the nation's most competitive, resilient, and business-friendly component cities.</p>
                 </div>
               </div>
             </div>
@@ -904,6 +974,7 @@
             justify-content: center;
             flex-shrink: 0;
             color: white;
+            font-size: 1.25rem;
           }
           @media (max-width: 900px) {
             .history-content {
@@ -1002,33 +1073,33 @@
             </a>
           </div>
           <div class="home-leadership-grid">
-            <div class="home-leader-card glass-card" style="padding: 28px;">
+            <div class="home-leader-card glass-card" style="padding: 28px; text-align: center; display: flex; flex-direction: column; align-items: center;">
               <div class="home-leader-badge glass-pill" style="margin-bottom: 12px; background: rgba(194, 65, 12, 0.1); color: #c2410c; font-weight: 600;">
                 City Mayor
               </div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 14px;">Hon. Hisham B. Ismail</h3>
-              <div class="home-leader-contacts">
-                <a href="mailto:legazpicitymayorsoffice@gmail.com" class="glass-pill">
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 14px; text-align: center;">Hon. Hisham B. Ismail</h3>
+              <div class="home-leader-contacts" style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 10px;">
+                <a href="mailto:legazpicitymayorsoffice@gmail.com" class="glass-pill" style="width: 100%; max-width: 360px; justify-content: center; text-align: center;">
                   <i class="bi bi-envelope"></i>
                   <span>legazpicitymayorsoffice@gmail.com</span>
                 </a>
-                <a href="tel:09274143768" class="glass-pill">
-                  <i class="bi bi-telephone"></i> (0927) 414 3768
+                <a href="tel:09274143768" class="glass-pill" style="width: 100%; max-width: 360px; justify-content: center; text-align: center;">
+                  <i class="bi bi-telephone"></i> <span>(0927) 414 3768</span>
                 </a>
               </div>
             </div>
-            <div class="home-leader-card glass-card" style="padding: 28px;">
+            <div class="home-leader-card glass-card" style="padding: 28px; text-align: center; display: flex; flex-direction: column; align-items: center;">
               <div class="home-leader-badge glass-pill" style="margin-bottom: 12px; background: rgba(194, 65, 12, 0.1); color: #c2410c; font-weight: 600;">
                 City Vice Mayor
               </div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 14px;">Hon. Luis Felipe L. Gutierrez</h3>
-              <div class="home-leader-contacts">
-                <a href="mailto:legazpicitymayorsoffice@gmail.com" class="glass-pill">
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 14px; text-align: center;">Hon. Luis Felipe L. Gutierrez</h3>
+              <div class="home-leader-contacts" style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 10px;">
+                <span class="glass-pill" style="opacity: 0.65; cursor: default; width: 100%; max-width: 360px; justify-content: center; text-align: center;">
                   <i class="bi bi-envelope"></i>
-                  <span>legazpicitymayorsoffice@gmail.com</span>
-                </a>
-                <a href="tel:09122983504" class="glass-pill">
-                  <i class="bi bi-telephone"></i> (0912) 298 3504
+                  <span>Unlisted</span>
+                </span>
+                <a href="tel:0528205199" class="glass-pill" style="width: 100%; max-width: 360px; justify-content: center; text-align: center;">
+                  <i class="bi bi-telephone"></i> <span>(052) 820-5199</span>
                 </a>
               </div>
             </div>
@@ -1050,7 +1121,7 @@
               <div class="home-contact-v2-icon"><i class="bi bi-telephone-fill"></i></div>
               <div class="home-contact-v2-content">
                 <h3>Mobile (Globe)</h3>
-                <p class="home-contact-v2-value">0927 414 3768</p>
+                <p class="home-contact-v2-value" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">0927 414 3768</p>
                 <span class="home-contact-v2-note">Mon-Fri: 8:00 AM - 5:00 PM</span>
               </div>
             </a>
@@ -1058,7 +1129,7 @@
               <div class="home-contact-v2-icon"><i class="bi bi-envelope-fill"></i></div>
               <div class="home-contact-v2-content">
                 <h3>Email</h3>
-                <p class="home-contact-v2-value" style="font-size: 0.95rem;">legazpicitymayorsoffice@gmail.com</p>
+                <p class="home-contact-v2-value" style="font-size: clamp(0.78rem, 0.95vw, 0.88rem); letter-spacing: -0.2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="legazpicitymayorsoffice@gmail.com">legazpicitymayorsoffice@gmail.com</p>
                 <span class="home-contact-v2-note">Response within 24 hours</span>
               </div>
             </a>
@@ -1066,7 +1137,7 @@
               <div class="home-contact-v2-icon"><i class="bi bi-geo-alt-fill"></i></div>
               <div class="home-contact-v2-content">
                 <h3>Address</h3>
-                <p class="home-contact-v2-value">Legazpi City Hall</p>
+                <p class="home-contact-v2-value" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Legazpi City Hall</p>
                 <span class="home-contact-v2-note">Rizal St., Legazpi City, Albay 4500</span>
               </div>
             </div>
@@ -1107,6 +1178,7 @@
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
+              <li><a href="tourism/">Tourism &amp; Travel</a></li>
               <li><a href="history/">History</a></li>
               <li><a href="sitemap/">Sitemap</a></li>
               <li><a href="terms/">Terms of Use</a></li>

@@ -28,7 +28,10 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://betterlegazpi.org/services/health" />
-    <meta property="og:title" content="Health Services & Facilities Directory | BetterLegazpi.org" />
+    <meta
+      property="og:title"
+      content="Health Services & Facilities Directory | BetterLegazpi.org"
+    />
     <meta
       property="og:description"
       content="Access healthcare services and search all accredited health facilities in Legazpi City, Albay, including hospitals, YAKAP clinics, lying-in centers, and 70 Barangay Health Stations."
@@ -50,7 +53,10 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://betterlegazpi.org/services/health" />
-    <meta name="twitter:title" content="Health Services & Facilities Directory | BetterLegazpi.org" />
+    <meta
+      name="twitter:title"
+      content="Health Services & Facilities Directory | BetterLegazpi.org"
+    />
     <meta
       name="twitter:description"
       content="Access healthcare services and search all accredited health facilities in Legazpi City, Albay, including hospitals, YAKAP clinics, lying-in centers, and 70 Barangay Health Stations."
@@ -80,6 +86,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/philhealth-yakap.css" />
     <script>
       (function () {
         const savedTheme = localStorage.getItem('theme');
@@ -143,7 +150,9 @@
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li><a href="../services/agriculture">Agriculture</a></li>
                 <li><a href="../services/business">Business</a></li>
@@ -155,17 +164,25 @@
                 <li><a href="../services/infrastructure">Infrastructure</a></li>
                 <li><a href="../services/social-services">Social Services</a></li>
                 <li><a href="../services/tax-payments">Tax &amp; Payments</a></li>
+                <li><a href="../services/utilities">Utilities</a></li>
               </ul>
             </li>
             <li><a href="../government/">Government</a></li>
             <li><a href="../statistics/">Statistics</a></li>
+
+            <li><a href="../tourism/">Tourism</a></li>
             <li><a href="../budget/">Transparency</a></li>
             <li><a href="../history/">History</a></li>
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
         <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
           </button>
         </div>
@@ -202,7 +219,8 @@
     <main id="main-content">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Home</a><span>/</span><a href="./">Services</a><span>/</span><span aria-current="page">Health Services</span>
+          <a href="../">Home</a><span>/</span><a href="./">Services</a><span>/</span
+          ><span aria-current="page">Health Services</span>
         </nav>
       </div>
 
@@ -215,7 +233,9 @@
             </span>
             <h1>Health Services &amp; Facilities Directory</h1>
             <p class="page-header-desc">
-              Access consultations, PhilHealth YAKAP primary care, immunizations, maternal health, and explore Legazpi City’s complete network of licensed hospitals, clinics, and 70 Barangay Health Stations.
+              Access consultations, PhilHealth YAKAP primary care, immunizations, maternal health,
+              and explore Legazpi City’s complete network of licensed hospitals, clinics, and 70
+              Barangay Health Stations.
             </p>
           </div>
         </div>
@@ -224,97 +244,141 @@
       <!-- Key Health Services Highlights -->
       <section class="section">
         <div class="container">
-          <div class="section-header-compact mb-4">
-            <h2 class="section-title">
-              <i class="bi bi-grid-fill text-primary"></i>
-              <span>Core Public Health Programs</span>
-            </h2>
-            <p class="section-subtitle">
-              Accessible healthcare programs offered by the City Government of Legazpi and accredited PhilHealth partners.
-            </p>
+          <div style="margin-bottom: var(--spacing-lg)">
+            <div
+              style="
+                margin-bottom: var(--spacing-md);
+                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
+                padding-bottom: 8px;
+              "
+            >
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  color: var(--color-primary);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 0;
+                "
+              >
+                <i class="bi bi-heart-pulse-fill" style="color: var(--color-primary)"></i>
+                <span>Core Public Health Programs</span>
+              </h2>
+              <p style="font-size: 0.84rem; color: #6b7280; margin: 4px 0 0 0">
+                Accessible healthcare programs offered by the City Government of Legazpi and
+                accredited PhilHealth partners.
+              </p>
+            </div>
+            <div class="grid grid-3">
+              <div class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-hospital"></i>
+                  <span>Medical Consultation</span>
+                </h3>
+                <p class="service-item-desc">
+                  Free general medical consultation, triage, and physical exams at the City Health
+                  Office (CHO), RHUs, and Homapon Super Health Center
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> Free</span>
+                  <span><strong>Time:</strong> 15-30 mins</span>
+                </div>
+              </div>
+
+              <a href="./philhealth-yakap" class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-shield-plus"></i>
+                  <span>PhilHealth YAKAP &amp; GAMOT</span>
+                </h3>
+                <p class="service-item-desc">
+                  Accredited primary care package covering free consultations, 13+ diagnostic tests,
+                  and up to ₱20,000 in free maintenance medicines
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> 100% Zero Copay</span>
+                  <span><strong>Time:</strong> 1-3 days (FPE &amp; Meds)</span>
+                </div>
+              </a>
+
+              <div class="service-item-card">
+                <h3 class="service-item-title">
+                  <i class="bi bi-capsule"></i>
+                  <span>Immunization &amp; Vaccination</span>
+                </h3>
+                <p class="service-item-desc">
+                  Expanded Program on Immunization (EPI) for infants, children, pregnant women, and
+                  senior citizen flu and pneumonia vaccines
+                </p>
+                <div class="service-item-meta">
+                  <span><strong>Fee:</strong> Free</span>
+                  <span><strong>Time:</strong> 15-20 mins</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="grid grid-3">
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-hospital"></i>
-                <span>Medical Consultation</span>
-              </h3>
-              <p class="service-item-desc">
-                Free general medical consultation, triage, and physical exams at the City Health Office (CHO), RHUs, and Homapon Super Health Center.
+        </div>
+      </section>
+
+      <!-- PhilHealth YAKAP Highlight Section (Alternating Background) -->
+      <section
+        class="section section-compact bg-alt"
+        aria-label="PhilHealth YAKAP Feature in Legazpi City"
+      >
+        <div class="container">
+          <div class="yakap-spotlight-card">
+            <div class="yakap-spotlight-main">
+              <span class="yakap-spotlight-badge">
+                <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
+                <span>Universal Healthcare Guarantee</span>
+              </span>
+              <h2 class="yakap-spotlight-title">PhilHealth YAKAP in Legazpi City</h2>
+              <p class="yakap-spotlight-desc">
+                Avail of <strong>₱20,000 in annual free maintenance medicines (GAMOT)</strong>, 13+
+                covered diagnostic tests, and check-ups with <strong>100% zero copayment</strong>
+                across 13 accredited Legazpi clinics.
               </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>Free</span></span>
-                <span><strong>Schedule:</strong> <span>Mon-Fri 8AM-5PM (Walk-in)</span></span>
+
+              <!-- Mobile-only compact pill strip (avoids scroll fatigue) -->
+              <div class="yakap-spotlight-mobile-pills" aria-label="Key YAKAP benefits">
+                <span class="yakap-mini-pill"><i class="bi bi-capsule"></i> ₱20K Free Meds</span>
+                <span class="yakap-mini-pill"><i class="bi bi-shield-check"></i> 0 Copay</span>
+                <span class="yakap-mini-pill"><i class="bi bi-hospital"></i> 13 Clinics</span>
+              </div>
+
+              <div class="yakap-spotlight-ctas">
+                <a href="./philhealth-yakap" class="btn btn-primary yakap-spotlight-btn-primary">
+                  <span>Open Full YAKAP Guide</span>
+                  <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="./philhealth-yakap#facilities"
+                  class="btn btn-outline yakap-spotlight-btn-secondary"
+                >
+                  <i class="bi bi-hospital" aria-hidden="true"></i>
+                  <span>13 Accredited Clinics</span>
+                </a>
               </div>
             </div>
 
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-shield-plus"></i>
-                <span>PhilHealth YAKAP &amp; Konsulta</span>
-              </h3>
-              <p class="service-item-desc">
-                Accredited primary care package covering free consultations, targeted diagnostic tests, and maintenance medicines (GAMOT program).
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>100% PhilHealth Covered</span></span>
-                <span><strong>Locations:</strong> <span>13 Accredited Clinics</span></span>
+            <!-- Desktop-only 4-metric grid (unified palette) -->
+            <div class="yakap-spotlight-metrics" aria-hidden="false">
+              <div class="yakap-spotlight-metric-pill">
+                <span class="yakap-spotlight-metric-num">₱20,000</span>
+                <span class="yakap-spotlight-metric-label">Free GAMOT Meds / Year</span>
               </div>
-            </div>
-
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-capsule"></i>
-                <span>Immunization &amp; Vaccination</span>
-              </h3>
-              <p class="service-item-desc">
-                Expanded Program on Immunization (EPI) for infants, children, pregnant women, and senior citizen flu and pneumonia vaccines.
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>Free</span></span>
-                <span><strong>Access:</strong> <span>70 Barangay Health Stations</span></span>
+              <div class="yakap-spotlight-metric-pill">
+                <span class="yakap-spotlight-metric-num">0 Copay</span>
+                <span class="yakap-spotlight-metric-label">100% Free at Public Clinics</span>
               </div>
-            </div>
-
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-heart-pulse"></i>
-                <span>Maternal &amp; Lying-In Delivery</span>
-              </h3>
-              <p class="service-item-desc">
-                24/7 Normal Spontaneous Delivery, prenatal, and postnatal care at Northern District (Buyuan) and Southern District (Banquerohan &amp; Taysan) Birthing Clinics.
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>PhilHealth / Subsidized</span></span>
-                <span><strong>Availability:</strong> <span>24/7 Active</span></span>
+              <div class="yakap-spotlight-metric-pill">
+                <span class="yakap-spotlight-metric-num">13+ Labs</span>
+                <span class="yakap-spotlight-metric-label">Diagnostics &amp; Screenings</span>
               </div>
-            </div>
-
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-activity"></i>
-                <span>TB-DOTS &amp; Respiratory Care</span>
-              </h3>
-              <p class="service-item-desc">
-                Free GeneXpert molecular testing, sputum diagnosis, and complete anti-TB medication treatment under the National TB Control Program.
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>Free (DOH Subsidized)</span></span>
-                <span><strong>Venue:</strong> <span>CHO TB-DOTS Center</span></span>
-              </div>
-            </div>
-
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-prescription2"></i>
-                <span>Diagnostic Lab &amp; Blood Banking</span>
-              </h3>
-              <p class="service-item-desc">
-                Clinical lab tests (CBC, Urinalysis, Blood Chemistry) at CHO Lab and 24/7 emergency blood services via Philippine Red Cross Albay Chapter.
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>Free / Standard Rates</span></span>
-                <span><strong>Turnaround:</strong> <span>Same day results</span></span>
+              <div class="yakap-spotlight-metric-pill">
+                <span class="yakap-spotlight-metric-num">13 Clinics</span>
+                <span class="yakap-spotlight-metric-label">Accredited in Legazpi City</span>
               </div>
             </div>
           </div>
@@ -358,7 +422,8 @@
               <span>Health Facilities Directory</span>
             </h2>
             <p class="section-subtitle">
-              Single Source of Truth (SSOT) database verified with DOH NHFR, PhilHealth YAKAP Registry (July 2026 update), and Legazpi City Health Office.
+              Single Source of Truth (SSOT) database verified with DOH NHFR, PhilHealth YAKAP
+              Registry (July 2026 update), and Legazpi City Health Office.
             </p>
           </div>
 
@@ -386,7 +451,11 @@
             </div>
 
             <!-- Category Filter Pills -->
-            <div class="health-cat-pills-wrap" role="group" aria-label="Filter by facility category">
+            <div
+              class="health-cat-pills-wrap"
+              role="group"
+              aria-label="Filter by facility category"
+            >
               <button type="button" class="health-cat-pill active" data-category="all">
                 <i class="bi bi-grid-fill"></i> All Facilities
               </button>
@@ -396,10 +465,18 @@
               <button type="button" class="health-cat-pill" data-category="yakap-accredited">
                 <i class="bi bi-patch-check-fill"></i> PhilHealth YAKAP (13)
               </button>
-              <button type="button" class="health-cat-pill" data-category="Super Health Center & RHU">
+              <button
+                type="button"
+                class="health-cat-pill"
+                data-category="Super Health Center & RHU"
+              >
                 <i class="bi bi-building-add"></i> Super Health Center &amp; RHU
               </button>
-              <button type="button" class="health-cat-pill" data-category="Birthing & Lying-in Clinic">
+              <button
+                type="button"
+                class="health-cat-pill"
+                data-category="Birthing & Lying-in Clinic"
+              >
                 <i class="bi bi-heart-pulse-fill"></i> Birthing &amp; Lying-In
               </button>
               <button type="button" class="health-cat-pill" data-category="Diagnostic Laboratory">
@@ -445,17 +522,20 @@
           </div>
 
           <!-- Empty Search State -->
-          <div class="health-empty-state" id="health-empty-state" style="display: none;">
+          <div class="health-empty-state" id="health-empty-state" style="display: none">
             <i class="bi bi-search"></i>
             <h4>No health facilities matched your search</h4>
-            <p>Try adjusting your search keywords, clearing specific filters, or resetting category selections.</p>
+            <p>
+              Try adjusting your search keywords, clearing specific filters, or resetting category
+              selections.
+            </p>
             <button type="button" id="health-reset-filters" class="btn btn-primary">
               <i class="bi bi-arrow-counterclockwise"></i> Reset All Filters
             </button>
           </div>
 
           <!-- Load More Button -->
-          <div class="health-load-more-wrap" id="health-load-more-wrap" style="display: none;">
+          <div class="health-load-more-wrap" id="health-load-more-wrap" style="display: none">
             <button type="button" id="health-load-more-btn" class="health-load-more-btn">
               Show More Facilities
             </button>
@@ -487,7 +567,8 @@
             </h2>
             <p class="hivcare-cta-text">
               A searchable, mobile-first web directory of all 338 DOH-designated HIV treatment and
-              care facilities across Region V and the Philippines, sourced from official DOH circulars.
+              care facilities across Region V and the Philippines, sourced from official DOH
+              circulars.
             </p>
             <div class="hivcare-cta-stats">
               <span class="hivcare-cta-stat">
@@ -528,7 +609,8 @@
               class="footer-logo"
             />
             <p class="footer-tagline">
-              Empowering the people of Legazpi with transparent access to services, programs, healthcare facilities, and public data of Legazpi City, Albay.
+              Empowering the people of Legazpi with transparent access to services, programs,
+              healthcare facilities, and public data of Legazpi City, Albay.
             </p>
             <div class="footer-social-new">
               <a
@@ -537,21 +619,24 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-              ><i class="bi bi-facebook"></i></a>
+                ><i class="bi bi-facebook"></i
+              ></a>
               <a
                 href="https://www.linkedin.com/company/betterlegazpi/"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-              ><i class="bi bi-linkedin"></i></a>
+                ><i class="bi bi-linkedin"></i
+              ></a>
               <a
                 href="https://discord.com/invite/betterlegazpi"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Discord"
-              ><i class="bi bi-discord"></i></a>
+                ><i class="bi bi-discord"></i
+              ></a>
             </div>
           </div>
           <div class="footer-column">
@@ -570,27 +655,43 @@
             <h4>Official Resources</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://doh.gov.ph" target="_blank" rel="noopener noreferrer">Department of Health</a>
+                <a href="https://doh.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Department of Health</a
+                >
               </li>
               <li>
-                <a href="https://nhfr.doh.gov.ph" target="_blank" rel="noopener noreferrer">DOH Health Facility Registry</a>
+                <a href="https://nhfr.doh.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >DOH Health Facility Registry</a
+                >
               </li>
               <li>
-                <a href="https://www.philhealth.gov.ph" target="_blank" rel="noopener noreferrer">PhilHealth Portal</a>
+                <a href="https://www.philhealth.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >PhilHealth Portal</a
+                >
               </li>
               <li>
-                <a href="https://legazpi.gov.ph" target="_blank" rel="noopener noreferrer">City Government of Legazpi</a>
+                <a href="https://legazpi.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >City Government of Legazpi</a
+                >
               </li>
               <li>
-                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a>
+                <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"
+                  >Open Data Philippines</a
+                >
               </li>
               <li>
-                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a>
+                <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                  >Freedom of Information</a
+                >
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <div class="footer-cost" role="status" aria-label="Cost to the People of Legazpi: Zero Pesos">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Legazpi: Zero Pesos"
+            >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
             <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
@@ -610,39 +711,39 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abakada.org"
-              ><img
-                src="../assets/images/logo/abakada-footer.svg"
-                alt="Abakada.org"
-                class="footer-partner-logo"
-                width="120"
-                height="28"
-                loading="lazy"
+                ><img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
               /></a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-              ><img
-                src="../assets/images/logo/hiv-care-logo-footer.svg"
-                alt="HIV Care Philippines"
-                class="footer-partner-logo"
-                width="120"
-                height="28"
-                loading="lazy"
+                ><img
+                  src="../assets/images/logo/hiv-care-logo-footer.svg"
+                  alt="HIV Care Philippines"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
               /></a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-              ><img
-                src="../assets/images/logo/bettergov-footer.svg"
-                alt="BetterGov.ph"
-                class="footer-partner-logo"
-                width="120"
-                height="28"
-                loading="lazy"
+                ><img
+                  src="../assets/images/logo/bettergov-footer.svg"
+                  alt="BetterGov.ph"
+                  class="footer-partner-logo"
+                  width="120"
+                  height="28"
+                  loading="lazy"
               /></a>
             </div>
           </div>
@@ -652,7 +753,8 @@
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer">
-              All public information sourced from official government portals (DOH, PhilHealth, PSA, &amp; LGU Legazpi).
+              All public information sourced from official government portals (DOH, PhilHealth, PSA,
+              &amp; LGU Legazpi).
             </span>
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
           </div>

@@ -1,0 +1,112 @@
+{
+  "category": "activities",
+  "count": 8,
+  "data": [
+    {
+      "id": "act-1",
+      "name": "ATV Ride Experience",
+      "category": "activities",
+      "subcategory": "All-Terrain Adventure",
+      "description": "Hop on an all-terrain vehicle for an adventurous off-road ride navigating rocky terrain and river trails leading near the majestic Mayon Volcano.",
+      "address": "Brgy. 44 Pawa, Legazpi City",
+      "barangay_name": "Bgy. 44 - Pawa",
+      "image_url": "../assets/images/tourism/photos/experience_mayon_atv_ride.webp",
+      "image": "../assets/images/tourism/photos/experience_mayon_atv_ride.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=ATV%20Ride%20Experience%2C%20Brgy.%2044%20Pawa%2C%20Legazpi%20City"
+    },
+    {
+      "id": "act-2",
+      "name": "Black Lava Wall Climbing",
+      "category": "activities",
+      "subcategory": "Extreme Outdoor",
+      "description": "A thrilling outdoor challenge climbing the basaltic 2006 Mayon black lava wall for up-close crater vantage points.",
+      "address": "Brgy. 54 Mabinit, Legazpi City",
+      "barangay_name": "Bgy. 54 - Mabinit",
+      "image_url": "../assets/images/tourism/photos/experience_black_lava_wall_climb_zipline.webp",
+      "image": "../assets/images/tourism/photos/experience_black_lava_wall_climb_zipline.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Black%20Lava%20Wall%20Climbing%2C%20Brgy.%2054%20Mabinit%2C%20Legazpi%20City"
+    },
+    {
+      "id": "act-3",
+      "name": "Mayon Foot Trails Trekking",
+      "category": "activities",
+      "subcategory": "Eco-Trek",
+      "description": "Guided scenic hiking expeditions through lush volcanic slopes, pine trails, and panoramic view ridges around Mayon Volcano.",
+      "address": "Brgy. 54 Mabinit, Legazpi City",
+      "barangay_name": "Bgy. 54 - Mabinit",
+      "image_url": "../assets/images/tourism/photos/experience_mayon_atv_ride.webp",
+      "image": "../assets/images/tourism/photos/experience_mayon_atv_ride.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mayon%20Foot%20Trails%20Trekking%2C%20Brgy.%2054%20Mabinit%2C%20Legazpi%20City"
+    },
+    {
+      "id": "act-4",
+      "name": "Mayon Black Lava Zipline Adventure",
+      "category": "activities",
+      "subcategory": "Aerial Adventure",
+      "description": "High-speed tandem zipline experience soaring over volcanic lava fields with panoramic backdrops of Mayon Volcano and Legazpi City.",
+      "address": "Brgy. 54 Mabinit, Legazpi City",
+      "barangay_name": "Bgy. 54 - Mabinit",
+      "image_url": "../assets/images/tourism/photos/experience_black_lava_wall_climb_zipline.webp",
+      "image": "../assets/images/tourism/photos/experience_black_lava_wall_climb_zipline.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mayon%20Black%20Lava%20Zipline%20Adventure%2C%20Brgy.%2054%20Mabinit%2C%20Legazpi%20City"
+    },
+    {
+      "id": "act-5",
+      "name": "Albay Gulf Scuba Diving (16 Marine Reefs)",
+      "category": "activities",
+      "subcategory": "Marine Diving",
+      "description": "Pristine diving across 16 protected sites in Albay Gulf: Bulang Buya (Denson Reef), Sadit na Itom na Buya, Itom na Buya, Barao Reef, Bigaa Beach, Pasig Out, Pasig In, Canal, Sleeping Lion, Dakula na Masolog, Sadig na Masolog, Malaya, Sagoron, Maslog Out, Maslog In, and Kabunturan.",
+      "address": "Albay Gulf Territorial Waters, Legazpi City",
+      "barangay_name": "Legazpi City",
+      "barangay_psgc": null,
+      "image_url": "../assets/images/tourism/photos/experience_albay_gulf_diving.webp",
+      "image": "../assets/images/tourism/photos/experience_albay_gulf_diving.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Albay%20Gulf%20Scuba%20Diving%20(16%20Marine%20Reefs)%2C%20Albay%20Gulf%20Territorial%20Waters%2C%20Legazpi%20City"
+    },
+    {
+      "id": "act-6",
+      "name": "Albay Gulf Snorkelling",
+      "category": "activities",
+      "subcategory": "Marine Eco-Tour",
+      "description": "Experience floating over expansive coral gardens, observing rare tropical fish, and swimming alongside sea turtle sanctuaries in crystal-clear waters.",
+      "address": "Albay Gulf Marine Sanctuary, Legazpi City",
+      "barangay_name": "Legazpi City",
+      "barangay_psgc": null,
+      "image_url": "../assets/images/tourism/photos/experience_albay_gulf_snorkelling.webp",
+      "image": "../assets/images/tourism/photos/experience_albay_gulf_snorkelling.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Albay%20Gulf%20Snorkelling%2C%20Albay%20Gulf%20Marine%20Sanctuary%2C%20Legazpi%20City"
+    },
+    {
+      "id": "act-7",
+      "name": "Embarcadero Skywalk Adventure",
+      "category": "activities",
+      "subcategory": "Urban Thrills",
+      "description": "Suspended bridge and observation skywalk offering panoramic harbor views over Albay Gulf and the city skyline.",
+      "address": "Brgy. 27 Victory Village South, Legazpi City",
+      "barangay_name": "Bgy. 27 - Victory Village South",
+      "image_url": "https://legazpi.gov.ph/wp-content/uploads/2023/04/skywalk-adventure.jpg",
+      "image": "https://legazpi.gov.ph/wp-content/uploads/2023/04/skywalk-adventure.jpg",
+      "imageAttribution": null,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Embarcadero%20Skywalk%20Adventure%2C%20Brgy.%2027%20Victory%20Village%20South%2C%20Legazpi%20City"
+    },
+    {
+      "id": "act-8",
+      "name": "Legazpi Boulevard Coastal Fitness & Cycling",
+      "category": "activities",
+      "subcategory": "Seaside Recreation",
+      "description": "Active recreational cycling, jogging, and seaside sunset fitness along the panoramic 4-kilometer coastal highway.",
+      "address": "Brgy. 57 Dap-Dap to Brgy. 60 Lamba, Legazpi City",
+      "barangay_name": "Bgy. 57 - Dap-dap",
+      "image_url": "https://legazpi.gov.ph/wp-content/uploads/2023/04/Legazpi_Boulevard-scaled.jpg",
+      "image": "https://legazpi.gov.ph/wp-content/uploads/2023/04/Legazpi_Boulevard-scaled.jpg",
+      "imageAttribution": null,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Legazpi%20Boulevard%20Coastal%20Fitness%20%26%20Cycling%2C%20Brgy.%2057%20Dap-Dap%20to%20Brgy.%2060%20Lamba%2C%20Legazpi%20City"
+    }
+  ]
+}

@@ -6580,13 +6580,16 @@ cklist with Icons - Proper Indentation */
 .home-leader-contacts {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
 }
 
-.home-leader-contacts a {
+.home-leader-contacts a,
+.home-leader-contacts span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 8px;
   font-size: 0.875rem;
   color: var(--color-text-light);
@@ -7552,10 +7555,13 @@ cklist with Icons - Proper Indentation */
 }
 
 .home-contact-v2-value {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-text);
   margin: 0 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .home-contact-v2-note {

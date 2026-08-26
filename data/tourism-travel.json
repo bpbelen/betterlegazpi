@@ -1,0 +1,123 @@
+{
+  "category": "travel",
+  "count": 9,
+  "data": [
+    {
+      "id": "trv-1",
+      "name": "Sawangan Park",
+      "category": "travel",
+      "subcategory": "Public Park & Recreation",
+      "description": "Spacious coastal green park and outdoor community gym equipped with fitness stations and children’s play zones along Legazpi Boulevard.",
+      "address": "Legazpi Boulevard, Brgy. 57 Dap-Dap, Legazpi City",
+      "barangay_name": "Bgy. 57 - Dap-dap",
+      "image_url": "../assets/images/tourism/photos/attraction_sawangan_park.webp",
+      "image": "../assets/images/tourism/photos/attraction_sawangan_park.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sawangan%20Park%2C%20Legazpi%20Boulevard%2C%20Brgy.%2057%20Dap-Dap%2C%20Legazpi%20City"
+    },
+    {
+      "id": "trv-2",
+      "name": "The Obelisk",
+      "category": "travel",
+      "subcategory": "Monuments & Memorials",
+      "description": "Stately obelisk tower monument standing proudly along the waterfront boulevard as a tribute to civic pride and resilience.",
+      "address": "Legazpi Boulevard, Brgy. 59 Puro, Legazpi City",
+      "barangay_name": "Bgy. 59 - Puro",
+      "image_url": "../assets/images/tourism/photos/attraction_the_obelisk.webp",
+      "image": "../assets/images/tourism/photos/attraction_the_obelisk.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Obelisk%2C%20Legazpi%20Boulevard%2C%20Brgy.%2059%20Puro%2C%20Legazpi%20City"
+    },
+    {
+      "id": "trv-3",
+      "name": "Macabalo Bridge",
+      "category": "travel",
+      "subcategory": "Scenic Bridge",
+      "description": "Architectural bridge structure connecting boulevard districts over the Macabalo river inlet with night illumination and volcano vistas.",
+      "address": "Legazpi Boulevard, Brgy. 57 Dap-Dap, Legazpi City",
+      "barangay_name": "Bgy. 57 - Dap-dap",
+      "image_url": "../assets/images/tourism/photos/attraction_macabalo_bridge.webp",
+      "image": "../assets/images/tourism/photos/attraction_macabalo_bridge.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Macabalo%20Bridge%2C%20Legazpi%20Boulevard%2C%20Brgy.%2057%20Dap-Dap%2C%20Legazpi%20City"
+    },
+    {
+      "id": "trv-4",
+      "name": "Embarcadero de Legazpi",
+      "category": "travel",
+      "subcategory": "Waterfront Lifestyle Hub",
+      "description": "Premier waterfront commercial, retail, dining, and adventure complex along Legazpi port with a seaside promenade and lighted lighthouse.",
+      "address": "Brgy. 27 Victory Village South, Legazpi City",
+      "barangay_name": "Bgy. 27 - Victory Village South",
+      "image_url": "../assets/images/tourism/photos/attraction_embarcadero_de_legazpi.webp",
+      "image": "../assets/images/tourism/photos/attraction_embarcadero_de_legazpi.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Embarcadero%20de%20Legazpi%2C%20Brgy.%2027%20Victory%20Village%20South%2C%20Legazpi%20City"
+    },
+    {
+      "id": "trv-5",
+      "name": "Legazpi Ecological Sanitary Landfill",
+      "category": "travel",
+      "subcategory": "Eco-Tourism & Waste Model",
+      "description": "Nationally recognized engineered sanitary landfill and green eco-park utilizing Japanese waste-to-fertilizer technology since 2018.",
+      "address": "Brgy. 66 Banquerohan, Legazpi City",
+      "barangay_name": "Bgy. 66 - Banquerohan",
+      "image_url": "../assets/images/tourism/photos/attraction_sanitary_landfill.webp",
+      "image": "../assets/images/tourism/photos/attraction_sanitary_landfill.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Legazpi%20Ecological%20Sanitary%20Landfill%2C%20Brgy.%2066%20Banquerohan%2C%20Legazpi%20City"
+    },
+    {
+      "id": "trv-6",
+      "name": "Legazpi Boulevard Promenade",
+      "category": "travel",
+      "subcategory": "Coastal Boulevard & Leisure",
+      "description": "One of the longest and most picturesque coastal roads in the Philippines, stretching 4+ kilometers with uninterrupted ocean views and evening breeze.",
+      "address": "Brgy. 57 Dap-Dap to Brgy. 60 Lamba, Legazpi City",
+      "barangay_name": "Bgy. 57 - Dap-dap",
+      "image_url": "https://legazpi.gov.ph/wp-content/uploads/2023/04/Legazpi_Boulevard-scaled.jpg",
+      "image": "https://legazpi.gov.ph/wp-content/uploads/2023/04/Legazpi_Boulevard-scaled.jpg",
+      "imageAttribution": null,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Legazpi%20Boulevard%20Promenade%2C%20Brgy.%2057%20Dap-Dap%20to%20Brgy.%2060%20Lamba%2C%20Legazpi%20City"
+    },
+    {
+      "id": "trv-7",
+      "name": "PRO 5 Heritage Park Arboretum",
+      "category": "travel",
+      "subcategory": "Eco-Park & Arboretum",
+      "description": "Green sanctuary dedicated to indigenous tree propagation, bird conservation, and environmental education within Camp Simeon Ola.",
+      "address": "Brgy. 1 EM's Barrio, Legazpi City",
+      "barangay_name": "Bgy. 1 - Em's Barrio",
+      "image_url": null,
+      "image": null,
+      "imageAttribution": null,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=PRO%205%20Heritage%20Park%20Arboretum%2C%20Brgy.%201%20EM's%20Barrio%2C%20Legazpi%20City"
+    },
+    {
+      "id": "trv-8",
+      "name": "JCI Legazpi Tourism Super Marker",
+      "category": "travel",
+      "subcategory": "Landmark Super Marker",
+      "description": "Iconic civic structure and scenic overlook marking Albay Gulf, Sleeping Lion, Ligñon Hill, and the grandeur of Mayon Volcano.",
+      "address": "Legazpi Boulevard, Brgy. 59 Puro, Legazpi City",
+      "barangay_name": "Bgy. 59 - Puro",
+      "image_url": "../assets/images/tourism/photos/attraction_jci_tourism_super_marker.webp",
+      "image": "../assets/images/tourism/photos/attraction_jci_tourism_super_marker.webp",
+      "imageAttribution": "2024 Travel Guide",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JCI%20Legazpi%20Tourism%20Super%20Marker%2C%20Legazpi%20Boulevard%2C%20Brgy.%2059%20Puro%2C%20Legazpi%20City"
+    },
+    {
+      "id": "trv-9",
+      "name": "Albay Park & Wildlife Botanical Grounds",
+      "category": "travel",
+      "subcategory": "Eco-Park & Wildlife",
+      "description": "Lush 5-hectare lakeside sanctuary housing over 300 endemic animals, picnic gazebos, lagoon boat rides, and botanical gardens.",
+      "address": "Brgy. 41 Bogtong, Legazpi City",
+      "barangay_name": "Bgy. 41 - Bogtong",
+      "image_url": null,
+      "image": null,
+      "imageAttribution": null,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Albay%20Park%20%26%20Wildlife%20Botanical%20Grounds%2C%20Brgy.%2041%20Bogtong%2C%20Legazpi%20City"
+    }
+  ]
+}

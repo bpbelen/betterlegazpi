@@ -15,19 +15,19 @@ class CleanURLHandler(SimpleHTTPRequestHandler):
     Mimics the .htaccess rewrite rules used in cPanel deployment
     """
     
-    def do_GET(self):
-        # Parse the URL path
+    def _rewrite_path(self):
         parsed_path = urlparse(self.path)
         path = unquote(parsed_path.path)
         
         # Remove trailing slash for non-root paths
         if path != '/' and path.endswith('/'):
-            # Check if this is a directory with index.html
             dir_path = '.' + path
             index_path = dir_path + 'index.html'
             if os.path.isdir(dir_path) and os.path.isfile(index_path):
-                # Serve index.html from directory
-                return super().do_GET()
+                self.path = path.rstrip('/') + '/index.html'
+                if parsed_path.query:
+                    self.path += '?' + parsed_path.query
+                return
         
         # Try to serve the file directly first
         file_path = '.' + path
@@ -37,11 +37,10 @@ class CleanURLHandler(SimpleHTTPRequestHandler):
             # Try adding .html extension
             html_path = file_path + '.html'
             if os.path.isfile(html_path):
-                # Internally rewrite to serve the .html file
                 self.path = path + '.html'
                 if parsed_path.query:
                     self.path += '?' + parsed_path.query
-                return super().do_GET()
+                return
         
         # If it's a directory, try index.html
         if os.path.isdir(file_path):
@@ -50,11 +49,15 @@ class CleanURLHandler(SimpleHTTPRequestHandler):
                 self.path = path.rstrip('/') + '/index.html'
                 if parsed_path.query:
                     self.path += '?' + parsed_path.query
-                return super().do_GET()
-        
-        # Fall back to default behavior
+                return
+
+    def do_GET(self):
+        self._rewrite_path()
         return super().do_GET()
-    
+
+    def do_HEAD(self):
+        self._rewrite_path()
+        return super().do_HEAD()
 
     def log_message(self, format, *args):
         # Custom logging with color for clean URL rewrites
@@ -65,7 +68,7 @@ class CleanURLHandler(SimpleHTTPRequestHandler):
         else:
             print(f"{self.address_string()} - {message}")
 
-def run_server(port=8888, directory='dist'):
+def run_server(port=8000, directory='.'):
     """Run the development server with clean URL support"""
     
     # Change to the specified directory
@@ -75,8 +78,17 @@ def run_server(port=8888, directory='dist'):
             sys.exit(1)
         os.chdir(directory)
     
+    ThreadingHTTPServer.allow_reuse_address = True
+    ThreadingHTTPServer.daemon_threads = True
     server_address = ('', port)
-    httpd = ThreadingHTTPServer(server_address, CleanURLHandler)
+
+    try:
+        httpd = ThreadingHTTPServer(server_address, CleanURLHandler)
+    except OSError as e:
+        print(f"\n[Error] Could not bind to port {port}: {e}")
+        print(f"[Tip] Port {port} might already be in use. Try specifying another port, e.g.:")
+        print(f"      npm run dev -- -p 8080\n")
+        sys.exit(1)
     
     print("=" * 60)
     print("Clean URL Development Server")
@@ -85,8 +97,10 @@ def run_server(port=8888, directory='dist'):
     print(f"Server running at: http://localhost:{port}")
     print()
     print("Clean URLs supported:")
-    print("  /services/certificates  ->  serves certificates.html")
-    print("  /legislative/resolution-framework  ->  serves resolution-framework.html")
+    print("  /tourism/attractions     ->  serves attractions.html")
+    print("  /tourism/accommodations  ->  serves accommodations.html")
+    print("  /tourism/food            ->  serves food.html")
+    print("  /tourism/experience      ->  serves experience.html")
     print()
     print("Press Ctrl+C to stop")
     print("=" * 60)

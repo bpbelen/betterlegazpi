@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": "prod-pinukpok",
+      "name": "Pinukpok (Abaca Silk)",
+      "category": "Textile & Fashion",
+      "origin": "Brgy. 66 Banquerohan",
+      "description": "Locally hand-pounded abaca silk renowned for its lustrous texture, used as premium fabric for Philippine Barong, formal gowns, and heirloom attire.",
+      "where_to_buy": "Banquerohan Weaving Center, SEDCen, Legazpi City Public Market",
+      "icon": "bi-gem"
+    },
+    {
+      "id": "prod-pili",
+      "name": "Pili Nut Delights & Wellness",
+      "category": "Delicacy & Cosmetics",
+      "origin": "Legazpi City & Albay",
+      "description": "Harvested from the indigenous \"Magic Tree\" of Bicol, creating world-class culinary treats, pili oil skincare, and therapeutic wellness products.",
+      "where_to_buy": "Albay Pilinut, Legazpi Pasalubong Center, SEDCen, City Malls, Legazpi Market",
+      "icon": "bi-tree-fill"
+    },
+    {
+      "id": "prod-abaca",
+      "name": "Woven Abaca Handicrafts",
+      "category": "Handicrafts & Decor",
+      "origin": "Legazpi Artisan Communities",
+      "description": "Intricately woven natural fiber crafts including eco-friendly fashion bags, dining placemats, decorative baskets, and Mayon souvenir keepsakes.",
+      "where_to_buy": "Legazpi Pasalubong Area, SEDCen, Legazpi Public Market, Malls",
+      "icon": "bi-bag-heart-fill"
+    }
+  ],
+  "festival": {
+    "name": "Ibalong Festival",
+    "subtitle": "Celebration of the Mythical Epic of Bicol",
+    "type": "Non-Religious Cultural Festival",
+    "description": "An annual celebration commemorating the ancient Ibalong Epic of the three mythical warrior-heroes: Baltog, Handiong, and Bantong. Features theatrical street pageantry, mask-wearing dancers depicting mythical beasts (Oryol, Sarimaw, Rabot), and grand cultural parades.",
+    "schedule": "Every August in Legazpi City"
+  },
+  "hospitality": {
+    "mabuhay_gesture": {
+      "title": "The Mabuhay Gesture",
+      "description": "The signature Filipino Brand of Service greeting with hand gently placed over the heart, symbolizing heartfelt welcome, sincerity, and authentic Legazpeño warmth."
+    },
+    "welcome_traditions": {
+      "title": "Welcome Lei & Putong Ceremony",
+      "description": "Traditional welcoming honor where distinguished guests are draped with a handcrafted native Bicol woven Lei necklace and crowned with the ceremonial Putong headdress."
+    }
+  }
+}
