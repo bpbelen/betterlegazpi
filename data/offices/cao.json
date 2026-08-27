@@ -1,0 +1,237 @@
+{
+  "slug": "cao",
+  "route": "service-details/cao-services.html",
+  "charter": {
+    "office": "City Agriculture Office",
+    "abbreviation": "CAO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-AGRICULTURE-OFFICE-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/cao.md",
+    "personnel": [
+      {
+        "name": "Sheila R. Nas",
+        "position": "City Agriculturist",
+        "unit": "City Agriculture Office"
+      }
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Feedback and complaints may be filed at the City Agriculture Office, Barangay Gogon, Barriada, Legazpi City, or by telephone, mobile or email.",
+      "contacts": ["legazpicitycao@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "cao-production-inputs",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Requesting seeds, seedlings, fertilizer or fingerlings",
+        "description": "Release of agricultural and fishery production inputs to farmers, fisherfolk and organisations: palay and vegetable seeds, planting materials, fertilizers, tilapia and bangus fingerlings, and mangrove seedlings.",
+        "office": "City Agriculture Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Farmers, Fisherfolks, Schools, Religious Groups, Students, Entrepreneurs, Employees, Government Office, CSOs and Walk-in Clients",
+        "requirements": [
+          { "item": "Request Form", "whereToSecure": "City Agriculture Office" },
+          { "item": "RSBSA Registration", "whereToSecure": "City Agriculture Office" },
+          {
+            "item": "Request letter from the President of the association or organisation",
+            "whereToSecure": "Association or organisation concerned"
+          },
+          { "item": "Approved letter from the City Mayor", "whereToSecure": "City Mayor's Office" },
+          { "item": "RSBSA ID", "whereToSecure": "City Agriculture Office" }
+        ],
+        "steps": [
+          {
+            "client": "Request production inputs (vegetable seeds or seedlings, fertilizers, palay seeds, planting materials or fishery inputs).",
+            "agency": "Assist the client in filling up the visitor's logbook.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Officer of the Day"
+          },
+          {
+            "client": null,
+            "agency": "Ask for the request form for agri-inputs for record purposes.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Agricultural Technologist assigned / Aquaculturist"
+          },
+          {
+            "client": null,
+            "agency": "Check availability of seeds and planting materials, then issue a requisition slip.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Agricultural Technologist assigned / Aquaculturist"
+          },
+          {
+            "client": null,
+            "agency": "Forward the requisition slip to the City Agriculture Office for approval and signature.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "City Agriculturist"
+          },
+          {
+            "client": "Sign the forms and fill up the release logbook.",
+            "agency": "Assist the client to sign the forms and fill up the logbook for release.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Proceed to the bodega or nursery, wait for release and receive the agri inputs.",
+            "agency": "Release the agricultural inputs.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Fill up the Client Satisfaction Form.",
+            "agency": "Receive the Client Satisfaction Form.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Officer of the Day"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter publishes one block titled \"Assistance to Clients Availing the Services\" containing three numbered client requests that are alternatives rather than a sequence. They are split here into three services sharing charterNumber 1.",
+          "There is no TOTAL row anywhere in this charter, so the total shown is derived from the steps alone.",
+          "The extracted text contains a fragment about a \"farm machinery request slip\" that belongs to no visible service. Check the PDF for a missing fourth service."
+        ]
+      },
+      {
+        "id": "cao-technical-assistance",
+        "number": 2,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Getting agri-fishery technical advice or a farm visit",
+        "description": "Technical assistance and answers to agricultural and fishery queries, including scheduling of site visits and requested trainings or lectures.",
+        "office": "City Agriculture Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Farmers, Fisherfolks, Schools, Religious Groups, Students, Entrepreneurs, Employees, Government Office, CSOs and Walk-in Clients",
+        "requirements": [{ "item": "Request Form", "whereToSecure": "City Agriculture Office" }],
+        "steps": [
+          {
+            "client": "Ask for agri-fishery technical assistance or raise a query.",
+            "agency": "Refer the client to the Agricultural Technologist or the person concerned, who discusses the matter, advises what to do next, and schedules a site visit, training or lecture as requested.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Agricultural Technologist / Aquaculturist I"
+          },
+          {
+            "client": "Fill up the Client Satisfaction Form.",
+            "agency": "Receive the Client Satisfaction Form.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Officer of the Day"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "The charter marks the 15 minutes as applying under normal circumstances, per transaction."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's single service block; see the note on Requesting seeds, seedlings, fertilizer or fingerlings.",
+          "No TOTAL row exists in this charter, so the total is derived from the steps."
+        ]
+      },
+      {
+        "id": "cao-certification-rsbsa-pcic-boat",
+        "number": 3,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Getting an RSBSA, PCIC insurance or boat registration certificate",
+        "description": "Issuance of certifications and enrolment in the Registry System for Basic Sectors in Agriculture (RSBSA), PCIC crop insurance, and boat registration.",
+        "office": "City Agriculture Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Farmers, Fisherfolks, Schools, Religious Groups, Students, Entrepreneurs, Employees, Government Office, CSOs and Walk-in Clients",
+        "requirements": [
+          {
+            "item": "Filled-up form, secured from the Agricultural Technologist assigned",
+            "whereToSecure": "City Agriculture Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Request a certification, or enrolment in RSBSA, PCIC insurance or boat registration.",
+            "agency": "Refer the client to the Agricultural Technologist or person concerned, who schedules a site visit or validation if necessary. If already validated, proceed to the Admin Section for printing of the certificate.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Agricultural Technologist / Aquaculturist I"
+          },
+          {
+            "client": null,
+            "agency": "Forward the certificate to the City Agriculture Office for signature and approval.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Agriculturist"
+          },
+          {
+            "client": "Proceed to the Admin Section to receive the certificate.",
+            "agency": "Record and release the certificate.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Officer of the Day"
+          },
+          {
+            "client": "Fill up the Client Satisfaction Form.",
+            "agency": "Receive the Client Satisfaction Form.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Officer of the Day"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's single service block; see the note on Requesting seeds, seedlings, fertilizer or fingerlings.",
+          "No TOTAL row exists in this charter, so the total is derived from the steps."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-flower3",
+    "categories": [
+      {
+        "id": "farm-and-fishery-support",
+        "title": "Farm and fishery support",
+        "icon": "bi-flower3",
+        "services": ["cao-production-inputs", "cao-technical-assistance"]
+      },
+      {
+        "id": "certificates-and-registration",
+        "title": "Certificates and registration",
+        "icon": "bi-file-earmark-text",
+        "services": ["cao-certification-rsbsa-pcic-boat"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "planting-or-stocking",
+        "title": "Planting a crop or stocking a pond",
+        "presentation": "rail",
+        "icon": "bi-flower1",
+        "services": ["cao-production-inputs", "cao-technical-assistance"]
+      },
+      {
+        "id": "registering-as-a-farmer",
+        "title": "Registering as a farmer or fisherfolk",
+        "presentation": "rail",
+        "icon": "bi-person-check",
+        "services": ["cao-certification-rsbsa-pcic-boat"]
+      }
+    ],
+    "searchAliases": {
+      "cao-production-inputs": ["binhi", "seeds", "fertilizer", "abono", "fingerlings", "palay"],
+      "cao-certification-rsbsa-pcic-boat": ["rsbsa", "pcic", "crop insurance", "boat registration"],
+      "cao-technical-assistance": ["farm visit", "training", "technical assistance"]
+    },
+    "contact": null
+  }
+}

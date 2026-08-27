@@ -34,7 +34,7 @@ const CI_ROUTES = [
   '/services/index.html', // services landing
   '/services/certificates.html', // old tier: page-header + office-card
   '/service-details/cto-services.html', // new tier A, 1442-line inline <style>
-  '/service-details/gso-services.html', // new tier B outlier
+  '/service-details/human-resource-management.html', // new tier B outlier
   '/statistics/index.html', // statistics.css
   '/budget/index.html', // budget.css
   '/history/index.html', // history.css

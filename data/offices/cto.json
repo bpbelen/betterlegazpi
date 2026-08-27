@@ -1,0 +1,1748 @@
+{
+  "slug": "cto",
+  "route": "service-details/cto-services.html",
+  "charter": {
+    "office": "City Treasurer's Office",
+    "abbreviation": "CTO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-TREASURERS-OFFICE-CITIZENS-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/cto.md",
+    "personnel": [
+      {
+        "name": "Carlita P. De Guzman",
+        "position": "City Treasurer",
+        "unit": "City Treasurer's Office"
+      },
+      {
+        "name": "Rowena Trinidad",
+        "position": "LTOO IV",
+        "unit": "Business Tax Division"
+      },
+      {
+        "name": "Ria Alindogan",
+        "position": "Admin. Asst. VI",
+        "unit": "Business Tax Division"
+      },
+      {
+        "name": "Jennifer Nocedo",
+        "position": "LRCO I",
+        "unit": "Business Tax Division"
+      },
+      {
+        "name": "Marvin Dagta",
+        "position": "Admin Officer I",
+        "unit": "Business Tax Division"
+      },
+      {
+        "name": "Client Asiado",
+        "position": "Admin. Aide I",
+        "unit": "Business Tax Division"
+      },
+      {
+        "name": "Rita Olimpo",
+        "position": "Admin. Aide I",
+        "unit": "Business Tax Division"
+      },
+      {
+        "name": "Vilma Pujol",
+        "position": "LRCO IV",
+        "unit": "Land Tax Division"
+      },
+      {
+        "name": "Danilo Almilla",
+        "position": "Admin Officer V",
+        "unit": "Land Tax Division"
+      },
+      {
+        "name": "Amelia Punzalan",
+        "position": "LRCO III",
+        "unit": "Land Tax Division"
+      },
+      {
+        "name": "Maria Vanessa Dordas",
+        "position": "RCC III",
+        "unit": "Land Tax Division"
+      },
+      {
+        "name": "Venus Balladolid",
+        "position": "Admin Aide VI",
+        "unit": "Land Tax Division"
+      },
+      {
+        "name": "Lani Esplana",
+        "position": "Admin Aide VI",
+        "unit": "Land Tax Division"
+      },
+      {
+        "name": "Jose Kallos Jr.",
+        "position": "Admin Aide III",
+        "unit": "Business Permit and Licensing Office (BPLO)"
+      },
+      {
+        "name": "Rafael Briones",
+        "position": "Admin Aide I",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Benjamin Gile",
+        "position": "Senior Admin Asst. II",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Julie Miras",
+        "position": "Senior Admin Asst. II",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Constancia Ate",
+        "position": "Admin Asst. III",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Reggie Pariñas",
+        "position": "RCC II",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Verna Serrano",
+        "position": "RCC II",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Gina Austero",
+        "position": "RCC II",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Corazon Realubit",
+        "position": "Admin Aide I",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Luzviminda Montealegre",
+        "position": "Admin Aide I",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Jeric Bueza",
+        "position": "Admin Aide I",
+        "unit": "Cash Receipts Division"
+      },
+      {
+        "name": "Constance Oliveros",
+        "position": "Assistant City Treasurer",
+        "unit": "Cash Disbursement Division"
+      },
+      {
+        "name": "Aileen Agripa",
+        "position": "Admin Aide I",
+        "unit": "Cash Disbursement Division"
+      },
+      {
+        "name": "Alma Santillan",
+        "position": "Admin Aide I",
+        "unit": "Cash Disbursement Division"
+      },
+      {
+        "name": "Imelda Mayor",
+        "position": "Admin Aide I",
+        "unit": "Cash Disbursement Division"
+      },
+      {
+        "name": "Lani Agarin",
+        "position": "Admin Aide I",
+        "unit": "Cash Disbursement Division"
+      },
+      {
+        "name": "Teresita Ariola",
+        "position": "Admin Asst VI",
+        "unit": "Cash Disbursement Division"
+      },
+      {
+        "name": "Elena Macinas",
+        "position": "RCC III",
+        "unit": "Cash Disbursement Division"
+      },
+      {
+        "name": "Rachel Asejo",
+        "position": "RCC II",
+        "unit": "Cash Disbursement Division"
+      },
+      {
+        "name": "Ferl Yamat",
+        "position": "RCC II",
+        "unit": "Cash Disbursement Division"
+      },
+      {
+        "name": "Rosalina Pasano",
+        "position": "ISA III",
+        "unit": "Administrative Division"
+      },
+      {
+        "name": "Luisa Malate",
+        "position": "Admin Aide I",
+        "unit": "Administrative Division"
+      },
+      {
+        "name": "Marilou Jadie",
+        "position": "ISA III",
+        "unit": "Administrative Division"
+      }
+    ],
+    "personnelNotes": [
+      "Lani Esplana appears as \"Admin Aide I\" in service 2 and \"Admin Aide VI\" in service 5. Recorded as Admin Aide VI pending confirmation."
+    ],
+    "services": [
+      {
+        "id": "cto-business-tax-billing-statement",
+        "number": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Request for Business Tax Quarterly Billing Statement",
+        "description": "A business tax bill is the amount of tax that a person or business must pay in a particular period.",
+        "office": "Business Tax Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business Entity (G2B)"],
+        "whoMayAvail": "All business establishments and entities",
+        "requirements": [
+          {
+            "item": "Name of Business",
+            "whereToSecure": "Business Owner"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Verbally state the name of the business to the duly designated officer at Business Tax Division (Window 1).",
+            "agency": "Input the taxpayer's name and search for the tax bill of the business using ETRACS.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Request for a copy of business tax bill statement.",
+            "agency": "Print business tax bill statement.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Receive copy of business tax bill statement.",
+            "agency": "Release the business tax bill statement together with the Feedback Form.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Business Tax Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "7 Minutes"
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 2)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter names a roster of six Business Tax Division staff for these steps rather than assigning one per step; the process table records the division, per ADR 0002."
+        ]
+      },
+      {
+        "id": "cto-real-property-tax-statement",
+        "number": 2,
+        "charterGroup": "Frontline Services",
+        "title": "Request for Real Property Tax Statement of Account",
+        "description": "A real property tax is a levy on real properties, such as land, buildings, machineries and other improvements affixed or attached to real properties not specifically exempted under the law. The real property tax for any year shall accrue on the first (1st) day of January and from that date it shall constitute a lien on the property which shall be superior to any other lien, mortgage or encumbrance of any kind whatsoever, and shall be extinguished only upon the payment of the delinquent tax.",
+        "office": "Land Tax Division",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Business Entity (G2B)",
+          "Government to Client (G2C)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Real property owners or any person having legal interest therein",
+        "requirements": [
+          {
+            "item": "One (1) Original Copy of the Latest RPT Official Receipt or Tax Declaration of Property",
+            "whereToSecure": "Property owner / City Assessor's Office"
+          },
+          {
+            "item": "One (1) Original Copy of Properly filled-out request form",
+            "whereToSecure": "Land Tax Division, City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the duly filled-out request form together with the required documents at Land Tax Division (Window 1).",
+            "agency": "Receive the duly filled-out request form together with the required documents.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Land Tax Division"
+          },
+          {
+            "client": "Confirm the data. Request for a copy of real property tax bill statement.",
+            "agency": "Encode the data and search for the real property tax bill using ETRACS, then print the real property tax bill statement.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Land Tax Division"
+          },
+          {
+            "client": "Receive copy of real property tax bill statement.",
+            "agency": "Release the real property tax bill statement together with the Feedback Form.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Land Tax Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "9 Minutes"
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 2)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Agency actions are numbered 3.1, 1.1, 2, 3 in the source — out of sequence. The order here follows the process as described, not the numbering."
+        ]
+      },
+      {
+        "id": "cto-assessment-of-business-tax",
+        "number": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Assessment of Business Tax",
+        "description": "The filing, verification and evaluation of documentary requirements for application of new and renewal of business permits is being done at Business Permit and Licensing Office (BPLO).",
+        "office": "Business Tax Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business Entity (G2B)"],
+        "whoMayAvail": "Business Establishment Owner",
+        "requirements": [
+          {
+            "item": "One (1) Original Copy of Income Tax Return or Sworn Declaration of Gross / Receipts / Sales",
+            "whereToSecure": "Bureau of Internal Revenue (BIR)"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit accomplished and signed application form and requirements to the Business Permit and Licensing Office.",
+            "agency": "Wait for the BPLO to submit the approved application electronically.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Business Permit and Licensing Office (BPLO)"
+          },
+          {
+            "client": null,
+            "agency": "CTO Assessor will electronically assess the taxes and fees.",
+            "feeText": "Based on City Ordinance No. 0013-2007",
+            "processingTime": "10 minutes per line of Business",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": null,
+            "agency": "Approval of Business Tax Assessment.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Proceed to Business Permit and Licensing Office.",
+            "agency": "BPLO Staff prints the final version of the application form and business tax assessment.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Business Permit and Licensing Office (BPLO)"
+          },
+          {
+            "client": "Receive copy of the business tax assessment.",
+            "agency": "Release the business tax assessment together with the Feedback Form.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Business Permit and Licensing Office (BPLO)"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "20 Minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "\"10 minutes per line of Business\" is a rate, not a fixed duration — a business with several lines takes proportionally longer. The derived total treats it as one unit, matching the charter's own arithmetic.",
+          "The TOTAL row's fee cell is empty in the source; assessment is charged per City Ordinance No. 0013-2007."
+        ]
+      },
+      {
+        "id": "cto-business-tax-previous-year-delinquency",
+        "number": 4,
+        "charterGroup": "Frontline Services",
+        "title": "Assessment of Business Tax Previous Year Delinquency",
+        "description": "Business establishment owners who fail to pay their business tax assessment for the preceding year/s shall be considered delinquent and obliged to pay the same before renewing the business permit.",
+        "office": "Business Tax Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business Entity (G2B)"],
+        "whoMayAvail": "Business Establishment Owner",
+        "requirements": [
+          {
+            "item": "One (1) Original Copy of Income Tax Return or Sworn Declaration of Gross / Receipts / Sales",
+            "whereToSecure": "Bureau of Internal Revenue (BIR)"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit Income Tax Return.",
+            "agency": "Receive Income Tax Return.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": null,
+            "agency": "Compute the previous year's delinquency tax.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Request for the previous year's delinquency tax assessment.",
+            "agency": "Print the previous year's delinquency tax assessment.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Receive copy of the previous year's delinquency tax assessment.",
+            "agency": "Release the previous year's delinquency tax assessment together with the Feedback Form.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Business Tax Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "13 Minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Client steps are numbered 1, 3.2, 3.3 in the source — the 3.x numbering appears to be a carry-over error from an adjacent service."
+        ]
+      },
+      {
+        "id": "cto-assessment-of-transfer-tax",
+        "number": 5,
+        "charterGroup": "Frontline Services",
+        "title": "Assessment of Transfer Tax",
+        "description": "A tax on the sale, donation, barter, or on any other mode of transferring ownership or title of real property at the rate of seventy-five percent (75%) of one percent (1%) of the total consideration involved in the acquisition of the property or of the fair market value in case the monetary consideration involved in the transfer is not substantial, whichever is higher. The sale, transfer or other disposition of real property pursuant to RA No. 6657 shall be exempt from this tax.",
+        "office": "Land Tax Division",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business Entity (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Real Property Owners",
+        "requirements": [
+          {
+            "item": "One (1) Photocopy of the Deed of Sale / Donation / Assignment / Conveyance / Extra Judicial Settlement / Affidavit of Consolidation, etc.",
+            "whereToSecure": "Owner of the Property"
+          },
+          {
+            "item": "One (1) Photocopy of the Latest Tax Declaration",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "One (1) Photocopy of the Tax Clearance",
+            "whereToSecure": "Land Tax Division, City Treasurer's Office"
+          },
+          {
+            "item": "One (1) Photocopy of the Certificate of No Improvement (if no building)",
+            "whereToSecure": "City Assessor's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the duly filled-out request form together with the documentary requirements at Land Tax Division (Window 5).",
+            "agency": "Receive the duly filled-out request form together with the required documents.",
+            "feeText": "Seventy-Five Percent (75%) of One Percent (1%) of the total consideration or FMV, whichever is higher",
+            "processingTime": "2 minutes",
+            "personResponsible": "Land Tax Division"
+          },
+          {
+            "client": "Request for the computation of transfer tax.",
+            "agency": "Verify the documents.",
+            "feeText": "Twenty-Five Percent (25%) surcharge in case of failure to pay the tax imposed on time",
+            "processingTime": "5 minutes",
+            "personResponsible": "Land Tax Division"
+          },
+          {
+            "client": null,
+            "agency": "Compute the transfer tax due.",
+            "feeText": "Two Percent (2%) interest per month from the due date until the tax is fully paid but in no case shall the total interest on the unpaid amount or a portion thereof exceed eighteen (18) months",
+            "processingTime": "6 minutes",
+            "personResponsible": "Land Tax Division"
+          },
+          {
+            "client": "Confirm the data. Request for a copy of transfer tax assessment.",
+            "agency": "Print transfer tax assessment.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Land Tax Division"
+          },
+          {
+            "client": "Receive copy of the transfer tax assessment.",
+            "agency": "Release the transfer tax assessment together with the Feedback Form.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Land Tax Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "According to assessment",
+          "processingTime": "20 Minutes"
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 4)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The three fee clauses are stacked in one cell spanning the whole table; their attachment to individual steps is a reading of the layout. All three apply to the transaction as a whole.",
+          "Step durations sum to 15 minutes against a stated TOTAL of 20 minutes — a step duration is likely misread."
+        ]
+      },
+      {
+        "id": "cto-payment-of-business-tax",
+        "number": 6,
+        "charterGroup": "Frontline Services",
+        "title": "Payment of Business Tax / Permit",
+        "description": "Business tax is imposed under Sec. 143 of the Local Government Code and shall be payable for every separate or distinct establishment or place where business subject to the tax is conducted, and one line of business does not become exempt by being conducted with some other business for which such tax has been paid. The tax on a business must be paid by the person conducting the same.",
+        "office": "Cash Receipts Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Business (G2B)"],
+        "whoMayAvail": "Businessmen / Business Owner in the City",
+        "requirements": [
+          {
+            "item": "Updated Business Tax Assessment / Tax Order of Payment",
+            "whereToSecure": "Business Permit and Licensing Office (BPLO)"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Proceed to the Cash Receipts Division, request a queue number ticket, and wait for your number on the queuing monitor.",
+            "agency": "Provide the client with a queue number ticket.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Submit the tax order of payment.",
+            "agency": "Receive the tax order of payment.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Pay the amount due.",
+            "agency": "Issue the official receipt together with the Feedback Form.",
+            "feeText": "According to Order of Payment Assessed, based on Ordinance No. 0013-2007",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Receipts Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "According to Payment Order",
+          "processingTime": "5 Minutes"
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 1)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter lists a roster of ten Cash Receipts Division staff for these steps rather than assigning one per step; the steps record the division, per ADR 0002.",
+          "Step durations (2 + 1 + 2) reconcile to the stated total of 5 minutes."
+        ]
+      },
+      {
+        "id": "cto-payment-of-real-property-tax",
+        "number": 7,
+        "charterGroup": "Frontline Services",
+        "title": "Payment of Real Property Tax",
+        "description": "The owner of the real property or the person having legal interest therein may pay the basic real property tax and the additional tax for the SEF due thereon without interest in four (4) equal installments: the first installment on or before the thirty-first (31st) of March; the second on or before the thirtieth (30th) of June; the third on or before the thirtieth (30th) of September; and the last on or before the thirty-first (31st) of December.",
+        "office": "Cash Receipts Division",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Real Property Owners or Any Person Having Legal Interest Therein",
+        "requirements": [
+          {
+            "item": "Updated Real Property Tax Assessment / Tax Order of Payment",
+            "whereToSecure": "Land Tax Division, City Treasurer’s Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Proceed to the Cash Receipts Division, request a queue number ticket, and wait for your number on the queuing monitor.",
+            "agency": "Provide the client with a queue number ticket.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Submit the tax order of payment.",
+            "agency": "Receive the tax order of payment.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Pay the amount due.",
+            "agency": "Issue the official receipt together with the Feedback Form.",
+            "feeText": "According to Order of Payment Assessed",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Receipts Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "According to Payment Order",
+          "processingTime": "5 Minutes"
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 1)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter lists a roster of ten Cash Receipts Division staff for these steps rather than assigning one per step; the steps record the division, per ADR 0002.",
+          "Step durations (2 + 1 + 2) reconcile to the stated total of 5 minutes."
+        ]
+      },
+      {
+        "id": "cto-payment-of-transfer-tax",
+        "number": 8,
+        "charterGroup": "Frontline Services",
+        "title": "Payment of Transfer Tax",
+        "description": "It shall be the duty of the seller, donor, transferor, executor or administrator to pay the tax herein imposed within sixty (60) days from the date of the execution of the deed or from the date of the decedent’s death.",
+        "office": "Cash Receipts Division",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Real Property Owners or Any Person Having Legal Interest Therein",
+        "requirements": [
+          {
+            "item": "Updated Real Property Tax Assessment / Tax Order of Payment",
+            "whereToSecure": "Land Tax Division, City Treasurer’s Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Proceed to the Cash Receipts Division, request a queue number ticket, and wait for your number on the queuing monitor.",
+            "agency": "Provide the client with a queue number ticket.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Submit the tax order of payment.",
+            "agency": "Receive the tax order of payment.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Pay the amount due.",
+            "agency": "Issue the official receipt together with the Feedback Form.",
+            "feeText": "Seventy-Five Percent (75%) of One Percent (1%) of the total consideration or FMV, whichever is higher. Twenty-Five Percent (25%) surcharge in case of failure to pay the tax imposed on time. Two Percent (2%) interest per month from the due date until the tax is fully paid, but in no case shall the total interest on the unpaid amount or a portion thereof exceed eighteen (18) months.",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Receipts Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "According to Payment Order",
+          "processingTime": "5 Minutes"
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 1)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter lists a roster of ten Cash Receipts Division staff for these steps rather than assigning one per step; the steps record the division, per ADR 0002.",
+          "Step durations (2 + 1 + 2) reconcile to the stated total of 5 minutes."
+        ]
+      },
+      {
+        "id": "cto-payment-of-community-tax",
+        "number": 9,
+        "charterGroup": "Frontline Services",
+        "title": "Payment of Community Tax",
+        "description": "A poll or capitation tax imposed upon an individual citizen or juridical person residing or doing business in the City. The community tax accrues on the first (1st) day of January of each year and shall be paid not later than the last day of February.",
+        "office": "Cash Receipts Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Business (G2B)"],
+        "whoMayAvail": "Individual CTC: every inhabitant of the City eighteen (18) years of age or over who has been regularly employed on a wage or salary basis for at least thirty (30) consecutive working days during any calendar year; or is engaged in business or occupation; or owns real property with an aggregate assessed value of One Thousand Pesos (P1,000.00) or more; or is required by law to file an income tax return. Juridical Person CTC: every corporation, however created or organized, whether domestic or resident foreign, engaged in or doing business in the City.",
+        "requirements": [
+          {
+            "item": "Individual: One (1) Original Copy of Information Data Sheet",
+            "whereToSecure": "City Treasurer’s Office (CTO)"
+          },
+          {
+            "item": "Individual: Valid Identification Card (ID)",
+            "whereToSecure": "Individual / Citizen"
+          },
+          {
+            "item": "Individual: One (1) Original Copy of Special Power of Attorney (SPA), if necessary",
+            "whereToSecure": "Any Law Firm"
+          },
+          {
+            "item": "Corporation: One (1) Original Copy of Information Data Sheet",
+            "whereToSecure": "City Treasurer’s Office (CTO)"
+          },
+          {
+            "item": "Corporation: One (1) Photocopy of Certificate of Incorporation",
+            "whereToSecure": "Corporation"
+          },
+          {
+            "item": "Corporation: One (1) Photocopy of Income Tax Return (ITR)",
+            "whereToSecure": "Corporation"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Proceed to the Cash Receipts Division, request a queue number ticket and an Information Data Sheet, fill out the data sheet, and wait for your number on the queuing monitor.",
+            "agency": "Provide the client with a queue number ticket and information data sheet.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Submit the information data sheet together with the other documentary requirements.",
+            "agency": "Receive the information data sheet and other documentary requirements, verify the documents, and compute the amount of tax to be paid.",
+            "feeText": "None",
+            "processingTime": "4 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Pay the amount due.",
+            "agency": "Receive payment and print the CTC.",
+            "feeText": "For Individual: Five Pesos (P5.00) and an annual additional tax of One Peso (P1.00) for every One Thousand Pesos (P1,000.00) of income regardless whether from business, exercise of profession or from property, which in no case shall exceed Five Thousand Pesos (P5,000.00). For Juridical Person: Five Hundred Pesos (P500.00) and an annual additional tax which in no case shall exceed Ten Thousand Pesos (P10,000.00) in accordance with the provision under the LGC.",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Affix your signature and right thumb mark on the copies of the CTC.",
+            "agency": "Get the duplicate and triplicate copies of the CTC.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Receive the original copy of the CTC.",
+            "agency": "Release the original copy of the CTC.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Cash Receipts Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 1)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The TOTAL row for this service is not recoverable from the extracted text; the derived total of 7 minutes comes from the three timed steps and must be checked against the PDF.",
+          "Steps 4 and 5 have no processing time in the source table."
+        ]
+      },
+      {
+        "id": "cto-payment-of-ptr-and-occupation-tax",
+        "number": 10,
+        "charterGroup": "Frontline Services",
+        "title": "Payment of Professional Tax Receipt (PTR) and Occupation Tax",
+        "description": "Payment of the professional tax due from professionals practising in the City, and of occupation tax for other occupations.",
+        "office": "Cash Receipts Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Professionals",
+        "requirements": [
+          {
+            "item": "For PTR: One (1) Original Copy of filled-out PTR Data Form",
+            "whereToSecure": "City Treasurer’s Office"
+          },
+          {
+            "item": "For PTR: Current PRC License or other licenses, as the case may be",
+            "whereToSecure": "Professional Regulation Commission (PRC)"
+          },
+          {
+            "item": "For Occupation Tax: One (1) Original Copy of filled-out Occupation Data Form",
+            "whereToSecure": "City Treasurer’s Office"
+          },
+          {
+            "item": "For Occupation Tax: Current Identification Card (ID)",
+            "whereToSecure": "Taxpayer"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Proceed to the Cash Receipts Division, request a queue number ticket and Information Data Sheet, fill out the data sheet, and wait for your number on the queuing monitor.",
+            "agency": "Provide the client with a queue number ticket and information data sheet.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Submit the information data sheet together with the other documentary requirements.",
+            "agency": "Receive the information data sheet and other documentary requirements, verify the documents, and compute the amount of tax to be paid.",
+            "feeText": "None",
+            "processingTime": "4 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Pay the amount due.",
+            "agency": "Receive payment and print the PTR or Occupation Tax Receipt.",
+            "feeText": "Please refer to the schedule of fees (City Ordinance No. 0013-2007)",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Receive the PTR or Occupation Tax Receipt.",
+            "agency": "Release the PTR or Occupation Tax Receipt.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Cash Receipts Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "7 Minutes"
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 1)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Client steps are numbered 1, 6, 3, 4 in the source and agency actions 1, 2, 7, 8, 3.1 out of sequence; the order here follows the process as described.",
+          "Derived total is 7 minutes, matching the stated total."
+        ]
+      },
+      {
+        "id": "cto-payment-of-other-taxes-fees-charges",
+        "number": 11,
+        "charterGroup": "Frontline Services",
+        "title": "Payment of Other Taxes, Fees and Charges",
+        "description": "Payment of taxes, fees and charges assessed by other City offices, against an order of payment issued by the office concerned.",
+        "office": "Cash Receipts Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Businessmen / Business Owner in the City / Individual Taxpayer",
+        "requirements": [
+          {
+            "item": "Order of payment from the respective office where the business was transacted",
+            "whereToSecure": "Office concerned (LCR, CPDO, City Engineer’s Office, CHO, City Veterinary, Assessor’s Office, etc.)"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Proceed to the office you need to transact business with and request an order of payment.",
+            "agency": "Prepare and release the order of payment.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Personnel In-Charge of the Concerned Office"
+          },
+          {
+            "client": "Proceed to the Cash Receipts Division and request a queue number ticket, then submit the order of payment together with the other documentary requirements, if necessary.",
+            "agency": "Provide the client with a queue number ticket, receive the order of payment and other requirements, verify the documents, and encode the information based on the bill presented.",
+            "feeText": "As computed and shown in the order of payment (based on Ordinance No. 0013-2007)",
+            "processingTime": "3 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Pay the amount due and receive the corresponding receipt.",
+            "agency": "Receive payment, print and release the corresponding receipt.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Cash Receipts Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "As computed shown in the order of payment",
+          "processingTime": "9 Minutes"
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 1)."
+        ],
+        "verified": false,
+        "verifyNotes": ["Derived total is 9 minutes, matching the stated total."]
+      },
+      {
+        "id": "cto-sealing-weights-measures-retailers",
+        "number": 12,
+        "charterNumber": 12,
+        "charterGroup": "Frontline Services",
+        "title": "Sealing and Licensing of Weighing Scales (Retailers)",
+        "description": "Every person, partnership or corporation must have instruments of weights and measures sealed and licensed annually before use within the City, and pay the corresponding fees. This is the procedure for retailers’ weighing scales.",
+        "office": "Cash Receipts Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "Business Establishment Owners",
+        "requirements": [
+          {
+            "item": "Instruments of weights and measures for testing / calibration",
+            "whereToSecure": "Owner"
+          },
+          {
+            "item": "Assessment details of fees to be paid",
+            "whereToSecure": "City Treasurer’s Office"
+          },
+          {
+            "item": "Official receipt of payment",
+            "whereToSecure": "City Treasurer’s Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the instrument for calibration to the Business Tax Division.",
+            "agency": "Check the instrument. If found defective it shall be confiscated. If accurate, the Business Tax Division computes the fees to be paid for calibration.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Request the order of payment.",
+            "agency": "Print the order of payment.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Proceed to the Cash Receipts Division, submit the order of payment and pay the calibration fees stated on it.",
+            "agency": "Receive the order of payment and the payment, then print the official receipt.",
+            "feeText": "Please refer to the schedule of fees (City Ordinance No. 0013-2007)",
+            "processingTime": "4 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Receive the official receipt.",
+            "agency": "Issue the official receipt.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Proceed to the Business Tax Division and present the official receipt.",
+            "agency": "Receive the official receipt and calibrate the instrument.",
+            "feeText": "None",
+            "processingTime": "4 minutes",
+            "personResponsible": "Business Tax Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "Please refer to schedule of fees",
+          "processingTime": "12 minutes for Retailers"
+        },
+        "notes": [
+          "The charter publishes a schedule of calibration fees by instrument: linear metric measures not over one metre Php 25.00, over one metre Php 50.00; measures of capacity not over ten litres, over ten litres, and Php 100.00 for every dispenser pump; and instruments denominated in weight by capacity bracket."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Step durations are listed in a single stacked cell (2, 1, 1, 2, 1, 1, 1, 3 minutes) that cannot be matched to steps from the extracted layout. The grouping here is inferred and needs checking against the PDF.",
+          "The charter publishes this and the fuel-dispenser procedure under one number with separate totals; they are split here into two services sharing charterNumber 12."
+        ]
+      },
+      {
+        "id": "cto-sealing-weights-measures-fuel-dispensers",
+        "number": 12,
+        "charterNumber": 12,
+        "charterGroup": "Frontline Services",
+        "title": "Sealing and Licensing of Fuel Dispenser Pumps (Gasoline Stations)",
+        "description": "Annual sealing and licensing of fuel dispenser pumps at gasoline stations, inspected on a scheduled date set by the City Treasurer’s Office.",
+        "office": "Cash Receipts Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "Business Establishment Owners",
+        "requirements": [
+          {
+            "item": "Instruments of weights and measures for testing / calibration",
+            "whereToSecure": "Owner"
+          },
+          {
+            "item": "Assessment details of fees to be paid",
+            "whereToSecure": "City Treasurer’s Office"
+          },
+          {
+            "item": "Official receipt of payment",
+            "whereToSecure": "City Treasurer’s Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Wait for the scheduled inspection by the City Treasurer’s Office.",
+            "agency": "Schedule a date for inspection, approve the inspection, and compute the fees to be paid.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Request the order of payment.",
+            "agency": "Release the order of payment.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Proceed to the Cash Receipts Division, submit the order of payment and pay the fees stated on it.",
+            "agency": "Receive the order of payment and the payment, then print the official receipt.",
+            "feeText": "Please refer to the schedule of fees (City Ordinance No. 0013-2007)",
+            "processingTime": "3 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Receive the official receipt.",
+            "agency": "Issue the official receipt.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Submit the official receipt to the Business Tax Division and present the instrument.",
+            "agency": "Proceed to the gasoline station as stated in the letter of schedule and calibrate the instrument.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Business Tax Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "Please refer to schedule of fees",
+          "processingTime": "14 minutes for Gasoline"
+        },
+        "notes": [
+          "Calibration of fuel dispenser pumps is charged at Php 100.00 for every dispenser pump under the published schedule of fees."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Step durations are listed in a stacked cell and their grouping is inferred; the derived total needs checking against the stated 14 minutes.",
+          "Split from charter service 12, which publishes this procedure alongside the retailers’ weighing-scale procedure."
+        ]
+      },
+      {
+        "id": "cto-certification-retirement-of-business",
+        "number": 13,
+        "charterGroup": "Frontline Services",
+        "title": "Issuance of Certification for Retirement of Business",
+        "description": "Issued to a business operator who terminates operations, upon settlement of all taxes due and validation by the City Treasurer’s Office affirming that the commercial activity has ceased.",
+        "office": "Business Tax Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business Entity (G2B)"],
+        "whoMayAvail": "Real Property Owners",
+        "requirements": [
+          {
+            "item": "One (1) Original Copy of Mayor’s Permit",
+            "whereToSecure": "Business Owner"
+          },
+          {
+            "item": "Letter of Business Closure stating the date, gross sales and reason",
+            "whereToSecure": "Business Owner"
+          },
+          {
+            "item": "One (1) Original Copy of Income Tax Return (monthly / quarterly / annual, whichever is available)",
+            "whereToSecure": "Bureau of Internal Revenue"
+          },
+          {
+            "item": "One (1) Original Copy of Certification from the lessor that the business establishment had been closed (if lessee)",
+            "whereToSecure": "Property Owner"
+          },
+          {
+            "item": "One (1) Original Copy of Certification from the Barangay Captain where the business is located confirming the closure of the business",
+            "whereToSecure": "Barangay Hall where the business is located"
+          },
+          {
+            "item": "Board Resolution regarding closure, for a corporation",
+            "whereToSecure": "Corporation"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the documentary requirements at the Business Tax Division (Window 5).",
+            "agency": "Receive the documentary requirements, verify the documents, and compute the taxes and fees due, if any.",
+            "feeText": "Based on the assessment. Certification Fee of Php 50.00.",
+            "processingTime": "1 minute",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Confirm the data and request the order of payment.",
+            "agency": "Print and release the order of payment.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Proceed to the Cash Receipts Division, present the order of payment, pay the amount due and request the official receipt.",
+            "agency": "Receive the order of payment and the payment, print and issue the official receipt.",
+            "feeText": "Certification Fee of Php 50.00",
+            "processingTime": "4 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Proceed to the Business Tax Division and present the official receipt.",
+            "agency": "Receive the official receipt and prepare the Certification for Business Retirement.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Business Tax Division"
+          },
+          {
+            "client": "Receive the Certification for Business Retirement.",
+            "agency": "Release the Certification for Business Retirement.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Business Tax Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "According to assessment (Certification Fee of Php 50.00)",
+          "processingTime": "10 Minutes"
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 4)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The \"Who may avail\" field reads \"Real Property Owners\", which looks like an error in the charter for a business-retirement service. Reproduced verbatim pending confirmation.",
+          "Step durations are stacked in the source (1, 1, 1, 1, 1, 1, 2, 1 minutes); the grouping here is inferred and reconciles to the stated 10 minutes."
+        ]
+      },
+      {
+        "id": "cto-real-property-tax-clearance",
+        "number": 14,
+        "charterGroup": "Frontline Services",
+        "title": "Issuance of Real Property Tax Clearance",
+        "description": "A tax clearance is required by the City Assessor’s Office for the transfer of properties and by the Registry of Deeds for the release of land titles. It certifies that a particular real property has no outstanding tax liabilities from previous taxable years.",
+        "office": "Land Tax Division",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Business Entity (G2B)",
+          "Government to Client (G2C)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Real Property Owners",
+        "requirements": [
+          {
+            "item": "For transfer purposes: photocopy of the mode of transfer (Deed of Sale, Donation, Extrajudicial Settlement of Estate, Assignment, or Affidavit of Consolidation)",
+            "whereToSecure": "Any Law Firm"
+          },
+          {
+            "item": "For transfer purposes: photocopy of Special Power of Attorney",
+            "whereToSecure": "Any Law Firm"
+          },
+          {
+            "item": "For transfer purposes: photocopy of Valid Identification Card (ID)",
+            "whereToSecure": "Owner of Property"
+          },
+          {
+            "item": "For transfer purposes: photocopy of Death Certificate, if necessary",
+            "whereToSecure": "Claimant"
+          },
+          {
+            "item": "For titling purposes: Valid Identification Card (ID) and Special Power of Attorney, if necessary",
+            "whereToSecure": "Owner of Property / Any Law Firm"
+          },
+          {
+            "item": "For transfer of Tax Declaration: New Title, documents for the mode of transfer, and Valid Identification Card",
+            "whereToSecure": "Owner of Property / Any Law Firm"
+          },
+          {
+            "item": "For other purposes (permits or reference): Valid Identification Card",
+            "whereToSecure": "Owner of Property"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the documentary requirements for your purpose at the Land Tax Division (Window 5).",
+            "agency": "Receive the documentary requirements, verify them, and check that the real property is not delinquent.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Land Tax Division"
+          },
+          {
+            "client": "Request the order of payment for the tax clearance fee.",
+            "agency": "Print and release the order of payment.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Land Tax Division"
+          },
+          {
+            "client": "Proceed to the Cash Receipts Division, pay the certification fee and receive the official receipt.",
+            "agency": "Receive the payment and issue the official receipt.",
+            "feeText": "Certification Fee of Php 50.00",
+            "processingTime": null,
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Present the official receipt and receive the tax clearance.",
+            "agency": "Prepare and release the Real Property Tax Clearance.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Land Tax Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "Certification Fee of Php 50.00",
+          "processingTime": null
+        },
+        "notes": [
+          "Senior Citizens, PWDs, pregnant women and nursing mothers may proceed to the designated courtesy lane (Window 4).",
+          "If the property is delinquent, follow the steps under Payment of Real Property Tax first."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "This service’s step table has no PROCESSING TIME column in the published charter, so no per-step durations exist and no total can be derived. Needs checking against the PDF: either the column is genuinely absent or the extraction dropped it.",
+          "The later steps of the procedure were not fully recoverable from the extracted layout and are summarised here."
+        ]
+      },
+      {
+        "id": "cto-salaries-monetary-claims-cash",
+        "number": 15,
+        "charterNumber": 15,
+        "charterGroup": "Frontline Services",
+        "title": "Payment for Salaries and Other Monetary Claims (by Cash)",
+        "description": "Release of salaries and other monetary claims to City Government employees and clients, paid in cash at the Cash Disbursement Division.",
+        "office": "Cash Disbursement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)", "Government to Client (G2C)"],
+        "whoMayAvail": "City Government Employees and Clients",
+        "requirements": [
+          {
+            "item": "One (1) Original Copy of Valid Identification Card (ID)",
+            "whereToSecure": "Claimant"
+          },
+          {
+            "item": "One (1) Original Copy of Special Power of Attorney, if necessary",
+            "whereToSecure": "Any Law Firm"
+          },
+          {
+            "item": "One (1) Original Copy of Authorization, if necessary",
+            "whereToSecure": "Payee"
+          },
+          {
+            "item": "One (1) Original Copy of Official Receipt or Sales Invoice",
+            "whereToSecure": "Claimant"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit approved and duly signed vouchers or payrolls.",
+            "agency": "Draw check.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          },
+          {
+            "client": "Proceed to the Cash Disbursement Division and ask whether the payee’s name is ready for payment.",
+            "agency": "Check the name of the payee in the approved payroll for payment.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          },
+          {
+            "client": "Present a valid ID and other documents required, if necessary.",
+            "agency": "Issue cash payment.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          },
+          {
+            "client": "Receive the cash payment.",
+            "agency": "Request the payee to affix a signature or thumbmark to acknowledge receipt of cash.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "11 Minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter publishes cash, check and electronic payment as three modes under one number with separate totals (11, 13 and 5 minutes); they are split here into three services sharing charterNumber 15.",
+          "Derived total is 11 minutes, matching the stated total for cash payment."
+        ]
+      },
+      {
+        "id": "cto-salaries-monetary-claims-check",
+        "number": 15,
+        "charterNumber": 15,
+        "charterGroup": "Frontline Services",
+        "title": "Payment for Salaries and Other Monetary Claims (by Check)",
+        "description": "Release of salaries and other monetary claims to City Government employees and clients by check.",
+        "office": "Cash Disbursement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)", "Government to Client (G2C)"],
+        "whoMayAvail": "City Government Employees and Clients",
+        "requirements": [
+          {
+            "item": "One (1) Original Copy of Valid Identification Card (ID)",
+            "whereToSecure": "Claimant"
+          },
+          {
+            "item": "One (1) Original Copy of Special Power of Attorney, if necessary",
+            "whereToSecure": "Any Law Firm"
+          },
+          {
+            "item": "One (1) Original Copy of Authorization, if necessary",
+            "whereToSecure": "Payee"
+          },
+          {
+            "item": "One (1) Original Copy of Official Receipt or Sales Invoice",
+            "whereToSecure": "Claimant"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit approved and duly signed vouchers or payrolls.",
+            "agency": "Draw check.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          },
+          {
+            "client": "Proceed to the Cash Disbursement Division, state the name of the payee and ask whether the check is ready for release.",
+            "agency": "Check whether the payee is on the list of approved checks for release, and verify that the check inquired about is ready.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          },
+          {
+            "client": null,
+            "agency": "Signature of check, then approve the release of the check.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          },
+          {
+            "client": "Present a valid ID and other required documents, if necessary.",
+            "agency": "Release the check.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          },
+          {
+            "client": "Receive the check.",
+            "agency": "Request the payee to affix a signature or thumbmark to acknowledge receipt of the check.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "13 Minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from charter service 15, which publishes cash, check and electronic payment under one number.",
+          "Durations in the check column are stacked (2, 2, 1, 1, 2, 2 minutes) and their grouping is inferred; the derived total of 13 minutes matches the stated total but the per-step split needs checking."
+        ]
+      },
+      {
+        "id": "cto-salaries-monetary-claims-electronic",
+        "number": 15,
+        "charterNumber": 15,
+        "charterGroup": "Frontline Services",
+        "title": "Payment for Salaries and Other Monetary Claims (by Electronic Payment)",
+        "description": "Release of salaries and other monetary claims by electronic fund transfer through the LBP and DBP banking portals.",
+        "office": "Cash Disbursement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)", "Government to Client (G2C)"],
+        "whoMayAvail": "City Government Employees and Clients",
+        "requirements": [
+          {
+            "item": "One (1) Original Copy of Valid Identification Card (ID)",
+            "whereToSecure": "Claimant"
+          },
+          {
+            "item": "One (1) Original Copy of Official Receipt or Sales Invoice",
+            "whereToSecure": "Claimant"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Wait for the fund transfer.",
+            "agency": "The personnel in charge inputs the transaction data on the LBP and DBP online banking portal and submits it for fund transfer approval.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          },
+          {
+            "client": "Issue the official receipt.",
+            "agency": "Approval of the fund transfer.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Cash Disbursement Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "5 Minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from charter service 15, which publishes cash, check and electronic payment under one number.",
+          "The electronic-payment column shows 2 minutes, 1 minute and 2 minutes across three sub-actions; grouped here into two steps totalling 5 minutes to match the stated total."
+        ]
+      },
+      {
+        "id": "cto-accountable-forms-non-deputized",
+        "number": 16,
+        "charterGroup": "Frontline Services",
+        "title": "Issuance of Accountable Forms for Non-Deputized Officers",
+        "description": "Accountable forms are forms that have the potential to confer a benefit on someone or an organization, internal or external to the Government.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "Accountable Officers",
+        "requirements": [
+          {
+            "item": "Four (4) Original Copies of duly accomplished Requisition and Voucher Form",
+            "whereToSecure": "City Treasurer’s Office"
+          },
+          {
+            "item": "Four (4) Original Copies of duly accomplished Invoice and Receipt of Accountable Form",
+            "whereToSecure": "City Treasurer’s Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the Requisition and Issue Voucher (RIV) and the Invoice and Receipt of Accountable Forms, duly accomplished, signed and approved by the City Accountant.",
+            "agency": "Receive and review the completeness of the data and signatures, check the expiration of the fidelity bond, approve the requisition, and advise the client to proceed to the cashier.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Division"
+          },
+          {
+            "client": "Pay the amount due at the cashier.",
+            "agency": "Receive the payment and issue the official receipt.",
+            "feeText": "Php 100.00 per pad",
+            "processingTime": "5 minutes",
+            "personResponsible": "Cash Receipts Division"
+          },
+          {
+            "client": "Present the official receipt to the person in charge.",
+            "agency": "Receive the official receipt, prepare and record the official receipt and serial numbers of the accountable forms in the RIV and Invoice, issue the RIV, Invoice, Logbook and Accountable Forms, and advise the client to proceed to the City Auditor’s Office.",
+            "feeText": "None",
+            "processingTime": "4 minutes",
+            "personResponsible": "Administrative Division"
+          },
+          {
+            "client": "Proceed to the City Auditor’s Office and present the RIV, Invoice, Logbook and Accountable Forms.",
+            "agency": "Verify the serial numbers of the accountable forms stated in the Invoice, RIV and Logbook, then advise the client to proceed to the City Treasurer’s Office.",
+            "feeText": "None",
+            "processingTime": "6 minutes",
+            "personResponsible": "City Auditor’s Office"
+          },
+          {
+            "client": "Return to the Administrative Division and present the verified Invoice, RIV, Logbook and Accountable Forms.",
+            "agency": "Receive the verified Invoice, RIV, Logbook and Accountable Forms.",
+            "feeText": "None",
+            "processingTime": "1 minute",
+            "personResponsible": "Administrative Division"
+          },
+          {
+            "client": "Receive the Accountable Forms and copies of the Invoice and RIV.",
+            "agency": "Release the Accountable Forms as requested in the requisition form, together with the copy of the Invoice and RIV.",
+            "feeText": "None",
+            "processingTime": "4 minutes",
+            "personResponsible": "Administrative Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "Php 100.00 per pad",
+          "processingTime": "25 Minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Durations are stacked in the source column and their grouping across steps is inferred; the derived total of 25 minutes matches the stated total but the per-step split needs checking.",
+          "The payment step is described in the charter but its detail was not fully recoverable from the extracted layout."
+        ]
+      },
+      {
+        "id": "cto-accountable-forms-revenue-collectors",
+        "number": 17,
+        "charterGroup": "Frontline Services",
+        "title": "Issuance of Accountable Forms for Revenue Collectors",
+        "description": "Accountable forms are forms that have the potential to confer a benefit on someone or an organization, internal or external to the Government. This procedure covers issuance to revenue collectors.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "Accountable Officers",
+        "requirements": [
+          {
+            "item": "Four (4) Original Copies of duly accomplished Requisition and Voucher Form",
+            "whereToSecure": "City Treasurer’s Office"
+          },
+          {
+            "item": "Four (4) Original Copies of duly accomplished Invoice and Receipt of Accountable Form",
+            "whereToSecure": "City Treasurer’s Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the Requisition and Issue Voucher (RIV) and the Invoice and Receipt of Accountable Forms, duly accomplished and signed.",
+            "agency": "Receive and review the completeness of the data and signatures.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Administrative Division"
+          },
+          {
+            "client": null,
+            "agency": "Approve the requisition, prepare and record the serial numbers of the accountable forms and CTC in the RIV and Invoice, then issue the RIV, Invoice, Logbook and Accountable Forms and advise the client to proceed to the City Auditor’s Office.",
+            "feeText": "None",
+            "processingTime": "7 minutes",
+            "personResponsible": "Administrative Division"
+          },
+          {
+            "client": "Proceed to the City Auditor’s Office and present the RIV, Invoice, Logbook and Accountable Forms.",
+            "agency": "Verify the serial numbers of the accountable forms.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Auditor’s Office"
+          },
+          {
+            "client": "Return to the Administrative Division and present the verified Invoice, RIV, Logbook and Accountable Forms.",
+            "agency": "Receive the verified documents and release the Accountable Forms as requested.",
+            "feeText": "None",
+            "processingTime": "4 minutes",
+            "personResponsible": "Administrative Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "18 Minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Durations are stacked in the source column and their grouping is inferred; the derived total of 18 minutes matches the stated total but the per-step split needs checking.",
+          "The TOTAL row’s fee cell is empty in the extracted text."
+        ]
+      },
+      {
+        "id": "cto-ctc-for-deputized-officers",
+        "number": 18,
+        "charterGroup": "Frontline Services",
+        "title": "Issuance of CTC for Deputized Officers",
+        "description": "Issuance of Community Tax Certificates to deputized officers for onward issuance, against a Requisition and Issue Voucher.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "Accountable Officers",
+        "requirements": [
+          {
+            "item": "Four (4) Original Copies of duly accomplished Requisition and Voucher Form",
+            "whereToSecure": "City Treasurer’s Office"
+          },
+          {
+            "item": "Four (4) Original Copies of duly accomplished Invoice and Receipt of Accountable Form",
+            "whereToSecure": "City Treasurer’s Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the Requisition and Issue Voucher (RIV) and the Invoice and Receipt of Accountable Forms.",
+            "agency": "Verify that all entries are complete, approve the requisition, and record the serial numbers of the CTCs.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Administrative Division"
+          },
+          {
+            "client": "Present the Requisition and Issue Voucher for approval.",
+            "agency": "Issue the RIV, Invoice, Logbook and CTCs.",
+            "feeText": "None",
+            "processingTime": "11 minutes",
+            "personResponsible": "Administrative Division"
+          },
+          {
+            "client": "Present the RIV, Invoice, Logbook and CTCs at the City Auditor’s Office.",
+            "agency": "Verify the serial numbers of the CTCs.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Auditor’s Office"
+          },
+          {
+            "client": "Return to the Administrative Division and present the verified documents.",
+            "agency": "Receive the verified documents and release the CTCs.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "24 Minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "This service’s step table is the most heavily fragmented in the charter extraction; both the step boundaries and the per-step durations here are inferred and need a full read against the PDF.",
+          "The derived total of 24 minutes matches the stated total."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-cash-coin",
+    "categories": [
+      {
+        "id": "business-taxes",
+        "title": "Business taxes and clearances",
+        "icon": "bi-shop",
+        "services": [
+          "cto-business-tax-billing-statement",
+          "cto-assessment-of-business-tax",
+          "cto-business-tax-previous-year-delinquency",
+          "cto-payment-of-business-tax",
+          "cto-certification-retirement-of-business"
+        ]
+      },
+      {
+        "id": "real-property-taxes",
+        "title": "Real property and transfer taxes",
+        "icon": "bi-house-door",
+        "services": [
+          "cto-real-property-tax-statement",
+          "cto-assessment-of-transfer-tax",
+          "cto-payment-of-real-property-tax",
+          "cto-payment-of-transfer-tax",
+          "cto-real-property-tax-clearance"
+        ]
+      },
+      {
+        "id": "community-tax-fees",
+        "title": "Community tax, permits and other fees",
+        "icon": "bi-person-vcard",
+        "services": [
+          "cto-payment-of-community-tax",
+          "cto-payment-of-ptr-and-occupation-tax",
+          "cto-payment-of-other-taxes-fees-charges",
+          "cto-sealing-weights-measures-retailers",
+          "cto-sealing-weights-measures-fuel-dispensers"
+        ]
+      },
+      {
+        "id": "disbursements-admin",
+        "title": "Disbursements and accountable forms",
+        "icon": "bi-wallet2",
+        "services": [
+          "cto-salaries-monetary-claims-cash",
+          "cto-salaries-monetary-claims-check",
+          "cto-salaries-monetary-claims-electronic",
+          "cto-accountable-forms-non-deputized",
+          "cto-accountable-forms-revenue-collectors",
+          "cto-ctc-for-deputized-officers"
+        ]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "starting-or-renewing-a-business",
+        "title": "Starting or renewing a business",
+        "presentation": "rail",
+        "icon": "bi-shop-window",
+        "services": [
+          "cto-assessment-of-business-tax",
+          "cto-payment-of-business-tax",
+          "cto-business-tax-billing-statement",
+          "cto-sealing-weights-measures-retailers",
+          "cto-sealing-weights-measures-fuel-dispensers"
+        ]
+      },
+      {
+        "id": "closing-a-business",
+        "title": "Closing a business",
+        "presentation": "rail",
+        "icon": "bi-door-closed",
+        "services": [
+          "cto-business-tax-previous-year-delinquency",
+          "cto-certification-retirement-of-business"
+        ]
+      },
+      {
+        "id": "buying-or-selling-property",
+        "title": "Buying or selling property",
+        "presentation": "rail",
+        "icon": "bi-house-add",
+        "services": [
+          "cto-assessment-of-transfer-tax",
+          "cto-payment-of-transfer-tax",
+          "cto-real-property-tax-clearance"
+        ]
+      },
+      {
+        "id": "paying-property-tax",
+        "title": "Paying property tax (amilyar)",
+        "presentation": "rail",
+        "icon": "bi-house-door",
+        "services": [
+          "cto-real-property-tax-statement",
+          "cto-payment-of-real-property-tax",
+          "cto-real-property-tax-clearance"
+        ]
+      },
+      {
+        "id": "getting-a-cedula-or-ptr",
+        "title": "Getting a cedula or professional tax receipt",
+        "presentation": "rail",
+        "icon": "bi-person-vcard",
+        "services": ["cto-payment-of-community-tax", "cto-payment-of-ptr-and-occupation-tax"]
+      },
+      {
+        "id": "paying-a-fee-from-another-office",
+        "title": "Paying a fee assessed by another City office",
+        "presentation": "rail",
+        "icon": "bi-receipt",
+        "services": ["cto-payment-of-other-taxes-fees-charges"]
+      },
+      {
+        "id": "claiming-a-payment",
+        "title": "Claiming a payment from the City",
+        "presentation": "rail",
+        "icon": "bi-cash-stack",
+        "services": [
+          "cto-salaries-monetary-claims-cash",
+          "cto-salaries-monetary-claims-check",
+          "cto-salaries-monetary-claims-electronic"
+        ]
+      },
+      {
+        "id": "accountable-forms",
+        "title": "Requesting accountable forms (City officers)",
+        "presentation": "rail",
+        "icon": "bi-journal-check",
+        "services": [
+          "cto-accountable-forms-non-deputized",
+          "cto-accountable-forms-revenue-collectors",
+          "cto-ctc-for-deputized-officers"
+        ]
+      }
+    ],
+    "contact": null,
+    "searchAliases": {
+      "cto-payment-of-real-property-tax": ["amilyar", "property tax", "real estate tax"],
+      "cto-real-property-tax-statement": ["amilyar", "property tax"],
+      "cto-real-property-tax-clearance": ["amilyar", "tax clearance"],
+      "cto-payment-of-community-tax": ["cedula", "sedula", "community tax certificate", "ctc"],
+      "cto-ctc-for-deputized-officers": ["cedula", "ctc"],
+      "cto-payment-of-ptr-and-occupation-tax": ["ptr", "professional tax"],
+      "cto-payment-of-business-tax": ["mayors permit", "business permit"],
+      "cto-certification-retirement-of-business": ["closure", "retirement of business"],
+      "cto-assessment-of-transfer-tax": ["transfer tax", "deed of sale"],
+      "cto-payment-of-transfer-tax": ["transfer tax", "deed of sale"],
+      "cto-sealing-weights-measures-retailers": ["timbangan", "weighing scale", "calibration"],
+      "cto-sealing-weights-measures-fuel-dispensers": ["gasolinahan", "fuel pump", "calibration"]
+    }
+  }
+}

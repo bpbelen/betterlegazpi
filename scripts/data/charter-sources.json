@@ -1,0 +1,83 @@
+{
+  "edition": "2026 First Edition",
+  "index": "https://legazpi.gov.ph/governance-citizens-chapter/",
+  "notes": [
+    "One PDF per office. `extraction` records how the text was recovered:",
+    "  'text'  — pdftotext -layout recovers the full body.",
+    "  'image' — the page bodies are rasterized; text must be read from page images.",
+    "`hub` is the route under service-details/ that renders this office."
+  ],
+  "offices": [
+    {
+      "slug": "cao",
+      "hub": "service-details/cao-services.html",
+      "office": "City Agriculture Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-AGRICULTURE-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "casso",
+      "hub": "service-details/casso-services.html",
+      "office": "City Assessor's Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-ASSESSOR-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "ceo",
+      "hub": "service-details/ceo-services.html",
+      "office": "City Engineer's Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-ENGINEERING-OFFICE-CITIZENS-CHARTER-2026-1st-EDITION-1-1.pdf"
+    },
+    {
+      "slug": "ccr",
+      "hub": "service-details/city-civil-registrar.html",
+      "office": "Office of the City Civil Registrar",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-CIVIL-REGISTRAR-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "cpdo",
+      "hub": "service-details/cpdo-services.html",
+      "office": "City Planning and Development Office",
+      "extraction": "image",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-PLANNING-AND-DEVELOPMENT-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "cswdo",
+      "hub": "service-details/cswdo-services.html",
+      "office": "City Social Welfare and Development Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-SOCIAL-WELFARE-AND-DEVELOPMENT-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "cto",
+      "hub": "service-details/cto-services.html",
+      "office": "City Treasurer's Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-TREASURERS-OFFICE-CITIZENS-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "ocenr",
+      "hub": "service-details/ocenr-services.html",
+      "office": "Office of the City Environment and Natural Resources",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-ENVIRONMENT-AND-NARURAL-RESOURCES-CITIZEN_S-CHARTER-2026.pdf",
+      "sourceNote": "The 2026 edition is not linked from the index page (its filename misspells NATURAL as NARURAL); the index still points at a 2024 file. URL supplied directly."
+    },
+    {
+      "slug": "bplo",
+      "hub": "service-details/business-permits-licensing.html",
+      "office": "Business Permits and Licensing Office",
+      "extraction": "image",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/BUSINESS-PERMITS-AND-LICENSING-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "hrmo",
+      "hub": "service-details/human-resource-management.html",
+      "office": "City Human Resource Management Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-HUMAN-RESOURCE-MANAGEMENT-OFFICE-CITIZENS-CHARTER-2026-1.pdf"
+    }
+  ]
+}

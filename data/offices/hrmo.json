@@ -1,0 +1,632 @@
+{
+  "slug": "hrmo",
+  "route": "service-details/human-resource-management.html",
+  "charter": {
+    "office": "City Human Resource Management Office",
+    "abbreviation": "CHRMO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-HUMAN-RESOURCE-MANAGEMENT-OFFICE-CITIZENS-CHARTER-2026-1.pdf",
+    "sourceSha256": "9559d7603c96480d1d576f93a308d267b5fb159930b00c9bc3b8299d4253fb32",
+    "transcript": "docs/sources/citizens-charter/hrmo.md",
+    "feedbackMechanism": {
+      "howToSendFeedback": "Answer the Feedback Form located in the Frontline Desk of the CHRMO, then place it inside the drop box or personally hand it over to the Officer of the Day (OD).",
+      "howFeedbackIsProcessed": "The L&D Division verifies the nature of the queries and feedback within one (1) working day. The same shall be referred to the concerned Division. Upon receipt of reply from the concerned Division, the Client will be informed via email, text or phone call.",
+      "contacts": ["chrmo.leg@legazpi.gov.ph", "chrmo.legazpicity@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "hrmo-recruitment-selection-placement",
+        "number": 1,
+        "charterGroup": "External Services",
+        "title": "Recruitment, Selection and Placement",
+        "description": "The RSP System is based on Qualification Standards (QS).",
+        "office": "Recruitment, Selection and Placement (RSP) Division",
+        "classification": "Highly Technical",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "City Employees and other applicants",
+        "requirements": [
+          {
+            "item": "Fully accomplished Personal Data Sheet (PDS) with Work Experience Sheet and recent passport-sized or unfiltered digital picture (CS Form No. 212, Revised 2025); digitally signed or electronically signed",
+            "whereToSecure": "Downloadable thru csc.gov.ph"
+          },
+          {
+            "item": "Hard copy or electronic copy of Performance rating in the last rating period (if applicable)",
+            "whereToSecure": "Office where applicant is assigned"
+          },
+          {
+            "item": "Hard copy or electronic copy of proof of eligibility/rating/license",
+            "whereToSecure": "CSC/PRC"
+          },
+          {
+            "item": "Hard copy or electronic copy of Transcript of Records",
+            "whereToSecure": "School where graduated"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Applicants submit application thru email or walk-in",
+            "agency": "Receives/accepts the application and evaluates completeness of supporting documents",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Officer-of-the Day/RSP Division"
+          },
+          {
+            "client": null,
+            "agency": "Acknowledge receipt of applications thru email",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Admin. Asst. VI (CO III), RSP Division"
+          },
+          {
+            "client": null,
+            "agency": "Conducts assessment and evaluates application based on the submitted documents and minimum Qualification Standards",
+            "feeText": "None",
+            "processingTime": "1 hr/applicant",
+            "personResponsible": "SAO/Admin. Asst. VI (CO III)/Admin. Aide I, RSP Division"
+          },
+          {
+            "client": null,
+            "agency": "Profiling of qualified applicants and preparation of documents for HRMPSB selection/deliberation",
+            "feeText": "None",
+            "processingTime": "1 hr/applicant; 30 min/applicant; 7 days",
+            "personResponsible": "SAO/Admin. Asst. VI (CO III), RSP Division"
+          },
+          {
+            "client": null,
+            "agency": "For applicants who did not qualify for the positions based on pre-assessment or not selected by the Appointing Authority: Inform the applicant thru email or a letter/notice",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": null
+          },
+          {
+            "client": null,
+            "agency": "Conducts Background Investigation",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": null
+          },
+          {
+            "client": null,
+            "agency": "Conducts Behavioral Event Interview",
+            "feeText": "None",
+            "processingTime": "30 min.",
+            "personResponsible": "HRMPSB members"
+          },
+          {
+            "client": null,
+            "agency": "Assessment, deliberation and rating of qualified applicants by the HRMPSB",
+            "feeText": "None",
+            "processingTime": "2 days; 15 days",
+            "personResponsible": "CGDH I, CHRMO; HRMPSB members"
+          },
+          {
+            "client": "If selected, applicant complies with the requirements",
+            "agency": "Prepare appointment papers and other CSC required documents",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "SAO/Admin. Asst. VI (CO III)/Admin. Aide I, RSP Division; CGDH I, CHRMO; Appointing Authority"
+          },
+          {
+            "client": null,
+            "agency": "Send letters to qualified applicants who were not selected",
+            "feeText": "None",
+            "processingTime": "5 days",
+            "personResponsible": "Admin. Asst. VI (CO III), RSP Div.; CGDH I, CHRMO"
+          }
+        ],
+        "notes": [
+          "Applications with incomplete documents shall not be processed or evaluated.",
+          "Applications submitted before the publication and after the deadline indicated in the publication of vacant positions posted in the CSC website shall no longer be entertained.",
+          "The specific position applied for including the item and place of assignment must be indicated in the application letter. Without such specifications, the application shall be disregarded.",
+          "All interested and qualified applicants are encouraged to apply. This includes Persons with Disability (PWD) and members of the indigenous communities, irrespective of sexual orientation, civil status, religion and political affiliation. The City Government of Legazpi does not discriminate in the selection of employees based on the aforementioned pursuant to Equal Opportunities for Employment Principle (EOP)."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Steps 4 and 8 hold multiple processing times in one cell; the split across sub-activities is a reading of the layout, not stated explicitly.",
+          "Person-responsible names for steps 5 and 6 are blank in the source table."
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "29 days, 3 hrs. & 20 minutes"
+        }
+      },
+      {
+        "id": "hrmo-work-immersion-ojt-deployment",
+        "number": 2,
+        "charterGroup": "External Services",
+        "title": "Work Immersion / On-the-Job Trainees (WI/OJT) Deployment",
+        "description": "The City Human Resource Management Office facilitates the deployment of Work Immersion/On-the-Job Trainees.",
+        "office": "Learning and Development (L&D) Division",
+        "classification": "Highly Technical",
+        "transactionTypes": [
+          "Government to Business Entity (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Schools",
+        "requirements": [
+          {
+            "item": "Letter request with list of students, submitted and approved by the City Mayor before the school year starts",
+            "whereToSecure": "School Concerned"
+          },
+          {
+            "item": "Memorandum of Agreement (MOA). Upon approval student/s shall attach the following documents: 1. Personal Data Sheet - One (1) Original Copy; 2. Medical Certificate - One (1) Original Copy, indicating that student/s is physically fit to perform duties/task; 3. Parent Consent (if immersion student)",
+            "whereToSecure": "1. Student applicant; 2. Healthcare Professional"
+          },
+          {
+            "item": "Issuance Certificate of Completion",
+            "whereToSecure": "L&D Division"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submits requirements",
+            "agency": "Receives, Prepares and reviews Memorandum of Agreement (MOA)",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Administrative Aide III; Administrative Officer V; CGDH I/HRM Officer"
+          },
+          {
+            "client": null,
+            "agency": "Processes MOA",
+            "feeText": "None",
+            "processingTime": "15 days",
+            "personResponsible": "Administrative Officer V; CGDH I/HRM Officer"
+          },
+          {
+            "client": null,
+            "agency": "Conducts orientation",
+            "feeText": "None",
+            "processingTime": "1 hr. & 30 Minutes",
+            "personResponsible": "SP; City Mayor"
+          },
+          {
+            "client": null,
+            "agency": "Deploys the students to concerned offices",
+            "feeText": "None",
+            "processingTime": "1 hr.",
+            "personResponsible": "Administrative Officer V; CGDH I/HRM Officer; Administrative Aide III"
+          },
+          {
+            "client": "Approach the Officer of the Day and request for issuance of Certificate of Completion",
+            "agency": "Prepares and review the requested document",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Aide III; Administrative Officer V"
+          },
+          {
+            "client": null,
+            "agency": "Signs the document",
+            "feeText": "None",
+            "processingTime": "5 Minutes",
+            "personResponsible": "Administrative Officer V; CGDH I/HRM Officer"
+          },
+          {
+            "client": null,
+            "agency": "Records and releases of the requested documents",
+            "feeText": "None",
+            "processingTime": "5 Minutes",
+            "personResponsible": "Administrative Aide III; Administrative Officer V"
+          }
+        ],
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Person-responsible cells in the first table span several rows; their assignment to individual steps is a reading of the layout."
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "16 days, 2 hrs. & 52 minutes"
+        }
+      },
+      {
+        "id": "hrmo-contract-of-services-job-order-appointments",
+        "number": 3,
+        "charterGroup": "Internal Services",
+        "title": "Preparation of Contract of Services or Appointments of Job Orders",
+        "description": "CHRMO, upon receipt of the complete requirements, prepares, reviews and forwards the contract and appointments to concerned heads of offices for signature.",
+        "office": "Recruitment, Selection and Placement (RSP) Division",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "City Employees and other applicants",
+        "requirements": [
+          {
+            "item": "Endorsement Letter from concerned Chief of Office",
+            "whereToSecure": "Office Concerned"
+          },
+          {
+            "item": "Fully accomplished Personal Data Sheet (PDS) with recent passport-sized picture (CS Form No. 212, Rev. 2025)",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Recent Drug Test Result",
+            "whereToSecure": "Drug Test Clinic"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit requirements",
+            "agency": "Receives requirements if complete",
+            "feeText": "None",
+            "processingTime": "20 mins.",
+            "personResponsible": "Officer of the Day"
+          },
+          {
+            "client": null,
+            "agency": "Prepares and signs contract of service/ job order appointment",
+            "feeText": "None",
+            "processingTime": "2 hrs.",
+            "personResponsible": "Administrative Aide I; Supervising Administrative Officer"
+          },
+          {
+            "client": null,
+            "agency": "Transmits to concerned offices for approval/signature of concerned chiefs of offices",
+            "feeText": "None",
+            "processingTime": "5 days",
+            "personResponsible": "CGDH I/CHRMO; Administrative Aide I; Supervising Administrative Officer"
+          },
+          {
+            "client": "Sign the contract/appointment. In the case of the contract, client should cause it to be notarized.",
+            "agency": "Records and releases a certified true copy of contract of service/ job order appointment",
+            "feeText": "None",
+            "processingTime": "40 mins.",
+            "personResponsible": "Officer of the Day"
+          }
+        ],
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The TOTAL row is empty in the extracted text; the figures here were read from the running totals in the final step's cell and must be confirmed against the PDF."
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        }
+      },
+      {
+        "id": "hrmo-certificate-of-employment",
+        "number": 4,
+        "charterGroup": "Internal Services",
+        "title": "Issuance of Certificate of Employment",
+        "description": "CHRMO updates, prepares, reviews and releases service record, certificate of employment and other certifications, upon receipt of request/instruction.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "City Employees",
+        "requirements": [
+          {
+            "item": "Duly accomplished request form / written request",
+            "whereToSecure": "None"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the accomplished request form",
+            "agency": "Receive and verify employment record",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Supervising Administrative Officer"
+          },
+          {
+            "client": null,
+            "agency": "Prepare and initial Certificate of Employment",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "CHRM Officer"
+          },
+          {
+            "client": null,
+            "agency": "Forwarded to the CHRM Officer",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Supervising Administrative Officer/Admin. Assistant II"
+          },
+          {
+            "client": "Claim",
+            "agency": "Released signed document",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Supervising Administrative Officer/Admin. Assistant II"
+          }
+        ],
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Client steps and agency actions are offset in the source table; the pairing here is inferred. The four processing times (5+5+2+5) sum to 17 minutes, matching the stated TOTAL."
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "17 minutes"
+        }
+      },
+      {
+        "id": "hrmo-service-record",
+        "number": 5,
+        "charterGroup": "Internal Services",
+        "title": "Issuance of Service Record",
+        "description": "CHRMO updates, prepares, reviews and releases service record, certificate of employment and other certifications, upon receipt of request/instruction.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "City Employees",
+        "requirements": [
+          {
+            "item": "Duly accomplished request form / written request",
+            "whereToSecure": "None"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit duly accomplished request form",
+            "agency": "Receive and verify employment record",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Supervising Administrative Officer"
+          },
+          {
+            "client": null,
+            "agency": "Prepare and sign Service Record",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Supervising Administrative Officer/Admin. Assistant II"
+          },
+          {
+            "client": "Claim",
+            "agency": "Released signed document",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Supervising Administrative Officer/Admin. Assistant II"
+          }
+        ],
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The TOTAL row is interleaved mid-table in the extracted text. 10+15+2 = 27 minutes, matching the stated TOTAL.",
+          "Agency actions are numbered 1.1 and 1.3 in the source with no 1.2; confirm whether a step is missing from the PDF."
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "27 minutes"
+        }
+      },
+      {
+        "id": "hrmo-travel-orders-ld",
+        "number": 6,
+        "charterGroup": "Internal Services",
+        "title": "Preparation of Travel Orders of City Employees relative to Learning and Development (L&D) Interventions",
+        "description": "Upon request/instruction, CHRMO prepares travel orders of City employees relative to L&D interventions.",
+        "office": "Learning and Development (L&D) Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "City Employees",
+        "requirements": [
+          {
+            "item": "Annex A - Travel/Training Request Form",
+            "whereToSecure": "Concerned Office"
+          },
+          {
+            "item": "Letter-invitation pertaining to L&D/CPD",
+            "whereToSecure": "AO/PICAR of office/division where the employee is assigned, re-assigned or detailed"
+          },
+          {
+            "item": "Annex B - HR Certification",
+            "whereToSecure": "CHRMO"
+          },
+          {
+            "item": "Letter from the Chief of Office recommending the attendee/s to the seminar, training, convention or summit",
+            "whereToSecure": "Concerned Office"
+          },
+          {
+            "item": "Certificate of Availability of Funds",
+            "whereToSecure": "City Budget Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit requirements",
+            "agency": "Received and assessed the document submitted.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Officer of the Day; Administrative Aide III; Administrative Officer IV"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the travel order and Annex B-HR Certification.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Administrative Aide III; Administrative Officer V"
+          },
+          {
+            "client": null,
+            "agency": "Transmits to concerned offices for approval/signature of concerned chiefs of offices.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "CGDH I/HRM Officer; Concerned Offices; City Mayor"
+          },
+          {
+            "client": "Claim",
+            "agency": "Release the travel Order.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Aide III; Administrative Aide IV"
+          }
+        ],
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Processing times and person-responsible cells are badly offset from their rows across a page break; every pairing in this service needs checking.",
+          "20+20+5 minutes plus 2 days does not obviously reconcile to the stated TOTAL of 2 days & 1 hr."
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "2 days & 1 hr."
+        }
+      },
+      {
+        "id": "hrmo-application-for-leave",
+        "number": 7,
+        "charterGroup": "Internal Services",
+        "title": "Processing Application for Leave",
+        "description": "Submitted applications for leave are processed, with leave credits computed, reviewed and certified.",
+        "office": "Records Management Division",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "City Employees",
+        "requirements": [
+          {
+            "item": "CSC Form No. 6/Application for Leave Form (3 copies), covering: 1. Vacation Leave; 2. Forced Leave: dates of Forced Leave are included in the schedule of forced leave submitted to the CHRMO; 3. Special Leave Privileges (SLP); 4. Sick Leave: Medical Certificate if S.L. exceeds 5 days; 5. Maternity/Paternity Leave; 6. Monetization of Leave Credits: if monetization is more than 10 days, Letter of Intent approved by the City Mayor citing the reason for availment and Waiver Form/s signed by fellow plantilla employee/s; 7. Terminal Leave; 8. Rehabilitation Leave: Request Letter to Mayor via HR, Medical Certificate with nature of injury, treatment process, rehabilitation period, and other pertinent documents e.g. police blotter",
+            "whereToSecure": "AO/PICAR of office/division where the employee is assigned, re-assigned or detailed"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Prepare and submit properly filled up Application for Leave and other requirements",
+            "agency": "Receives application and other requirements (if complete)",
+            "feeText": "None",
+            "processingTime": "15 mins.",
+            "personResponsible": "Focal Person, Leave Administration"
+          },
+          {
+            "client": null,
+            "agency": "Prepares, reviews and certifies number of leave credits",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Focal Person, Leave Administration; Administrative Officer V; Chief, RMD Division; CGDH I/HRM Officer"
+          },
+          {
+            "client": null,
+            "agency": "Returns the application to be approved by the Chief of Office",
+            "feeText": "None",
+            "processingTime": "15 mins.",
+            "personResponsible": "Officer of the Day"
+          },
+          {
+            "client": "Upon approval, return the application for leave",
+            "agency": "Receives and records the application",
+            "feeText": "None",
+            "processingTime": "15 mins.",
+            "personResponsible": "Officer of the Day"
+          },
+          {
+            "client": null,
+            "agency": "Releases the 2 copies and retains 1 copy for filing",
+            "feeText": "None",
+            "processingTime": "5 days",
+            "personResponsible": "Focal Person, Leave Administration; Administrative Officer V; Chief, RMD Division; CGDH I/HRM Officer"
+          },
+          {
+            "client": null,
+            "agency": "If the monetization is allowed and requirements are complete, prepares the necessary financial documents, for processing and release of concerned offices (City Budget Office, City Accountant's Office and City Treasurer's Office)",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": null
+          }
+        ],
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The TOTAL row is interleaved mid-table and the fee/time columns are heavily offset; all six rows need checking.",
+          "The final step (monetization) has no processing time or person responsible in the extracted text."
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "5 days & 2 hrs."
+        }
+      },
+      {
+        "id": "hrmo-processing-retirement",
+        "number": 8,
+        "charterGroup": "Internal Services",
+        "title": "Processing Retirement",
+        "description": "CHRMO facilitates the documents needed for retirement of retiring employees.",
+        "office": "Records Management Division",
+        "classification": "Highly Technical",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "Retiring City Employees",
+        "requirements": [
+          {
+            "item": "Optional Retirement: Letter of Intent to Retire with the approval of the City Mayor",
+            "whereToSecure": "Retiree or AO/PICAR of office/division where the employee is assigned, re-assigned or detailed"
+          },
+          {
+            "item": "Mandatory Retirement: No requirements",
+            "whereToSecure": null
+          }
+        ],
+        "steps": [
+          {
+            "client": "If it is Optional Retirement, submit the requirement. If it is mandatory, no action needed.",
+            "agency": "Receives requirement",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Officer of the Day"
+          },
+          {
+            "client": null,
+            "agency": "Updates/re-computes/reviews number of leave credits earned starting from the date of employment",
+            "feeText": "None",
+            "processingTime": "5 days",
+            "personResponsible": "Focal Person, Leave Administration; Administrative Officer V; Chief, RMD Division; CGDH I/CHRMO"
+          },
+          {
+            "client": null,
+            "agency": "Prepares and reviews the retirement and financial documents",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Focal Person, Leave Administration; Administrative Officer V; Chief, RMD Division; CGDH I/CHRMO"
+          },
+          {
+            "client": null,
+            "agency": "Transmits the retirement and financial documents, for processing, approval and release by concerned offices",
+            "feeText": "None",
+            "processingTime": "5 days",
+            "personResponsible": "Officer of the Day; Focal Person, Leave Administration; Administrative Officer V; Chief, RMD Division; CGDH I/HRM Officer"
+          }
+        ],
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The TOTAL row is empty in the extracted text; the figures here were read from the running total in the final step's cell and must be confirmed against the PDF.",
+          "10 minutes + 5 days + 1 day + 5 days = 11 days & 10 mins., which does not match the running total of 10 days & 10 mins. One of the step durations is misread."
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        }
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-people",
+    "categories": [
+      {
+        "id": "hiring-and-engagement",
+        "title": "Applying and getting hired",
+        "icon": "bi-person-plus",
+        "services": [
+          "hrmo-recruitment-selection-placement",
+          "hrmo-work-immersion-ojt-deployment",
+          "hrmo-contract-of-services-job-order-appointments"
+        ]
+      },
+      {
+        "id": "records-and-certificates",
+        "title": "Certificates and records",
+        "icon": "bi-file-earmark-text",
+        "services": ["hrmo-certificate-of-employment", "hrmo-service-record"]
+      },
+      {
+        "id": "leave-travel-retirement",
+        "title": "Leave, travel and retirement",
+        "icon": "bi-calendar-check",
+        "services": [
+          "hrmo-travel-orders-ld",
+          "hrmo-application-for-leave",
+          "hrmo-processing-retirement"
+        ]
+      }
+    ],
+    "entryPoints": [],
+    "personnel": [],
+    "contact": null
+  }
+}

@@ -22,3 +22,7 @@ __pycache__/
 # Agent tooling: .claude/skills/ are symlinks into .agents/skills/
 .claude/skills/
 .impeccable/
+
+# Citizen's Charter PDFs (19 MB). The committed transcripts carry the content and
+# pin each source by sha256; scripts/data/fetch-charters.js re-downloads on demand.
+docs/sources/citizens-charter/pdf/
