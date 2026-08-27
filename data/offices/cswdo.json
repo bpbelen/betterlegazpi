@@ -1,0 +1,482 @@
+{
+  "slug": "cswdo",
+  "route": "service-details/cswdo-services.html",
+  "charter": {
+    "office": "City Social Welfare and Development Office",
+    "abbreviation": "CSWDO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-SOCIAL-WELFARE-AND-DEVELOPMENT-OFFICE-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/cswdo.md",
+    "personnel": [
+      {
+        "name": "Cecilia E. Arcilla",
+        "position": "City Social Welfare and Development Officer",
+        "unit": "City Social Welfare and Development Office",
+        "isHead": true
+      },
+      { "name": "Ruth C. Azupardo", "position": "Admin Officer IV", "unit": "Admin Division" },
+      {
+        "name": "Jesusa A. Del Rosario",
+        "position": "Liaison Officer (Admin Aide I)",
+        "unit": "Admin Division"
+      },
+      {
+        "name": "Raymond Carl Dela Torre",
+        "position": "Admin Aide I",
+        "unit": "Admin Division"
+      },
+      { "name": "Lea A. Daet", "position": "Section Staff", "unit": "Section Staff" },
+      { "name": "Julie Ann B. Magalang", "position": "Section Staff", "unit": "Section Staff" },
+      { "name": "Cynthia L. Olimpo", "position": "Section Staff", "unit": "Section Staff" },
+      {
+        "name": "Ayessa R. Guevara",
+        "position": "Social Welfare Officer I",
+        "unit": "Section Staff"
+      },
+      {
+        "name": "Jennifer M. Buendia",
+        "position": "Social Welfare Officer I",
+        "unit": "Section Staff"
+      },
+      {
+        "name": "Maricris B. Dagta",
+        "position": "Social Welfare Assistant",
+        "unit": "Section Staff"
+      },
+      { "name": "Feoby Fynn F. Balete", "position": "Section Staff", "unit": "Section Staff" },
+      { "name": "Sharmel M. Belaza", "position": "Section Staff", "unit": "Section Staff" },
+      {
+        "name": "Jean Clarisse N. Gallardo",
+        "position": "Section Staff",
+        "unit": "Section Staff"
+      },
+      { "name": "Kyla Chantele Azotea", "position": "Section Staff", "unit": "Section Staff" },
+      { "name": "Hony Lyn E. Neptuno", "position": "Section Staff", "unit": "Section Staff" },
+      {
+        "name": "Noli A. Perez",
+        "position": "Social Welfare Assistant",
+        "unit": "Emergency / Disaster Assistance Section (EDAS)"
+      }
+    ],
+    "personnelNotes": [
+      "The charter also names Hisham B. Ismail, City Mayor, who signs Certificates of Eligibility and Solo Parent IDs. He is not CSWDO staff and is listed here only for that reason."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Answer the Customer Feedback Form and drop it in the Suggestion Box at the CSWDO.",
+      "howFeedbackIsProcessed": "Every 4:30pm the Info Desk Officer opens the drop box, compiles all forms and submits them to the Administrative Officer IV. Feedback requiring an answer is forwarded to the relevant division or section, which must answer within three (3) working days of receipt. The office's answer is then relayed to the client.",
+      "contacts": ["cswdolegazpi@yahoo.com", "cswdo.leg@legazpi.gov.ph"]
+    },
+    "services": [
+      {
+        "id": "cswdo-financial-assistance-aics",
+        "number": 1,
+        "charterGroup": "External Services",
+        "title": "Limited Financial Assistance / Assistance to Individuals in Crisis Situations (AICS)",
+        "description": "Limited cash extended to clients in crisis due to death, illness, calamity or other disasters that befell the family. It also covers assistance for transportation, education and livelihood for those who cannot qualify under the Self-Employment Assistance Program.",
+        "office": "City Social Welfare and Development Office (CSWDO)",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Citizen (G2C)"],
+        "whoMayAvail": "Residents of Legazpi City in need of financial assistance",
+        "requirements": [
+          {
+            "item": "Proof of identity (old Voter's ID or certification, UMID, driver's licence, 4Ps ID, barangay ID, national ID, or any other ID with name, picture and date of birth). Original, returned after validation.",
+            "whereToSecure": "PhilHealth / COMELEC / GSIS / SSS / LTO / Pag-IBIG / Post Office / Philippine Statistics Authority / DSWD / Barangay"
+          },
+          {
+            "item": "Barangay Certification of Indigency or Residency, original",
+            "whereToSecure": "Barangay Hall"
+          },
+          {
+            "item": "For medical assistance: Medical Certificate, abstract, prescription, quotation, laboratory order or hospital bill. Photocopy and original, returned after validation.",
+            "whereToSecure": "Hospital Records Division or Billing Section where the patient is confined, or the attending physician"
+          },
+          {
+            "item": "For educational assistance: Certificate of Enrolment. Photocopy and original, returned after validation.",
+            "whereToSecure": "School Registrar's Office where the student is enrolled"
+          },
+          {
+            "item": "For burial assistance: Death Certificate, original, returned after validation",
+            "whereToSecure": "Local Civil Registrar or National Statistics Office (NSO)"
+          },
+          {
+            "item": "CSWDO's Certificate of Eligibility (CE) form",
+            "whereToSecure": "CSWDO"
+          },
+          {
+            "item": "Authorisation letter, if a representative will claim the cash",
+            "whereToSecure": "Client listed on the Certificate of Eligibility"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit your request.",
+            "agency": "Search for the client's General Intake Sheet (GIS) in the database and files, and route the client to the section concerned.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Reception Desk"
+          },
+          {
+            "client": "Submit for interview and present the required documents.",
+            "agency": "Conduct a detailed interview and assessment of the case. If the client does not qualify, inform them immediately after the assessment.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Section Staff"
+          },
+          {
+            "client": null,
+            "agency": "If the client qualifies, gather collateral information through home visits (if needed), phone calls and texts, then refer the case with complete documents to the Emergency / Disaster Assistance Section (EDAS).",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Section Staff"
+          },
+          {
+            "client": null,
+            "agency": "Prepare the Certificate of Eligibility (CE) for the client to sign, and submit it with complete documents to the Admin Division as the basis for a cash advance.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Section Staff"
+          },
+          {
+            "client": "Wait to be told the schedule of release.",
+            "agency": "Submit a batch of Certificates of Eligibility to the Head of Office and the City Mayor's Office for signature, then prepare and process the cash advance and inform EDAS once funds are available.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Admin Division"
+          },
+          {
+            "client": "Claim the assistance.",
+            "agency": "EDAS informs all clients to claim their assistance and coordinates with the sections, then releases the financial assistance to the client.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Emergency / Disaster Assistance Section (EDAS)"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "2 working days and 4 hours and 35 minutes"
+        },
+        "notes": [
+          "If you are outside the City, tell the CSWDO when you can return to Legazpi to claim the assistance. If you have an appointment elsewhere, leave an authorisation letter and your ID with a family member who will claim the cash.",
+          "The charter marks several steps as paused-clock, meaning the processing time is suspended while the office waits on something outside its control."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Steps sum to 2 days, 4 hrs. & 25 minutes against a stated total of 2 working days and 4 hours and 35 minutes, a gap of 10 minutes. A step duration is likely misread or a step is missing.",
+          "The charter names eleven section staff for these steps rather than assigning one per step; the steps record the section, per ADR 0002."
+        ]
+      },
+      {
+        "id": "cswdo-certificate-of-indigency",
+        "number": 2,
+        "charterGroup": "External Services",
+        "title": "Certificate of Indigency, assessment report, social case study or referral",
+        "description": "Documents issued by registered social workers and authorised social welfare staff, which clients use to seek help from other agencies for education, burial, medical, counselling, psychiatric, legal, shelter and livelihood needs, and for correcting errors in birth certificates and marriage contracts. Receiving agencies include Simon of Cyrene, the Provincial Social Welfare and Sweepstake Office, the IBP, the Public Attorney's Office and other hospitals, agencies, foundations and NGOs. The extent and amount of assistance depends on the receiving party, which may also decline the request.",
+        "office": "City Social Welfare and Development Office (CSWDO)",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Citizen (G2C)"],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Proof of identity (old Voter's ID or certification, UMID, driver's licence, 4Ps ID, barangay ID, national ID, or any other ID with name, picture and date of birth). Original, returned after validation.",
+            "whereToSecure": "PhilHealth / COMELEC / GSIS / SSS / LTO / Pag-IBIG / Post Office / Philippine Statistics Authority / DSWD / Barangay"
+          },
+          {
+            "item": "Barangay Certification of Indigency or Residency, original",
+            "whereToSecure": "Barangay Hall"
+          },
+          {
+            "item": "For burial assistance: Death Certificate, photocopy and original (clear and without alteration), returned after validation",
+            "whereToSecure": "Local Civil Registrar"
+          },
+          {
+            "item": "For medical assistance: Medical Certificate, abstract or hospital bill. Original, returned after validation.",
+            "whereToSecure": "Hospital Records Division or Billing Section where the patient is confined"
+          },
+          {
+            "item": "For educational assistance: Certificate of Enrolment, original, returned after validation",
+            "whereToSecure": "School Registrar's Office where the student is enrolled"
+          },
+          {
+            "item": "For legal assistance: any proof of the legal issue, if available",
+            "whereToSecure": "Lawyer / Prosecutor's Office / IBP"
+          },
+          {
+            "item": "For correction of a clerical error: Marriage contract or Birth Certificate, original, returned after validation",
+            "whereToSecure": "Philippine Statistics Authority (PSA) or Local Civil Registrar"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit your request.",
+            "agency": "Search for the client's General Intake Sheet (GIS) in the database and files, and route the client to the section concerned.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Reception Desk"
+          },
+          {
+            "client": "Submit for interview and present the required documents.",
+            "agency": "Conduct a detailed interview and assessment of the case. If the client does not qualify, inform them immediately after the assessment.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Section Staff"
+          },
+          {
+            "client": null,
+            "agency": "If the client qualifies, gather collateral information through home visits (if needed), phone calls and texts.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Section Staff"
+          },
+          {
+            "client": null,
+            "agency": "Prepare the Certificate of Indigency, assessment report, social case study report or referral for the signature of the Head of Office.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Section Staff"
+          },
+          {
+            "client": "Claim the requested document.",
+            "agency": "Issue the Certificate of Indigency, assessment report, social case study report or referral, with instructions on how to proceed.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Social Welfare and Development Officer"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "2 working days and 35 minutes" },
+        "notes": [
+          "If the CSWDO already holds an updated record of the client, the collateral interview and home visit are omitted.",
+          "The charter marks the collateral-information and document-preparation steps as paused-clock."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Derived total is 1 day and 35 minutes against a stated 2 working days and 35 minutes. The charter counts the collateral-information step as two days or a second day-long step is missing from the extraction.",
+          "The charter names the section staff as a pool rather than assigning one per step."
+        ]
+      },
+      {
+        "id": "cswdo-philhealth-financial-capability",
+        "number": 3,
+        "charterGroup": "External Services",
+        "title": "PhilHealth Universal Health Care certification of financial capability",
+        "description": "Enrolment of new members and renewal of existing members through a certification issued by a CSWDO social worker after a thorough assessment in accordance with the DOH classification of indigence. With the Universal Health Care Act of 2019, the City's coverage has expanded to most qualified persons in the City, including college students.",
+        "office": "City Social Welfare and Development Office (CSWDO)",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Citizen (G2C)"],
+        "whoMayAvail": "Residents of Legazpi City",
+        "requirements": [
+          {
+            "item": "Proof of identity (old Voter's ID or certification, UMID, driver's licence, 4Ps ID, barangay ID, national ID, or any other ID with name, picture and date of birth). Original, returned after validation.",
+            "whereToSecure": "PhilHealth / COMELEC / GSIS / SSS / LTO / Pag-IBIG / Post Office / Philippine Statistics Authority / DSWD / Barangay"
+          },
+          {
+            "item": "Barangay Certification of Indigency, original",
+            "whereToSecure": "Barangay Hall"
+          },
+          {
+            "item": "Marriage contract (if married) and updated Birth Certificate. Original, returned after validation.",
+            "whereToSecure": "Philippine Statistics Authority (PSA) or Local Civil Registrar"
+          },
+          {
+            "item": "Authorisation letter, if a representative will claim the certification",
+            "whereToSecure": "PhilHealth applicant"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit your request.",
+            "agency": "Search for the client's General Intake Sheet (GIS) in the database and files, and route the client to the section concerned.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Reception Desk"
+          },
+          {
+            "client": "Submit for interview and present the required documents.",
+            "agency": "Conduct a detailed interview and assessment of the case, validate it, and prepare the Certificate of Financial Assessment for the signature of the Head of Office.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Section Staff"
+          },
+          {
+            "client": "Claim the document.",
+            "agency": "Issue the Certificate of Financial Assessment with instructions on how to proceed.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Emergency / Disaster Assistance Section (EDAS) Staff"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "1 hour and 15 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": ["Derived total is 1 hr. & 15 minutes, matching the stated total."]
+      },
+      {
+        "id": "cswdo-solo-parent-id",
+        "number": 4,
+        "charterGroup": "External Services",
+        "title": "Solo Parent ID",
+        "description": "Issuance of Solo Parent Identification Cards to qualified residents. The charter lists thirteen categories of solo parent, each with its own supporting document.",
+        "office": "City Social Welfare and Development Office (CSWDO)",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Citizen (G2C)"],
+        "whoMayAvail": "Residents of Legazpi City",
+        "requirements": [
+          {
+            "item": "Proof of identity (old Voter's ID or certification, UMID, driver's licence, 4Ps ID, barangay ID, national ID, or any other ID with name, picture and date of birth). Original, returned after validation.",
+            "whereToSecure": "PhilHealth / COMELEC / GSIS / SSS / LTO / Pag-IBIG / Post Office / Philippine Statistics Authority / DSWD / Barangay"
+          },
+          {
+            "item": "Birth Certificate of the child or children",
+            "whereToSecure": "Philippine Statistics Authority (PSA) or Local Civil Registrar (LCR)"
+          },
+          { "item": "Barangay Certificate of Residency", "whereToSecure": "Barangay" },
+          { "item": "Two (2) identical 1x1 pictures", "whereToSecure": "Photo centre" },
+          {
+            "item": "Sworn affidavit declaring that the solo parent is not cohabiting with a partner and has sole parental care and support of the child or children",
+            "whereToSecure": "Public Attorney's Office (PAO) or private attorney"
+          },
+          {
+            "item": "The supporting document for your category: medical record of an incapacitated spouse; judicial decree of legal separation or affidavit of two disinterested persons; decree of nullity, annulment or recognition of foreign divorce; marriage certificate or affidavit plus police or barangay record of abandonment; Overseas Employment Certificate, passport stamps showing twelve continuous months of overseas work and employment contract; CENOMAR; proof of guardianship, foster care or adoption; death certificate or records evidencing disappearance of the parent or guardian for at least six months; or medical record of pregnancy.",
+            "whereToSecure": "Doctor or specialist / Court / PAO or private attorney / PNP or Barangay / OWWA / Employer / PSA or LCR / DSWD or Court / OB or doctor"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit your request.",
+            "agency": "Assist the client to the Solo Parent Unit.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Reception Desk"
+          },
+          {
+            "client": "Submit for interview, assessment and orientation.",
+            "agency": "Ask questions to determine whether the client qualifies. If not, inform them.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Solo Parent Unit"
+          },
+          {
+            "client": "Wait, and answer the questions accurately.",
+            "agency": "Conduct collateral information gathering through home visits (if needed), phone calls and texts.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Section Staff"
+          },
+          {
+            "client": "Submit the application and requirements.",
+            "agency": "If the client qualifies, receive and review the application with requirements.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Section Staff"
+          },
+          {
+            "client": null,
+            "agency": "Process the Solo Parent ID and submit it to the Head of Office and the City Mayor for signature.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "City Social Welfare and Development Officer"
+          },
+          {
+            "client": "Return to the CSWDO on being notified.",
+            "agency": "Inform the client to claim the ID, then issue the Solo Parent ID.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Section Staff"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "2 working days and 41 minutes" },
+        "notes": [
+          "The charter marks the collateral-information and signature steps as paused-clock."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Steps sum to 2 days & 28 minutes against a stated 2 working days and 41 minutes, a gap of 13 minutes. A step duration is likely misread or a step is missing.",
+          "The final two agency actions both show 5 minutes in the source and are combined here into one 10-minute step."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-heart",
+    "categories": [
+      {
+        "id": "financial-help",
+        "title": "Financial help in a crisis",
+        "icon": "bi-life-preserver",
+        "services": ["cswdo-financial-assistance-aics"]
+      },
+      {
+        "id": "certificates-and-referrals",
+        "title": "Certificates and referrals",
+        "icon": "bi-file-earmark-text",
+        "services": ["cswdo-certificate-of-indigency", "cswdo-philhealth-financial-capability"]
+      },
+      {
+        "id": "ids-and-registration",
+        "title": "IDs and registration",
+        "icon": "bi-person-vcard",
+        "services": ["cswdo-solo-parent-id"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "help-with-a-hospital-bill",
+        "title": "Help with a hospital bill or medicine",
+        "presentation": "rail",
+        "icon": "bi-hospital",
+        "services": [
+          "cswdo-financial-assistance-aics",
+          "cswdo-certificate-of-indigency",
+          "cswdo-philhealth-financial-capability"
+        ]
+      },
+      {
+        "id": "help-with-a-burial",
+        "title": "Help with a burial",
+        "presentation": "rail",
+        "icon": "bi-flower2",
+        "services": ["cswdo-financial-assistance-aics", "cswdo-certificate-of-indigency"]
+      },
+      {
+        "id": "help-with-school-costs",
+        "title": "Help with school costs",
+        "presentation": "rail",
+        "icon": "bi-mortarboard",
+        "services": ["cswdo-financial-assistance-aics", "cswdo-certificate-of-indigency"]
+      },
+      {
+        "id": "raising-a-child-alone",
+        "title": "Raising a child on your own",
+        "presentation": "rail",
+        "icon": "bi-person-hearts",
+        "services": ["cswdo-solo-parent-id"]
+      },
+      {
+        "id": "getting-philhealth-cover",
+        "title": "Getting PhilHealth cover",
+        "presentation": "rail",
+        "icon": "bi-shield-plus",
+        "services": ["cswdo-philhealth-financial-capability"]
+      }
+    ],
+    "searchAliases": {
+      "cswdo-financial-assistance-aics": [
+        "aics",
+        "ayuda",
+        "cash assistance",
+        "burial",
+        "libing",
+        "medical assistance",
+        "tulong"
+      ],
+      "cswdo-certificate-of-indigency": [
+        "indigency",
+        "certificate of indigency",
+        "social case study",
+        "referral"
+      ],
+      "cswdo-philhealth-financial-capability": ["philhealth", "universal health care", "uhc"],
+      "cswdo-solo-parent-id": ["solo parent", "single parent", "solo parent id"]
+    },
+    "contact": null
+  }
+}

@@ -438,9 +438,11 @@ function renderPersonnel(office) {
   // Whoever heads the office is pulled out of the roster and shown on their own.
   // Thirty-six identical cards gave the City Treasurer the same visual weight as an
   // Admin Aide, which is wrong about how the office actually works.
-  const HEAD_TITLES =
-    /^(city treasurer|assistant city treasurer|city (accountant|assessor|engineer|agriculturist)|cgdh|department head|officer[- ]in[- ]charge)/i;
-  const head = personnel.find((p) => HEAD_TITLES.test(p.position ?? ''));
+  // Marked in the data rather than guessed from the job title: department heads
+  // are named a dozen different ways across the charters ("City Treasurer", "City
+  // Social Welfare and Development Officer", "CGDH I"), and a regex that fails to
+  // keep up silently promotes the wrong person instead of nobody.
+  const head = personnel.find((p) => p.isHead);
   const rest = personnel.filter((p) => p !== head);
 
   const units = [...new Set(rest.map((p) => p.unit ?? 'Office'))];

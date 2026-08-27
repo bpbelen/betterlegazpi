@@ -11,7 +11,8 @@
       {
         "name": "Sheila R. Nas",
         "position": "City Agriculturist",
-        "unit": "City Agriculture Office"
+        "unit": "City Agriculture Office",
+        "isHead": true
       }
     ],
     "feedbackMechanism": {
@@ -31,14 +32,26 @@
         "transactionTypes": ["Government to Client (G2C)"],
         "whoMayAvail": "Farmers, Fisherfolks, Schools, Religious Groups, Students, Entrepreneurs, Employees, Government Office, CSOs and Walk-in Clients",
         "requirements": [
-          { "item": "Request Form", "whereToSecure": "City Agriculture Office" },
-          { "item": "RSBSA Registration", "whereToSecure": "City Agriculture Office" },
+          {
+            "item": "Request Form",
+            "whereToSecure": "City Agriculture Office"
+          },
+          {
+            "item": "RSBSA Registration",
+            "whereToSecure": "City Agriculture Office"
+          },
           {
             "item": "Request letter from the President of the association or organisation",
             "whereToSecure": "Association or organisation concerned"
           },
-          { "item": "Approved letter from the City Mayor", "whereToSecure": "City Mayor's Office" },
-          { "item": "RSBSA ID", "whereToSecure": "City Agriculture Office" }
+          {
+            "item": "Approved letter from the City Mayor",
+            "whereToSecure": "City Mayor's Office"
+          },
+          {
+            "item": "RSBSA ID",
+            "whereToSecure": "City Agriculture Office"
+          }
         ],
         "steps": [
           {
@@ -91,7 +104,10 @@
             "personResponsible": "Officer of the Day"
           }
         ],
-        "statedTotals": { "feeText": null, "processingTime": null },
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
         "notes": [],
         "verified": false,
         "verifyNotes": [
@@ -111,7 +127,12 @@
         "classification": "Simple",
         "transactionTypes": ["Government to Client (G2C)"],
         "whoMayAvail": "Farmers, Fisherfolks, Schools, Religious Groups, Students, Entrepreneurs, Employees, Government Office, CSOs and Walk-in Clients",
-        "requirements": [{ "item": "Request Form", "whereToSecure": "City Agriculture Office" }],
+        "requirements": [
+          {
+            "item": "Request Form",
+            "whereToSecure": "City Agriculture Office"
+          }
+        ],
         "steps": [
           {
             "client": "Ask for agri-fishery technical assistance or raise a query.",
@@ -128,7 +149,10 @@
             "personResponsible": "Officer of the Day"
           }
         ],
-        "statedTotals": { "feeText": null, "processingTime": null },
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
         "notes": [
           "The charter marks the 15 minutes as applying under normal circumstances, per transaction."
         ],
@@ -185,7 +209,10 @@
             "personResponsible": "Officer of the Day"
           }
         ],
-        "statedTotals": { "feeText": null, "processingTime": null },
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
         "notes": [],
         "verified": false,
         "verifyNotes": [
