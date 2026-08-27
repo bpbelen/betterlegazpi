@@ -601,7 +601,6 @@
 }
 
 @media (max-width: 575px) {
-  .quick-stats,
   .staff-grid {
     grid-template-columns: 1fr;
   }
@@ -638,6 +637,22 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-bottom: 24px;
+}
+
+/* These two have to sit *after* the base rule above, not with the other breakpoints
+   further up the file: same specificity, so source order decides. Every hub page used
+   to carry them in its own <style> block, which is the only reason the row ever
+   collapsed — the copies up there had already been overridden and did nothing. */
+@media (max-width: 768px) {
+  .quick-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .quick-stats {
+    grid-template-columns: 1fr;
+  }
 }
 
 .process-table th {

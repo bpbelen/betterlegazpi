@@ -70,6 +70,21 @@ test('minutes roll into hours, hours never roll into days', () => {
   });
 });
 
+test('reads fractions in both spellings the charters use', () => {
+  // OCENR writes its webinars as "2.5 hrs" and its seedling release as "½ Day".
+  assert.deepEqual(comps('2.5 hrs'), { days: 0, hours: 2, minutes: 30 });
+  assert.deepEqual(comps('1.25 hours'), { days: 0, hours: 1, minutes: 15 });
+  assert.deepEqual(comps('½ Day'), { days: 0.5, hours: 0, minutes: 0 });
+  assert.deepEqual(comps('1½ hrs.'), { days: 0, hours: 1, minutes: 30 });
+});
+
+test('a fractional hour settles into minutes; a fractional day does not', () => {
+  // An hour is a defined quantity, so half of one is 30 minutes. A charter day has no
+  // stated length, so half of one stays half a day rather than becoming four hours.
+  assert.equal(formatDuration(comps('2.5 hrs & 25 minutes')), '2 hrs. & 55 minutes');
+  assert.equal(formatDuration(comps('½ day & 30 minutes')), '0.5 days & 30 minutes');
+});
+
 test('unrecognized durations are reported, not silently counted as zero', () => {
   const { unrecognized, text } = sumSteps([
     { processingTime: '10 minutes' },
@@ -141,4 +156,26 @@ test('reconciles against real published charter totals', () => {
     { processingTime: '5 days' },
   ];
   assert.equal(sumSteps(steps).text, '29 days, 3 hrs. & 20 minutes');
+
+  // OCENR, Environmental Certificate by virtual seminar (non-compliant): the charter's
+  // own 2 hrs. & 55 minutes only reconciles if "2.5 hrs" is read as a fraction.
+  const ocenrWebinar = sumSteps([
+    { processingTime: '15 minutes' },
+    { processingTime: '2.5 hrs' },
+    { processingTime: '10 minutes per certificate' },
+  ]);
+  assert.equal(ocenrWebinar.text, '2 hrs. & 55 minutes');
+  assert.ok(compareToStated(ocenrWebinar, '2 Hours and 55 Minutes').agrees);
+
+  // OCENR, Certificate of No Objection to Cut Tree: days stay days.
+  const ocenrTree = sumSteps([
+    { processingTime: '5 minutes' },
+    { processingTime: '15 minutes' },
+    { processingTime: '1 day' },
+    { processingTime: '5 days (depending on the complexity of the request)' },
+    { processingTime: '10 minutes' },
+    { processingTime: '10 minutes' },
+  ]);
+  assert.equal(ocenrTree.text, '6 days & 40 minutes');
+  assert.ok(compareToStated(ocenrTree, '6 days and 40 minutes').agrees);
 });

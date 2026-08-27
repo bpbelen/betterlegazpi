@@ -15,7 +15,23 @@
  *
  * Rate qualifiers ("1 hr/applicant") are recorded but do not change the arithmetic —
  * they describe a rate, and the charter's own totals treat them as a single unit.
+ *
+ * Charters also write fractions two ways — a decimal ("2.5 hrs") and a vulgar fraction
+ * glyph ("½ Day"). Both are read. A fractional *hour* settles into minutes, since an
+ * hour is a defined quantity; a fractional *day* is left alone, because a working day
+ * has no stated length and half of an unknown is still unknown.
  */
+
+/** Vulgar fraction glyphs the charters use in place of a decimal. */
+const FRACTIONS = { '¼': 0.25, '½': 0.5, '¾': 0.75 };
+const FRACTION_RE = /(\d*)\s*([¼½¾])/g;
+
+/** Rewrites "½ Day" as "0.5 Day" so one numeric pattern covers both spellings. */
+function expandFractions(text) {
+  return text.replace(FRACTION_RE, (_, whole, glyph) =>
+    String((Number(whole) || 0) + FRACTIONS[glyph])
+  );
+}
 
 const UNIT_PATTERNS = [
   { unit: 'days', re: /(\d+(?:\.\d+)?)\s*(?:working\s+)?(?:d|day|days)\b\.?/gi },
@@ -40,10 +56,12 @@ function parseDuration(text) {
   const out = { ...ZERO(), rate: null, raw: text ?? null, recognized: false };
   if (!text || typeof text !== 'string') return out;
 
+  const expanded = expandFractions(text);
+
   for (const { unit, re } of UNIT_PATTERNS) {
     re.lastIndex = 0;
     let m;
-    while ((m = re.exec(text)) !== null) {
+    while ((m = re.exec(expanded)) !== null) {
       out[unit] += Number(m[1]);
       out.recognized = true;
     }
@@ -55,12 +73,20 @@ function parseDuration(text) {
   return out;
 }
 
-/** Rolls minutes up into hours. Hours are never rolled into days — see the note above. */
+/**
+ * Rolls minutes up into hours. Hours are never rolled into days — see the note above.
+ *
+ * A fractional hour ("2.5 hrs") settles down into minutes first, so a charter's
+ * "2.5 hrs" plus "25 minutes" reads back as "2 hrs. & 55 minutes" rather than
+ * "2.5 hrs. & 25 minutes". Fractional days are left as they are for the same reason
+ * days never become hours: a working day has no stated length to divide.
+ */
 function normalize(total) {
-  const minutes = Math.round(total.minutes);
+  const wholeHours = Math.floor(total.hours);
+  const minutes = Math.round(total.minutes + (total.hours - wholeHours) * 60);
   return {
     days: total.days,
-    hours: total.hours + Math.floor(minutes / 60),
+    hours: wholeHours + Math.floor(minutes / 60),
     minutes: minutes % 60,
   };
 }
@@ -93,6 +119,9 @@ function sumSteps(steps) {
   return { ...n, text: formatDuration(n), unrecognized };
 }
 
+/** Drops a trailing ".0" so a whole number never prints as "1.0". */
+const trim = (v) => String(Number(v.toFixed(2)));
+
 const PLURAL = {
   days: (v) => (v === 1 ? 'day' : 'days'),
   hours: (v) => (v === 1 ? 'hr.' : 'hrs.'),
@@ -105,7 +134,7 @@ const PLURAL = {
  */
 function formatDuration({ days, hours, minutes }) {
   const parts = [];
-  if (days) parts.push(`${days} ${PLURAL.days(days)}`);
+  if (days) parts.push(`${trim(days)} ${PLURAL.days(days)}`);
   if (hours) parts.push(`${hours} ${PLURAL.hours(hours)}`);
   if (minutes) parts.push(`${minutes} ${PLURAL.minutes(minutes)}`);
 
@@ -142,7 +171,7 @@ function compareToStated(derivedComponents, statedText) {
     derivedComponents.hours * 60 + derivedComponents.minutes - (s.hours * 60 + s.minutes);
 
   const parts = [];
-  if (dayGap) parts.push(`${Math.abs(dayGap)} ${PLURAL.days(Math.abs(dayGap))}`);
+  if (dayGap) parts.push(`${trim(Math.abs(dayGap))} ${PLURAL.days(Math.abs(dayGap))}`);
   if (minuteGap) {
     const mins = Math.abs(minuteGap);
     const h = Math.floor(mins / 60);

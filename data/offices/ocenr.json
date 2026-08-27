@@ -1,0 +1,1040 @@
+{
+  "slug": "ocenr",
+  "route": "service-details/ocenr-services.html",
+  "charter": {
+    "office": "Office of the City Environment and Natural Resources",
+    "abbreviation": "OCENR",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-ENVIRONMENT-AND-NARURAL-RESOURCES-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/ocenr.md",
+    "personnel": [
+      {
+        "name": "Engr. Linno Benju Q. Calleja",
+        "position": "OIC-City ENRO / Engineer IV",
+        "unit": "Office of the City Environment and Natural Resources",
+        "isHead": true
+      },
+      {
+        "name": "Rhoderic M. Abache",
+        "position": "Supervising Environmental Management Specialist",
+        "unit": "Office of the City Environment and Natural Resources"
+      }
+    ],
+    "personnelNotes": [
+      "The charter names only these two officers, as its contact persons for the Contact Center ng Bayan, the Presidential Complaint Center and ARTA. The rest of the office is identified in the process tables by position only."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Answer the Feedback Form at the OCENR frontline desk and drop it in the drop box, or hand it to the Officer of the Day. You can also call 0946-599-0597.",
+      "howFeedbackIsProcessed": "The Administrative Division checks what the feedback is about within one working day and passes it to the division concerned. Once that division replies, the office contacts you by email, text or phone. Complaints go on the Complaint Form (CSC Form No. 3) or by email, and need your full name, address and contact details, an account of what happened, any evidence, and the name of the person being complained about. The Administrative Division reads complaints daily, coordinates with the division concerned, investigates where needed, then writes an Incident Report for the Legal Office. The Legal Office sends its findings to the City Mayor, copy to OCENR, for final action.",
+      "contacts": ["eswm_ocenrlegazpi@yahoo.com"]
+    },
+    "services": [
+      {
+        "id": "ocenr-permit-to-dump",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "External Services",
+        "title": "Getting a Permit to Dump at the city disposal facility",
+        "description": "Permission for an individual or a firm to bring garbage directly to the city's designated disposal facility, granted case by case. Ordinary household waste is collected from each barangay's Materials Recovery Facility or Drop-Off Center instead, under the city's timed and scheduled segregated collection and its \"No Segregation, No Collection\" policy.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of request, 1 original and 1 photocopy",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Duly filled-out Permit to Dump Form",
+            "whereToSecure": "OCENR"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of request to the Desk Officer one week before the scheduled date. (OCENR Front Desk)",
+            "agency": "The Desk Officer reviews the request and issues the Permit to Dump Form.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Fill out the Permit to Dump Form. (OCENR Front Desk)",
+            "agency": "The Desk Officer reviews the accomplished form and checks that all fields are properly filled out.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Allow inspection of the garbage for disposal. (Disposal site or the client's location)",
+            "agency": "Technical personnel conduct an ocular inspection of the garbage subject for disposal.",
+            "feeText": "None",
+            "processingTime": "1 hr. (depends on location)",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Wait for the inspection report and recommendation. (OCENR Technical Office)",
+            "agency": "Administrative personnel prepare the inspection report and recommendation for approval.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Claim the Permit to Dump, or receive the explanation if the request is declined. (OCENR Front Desk)",
+            "agency": "The City ENRO issues the Permit to Dump if the request is approved.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": null,
+            "agency": "The City ENRO explains the reason for disapproval if the request is declined.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Personnel"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "1 Hour and 35 Minutes"
+        },
+        "notes": [
+          "The one-hour ocular inspection depends on where the waste is; the charter says so on the step itself."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's last step lists two agency actions, one for an approved request and one for a declined request, and its own TOTAL counts both. They are recorded as two steps here so the derived total reconciles with the charter's 1 Hour and 35 Minutes. Confirm against the PDF that both were intended to be counted.",
+          "Check that the 10-minute evaluation and recommendation step belongs to Step 4 and not to Step 3; the extracted columns interleave at the page break."
+        ]
+      },
+      {
+        "id": "ocenr-slf-visitors-pass",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "External Services",
+        "title": "Visiting the city Sanitary Landfill Facility",
+        "description": "An entry pass to visit the city's Sanitary Landfill Facility, which LGUs, students and business groups regularly tour. Inside, areas are marked Yellow Zone (safe) and Red Zone (critical), and OCENR staff provide technical assistance to visitors. An orientation can be arranged on request.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of request, 1 original and 1 photocopy",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Duly filled-out SLF Visitors Entry Pass Form",
+            "whereToSecure": "OCENR"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of request to the Desk Officer. (OCENR Front Desk)",
+            "agency": "The Information Desk Officer refers the client to the OCENR personnel in charge of the project.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": null,
+            "agency": "OCENR personnel ask the client to fill out the SLF Visitors Entry Pass Form.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Fill out the SLF Visitors Entry Pass Form. (OCENR Front Desk)",
+            "agency": "OCENR personnel check the accomplished form and ask the client whether a project orientation is needed.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Special Operations Officer III / Administrative Personnel"
+          },
+          {
+            "client": null,
+            "agency": "If an orientation is required, the City ENRO assigns technical personnel to conduct it.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Special Operations Officer III / Administrative Personnel"
+          },
+          {
+            "client": null,
+            "agency": "OCENR issues the SLF Visitors Entry Pass.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Special Operations Officer III / Administrative Personnel"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "1 hour and 18 minutes"
+        },
+        "notes": [
+          "The one-hour orientation is only counted when a visitor asks for one; the charter includes it in its own total."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter numbers two different agency actions \"1.1\" under Step 1. Both are kept, and the derived total reconciles with the charter's 1 hour and 18 minutes."
+        ]
+      },
+      {
+        "id": "ocenr-ec-webinar-noncompliant",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "External Services",
+        "title": "Environmental Certificate by online seminar, for a lapsed or missing record",
+        "description": "The Environmental Certificate a business needs before a permit to operate is issued, taken through the online seminar over Zoom. This is the route for establishments whose Certificate of Attendance has expired and for those with no record of attending the Ecological Solid Waste Management seminar at all. City Ordinance No. 0010-2008 requires every business and commercial establishment to sit the seminar.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Accomplished Environmental Baseline Data Sheet, filled out through Google Forms",
+            "whereToSecure": "Link on OCENR's official Facebook page"
+          },
+          {
+            "item": "Attendance at the virtual Environmental Webinar",
+            "whereToSecure": "OCENR sends the Zoom link to the applicant's email address"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Accomplish the Environmental Baseline Data Sheet through Google Forms.",
+            "agency": "OCENR reviews the form and sends the virtual seminar details over Zoom to the applicant's email address. Applicants with an expired Certificate of Attendance are cleared from the negative list once the Environmental Baseline Data Sheet is submitted; applicants tagged as non-compliant are cleared once they attend the virtual seminar.",
+            "feeText": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment.",
+            "feeTiers": [{ "label": "Seminar fee", "amount": 50, "currency": "PHP" }],
+            "processingTime": "15 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Attend the Environmental Webinar. (Online, over Zoom)",
+            "agency": "OCENR conducts the Environmental Webinar.",
+            "feeText": "None",
+            "processingTime": "2.5 hrs",
+            "personResponsible": "Webinar Team"
+          },
+          {
+            "client": null,
+            "agency": "OCENR prepares and prints the Environmental Certificate after the webinar for release to the client, and sends an electronic copy by email on request.",
+            "feeText": "None",
+            "processingTime": "10 minutes per certificate",
+            "personResponsible": "Administrative Staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "2 Hours and 55 Minutes"
+        },
+        "notes": [
+          "The seminar runs five afternoons a week, Monday to Friday, during the January to March business permit renewal peak, and twice a week on Tuesday and Thursday afternoons from April to December.",
+          "An Environmental Certificate is valid for three years. After that a business renews it by attending the seminar again."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The 50.00 fee cell also carries the note about the one-time assessment; check the PDF for whether any other amount applies to establishments without a Mayor's Permit.",
+          "The charter's fee column leaves the last two steps blank rather than writing \"None\". Recorded as None here."
+        ]
+      },
+      {
+        "id": "ocenr-ec-webinar-new-renewal",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "External Services",
+        "title": "Environmental Certificate by online seminar, for a new or renewing business",
+        "description": "The online Zoom route to an Environmental Certificate for a new business permit application, or a renewal where the existing certificate has not yet expired. These are processed alongside the business permit application at BPLO.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "A new or renewal business permit application where the Environmental Certificate has not yet expired. These are processed on application for the business permit at BPLO.",
+            "whereToSecure": "OCENR sends the virtual seminar details over Zoom to the applicant's email address"
+          },
+          {
+            "item": "Attendance at the virtual Environmental Webinar",
+            "whereToSecure": "OCENR"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Attend the Environmental Webinar. (Online, over Zoom)",
+            "agency": "OCENR checks the client's information in the database provided by BPLO, reviews the form, and sends the virtual seminar details over Zoom to the applicant's email address.",
+            "feeText": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment.",
+            "feeTiers": [{ "label": "Seminar fee", "amount": 50, "currency": "PHP" }],
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Staff"
+          },
+          {
+            "client": null,
+            "agency": "OCENR conducts the Environmental Webinar over Zoom.",
+            "feeText": "None",
+            "processingTime": "2.5 hrs",
+            "personResponsible": "Webinar Team"
+          },
+          {
+            "client": null,
+            "agency": "OCENR prepares and prints the Environmental Certificate after the webinar for release to the client, and sends an electronic copy by email on request.",
+            "feeText": "None",
+            "processingTime": "10 minutes per certificate",
+            "personResponsible": "Administrative Staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "2 Hours and 50 Minutes"
+        },
+        "notes": [
+          "An Environmental Certificate is valid for three years. After that a business renews it by attending the seminar again for updates on the city's environmental programmes and policies."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter numbers this service's second and third agency actions 1.1 to 1.4 under a single Step 1. They are separated here because each carries its own processing time."
+        ]
+      },
+      {
+        "id": "ocenr-ec-seminar-noncompliant",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "External Services",
+        "title": "Environmental Certificate in person, for a lapsed or missing record",
+        "description": "The same Environmental Certificate taken through the face-to-face seminar at the OCENR office, for establishments whose Certificate of Attendance has expired and for those with no record of attending the Ecological Solid Waste Management seminar.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "A new or renewal business permit application. If the Environmental Certificate is still valid, processing is done on application with BPLO.",
+            "whereToSecure": "Link on OCENR's official Facebook page"
+          },
+          {
+            "item": "Attendance at the Environmental Seminar",
+            "whereToSecure": "OCENR sends the details to the applicant's email address or mobile number"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Apply for the seminar.",
+            "agency": "OCENR reviews the form and sends the seminar details to the applicant's email address and mobile number. Applicants with an expired Certificate of Attendance are cleared from the negative list once the Environmental Baseline Data Sheet is submitted.",
+            "feeText": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment.",
+            "feeTiers": [{ "label": "Seminar fee", "amount": 50, "currency": "PHP" }],
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": null,
+            "agency": "Applicants tagged as non-compliant are cleared from the negative list once they attend the seminar.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Staff"
+          },
+          {
+            "client": "Attend the Environmental Seminar. (OCENR Office, 3rd floor)",
+            "agency": "OCENR conducts the Environmental Seminar.",
+            "feeText": "None",
+            "processingTime": "2 hrs",
+            "personResponsible": "Seminar Team"
+          },
+          {
+            "client": "Receive the Environmental Certificate.",
+            "agency": "OCENR prepares and prints the Environmental Certificate after the seminar for release to the client, and sends an electronic copy by email on request.",
+            "feeText": "None",
+            "processingTime": "3 minutes per certificate",
+            "personResponsible": "Administrative Staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "2 Hours and 23 Minutes"
+        },
+        "notes": [
+          "The seminar runs five afternoons a week, Monday to Friday, during the January to March business permit renewal peak, and twice a week on Tuesday and Thursday afternoons from April to December."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter puts the non-compliant clearing action in a lettered sub-row \"c.\" with its own 10 minutes. It is recorded as a separate step so the derived total reconciles with the charter's 2 Hours and 23 Minutes.",
+          "The charter's client column for Step 1 is blank; \"Apply for the seminar\" is supplied here. Check the PDF for the intended wording."
+        ]
+      },
+      {
+        "id": "ocenr-ec-seminar-new-renewal",
+        "number": 6,
+        "charterNumber": 6,
+        "charterGroup": "External Services",
+        "title": "Environmental Certificate in person, for a new or renewing business",
+        "description": "The face-to-face route to an Environmental Certificate for a new business permit application, or a renewal where the existing certificate has not yet expired. These are processed alongside the business permit application at BPLO.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "A new or renewal business permit application where the Environmental Certificate has not yet expired. These are processed on application for the business permit at BPLO.",
+            "whereToSecure": "OCENR sends the seminar details to the applicant's email address or mobile number"
+          },
+          {
+            "item": "Attendance at the Environmental Seminar",
+            "whereToSecure": "OCENR"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Accomplish the Environmental Baseline Data Sheet through Google Forms.",
+            "agency": "OCENR reviews the form and sends the seminar details to the applicant's email address or mobile number. Applicants with an expired Certificate of Attendance are cleared from the negative list once the Environmental Baseline Data Sheet is submitted.",
+            "feeText": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment.",
+            "feeTiers": [{ "label": "Seminar fee", "amount": 50, "currency": "PHP" }],
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Staff"
+          },
+          {
+            "client": "Attend the Environmental Seminar.",
+            "agency": "OCENR conducts the Environmental Seminar.",
+            "feeText": "None",
+            "processingTime": "2 hrs.",
+            "personResponsible": "Seminar Staff"
+          },
+          {
+            "client": "Receive the Environmental Certificate.",
+            "agency": "OCENR prepares and prints the Environmental Certificate after the seminar for release to the client, and sends an electronic copy by email on request.",
+            "feeText": "None",
+            "processingTime": "3 minutes per certificate",
+            "personResponsible": "Administrative Staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "2 Hours and 13 Minutes"
+        },
+        "notes": [
+          "An Environmental Certificate is valid for three years. After that a business renews it by attending the seminar again for updates on the city's environmental programmes and policies."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter files the client's own accomplishment of the Environmental Baseline Data Sheet as agency action 1.1. It is moved to the client column here."
+        ]
+      },
+      {
+        "id": "ocenr-no-objection-cut-tree",
+        "number": 7,
+        "charterNumber": 7,
+        "charterGroup": "External Services",
+        "title": "Getting a Certificate of No Objection to cut a tree",
+        "description": "The city's certificate saying it does not object to trees being cut. It is not the permit itself: the Permit to Cut Tree is issued by the DENR, and the DENR requires this certification from the LGU as one of its requirements. Go to DENR-PENRO Albay first for their checklist, then come here.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of request addressed to the City Mayor, attention the City ENRO, giving the mobile number of the person who will coordinate the ocular site visit. Two original copies.",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Barangay Certificate of No Objection to Cut Trees",
+            "whereToSecure": "Barangay"
+          },
+          {
+            "item": "Land title or tax declaration, for a private lot",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Map or diagram showing the trees to be cut",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Individual pictures of the trees to be cut, with their geographical coordinates",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Inventory list of the trees to be cut",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Site development plan showing the details of the project",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Authorization letter from the landowner, if the requesting party is not the property owner",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Identification card of the landowner or transacting party",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Barangay resolution or minutes of the barangay consultation meeting, for selected government projects",
+            "whereToSecure": "Barangay"
+          },
+          {
+            "item": "Environmental Compliance Certificate or Certificate of Non-Coverage (ECC/CNC), for development projects requiring one",
+            "whereToSecure": "DENR-EMB Region V"
+          },
+          {
+            "item": "Zoning certificate, for development projects requiring an ECC or CNC under City Ordinance No. 14-0011-2019, if applicable",
+            "whereToSecure": "City Planning and Development Office"
+          },
+          {
+            "item": "Locational clearance under City Ordinance No. 14-0011-2019, if applicable",
+            "whereToSecure": "City Planning and Development Office"
+          },
+          {
+            "item": "Duly accomplished Tree Replacement Undertaking",
+            "whereToSecure": "OCENR"
+          },
+          {
+            "item": "Ocular visit or inspection, once the complete requirements are submitted",
+            "whereToSecure": "OCENR"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of request with the complete requirements to the City Mayor's Office and give a duplicate copy to the OCENR Desk Officer. (City Mayor's Office / OCENR Front Desk)",
+            "agency": "The Information Desk Officer receives and records the letter, then forwards it to the City ENRO.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Wait for the instruction on evaluation. (OCENR, ENRO Office)",
+            "agency": "The City ENRO conducts an initial evaluation of the request and gives instructions to the assigned personnel.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "City ENRO"
+          },
+          {
+            "client": "Wait for the inspection schedule. (OCENR Technical Office)",
+            "agency": "The personnel in charge evaluate the documents and schedule the date of the actual inspection.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Project Development Officer III / Technical Personnel"
+          },
+          {
+            "client": "Allow inspection of the trees to be cut. (Project site)",
+            "agency": "Technical personnel conduct the ocular inspection to validate the request, then prepare the necessary certification for the City ENRO's signature.",
+            "feeText": "None",
+            "processingTime": "5 days (depending on the complexity of the request; the number of days may be shortened)",
+            "personResponsible": "Project Development Officer III / Technical Personnel"
+          },
+          {
+            "client": "Wait for review and approval. (OCENR, ENRO Office)",
+            "agency": "The City ENRO checks and reviews the Certificate of No Objection and signs it if found valid.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "City ENRO"
+          },
+          {
+            "client": "Claim the Certificate of No Objection to Cut Tree. (OCENR Front Desk)",
+            "agency": "The OCENR Information Desk Officer receives and records the signed certification for release to the client, to support the request for a Permit to Cut Tree with the DENR field office.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Personnel"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "6 days and 40 minutes"
+        },
+        "notes": [
+          "Additional documents may be asked for once the submitted requirements have been fully evaluated.",
+          "Go to DENR-PENRO Albay first to ask for their guidance and their checklist. The Tree Cutting Permit itself is issued only by them.",
+          "Processing may take longer depending on how large the request is and how many clients reach the office at the same time."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The extraction scrambles the WHERE TO SECURE column: it lists 13 sources against 15 requirements and cannot be aligned by position. Every whereToSecure value on this service is an inference and must be checked against the PDF.",
+          "Requirement 15, the ocular visit, is listed by the charter among the requirements rather than as a step. Kept where the charter puts it."
+        ]
+      },
+      {
+        "id": "ocenr-chainsaw-certification",
+        "number": 8,
+        "charterNumber": 8,
+        "charterGroup": "External Services",
+        "title": "Getting a certification to register a chainsaw",
+        "description": "The city certification the DENR requires before it will register a chainsaw. The registration itself is issued by the DENR; this is the LGU document that supports the application.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of request addressed to the City Mayor, attention the City ENRO, giving the mobile number of the person to coordinate with. Two original copies.",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Certificate of registration issued by the DENR, or a copy of the expired registration being renewed",
+            "whereToSecure": "DENR"
+          },
+          {
+            "item": "Identification card of the owner",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Official receipt or sales invoice for the purchase of the unit, or a duly notarized Affidavit of Ownership",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Barangay certification of chainsaw ownership",
+            "whereToSecure": "Barangay"
+          },
+          {
+            "item": "Pictures of the chainsaw showing the whole unit and the serial number",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Stencil of the serial number of the unit",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of request with the complete requirements to the City Mayor's Office and give a duplicate copy to the OCENR Desk Officer. (City Mayor's Office / OCENR Front Desk)",
+            "agency": "The Desk Officer receives and records the letter and forwards it to the City ENRO, who conducts an initial evaluation of the request and instructs the concerned personnel for proper action.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Wait while the documents are evaluated. (OCENR, ENRO Office)",
+            "agency": "The Desk Officer refers the documents to the personnel in charge, and technical personnel evaluate the requirements and prepare the certification.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Administrative Personnel / Project Development Officer III / Technical Personnel"
+          },
+          {
+            "client": "Wait for approval. (OCENR, ENRO Office)",
+            "agency": "The City ENRO checks, reviews and signs the certification if found valid.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "City ENRO"
+          },
+          {
+            "client": "Claim the certification for chainsaw registration. (OCENR Front Desk)",
+            "agency": "The Desk Officer records and releases the signed certification to the client, to support the request for chainsaw registration with the DENR.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Personnel"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "1 hour and 10 minutes"
+        },
+        "notes": [
+          "Additional documents may be asked for once the submitted requirements have been fully evaluated.",
+          "Go to DENR-PENRO Albay first to ask for their guidance and their checklist. The chainsaw registration itself is issued only by them.",
+          "Processing may take longer depending on how complex the request is and how many clients reach the office at the same time."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter numbers two agency actions \"1.1\" under Step 1 and gives them a single 15 minutes. They are merged into one step here."
+        ]
+      },
+      {
+        "id": "ocenr-tree-seedlings",
+        "number": 9,
+        "charterNumber": 9,
+        "charterGroup": "External Services",
+        "title": "Requesting free tree seedlings",
+        "description": "Free seedlings from the city nursery for schools, organizations, businesses and other groups running tree growing activities. The office produces and distributes them to support community greening.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of request addressed to the City Mayor, attention the City ENRO, giving the contact details of the focal person such as mobile number and email address",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Promissory of Undertaking setting out the conditions the client has to comply with",
+            "whereToSecure": "OCENR"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of request, the original copy to the City Mayor's Office and the duplicate to the OCENR Desk Officer. (City Mayor's Office / OCENR Front Desk)",
+            "agency": "The Desk Officer receives and records the request and forwards it to the City ENRO.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": null,
+            "agency": "The City ENRO evaluates the request and checks seedling availability.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "OIC-City ENRO"
+          },
+          {
+            "client": null,
+            "agency": "Technical staff prepare a Promissory of Undertaking for the client to sign.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Supervising Environmental Management Specialist / Technical Personnel"
+          },
+          {
+            "client": "Submit the signed Promissory of Undertaking to the OCENR Desk Information Officer. (OCENR Front Desk)",
+            "agency": "The OCENR Desk Information Officer releases the Seedling Withdrawal Slip, signed by the City ENRO, to the client. If the application is ineligible or seedlings are unavailable, the applicant is given proper documentation of the findings.",
+            "feeText": "None",
+            "processingTime": "½ Day, or depending on the availability of the client",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Present the Seedling Withdrawal Slip and claim the seedlings. (OCENR Nursery)",
+            "agency": "Nursery personnel prepare and release the seedlings to the client.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Nursery Personnel"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "4 hours and 35 minutes"
+        },
+        "notes": [
+          "Processing may take longer depending on how complex the request is and how many clients reach the office at the same time."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's own total of 4 hours and 35 minutes treats the \"½ Day\" step as a fixed number of hours. A charter day has no stated length, so the derived total keeps it as half a day and the two figures do not match. Ask the office what half a day means here.",
+          "The charter names two officers in the person responsible column for the second and third steps. Their names are moved to Office Personnel and the column carries their positions, per the convention that the process table stays generic."
+        ]
+      },
+      {
+        "id": "ocenr-iec-campaign",
+        "number": 10,
+        "charterNumber": 10,
+        "charterGroup": "External Services",
+        "title": "Requesting an environmental talk or IEC campaign",
+        "description": "An Information, Education and Communication campaign run by OCENR for an organization, school, establishment or other group, to raise awareness on environmental matters. The office confirms a schedule and a resource speaker with you.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of request addressed to the City Mayor, attention the City ENRO, giving the mobile number of the person to coordinate with",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of request and have it received at the City Mayor's Office as the original copy, and give a duplicate copy to the OCENR Desk Officer. (City Mayor's Office / OCENR Front Desk)",
+            "agency": "The Desk Officer receives and records the letter and forwards it to the City ENRO.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Wait for feedback. (OCENR, ENRO Office)",
+            "agency": "The City ENRO checks their availability. If unavailable, another senior staff member is designated for immediate action.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City ENRO"
+          },
+          {
+            "client": "Wait for confirmation. (OCENR, ENRO Office / coordination with the client)",
+            "agency": "The assigned personnel coordinate with the requesting party to confirm the schedule and the resource speaker.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Resource Speaker / Administrative Personnel"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "20 Minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The extraction drops this service's FEES TO BE PAID column onto the requirements block. All three steps are recorded as free; confirm against the PDF."
+        ]
+      },
+      {
+        "id": "ocenr-septic-desludging",
+        "number": 11,
+        "charterNumber": 11,
+        "charterGroup": "External Services",
+        "title": "Having a septic tank desludged",
+        "description": "Desludging or syphoning of a septic tank by the city's vacuum truck service, under Ordinance No. 0025-2015, the Septage Management Code of the City of Legazpi. The code covers every proposed, planned or existing building or structure in the city, public or private, residential or commercial.",
+        "office": "Office of the City Environment and Natural Resources (OCENR)",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of request",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Walk in to the OCENR Information Desk. (OCENR Front Desk)",
+            "agency": "The Desk Officer refers the client to the technical personnel in charge of the Septage Program.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Administrative Personnel"
+          },
+          {
+            "client": "Answer the survey questions. (OCENR Office)",
+            "agency": "Personnel interview the client and fill out the Survey Form.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Surveyor / Coordinator"
+          },
+          {
+            "client": "Confirm the details. (OCENR Office)",
+            "agency": "The Coordinator schedules the inspection of the septic tank, provided the survey form is completely filled out.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Coordinator"
+          },
+          {
+            "client": "Wait for the inspection. (Client's site)",
+            "agency": "Personnel inspect the septic tank.",
+            "feeText": "None",
+            "processingTime": "30 minutes average",
+            "personResponsible": "Surveyor / Coordinator"
+          },
+          {
+            "client": "Pay the septage desludging fee. (City Treasurer's Office or City Engineer's Office)",
+            "agency": "The Coordinator issues the Payment Order Form.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Surveyor / Coordinator"
+          },
+          {
+            "client": null,
+            "agency": "The client pays the septage fee at the City Treasurer's Office or the City Engineer's Office and presents the official receipt to OCENR.",
+            "feeText": "Septage fee, as assessed by the City Treasurer's Office or the City Engineer's Office",
+            "processingTime": "15 minutes",
+            "personResponsible": "Coordinator / CTO or CEO Collector"
+          },
+          {
+            "client": "Provide the receipt. (OCENR Office)",
+            "agency": "The Coordinator schedules the client for the desludging service, based on truck availability.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Coordinator / CTO or CEO Collector"
+          },
+          {
+            "client": "Wait for the desludging team. (Client's site)",
+            "agency": "The desludging team conducts the desludging operation. How long the actual desludging takes depends on vacuum truck availability.",
+            "feeText": "None",
+            "processingTime": "1 hour average per trip",
+            "personResponsible": "Desludging Team / Vacuum Truck Operator"
+          },
+          {
+            "client": "Sign the manifest form. (Client's site)",
+            "agency": "The Coordinator prepares the Manifest Form for the client's signature to confirm completion.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Coordinator"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "2 hours 12 minutes"
+        },
+        "notes": [
+          "The septage fee is set by the City Treasurer's Office or the City Engineer's Office when they assess it; the charter does not publish an amount.",
+          "Actual processing time may be longer depending on vacuum truck availability."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The nine steps read here sum to 2 hours and 17 minutes against the charter's stated 2 hours 12 minutes. One of the three five-minute entries in the payment and scheduling block may belong to a merged row. Check the PDF.",
+          "The charter's step 3 agency action is numbered \"3.\" rather than \"3.1\", and the payment block's three processing times are not clearly aligned to their steps in the extraction."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-tree",
+    "categories": [
+      {
+        "id": "business-requirements",
+        "title": "Business requirements",
+        "icon": "bi-shop",
+        "services": [
+          "ocenr-ec-webinar-new-renewal",
+          "ocenr-ec-seminar-new-renewal",
+          "ocenr-ec-webinar-noncompliant",
+          "ocenr-ec-seminar-noncompliant"
+        ]
+      },
+      {
+        "id": "trees-and-greening",
+        "title": "Trees and greening",
+        "icon": "bi-tree",
+        "services": [
+          "ocenr-no-objection-cut-tree",
+          "ocenr-chainsaw-certification",
+          "ocenr-tree-seedlings"
+        ]
+      },
+      {
+        "id": "waste-and-sanitation",
+        "title": "Waste and sanitation",
+        "icon": "bi-trash",
+        "services": ["ocenr-permit-to-dump", "ocenr-septic-desludging", "ocenr-slf-visitors-pass"]
+      },
+      {
+        "id": "community-programmes",
+        "title": "Talks and community programmes",
+        "icon": "bi-megaphone",
+        "services": ["ocenr-iec-campaign"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "opening-or-renewing-a-business",
+        "title": "Opening or renewing a business",
+        "presentation": "rail",
+        "icon": "bi-shop",
+        "services": [
+          "ocenr-ec-webinar-new-renewal",
+          "ocenr-ec-seminar-new-renewal",
+          "ocenr-ec-webinar-noncompliant",
+          "ocenr-ec-seminar-noncompliant"
+        ]
+      },
+      {
+        "id": "cutting-down-a-tree",
+        "title": "Cutting down a tree",
+        "presentation": "rail",
+        "icon": "bi-scissors",
+        "services": ["ocenr-no-objection-cut-tree", "ocenr-chainsaw-certification"]
+      },
+      {
+        "id": "a-full-septic-tank",
+        "title": "A full septic tank",
+        "presentation": "rail",
+        "icon": "bi-droplet",
+        "services": ["ocenr-septic-desludging"]
+      },
+      {
+        "id": "planting-trees",
+        "title": "Planting trees or greening a space",
+        "presentation": "rail",
+        "icon": "bi-flower1",
+        "services": ["ocenr-tree-seedlings", "ocenr-iec-campaign"]
+      },
+      {
+        "id": "getting-rid-of-bulk-waste",
+        "title": "Getting rid of bulk waste",
+        "presentation": "rail",
+        "icon": "bi-trash",
+        "services": ["ocenr-permit-to-dump", "ocenr-slf-visitors-pass"]
+      }
+    ],
+    "searchAliases": {
+      "ocenr-permit-to-dump": [
+        "permit to dump",
+        "basura",
+        "garbage",
+        "dumping",
+        "landfill",
+        "waste disposal"
+      ],
+      "ocenr-slf-visitors-pass": [
+        "sanitary landfill",
+        "slf",
+        "landfill tour",
+        "visitors pass",
+        "field trip"
+      ],
+      "ocenr-ec-webinar-noncompliant": [
+        "environmental certificate",
+        "eswm",
+        "seminar",
+        "webinar",
+        "zoom",
+        "expired certificate",
+        "non-compliant"
+      ],
+      "ocenr-ec-webinar-new-renewal": [
+        "environmental certificate",
+        "eswm",
+        "webinar",
+        "zoom",
+        "business permit",
+        "renewal"
+      ],
+      "ocenr-ec-seminar-noncompliant": [
+        "environmental certificate",
+        "eswm",
+        "seminar",
+        "face to face",
+        "expired certificate",
+        "non-compliant"
+      ],
+      "ocenr-ec-seminar-new-renewal": [
+        "environmental certificate",
+        "eswm",
+        "seminar",
+        "face to face",
+        "business permit",
+        "renewal"
+      ],
+      "ocenr-no-objection-cut-tree": [
+        "cut tree",
+        "putol na puno",
+        "tree cutting",
+        "no objection",
+        "denr",
+        "pruning"
+      ],
+      "ocenr-chainsaw-certification": ["chainsaw", "chainsaw registration", "denr"],
+      "ocenr-tree-seedlings": [
+        "seedlings",
+        "punla",
+        "tree planting",
+        "free seedlings",
+        "nursery",
+        "greening"
+      ],
+      "ocenr-iec-campaign": ["iec", "seminar", "environmental talk", "orientation", "awareness"],
+      "ocenr-septic-desludging": [
+        "septic tank",
+        "desludging",
+        "syphoning",
+        "poso negro",
+        "malinis",
+        "septage",
+        "vacuum truck"
+      ]
+    },
+    "contact": null
+  }
+}
