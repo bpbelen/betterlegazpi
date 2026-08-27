@@ -1,0 +1,1482 @@
+{
+  "slug": "casso",
+  "route": "service-details/casso-services.html",
+  "charter": {
+    "office": "City Assessor's Office",
+    "abbreviation": "CAssO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-ASSESSOR-OFFICE-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/casso.md",
+    "personnel": [
+      {
+        "name": "Engr. Eduardo A. Luna, Jr.",
+        "position": "CGDH I / City Assessor",
+        "unit": "City Assessor's Office",
+        "isHead": true
+      },
+      {
+        "name": "Engr. Anthony Jemar G. Sartorio",
+        "position": "Assistant City Assessor",
+        "unit": "City Assessor's Office"
+      },
+      {
+        "name": "Ejnar A. Espartinez",
+        "position": "SAO",
+        "unit": "Tax Mapping"
+      },
+      {
+        "name": "Maria Felisa A. Sayson",
+        "position": "LAOO IV",
+        "unit": "Evaluation and Appraisal"
+      },
+      {
+        "name": "Ronald L. Longasa",
+        "position": "LAOO III",
+        "unit": "Evaluation and Appraisal"
+      },
+      {
+        "name": "Ar. Francis Jude A. Verzosa",
+        "position": "LAOO II",
+        "unit": "Evaluation and Appraisal"
+      },
+      {
+        "name": "Marilou S. Casasos",
+        "position": "LAOO II",
+        "unit": "Records"
+      },
+      {
+        "name": "Paul Edgar A. Espartinez",
+        "position": "LAOO I",
+        "unit": "Tax Mapping"
+      },
+      {
+        "name": "Rodolfo P. Azagra",
+        "position": "Administrative Asst. VI",
+        "unit": "Tax Mapping"
+      },
+      {
+        "name": "James Paul Romulo A. Bigay",
+        "position": "Assessment Clerk II",
+        "unit": "Tax Mapping"
+      },
+      {
+        "name": "Pauline D. Marbella",
+        "position": "Administrative Aide VI",
+        "unit": "Records"
+      },
+      {
+        "name": "Michelle D. Hurtado",
+        "position": "Tax Mapping Aide",
+        "unit": "Records"
+      },
+      {
+        "name": "Oznerol Airam M. Lanon",
+        "position": "Administrative Aide II",
+        "unit": "Records"
+      },
+      {
+        "name": "Ma. Cristina O. Barsaga",
+        "position": "Administrative Aide I",
+        "unit": "Records"
+      },
+      {
+        "name": "Jeremiah-Jerim P. Alanis",
+        "position": "Researcher",
+        "unit": "Records"
+      },
+      {
+        "name": "Rochelle A. Rivera",
+        "position": "Frontline Officer",
+        "unit": "Frontline Desk"
+      },
+      {
+        "name": "Pink Stephanie A. Musa",
+        "position": "Frontline Officer",
+        "unit": "Frontline Desk"
+      },
+      {
+        "name": "Erica O. Dela Rea",
+        "position": "Frontline Officer",
+        "unit": "Frontline Desk"
+      }
+    ],
+    "personnelNotes": [
+      "This charter prints its staff roster once per service rather than against each row, so who handles which step is read from the action itself. The people are listed here; the process tables name positions."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Answer the Feedback Form at the City Assessor's Office frontline desk and drop it in the box, or hand it to the Officer of the Day. You can also call 742-6882 or 0966-812-0533.",
+      "howFeedbackIsProcessed": "The Administrative Division checks what the feedback is about within one working day and passes it to the division concerned. Once that division replies, the office contacts you by email, text or phone. Complaints go on the Complaint Form (CSC Form No. 3) or by email, and need your full name, address and contact details, an account of what happened, any evidence, and the name of the person being complained about. The Administrative Division reads complaints daily, coordinates with the division concerned, investigates where needed, then writes an Incident Report for the Legal Office. The Legal Office sends its findings to the City Mayor, copy to the City Assessor's Office, for final action.",
+      "contacts": ["casso.leg@legazpi.gov.ph"]
+    },
+    "services": [
+      {
+        "id": "casso-transfer-ownership",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "External Services",
+        "title": "Transferring real property to a new owner",
+        "description": "Moving a property's tax declaration into the new owner's name after a sale, an inheritance settlement or a donation. The office issues a new tax declaration and cancels the old one.",
+        "office": "Evaluation / Appraisal / Tax Mapping / Records",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Real property owners within the City Government of Legazpi",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Certified true copy of the Transfer Certificate of Title (TCT), 2 copies",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Original duplicate copy of the Deed of Conveyance (Deed of Sale; Deed of Extra Judicial Settlement of Estate with Publication; Deed of Donation), 2 copies",
+            "whereToSecure": "Bureau of Internal Revenue"
+          },
+          {
+            "item": "Photocopy of the Certificate Authorizing Registration (CAR), 2 copies",
+            "whereToSecure": "Bureau of Internal Revenue"
+          },
+          {
+            "item": "Original owner's copy or certified true copy of the tax declaration",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Photocopy of the tax clearance for the current year, 1 copy",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Photocopy of the official receipt for the transfer tax and processing fee (1 copy), and photocopies of the receipt of registration (2 copies) with the original for authentication",
+            "whereToSecure": "City Treasurer's Office and Registry of Deeds"
+          },
+          {
+            "item": "If a representative is transacting: photocopy of the representative's valid ID, 1 copy",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "If a representative is transacting: Special Power of Attorney (SPA) or authorization letter",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Checks the requirements for completeness and forwards them to the City Assessor.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Approves the request.",
+            "feeText": "100",
+            "feeTiers": [{ "label": "Processing fee", "amount": 100, "currency": "PHP" }],
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Evaluates the requirements and prepares the Field Appraisal and Assessment Sheet (FAAS).",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": null,
+            "agency": "Reviews and signs the FAAS.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Approves the FAAS.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Assigns the Property Index Number and records the FAAS in the Tax Mapping Roll.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Tax Mapping Division"
+          },
+          {
+            "client": null,
+            "agency": "Encodes the record in ETRACS and prints the new tax declaration.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the new tax declaration.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Cancels the previous tax declaration at the Records Division.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": "Claim the new tax declaration.",
+            "agency": "Approves and signs the tax declaration.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Segregates the documents and releases the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "100",
+          "processingTime": "2.8 hours"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints one staff roster for the whole service rather than naming a person per row, so the division shown against each step is read from the action itself. Check the attribution against the PDF.",
+          "Requirements c, d and e share a single WHERE TO SECURE cell listing two offices. The split recorded here is an inference."
+        ]
+      },
+      {
+        "id": "casso-assess-building",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "External Services",
+        "title": "Declaring a newly built house, building or machine",
+        "description": "Newly constructed buildings and other structures, and newly installed machinery, have to be declared for taxation. The office inspects the property and issues the tax declaration.",
+        "office": "Evaluation / Appraisal / Tax Mapping / Records",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Real property owners within the City Government of Legazpi",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Certified true copy of the Transfer Certificate of Title (TCT), 1 copy",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Copy of the approved building permit, certificate of completion or occupancy permit, 1 copy",
+            "whereToSecure": "City Engineer's Office"
+          },
+          {
+            "item": "Blueprint of the approved plan, 1 copy",
+            "whereToSecure": "City Engineer's Office"
+          },
+          {
+            "item": "Photocopy of the official receipt for the transfer tax and processing fee, 1 copy",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Checks the requirements for completeness and forwards them to the City Assessor.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Approves the request.",
+            "feeText": "100",
+            "feeTiers": [{ "label": "Processing fee", "amount": 100, "currency": "PHP" }],
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Verifies the requirements and calendars the date of inspection.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": "Confirm the schedule of inspection.",
+            "agency": "Informs the client of the schedule of inspection.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the inspection and prepares the assessment report and the Field Appraisal and Assessment Sheet (FAAS).",
+            "feeText": "None",
+            "processingTime": "8 hours",
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": null,
+            "agency": "Recommends approval of the FAAS.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Assessment Clerk II"
+          },
+          {
+            "client": null,
+            "agency": "Approves the FAAS.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Assigns the Property Index Number and records the FAAS in the Tax Mapping Roll.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Tax Mapping Division"
+          },
+          {
+            "client": null,
+            "agency": "Encodes the record in ETRACS and prints the tax declaration.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the tax declaration.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Approves the tax declaration.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the new tax declaration.",
+            "agency": "Segregates the documents and releases the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "100",
+          "processingTime": "10.55 hours"
+        },
+        "notes": [
+          "The eight-hour inspection is the office's own field work; the charter counts it in the total even though the owner is not at the counter for it."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter numbers two consecutive agency actions 3.7. They are recorded as separate steps here, which is what makes the derived total reconcile with the charter's 10.55 hours.",
+          "The division shown against each step is read from the action; the charter prints one roster per service."
+        ]
+      },
+      {
+        "id": "casso-segregation-consolidation",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "External Services",
+        "title": "Splitting, merging or subdividing a lot",
+        "description": "Segregation, consolidation or subdivision of a titled property, so each resulting lot gets its own tax declaration.",
+        "office": "City Assessor's Office",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Real property owners within the City Government of Legazpi",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Certified true copy of the Transfer Certificate of Title (TCT), 1 copy",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Copy of the simple subdivision approval certificate, or a resolution from the Sangguniang Panlungsod, 1 copy",
+            "whereToSecure": "City Planning and Development Office, or the Sangguniang Panlungsod"
+          },
+          {
+            "item": "Blueprint of the approved subdivision plan, 1 copy",
+            "whereToSecure": "City Planning and Development Office"
+          },
+          {
+            "item": "Photocopy of the official receipt for the processing fee, and an updated tax clearance, 1 copy",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Original owner's copy or certified true copy of the tax declaration, 1 copy",
+            "whereToSecure": "City Assessor's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Checks the requirements for completeness and forwards them to the City Assessor.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Approves the request.",
+            "feeText": "100",
+            "feeTiers": [{ "label": "Processing fee", "amount": 100, "currency": "PHP" }],
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Evaluates the requirements and prepares the Field Appraisal and Assessment Sheet (FAAS).",
+            "feeText": "None",
+            "processingTime": "1 day (depends upon the number of segregations)",
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the FAAS.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Approves the FAAS.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Assigns the Property Index Number and records the FAAS in the Tax Mapping Roll.",
+            "feeText": "None",
+            "processingTime": "20 mins/FAAS (depends upon the number of segregated lots)",
+            "personResponsible": "Tax Mapping Division"
+          },
+          {
+            "client": null,
+            "agency": "Encodes the FAAS and prints the new tax declaration.",
+            "feeText": "None",
+            "processingTime": "20 mins/FAAS",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the new tax declaration.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Cancels the previous tax declaration at the Records Division.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Approves and signs the tax declaration.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the new tax declaration.",
+            "agency": "Segregates the documents and releases the tax declaration.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "100",
+          "processingTime": "10 hours"
+        },
+        "notes": [
+          "Two of the steps are charged per FAAS, so a lot split into several parcels takes proportionally longer."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's own total of 10 hours only works if the \"1 day\" evaluation step is counted as 8 hours. A charter day has no stated length, so the derived total keeps it as a day and the two figures do not match. Ask the office what a day means here.",
+          "The charter numbers this service's later agency actions 1.6 to 1.9 and then 2.1, restarting mid-service. The order is kept as printed.",
+          "The charter gives no processing time for the step where the City Assessor approves the FAAS."
+        ]
+      },
+      {
+        "id": "casso-true-copy-tax-declaration",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "External Services",
+        "title": "Getting a certified true copy of a tax declaration",
+        "description": "A certified copy of an existing tax declaration, printed from the office's records and certified by the City Assessor.",
+        "office": "City Assessor's Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Real property owners within the City of Legazpi",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Photocopy of an ID and the SPA or authorization of the requesting party, if not the owner, 1 copy",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Official receipt",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Checks the requirements for completeness and verifies the record of the tax declaration in the system.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Prints out the tax declaration.",
+            "feeText": "50",
+            "feeTiers": [{ "label": "Certification fee", "amount": 50, "currency": "PHP" }],
+            "processingTime": "10 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Affixes initials to the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Verifies the print-out against the record.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Certifies the copy of the tax declaration.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the tax declaration.",
+            "agency": "Releases the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "100",
+          "processingTime": "26 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The steps read here sum to 31 minutes against the charter's stated 26. One of the two five-minute entries after the printing step may belong to a merged row.",
+          "The charter's TOTAL row says 100 but the only fee shown against a step is 50. Check which figure is right."
+        ]
+      },
+      {
+        "id": "casso-certifications",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "External Services",
+        "title": "Getting a landholding, no improvement or no property certification",
+        "description": "A certification stating what property a person holds in the city, that a lot carries no improvement, or that a person owns no property at all. Commonly asked for by banks, courts, schools and scholarship programmes.",
+        "office": "City Assessor's Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Real property owners within the City Government of Legazpi",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Official receipt",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Receives the request and verifies the record in the system.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Prepares the certification.",
+            "feeText": "50",
+            "feeTiers": [{ "label": "Certification fee", "amount": 50, "currency": "PHP" }],
+            "processingTime": "10 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Affixes initials.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Verifies against the record.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the certification.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the certification.",
+            "agency": "Releases the certification.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "50",
+          "processingTime": "30 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The extraction puts the 50 fee on the row where the request is received rather than the row where the client pays. It is recorded against the paying step; the total is unaffected."
+        ]
+      },
+      {
+        "id": "casso-traceback",
+        "number": 6,
+        "charterNumber": 6,
+        "charterGroup": "External Services",
+        "title": "Tracing the history of a property record",
+        "description": "Research into the earlier tax declarations behind a property, to establish how a record changed hands over time. A certification of the research output can be issued on request.",
+        "office": "City Assessor's Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Real property owners",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "ID and authorization letter, if not the owner",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Official receipt",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request together with the requirements.",
+            "agency": "Receives the request and verifies the record in the system.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": null,
+            "agency": "Approves the request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Researches the record.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Researcher / Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Discusses the research output with the client.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": "Pay, if a certification is requested.",
+            "agency": "Prepares the certification.",
+            "feeText": "50",
+            "feeTiers": [{ "label": "Certification fee", "amount": 50, "currency": "PHP" }],
+            "processingTime": "20 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the certification.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the certification.",
+            "agency": "Releases the certification.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "50",
+          "processingTime": "1.68 hours"
+        },
+        "notes": [
+          "The fee applies only if you ask for a certification of the research; the research itself is free."
+        ],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "casso-tax-mapping",
+        "number": 7,
+        "charterNumber": 7,
+        "charterGroup": "External Services",
+        "title": "Seeing where a lot sits on the tax map",
+        "description": "The office locates a lot on the city tax map and shows it on screen, so an owner can see the boundaries and position of the property on record.",
+        "office": "City Assessor's Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Real property owners",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "ID and authorization letter, if not the owner",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Receives the request, clarifies any queries, and forwards the request to the tax map officer in charge.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": "View the lot location.",
+            "agency": "Verifies the request, locates the subject lot on the tax map, and shows the map on the TV screen for the client's viewing.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Tax Mapping Division"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "15 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "casso-mortgage-annotation",
+        "number": 8,
+        "charterNumber": 8,
+        "charterGroup": "External Services",
+        "title": "Annotating a mortgage or claim on a tax declaration",
+        "description": "Recording a mortgage agreement, notice of levy, tax lien, affidavit of adverse claim, notice of lis pendens or last will and testament on the property's tax declaration, and issuing a certified true copy showing the annotation.",
+        "office": "City Assessor's Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Real property owners",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Photocopy of an ID, with the SPA or authorization if not the owner, 1 copy",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "The document to be annotated: mortgage agreement; notice of levy and tax lien; affidavit of adverse claim; notice of lis pendens; last will and testament",
+            "whereToSecure": "Bank, lending institution, court or claimant"
+          },
+          {
+            "item": "Official receipt for the processing fee",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Receives the request, clarifies any queries, and forwards the request to the tax map officer in charge.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": null,
+            "agency": "Approves the request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Pay for the certified true copy.",
+            "agency": "Annotates the tax declaration.",
+            "feeText": "50.00",
+            "feeTiers": [{ "label": "Certified true copy", "amount": 50, "currency": "PHP" }],
+            "processingTime": "15 minutes",
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": null,
+            "agency": "Enters the annotation in ETRACS and prints the annotated tax declaration.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Affixes initials to the tax declaration.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Signs the certified true copy of the annotated tax declaration.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the annotated tax declaration.",
+            "agency": "Releases the document.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "50.00",
+          "processingTime": "58 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's Type of Transaction cell reads \"Frontline Service\", which is a classification rather than one of the G2C, G2B or G2G types the other services use. Recorded as printed."
+        ]
+      },
+      {
+        "id": "casso-reclassification",
+        "number": 9,
+        "charterNumber": 9,
+        "charterGroup": "External Services",
+        "title": "Re-classifying a property",
+        "description": "Changing the classification a property is assessed under, for example from agricultural to residential, once the City Planning and Development Office has certified the change.",
+        "office": "City Assessor's Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Real property owners",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Copy of the certification from the City Planning and Development Office, 1 copy",
+            "whereToSecure": "City Planning and Development Office"
+          },
+          {
+            "item": "Photocopy of the latest tax clearance, 1 copy",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Receives the request, checks it for completeness, and refers it to the City Assessor.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": null,
+            "agency": "Approves the request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Evaluates the requirements and prepares the Field Appraisal and Assessment Sheet (FAAS).",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the FAAS.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Assigns the new tax declaration number and records the FAAS in the Tax Mapping Roll.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Tax Mapping Division"
+          },
+          {
+            "client": null,
+            "agency": "Encodes the FAAS and prints the new tax declaration.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the new tax declaration.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Cancels the previous tax declaration.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Approves and signs the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the new tax declaration.",
+            "agency": "Segregates the documents and releases the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "58 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The steps read here sum to 2 hrs. and 16 minutes against the charter's stated 58 minutes, which is also the total printed for Mortgage Annotation on the preceding page. The stated figure looks copied from that service.",
+          "The charter's Type of Transaction cell reads \"Frontline Service\" rather than a G2C, G2B or G2G type. Recorded as printed."
+        ]
+      },
+      {
+        "id": "casso-reassessment-building",
+        "number": 10,
+        "charterNumber": 10,
+        "charterGroup": "External Services",
+        "title": "Having a building re-assessed",
+        "description": "A fresh assessment of an already declared building, for example after a renovation, an extension or damage. The office inspects the property and issues a new tax declaration.",
+        "office": "City Assessor's Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Real property owners",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Photocopy of the latest tax clearance, 1 copy",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Receives the request, checks it for completeness, and refers it to the City Assessor.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": null,
+            "agency": "Approves the request.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Checks the requirements and calendars the date of inspection.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": "Confirm the schedule of inspection.",
+            "agency": "Informs the client of the schedule of inspection.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the inspection and prepares the assessment report and the Field Appraisal and Assessment Sheet (FAAS).",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the FAAS.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Approves the FAAS.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Assigns the new tax declaration number and records the FAAS in the Tax Mapping Roll.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Tax Mapping Division"
+          },
+          {
+            "client": null,
+            "agency": "Encodes the FAAS and prints the tax declaration.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the tax declaration.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Approves the tax declaration.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the new tax declaration.",
+            "agency": "Segregates the documents and releases the tax declaration.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "9.18 hours"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter gives no processing time for the two steps where the request is approved and the inspection calendared, and its own total of 9.18 hours does not reconcile with the times it does print, however the \"1 day\" step is read. Check the PDF.",
+          "The charter numbers two consecutive agency actions 2.5. The order is kept as printed.",
+          "The charter's Type of Transaction cell reads \"Frontline Service\" rather than a G2C, G2B or G2G type. Recorded as printed."
+        ]
+      },
+      {
+        "id": "casso-correction",
+        "number": 11,
+        "charterNumber": 11,
+        "charterGroup": "External Services",
+        "title": "Correcting an error on a tax declaration",
+        "description": "Fixing a wrong area, declarant's name, lot number or other entry on a tax declaration, and issuing a corrected one.",
+        "office": "City Assessor's Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Real property owners",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Photocopy of the latest tax clearance, 1 copy",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Receives the request, checks it for completeness, and refers it to the City Assessor.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": null,
+            "agency": "Approves the request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the Field Appraisal and Assessment Sheet (FAAS).",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the FAAS.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Assigns the tax declaration number and records it in the Tax Mapping Roll.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Tax Mapping Division"
+          },
+          {
+            "client": null,
+            "agency": "Encodes the FAAS and prints the new tax declaration.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Signs the new tax declaration.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Cancels the previous tax declaration.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Approves and signs the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the new tax declaration.",
+            "agency": "Segregates the documents and releases the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "2.1 hours"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The steps read here sum to 2 hrs. and 16 minutes against the charter's stated 2.1 hours, a gap of ten minutes."
+        ]
+      },
+      {
+        "id": "casso-cancel-annotation",
+        "number": 12,
+        "charterNumber": 12,
+        "charterGroup": "External Services",
+        "title": "Removing a mortgage annotation once a loan is paid",
+        "description": "Cancelling an annotation on a tax declaration after the mortgage has been released, and issuing a clean tax declaration.",
+        "office": "City Assessor's Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Real property owners",
+        "requirements": [
+          {
+            "item": "Letter request, or a duly accomplished request form",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Original copy of the release of mortgage certification, 1 copy",
+            "whereToSecure": "Bank or lending institution"
+          },
+          {
+            "item": "Cancellation of annotation receipt",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request form together with the requirements.",
+            "agency": "Receives the request, checks it for completeness, and refers it to the City Assessor.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Frontline Officers"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Approves the request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Cancels the annotation.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Evaluation and Appraisal Division"
+          },
+          {
+            "client": null,
+            "agency": "Encodes the cancellation in ETRACS and prints the tax declaration.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Records Division"
+          },
+          {
+            "client": null,
+            "agency": "Affixes initials to the tax declaration.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Assistant City Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Approves the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "City Assessor"
+          },
+          {
+            "client": "Claim the tax declaration.",
+            "agency": "Segregates the documents and releases the tax declaration.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Frontline Officers"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "50.00",
+          "processingTime": "38 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The steps read here sum to 48 minutes against the charter's stated 38, a gap of ten minutes.",
+          "The charter's TOTAL row carries a 50.00 fee but no step shows one, even though the client is told to pay at step 2. Check where the fee belongs.",
+          "The charter numbers its last agency action 2.1, repeating an earlier number. The order is kept as printed.",
+          "The charter's Type of Transaction cell reads \"Frontline Service\" rather than a G2C, G2B or G2G type. Recorded as printed."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-file-earmark-ruled",
+    "categories": [
+      {
+        "id": "ownership-and-boundaries",
+        "title": "Ownership and boundaries",
+        "icon": "bi-house-check",
+        "services": [
+          "casso-transfer-ownership",
+          "casso-segregation-consolidation",
+          "casso-tax-mapping"
+        ]
+      },
+      {
+        "id": "declaring-and-assessing",
+        "title": "Declaring and assessing property",
+        "icon": "bi-building-add",
+        "services": [
+          "casso-assess-building",
+          "casso-reassessment-building",
+          "casso-reclassification"
+        ]
+      },
+      {
+        "id": "copies-and-certifications",
+        "title": "Copies and certifications",
+        "icon": "bi-file-earmark-text",
+        "services": ["casso-true-copy-tax-declaration", "casso-certifications", "casso-traceback"]
+      },
+      {
+        "id": "loans-and-corrections",
+        "title": "Loans, claims and corrections",
+        "icon": "bi-pencil-square",
+        "services": ["casso-mortgage-annotation", "casso-cancel-annotation", "casso-correction"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "bought-or-inherited-property",
+        "title": "You bought or inherited property",
+        "presentation": "rail",
+        "icon": "bi-house-check",
+        "services": [
+          "casso-transfer-ownership",
+          "casso-true-copy-tax-declaration",
+          "casso-traceback"
+        ]
+      },
+      {
+        "id": "finished-building",
+        "title": "You finished building or renovating",
+        "presentation": "rail",
+        "icon": "bi-building-add",
+        "services": ["casso-assess-building", "casso-reassessment-building"]
+      },
+      {
+        "id": "splitting-a-lot",
+        "title": "You are splitting or merging a lot",
+        "presentation": "rail",
+        "icon": "bi-bounding-box",
+        "services": ["casso-segregation-consolidation", "casso-tax-mapping"]
+      },
+      {
+        "id": "loan-against-property",
+        "title": "You are taking out or paying off a loan",
+        "presentation": "rail",
+        "icon": "bi-bank",
+        "services": ["casso-mortgage-annotation", "casso-cancel-annotation"]
+      },
+      {
+        "id": "something-is-wrong",
+        "title": "Something on your tax declaration is wrong",
+        "presentation": "rail",
+        "icon": "bi-pencil-square",
+        "services": ["casso-correction", "casso-reclassification"]
+      },
+      {
+        "id": "asked-for-proof-of-property",
+        "title": "Someone asked you to prove what property you own",
+        "presentation": "rail",
+        "icon": "bi-patch-check",
+        "services": ["casso-certifications", "casso-true-copy-tax-declaration"]
+      }
+    ],
+    "searchAliases": {
+      "casso-transfer-ownership": [
+        "transfer",
+        "lipat",
+        "titulo",
+        "deed of sale",
+        "bilihan",
+        "mana",
+        "inheritance",
+        "tax dec",
+        "new owner"
+      ],
+      "casso-assess-building": [
+        "new building",
+        "bagong bahay",
+        "declare house",
+        "machinery",
+        "faas",
+        "assessment"
+      ],
+      "casso-segregation-consolidation": [
+        "subdivision",
+        "hati",
+        "segregation",
+        "consolidation",
+        "split lot",
+        "partition"
+      ],
+      "casso-true-copy-tax-declaration": [
+        "tax declaration",
+        "tax dec",
+        "td",
+        "certified true copy",
+        "ctc",
+        "copy"
+      ],
+      "casso-certifications": [
+        "landholding",
+        "no property",
+        "no improvement",
+        "certification",
+        "katunayan",
+        "scholarship",
+        "4ps"
+      ],
+      "casso-traceback": ["traceback", "history", "research", "old tax declaration", "kasaysayan"],
+      "casso-tax-mapping": ["tax map", "mapa", "lot location", "boundaries", "hangganan", "pin"],
+      "casso-mortgage-annotation": [
+        "mortgage",
+        "sangla",
+        "annotation",
+        "levy",
+        "lien",
+        "adverse claim",
+        "lis pendens",
+        "bank loan"
+      ],
+      "casso-reclassification": [
+        "reclassification",
+        "agricultural to residential",
+        "land use",
+        "classification"
+      ],
+      "casso-reassessment-building": [
+        "reassessment",
+        "renovation",
+        "extension",
+        "revalue",
+        "damaged house"
+      ],
+      "casso-correction": ["correction", "wrong name", "wrong area", "mali", "lot number", "amend"],
+      "casso-cancel-annotation": [
+        "cancel annotation",
+        "release of mortgage",
+        "bayad na",
+        "paid loan",
+        "clean title"
+      ]
+    },
+    "contact": null
+  }
+}
