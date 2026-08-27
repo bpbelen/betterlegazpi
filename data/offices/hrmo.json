@@ -625,8 +625,95 @@
         ]
       }
     ],
-    "entryPoints": [],
+    "entryPoints": [
+      {
+        "id": "applying-for-a-job",
+        "title": "Applying for a job with the City",
+        "presentation": "rail",
+        "icon": "bi-person-plus",
+        "services": ["hrmo-recruitment-selection-placement"]
+      },
+      {
+        "id": "starting-as-job-order",
+        "title": "Starting as a job order or contract of service",
+        "presentation": "rail",
+        "icon": "bi-file-earmark-text",
+        "services": ["hrmo-contract-of-services-job-order-appointments"]
+      },
+      {
+        "id": "arranging-an-internship",
+        "title": "Arranging a student internship or OJT",
+        "presentation": "rail",
+        "icon": "bi-mortarboard",
+        "services": ["hrmo-work-immersion-ojt-deployment"]
+      },
+      {
+        "id": "proving-your-employment",
+        "title": "Proving your employment",
+        "presentation": "rail",
+        "icon": "bi-patch-check",
+        "services": ["hrmo-certificate-of-employment", "hrmo-service-record"]
+      },
+      {
+        "id": "taking-leave",
+        "title": "Taking leave",
+        "presentation": "rail",
+        "icon": "bi-calendar-check",
+        "services": ["hrmo-application-for-leave"]
+      },
+      {
+        "id": "attending-a-training",
+        "title": "Attending a training or seminar",
+        "presentation": "rail",
+        "icon": "bi-easel",
+        "services": ["hrmo-travel-orders-ld"]
+      },
+      {
+        "id": "retiring-from-the-city",
+        "title": "Retiring from the City",
+        "presentation": "rail",
+        "icon": "bi-hourglass-bottom",
+        "services": ["hrmo-processing-retirement"]
+      }
+    ],
     "personnel": [],
-    "contact": null
+    "contact": null,
+    "searchAliases": {
+      "hrmo-recruitment-selection-placement": [
+        "job",
+        "vacancy",
+        "hiring",
+        "application",
+        "pds",
+        "plantilla"
+      ],
+      "hrmo-contract-of-services-job-order-appointments": [
+        "job order",
+        "jo",
+        "contract of service",
+        "cos",
+        "casual"
+      ],
+      "hrmo-work-immersion-ojt-deployment": [
+        "ojt",
+        "internship",
+        "immersion",
+        "practicum",
+        "student"
+      ],
+      "hrmo-certificate-of-employment": ["coe", "certificate of employment", "proof of employment"],
+      "hrmo-service-record": ["service record", "employment record"],
+      "hrmo-travel-orders-ld": ["travel order", "seminar", "training", "convention"],
+      "hrmo-application-for-leave": [
+        "leave",
+        "vacation leave",
+        "sick leave",
+        "maternity",
+        "paternity",
+        "monetization",
+        "csc form 6"
+      ],
+      "hrmo-processing-retirement": ["retirement", "retiring", "terminal leave", "pension"]
+    }
   }
 }
