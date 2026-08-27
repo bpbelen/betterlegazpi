@@ -732,6 +732,9 @@ function initCharts() {
 
   const data = FINANCIAL_DATA[currentQuarter];
 
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const chartBorderColor = isDark ? '#1e293b' : '#ffffff';
+
   // Income Chart
   incomeChart = new Chart(incomeCtx, {
     type: 'doughnut',
@@ -742,7 +745,7 @@ function initCharts() {
           data: [data.income.local, data.income.external],
           backgroundColor: [...MACRO_INCOME_COLORS],
           borderWidth: 2,
-          borderColor: '#ffffff',
+          borderColor: chartBorderColor,
           offset: [0, 0],
           hoverOffset: 4,
         },
@@ -766,7 +769,7 @@ function initCharts() {
           ],
           backgroundColor: [...MACRO_EXP_COLORS],
           borderWidth: 2,
-          borderColor: '#ffffff',
+          borderColor: chartBorderColor,
           offset: [0, 0, 0, 0],
           hoverOffset: 4,
         },
@@ -787,6 +790,22 @@ function initCharts() {
 
   const expClose = document.getElementById('exp-callout-close');
   if (expClose) expClose.addEventListener('click', resetExpenditureFocus);
+
+  // Listen for theme changes to keep chart borders in sync
+  document.addEventListener('themechange', function (e) {
+    const isDarkNow =
+      (e.detail && e.detail.theme === 'dark') ||
+      document.documentElement.getAttribute('data-theme') === 'dark';
+    const newBorder = isDarkNow ? '#1e293b' : '#ffffff';
+    if (incomeChart && incomeChart.data && incomeChart.data.datasets[0]) {
+      incomeChart.data.datasets[0].borderColor = newBorder;
+      incomeChart.update('none');
+    }
+    if (expenditureChart && expenditureChart.data && expenditureChart.data.datasets[0]) {
+      expenditureChart.data.datasets[0].borderColor = newBorder;
+      expenditureChart.update('none');
+    }
+  });
 }
 
 /**

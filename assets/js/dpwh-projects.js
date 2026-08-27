@@ -833,6 +833,11 @@
     if (typeof Chart === 'undefined') return;
     renderCategoryChart();
     renderContractorChart();
+
+    document.addEventListener('themechange', () => {
+      renderCategoryChart();
+      renderContractorChart();
+    });
   }
 
   function renderCategoryChart() {
@@ -843,6 +848,10 @@
 
     if (!catCanvas) return;
     if (categoryChartInstance) categoryChartInstance.destroy();
+
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const chartBorderColor = isDark ? '#1e293b' : '#ffffff';
+    const legendTextColor = isDark ? '#cbd5e1' : '#475569';
 
     const counts = getCategoryCounts(allProjects);
     const categoryOrder = ['buildings', 'roads', 'flood', 'bridges', 'water'];
@@ -863,7 +872,7 @@
         resetContainer.innerHTML = `
           <div class="dpwh-chart-footer">
             <button type="button" class="dpwh-chart-reset-btn" id="dpwh-btn-reset-drilldown">
-              <i class="bi bi-arrow-left"></i> Return to All Categories
+              <i class="bi bi-arrow-counterclockwise"></i> Reset Category View
             </button>
           </div>
         `;
@@ -920,22 +929,19 @@
               categoryKey: catKey,
               subtypeName: stName,
               count: stCount,
-              categoryTotal: targetProjects.length,
+              categoryTotal: counts[catKey],
             });
           });
         } else {
-          // Other categories remain as greyed-out solid arcs in their exact positions
-          const catCount = counts[catKey];
-          const catName = CATEGORY_CONFIG[catKey].name;
-          chartLabels.push(`${catName} (Other)`);
-          chartData.push(catCount);
-          chartColors.push('#cbd5e1'); // Muted Grey
+          // Muted greyed-out other categories
+          chartLabels.push(CATEGORY_CONFIG[catKey].name);
+          chartData.push(counts[catKey]);
+          chartColors.push(isDark ? '#334155' : '#e2e8f0');
           sliceMetadata.push({
             isSubtype: false,
             categoryKey: catKey,
-            categoryName: catName,
-            count: catCount,
-            categoryTotal: catCount,
+            categoryName: CATEGORY_CONFIG[catKey].name,
+            count: counts[catKey],
           });
         }
       });
@@ -949,7 +955,7 @@
               data: chartData,
               backgroundColor: chartColors,
               borderWidth: 2,
-              borderColor: '#ffffff',
+              borderColor: chartBorderColor,
               hoverOffset: 6,
             },
           ],
@@ -1008,6 +1014,7 @@
               labels: {
                 boxWidth: 10,
                 padding: 8,
+                color: legendTextColor,
                 font: { size: 10, family: 'inherit', weight: '500' },
                 generateLabels: function () {
                   return chartLabels.map((label, i) => {
@@ -1017,6 +1024,7 @@
                       text: `${truncateText(label, 18)} (${chartData[i]})`,
                       fillStyle: chartColors[i],
                       fontStyle: isSelectedSt ? 'bold' : 'normal',
+                      fontColor: legendTextColor,
                       hidden: false,
                       index: i,
                     };
@@ -1078,7 +1086,7 @@
             data: catValues,
             backgroundColor: catColors,
             borderWidth: 2,
-            borderColor: '#ffffff',
+            borderColor: chartBorderColor,
             hoverOffset: 6,
           },
         ],
@@ -1127,11 +1135,13 @@
             labels: {
               boxWidth: 12,
               padding: 10,
+              color: legendTextColor,
               font: { size: 11, family: 'inherit', weight: '500' },
               generateLabels: function () {
                 return catNames.map((label, i) => ({
                   text: `${label} (${catValues[i]})`,
                   fillStyle: catColors[i],
+                  fontColor: legendTextColor,
                   hidden: false,
                   index: i,
                 }));
@@ -1160,17 +1170,36 @@
     if (!contCanvas) return;
     if (contractorChartInstance) contractorChartInstance.destroy();
 
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)';
+    const tickColor = isDark ? '#cbd5e1' : '#64748b';
+
     const metrics = calculateMetrics(filteredProjects);
     const topList = metrics.topContractorsList;
     const labels = topList.map((c) => truncateText(c.name, 24));
     const values = topList.map((c) => c.totalCost);
 
-    // Color gradient based on rank (Rank 1 darkest to Rank 10 lightest, active = orange)
+    const CONTRACTOR_RANK_GRADIENT_DARK = [
+      '#60a5fa', // Rank 1
+      '#3b82f6', // Rank 2
+      '#2563eb', // Rank 3
+      '#1d4ed8', // Rank 4
+      '#1e40af', // Rank 5
+      '#38bdf8', // Rank 6
+      '#0ea5e9', // Rank 7
+      '#0284c7', // Rank 8
+      '#0369a1', // Rank 9
+      '#075985', // Rank 10
+    ];
+
+    const activeGradient = isDark ? CONTRACTOR_RANK_GRADIENT_DARK : CONTRACTOR_RANK_GRADIENT;
+
+    // Color gradient based on rank (Rank 1 to Rank 10, active = orange)
     const barColors = topList.map((c, idx) => {
       if (selectedContractors.has(c.name)) {
         return '#ea580c'; // Highlighted active contractor
       }
-      return CONTRACTOR_RANK_GRADIENT[idx] || '#2563eb';
+      return activeGradient[idx] || '#2563eb';
     });
 
     contractorChartInstance = new Chart(contCanvas, {
@@ -1181,7 +1210,7 @@
           {
             data: values,
             backgroundColor: barColors,
-            hoverBackgroundColor: '#002270',
+            hoverBackgroundColor: isDark ? '#93c5fd' : '#002270',
             borderRadius: 4,
             barThickness: 14,
           },
@@ -1231,8 +1260,9 @@
         },
         scales: {
           x: {
-            grid: { color: 'rgba(0,0,0,0.04)' },
+            grid: { color: gridColor },
             ticks: {
+              color: tickColor,
               callback: function (val) {
                 return formatSummaryCost(val);
               },
@@ -1241,7 +1271,7 @@
           },
           y: {
             grid: { display: false },
-            ticks: { font: { size: 10 } },
+            ticks: { color: tickColor, font: { size: 10 } },
           },
         },
       },

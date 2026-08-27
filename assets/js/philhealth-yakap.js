@@ -12,6 +12,7 @@
     initFacilitiesFilter();
     initFaqAccordion();
     initStickyNavObserver();
+    initSubnavHeaderOffset();
   });
 
   /* --------------------------------------------------------------------------
@@ -207,7 +208,34 @@
   }
 
   /* --------------------------------------------------------------------------
-     5. Sticky Sub-Nav Intersection Observer
+     5. Sub-Nav Sticky Offset
+     -------------------------------------------------------------------------- */
+  /**
+   * .site-header is itself sticky at top:0 with a higher z-index (style.css),
+   * so the sub-nav's own top:0 would stick at the same coordinate and render
+   * hidden behind the header. Measuring the header's live height and writing
+   * it as a CSS variable keeps the sub-nav parked directly under the header
+   * without hardcoding the header's padding here, which would silently drift
+   * the next time the header markup changes.
+   */
+  function initSubnavHeaderOffset() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+
+    const setOffset = () => {
+      document.documentElement.style.setProperty('--yakap-header-h', `${header.offsetHeight}px`);
+    };
+
+    setOffset();
+    window.addEventListener('resize', setOffset);
+
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(setOffset).observe(header);
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     6. Sticky Sub-Nav Intersection Observer
      -------------------------------------------------------------------------- */
   function prefersReducedMotion() {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;

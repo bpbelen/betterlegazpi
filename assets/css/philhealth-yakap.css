@@ -91,7 +91,13 @@
   background: var(--color-bg);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   position: sticky;
-  top: 0;
+  /* Not 0: .site-header is itself position:sticky at top:0 with z-index:1000
+     (style.css), so a bare top:0 here would stick this bar at the exact same
+     coordinate and get hidden behind it once scrolled. --yakap-header-h is
+     the header's live rendered height, set by philhealth-yakap.js, so this
+     parks directly under the header instead of duplicating its padding
+     values here (which would drift the next time the header changes). */
+  top: var(--yakap-header-h, 64px);
   z-index: 90;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   transition:
@@ -191,6 +197,12 @@
 }
 
 .section-header-center .section-title {
+  /* The sitewide .section-title rule (style.css) is `display: flex` for
+     icon+label headings elsewhere on the site. These headings carry no icon,
+     so that flex row just left-packs the lone text node and ignores the
+     text-align: center above -- hence justify-content, not text-align, is
+     what actually centers it. */
+  justify-content: center;
   font-size: 2rem;
   font-weight: 800;
   color: var(--color-primary);

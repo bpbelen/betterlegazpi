@@ -1,174 +1,122 @@
 /**
- * Weather & Map Section for Better Legazpi Homepage
- * Displays real-time weather data and interactive map of Legazpi City, Albay
- * With robust fallback system to ensure content always renders
+ * Weather Component - Handles fetching and rendering weather data for Legazpi City
+ * using Open-Meteo API. Interactive and MECE design.
  */
 
-// Wrap everything in IIFE to prevent redeclaration errors
 (function () {
   'use strict';
 
-  console.log('=== weather-map.js: Script loading started (Legazpi City) ===');
-
   // ============================================================================
-  // Mock/Fallback Data - Always available static data for Legazpi City
+  // Mock Data & Utilities
   // ============================================================================
   function getMockWeather() {
-    const now = new Date();
-    const currentHour = now.getHours();
-
-    // Generate realistic hourly forecast based on current time
-    const hourlyForecast = [];
-    for (let i = 0; i < 6; i++) {
-      const hour = (currentHour + i) % 24;
-      const isPM = hour >= 12;
-      const displayHour = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
-      const temp = 27 + Math.floor(Math.random() * 4); // 27-31°C range for Bicol
-
-      hourlyForecast.push({
-        time: `${displayHour} ${isPM ? 'PM' : 'AM'}`,
-        temperature: temp,
-        icon: hour >= 6 && hour < 18 ? 'bi-cloud-sun-fill' : 'bi-moon-stars-fill',
-      });
-    }
-
     return {
-      temperature: 29,
-      humidity: 71,
+      temperature: 31,
+      humidity: 78,
       windSpeed: 12,
-      weatherCode: 1,
-      condition: 'Mainly clear',
-      icon: 'bi-cloud-sun-fill',
-      hourlyForecast: hourlyForecast,
+      uvIndex: 8,
+      precipitationProb: 40,
+      condition: 'Partly Cloudy',
+      icon: 'bi-cloud-sun',
       isFallback: true,
       timestamp: Date.now(),
+      hourly: [
+        { time: '12 PM', temp: 31, icon: 'bi-cloud-sun' },
+        { time: '1 PM', temp: 32, icon: 'bi-sun' },
+        { time: '2 PM', temp: 33, icon: 'bi-sun' },
+        { time: '3 PM', temp: 31, icon: 'bi-cloud-rain' },
+        { time: '4 PM', temp: 29, icon: 'bi-cloud-rain' },
+      ]
     };
   }
 
   // ============================================================================
-  // Utility: Check if running via file: protocol (no network access)
-  // ============================================================================
-  function isFileProtocol() {
-    try {
-      return window.location.protocol === 'file:';
-    } catch (e) {
-      return false;
-    }
-  }
-
-  // ============================================================================
-  // Weather Service - Handles fetching, caching, and providing weather data
+  // Weather Service
   // ============================================================================
   const WeatherService = {
-    CACHE_KEY: 'legazpi_weather_cache',
-    CACHE_TTL: 30 * 60 * 1000,
+    COORDINATES: { lat: 13.1391, lon: 123.7438 }, // Legazpi City Hall
     API_URL: 'https://api.open-meteo.com/v1/forecast',
-    COORDINATES: { lat: 13.1391, lon: 123.7438 }, // Legazpi City Hall Coordinates
+    CACHE_KEY: 'legazpi_weather_cache_v3',
+    CACHE_DURATION: 15 * 60 * 1000, // 15 minutes
 
     mapWeatherCode(code) {
-      const mappings = {
-        0: { condition: 'Clear sky', icon: 'bi-sun-fill' },
-        1: { condition: 'Mainly clear', icon: 'bi-cloud-sun-fill' },
-        2: { condition: 'Partly cloudy', icon: 'bi-cloud-sun-fill' },
-        3: { condition: 'Overcast', icon: 'bi-clouds-fill' },
-        45: { condition: 'Foggy', icon: 'bi-cloud-fog-fill' },
-        48: { condition: 'Depositing rime fog', icon: 'bi-cloud-fog-fill' },
-        51: { condition: 'Light drizzle', icon: 'bi-cloud-drizzle-fill' },
-        53: { condition: 'Moderate drizzle', icon: 'bi-cloud-drizzle-fill' },
-        55: { condition: 'Dense drizzle', icon: 'bi-cloud-drizzle-fill' },
-        61: { condition: 'Slight rain', icon: 'bi-cloud-rain-fill' },
-        63: { condition: 'Moderate rain', icon: 'bi-cloud-rain-fill' },
-        65: { condition: 'Heavy rain', icon: 'bi-cloud-rain-heavy-fill' },
-        80: { condition: 'Rain showers', icon: 'bi-cloud-rain-fill' },
-        95: { condition: 'Thunderstorm', icon: 'bi-cloud-lightning-rain-fill' },
+      const weatherMap = {
+        0: { condition: 'Clear sky', icon: 'bi-sun' },
+        1: { condition: 'Mainly clear', icon: 'bi-sun' },
+        2: { condition: 'Partly cloudy', icon: 'bi-cloud-sun' },
+        3: { condition: 'Overcast', icon: 'bi-cloudy' },
+        45: { condition: 'Fog', icon: 'bi-cloud-fog' },
+        48: { condition: 'Depositing rime fog', icon: 'bi-cloud-fog' },
+        51: { condition: 'Light drizzle', icon: 'bi-cloud-drizzle' },
+        53: { condition: 'Moderate drizzle', icon: 'bi-cloud-drizzle' },
+        55: { condition: 'Dense drizzle', icon: 'bi-cloud-drizzle' },
+        61: { condition: 'Slight rain', icon: 'bi-cloud-rain' },
+        63: { condition: 'Moderate rain', icon: 'bi-cloud-rain' },
+        65: { condition: 'Heavy rain', icon: 'bi-cloud-rain-heavy' },
+        71: { condition: 'Slight snow', icon: 'bi-cloud-snow' },
+        73: { condition: 'Moderate snow', icon: 'bi-cloud-snow' },
+        75: { condition: 'Heavy snow', icon: 'bi-cloud-snow' },
+        77: { condition: 'Snow grains', icon: 'bi-cloud-snow' },
+        80: { condition: 'Slight rain showers', icon: 'bi-cloud-rain' },
+        81: { condition: 'Moderate rain showers', icon: 'bi-cloud-rain-heavy' },
+        82: { condition: 'Violent rain showers', icon: 'bi-cloud-lightning-rain' },
+        95: { condition: 'Thunderstorm', icon: 'bi-cloud-lightning' },
+        96: { condition: 'Thunderstorm with slight hail', icon: 'bi-cloud-lightning-rain' },
+        99: { condition: 'Thunderstorm with heavy hail', icon: 'bi-cloud-lightning-rain' },
       };
-      return mappings[code] || { condition: 'Partly cloudy', icon: 'bi-cloud-sun-fill' };
-    },
-
-    cacheWeather(data) {
-      try {
-        if (typeof localStorage === 'undefined') return;
-        localStorage.setItem(
-          this.CACHE_KEY,
-          JSON.stringify({
-            data: data,
-            expiresAt: Date.now() + this.CACHE_TTL,
-          })
-        );
-      } catch (e) {
-        console.warn('Cache write failed:', e);
-      }
+      return weatherMap[code] || { condition: 'Unknown', icon: 'bi-cloud' };
     },
 
     getCachedWeather() {
       try {
-        if (typeof localStorage === 'undefined') return null;
         const cached = localStorage.getItem(this.CACHE_KEY);
-        if (!cached) return null;
-
-        const entry = JSON.parse(cached);
-        if (entry && entry.data && Date.now() < entry.expiresAt) {
-          return entry.data;
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (Date.now() - parsed.timestamp < this.CACHE_DURATION) {
+            return parsed;
+          }
         }
-
-        // Clear expired cache
-        localStorage.removeItem(this.CACHE_KEY);
       } catch (e) {
-        console.warn('Cache read failed:', e);
-        // Try to clear corrupted cache
-        try {
-          localStorage.removeItem(this.CACHE_KEY);
-        } catch (ex) {
-          /* ignore */
-        }
+        console.warn('Weather: Cache read failed', e);
       }
       return null;
     },
 
+    cacheWeather(data) {
+      try {
+        localStorage.setItem(this.CACHE_KEY, JSON.stringify(data));
+      } catch (e) {
+        console.warn('Weather: Cache write failed', e);
+      }
+    },
+
     async fetchWeather() {
-      // If running via file: protocol (no CORS), use mock data immediately
-      if (isFileProtocol()) {
-        console.log('Weather: File protocol detected, using mock data');
+      // Use fallback for local files to avoid CORS
+      if (window.location.protocol === 'file:') {
         return getMockWeather();
       }
 
-      // Try cache first
-      try {
-        const cached = this.getCachedWeather();
-        if (cached) {
-          console.log(
-            'Weather: Using cached data (expires in ' +
-              Math.round((cached.timestamp + this.CACHE_TTL - Date.now()) / 1000) +
-              's)'
-          );
-          return cached;
-        }
-      } catch (e) {
-        console.warn('Weather: Cache check failed', e);
+      const cached = this.getCachedWeather();
+      if (cached) {
+        return cached;
       }
 
-      // Try API fetch with timeout
-      console.log('Weather: Fetching live data from Open-Meteo API for Legazpi...');
       try {
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
 
         const params = new URLSearchParams({
           latitude: this.COORDINATES.lat,
           longitude: this.COORDINATES.lon,
-          current: 'temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m',
+          current: 'temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,precipitation_probability,uv_index',
           hourly: 'temperature_2m,weather_code',
+          forecast_hours: '24', // Fetch 24 hours to filter current + next few
           timezone: 'Asia/Manila',
-          forecast_days: 1,
         });
 
         const apiUrl = `${this.API_URL}?${params}`;
-        console.log('Weather: API URL:', apiUrl);
 
-        const response = await fetch(apiUrl, {
-          signal: controller.signal,
-        });
-
+        const response = await fetch(apiUrl, { signal: controller.signal });
         clearTimeout(timeoutId);
 
         if (!response.ok) {
@@ -176,16 +124,11 @@
         }
 
         const apiData = await response.json();
-        console.log('Weather: API response received:', apiData);
         const weatherData = this.transformApiResponse(apiData);
         this.cacheWeather(weatherData);
-        console.log(
-          'Weather: ✓ Live data fetched successfully - Temp:',
-          weatherData.temperature + '°C'
-        );
         return weatherData;
       } catch (error) {
-        console.warn('Weather: ✗ API fetch failed, using mock data -', error.message);
+        console.warn('Weather: API fetch failed, using mock data -', error.message);
         return getMockWeather();
       }
     },
@@ -195,27 +138,42 @@
         const current = apiData.current;
         const hourly = apiData.hourly;
         const { condition, icon } = this.mapWeatherCode(current.weather_code);
-        const currentHour = new Date().getHours();
-        const hourlyForecast = [];
 
-        for (let i = 0; i < 6 && currentHour + i < hourly.time.length; i++) {
-          const idx = currentHour + i;
-          const { icon: fIcon } = this.mapWeatherCode(hourly.weather_code[idx]);
-          const date = new Date(hourly.time[idx]);
-          hourlyForecast.push({
-            time: date.toLocaleTimeString('en-PH', { hour: 'numeric', hour12: true }),
-            temperature: Math.round(hourly.temperature_2m[idx]),
-            icon: fIcon,
-          });
+        // Process hourly data
+        const currentHour = new Date(current.time || Date.now()).getHours();
+        const hourlyForecast = [];
+        let count = 0;
+        
+        if (hourly && hourly.time) {
+           for (let i = 0; i < hourly.time.length; i++) {
+             const timeDate = new Date(hourly.time[i]);
+             const hour = timeDate.getHours();
+             // Get next 5 hours including current
+             if (timeDate >= new Date() - 3600000 && count < 5) {
+                const hourIcon = this.mapWeatherCode(hourly.weather_code[i]).icon;
+                let timeStr = 'Now';
+                if (count > 0) {
+                    timeStr = hour === 0 ? '12 AM' : hour === 12 ? '12 PM' : hour > 12 ? `${hour - 12} PM` : `${hour} AM`;
+                }
+                hourlyForecast.push({
+                   time: timeStr,
+                   temp: Math.round(hourly.temperature_2m[i]),
+                   icon: hourIcon
+                });
+                count++;
+             }
+           }
         }
 
         return {
           temperature: Math.round(current.temperature_2m),
           humidity: current.relative_humidity_2m,
           windSpeed: Math.round(current.wind_speed_10m),
+          uvIndex: current.uv_index !== undefined ? current.uv_index : 0,
+          precipitationProb: current.precipitation_probability !== undefined ? current.precipitation_probability : 0,
           condition,
           icon,
-          hourlyForecast,
+          hourly: hourlyForecast.length > 0 ? hourlyForecast : getMockWeather().hourly,
           isFallback: false,
           timestamp: Date.now(),
         };
@@ -227,6 +185,61 @@
   };
 
   // ============================================================================
+  // AI-Assisted Content Generator (MECE logic)
+  // ============================================================================
+  const WeatherAssistant = {
+    generateInsights(data) {
+      let summary = "";
+      let actions = [];
+
+      // Logic based on temperature, rain probability, and UV
+      const isRaining = data.precipitationProb > 40 || data.condition.toLowerCase().includes('rain');
+      const isHot = data.temperature >= 32;
+      const highUV = data.uvIndex >= 6;
+
+      // Summary
+      if (isRaining) {
+        summary = "It's looking quite wet outside right now. Expect rain and potentially lower visibility. Best to stay dry indoors if you don't need to be out.";
+      } else if (isHot && highUV) {
+        summary = "It's a hot and sunny day in Legazpi! The sun is quite intense, making it a great day for indoor activities or shaded outdoor spots.";
+      } else if (data.temperature < 25) {
+        summary = "It's relatively cool today for Legazpi. A comfortable time to be outside and enjoy the breeze.";
+      } else {
+        summary = "It's a standard, pleasant day in the city. The weather is relatively calm with manageable conditions for most activities.";
+      }
+
+      // Action 1: Laundry (Incorporate Humidity)
+      if (isRaining) {
+        actions.push({ icon: 'bi-droplet-half', title: 'Laundry', desc: 'Not recommended. Keep clothes indoors.', status: 'danger' });
+      } else if (data.humidity > 85) {
+        actions.push({ icon: 'bi-cloud-sun', title: 'Laundry', desc: `Will take longer to dry (Humidity: ${data.humidity}%).`, status: 'warning' });
+      } else {
+        actions.push({ icon: 'bi-brightness-high', title: 'Laundry', desc: `Good drying conditions (Humidity: ${data.humidity}%).`, status: 'success' });
+      }
+
+      // Action 2: Outdoors (Incorporate Rain Prob / Temp)
+      if (isRaining) {
+        actions.push({ icon: 'bi-umbrella', title: 'Outdoors', desc: `Bring an umbrella (${data.precipitationProb}% rain chance).`, status: 'danger' });
+      } else if (isHot) {
+        actions.push({ icon: 'bi-thermometer-sun', title: 'Outdoors', desc: 'Quite hot, avoid strenuous activities.', status: 'warning' });
+      } else {
+        actions.push({ icon: 'bi-tree', title: 'Outdoors', desc: `Great conditions for a walk outside (${data.precipitationProb}% rain chance).`, status: 'success' });
+      }
+
+      // Action 3: UV / Sun Protection (Incorporate UV / Wind)
+      if (highUV) {
+        actions.push({ icon: 'bi-sunglasses', title: 'Sun Protection', desc: `High UV (${data.uvIndex}). Sunscreen is a must.`, status: 'danger' });
+      } else if (data.uvIndex >= 3) {
+        actions.push({ icon: 'bi-sunglasses', title: 'Sun Protection', desc: `Moderate UV (${data.uvIndex}). Wear some sun protection.`, status: 'warning' });
+      } else {
+        actions.push({ icon: 'bi-shield-check', title: 'Sun Protection', desc: `Low UV index (${data.uvIndex}). Wind: ${data.windSpeed} km/h.`, status: 'success' });
+      }
+
+      return { summary, actions };
+    }
+  };
+
+  // ============================================================================
   // Weather UI - Renders weather data into the DOM
   // ============================================================================
   const WeatherUI = {
@@ -234,53 +247,109 @@
       if (!container) return;
 
       try {
-        // Limit to 4 hours for minimal design
-        const forecastHTML = data.hourlyForecast
-          .slice(0, 4)
-          .map(
-            (h) => `
-                <div class="weather-hour" role="listitem">
-                    <span class="weather-hour-time">${h.time}</span>
-                    <i class="bi ${h.icon}" aria-hidden="true"></i>
-                    <span class="weather-hour-temp">${h.temperature}°</span>
-                </div>
-            `
-          )
-          .join('');
+        const insights = WeatherAssistant.generateInsights(data);
 
-        const dataSourceBadge = data.isFallback
-          ? '<span style="font-size:0.65rem;color:rgba(255,255,255,0.5);margin-left:4px;" title="Using fallback data">(Demo)</span>'
-          : '<span style="font-size:0.65rem;color:#06a77d;margin-left:4px;" title="Live data from Open-Meteo API">●</span>';
+        const actionsHTML = insights.actions.map(action => `
+          <div class="weather-action-card border-${action.status}">
+            <div class="action-icon text-${action.status}">
+              <i class="bi ${action.icon}"></i>
+            </div>
+            <div class="action-text">
+              <strong>${action.title}</strong>
+              <p>${action.desc}</p>
+            </div>
+          </div>
+        `).join('');
+        
+        const hourlyHTML = (data.hourly || []).map(hour => `
+          <div class="weather-hour-card">
+            <span class="hour-time">${hour.time}</span>
+            <div class="hour-icon-wrapper" style="color: ${hour.color || 'var(--color-primary)'}">
+              <i class="bi ${hour.icon}"></i>
+            </div>
+            <span class="hour-temp">${hour.temp}°</span>
+          </div>
+        `).join('');
 
         container.innerHTML = `
-                <div class="weather-widget" role="region" aria-label="Current weather in Legazpi City">
-                    <div class="weather-current">
-                        <div class="weather-current-icon" aria-hidden="true">
-                            <i class="bi ${data.icon}"></i>
-                        </div>
-                        <div class="weather-current-info">
-                            <div class="weather-current-temp" aria-label="Temperature ${data.temperature} degrees Celsius">${data.temperature}°C</div>
-                            <div class="weather-current-condition" aria-label="Condition: ${data.condition}">${data.condition}${dataSourceBadge}</div>
-                            <div class="weather-current-location">
-                                <i class="bi bi-geo-alt" aria-hidden="true"></i> Legazpi City, Albay
-                            </div>
-                        </div>
+          <div class="premium-weather-widget" id="interactive-weather-widget" role="button" tabindex="0" aria-expanded="false" aria-label="Current weather in Legazpi City. Click to expand for details.">
+              <!-- Premium Background Gradient -->
+              <div class="premium-weather-bg"></div>
+
+              <!-- Concise Top Section -->
+              <div class="weather-header">
+                  <div class="weather-current-icon" aria-hidden="true" style="color: ${data.color || 'var(--color-primary)'}">
+                      <i class="bi ${data.icon}"></i>
+                  </div>
+                  <div class="weather-current-info">
+                      <div class="weather-current-temp">${data.temperature}°C</div>
+                      <div class="weather-current-condition">${data.condition}</div>
+                  </div>
+                  <div class="weather-expand-indicator">
+                    <i class="bi bi-chevron-down indicator-icon"></i>
+                  </div>
+              </div>
+
+              <!-- AI Summary (Visible on desktop by default, collapsed on mobile) -->
+              <div class="weather-desktop-visible">
+                  <div class="weather-ai-summary">
+                    <div class="ai-summary-icon">
+                       <i class="bi bi-stars"></i>
                     </div>
-                    <div class="weather-stats" role="list" aria-label="Weather details">
-                        <div class="weather-stat" role="listitem" aria-label="Humidity ${data.humidity} percent">
-                            <i class="bi bi-droplet" aria-hidden="true"></i>
-                            <span>${data.humidity}%</span>
-                        </div>
-                        <div class="weather-stat" role="listitem" aria-label="Wind speed ${data.windSpeed} kilometers per hour">
-                            <i class="bi bi-wind" aria-hidden="true"></i>
-                            <span>${data.windSpeed} km/h</span>
-                        </div>
+                    <div class="ai-summary-text">
+                      <p>${insights.summary}</p>
                     </div>
-                    <div class="weather-hourly" role="list" aria-label="Hourly forecast">
-                        ${forecastHTML}
-                    </div>
-                </div>
-            `;
+                  </div>
+              </div>
+              
+              <!-- Comprehensive Section (Always collapsed by default) -->
+              <div class="weather-expanded-content">
+                  
+                  <!-- Actionable Items (MECE: incorporates stats) -->
+                  <div class="weather-actions-grid">
+                      ${actionsHTML}
+                  </div>
+                  
+                  <!-- Hourly Forecast -->
+                  <div class="weather-hourly-container">
+                      <h4 class="weather-hourly-title">Next 5 Hours</h4>
+                      <div class="weather-hourly-scroll">
+                          ${hourlyHTML}
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Official Link (Visible on desktop by default, collapsed on mobile) -->
+              <div class="weather-desktop-visible">
+                  <div class="weather-footer">
+                    <a href="https://www.panahon.gov.ph/" target="_blank" rel="noopener noreferrer">Official PAGASA Updates <i class="bi bi-box-arrow-up-right"></i></a>
+                  </div>
+              </div>
+          </div>
+        `;
+
+        const widget = container.querySelector('#interactive-weather-widget');
+        if (widget) {
+            widget.addEventListener('click', function(e) {
+                // Prevent links from toggling
+                if (e.target.tagName === 'A' || e.target.closest('a')) return;
+                
+                const isExpanded = this.classList.contains('is-expanded');
+                if (isExpanded) {
+                    this.classList.remove('is-expanded');
+                    this.setAttribute('aria-expanded', 'false');
+                } else {
+                    this.classList.add('is-expanded');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
+            widget.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        }
 
         container.setAttribute('data-weather-loaded', 'true');
       } catch (e) {
@@ -289,36 +358,26 @@
       }
     },
 
+
     renderLoading(container) {
       if (!container) return;
       container.innerHTML = `
-            <div class="weather-loading" data-loading="true" aria-busy="true" aria-label="Loading weather data">
-                <div class="weather-current">
+            <div class="premium-weather-widget is-loading" aria-busy="true" aria-label="Loading weather data">
+                <div class="weather-header">
                     <div class="skeleton-circle"></div>
-                    <div class="weather-current-info">
-                        <div class="skeleton-text skeleton-lg"></div>
-                        <div class="skeleton-text skeleton-md" style="margin-top:8px;"></div>
-                        <div class="skeleton-text skeleton-sm" style="margin-top:8px;"></div>
+                    <div class="weather-current-info" style="width: 100%;">
+                        <div class="skeleton-text skeleton-lg" style="margin-bottom: 8px;"></div>
+                        <div class="skeleton-text skeleton-md"></div>
                     </div>
-                </div>
-                <div class="weather-stats">
-                    <div class="skeleton-text skeleton-stat"></div>
-                    <div class="skeleton-text skeleton-stat"></div>
-                </div>
-                <div class="weather-hourly">
-                    <div class="skeleton-hour"></div>
-                    <div class="skeleton-hour"></div>
-                    <div class="skeleton-hour"></div>
-                    <div class="skeleton-hour"></div>
                 </div>
             </div>
         `;
     },
 
-    renderError(container, retryFn) {
+    renderError(container) {
       if (!container) return;
       container.innerHTML = `
-            <div class="weather-error" role="alert">
+            <div class="premium-weather-widget is-error" role="alert">
                 <div class="weather-error-content">
                     <i class="bi bi-cloud-slash" aria-hidden="true"></i>
                     <p>Weather data unavailable</p>
@@ -333,166 +392,12 @@
   };
 
   // ============================================================================
-  // Map Component - Initializes and manages the Leaflet map for Legazpi City Hall
-  // ============================================================================
-  const MapComponent = {
-    LEGAZPI_CENTER: [13.1391, 123.7438],
-    DEFAULT_ZOOM: 15,
-    map: null,
-
-    init(containerId) {
-      const container = document.getElementById(containerId);
-      if (!container) {
-        console.error('Map: Container not found');
-        return null;
-      }
-
-      // If map already exists, just resize it
-      if (this.map) {
-        console.log('Map: Already initialized, resizing');
-        this.map.invalidateSize();
-        return this.map;
-      }
-
-      // If Leaflet is available, upgrade the container to an interactive map
-      if (typeof L !== 'undefined') {
-        console.log('Map: Leaflet available, upgrading to interactive map');
-        return this.initLeaflet(container);
-      }
-
-      // Leaflet not available — the iframe embedded in the HTML stays visible.
-      if (!container.querySelector('iframe')) {
-        console.warn('Map: Leaflet unavailable and no iframe found, inserting fallback');
-        this.renderTextFallback(container);
-      } else {
-        console.log('Map: Leaflet unavailable, keeping existing iframe');
-      }
-      return null;
-    },
-
-    renderLoading(container) {
-      container.innerHTML = `
-            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;min-height:300px;background:#f5f5f5;">
-                <i class="bi bi-map" style="font-size:2.5rem;color:#c2410c;opacity:0.4;"></i>
-                <p style="color:#888;margin-top:0.5rem;font-size:0.875rem;">Loading map of Legazpi City...</p>
-            </div>
-        `;
-    },
-
-    renderTextFallback(container) {
-      // Use OpenStreetMap iframe embed as fallback for Legazpi City Hall
-      container.innerHTML = `
-            <iframe 
-                width="100%" 
-                height="300" 
-                frameborder="0" 
-                scrolling="no" 
-                marginheight="0" 
-                marginwidth="0" 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=123.7238%2C13.1191%2C123.7638%2C13.1591&layer=mapnik&marker=13.1391%2C123.7438" 
-                style="border:0;display:block;"
-                title="Map of Legazpi City Hall, Albay"
-                loading="lazy">
-            </iframe>
-        `;
-      container.setAttribute('data-map-loaded', 'iframe');
-    },
-
-    initLeaflet(container) {
-      try {
-        console.log('Map: Initializing Leaflet for Legazpi City Hall...');
-
-        delete L.Icon.Default.prototype._getIconUrl;
-        L.Icon.Default.mergeOptions({
-          iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-          iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-          shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-          shadowSize: [41, 41],
-        });
-
-        // Clear any existing content
-        container.innerHTML = '';
-
-        // Create the map with keyboard navigation support
-        this.map = L.map(container, {
-          center: this.LEGAZPI_CENTER,
-          zoom: this.DEFAULT_ZOOM,
-          scrollWheelZoom: false,
-          zoomControl: true,
-          keyboard: true,
-          keyboardPanDelta: 80,
-        });
-
-        const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-          maxZoom: 19,
-          crossOrigin: false,
-        });
-
-        let tileLoadedOnce = false;
-        let tileErrorCount = 0;
-
-        tileLayer.on('tileload', () => {
-          tileLoadedOnce = true;
-        });
-
-        tileLayer.on('tileerror', () => {
-          if (!tileLoadedOnce) {
-            tileErrorCount++;
-            if (tileErrorCount >= 3) {
-              console.warn('Map: Tiles blocked, falling back to OSM embed iframe');
-              const map = this.map;
-              this.map = null;
-              if (map) map.remove();
-              this.renderTextFallback(container);
-            }
-          }
-        });
-
-        tileLayer.addTo(this.map);
-
-        // Add marker for Legazpi City Hall
-        const marker = L.marker(this.LEGAZPI_CENTER).addTo(this.map);
-        marker.bindPopup('<strong>Legazpi City Hall</strong><br>Rizal St., Legazpi City, Albay 4500');
-
-        container.setAttribute('data-map-loaded', 'leaflet');
-
-        // Force resize after short delay
-        setTimeout(() => {
-          if (this.map) {
-            this.map.invalidateSize();
-            console.log('Map: Resize complete');
-          }
-        }, 100);
-
-        setTimeout(() => {
-          if (this.map) {
-            this.map.invalidateSize();
-          }
-        }, 500);
-
-        console.log('Map: Leaflet initialized successfully for Legazpi');
-        return this.map;
-      } catch (e) {
-        console.error('Map: Leaflet initialization failed:', e);
-        this.renderTextFallback(container);
-        return null;
-      }
-    },
-  };
-
-  // ============================================================================
   // Main Initialization Function
   // ============================================================================
   async function WeatherMapInit() {
-    console.log('Weather-Map: Initializing Legazpi widgets...');
+    console.log('Weather: Initializing Legazpi widgets...');
 
     const weatherContainer = document.getElementById('weather-container');
-    const mapContainer = document.getElementById('map-container');
 
     // WEATHER: Show loading, then fetch
     if (weatherContainer) {
@@ -503,16 +408,6 @@
       } catch (error) {
         console.error('Weather: Init failed', error);
         WeatherUI.render(weatherContainer, getMockWeather());
-      }
-    }
-
-    // MAP: Initialize
-    if (mapContainer) {
-      try {
-        MapComponent.init('map-container');
-      } catch (error) {
-        console.error('Map: Init failed', error);
-        MapComponent.renderTextFallback(mapContainer);
       }
     }
   }
@@ -537,6 +432,6 @@
 
   // Export for testing
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { WeatherService, WeatherUI, MapComponent, getMockWeather };
+    module.exports = { WeatherService, WeatherAssistant, WeatherUI, getMockWeather };
   }
-})(); // End of IIFE
+})();

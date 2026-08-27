@@ -829,7 +829,7 @@ a.timeline-node:hover *,
 }
 
 .timeline-node:hover {
-  border-color: var(--hist-navy);
+  border-color: var(--hist-terracotta-border);
   transform: translateY(-4px);
   box-shadow: var(--hist-card-shadow-hover);
 }
@@ -849,7 +849,9 @@ a.timeline-node:hover *,
 }
 
 .timeline-node:hover .timeline-dot {
-  background: var(--hist-navy);
+  border-color: var(--hist-terracotta-border);
+  background: var(--hist-terracotta);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.25);
   transform: translateX(-50%) scale(1.2);
 }
 
