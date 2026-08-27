@@ -1043,23 +1043,77 @@
 /* --- Entry point shown as a grid ---------------------------------------- */
 
 /* A grid index answers "which one of these do I need?" rather than "I have this
-   errand", so every option is visible at once instead of sitting behind a
-   disclosure. CEO's nine construction permits are the case this exists for:
-   someone about to build has to pick from the set, and hiding the set is the one
-   thing that does not help them. */
+   errand", so it stays under the same heading as the errands but has to read as a
+   different kind of thing. Three signals do that, and none of them is decoration:
+
+   - It starts OPEN behind a plus/minus, where an errand rail starts closed behind a
+     chevron. A reference index you close is a different gesture from a shortlist you
+     open, and the control says so before it is used.
+   - Its cards carry the accent (orange) rather than the page's primary blue.
+   - Each option carries its own icon, so the set can be scanned by shape.
+
+   Text on the accent tint uses --color-accent-badge-text, not --color-accent: at 10%
+   tint the plain accent falls just under 4.5:1. */
 
 .hub-entry--grid {
   border-top: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
-  margin-top: 6px;
-  padding-top: 14px;
+  margin-top: 10px;
+  padding-top: 12px;
 }
 
-.hub-entry--grid .hub-entry-title {
+.hub-grid-shell {
+  border-radius: var(--radius-sm);
+}
+
+.hub-grid-summary {
   align-items: center;
+  border-radius: var(--radius-sm);
+  color: var(--color-accent-badge-text);
+  cursor: pointer;
   display: flex;
-  font-weight: var(--fw-semibold, 600);
   gap: 8px;
-  margin: 0 0 10px;
+  list-style: none;
+  padding: 8px 10px;
+}
+
+.hub-grid-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Tinted whether open or shut. Collapsed, the header is all that is left of the
+   block, and it still has to read as the one thing on this list that is not an
+   errand. */
+.hub-grid-summary {
+  background: color-mix(in srgb, var(--color-accent) 7%, transparent);
+}
+
+.hub-grid-summary:hover {
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+}
+
+.hub-grid-icon {
+  color: var(--color-accent-badge-text);
+  flex: none;
+}
+
+.hub-grid-title {
+  flex: 1;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold, 600);
+  line-height: 1.35;
+}
+
+/* Plus when shut, minus when open. Two glyphs rather than one rotated chevron, so
+   the control cannot be mistaken for the rails above it. */
+.hub-grid-toggle {
+  color: var(--color-accent-badge-text);
+  flex: none;
+  font-size: var(--fs-xs);
+}
+
+.hub-grid-shell[open] .hub-grid-toggle-shut,
+.hub-grid-shell:not([open]) .hub-grid-toggle-open {
+  display: none;
 }
 
 .hub-entry-grid {
@@ -1067,7 +1121,7 @@
   gap: 8px;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   list-style: none;
-  margin: 0;
+  margin: 8px 0 0;
   padding: 0;
 }
 
@@ -1075,22 +1129,34 @@
   display: flex;
 }
 
-.hub-entry-grid a {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
+/* Scoped under .hub-journeys to outrank the blanket underline on links in this
+   sidebar. That rule exists so a link is distinguishable without relying on colour;
+   here the border, the fill and the icon already do that, and an underline on top of
+   a bordered card just makes the set noisy. */
+.hub-journeys .hub-entry-grid a {
+  align-items: flex-start;
+  background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
   border-radius: var(--radius-sm);
-  display: block;
+  color: var(--color-accent-badge-text);
+  display: flex;
   font-size: var(--fs-sm);
+  gap: 8px;
   line-height: 1.35;
   padding: 10px 12px;
   text-decoration: none;
   width: 100%;
 }
 
-.hub-entry-grid a:hover,
-.hub-entry-grid a:focus-visible {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+.hub-journeys .hub-entry-grid a i {
+  flex: none;
+  line-height: 1.35;
+}
+
+.hub-journeys .hub-entry-grid a:hover,
+.hub-journeys .hub-entry-grid a:focus-visible {
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  border-color: var(--color-accent);
 }
 
 /* --- Office personnel --------------------------------------------------- */

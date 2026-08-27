@@ -402,20 +402,38 @@ function renderEntryPoints(office) {
       const services = (ep.services ?? []).map((id) => byId.get(id)).filter(Boolean);
 
       // A grid index answers "which one of these do I need?" — CEO's nine construction
-      // permits — so it shows every option at once instead of hiding them behind a
-      // disclosure. A rail answers "I have this errand", where the list is a shortlist
-      // and collapsing it keeps the sidebar scannable.
+      // permits — so it shows every option at once. A rail answers "I have this
+      // errand", where the list is a shortlist and collapsing it keeps the sidebar
+      // scannable.
+      //
+      // Both collapse, because a nine-card block would otherwise push the errands off
+      // the screen. They are deliberately not the same control: a rail is a chevron
+      // row that starts closed, a grid starts *open* behind a plus/minus, so the set
+      // reads as a reference index the reader closes rather than a list they open.
+      // The accent colouring is the same signal in colour.
       if (ep.presentation === 'grid') {
+        const icons = office.local?.serviceIcons ?? {};
         return `          <li class="hub-entry hub-entry--grid">
-            <h4 class="hub-entry-title">
-              <i class="bi ${esc(ep.icon ?? 'bi-grid-3x3-gap')} hub-entry-icon" aria-hidden="true"></i>
-              ${esc(ep.title)}
-            </h4>
-            <ul class="hub-entry-grid">
+            <details class="hub-grid-shell" open>
+              <summary class="hub-grid-summary">
+                <i class="bi ${esc(ep.icon ?? 'bi-grid-3x3-gap')} hub-grid-icon" aria-hidden="true"></i>
+                <span class="hub-grid-title">${esc(ep.title)}</span>
+                <span class="hub-grid-toggle" aria-hidden="true">
+                  <i class="bi bi-dash-lg hub-grid-toggle-open"></i>
+                  <i class="bi bi-plus-lg hub-grid-toggle-shut"></i>
+                </span>
+              </summary>
+              <ul class="hub-entry-grid">
 ${services
-  .map((svc) => `              <li><a href="#${esc(svc.id)}">${esc(svc.title)}</a></li>`)
+  .map(
+    (svc) => `                <li><a href="#${esc(svc.id)}">
+                  <i class="bi ${esc(icons[svc.id] ?? 'bi-file-earmark-text')}" aria-hidden="true"></i>
+                  <span>${esc(svc.title)}</span>
+                </a></li>`
+  )
   .join('\n')}
-            </ul>
+              </ul>
+            </details>
           </li>`;
       }
 

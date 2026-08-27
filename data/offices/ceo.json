@@ -3496,6 +3496,17 @@
         "occupancy of sidewalk"
       ]
     },
+    "serviceIcons": {
+      "ceo-building-permit": "bi-building",
+      "ceo-certificate-occupancy": "bi-house-check",
+      "ceo-electrical-permit": "bi-lightning-charge",
+      "ceo-mechanical-permit": "bi-gear",
+      "ceo-mechanical-permit-to-operate": "bi-play-circle",
+      "ceo-demolition-permit": "bi-hammer",
+      "ceo-excavation-ground-preparation-permit": "bi-layers",
+      "ceo-sidewalk-scaffolding-permit": "bi-bricks",
+      "ceo-excavation-permit-maintenance": "bi-cone-striped"
+    },
     "contact": null
   }
 }
