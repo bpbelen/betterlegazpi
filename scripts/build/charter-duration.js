@@ -26,17 +26,53 @@
 const FRACTIONS = { '¼': 0.25, '½': 0.5, '¾': 0.75 };
 const FRACTION_RE = /(\d*)\s*([¼½¾])/g;
 
-/** Rewrites "½ Day" as "0.5 Day" so one numeric pattern covers both spellings. */
-function expandFractions(text) {
-  return text.replace(FRACTION_RE, (_, whole, glyph) =>
-    String((Number(whole) || 0) + FRACTIONS[glyph])
-  );
+const WORD_NUMBERS = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  ten: 10,
+  eleven: 11,
+  twelve: 12,
+};
+const WORD_NUMBER_RE = /\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b/gi;
+const WORD_THEN_DIGIT_RE =
+  /\b(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\s*\((\d+(?:\.\d+)?)\)/gi;
+const PARENTHESISED_DIGIT_RE = /\((\d+(?:\.\d+)?)\)/g;
+
+/**
+ * Puts a duration into a form the unit patterns can read.
+ *
+ * Charters spell quantities three ways, sometimes in one cell: a vulgar fraction
+ * ("½ Day"), a word ("One hour"), and the legal-document habit of writing both
+ * ("Two (2) hours", "ten (10) days"). The doubled form is collapsed first, so a value
+ * written twice is not counted twice.
+ */
+function expandNumerals(text) {
+  return text
+    .replace(FRACTION_RE, (_, whole, glyph) => String((Number(whole) || 0) + FRACTIONS[glyph]))
+    .replace(WORD_THEN_DIGIT_RE, '$1')
+    .replace(PARENTHESISED_DIGIT_RE, '$1')
+    .replace(WORD_NUMBER_RE, (w) => String(WORD_NUMBERS[w.toLowerCase()]));
 }
 
+/**
+ * The separator between a number and its unit absorbs a hyphen as well as spaces, and
+ * tolerates a qualifier sitting between the two: charters write "10 calendar days",
+ * "10 working days" and "10-day notice of posting" for the same kind of quantity.
+ */
 const UNIT_PATTERNS = [
-  { unit: 'days', re: /(\d+(?:\.\d+)?)\s*(?:working\s+)?(?:d|day|days)\b\.?/gi },
-  { unit: 'hours', re: /(\d+(?:\.\d+)?)\s*(?:h|hr|hrs|hour|hours)\b\.?/gi },
-  { unit: 'minutes', re: /(\d+(?:\.\d+)?)\s*(?:m|min|mins|minute|minutes)\b\.?/gi },
+  {
+    unit: 'days',
+    re: /(\d+(?:\.\d+)?)[\s-]*(?:calendar\s+|working\s+)?(?:d|day|days)\b\.?/gi,
+  },
+  { unit: 'hours', re: /(\d+(?:\.\d+)?)[\s-]*(?:h|hr|hrs|hour|hours)\b\.?/gi },
+  { unit: 'minutes', re: /(\d+(?:\.\d+)?)[\s-]*(?:m|min|mins|minute|minutes)\b\.?/gi },
 ];
 
 const ZERO = () => ({ days: 0, hours: 0, minutes: 0 });
@@ -56,7 +92,7 @@ function parseDuration(text) {
   const out = { ...ZERO(), rate: null, raw: text ?? null, recognized: false };
   if (!text || typeof text !== 'string') return out;
 
-  const expanded = expandFractions(text);
+  const expanded = expandNumerals(text);
 
   for (const { unit, re } of UNIT_PATTERNS) {
     re.lastIndex = 0;

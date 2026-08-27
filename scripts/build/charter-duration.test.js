@@ -70,6 +70,39 @@ test('minutes roll into hours, hours never roll into days', () => {
   });
 });
 
+test('reads quantities spelled as words, and the doubled legal form', () => {
+  // CCR writes "One hour" and "Two (2) hours" in the same charter.
+  assert.deepEqual(comps('One hour'), { days: 0, hours: 1, minutes: 0 });
+  assert.deepEqual(comps('THREE (3) Hours'), { days: 0, hours: 3, minutes: 0 });
+  assert.deepEqual(comps('ten (10) days notice of posting'), {
+    days: 10,
+    hours: 0,
+    minutes: 0,
+  });
+});
+
+test('a quantity written twice is counted once', () => {
+  // "Two (2) hours" is one duration in two notations, not two hours plus two hours.
+  assert.deepEqual(comps('Two (2) hours'), { days: 0, hours: 2, minutes: 0 });
+});
+
+test('reads the day qualifiers and hyphenation the charters use', () => {
+  // CCR writes posting periods three different ways in the same charter.
+  assert.deepEqual(comps('10 calendar days'), { days: 10, hours: 0, minutes: 0 });
+  assert.deepEqual(comps('10 working days'), { days: 10, hours: 0, minutes: 0 });
+  assert.deepEqual(comps('10-day notice of posting'), { days: 10, hours: 0, minutes: 0 });
+});
+
+test('a span the office does not control is not silently counted', () => {
+  // "2-5 months" is CCR waiting on the PSA. Months are not a unit we model, so the
+  // value is reported as unreadable rather than folded into a total as zero.
+  const { unrecognized } = sumSteps([
+    { processingTime: '2 hours' },
+    { processingTime: 'PSA affirmation is 2-5 months' },
+  ]);
+  assert.deepEqual(unrecognized, ['PSA affirmation is 2-5 months']);
+});
+
 test('reads fractions in both spellings the charters use', () => {
   // OCENR writes its webinars as "2.5 hrs" and its seedling release as "½ Day".
   assert.deepEqual(comps('2.5 hrs'), { days: 0, hours: 2, minutes: 30 });

@@ -1,0 +1,1716 @@
+{
+  "slug": "ccr",
+  "route": "service-details/city-civil-registrar.html",
+  "charter": {
+    "office": "Office of the City Civil Registrar",
+    "abbreviation": "CCR",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-CIVIL-REGISTRAR-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/ccr.md",
+    "personnel": [
+      {
+        "name": "Priscilla L. Galicia",
+        "position": "CGDH I / City Civil Registrar",
+        "unit": "Office of the City Civil Registrar",
+        "isHead": true
+      },
+      {
+        "name": "Juan B. Yuson",
+        "position": "Supervising Administrative Officer",
+        "unit": "Legal Instrument and Judicial Decrees"
+      },
+      {
+        "name": "Corazon Kim E. Nemir",
+        "position": "Registration Officer III",
+        "unit": "Archives, Admin and Information Division"
+      },
+      {
+        "name": "L. Casquejo",
+        "position": "Asst. Registration Officer",
+        "unit": "Legal Instrument and Judicial Decrees"
+      },
+      {
+        "name": "M. Loria",
+        "position": "Registration Officer II",
+        "unit": "Birth Registration Section"
+      },
+      {
+        "name": "D. Abejuro",
+        "position": "Admin Aide IV",
+        "unit": "Birth Registration Section"
+      },
+      {
+        "name": "M. Azcune",
+        "position": "Admin Aide I",
+        "unit": "Birth Registration Section"
+      },
+      {
+        "name": "J.P. Pasano",
+        "position": "Admin Aide IV",
+        "unit": "Death Registration Section"
+      },
+      {
+        "name": "R.A. Olimpo",
+        "position": "Admin Aide III",
+        "unit": "Death Registration Section"
+      },
+      {
+        "name": "V. Macasinag",
+        "position": "Admin Aide IV",
+        "unit": "Marriage Registration Section"
+      },
+      {
+        "name": "M. Lorilla",
+        "position": "Admin Aide III",
+        "unit": "Marriage Registration Section"
+      },
+      {
+        "name": "A. Vargas",
+        "position": "Admin Aide I",
+        "unit": "Legal Instrument and Judicial Decrees"
+      },
+      {
+        "name": "M. Binas",
+        "position": "Admin Aide I",
+        "unit": "Legal Instrument and Judicial Decrees"
+      },
+      {
+        "name": "I. Mendones",
+        "position": "Cashier",
+        "unit": "Admin Division"
+      },
+      {
+        "name": "J.K. Nunez",
+        "position": "Cashier",
+        "unit": "Admin Division"
+      }
+    ],
+    "personnelNotes": [
+      "The charter gives most staff as an initial and a surname; only the three contact officers are printed in full. Names are reproduced as published."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Fill up the Customer Feedback Form at the information desk of the office. You can also reach the office on 0960-688-4345, or the contact officers on 0995-469-7747, 0935-818-5300 or 0936-970-0665.",
+      "howFeedbackIsProcessed": "Feedback is forwarded to the section or person concerned for action. To complain, fill up the Client's Complaint and Feedback Form at the Public Assistance and Complaints Desk. The office evaluates the form, interviews the complainant, and endorses the complaint to the staff concerned or to the Local Civil Registrar, who takes it up with the person complained about and gives feedback.",
+      "contacts": ["legazpicivilregistrar@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "ccr-birth-on-time",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Registering a birth within 30 days",
+        "description": "Registering a child born in Legazpi City within thirty days of the birth. This is the ordinary, on-time route; after thirty days it becomes a delayed registration.",
+        "office": "Birth Registration Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, government and private hospitals, lying-in and other birth attendants",
+        "requirements": [
+          {
+            "item": "Duly accomplished birth certificate, 4 copies",
+            "whereToSecure": "Hospital, lying-in or other birthing facility"
+          },
+          {
+            "item": "For a marital child: marriage contract, 1 certified copy. For a non-marital child: Affidavit to Use the Surname of the Father and Admission of Paternity (original), plus the parents' birth certificates",
+            "whereToSecure": "Philippine Statistics Authority or Local Civil Registrar's Office"
+          },
+          {
+            "item": "Information sheet, original copy",
+            "whereToSecure": "Hospital or lying-in"
+          },
+          {
+            "item": "Valid ID with signature, 1 photocopy",
+            "whereToSecure": "Government or private sector"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the birth certificate and the requirements.",
+            "agency": "Checks the entries and attachments for correctness and completeness, then registers and signs.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Birth Registration Section staff"
+          },
+          {
+            "client": "Pay the fee, if one applies.",
+            "agency": "Issues the official receipt.",
+            "feeText": "Marital child: none. Non-marital child: Affidavit to Use the Surname of the Father P200.00, Admission of Paternity P100.00",
+            "feeTiers": [
+              {
+                "label": "Affidavit to Use the Surname of the Father",
+                "amount": 200,
+                "currency": "PHP"
+              },
+              {
+                "label": "Admission of Paternity",
+                "amount": 100,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the registered birth certificate.",
+            "agency": "Issues the registered Certificate of Live Birth.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Birth Registration Section staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P300.00",
+          "processingTime": "Two (2) hours"
+        },
+        "notes": [
+          "Registering the birth of a marital child within thirty days is free. The P300.00 total applies to a non-marital child, where both affidavits are needed."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "This charter gives one processing time for the whole service rather than a figure per row. The two hours are recorded against the step where the office does the work, so the derived total matches the charter."
+        ]
+      },
+      {
+        "id": "ccr-birth-delayed",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "Frontline Services",
+        "title": "Registering a birth after 30 days, for people under 80",
+        "description": "Registering a birth reported after the thirty-day period, or where no record exists at the Local Civil Registrar and the PSA. This covers out-of-town delayed registration for someone born outside Legazpi City, and registration under the PSA's Birth Registration Assistance Project (BRAP) for indigenous people, Muslim Filipinos and the poorest communities.",
+        "office": "Birth Registration Section",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, government and private hospitals, lying-in and other birth attendants",
+        "requirements": [
+          {
+            "item": "Duly accomplished Certificate of Live Birth, 4 copies",
+            "whereToSecure": "Hospital, lying-in, birthing home or clinic, or the Local Civil Registrar's Office"
+          },
+          {
+            "item": "PSA negative certification, 1 original and 1 photocopy",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Two documentary evidences, certified photocopies. For example a baptismal certificate, school records, voter's registration, medical records, Pag-IBIG beneficiary nomination form, PhilHealth MDR, SSS static information, children's birth certificates, or an NBI or police clearance",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "Affidavit of two disinterested persons or joint affidavit, with photocopies of the affiants' signed IDs",
+            "whereToSecure": "Local Civil Registrar's Office"
+          },
+          {
+            "item": "For a marital child: parents' marriage certificate, 1 photocopy. For a non-marital child: Acknowledgement or Admission of Paternity, Affidavit to Use the Surname of the Father, and a sworn attestation of the mother or guardian for a child aged 7 to 17, with photocopies of the parents' and child's IDs",
+            "whereToSecure": "Local Civil Registrar's Office or Philippine Statistics Authority"
+          },
+          {
+            "item": "National ID or PhilSys transaction slip, 1 photocopy",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Barangay residency, 1 original or certified photocopy",
+            "whereToSecure": "Office of the Punong Barangay"
+          },
+          {
+            "item": "2x2 picture with a white background",
+            "whereToSecure": "Photo studio or applicant"
+          },
+          {
+            "item": "Valid ID of the registrant or informant, with personal appearance",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "Parent's valid ID, birth certificate, or death certificate if deceased. 1 original to be presented and 1 certified photocopy",
+            "whereToSecure": "Local Civil Registrar's Office or Philippine Statistics Authority"
+          },
+          {
+            "item": "For a foreign parent: valid passport, BI clearance certificate or ACR-ICR card. 1 original to be presented and 1 certified photocopy",
+            "whereToSecure": "Philippine Embassy or Department of Foreign Affairs"
+          },
+          {
+            "item": "Under BRAP: negative omnibus certification, 1 original and 1 photocopy",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Under BRAP: affidavit of two disinterested persons, with photocopies of the affiants' signed IDs",
+            "whereToSecure": "Local Civil Registrar's Office"
+          },
+          {
+            "item": "Under BRAP: certificate of indigency, 1 original",
+            "whereToSecure": "Punong Barangay"
+          },
+          {
+            "item": "Under BRAP: any proof of identity such as a barangay certification or driver's licence, 1 photocopy, if applicable",
+            "whereToSecure": "Government or private sector"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the documents in person.",
+            "agency": "Verifies and signs after checking the entries for correctness and the required documents for completeness, then prepares the filing and the posting of notice.",
+            "feeText": "None",
+            "processingTime": "3 hours",
+            "personResponsible": "Birth Registration Section staff"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Issues the official receipt and a claim stub showing the date and time the document will be released.",
+            "feeText": "Service fee 500.00. Free under BRAP. For a non-marital child, additional: Admission of Paternity 100.00, Affidavit to Use the Surname of the Father 200.00",
+            "feeTiers": [
+              {
+                "label": "Service fee",
+                "amount": 500,
+                "currency": "PHP"
+              },
+              {
+                "label": "Admission of Paternity",
+                "amount": 100,
+                "currency": "PHP"
+              },
+              {
+                "label": "Affidavit to Use the Surname of the Father",
+                "amount": 200,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the registered birth certificate once the notice has been posted.",
+            "agency": "Registers and releases the document after the ten-day notice of posting.",
+            "feeText": "None",
+            "processingTime": "10 calendar days (posting period)",
+            "personResponsible": "Birth Registration Section staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P500.00 for a marital child; P800.00 for a non-marital child",
+          "processingTime": "3 hours and 10 calendar days (posting period)"
+        },
+        "notes": [
+          "Registration under the Birth Registration Assistance Project is free.",
+          "For an out-of-town delayed registration the office transmits the document to the PSA Regional Office, which forwards it to the Local Civil Registrar where it should be registered."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter puts this service and the one for registrants aged 80 and above in a single block with two process tables. They are split here into two services sharing charter number 2.",
+          "The ten-day posting period is the office waiting, not the client. It is recorded as a step so the total matches the charter's own."
+        ]
+      },
+      {
+        "id": "ccr-birth-delayed-80-above",
+        "number": 3,
+        "charterNumber": 2,
+        "charterGroup": "Frontline Services",
+        "title": "Registering a birth after 30 days, for people aged 80 and above",
+        "description": "The delayed birth registration route for a registrant aged 80 or above. It follows the same process, except that the office emails the attachments to the PSA for evaluation and waits for the PSA to confirm before proceeding.",
+        "office": "Birth Registration Section",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, government and private hospitals, lying-in and other birth attendants",
+        "requirements": [
+          {
+            "item": "The same checklist as delayed registration for people under 80. See that service for the full list.",
+            "whereToSecure": "Various"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the documents in person.",
+            "agency": "Verifies and signs after checking the entries for correctness and the required documents for completeness, then forwards the attachments to the PSA by email for evaluation.",
+            "feeText": "None",
+            "processingTime": "3 hours",
+            "personResponsible": "Birth Registration Section staff"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Issues the official receipt. Registration proceeds once the PSA confirms and the ten-day notice of posting is complete.",
+            "feeText": "Service fee 500.00. Free under BRAP",
+            "feeTiers": [
+              {
+                "label": "Service fee",
+                "amount": 500,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the registered birth certificate once the notice has been posted.",
+            "agency": "Releases the Certificate of Live Birth after the ten-day notice of posting.",
+            "feeText": "None",
+            "processingTime": "10 calendar days (posting period)",
+            "personResponsible": "Birth Registration Section staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P500.00",
+          "processingTime": "3 hours and 10 calendar days (posting period)"
+        },
+        "notes": [
+          "For an out-of-town delayed registration, once the PSA confirms, the document goes to the PSA Regional Office and on to the Local Civil Registrar where it should be registered."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's single delayed-registration block; see the note on the service for people under 80.",
+          "The charter does not repeat the checklist for this variant. The requirement recorded here points back rather than inventing a list."
+        ]
+      },
+      {
+        "id": "ccr-legitimation",
+        "number": 4,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Legitimating a child after the parents marry",
+        "description": "Where parents marry after a child's birth was registered, the child is granted legitimate status by law. The office prepares the legal instrument and issues an annotated birth certificate.",
+        "office": "Court Decrees and Legal Instrument Unit",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, clients and applicants",
+        "requirements": [
+          {
+            "item": "Birth certificate, original and 2 certified photocopies",
+            "whereToSecure": "Local Civil Registrar's Office or Philippine Statistics Authority"
+          },
+          {
+            "item": "Parents' marriage contract, 1 certified photocopy",
+            "whereToSecure": "Local Civil Registrar's Office or Philippine Statistics Authority"
+          },
+          {
+            "item": "CENOMAR of the mother and of the father, 3 photocopies each",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Valid ID or community tax certificate with signature, 1 photocopy",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "Notarized Affidavit of Legitimation, original copy",
+            "whereToSecure": "Local Civil Registrar's Office or any notary public"
+          },
+          {
+            "item": "Admission of Paternity, where the father is declared unknown on the birth certificate, original copy",
+            "whereToSecure": "Local Civil Registrar's Office or any notary public"
+          },
+          {
+            "item": "Mandatory personal appearance of the couple",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements, with both parents appearing in person.",
+            "agency": "Checks the requirements for correctness and completeness, processes the legal instrument, signs it and transmits a copy to the PSA.",
+            "feeText": "None",
+            "processingTime": "3 hours",
+            "personResponsible": "Legal Instrument and Judicial Decrees Section staff"
+          },
+          {
+            "client": "Pay the fees.",
+            "agency": "Issues the official receipt.",
+            "feeText": "P250.00 endorsement fee; P155.00 mail fee; P5.00 per page for a copy certified by the Local Civil Registrar",
+            "feeTiers": [
+              {
+                "label": "Endorsement fee",
+                "amount": 250,
+                "currency": "PHP"
+              },
+              {
+                "label": "Mail fee",
+                "amount": 155,
+                "currency": "PHP"
+              },
+              {
+                "label": "Certified copy, per page",
+                "amount": 5,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the annotated birth certificate.",
+            "agency": "Issues the annotated Certificate of Live Birth and its attachment.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Legal Instrument and Judicial Decrees Section staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P410.00 (the total varies with the number of pages)",
+          "processingTime": "3 hours"
+        },
+        "notes": [
+          "The per-page certification fee means the total depends on how many pages your documents run to."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's P410.00 total is P250.00 plus P155.00 plus a single P5.00 page. Confirm that reading against the PDF."
+        ]
+      },
+      {
+        "id": "ccr-death-on-time",
+        "number": 5,
+        "charterNumber": 4,
+        "charterGroup": "Frontline Services",
+        "title": "Registering a death within 30 days",
+        "description": "Registering the death of a person who died in Legazpi City, within thirty days of the death.",
+        "office": "Death Registration Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, government and private hospitals",
+        "requirements": [
+          {
+            "item": "Duly accomplished death certificate reviewed by the City Health Office, 4 original copies",
+            "whereToSecure": "Hospital, City Health Office or other medical facility"
+          },
+          {
+            "item": "Burial permit fee or transfer permit fee, 1 original copy",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Certification of not embalmed, if not embalmed, 1 original copy",
+            "whereToSecure": "Funeral parlour or informant"
+          },
+          {
+            "item": "Certificate of cremation, if cremated, 1 original copy",
+            "whereToSecure": "Funeral parlour"
+          },
+          {
+            "item": "Registration of the death certificate",
+            "whereToSecure": "Local Civil Registrar's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the death certificate and the requirements.",
+            "agency": "Checks the requirements for correctness and completeness, assigns the registry number, and signs the death certificate.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Death Registration Section staff"
+          },
+          {
+            "client": "Pay the fees.",
+            "agency": "Issues the official receipt.",
+            "feeText": "P30.00 burial fee; P60.00 transfer fee; P30.00 issuance of death certificate",
+            "feeTiers": [
+              {
+                "label": "Burial fee",
+                "amount": 30,
+                "currency": "PHP"
+              },
+              {
+                "label": "Transfer fee",
+                "amount": 60,
+                "currency": "PHP"
+              },
+              {
+                "label": "Issuance of death certificate",
+                "amount": 30,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the registered death certificate.",
+            "agency": "Issues the registered death certificate.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Death Registration Section staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P120.00",
+          "processingTime": "One hour"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "ccr-death-delayed",
+        "number": 6,
+        "charterNumber": 5,
+        "charterGroup": "Frontline Services",
+        "title": "Registering a death after 30 days",
+        "description": "Registering the death of a person who died in Legazpi City more than thirty days ago, or where no record exists at the Local Civil Registrar or the PSA. A ten-day notice has to be posted before the certificate is released.",
+        "office": "Death Registration Section",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, government and private hospitals and other death attendants",
+        "requirements": [
+          {
+            "item": "Duly accomplished death certificate reviewed by the City Health Office, notarized, 4 original copies",
+            "whereToSecure": "Hospital, City Health Office or other medical facility"
+          },
+          {
+            "item": "Burial permit fee or transfer permit fee, 1 original copy",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Certification of not embalmed, if not embalmed, 1 original copy",
+            "whereToSecure": "Funeral parlour or informant"
+          },
+          {
+            "item": "Certificate of cremation, if cremated, 1 original copy",
+            "whereToSecure": "Funeral parlour or crematorium"
+          },
+          {
+            "item": "Burial certificate, 1 original copy",
+            "whereToSecure": "Cemetery or church where the deceased was buried"
+          },
+          {
+            "item": "PSA negative result, 1 original copy",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Registration of the death certificate",
+            "whereToSecure": "Local Civil Registrar's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the death certificate and the requirements.",
+            "agency": "Checks the requirements for correctness and completeness and prepares the posting of notice for ten calendar days.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Death Registration Section staff"
+          },
+          {
+            "client": "Pay the fees.",
+            "agency": "Issues the official receipt.",
+            "feeText": "P30.00 burial fee; P60.00 transfer fee; P30.00 issuance of death certificate; P500.00 service fee",
+            "feeTiers": [
+              {
+                "label": "Burial fee",
+                "amount": 30,
+                "currency": "PHP"
+              },
+              {
+                "label": "Transfer fee",
+                "amount": 60,
+                "currency": "PHP"
+              },
+              {
+                "label": "Issuance of death certificate",
+                "amount": 30,
+                "currency": "PHP"
+              },
+              {
+                "label": "Service fee",
+                "amount": 500,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the registered death certificate once the notice has been posted.",
+            "agency": "Issues the late registered death certificate after the ten-day notice of posting.",
+            "feeText": "None",
+            "processingTime": "10 calendar days",
+            "personResponsible": "Death Registration Section staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P620.00",
+          "processingTime": "1 hour and 10 calendar days"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "ccr-marriage-license",
+        "number": 7,
+        "charterNumber": 6,
+        "charterGroup": "Frontline Services",
+        "title": "Applying for a marriage licence",
+        "description": "The licence from the Civil Registrar that gives a couple authority to marry. The application is posted for ten days before the licence is released, and the couple attends a family planning and marriage counselling seminar.",
+        "office": "Marriage License and Certificate Registration",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          {
+            "item": "Birth certificate, 1 certified photocopy",
+            "whereToSecure": "Local Civil Registrar's Office or Philippine Statistics Authority"
+          },
+          {
+            "item": "CENOMAR, 1 original",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Valid ID with signature, 1 photocopy",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "Parental advice for applicants aged 21 to 24, 1 original with 1 photocopy of the parent's ID",
+            "whereToSecure": "Local Civil Registrar's Office"
+          },
+          {
+            "item": "Consent for applicants aged 18 to 20, 1 original with 1 photocopy of the parent's ID",
+            "whereToSecure": "Local Civil Registrar's Office"
+          },
+          {
+            "item": "Death certificate of the spouse, for a widow or widower, 1 certified photocopy",
+            "whereToSecure": "Local Civil Registrar's Office or Philippine Statistics Authority"
+          },
+          {
+            "item": "Legal capacity to marry, for a foreign national, 1 original",
+            "whereToSecure": "The applicant's embassy"
+          },
+          {
+            "item": "Original or certified true copy of the judicial decree of absolute divorce or nullity of marriage, for an annulled or divorced applicant, 1 certified photocopy",
+            "whereToSecure": "Court"
+          },
+          {
+            "item": "Mandatory personal appearance",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements, appearing in person.",
+            "agency": "Interviews the couple, prepares the parental advice or consent if applicable, and schedules the family planning and marriage counselling session.",
+            "feeText": "None",
+            "processingTime": "3 hours",
+            "personResponsible": "Marriage Registration Section staff"
+          },
+          {
+            "client": "Pay the fees and attend the family planning and marriage counselling seminar as scheduled.",
+            "agency": "Issues the official receipt, prepares the marriage licence application, issues a claim stub, and posts or mails the notice of publication within ten days.",
+            "feeText": "Family planning fee 100.00; application fee 300.00; marriage licence fee P200.00; solemnization fee",
+            "feeTiers": [
+              {
+                "label": "Family planning fee",
+                "amount": 100,
+                "currency": "PHP"
+              },
+              {
+                "label": "Application fee",
+                "amount": 300,
+                "currency": "PHP"
+              },
+              {
+                "label": "Marriage licence fee",
+                "amount": 200,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the marriage licence.",
+            "agency": "Releases the marriage licence after the ten-day notice.",
+            "feeText": "None",
+            "processingTime": "10 days",
+            "personResponsible": "Marriage Registration Section staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P1,100.00",
+          "processingTime": "3 hours and 10 days posting period"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The fees the charter itemises come to P600.00 against a stated total of P1,100.00. The solemnization fee is listed without an amount and is the likely difference. Check the PDF."
+        ]
+      },
+      {
+        "id": "ccr-marriage-on-time",
+        "number": 8,
+        "charterNumber": 7,
+        "charterGroup": "Frontline Services",
+        "title": "Registering a marriage on time",
+        "description": "Registering a marriage solemnized in Legazpi City, within fifteen days where there was a marriage licence, or thirty days where there was an Affidavit of Cohabitation or a marriage under P.D. 1083.",
+        "office": "Marriage License and Marriage Certificate Registration",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          {
+            "item": "Duly accomplished marriage certificate, 4 copies",
+            "whereToSecure": "Local Civil Registrar's Office"
+          },
+          {
+            "item": "For a marriage under Article 34: Affidavit of Cohabitation, dowry agreement form, marital settlement agreement or prenuptial agreement",
+            "whereToSecure": "Applicant"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the marriage certificate and the requirements.",
+            "agency": "Checks the entries for correctness and the requirements for completeness, assigns the registry number and signs.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Marriage Registration Section staff"
+          },
+          {
+            "client": "Claim the registered marriage certificate.",
+            "agency": "Issues the registered certificate of marriage.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Marriage Registration Section staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "1 hour"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "ccr-marriage-delayed",
+        "number": 9,
+        "charterNumber": 8,
+        "charterGroup": "Frontline Services",
+        "title": "Registering a marriage late, or reconstructing a lost record",
+        "description": "Registering a marriage solemnized in Legazpi City beyond the fifteen or thirty day period, and reconstructing a marriage certificate from an unregistered certificate or record of matrimony. A ten-day notice has to be posted first.",
+        "office": "Marriage License and Certificate Registration",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          {
+            "item": "Delayed registration: duly accomplished marriage certificate, 4 copies, or an Affidavit of Delayed Registration",
+            "whereToSecure": "Church, Mayor's Office or Regional Trial Court"
+          },
+          {
+            "item": "Delayed registration: negative result of marriage, 1 original",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Reconstruction: CENOMAR, 1 original",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Reconstruction: negative result of marriage, 1 original",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Reconstruction: certificate of marriage or matrimony, 1 original",
+            "whereToSecure": "Church, Mayor's Office or Regional Trial Court"
+          },
+          {
+            "item": "Reconstruction: birth certificates of the children showing the correct date of marriage, 2 certified photocopies",
+            "whereToSecure": "Client, Local Civil Registrar's Office or Philippine Statistics Authority"
+          },
+          {
+            "item": "Reconstruction: affidavit of two disinterested persons, 1 original",
+            "whereToSecure": "Notary public or Civil Registrar"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements.",
+            "agency": "Checks the entries for correctness and the requirements for completeness, prepares the certificate of marriage, and posts the notice of publication.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Marriage Registration Section staff"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Issues the official receipt and a claim stub.",
+            "feeText": "Service fee P500.00",
+            "feeTiers": [
+              {
+                "label": "Service fee",
+                "amount": 500,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the registered marriage certificate once the notice has been posted.",
+            "agency": "Registers and signs the marriage certificate and releases it after the ten-day posting period.",
+            "feeText": "None",
+            "processingTime": "10-day notice of posting",
+            "personResponsible": "Marriage Registration Section staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P500.00",
+          "processingTime": "1 hour and 10-day posting period"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "ccr-certified-copies",
+        "number": 10,
+        "charterNumber": 9,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a certified copy of a birth, marriage or death record",
+        "description": "A certified true copy or photocopy of a birth, marriage or death certificate, or other civil registry record, registered in Legazpi City.",
+        "office": "Archives Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          {
+            "item": "Verification form, properly filled up and signed by the requesting party",
+            "whereToSecure": "Local Civil Registrar's Office"
+          },
+          {
+            "item": "Valid ID with picture and signature, 1 photocopy",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "Authorization letter from the document owner, or an affidavit of kinship",
+            "whereToSecure": "Owner of the document or the authorized person"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the verification form and the requirements.",
+            "agency": "Verifies and signs the requested civil registry document.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Archives, Admin and Information Division staff"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Issues the official receipt.",
+            "feeText": "Local: P100.00. Abroad: P200.00",
+            "feeTiers": [
+              {
+                "label": "Local",
+                "amount": 100,
+                "currency": "PHP"
+              },
+              {
+                "label": "Abroad",
+                "amount": 200,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the document.",
+            "agency": "Releases the requested civil registry document.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Information staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "Local: P100.00. Abroad: P200.00",
+          "processingTime": "1 hour"
+        },
+        "notes": ["The higher fee applies where the document is for use abroad."],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "ccr-electronic-endorsement",
+        "number": 11,
+        "charterNumber": 10,
+        "charterGroup": "Frontline Services",
+        "title": "Endorsing a record to the PSA so a copy comes out sooner",
+        "description": "Sending a newly registered birth, marriage or death certificate to the PSA in the same month, so the PSA security paper copy becomes available sooner. It also covers endorsing a record the PSA says it has no copy of but the Local Civil Registrar holds, and records whose PSA copy is blurred or unreadable.",
+        "office": "Archives Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          {
+            "item": "Advance endorsement: 3 copies of the transmittal letter",
+            "whereToSecure": "Local Civil Registrar"
+          },
+          {
+            "item": "Advance endorsement: OCRG copy of Municipal Form 102, 103 or 97",
+            "whereToSecure": "Local Civil Registrar"
+          },
+          {
+            "item": "Advance endorsement: the client's proof of urgency",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "Advance endorsement: 3 copies of the letter request, and a valid ID",
+            "whereToSecure": "Local Civil Registrar; ID from the government or private sector"
+          },
+          {
+            "item": "Negative to PSA CRS: PSA negative certification, 3 copies of the transmittal letter, 1 copy of Form 1A, 2A or 3A, 1 certified copy of the registry book, 1 certified copy of Municipal Form 102, 103 or 97, 3 copies of the letter request, and a valid ID",
+            "whereToSecure": "PSA and Local Civil Registrar; ID from the government or private sector"
+          },
+          {
+            "item": "Blurred or illegible entries: the blurred PSA security paper copy, 3 copies of the transmittal letter, 1 copy of Form 1A, 2A or 3A, 1 certified copy of the registry book, 1 copy of Municipal Form 102, 103 or 97, 3 copies of the letter request, and a valid ID",
+            "whereToSecure": "PSA and Local Civil Registrar; ID from the government or private sector"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements.",
+            "agency": "Verifies the civil registry document, then signs and transmits the endorsement letter to the PSA.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Archives, Admin and Information Division head"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Issues the official receipt.",
+            "feeText": "Electronic endorsement fee P100.00; certified copy of the registry book P5.00 per page",
+            "feeTiers": [
+              {
+                "label": "Electronic endorsement fee",
+                "amount": 100,
+                "currency": "PHP"
+              },
+              {
+                "label": "Certified copy of registry book, per page",
+                "amount": 5,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the PSA copy after a month.",
+            "agency": "Releases the PSA security paper copy after one month.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Archives, Admin and Information Division staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P100.00",
+          "processingTime": "1 hour, then 4 weeks from the PSA"
+        },
+        "notes": [
+          "The office's own part takes an hour. The four-week wait after that is the PSA's, not the city's."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The four weeks the client waits on the PSA are not counted in the derived total, because the charter's own processing time column stops at the office's hour."
+        ]
+      },
+      {
+        "id": "ccr-petition-9048-10172",
+        "number": 12,
+        "charterNumber": 11,
+        "charterGroup": "Frontline Services",
+        "title": "Correcting a clerical error or changing a first name",
+        "description": "The administrative petition under R.A. 9048 and R.A. 10172 to correct an erroneous entry in a civil registry record, change a first name, or correct a recorded sex, day or month of birth. It is decided by the Civil Registrar rather than a court, but it has to be published and then affirmed by the PSA.",
+        "office": "Court Decrees and Legal Instrument Unit",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, clients and applicants",
+        "requirements": [
+          {
+            "item": "Change of first name: the child's birth certificate, 2 certified photocopies",
+            "whereToSecure": "PSA or Local Civil Registrar"
+          },
+          {
+            "item": "Change of first name: NBI and police clearance stating the purpose as change of first name, 2 original copies",
+            "whereToSecure": "NBI and PNP"
+          },
+          {
+            "item": "Change of first name: employer's certification of no pending administrative case or charge, if employed, 2 original copies; or an affidavit of non-employment or self-employment, 2 original copies",
+            "whereToSecure": "Applicant's employer, or a law office"
+          },
+          {
+            "item": "Change of first name: newspaper clippings and the publisher's affidavit of publication, 2 original copies",
+            "whereToSecure": "Local newspaper"
+          },
+          {
+            "item": "Change of first name: at least 3 of the following, 2 originals or certified photocopies. Baptismal certificate, school records, driver's licence or IDs, certificate of marriage, children's birth certificates, BIR record, SSS or Pag-IBIG record, passbook or bankbook",
+            "whereToSecure": "Church, school, LTO, PSA, Local Civil Registrar, BIR, SSS, Pag-IBIG or bank"
+          },
+          {
+            "item": "Correction of clerical error: the civil registry document carrying the error, 2 PSA copies or certified photocopies",
+            "whereToSecure": "PSA or Local Civil Registrar"
+          },
+          {
+            "item": "Correction of clerical error: birth certificates of the petitioner's parents and siblings, 2 certified photocopies",
+            "whereToSecure": "Local Civil Registrar and PSA"
+          },
+          {
+            "item": "Correction of clerical error: the petitioner's marriage certificate if married, and the children's birth certificates, 2 certified photocopies",
+            "whereToSecure": "Local Civil Registrar and PSA"
+          },
+          {
+            "item": "Correction of clerical error: personal documents showing the correct entry, 2 certified photocopies",
+            "whereToSecure": "Church, school, LTO, PSA, Local Civil Registrar, BIR, SSS, Pag-IBIG or bank"
+          },
+          {
+            "item": "For correction of sex, day or month of birth under Rule 7.1 of R.A. 10172: certified true copy of the certificate, or a certified transcription of the page of the registry book carrying the entry",
+            "whereToSecure": "PSA or Local Civil Registrar"
+          },
+          {
+            "item": "For correction of sex, day or month of birth: earliest school records, or an affidavit that the document owner never entered school, covering elementary and high school",
+            "whereToSecure": "School"
+          },
+          {
+            "item": "For correction of sex, day or month of birth: medical record and baptismal certificate, or an affidavit if there is none, or other documents issued by religious authorities",
+            "whereToSecure": "Hospital or physician, and the church"
+          },
+          {
+            "item": "For correction of sex, day or month of birth: clearance or certification of no pending administrative, civil or criminal case and no criminal record, from the employer if employed (or an affidavit of non-employment or self-employment), the NBI, and the PNP",
+            "whereToSecure": "Employer, NBI and PNP"
+          },
+          {
+            "item": "For correction of sex, day or month of birth: publisher's affidavit that the petition was published once a week for two consecutive weeks, with a copy of the newspaper clipping",
+            "whereToSecure": "Local newspaper publisher"
+          },
+          {
+            "item": "For correction of sex, day or month of birth: notice and certificate of posting",
+            "whereToSecure": "Local Civil Registrar"
+          },
+          {
+            "item": "For correction of the entry on sex: certification from the City Health Officer that the petitioner has not undergone a sex change or transplant",
+            "whereToSecure": "Government health officer"
+          },
+          {
+            "item": "Any additional document the petitioner or the Local Civil Registrar considers relevant and necessary to approve the petition",
+            "whereToSecure": "Various"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the petition and the requirements.",
+            "agency": "Interviews the petitioner, evaluates and prepares the petition, signs it, and posts it on the City Hall bulletin board.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Legal Instrument and Judicial Decrees Division staff"
+          },
+          {
+            "client": "Pay the filing fee.",
+            "agency": "Issues the official receipt, approves the petition, and sends it to the PSA Legal Service in Quezon City for affirmation.",
+            "feeText": "P3,200.00 for change of first name or correction of sex, date and month of birth; P1,200.00 for correction of an entry, plus P300.00 endorsement fee to PSA Legal; P5.00 per page authentication fee for supporting documents; publication fee paid to the publisher. A petitioner with a certificate of indigency is exempt from the filing fee",
+            "feeTiers": [
+              {
+                "label": "Change of first name, or correction of sex, date and month of birth",
+                "amount": 3200,
+                "currency": "PHP"
+              },
+              {
+                "label": "Correction of entry",
+                "amount": 1200,
+                "currency": "PHP"
+              },
+              {
+                "label": "Endorsement fee to PSA Legal",
+                "amount": 300,
+                "currency": "PHP"
+              },
+              {
+                "label": "Authentication fee, per page",
+                "amount": 5,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Submit the newspaper clippings and the publisher's affidavit of publication within the prescribed period.",
+            "agency": "Publication runs once a week for two consecutive weeks.",
+            "feeText": "Publication fee paid to the publisher",
+            "processingTime": "2 weeks",
+            "personResponsible": "Publisher"
+          },
+          {
+            "client": null,
+            "agency": "The PSA affirms the petition.",
+            "feeText": "None",
+            "processingTime": "PSA affirmation is 2-5 months",
+            "personResponsible": "Local Civil Registrar / PSA"
+          },
+          {
+            "client": "Receive a certified photocopy of the affirmed petition, the certificate of finality, and the annotated civil registry document.",
+            "agency": "On receipt of the affirmed petition, prepares the certificate of finality and the annotated copy of the record, and endorses a copy to the PSA Civil Registry System so the client's PSA record is updated.",
+            "feeText": "Certified true copy P150.00; P5.00 per page authentication fee",
+            "feeTiers": [
+              {
+                "label": "Certified true copy",
+                "amount": 150,
+                "currency": "PHP"
+              },
+              {
+                "label": "Authentication fee, per page",
+                "amount": 5,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Legal Instrument and Judicial Decrees Division staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [
+          "The office's own part takes about two hours. The rest is publication and then the PSA's affirmation, which the charter puts at two to five months.",
+          "A petitioner holding a certificate of indigency does not pay the filing fee."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row for this service, so the total shown is summed from the steps alone.",
+          "The two-week publication period and the two to five month PSA affirmation are deliberately not counted in the total. Weeks and months are not units the arithmetic models, and both waits are outside the office: one is the newspaper's, the other the PSA's. Both appear on their steps and are reported as unreadable by the validator.",
+          "The charter's requirements block mixes the R.A. 9048 and R.A. 10172 checklists and numbers an item 5 twice. The grouping here is an inference."
+        ]
+      },
+      {
+        "id": "ccr-change-surname-9255",
+        "number": 13,
+        "charterNumber": 12,
+        "charterGroup": "Frontline Services",
+        "title": "Letting a child use the father's surname",
+        "description": "The petition under R.A. 9255 for a child registered in Legazpi City to carry the father's surname. The office annotates the birth certificate and endorses the change to the PSA.",
+        "office": "Court Decrees and Legal Instrument Unit",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, clients and applicants",
+        "requirements": [
+          {
+            "item": "Certified photocopy of the child's Local Civil Registrar and PSA copies, 1 each",
+            "whereToSecure": "Local Civil Registrar's Office and Philippine Statistics Authority"
+          },
+          {
+            "item": "Subscribed Affidavit to Use the Surname of the Father, 3 original copies, with personal appearance. For a child aged 0 to 7 the mother or legal guardian appears; for a child aged 7 to 17 the child appears with a notarized attestation of the mother or legal guardian; a child aged 18 or above appears alone",
+            "whereToSecure": "Local Civil Registrar's Office or any notary public"
+          },
+          {
+            "item": "Notarized father's Admission of Paternity, where the child is unrecognized by the natural father on the birth certificate, 3 original copies",
+            "whereToSecure": "Local Civil Registrar's Office or any notary public"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements, with the required person appearing in person.",
+            "agency": "Evaluates the documents for completeness and the entries for accuracy, checks the real filiation and true identity of the father executing the Affidavit of Admission of Paternity, and prepares the certificate.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Legal Instrument and Judicial Decrees Division staff"
+          },
+          {
+            "client": "Pay the fees.",
+            "agency": "Registers the change, annotates the child's birth certificate, and issues the official receipt.",
+            "feeText": "P200.00 authentication fee; P100.00 if with paternity; P155.00 mailing fee; P5.00 per page for a photocopy certified from the original by the Local Civil Registrar",
+            "feeTiers": [
+              {
+                "label": "Authentication fee",
+                "amount": 200,
+                "currency": "PHP"
+              },
+              {
+                "label": "With paternity",
+                "amount": 100,
+                "currency": "PHP"
+              },
+              {
+                "label": "Mailing fee",
+                "amount": 155,
+                "currency": "PHP"
+              },
+              {
+                "label": "Certified photocopy, per page",
+                "amount": 5,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim a copy of the child's annotated birth certificate.",
+            "agency": "Endorses a copy of the registered documents to the PSA so the child's record on the PSA database is updated.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Legal Instrument and Judicial Decrees Division staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "2 hours"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": ["The charter's TOTAL row gives a processing time but no fee total."]
+      },
+      {
+        "id": "ccr-court-decrees",
+        "number": 14,
+        "charterNumber": 13,
+        "charterGroup": "Frontline Services",
+        "title": "Registering a court decree on adoption, annulment or legal separation",
+        "description": "Registering a court decision that changes a person's civil status, and issuing the annotated civil registry record that gives effect to it.",
+        "office": "Court Decrees and Legal Instrument Unit",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          {
+            "item": "Certified photocopies of the court decision, 4 original copies",
+            "whereToSecure": "The court that issued the decision"
+          },
+          {
+            "item": "Certified photocopy of the certificate of finality, entry of judgment, decree of adoption, or nullity or annulment of marriage, 4 original copies",
+            "whereToSecure": "The court that issued the decision"
+          },
+          {
+            "item": "Where the decision was not issued by the Regional Trial Court of Legazpi City: certificate of registration and authenticity of the court decision issued by the Local Civil Registrar where the court is located",
+            "whereToSecure": "Local Civil Registrar where the issuing court is located"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the court decision or order, together with the certificate of finality, entry of judgment or decree.",
+            "agency": "Examines and evaluates the court decree for completeness and accuracy, registers it in the Registry Book of Court Decrees, and prepares and signs the certificate of registration and the annotated civil registry documents.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Legal Instrument and Judicial Decrees Division staff"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Issues the official receipt.",
+            "feeText": "P500.00 for registration of an application of a foreign decree or adoption; P700.00 for registration of an annulment or declaration of nullity of marriage; P5.00 per page for a photocopy certified from the original",
+            "feeTiers": [
+              {
+                "label": "Foreign decree or adoption",
+                "amount": 500,
+                "currency": "PHP"
+              },
+              {
+                "label": "Annulment or declaration of nullity of marriage",
+                "amount": 700,
+                "currency": "PHP"
+              },
+              {
+                "label": "Certified photocopy, per page",
+                "amount": 5,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the annotated civil registry documents.",
+            "agency": "Endorses the document to the PSA in Quezon City so the PSA database is updated.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Legal Instrument and Judicial Decrees Division staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "2 hours"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's processing time column shows 2 hours twice against this service and leaves its TOTAL row blank. The figure is read as one two-hour service rather than four hours; check the PDF."
+        ]
+      },
+      {
+        "id": "ccr-supplemental-report",
+        "number": 15,
+        "charterNumber": 14,
+        "charterGroup": "Frontline Services",
+        "title": "Adding information left blank on a record",
+        "description": "A supplemental report supplies an entry that was left out when a birth, death or marriage certificate was first registered.",
+        "office": "Court Decrees and Legal Instrument Unit",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, clients and applicants",
+        "requirements": [
+          {
+            "item": "Certified copy of the Local Civil Registrar and PSA birth, death or marriage certificate, 1 original and 1 certified photocopy",
+            "whereToSecure": "Local Civil Registrar's Office and Philippine Statistics Authority"
+          },
+          {
+            "item": "Subscribed Affidavit of Supplemental Report stating why the entry was not properly filled up at registration, 2 original copies, with personal appearance",
+            "whereToSecure": "Local Civil Registrar's Office or a notary public"
+          },
+          {
+            "item": "Any document carrying the correct information for the item being supplemented, 1 original copy",
+            "whereToSecure": "The issuing office or agency"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements, appearing in person.",
+            "agency": "Evaluates the document submitted and prepares the supplemental item on Municipal Form No. 1A, then prepares the annotated civil registry record and the endorsement to the PSA so its database reflects the supplemental data.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Legal Instrument and Judicial Decrees Division staff"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Issues the official receipt.",
+            "feeText": "P200.00",
+            "feeTiers": [
+              {
+                "label": "Supplemental report fee",
+                "amount": 200,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the copy.",
+            "agency": "Releases the copy.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Legal Instrument and Judicial Decrees Division staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P200.00",
+          "processingTime": "2 hours"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "ccr-other-certificates",
+        "number": 16,
+        "charterNumber": 15,
+        "charterGroup": "Frontline Services",
+        "title": "Getting other civil registry certifications",
+        "description": "Civil registry certifications asked for by a client for legal or reference purposes, beyond a straight copy of a birth, marriage or death certificate.",
+        "office": "Birth, Marriage, Death and Archives Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, clients and applicants",
+        "requirements": [
+          {
+            "item": "Application or verification form, 1 original copy",
+            "whereToSecure": "Local Civil Registrar's Office"
+          },
+          {
+            "item": "Letter request, 1 original copy",
+            "whereToSecure": "Government or private agency"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the form and the letter request.",
+            "agency": "Searches the record, then prepares and signs the certification.",
+            "feeText": "P100.00",
+            "feeTiers": [
+              {
+                "label": "Certification fee",
+                "amount": 100,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": "1 hour",
+            "personResponsible": "Admin Officer IV"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Issues the official receipt.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Claim the document.",
+            "agency": "Releases the document.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Admin Officer IV"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "P100.00",
+          "processingTime": "1 hour"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints P100.00 twice, once against the search and once against the receipt, and totals it as P100.00. Recorded as a single fee."
+        ]
+      },
+      {
+        "id": "ccr-email-verification",
+        "number": 17,
+        "charterNumber": 16,
+        "charterGroup": "Frontline Services",
+        "title": "Checking a record by email without going to the office",
+        "description": "An email inquiry to check whether a birth, death or marriage record exists. Give the full name, the date and place of the event, and anything else that helps the office find it.",
+        "office": "Birth, Marriage, Death and Archives Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public, clients and applicants",
+        "requirements": [
+          {
+            "item": "Email request letter with complete information",
+            "whereToSecure": "Individual or owner"
+          },
+          {
+            "item": "Verification form",
+            "whereToSecure": "Local Civil Registrar"
+          },
+          {
+            "item": "Authorization letter, if the requester is not the owner of the document",
+            "whereToSecure": "Individual or owner of the document"
+          },
+          {
+            "item": "Valid ID",
+            "whereToSecure": "Government or private sector"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Send the inquiry by email with the required details.",
+            "agency": "Receives and verifies the inquiry.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Admin Officer I"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "2 hours"
+        },
+        "notes": ["This is the one service on this page you do not have to come in for."],
+        "verified": false,
+        "verifyNotes": []
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-person-vcard",
+    "categories": [
+      {
+        "id": "births",
+        "title": "Births",
+        "icon": "bi-balloon",
+        "services": [
+          "ccr-birth-on-time",
+          "ccr-birth-delayed",
+          "ccr-birth-delayed-80-above",
+          "ccr-legitimation",
+          "ccr-change-surname-9255"
+        ]
+      },
+      {
+        "id": "marriages",
+        "title": "Marriages",
+        "icon": "bi-hearts",
+        "services": ["ccr-marriage-license", "ccr-marriage-on-time", "ccr-marriage-delayed"]
+      },
+      {
+        "id": "deaths",
+        "title": "Deaths",
+        "icon": "bi-flower2",
+        "services": ["ccr-death-on-time", "ccr-death-delayed"]
+      },
+      {
+        "id": "copies-and-endorsements",
+        "title": "Copies, certifications and PSA endorsement",
+        "icon": "bi-file-earmark-text",
+        "services": [
+          "ccr-certified-copies",
+          "ccr-other-certificates",
+          "ccr-electronic-endorsement",
+          "ccr-email-verification"
+        ]
+      },
+      {
+        "id": "corrections-and-court",
+        "title": "Corrections and court orders",
+        "icon": "bi-pencil-square",
+        "services": ["ccr-petition-9048-10172", "ccr-supplemental-report", "ccr-court-decrees"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "a-baby-was-born",
+        "title": "A baby was born",
+        "presentation": "rail",
+        "icon": "bi-balloon",
+        "services": ["ccr-birth-on-time", "ccr-birth-delayed", "ccr-certified-copies"]
+      },
+      {
+        "id": "no-birth-certificate",
+        "title": "You have no birth certificate",
+        "presentation": "rail",
+        "icon": "bi-person-exclamation",
+        "services": ["ccr-birth-delayed", "ccr-birth-delayed-80-above", "ccr-email-verification"]
+      },
+      {
+        "id": "getting-married",
+        "title": "You are getting married",
+        "presentation": "rail",
+        "icon": "bi-hearts",
+        "services": ["ccr-marriage-license", "ccr-marriage-on-time", "ccr-certified-copies"]
+      },
+      {
+        "id": "someone-died",
+        "title": "Someone in the family died",
+        "presentation": "rail",
+        "icon": "bi-flower2",
+        "services": ["ccr-death-on-time", "ccr-death-delayed"]
+      },
+      {
+        "id": "name-is-wrong",
+        "title": "A name or detail on your record is wrong",
+        "presentation": "rail",
+        "icon": "bi-pencil-square",
+        "services": [
+          "ccr-petition-9048-10172",
+          "ccr-supplemental-report",
+          "ccr-change-surname-9255"
+        ]
+      },
+      {
+        "id": "psa-has-no-copy",
+        "title": "The PSA says it has no copy, or the copy is unreadable",
+        "presentation": "rail",
+        "icon": "bi-send-check",
+        "services": ["ccr-electronic-endorsement", "ccr-certified-copies"]
+      },
+      {
+        "id": "a-court-decided",
+        "title": "A court decided your case",
+        "presentation": "rail",
+        "icon": "bi-bank",
+        "services": ["ccr-court-decrees", "ccr-legitimation"]
+      }
+    ],
+    "searchAliases": {
+      "ccr-birth-on-time": [
+        "birth certificate",
+        "colb",
+        "live birth",
+        "kapanganakan",
+        "newborn",
+        "register birth"
+      ],
+      "ccr-birth-delayed": [
+        "late registration",
+        "delayed birth",
+        "no birth certificate",
+        "brap",
+        "out of town",
+        "walang birth certificate"
+      ],
+      "ccr-birth-delayed-80-above": [
+        "senior citizen birth certificate",
+        "delayed birth 80",
+        "matanda",
+        "late registration senior"
+      ],
+      "ccr-legitimation": [
+        "legitimation",
+        "legitimate",
+        "parents married",
+        "annotated birth certificate"
+      ],
+      "ccr-death-on-time": [
+        "death certificate",
+        "libing",
+        "burial permit",
+        "kamatayan",
+        "register death"
+      ],
+      "ccr-death-delayed": [
+        "late death registration",
+        "delayed death certificate",
+        "burial certificate"
+      ],
+      "ccr-marriage-license": [
+        "marriage license",
+        "kasal",
+        "wedding",
+        "cenomar",
+        "family planning seminar",
+        "banns"
+      ],
+      "ccr-marriage-on-time": [
+        "marriage certificate",
+        "register marriage",
+        "kasal",
+        "article 34",
+        "cohabitation"
+      ],
+      "ccr-marriage-delayed": [
+        "late marriage registration",
+        "reconstruction",
+        "lost marriage certificate",
+        "delayed marriage"
+      ],
+      "ccr-certified-copies": [
+        "certified true copy",
+        "ctc",
+        "xerox copy",
+        "birth certificate copy",
+        "marriage certificate copy",
+        "death certificate copy"
+      ],
+      "ccr-electronic-endorsement": [
+        "endorsement",
+        "psa",
+        "secpa",
+        "negative certification",
+        "blurred copy",
+        "advance endorsement"
+      ],
+      "ccr-petition-9048-10172": [
+        "ra 9048",
+        "ra 10172",
+        "correction",
+        "change first name",
+        "clerical error",
+        "wrong sex",
+        "wrong birth date",
+        "mali sa birth certificate"
+      ],
+      "ccr-change-surname-9255": [
+        "ra 9255",
+        "ausf",
+        "surname of father",
+        "apelyido",
+        "admission of paternity"
+      ],
+      "ccr-court-decrees": [
+        "adoption",
+        "annulment",
+        "nullity",
+        "legal separation",
+        "court decree",
+        "court order"
+      ],
+      "ccr-supplemental-report": [
+        "supplemental report",
+        "blank entry",
+        "missing entry",
+        "walang laman"
+      ],
+      "ccr-other-certificates": ["certification", "civil registry certification", "letter request"],
+      "ccr-email-verification": [
+        "email",
+        "online",
+        "verification",
+        "inquiry",
+        "check record",
+        "walang punta"
+      ]
+    },
+    "contact": null
+  }
+}
