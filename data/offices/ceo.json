@@ -1,0 +1,3501 @@
+{
+  "slug": "ceo",
+  "route": "service-details/ceo-services.html",
+  "charter": {
+    "office": "City Engineer's Office",
+    "abbreviation": "CEO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-ENGINEERING-OFFICE-CITIZENS-CHARTER-2026-1st-EDITION-1-1.pdf",
+    "transcript": "docs/sources/citizens-charter/ceo.md",
+    "personnel": [
+      {
+        "name": "Engr. Clemente Ibo",
+        "position": "Department Head",
+        "unit": "Annual Building Inspection Section",
+        "isHead": true
+      },
+      {
+        "name": "Engr. Krisha Montero",
+        "position": "Civil Engineer, Building Inspector",
+        "unit": "Annual Building Inspection Section"
+      },
+      {
+        "name": "Engr. Clinton Corral",
+        "position": "Inspectorate Team",
+        "unit": "Annual Building Inspection Section"
+      },
+      {
+        "name": "Engr. Cirilo Castro",
+        "position": "Inspectorate Team",
+        "unit": "Annual Building Inspection Section"
+      },
+      {
+        "name": "Engr. Michaella Yves Navarro",
+        "position": "Mechanical Engineer",
+        "unit": "Annual Building Inspection Section"
+      },
+      {
+        "name": "Elizabeth Azul",
+        "position": "Receiving Clerk",
+        "unit": "Annual Building Inspection Section"
+      },
+      {
+        "name": "Rhose Luces",
+        "position": "Encoder / Clerk",
+        "unit": "Annual Building Inspection Section"
+      },
+      {
+        "name": "Aubrey Ibo",
+        "position": "Clerk",
+        "unit": "Annual Building Inspection Section"
+      },
+      {
+        "name": "Salvacion Bayonito",
+        "position": "Messenger / Clerk",
+        "unit": "Annual Building Inspection Section"
+      },
+      {
+        "name": "Barry Baltazar",
+        "position": "Messenger / Clerk",
+        "unit": "Annual Building Inspection Section"
+      },
+      {
+        "name": "Ivan Lorilla",
+        "position": "Messenger / Clerk",
+        "unit": "Annual Building Inspection Section"
+      }
+    ],
+    "personnelNotes": [
+      "This charter names individuals in one table only, the Certificate of Annual Inspection. Every other service names positions. The head shown here is the department head named in that table and has not been confirmed against a separate roster."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Text, email or call the City Engineer's Office on 0917-134-4453 or 0968-243-4819. You can also fill up and sign the Client's Feedback Form near the suggestion box at the Public Assistance and Complaints Desk and drop it in, or write to the City Engineer directly.",
+      "howFeedbackIsProcessed": "The office reviews feedback for areas needing corrective measures and looks at it from other perspectives for possible improvement. Complaints are retrieved, classified and summarised, analysed and acted on, and the client is notified of the action taken by letter. A complaint outside the office's authority is endorsed to the head of office.",
+      "contacts": ["ceolegazpiad1@gmail.com", "ceolegazpicity@yahoo.com"]
+    },
+    "services": [
+      {
+        "id": "ceo-truck-ban-permit",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "External Services",
+        "title": "Getting a special permit to drive through the truck ban",
+        "description": "A permit letting a truck use city roads during the hours the truck ban is in force. The fee depends on the truck's gross weight class.",
+        "office": "City Engineer's Office, Administrative Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter request, 1 copy",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Official receipt or certificate of registration of the vehicle, 1 copy",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request together with the OR and CR.",
+            "agency": "Receives and verifies the submitted documents.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Admin. Aide III"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the assessment of payment.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Admin. Aide III"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Receives the payment.",
+            "feeText": "750 (Class A) below 4,500 gross weight; 1,000 (Class B) 4,500 to 12,000 gross weight; 1,250 (Class C) above 12,000 gross weight",
+            "feeTiers": [
+              {
+                "label": "Class A, below 4,500 gross weight",
+                "amount": 750,
+                "currency": "PHP"
+              },
+              {
+                "label": "Class B, 4,500 to 12,000 gross weight",
+                "amount": 1000,
+                "currency": "PHP"
+              },
+              {
+                "label": "Class C, above 12,000 gross weight",
+                "amount": 1250,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": "10 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Admin. Aide III"
+          },
+          {
+            "client": null,
+            "agency": "Checks, reviews and countersigns the permit.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Recommends the permit to the City Mayor for approval.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Asst. City Engineer / City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Approves the permit.",
+            "feeText": "None",
+            "processingTime": "within 1 day or lesser time depending on the availability of the City Mayor",
+            "personResponsible": "City Mayor"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "1 day, 1 hour & ten minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter leaves the WHERE TO SECURE column blank for both requirements. Recorded as the client's own documents."
+        ]
+      },
+      {
+        "id": "ceo-road-use-permit",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "External Services",
+        "title": "Getting a permit to use a road for an event",
+        "description": "A permit to close or use a city road for a motorcade, parade, fun run, recorrida or other activity. The fee runs per day of the activity.",
+        "office": "City Engineer's Office, Administrative Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter request with endorsement from the City Mayor's Office, 1 copy",
+            "whereToSecure": "City Mayor's Office"
+          },
+          {
+            "item": "Route of the activity, 1 copy",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request together with the route of the activity.",
+            "agency": "Receives and verifies the submitted documents.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Admin. Aide IV"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request to the City Engineer.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Admin. Aide IV"
+          },
+          {
+            "client": null,
+            "agency": "Verifies the request for initial approval.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "City Engineer / Asst. City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request to the Administrative Division.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Engineer / Asst. City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit and the assessment of payment.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Construction and Maintenance Man"
+          },
+          {
+            "client": null,
+            "agency": "Checks, reviews and countersigns the permit.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Approves the assessment of payment.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "City Engineer / Asst. City Engineer"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Receives the payment.",
+            "feeText": "350.00 pesos per day of the activity",
+            "feeTiers": [
+              {
+                "label": "Per day of the activity",
+                "amount": 350,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": "10 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Approves the permit.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "City Engineer / Asst. City Engineer"
+          },
+          {
+            "client": "Claim the permit.",
+            "agency": "Releases the permit.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Construction and Maintenance Man / Admin. Aide IV"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "1 hour & 55 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "ceo-banner-permit",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "External Services",
+        "title": "Getting a permit to hang a banner, tarpaulin or streamer",
+        "description": "Permission to hang banners, tarpaulins or streamers in the city. The fee runs per square metre per week per piece, with a dismantling charge on top.",
+        "office": "City Engineer's Office, Administrative Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter request, 1 copy",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "The actual streamers, banners or tarpaulins to be hung",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request together with the actual number of streamers, banners or tarpaulins to be hung.",
+            "agency": "Receives and verifies the submission.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Admin. Aide IV"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request to the City Engineer.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Asst. City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the assessment of payment.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": "Pay the fee.",
+            "agency": "Receives the payment.",
+            "feeText": "24.00 pesos per sq.m. per week per piece, with an additional charge for the dismantling fee based on the number of banners per week",
+            "feeTiers": [
+              {
+                "label": "Per sq.m. per week per piece",
+                "amount": 24,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": "5 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Admin. Aide IV"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the permit for approval.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Approves the permit and signs the banners, tarpaulins or streamers.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Asst. City Engineer / City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Approves the permit.",
+            "feeText": "None",
+            "processingTime": "within the day",
+            "personResponsible": "City Mayor"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "1 day, 1 hour & five minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The steps read here sum to 1 day, 1 hr. and 55 minutes against the charter's stated 1 day, 1 hour and five minutes. The one-hour referral step is the likeliest misread; check the column alignment in the PDF.",
+          "The charter's \"within the day\" for the City Mayor's approval is recorded verbatim and reads as one day."
+        ]
+      },
+      {
+        "id": "ceo-assistance-researchers",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "External Services",
+        "title": "Asking the office for data or records for research",
+        "description": "Help for students and researchers who need engineering data, plans or records from the office.",
+        "office": "City Engineer's Office, All Divisions",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Students",
+        "requirements": [
+          {
+            "item": "Letter request or referral",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request or referral.",
+            "agency": "Receives the request or referral.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request or referral to the Administrative Officer.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Evaluates the request and refers it to the division or section head if needed.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Informs the requesting party of the status of the request.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Division Head"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "1 day, 1 hour & five minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The steps read here sum to 3 hrs. and 10 minutes against a stated total of 1 day, 1 hour and five minutes, which is also the total printed for the banner permit two services earlier. The stated figure looks copied.",
+          "The charter transposes its own two header labels on this service, putting the transaction type under Classification and the classification under Type of Classification. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-assistance-students-ojt",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "External Services",
+        "title": "Arranging an immersion, practicum or OJT placement",
+        "description": "A placement at the office for students on immersion, practicum or on-the-job training.",
+        "office": "City Engineer's Office, All Divisions",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Students",
+        "requirements": [
+          {
+            "item": "Letter request or referral",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request or referral.",
+            "agency": "Receives the request or referral.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request or referral to the Administrative Officer.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Evaluates the request and confers with the division or section heads on whether it is practicable.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Recommends the request for approval.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Approves the request.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Informs the requesting party of the status of the request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Division Head"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "2 hours and 25 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter transposes its own two header labels on this service. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-burial-accommodation",
+        "number": 6,
+        "charterNumber": 6,
+        "charterGroup": "External Services",
+        "title": "Getting a certificate of burial accommodation",
+        "description": "The certificate a family needs to bury someone in a city cemetery.",
+        "office": "City Engineer's Office, Administrative Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Legazpi City residents",
+        "requirements": [
+          {
+            "item": "Death certificate",
+            "whereToSecure": "City Civil Registrar's Office"
+          },
+          {
+            "item": "Payment receipt for the death certificate",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements.",
+            "agency": "Receives and verifies the documents.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the requirements.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Admin. Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the certificate of burial accommodation.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Admin. Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the certificate of burial accommodation.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "City Engineer / Asst. City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Approves the certificate of burial accommodation.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "City Engineer / Asst. City Engineer"
+          },
+          {
+            "client": "Claim the certificate.",
+            "agency": "Releases the certificate of burial accommodation.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Releasing Clerk (Admin. Aide I)"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "1 hour and 25 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter transposes its own two header labels on this service. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-pow-one-storey",
+        "number": 7,
+        "charterNumber": 7,
+        "charterGroup": "Internal Services",
+        "title": "Program of works and estimates for a one-storey building",
+        "description": "The office's own preparation of the design, estimate and program of work for a city one-storey building project.",
+        "office": "City Engineer's Office, Construction Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "The local government",
+        "requirements": [
+          {
+            "item": "Letter request or referral, 1 copy",
+            "whereToSecure": "Requesting office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request.",
+            "agency": "Receives the letter request after referral by the head of office.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Logs in the record, or refers it to the Annual Investment Plan.",
+            "feeText": "None",
+            "processingTime": "half day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Assigns technical staff.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the site inspection.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Engineer IV / Engineer II / Architect III / Lab. Tech. II / Draftsman / Engineering Assts."
+          },
+          {
+            "client": null,
+            "agency": "Drafting and design.",
+            "feeText": "None",
+            "processingTime": "7 days",
+            "personResponsible": "Engineer IV / Engineer II / Structural Engineer / Architect III / Draftsman / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the estimate and the program of work.",
+            "feeText": "None",
+            "processingTime": "6 days",
+            "personResponsible": "Engineer II / Lab. Tech. II"
+          },
+          {
+            "client": null,
+            "agency": "Checks and reviews.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Recommends for approval.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Approves.",
+            "feeText": "None",
+            "processingTime": "within 1 day or lesser time depending on the availability of the City Mayor",
+            "personResponsible": "City Mayor"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "13 days, 2 hours & 30 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter publishes one block covering both the one-storey and the two-storey case, giving two separate DURATION OF TRANSACTION rows. It is split here into two services sharing charter number 7, so each carries only its own step durations. No value has been invented: every figure is the one printed against that case.",
+          "The charter's stated 13 days is exactly the drafting and design step plus the estimate step, which suggests its own total leaves out the half day, the four-hour inspection, the one-day review and the one-day approval. The derived total counts all of them and so is longer."
+        ]
+      },
+      {
+        "id": "ceo-pow-two-storey",
+        "number": 8,
+        "charterNumber": 7,
+        "charterGroup": "Internal Services",
+        "title": "Program of works and estimates for a two-storey building",
+        "description": "The office's own preparation of the design, estimate and program of work for a city two-storey building project.",
+        "office": "City Engineer's Office, Construction Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "The local government",
+        "requirements": [
+          {
+            "item": "Letter request or referral, 1 copy",
+            "whereToSecure": "Requesting office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request.",
+            "agency": "Receives the letter request after referral by the head of office.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Logs in the record, or refers it to the Annual Investment Plan.",
+            "feeText": "None",
+            "processingTime": "half day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Assigns technical staff.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the site inspection.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Engineer IV / Engineer II / Architect III / Lab. Tech. II / Draftsman / Engineering Assts."
+          },
+          {
+            "client": null,
+            "agency": "Drafting and design.",
+            "feeText": "None",
+            "processingTime": "14 days",
+            "personResponsible": "Engineer IV / Engineer II / Structural Engineer / Architect III / Draftsman / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the estimate and the program of work.",
+            "feeText": "None",
+            "processingTime": "8 days",
+            "personResponsible": "Engineer II / Lab. Tech. II"
+          },
+          {
+            "client": null,
+            "agency": "Checks and reviews.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Recommends for approval.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Approves.",
+            "feeText": "None",
+            "processingTime": "within 1 day or lesser time depending on the availability of the City Mayor",
+            "personResponsible": "City Mayor"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "19 days, 2 hours & 30 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined one-or-two-storey block, which prints a separate DURATION OF TRANSACTION row for each case. See the note on the one-storey service.",
+          "Unlike the one-storey case, the charter's stated 19 days does not equal this service's drafting plus estimate steps, which come to 22. Check the PDF for which figure is wrong."
+        ]
+      },
+      {
+        "id": "ceo-pow-three-storey",
+        "number": 9,
+        "charterNumber": 8,
+        "charterGroup": "Internal Services",
+        "title": "Program of works and estimates for a three-storey building",
+        "description": "The office's own preparation of the design, estimate and program of work for a city three-storey building project. It adds a ground and foundation survey the lower buildings do not need.",
+        "office": "City Engineer's Office, Construction Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "The local government",
+        "requirements": [
+          {
+            "item": "Letter request or referral, 1 copy",
+            "whereToSecure": "Requesting office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request.",
+            "agency": "Receives the letter request after referral by the head of office.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Logs in the record, or refers it to the Annual Investment Plan.",
+            "feeText": "None",
+            "processingTime": "half day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Assigns technical staff.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the site inspection.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Engineer IV / Engineer II / Lab. Tech. II / Draftsman / Engineering Assts."
+          },
+          {
+            "client": null,
+            "agency": "Conducts the ground and foundation survey.",
+            "feeText": "None",
+            "processingTime": "7 days",
+            "personResponsible": "Engineer IV / Engineer II / Laborer / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Drafting and design.",
+            "feeText": "None",
+            "processingTime": "14 days",
+            "personResponsible": "Engineer IV / Engineer II / Architect III / Draftsman / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the estimate and the program of work.",
+            "feeText": "None",
+            "processingTime": "6 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Checks and reviews.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Recommends for approval.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Approves.",
+            "feeText": "None",
+            "processingTime": "within 1 day or lesser time depending on the availability of the City Mayor",
+            "personResponsible": "City Mayor"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "26 days, 2 hours & 30 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The survey, drafting and estimate steps come to 27 days against a stated total of 26 days, and the derived total counts the half day, inspection, review and approval on top. Check the PDF."
+        ]
+      },
+      {
+        "id": "ceo-pow-roads",
+        "number": 10,
+        "charterNumber": 9,
+        "charterGroup": "Internal Services",
+        "title": "Program of works and estimates for a road project",
+        "description": "The office's own preparation of the survey, design, estimate and program of work for a city road project of one million pesos or below.",
+        "office": "City Engineer's Office, Construction Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "The local government",
+        "requirements": [
+          {
+            "item": "Letter request or referral, 1 copy",
+            "whereToSecure": "Requesting office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request.",
+            "agency": "Receives the letter request after referral by the head of office.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Logs in the record, or refers it to the Annual Investment Plan.",
+            "feeText": "None",
+            "processingTime": "half day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Assigns technical staff.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Site inspection and reconnaissance.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Route and profile levelling survey (topographic survey).",
+            "feeText": "None",
+            "processingTime": "5 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Drafting and design.",
+            "feeText": "None",
+            "processingTime": "6 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the estimate and the program of work.",
+            "feeText": "None",
+            "processingTime": "5 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Checks and reviews.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Recommends for approval.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Approves.",
+            "feeText": "None",
+            "processingTime": "within 1 day or lesser time depending on the availability of the City Mayor",
+            "personResponsible": "City Mayor"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter publishes one block covering roads and drainages together, giving a different survey and drafting duration for each. It is split here so each carries only its own figures. The charter prints a single combined DURATION OF TRANSACTION of 24 days, 6 hours and 30 minutes for the block, which belongs to neither case on its own, so no stated total is recorded against this service rather than assert one the charter never gave.",
+          "That combined 24-day figure does not reconcile with either branch (roads come to 17.5 days, drainages to 20.5) or with the sum of both. Check the PDF."
+        ]
+      },
+      {
+        "id": "ceo-pow-drainage",
+        "number": 11,
+        "charterNumber": 9,
+        "charterGroup": "Internal Services",
+        "title": "Program of works and estimates for a drainage project",
+        "description": "The office's own preparation of the survey, design, estimate and program of work for a city drainage project of one million pesos or below.",
+        "office": "City Engineer's Office, Construction Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "The local government",
+        "requirements": [
+          {
+            "item": "Letter request or referral, 1 copy",
+            "whereToSecure": "Requesting office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request.",
+            "agency": "Receives the letter request after referral by the head of office.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Logs in the record, or refers it to the Annual Investment Plan.",
+            "feeText": "None",
+            "processingTime": "half day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Assigns technical staff.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Site inspection and reconnaissance.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Route and profile levelling survey (topographic survey).",
+            "feeText": "None",
+            "processingTime": "4 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Drafting and design.",
+            "feeText": "None",
+            "processingTime": "10 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the estimate and the program of work.",
+            "feeText": "None",
+            "processingTime": "5 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Checks and reviews.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Recommends for approval.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Approves.",
+            "feeText": "None",
+            "processingTime": "within 1 day or lesser time depending on the availability of the City Mayor",
+            "personResponsible": "City Mayor"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined roads-and-drainages block; see the note on the road project service. The charter's single combined total of 24 days, 6 hours and 30 minutes is not recorded against this service because it was never stated for drainage on its own."
+        ]
+      },
+      {
+        "id": "ceo-pow-water-system",
+        "number": 12,
+        "charterNumber": 10,
+        "charterGroup": "Internal Services",
+        "title": "Program of works and estimates for a water system project",
+        "description": "The office's own preparation of the survey, design, estimate and program of work for a city water system project.",
+        "office": "City Engineer's Office, Construction Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "The local government",
+        "requirements": [
+          {
+            "item": "Letter request or referral, 1 copy",
+            "whereToSecure": "Requesting office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request.",
+            "agency": "Receives the letter request after referral by the head of office.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Logs in the record, or refers it to the Annual Investment Plan.",
+            "feeText": "None",
+            "processingTime": "half day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Assigns technical staff.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Site inspection and reconnaissance.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Topographic survey.",
+            "feeText": "None",
+            "processingTime": "4 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Drafting and design.",
+            "feeText": "None",
+            "processingTime": "14 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the estimate and the program of work.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Checks and reviews.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Recommends for approval, then approves.",
+            "feeText": "None",
+            "processingTime": "within 1 day or lesser time depending on the availability of the City Mayor",
+            "personResponsible": "City Mayor"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter publishes one block covering water systems and bridges together, giving a different inspection and survey duration for each. It is split here so each carries only its own figures. The charter prints a single combined DURATION OF TRANSACTION of 37 days, 2 hours and 30 minutes for the block, which is not recorded against either split service because it was never stated for one case on its own.",
+          "The extraction interleaves the processing-time column for steps 1.4 to 1.7 badly, listing four day-values in a row against two steps. The attribution here is an inference and must be checked against the PDF before this service is verified.",
+          "That combined 37-day figure is also the total printed for the barangay projects service later in the charter, so it may be copied."
+        ]
+      },
+      {
+        "id": "ceo-pow-bridges",
+        "number": 13,
+        "charterNumber": 10,
+        "charterGroup": "Internal Services",
+        "title": "Program of works and estimates for a bridge project",
+        "description": "The office's own preparation of the survey, design, estimate and program of work for a city bridge project.",
+        "office": "City Engineer's Office, Construction Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "The local government",
+        "requirements": [
+          {
+            "item": "Letter request or referral, 1 copy",
+            "whereToSecure": "Requesting office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request.",
+            "agency": "Receives the letter request after referral by the head of office.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Logs in the record, or refers it to the Annual Investment Plan.",
+            "feeText": "None",
+            "processingTime": "half day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Assigns technical staff.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Site inspection and reconnaissance.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Topographic survey.",
+            "feeText": "None",
+            "processingTime": "5 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Drafting and design.",
+            "feeText": "None",
+            "processingTime": "10 days",
+            "personResponsible": "Engineer II / Lab. Tech. II / Engineering Assts. / Engineering Aides"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the estimate and the program of work.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Checks and reviews.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Recommends for approval, then approves.",
+            "feeText": "None",
+            "processingTime": "within 1 day or lesser time depending on the availability of the City Mayor",
+            "personResponsible": "City Mayor"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined water-system-and-bridges block; see the note on the water system service, including the warning about the interleaved processing-time column."
+        ]
+      },
+      {
+        "id": "ceo-pow-barangay",
+        "number": 14,
+        "charterNumber": 11,
+        "charterGroup": "Internal Services",
+        "title": "Program of works and estimates for a barangay project",
+        "description": "A barangay asks the office to inspect, plan, estimate and prepare the program of work for a barangay project, whether barangay funded, city funded or an augmentation.",
+        "office": "City Engineer's Office, Barangay Projects Section",
+        "classification": "Complex Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "70 Legazpi City barangays",
+        "requirements": [
+          {
+            "item": "Letter request",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Approved barangay resolution noted by the City Mayor, for an augmentation or a city funded project",
+            "whereToSecure": "City Engineer's Office or City Budget Office"
+          },
+          {
+            "item": "Approved barangay resolution or Annual Investment Plan, for a barangay funded project",
+            "whereToSecure": "City Engineer's Office or City Budget Office"
+          },
+          {
+            "item": "Letter of consent, for a project to be built inside or passing through private property",
+            "whereToSecure": "Lot owner of the private property"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request and the required documents.",
+            "agency": "Receives the request and the required documents.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Assigns technical staff.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Section Head"
+          },
+          {
+            "client": null,
+            "agency": "Inspects and verifies the site, then prepares the plan, the estimate and the program of work.",
+            "feeText": "None",
+            "processingTime": "3 weeks",
+            "personResponsible": "Section Head / Civil Engineer / Elec. Engineer / Gen. Foreman / Engineering Asst. / Lab. Tech. II"
+          },
+          {
+            "client": null,
+            "agency": "Checks and recommends for approval.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Section Head / Asst. City Engineer"
+          },
+          {
+            "client": "Receive the program of work.",
+            "agency": "Approves and releases the program of work.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "City Engineer / Releasing Clerk (Admin. Aide I)"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "37 days, 2 hours & 30 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The three-week inspection and preparation step is recorded verbatim. Weeks are not a unit this arithmetic models, so it is reported as unreadable and left out of the derived total rather than converted into a number of days the charter never stated.",
+          "The stated total of 37 days is also printed for the water system and bridges service earlier in the charter, and does not reconcile with these steps. Check the PDF."
+        ]
+      },
+      {
+        "id": "ceo-barangay-final-inspection",
+        "number": 15,
+        "charterNumber": 12,
+        "charterGroup": "Internal Services",
+        "title": "Getting a final inspection report on a finished barangay project",
+        "description": "The office inspects a completed barangay project and issues the final inspection report.",
+        "office": "City Engineer's Office, Barangay Projects Section",
+        "classification": "Complex Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "70 Legazpi City barangays",
+        "requirements": [
+          {
+            "item": "Letter request",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Duly labelled pictures of the completed project, before, during and after",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Certificate of completion and acceptance of the barangay project",
+            "whereToSecure": "City Engineer's Office, Barangay Division"
+          },
+          {
+            "item": "Notice of commencement of work",
+            "whereToSecure": "City Engineer's Office, Barangay Division"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request together with the required documents.",
+            "agency": "Receives and verifies the request and the required documents.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request to the Assistant City Engineer.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Assigns inspectors.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Assistant City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Inspects and assesses the completed project.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Section Head / Civil Engineer / Electrical Engineer / Gen. Foreman / Engineering Asst. / Lab. Tech. II / Admin. Aide IV"
+          },
+          {
+            "client": "Receive the inspection report.",
+            "agency": "Prepares and releases the inspection report.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Releasing Clerk (Admin. Aide I)"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "3 days, 4 hours & 40 minutes"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "ceo-streetlight-repair",
+        "number": 16,
+        "charterNumber": 13,
+        "charterGroup": "Internal Services",
+        "title": "Reporting a broken streetlight",
+        "description": "Repair and maintenance of streetlights and other electrical facilities, requested by a barangay or a city office.",
+        "office": "City Engineer's Office, Electrical Section",
+        "classification": "Complex Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "70 Legazpi City barangays and city offices",
+        "requirements": [
+          {
+            "item": "Letter request or referral",
+            "whereToSecure": "Requesting party"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request.",
+            "agency": "Receives the request or referral.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request or referral to the section head.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Assigns inspectors to validate what is needed.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Section Head"
+          },
+          {
+            "client": null,
+            "agency": "Inspects and assesses what is needed.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Electrician"
+          },
+          {
+            "client": null,
+            "agency": "Assigns the action team.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Section Head"
+          },
+          {
+            "client": null,
+            "agency": "Commencement of work.",
+            "feeText": "None",
+            "processingTime": "depends on work activities needed and the extent of the repair or work to be done",
+            "personResponsible": "Electrical Team"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "7 days"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The last step has no stated duration, so the derived total covers only the steps up to the start of work and falls short of the charter's flat 7 days. The charter itself makes the work open-ended."
+        ]
+      },
+      {
+        "id": "ceo-vehicle-repair",
+        "number": 17,
+        "charterNumber": 14,
+        "charterGroup": "Internal Services",
+        "title": "Getting a city vehicle or heavy equipment repaired",
+        "description": "Repair and maintenance of service vehicles, heavy equipment and other equipment for city government offices.",
+        "office": "City Engineer's Office, Motorpool Division",
+        "classification": "Complex Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "City government offices",
+        "requirements": [
+          {
+            "item": "Letter request or referral",
+            "whereToSecure": "Requesting office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request.",
+            "agency": "Receives the request or referral.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request or referral to the division head.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Evaluates and prepares the pre-repair recommendation.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Section Head / Mechanic"
+          },
+          {
+            "client": null,
+            "agency": "Commencement of work.",
+            "feeText": "None",
+            "processingTime": "depends on work activities needed and availability of materials",
+            "personResponsible": "Mechanic"
+          },
+          {
+            "client": null,
+            "agency": "Prepares and submits the post-repair inspection report.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Section Head"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "7 days"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The work step has no stated duration, so the derived total falls short of the charter's flat 7 days."
+        ]
+      },
+      {
+        "id": "ceo-road-drainage-maintenance",
+        "number": 18,
+        "charterNumber": 15,
+        "charterGroup": "Internal Services",
+        "title": "Reporting a road or drainage that needs repair",
+        "description": "Repair, improvement and maintenance of city roads and drainages, requested by a barangay.",
+        "office": "City Engineer's Office, Maintenance Division",
+        "classification": "Complex Transaction",
+        "transactionTypes": ["Government to Government (G2G)", "Government to Client (G2C)"],
+        "whoMayAvail": "70 Legazpi City barangays",
+        "requirements": [
+          {
+            "item": "Letter request or referral",
+            "whereToSecure": "Requesting party"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request.",
+            "agency": "Receives the request or referral.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Receiving Clerk (Admin. Aide I)"
+          },
+          {
+            "client": null,
+            "agency": "Refers the request or referral to the division head.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Assigns inspectors to validate what is needed.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Section Head"
+          },
+          {
+            "client": null,
+            "agency": "Inspects and assesses what is needed.",
+            "feeText": "None",
+            "processingTime": "3 hours",
+            "personResponsible": "Foreman"
+          },
+          {
+            "client": null,
+            "agency": "Assigns the action team.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Section Head"
+          },
+          {
+            "client": null,
+            "agency": "Commencement of work.",
+            "feeText": "None",
+            "processingTime": "depends on work activities needed and the extent of the repair or work to be done",
+            "personResponsible": "Maintenance Team"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "7 days"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The work step has no stated duration, so the derived total falls short of the charter's flat 7 days."
+        ]
+      },
+      {
+        "id": "ceo-construction-plans",
+        "number": 19,
+        "charterNumber": 16,
+        "charterGroup": "Internal Services",
+        "title": "Preparation of construction plans for a city building or flagship project",
+        "description": "The office designs buildings, symbolic structures and special flagship projects for the city, from conference with stakeholders through to submission of the drawings and technical specifications.",
+        "office": "City Engineer's Office, Planning, Design and Programming Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "The local government",
+        "requirements": [
+          {
+            "item": "Copy of the referred letter request, or as instructed by the City Mayor and the City Engineer",
+            "whereToSecure": "City Mayor's Office or City Engineer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request, or the instruction from the City Mayor and City Engineer.",
+            "agency": "Conference with the stakeholders to establish the requirements.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the site inspection and assessment of the site or location.",
+            "feeText": "None",
+            "processingTime": "4 Hours / Half Day",
+            "personResponsible": "Division Head / Draftsman"
+          },
+          {
+            "client": null,
+            "agency": "Research, benchmarking, and preparation of the preliminary design or plan for approval.",
+            "feeText": "None",
+            "processingTime": "1 week",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": null,
+            "agency": "Collates the engineering design inputs for the geodetic, electrical, structural, mechanical and plumbing engineers.",
+            "feeText": "None",
+            "processingTime": "2 weeks (depends on the submittal of allied engineering professionals)",
+            "personResponsible": "Division Head / Engineer IV (Civil) / Engineer IV (Mechanical) / Engineer IV (Electrical) / Engineer II (Geodetic)"
+          },
+          {
+            "client": null,
+            "agency": "Drafting of plans, drawing productions and technical specifications.",
+            "feeText": "None",
+            "processingTime": "Simple: 2 weeks. Complex: 4 weeks or more",
+            "personResponsible": "Draftsman / CADD operator (3 persons)"
+          },
+          {
+            "client": null,
+            "agency": "Review, checking and approval.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Division Head"
+          },
+          {
+            "client": "Receive the plans.",
+            "agency": "Submission.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Division Head"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "2 weeks to 2 Months"
+        },
+        "notes": [
+          "The charter states that the duration varies for every project, given the differing complexity of each."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Most of this service's durations are in weeks or months, which this arithmetic does not model, so they are reported as unreadable and left out of the derived total. The charter's own total is a range and it says explicitly that the duration varies by project, so no single derived figure would be meaningful here.",
+          "The site inspection cell reads \"4 Hours / Half Day\", which is one quantity written two ways in two different units. It is recorded verbatim and is therefore counted twice in any sum. Confirm which the office means."
+        ]
+      },
+      {
+        "id": "ceo-annual-inspection-simple",
+        "number": 20,
+        "charterNumber": 17,
+        "charterGroup": "External Services",
+        "title": "Annual inspection certificate for a small business",
+        "description": "The certificate of annual inspection a business needs for its permit. This is the route for a small, local, independent retailer, which the charter classifies as a simple establishment.",
+        "office": "City Engineer's Office, Annual Building Inspection Section",
+        "classification": "Complex Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Business establishments",
+        "requirements": [
+          {
+            "item": "Business permit application, for a new applicant",
+            "whereToSecure": "Business Permits and Licensing Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application at BPLO.",
+            "agency": "Prints the submitted application received by email with the other submitted documents.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Inspects the business establishment.",
+            "feeText": "None",
+            "processingTime": "1-3 days",
+            "personResponsible": "Inspectorate Team"
+          },
+          {
+            "client": null,
+            "agency": "Reviews and verifies compliance.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Building Inspector"
+          },
+          {
+            "client": null,
+            "agency": "Assesses the fees through ETRACS if approved. The assessment is made once at BPLO and payment is made at the One-Stop Shop.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Building Inspector"
+          },
+          {
+            "client": null,
+            "agency": "Issues the letter of denial if disapproved.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Building Inspector"
+          },
+          {
+            "client": "Pay the fees.",
+            "agency": "Prepares the certificate once approved and paid.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Encoder / Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Checks, countersigns and approves the certificate of annual inspection or the letter.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Building Inspector / Department Head"
+          },
+          {
+            "client": "Receive the certificate.",
+            "agency": "Releases the certificate of annual inspection, or the letter of denial or violations.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Delivers the certificate of annual inspection, or the letter of violations or denial.",
+            "feeText": "None",
+            "processingTime": "2 to 3 days",
+            "personResponsible": "Messenger / Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "3 days, 1 hr. & 45 mins. (for simple construction / establishment)"
+        },
+        "notes": [
+          "The charter defines a simple establishment as a small, local, independent retailer."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter publishes one block for simple and complex establishments, giving two separate duration rows. It is split here into two services sharing charter number 17, so each carries only its own inspection duration. Every figure is the one printed for that case.",
+          "The inspection and delivery steps are ranges (1-3 days, 2 to 3 days). The arithmetic reads the upper figure of a range, so the derived total is the longer end.",
+          "The charter names individual staff in this table. Their names are in Office Personnel and the process table carries positions, per the convention.",
+          "The derived total runs exactly three days longer than the charter's, on both this service and the large-business one. Three days is the delivery step, so the charter's own total appears to stop when the certificate is ready rather than when it reaches the client. The derived figure counts the delivery."
+        ]
+      },
+      {
+        "id": "ceo-annual-inspection-complex",
+        "number": 21,
+        "charterNumber": 17,
+        "charterGroup": "External Services",
+        "title": "Annual inspection certificate for a large business",
+        "description": "The certificate of annual inspection for a large-scale business such as a hotel, warehouse or mall, which the charter classifies as a complex establishment and inspects over a longer period.",
+        "office": "City Engineer's Office, Annual Building Inspection Section",
+        "classification": "Complex Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Business establishments",
+        "requirements": [
+          {
+            "item": "Business permit application, for a new applicant",
+            "whereToSecure": "Business Permits and Licensing Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application at BPLO.",
+            "agency": "Prints the submitted application received by email with the other submitted documents.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Inspects the business establishment.",
+            "feeText": "None",
+            "processingTime": "3-5 days",
+            "personResponsible": "Inspectorate Team"
+          },
+          {
+            "client": null,
+            "agency": "Reviews and verifies compliance.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Building Inspector"
+          },
+          {
+            "client": null,
+            "agency": "Assesses the fees through ETRACS if approved. The assessment is made once at BPLO and payment is made at the One-Stop Shop.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Building Inspector"
+          },
+          {
+            "client": null,
+            "agency": "Issues the letter of denial if disapproved.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Building Inspector"
+          },
+          {
+            "client": "Pay the fees.",
+            "agency": "Prepares the certificate once approved and paid.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Encoder / Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Checks, countersigns and approves the certificate of annual inspection or the letter.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Building Inspector / Department Head"
+          },
+          {
+            "client": "Receive the certificate.",
+            "agency": "Releases the certificate of annual inspection, or the letter of denial or violations.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Delivers the certificate of annual inspection, or the letter of violations or denial.",
+            "feeText": "None",
+            "processingTime": "2 to 3 days",
+            "personResponsible": "Messenger / Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "5 days, 1 hr. & 45 mins. (for complex construction / establishment)"
+        },
+        "notes": [
+          "The charter defines a complex establishment as a large-scale business such as a hotel, warehouse or mall."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined simple-and-complex block, which prints a separate duration row for each. See the note on the small-business service.",
+          "As with the small-business service, the derived total runs three days longer than the charter's because it counts the delivery step and the charter's total appears not to."
+        ]
+      },
+      {
+        "id": "ceo-excavation-permit-maintenance",
+        "number": 22,
+        "charterNumber": 18,
+        "charterGroup": "External Services",
+        "title": "Getting an excavation permit to dig on a city road",
+        "description": "The Maintenance Division's permit to excavate on a city road or sidewalk, covering the restoration work as well as the digging.",
+        "office": "City Engineer's Office, Maintenance Division",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of intent or request",
+            "whereToSecure": "Maintenance Division"
+          },
+          {
+            "item": "Duly accomplished application for excavation permit, 3 copies",
+            "whereToSecure": "Maintenance Division"
+          },
+          {
+            "item": "Total estimated project cost, 3 sets",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Proposed construction schedule, PERT-CPM or bar chart, 3 copies, if the work runs more than fifteen days. The schedule must include the restoration work",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Construction drawings and plans, 3 sets, showing the sketch, street plans and profile where the excavation is proposed, including affected trees, shrubs, pavement, sidewalks, centre islands and other fixtures",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Street maps showing the adjusted traffic flow pattern, 3 copies, where traffic re-routing is necessary",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Built plan, 3 sets",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application form and the documentary requirements.",
+            "agency": "Receives the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Documentary Verifier"
+          },
+          {
+            "client": null,
+            "agency": "Technical review and evaluation.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Trade Evaluator / Maintenance Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "If there is no complaint, issues the notice of deficiencies or the notice of denial.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Division Chief / City Engineer"
+          },
+          {
+            "client": null,
+            "agency": "Site inspection.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Inspectorate Team / Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "If there is no complaint, issues the notice of deficiencies or the notice of compliance.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Maintenance Division Chief / City Engineer"
+          },
+          {
+            "client": "Receive the order of payment (Window B).",
+            "agency": "Prepares and releases the order of payment.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "City Assessor / Releasing Clerk"
+          },
+          {
+            "client": "Pay the fees and charges (Window A, cashier).",
+            "agency": "Receives the payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit for issuance.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Recommends issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Maintenance Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "City Engineer"
+          },
+          {
+            "client": "Receive the excavation permit.",
+            "agency": "Releases the permit.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no duration of transaction row for this service, so the total shown is summed from the steps alone.",
+          "The charter's final agency action reads \"Release Mechanical Permit\", which appears to be carried over from the mechanical permit service. Recorded here as release of the excavation permit, matching the client step.",
+          "The charter transposes its own Classification and Type of Classification labels on this service. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-building-permit",
+        "number": 23,
+        "charterNumber": 19,
+        "charterGroup": "External Services",
+        "title": "Getting a building permit",
+        "description": "The permit the Building Official issues before you may build, install, add to, alter, renovate, convert, repair, move or demolish a structure. It is applied for at the One-Stop Shop for Construction Permits, which handles the zoning and fire safety clearances alongside it.",
+        "office": "City Engineer's Office, Building Permit Division / One-Stop Shop for Construction Permits",
+        "classification": "Highly Technical",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Duly accomplished and notarized application form for a building permit and the necessary ancillary permit form, 4 copies",
+            "whereToSecure": "Legazpi City website, https://legazpi.gov.ph/services"
+          },
+          {
+            "item": "Proof of lot or property ownership. If the applicant is the registered owner, a certified true copy of the latest Original or Transfer Certificate of Title on file with the Registry of Deeds. If not, in addition to that certified true copy, any of: a duly notarized contract of lease, award notice, deed of absolute sale, contract to sell, extra-judicial settlement, or authority from the registered owner",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Certification from a licensed geodetic engineer that the work will be within the owner's property and will not encroach on any adjoining property, incorporated in the first page of the architectural design plans",
+            "whereToSecure": "Licensed geodetic engineer"
+          },
+          {
+            "item": "Survey plans, design plans and drawings, specifications and other documents, 4 sets, prepared, signed and sealed over the printed name of the respective licensed design professionals and approved by the owner",
+            "whereToSecure": "Licensed design professionals"
+          },
+          {
+            "item": "Structural analysis and design, 3 sets, signed and sealed by the licensed civil or structural engineer. Not required for a one-storey single detached structure of 20.00 sq. m. or less",
+            "whereToSecure": "Licensed civil or structural engineer"
+          },
+          {
+            "item": "Boring and load test, for structures of three storeys and higher, for lower structures in areas with potential geological or geotechnical hazards, or where required by the National Structural Code of the Philippines",
+            "whereToSecure": "Licensed civil or structural engineer"
+          },
+          {
+            "item": "Electrical analysis and design, 3 sets, signed and sealed by the licensed professional electrical engineer",
+            "whereToSecure": "Licensed professional electrical engineer"
+          },
+          {
+            "item": "Photocopy of the latest PRC identification card and professional tax receipt, with three specimen signatures, signed and sealed by the respective professionals",
+            "whereToSecure": "The design professionals"
+          },
+          {
+            "item": "Duly notarized bill of materials and cost estimate, 4 sets, signed and sealed by a licensed architect or civil engineer and approved by the owner",
+            "whereToSecure": "Licensed architect or civil engineer"
+          },
+          {
+            "item": "Construction logbook, 1 copy, signed and sealed by the licensed civil engineer or architect in charge of construction and signed by the owner",
+            "whereToSecure": "Licensed civil engineer or architect"
+          },
+          {
+            "item": "Certificate of approval of the Construction Safety and Health Program",
+            "whereToSecure": "Department of Labor and Employment"
+          },
+          {
+            "item": "Certification that the project will not affect the power line corridor, per Republic Act No. 11361",
+            "whereToSecure": "Albay Electric Cooperative"
+          },
+          {
+            "item": "Fire Safety Compliance Report, if applicable under the revised IRR of the Fire Code",
+            "whereToSecure": "Bureau of Fire Protection"
+          },
+          {
+            "item": "Affidavit of undertaking for clearances from national government agencies that may be submitted within 30 days of the building permit being issued, per JMC No. 2018-01. Simple structures only",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Special power of attorney for an individual, or a board resolution or secretary's certificate for a corporation, for the authorized representative acting for the owner",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Other zoning requirements if applicable: affidavit of non-objection, affidavit of undertaking on lot occupancy, barangay resolution or endorsement, manifestation, simple subdivision approval or a copy of the approved subdivision plan, and other documents based on the evaluation",
+            "whereToSecure": "City Planning and Development Office, or the barangay"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application form and the documentary requirements at Window B, the receiving window.",
+            "agency": "Receives the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Document Verifier"
+          },
+          {
+            "client": null,
+            "agency": "If compliant, issues the claim stub. If not, issues the checklist of deficiencies.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Zoning review and evaluation.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Zoning Evaluator / Zoning Officer / Zoning Administrator"
+          },
+          {
+            "client": null,
+            "agency": "If non-compliant, issues the notice of deficiencies.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Zoning Evaluator / Zoning Officer / Zoning Administrator"
+          },
+          {
+            "client": null,
+            "agency": "Technical review and evaluation.",
+            "feeText": "None",
+            "processingTime": "5 days (for complex applications), 15 days (for highly-technical applications)",
+            "personResponsible": "Bureau of Fire / Trade Evaluators / Building Permit Division Chief / Fire Marshall / Building Official"
+          },
+          {
+            "client": null,
+            "agency": "If non-compliant, issues the notice of deficiencies.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Building Permit Division Chief / Building Official"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the consolidated order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the consolidated order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves the consolidated order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the order of payment by SMS and email, then pay the fees and charges at Window A, the cashier, or online.",
+            "agency": "Receives the payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permits and clearances for issuance.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Recommends issuance of the building permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves issuance of the building permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the building permit, locational clearance and fire safety evaluation clearance at Window C, the releasing window.",
+            "agency": "Releases the building permit, locational clearance and fire safety evaluation clearance.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Releasing Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [
+          "Only complete and compliant applications are accepted.",
+          "Under JMC 2018-01 a simple structure is one with a maximum floor area of 1,500 sq. m., covering a single dwelling of not more than three storeys, a commercial building of not more than two storeys, a renovation within a mall that already has a building permit, and a warehouse storing non-hazardous substances.",
+          "Plans must be A3 (297 mm x 420 mm) or standard size for residential buildings, and standard size (20 x 30 inches or 30 x 40 inches) for commercial and other building types, drawn to a scale of not less than 1:100 m with readable, complete labels, dimensions and specifications."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The technical review runs 5 days for a complex application and 15 days for a highly-technical one, and the office decides which yours is after you submit. Both figures are kept on the one step, verbatim, rather than split into two services, because an applicant cannot tell in advance which applies. The arithmetic adds both, so the derived total is longer than either case; treat it as an upper bound until the charter is checked.",
+          "The charter prints no duration of transaction row for this service.",
+          "The charter transposes its own Classification and Type of Classification labels. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-certificate-occupancy",
+        "number": 24,
+        "charterNumber": 20,
+        "charterGroup": "External Services",
+        "title": "Getting a certificate of occupancy",
+        "description": "The certificate the Building Official issues before a finished building may be used, confirming it is fit to occupy and was built to the approved plans and the National Building Code.",
+        "office": "City Engineer's Office, Building Permit Division / One-Stop Shop for Construction Permits",
+        "classification": "Highly Technical",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Duly accomplished application form for a certificate of occupancy, 3 copies",
+            "whereToSecure": "Legazpi City website, https://legazpi.gov.ph/services"
+          },
+          {
+            "item": "Duly accomplished and notarized form for a certificate of completion, 3 copies",
+            "whereToSecure": "Legazpi City website, https://legazpi.gov.ph/services"
+          },
+          {
+            "item": "As-built plans, 3 sets, showing the deviations from the approved building plans, prepared, signed and sealed by the licensed professionals who signed the approved plans",
+            "whereToSecure": "Licensed design professionals"
+          },
+          {
+            "item": "Certification from the geodetic engineer that the work did not encroach on any adjoining property, incorporated in the first page of the as-built architectural design plans",
+            "whereToSecure": "Licensed geodetic engineer"
+          },
+          {
+            "item": "Photocopy of the latest PRC identification card and professional tax receipt, with three specimen signatures, signed and sealed by the respective design professionals",
+            "whereToSecure": "The design professionals"
+          },
+          {
+            "item": "Duly accomplished construction logbook with certification from the licensed civil engineer or architect in charge of construction",
+            "whereToSecure": "Licensed civil engineer or architect"
+          },
+          {
+            "item": "Photographs of the completed structure showing the front, sides and rear",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Fire Safety Compliance and Commissioning Report, if applicable under the revised IRR of the Fire Code",
+            "whereToSecure": "Bureau of Fire Protection"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application form and the documentary requirements at Window B, the receiving window.",
+            "agency": "Receives the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Document Verifier"
+          },
+          {
+            "client": null,
+            "agency": "If compliant, issues the claim stub. If not, issues the checklist of deficiencies.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Joint site inspection.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Zoning / Bureau of Fire"
+          },
+          {
+            "client": null,
+            "agency": "Technical review and evaluation.",
+            "feeText": "None",
+            "processingTime": "5 days (for complex applications), 15 days (for highly-technical applications)",
+            "personResponsible": "Trade Inspectors / Zoning / Bureau of Fire / Building Permit Division Chief / Zoning Administrator / Fire Marshall / Building Official"
+          },
+          {
+            "client": null,
+            "agency": "If non-compliant, issues the notice of deficiencies.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Building Permit Division Chief / Building Official"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the consolidated order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Assessor"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the consolidated order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves the consolidated order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the order of payment by SMS and email, then pay the fees and charges at Window A, the cashier, or online.",
+            "agency": "Receives the payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permits and clearances for issuance.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Recommends issuance of the certificate of occupancy.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves issuance of the certificate of occupancy.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the certificate at Window C, the releasing window.",
+            "agency": "Releases the certificate of occupancy and the fire safety inspection certificate.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Releasing Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [
+          "Only complete and compliant applications are accepted.",
+          "Under JMC 2018-01 a simple structure is one with a maximum floor area of 1,500 sq. m., covering a single dwelling of not more than three storeys, a commercial building of not more than two storeys, a renovation within a mall that already has a building permit, and a warehouse storing non-hazardous substances."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "As with the building permit, the technical review carries both the complex and the highly-technical figure on one step because the office decides which applies after submission. The derived total therefore adds both and reads as an upper bound.",
+          "The charter's client step for releasing still reads \"Receive the Building Permit, Locational Clearance and Fire Safety Evaluation Clearance\", carried over from the building permit service. Recorded here as receiving the certificate of occupancy, matching the agency action.",
+          "The charter prints no duration of transaction row for this service."
+        ]
+      },
+      {
+        "id": "ceo-electrical-permit",
+        "number": 25,
+        "charterNumber": 21,
+        "charterGroup": "External Services",
+        "title": "Getting an electrical permit or a certificate of electrical inspection",
+        "description": "The permit for temporary or permanent wiring, and the certificate of electrical inspection or final electrical inspection that follows it.",
+        "office": "City Engineer's Office, Building Permit Division",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of intent or request",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Duly accomplished application form for an electrical permit, 4 copies",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Electrical design plan, signed and sealed by the licensed professional electrical engineer and approved by the owner",
+            "whereToSecure": "Licensed professional electrical engineer"
+          },
+          {
+            "item": "Sketch of the location",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Proof of lot or property ownership. If the applicant is the registered owner, a certified true copy of the latest Original or Transfer Certificate of Title. If not, in addition to that copy, any of: a duly notarized contract of lease, award notice, deed of absolute sale, contract to sell, extra-judicial settlement, or authority from the registered owner. If within a resettlement site, certification from the Urban Poor Affairs Office that the applicant is the awardee of the house or lot",
+            "whereToSecure": "Registry of Deeds, or the Urban Poor Affairs Office"
+          },
+          {
+            "item": "Photographs of the structure showing the front, sides and rear",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Barangay clearance",
+            "whereToSecure": "Office of the Punong Barangay concerned"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application form and the documentary requirements at Window E.",
+            "agency": "Receives the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Document Verifier"
+          },
+          {
+            "client": null,
+            "agency": "If compliant, issues the claim stub. If not, issues the checklist of deficiencies.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Technical review and evaluation.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Electrical Evaluator / Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Site inspection.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Electrical Inspector"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Electrical Inspector"
+          },
+          {
+            "client": null,
+            "agency": "If non-compliant, issues the notice of deficiencies or the notice of denial.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief / Building Official"
+          },
+          {
+            "client": "Receive the order of payment at Window E.",
+            "agency": "Releases the order of payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Releasing Clerk"
+          },
+          {
+            "client": "Pay the fees and charges at Window A, the cashier.",
+            "agency": "Receives the payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit for issuance.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Recommends issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the temporary or permanent wiring permit and the certificate of electrical inspection or final electrical inspection at Window E.",
+            "agency": "Releases the temporary or permanent wiring permit and the certificate.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no duration of transaction row for this service.",
+          "The charter transposes its own Classification and Type of Classification labels. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-mechanical-permit",
+        "number": 26,
+        "charterNumber": 22,
+        "charterGroup": "External Services",
+        "title": "Getting a mechanical permit",
+        "description": "The permit to install mechanical equipment such as lifts, escalators, air conditioning, boilers, pressure vessels or sprinkler systems.",
+        "office": "City Engineer's Office, Building Permit Division",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of intent or request",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Duly accomplished application form for a mechanical permit, 4 copies",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Mechanical design plans, 5 sets, signed and sealed by the licensed professional mechanical engineer and approved by the owner",
+            "whereToSecure": "Licensed professional mechanical engineer"
+          },
+          {
+            "item": "Mechanical design specifications, 5 sets, signed and sealed by the licensed professional mechanical engineer and approved by the owner",
+            "whereToSecure": "Licensed professional mechanical engineer"
+          },
+          {
+            "item": "Bill of materials and cost estimate of the proposed work, 5 sets, signed and sealed by the licensed professional mechanical engineer and approved by the owner",
+            "whereToSecure": "Licensed professional mechanical engineer"
+          },
+          {
+            "item": "Design computation, 5 sets, signed and sealed by the licensed professional mechanical engineer, for elevators",
+            "whereToSecure": "Licensed professional mechanical engineer"
+          },
+          {
+            "item": "Heat load calculation including the energy efficiency ratio, 5 sets, signed and sealed by the licensed professional mechanical engineer, for air-conditioning units",
+            "whereToSecure": "Licensed professional mechanical engineer"
+          },
+          {
+            "item": "Hydraulic calculation, 5 sets, signed and sealed by the licensed professional mechanical engineer, for sprinkler systems",
+            "whereToSecure": "Licensed professional mechanical engineer"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application form and the documentary requirements at Window B.",
+            "agency": "Receives the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Document Verifier"
+          },
+          {
+            "client": null,
+            "agency": "If compliant, issues the claim stub. If not, issues the checklist of deficiencies.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Technical review and evaluation.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Mechanical Evaluator / Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "If non-compliant, issues the notice of deficiencies or the notice of denial.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief / Building Official"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Mechanical Evaluator"
+          },
+          {
+            "client": "Receive the order of payment at Window B.",
+            "agency": "Releases the order of payment.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Releasing Clerk"
+          },
+          {
+            "client": "Pay the fees and charges at Window A, the cashier.",
+            "agency": "Receives the payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit for issuance.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Recommends issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the mechanical permit at Window C.",
+            "agency": "Releases the mechanical permit.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no duration of transaction row for this service.",
+          "The charter transposes its own Classification and Type of Classification labels. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-mechanical-permit-to-operate",
+        "number": 27,
+        "charterNumber": 23,
+        "charterGroup": "External Services",
+        "title": "Getting a mechanical permit to operate",
+        "description": "The permit to operate mechanical equipment once it is installed and has passed the required tests.",
+        "office": "City Engineer's Office, Building Permit Division",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Approved mechanical permit",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Approved mechanical plans, specifications and other documents, 1 set",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Certification from a licensed professional mechanical engineer that the equipment is safe and sound for operation under normal conditions, in accordance with the Philippine Mechanical Code and the Mechanical Engineering Law (R.A. 8495), 2 copies",
+            "whereToSecure": "Licensed professional mechanical engineer"
+          },
+          {
+            "item": "Test results, 2 copies: weight or trip test for elevators; hydro or hydrostatic test for pressure vessels, piping systems and steam lines; micro switches test for escalators; hydrostatic or emission test for steam boilers; ORSAT or emission test for internal combustion engines; pneumatic test for gas lines; nitrogen test for refrigerant lines; effectivity test for safety devices",
+            "whereToSecure": "Licensed professional mechanical engineer"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application form and the documentary requirements at Window B.",
+            "agency": "Receives the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": "Receive the order of payment at Window B.",
+            "agency": "Releases the order of payment.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Releasing Clerk"
+          },
+          {
+            "client": "Pay the fees and charges at Window A, the cashier.",
+            "agency": "Receives the payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit for issuance.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Recommends issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the permit at Window C.",
+            "agency": "Releases the mechanical permit.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no duration of transaction row for this service, and no technical review step, which is unusual against its sibling permits. Check the PDF for a missing row.",
+          "The charter transposes its own Classification and Type of Classification labels. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-demolition-permit",
+        "number": 28,
+        "charterNumber": 24,
+        "charterGroup": "External Services",
+        "title": "Getting a demolition permit",
+        "description": "The permit to demolish a building or structure.",
+        "office": "City Engineer's Office, Building Permit Division",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of intent or request",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Duly accomplished and notarized application for a demolition permit, 4 copies",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Demolition plans, 5 sets, signed and sealed by the licensed architect or civil engineer and approved by the owner",
+            "whereToSecure": "Licensed architect or civil engineer"
+          },
+          {
+            "item": "Certification from a licensed geodetic engineer that the demolition works will be within the owner's property",
+            "whereToSecure": "Licensed geodetic engineer"
+          },
+          {
+            "item": "Proof of building or property ownership",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Pictures of the building to be demolished",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Sketch map of the location of the building to be demolished",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Clearance from the General Services Office, for government buildings",
+            "whereToSecure": "General Services Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application form and the documentary requirements at Window B.",
+            "agency": "Receives the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Document Verifier"
+          },
+          {
+            "client": null,
+            "agency": "If compliant, issues the claim stub. If not, issues the checklist of deficiencies.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Technical review and evaluation.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Trade Evaluators / Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "If non-compliant, issues the notice of deficiencies or the notice of denial.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief / Building Official"
+          },
+          {
+            "client": "Receive the order of payment at Window B.",
+            "agency": "Prepares and releases the order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Assessor / Releasing Clerk"
+          },
+          {
+            "client": "Pay the fees and charges at Window A, the cashier.",
+            "agency": "Receives the payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit for issuance.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Recommends issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the demolition permit at Window C.",
+            "agency": "Releases the demolition permit.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no duration of transaction row for this service.",
+          "The charter transposes its own Classification and Type of Classification labels. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-excavation-ground-preparation-permit",
+        "number": 29,
+        "charterNumber": 25,
+        "charterGroup": "External Services",
+        "title": "Getting an excavation and ground preparation permit",
+        "description": "The Building Permit Division's permit to excavate and prepare the ground on a construction site, distinct from the Maintenance Division's permit to dig on a city road.",
+        "office": "City Engineer's Office, Building Permit Division",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of intent or request",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Duly accomplished and notarized application for an excavation and ground preparation permit, 4 copies",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Building plans, 5 sets, signed and sealed by the licensed architect or civil engineer and approved by the owner",
+            "whereToSecure": "Licensed architect or civil engineer"
+          },
+          {
+            "item": "Certification from a licensed geodetic engineer that the excavation and ground preparation works will be within the owner's property",
+            "whereToSecure": "Licensed geodetic engineer"
+          },
+          {
+            "item": "Proof of lot or property ownership",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Structural analysis and design, 5 sets, signed and sealed by the licensed civil or structural engineer",
+            "whereToSecure": "Licensed civil or structural engineer"
+          },
+          {
+            "item": "Construction logbook, 1 copy, signed and sealed by the licensed civil engineer or architect in charge of construction and signed by the owner",
+            "whereToSecure": "Licensed civil engineer or architect"
+          },
+          {
+            "item": "Certificate of zoning compliance or locational clearance",
+            "whereToSecure": "City Planning and Development Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application form and the documentary requirements at Window B.",
+            "agency": "Receives the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Document Verifier"
+          },
+          {
+            "client": null,
+            "agency": "If compliant, issues the claim stub. If not, issues the checklist of deficiencies.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Technical review and evaluation.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Trade Evaluators / Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "If non-compliant, issues the notice of deficiencies or the notice of denial.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief / Building Official"
+          },
+          {
+            "client": "Receive the order of payment at Window B.",
+            "agency": "Prepares and releases the order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Assessor / Releasing Clerk"
+          },
+          {
+            "client": "Pay the fees and charges at Window A, the cashier.",
+            "agency": "Receives the payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit for issuance.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Recommends issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the excavation and ground preparation permit at Window C.",
+            "agency": "Releases the excavation and ground preparation permit.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no duration of transaction row for this service.",
+          "The charter transposes its own Classification and Type of Classification labels. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "ceo-sidewalk-scaffolding-permit",
+        "number": 30,
+        "charterNumber": 26,
+        "charterGroup": "External Services",
+        "title": "Getting a temporary sidewalk enclosure or scaffolding permit",
+        "description": "The permit to enclose or occupy a sidewalk temporarily during construction, and to put up scaffolding.",
+        "office": "City Engineer's Office, Building Permit Division",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of intent or request",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Duly accomplished and notarized application for a temporary sidewalk enclosure permit or a scaffolding permit, 4 copies",
+            "whereToSecure": "Building Permit Division, City Engineer's Office"
+          },
+          {
+            "item": "Building plans, 5 sets, signed and sealed by the licensed architect or civil engineer and approved by the owner",
+            "whereToSecure": "Licensed architect or civil engineer"
+          },
+          {
+            "item": "If along a national road, certification from the Department of Public Works and Highways",
+            "whereToSecure": "Department of Public Works and Highways"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application form and the documentary requirements at Window B.",
+            "agency": "Receives the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the application form and the documentary requirements.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Document Verifier"
+          },
+          {
+            "client": null,
+            "agency": "If compliant, issues the claim stub. If not, issues the checklist of deficiencies.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Receiving Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Technical review and evaluation.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Trade Evaluators / Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "If non-compliant, issues the notice of deficiencies or the notice of denial.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief / Building Official"
+          },
+          {
+            "client": "Receive the order of payment at Window B.",
+            "agency": "Prepares and releases the order of payment.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Assessor / Releasing Clerk"
+          },
+          {
+            "client": "Pay the fees and charges at Window A, the cashier.",
+            "agency": "Receives the payment.",
+            "feeText": "Based on the order of payment",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the permit for issuance.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Clerk"
+          },
+          {
+            "client": null,
+            "agency": "Recommends issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Permit Division Chief"
+          },
+          {
+            "client": null,
+            "agency": "Approves issuance of the permit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Building Official"
+          },
+          {
+            "client": "Receive the temporary sidewalk enclosure permit or scaffolding permit at Window C.",
+            "agency": "Releases the temporary sidewalk enclosure permit or scaffolding permit.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Clerk"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": null
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no duration of transaction row for this service.",
+          "The charter transposes its own Classification and Type of Classification labels. Recorded the right way round."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-cone-striped",
+    "categories": [
+      {
+        "id": "construction-permits",
+        "title": "Construction permits",
+        "icon": "bi-building-gear",
+        "services": [
+          "ceo-building-permit",
+          "ceo-certificate-occupancy",
+          "ceo-electrical-permit",
+          "ceo-mechanical-permit",
+          "ceo-mechanical-permit-to-operate",
+          "ceo-demolition-permit",
+          "ceo-excavation-ground-preparation-permit",
+          "ceo-sidewalk-scaffolding-permit"
+        ]
+      },
+      {
+        "id": "road-and-street-permits",
+        "title": "Road and street permits",
+        "icon": "bi-signpost-2",
+        "services": [
+          "ceo-truck-ban-permit",
+          "ceo-road-use-permit",
+          "ceo-banner-permit",
+          "ceo-excavation-permit-maintenance"
+        ]
+      },
+      {
+        "id": "certificates-and-inspection",
+        "title": "Certificates and inspection",
+        "icon": "bi-clipboard-check",
+        "services": [
+          "ceo-annual-inspection-simple",
+          "ceo-annual-inspection-complex",
+          "ceo-burial-accommodation"
+        ]
+      },
+      {
+        "id": "repairs-and-reports",
+        "title": "Repairs and public facilities",
+        "icon": "bi-tools",
+        "services": [
+          "ceo-streetlight-repair",
+          "ceo-road-drainage-maintenance",
+          "ceo-vehicle-repair"
+        ]
+      },
+      {
+        "id": "research-and-training",
+        "title": "Research and student placements",
+        "icon": "bi-mortarboard",
+        "services": ["ceo-assistance-researchers", "ceo-assistance-students-ojt"]
+      },
+      {
+        "id": "project-preparation",
+        "title": "City and barangay project preparation",
+        "icon": "bi-rulers",
+        "services": [
+          "ceo-pow-one-storey",
+          "ceo-pow-two-storey",
+          "ceo-pow-three-storey",
+          "ceo-pow-roads",
+          "ceo-pow-drainage",
+          "ceo-pow-water-system",
+          "ceo-pow-bridges",
+          "ceo-pow-barangay",
+          "ceo-barangay-final-inspection",
+          "ceo-construction-plans"
+        ]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "types-of-permits",
+        "title": "Types of permits available",
+        "presentation": "grid",
+        "icon": "bi-grid-3x3-gap",
+        "services": [
+          "ceo-building-permit",
+          "ceo-certificate-occupancy",
+          "ceo-electrical-permit",
+          "ceo-mechanical-permit",
+          "ceo-mechanical-permit-to-operate",
+          "ceo-demolition-permit",
+          "ceo-excavation-ground-preparation-permit",
+          "ceo-sidewalk-scaffolding-permit",
+          "ceo-excavation-permit-maintenance"
+        ]
+      },
+      {
+        "id": "building-a-house",
+        "title": "You are building a house",
+        "presentation": "rail",
+        "icon": "bi-house-gear",
+        "services": ["ceo-building-permit", "ceo-electrical-permit", "ceo-certificate-occupancy"]
+      },
+      {
+        "id": "finished-building",
+        "title": "Your building is finished",
+        "presentation": "rail",
+        "icon": "bi-house-check",
+        "services": ["ceo-certificate-occupancy", "ceo-annual-inspection-simple"]
+      },
+      {
+        "id": "running-a-business",
+        "title": "You are opening or renewing a business",
+        "presentation": "rail",
+        "icon": "bi-shop",
+        "services": ["ceo-annual-inspection-simple", "ceo-annual-inspection-complex"]
+      },
+      {
+        "id": "holding-an-event",
+        "title": "You are holding an event or putting up a banner",
+        "presentation": "rail",
+        "icon": "bi-megaphone",
+        "services": ["ceo-road-use-permit", "ceo-banner-permit", "ceo-truck-ban-permit"]
+      },
+      {
+        "id": "something-is-broken",
+        "title": "Something in your barangay is broken",
+        "presentation": "rail",
+        "icon": "bi-tools",
+        "services": ["ceo-streetlight-repair", "ceo-road-drainage-maintenance"]
+      },
+      {
+        "id": "a-death-in-the-family",
+        "title": "A death in the family",
+        "presentation": "rail",
+        "icon": "bi-flower2",
+        "services": ["ceo-burial-accommodation"]
+      }
+    ],
+    "searchAliases": {
+      "ceo-truck-ban-permit": ["truck ban", "truck permit", "gross weight", "delivery truck"],
+      "ceo-road-use-permit": [
+        "road closure",
+        "motorcade",
+        "parade",
+        "fun run",
+        "recorrida",
+        "event permit"
+      ],
+      "ceo-banner-permit": [
+        "banner",
+        "tarpaulin",
+        "streamer",
+        "tarpo",
+        "signage",
+        "hanging permit"
+      ],
+      "ceo-assistance-researchers": ["research", "data request", "thesis", "students", "records"],
+      "ceo-assistance-students-ojt": [
+        "ojt",
+        "practicum",
+        "immersion",
+        "on the job training",
+        "internship"
+      ],
+      "ceo-burial-accommodation": [
+        "burial",
+        "libing",
+        "cemetery",
+        "burial accommodation",
+        "sementeryo"
+      ],
+      "ceo-pow-one-storey": [
+        "program of works",
+        "pow",
+        "estimate",
+        "one storey",
+        "building project"
+      ],
+      "ceo-pow-two-storey": [
+        "program of works",
+        "pow",
+        "estimate",
+        "two storey",
+        "building project"
+      ],
+      "ceo-pow-three-storey": [
+        "program of works",
+        "pow",
+        "estimate",
+        "three storey",
+        "foundation survey"
+      ],
+      "ceo-pow-roads": ["program of works", "pow", "road project", "kalsada", "estimate"],
+      "ceo-pow-drainage": ["program of works", "pow", "drainage", "kanal", "estimate"],
+      "ceo-pow-water-system": ["program of works", "pow", "water system", "tubig", "estimate"],
+      "ceo-pow-bridges": ["program of works", "pow", "bridge", "tulay", "estimate"],
+      "ceo-pow-barangay": [
+        "barangay project",
+        "program of works",
+        "barangay resolution",
+        "augmentation"
+      ],
+      "ceo-barangay-final-inspection": [
+        "final inspection",
+        "completed project",
+        "certificate of completion",
+        "barangay project"
+      ],
+      "ceo-streetlight-repair": [
+        "streetlight",
+        "ilaw",
+        "poste",
+        "electrical repair",
+        "sirang ilaw"
+      ],
+      "ceo-vehicle-repair": ["motorpool", "vehicle repair", "heavy equipment", "service vehicle"],
+      "ceo-road-drainage-maintenance": [
+        "road repair",
+        "pothole",
+        "lubak",
+        "drainage",
+        "kanal",
+        "maintenance"
+      ],
+      "ceo-construction-plans": [
+        "construction plans",
+        "design",
+        "flagship project",
+        "architectural plans"
+      ],
+      "ceo-annual-inspection-simple": [
+        "annual inspection",
+        "business permit",
+        "certificate of annual inspection",
+        "small business"
+      ],
+      "ceo-annual-inspection-complex": [
+        "annual inspection",
+        "business permit",
+        "mall",
+        "hotel",
+        "warehouse",
+        "large business"
+      ],
+      "ceo-excavation-permit-maintenance": [
+        "excavation",
+        "road digging",
+        "hukay",
+        "restoration",
+        "road opening"
+      ],
+      "ceo-building-permit": [
+        "building permit",
+        "construction",
+        "pabahay",
+        "one stop shop",
+        "national building code",
+        "magpatayo"
+      ],
+      "ceo-certificate-occupancy": [
+        "occupancy permit",
+        "certificate of occupancy",
+        "tirahan",
+        "move in",
+        "completion"
+      ],
+      "ceo-electrical-permit": [
+        "electrical permit",
+        "wiring permit",
+        "cei",
+        "cfei",
+        "kuryente",
+        "electrical inspection"
+      ],
+      "ceo-mechanical-permit": [
+        "mechanical permit",
+        "elevator",
+        "escalator",
+        "aircon",
+        "boiler",
+        "sprinkler"
+      ],
+      "ceo-mechanical-permit-to-operate": [
+        "permit to operate",
+        "mechanical",
+        "elevator test",
+        "boiler test"
+      ],
+      "ceo-demolition-permit": ["demolition", "giba", "demolish", "tear down"],
+      "ceo-excavation-ground-preparation-permit": [
+        "excavation permit",
+        "ground preparation",
+        "hukay",
+        "site preparation"
+      ],
+      "ceo-sidewalk-scaffolding-permit": [
+        "sidewalk",
+        "scaffolding",
+        "andamyo",
+        "temporary enclosure",
+        "occupancy of sidewalk"
+      ]
+    },
+    "contact": null
+  }
+}

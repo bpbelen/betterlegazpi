@@ -1040,6 +1040,59 @@
   margin-top: 6px;
 }
 
+/* --- Entry point shown as a grid ---------------------------------------- */
+
+/* A grid index answers "which one of these do I need?" rather than "I have this
+   errand", so every option is visible at once instead of sitting behind a
+   disclosure. CEO's nine construction permits are the case this exists for:
+   someone about to build has to pick from the set, and hiding the set is the one
+   thing that does not help them. */
+
+.hub-entry--grid {
+  border-top: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
+  margin-top: 6px;
+  padding-top: 14px;
+}
+
+.hub-entry--grid .hub-entry-title {
+  align-items: center;
+  display: flex;
+  font-weight: var(--fw-semibold, 600);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.hub-entry-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hub-entry-grid li {
+  display: flex;
+}
+
+.hub-entry-grid a {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
+  border-radius: var(--radius-sm);
+  display: block;
+  font-size: var(--fs-sm);
+  line-height: 1.35;
+  padding: 10px 12px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.hub-entry-grid a:hover,
+.hub-entry-grid a:focus-visible {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
 /* --- Office personnel --------------------------------------------------- */
 
 .hub-unit {

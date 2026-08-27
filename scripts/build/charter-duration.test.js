@@ -81,6 +81,13 @@ test('reads quantities spelled as words, and the doubled legal form', () => {
   });
 });
 
+test('"half day" and "½ Day" are the same quantity', () => {
+  // CEO writes it as a word, OCENR as a glyph. If these disagreed, one charter's
+  // half day would count and the other's would not.
+  assert.deepEqual(comps('half day'), { days: 0.5, hours: 0, minutes: 0 });
+  assert.deepEqual(comps('½ Day'), comps('half day'));
+});
+
 test('a quantity written twice is counted once', () => {
   // "Two (2) hours" is one duration in two notations, not two hours plus two hours.
   assert.deepEqual(comps('Two (2) hours'), { days: 0, hours: 2, minutes: 0 });

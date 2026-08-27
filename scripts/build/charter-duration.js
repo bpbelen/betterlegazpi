@@ -27,6 +27,10 @@ const FRACTIONS = { '¼': 0.25, '½': 0.5, '¾': 0.75 };
 const FRACTION_RE = /(\d*)\s*([¼½¾])/g;
 
 const WORD_NUMBERS = {
+  // "half day" is the same quantity as "½ Day", which the fraction glyphs already
+  // read; the two spellings have to agree or one charter's half day counts and
+  // another's does not.
+  half: 0.5,
   one: 1,
   two: 2,
   three: 3,
@@ -40,7 +44,8 @@ const WORD_NUMBERS = {
   eleven: 11,
   twelve: 12,
 };
-const WORD_NUMBER_RE = /\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b/gi;
+const WORD_NUMBER_RE =
+  /\b(half|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b/gi;
 const WORD_THEN_DIGIT_RE =
   /\b(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\s*\((\d+(?:\.\d+)?)\)/gi;
 const PARENTHESISED_DIGIT_RE = /\((\d+(?:\.\d+)?)\)/g;

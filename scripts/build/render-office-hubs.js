@@ -400,6 +400,25 @@ function renderEntryPoints(office) {
   const items = entryPoints
     .map((ep) => {
       const services = (ep.services ?? []).map((id) => byId.get(id)).filter(Boolean);
+
+      // A grid index answers "which one of these do I need?" — CEO's nine construction
+      // permits — so it shows every option at once instead of hiding them behind a
+      // disclosure. A rail answers "I have this errand", where the list is a shortlist
+      // and collapsing it keeps the sidebar scannable.
+      if (ep.presentation === 'grid') {
+        return `          <li class="hub-entry hub-entry--grid">
+            <h4 class="hub-entry-title">
+              <i class="bi ${esc(ep.icon ?? 'bi-grid-3x3-gap')} hub-entry-icon" aria-hidden="true"></i>
+              ${esc(ep.title)}
+            </h4>
+            <ul class="hub-entry-grid">
+${services
+  .map((svc) => `              <li><a href="#${esc(svc.id)}">${esc(svc.title)}</a></li>`)
+  .join('\n')}
+            </ul>
+          </li>`;
+      }
+
       return `          <li class="hub-entry">
             <details class="hub-entry-shell">
               <summary class="hub-entry-summary">
