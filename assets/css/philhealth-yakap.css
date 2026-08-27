@@ -1086,72 +1086,6 @@
 }
 
 /* --------------------------------------------------------------------------
-   11. Spotlight Banner on health.html
-   -------------------------------------------------------------------------- */
-.yakap-spotlight-banner {
-  background: linear-gradient(135deg, #002b80 0%, var(--color-primary) 100%);
-  color: #ffffff;
-  border-radius: var(--radius-lg);
-  padding: 28px 32px;
-  margin: var(--spacing-lg) 0;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: var(--spacing-lg);
-  box-shadow: 0 8px 24px rgba(0, 50, 160, 0.2);
-}
-
-.yakap-spotlight-text h3 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 6px;
-}
-
-.yakap-spotlight-text p {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.5;
-  margin: 0;
-}
-
-.yakap-spotlight-badge {
-  display: inline-block;
-  background: rgba(6, 167, 125, 0.3);
-  border: 1px solid rgba(6, 167, 125, 0.6);
-  color: #a7f3d0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.yakap-spotlight-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--color-success);
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 14px 24px;
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all var(--duration-base) ease;
-  box-shadow: 0 4px 12px rgba(6, 167, 125, 0.35);
-}
-
-.yakap-spotlight-btn:hover {
-  background: #059669;
-  color: #ffffff;
-  text-decoration: none;
-  transform: translateY(-2px);
-}
-
-/* --------------------------------------------------------------------------
    12. Dark Mode Overrides ([data-theme='dark'])
    -------------------------------------------------------------------------- */
 [data-theme='dark'] .yakap-subnav-wrapper {
@@ -1296,81 +1230,96 @@
 }
 
 /* --------------------------------------------------------------------------
-   12. Spotlight Feature Card (Clean White Civic Palette & Compact Mobile Mode)
+   12. YAKAP Spotlight Panel on health.html
+
+   The one inverted block on the page. It reads as a spotlight because it is
+   the only solid-navy surface in a page of white cards on #f8fafc, not
+   because of a glow or a gradient.
+
+   The navy is the literal brand hex, not var(--color-primary-solid): despite
+   what that token's :root comment claims, [data-theme='dark'] redefines it to
+   #1d4ed8, which slid the panel to a different blue in dark mode. The panel
+   is its own inverted surface in both themes, so it holds one colour.
+
+   Same reason white is literal here and not var(--color-white): that token is
+   a surface, and dark mode sets it to #1e293b.
    -------------------------------------------------------------------------- */
 .yakap-spotlight-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-left: 5px solid var(--color-primary);
-  border-radius: var(--radius-md);
-  padding: 24px 28px;
-  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #0032a0;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: var(--spacing-lg);
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--spacing-xl);
   align-items: center;
+}
+
+/* Depth without a gradient wash: a single soft highlight anchored off the
+   top-right corner, and a hairline inner edge so the panel reads as a raised
+   surface rather than a flat rectangle of ink. */
+.yakap-spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    120% 140% at 88% 0%,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0) 62%
+  );
+  pointer-events: none;
+}
+
+.yakap-spotlight-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  pointer-events: none;
 }
 
 .yakap-spotlight-main {
   position: relative;
+  min-width: 0;
 }
 
 .yakap-spotlight-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  color: #065f46;
-  font-size: 0.775rem;
-  font-weight: 700;
-  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  padding: 5px 12px;
   border-radius: var(--radius-pill);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 8px;
+  letter-spacing: 0.6px;
+  margin-bottom: 14px;
 }
 
 .yakap-spotlight-title {
-  font-size: 1.35rem;
+  font-size: clamp(1.5rem, 2.2vw + 0.85rem, 2.1rem);
   font-weight: 800;
-  color: var(--color-primary);
-  margin-bottom: 6px;
-  line-height: 1.25;
+  color: #ffffff;
+  margin: 0 0 10px;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 
 .yakap-spotlight-desc {
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-  line-height: 1.55;
-  margin-bottom: 16px;
-}
-
-.yakap-spotlight-desc strong {
-  color: var(--color-text);
-  font-weight: 600;
-}
-
-/* Mobile-only compact pill strip */
-.yakap-spotlight-mobile-pills {
-  display: none;
-}
-
-.yakap-mini-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
-  font-size: 0.775rem;
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-.yakap-mini-pill i {
-  color: var(--color-primary);
+  font-size: var(--fs-md);
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-md);
+  max-width: 46ch;
 }
 
 .yakap-spotlight-ctas {
@@ -1379,117 +1328,142 @@
   gap: 10px;
 }
 
-.yakap-spotlight-btn-primary {
-  background: var(--color-primary-solid) !important;
-  color: #ffffff !important;
-  font-weight: 600 !important;
-  border: none !important;
-  padding: 8px 18px !important;
-  border-radius: var(--radius-sm) !important;
+/* Shared button shape. One radius step for both, per the page's radius scale. */
+.yakap-spotlight-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.9rem;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
   text-decoration: none;
-  transition: all var(--duration-base) ease;
+  white-space: nowrap;
+  transition:
+    background-color var(--duration-base) ease,
+    border-color var(--duration-base) ease,
+    transform var(--duration-fast) ease;
 }
 
-.yakap-spotlight-btn-primary:hover {
-  background: var(--color-primary-dark) !important;
-  color: #ffffff !important;
+/* White fill on navy: ~13:1 against the panel, the highest-contrast pairing
+   available here, so the primary action is unmistakable. */
+.yakap-spotlight-card .yakap-spotlight-ctas .yakap-spotlight-btn-primary {
+  background: #ffffff;
+  color: #0032a0;
+  border: 1px solid #ffffff;
+}
+
+.yakap-spotlight-card .yakap-spotlight-ctas .yakap-spotlight-btn-primary:hover,
+.yakap-spotlight-card .yakap-spotlight-ctas .yakap-spotlight-btn-primary:focus-visible {
+  background: #f1f5f9;
+  color: #002170;
   transform: translateY(-1px);
 }
 
-.yakap-spotlight-btn-secondary {
-  background: var(--color-bg) !important;
-  color: var(--color-text) !important;
-  border: 1px solid var(--color-border) !important;
-  padding: 8px 16px !important;
-  border-radius: var(--radius-sm) !important;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.9rem;
-  font-weight: 600 !important;
-  text-decoration: none;
-  transition: all var(--duration-base) ease;
+.yakap-spotlight-card .yakap-spotlight-ctas .yakap-spotlight-btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
-.yakap-spotlight-btn-secondary:hover {
-  background: var(--color-bg-alt) !important;
-  color: var(--color-primary) !important;
-  border-color: var(--color-primary-light) !important;
+.yakap-spotlight-card .yakap-spotlight-ctas .yakap-spotlight-btn-secondary:hover,
+.yakap-spotlight-card .yakap-spotlight-ctas .yakap-spotlight-btn-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.75);
+  transform: translateY(-1px);
 }
 
+.yakap-spotlight-btn:active {
+  transform: translateY(0);
+}
+
+.yakap-spotlight-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Figures. Number below label so the eye lands on the plain-language line
+   first and the number reads as its answer. */
 .yakap-spotlight-metrics {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+  margin: 0;
 }
 
 .yakap-spotlight-metric-pill {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border-light);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-md);
-  padding: 10px 12px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
-  transition:
-    transform var(--duration-base) ease,
-    border-color var(--duration-base) ease;
-}
-
-.yakap-spotlight-metric-pill:hover {
-  border-color: var(--color-border);
-  transform: translateY(-1px);
-}
-
-.yakap-spotlight-metric-num {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  display: block;
-  line-height: 1.1;
-  margin-bottom: 2px;
+  gap: 4px;
 }
 
 .yakap-spotlight-metric-label {
-  font-size: 0.775rem;
-  color: var(--color-text-light);
-  font-weight: 500;
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: var(--fw-medium);
   line-height: 1.3;
+  order: 1;
 }
 
-/* Dark theme specific adjustments */
-[data-theme='dark'] .yakap-spotlight-card {
-  background: #1e293b;
-  border-color: rgba(255, 255, 255, 0.1);
-  border-left-color: #3b82f6;
+.yakap-spotlight-metric-num {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+  order: 2;
 }
 
-[data-theme='dark'] .yakap-spotlight-badge {
-  background: rgba(16, 185, 129, 0.15);
-  border-color: rgba(16, 185, 129, 0.3);
-  color: #6ee7b7;
+@media (max-width: 992px) {
+  .yakap-spotlight-card {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-md) var(--spacing-md);
+    gap: var(--spacing-md);
+    border-radius: var(--radius-md);
+  }
+
+  .yakap-spotlight-desc {
+    max-width: none;
+  }
 }
 
-[data-theme='dark'] .yakap-spotlight-title {
-  color: #93c5fd;
+@media (max-width: 576px) {
+  .yakap-spotlight-card {
+    padding: 20px 18px;
+  }
+
+  .yakap-spotlight-ctas {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .yakap-spotlight-btn {
+    width: 100%;
+  }
+
+  .yakap-spotlight-metric-pill {
+    padding: 12px 14px;
+  }
+
+  .yakap-spotlight-metric-num {
+    font-size: 1.3rem;
+  }
 }
 
-[data-theme='dark'] .yakap-spotlight-metric-pill {
-  background: var(--color-bg-alt);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-[data-theme='dark'] .yakap-spotlight-metric-num {
-  color: #60a5fa;
-}
-
-[data-theme='dark'] .yakap-mini-pill {
-  background: var(--color-bg-alt);
-  border-color: rgba(255, 255, 255, 0.1);
-  color: var(--color-text-light);
+@media (prefers-reduced-motion: reduce) {
+  .yakap-spotlight-btn,
+  .yakap-spotlight-btn:hover,
+  .yakap-spotlight-btn:focus-visible {
+    transition: none;
+    transform: none;
+  }
 }
 
 [data-theme='dark'] .yakap-step-badge {
@@ -1508,12 +1482,6 @@
 @media (max-width: 992px) {
   .yakap-hero-metrics {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .yakap-spotlight-card {
-    grid-template-columns: 1fr;
-    padding: 20px 22px;
-    gap: var(--spacing-md);
   }
 
   /* Vertical Connected Journey Timeline on Tablet & Mobile */
@@ -1614,38 +1582,6 @@
 
   .yakap-metric-label {
     font-size: 0.75rem;
-  }
-
-  /* Highlight Section on Mobile (Super compact ~140px height) */
-  .yakap-spotlight-card {
-    padding: 16px 18px;
-    gap: 0;
-  }
-
-  .yakap-spotlight-metrics {
-    display: none; /* Replaced by compact horizontal pills */
-  }
-
-  .yakap-spotlight-mobile-pills {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-  }
-
-  .yakap-spotlight-ctas {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .yakap-spotlight-btn-primary,
-  .yakap-spotlight-btn-secondary {
-    width: 100%;
-    justify-content: center;
-    padding: 9px 14px !important;
-    font-size: 0.875rem;
   }
 
   /* 4-Pillar Tabs into clean 2x2 grid */
@@ -1796,5 +1732,336 @@
   .yakap-support-section,
   .yakap-faq-section {
     padding: 64px 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   14. "Where do you want to start?" action block
+
+   Replaces the old four-card metrics strip, which restated the hero paragraph
+   verbatim and gave the reader nothing to do. Asymmetric on purpose: the
+   registration path is the one action most readers need, so it gets the wide
+   cell rather than sitting in a row of three equal cards.
+   -------------------------------------------------------------------------- */
+.yakap-start-section {
+  padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.yakap-start-heading {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-md);
+}
+
+.yakap-start-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: var(--spacing-md);
+  align-items: stretch;
+}
+
+.yakap-start-lead {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.yakap-start-step {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--color-accent-badge-text);
+  background: rgba(194, 65, 12, 0.1);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  margin-bottom: 10px;
+}
+
+.yakap-start-lead h3 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.yakap-start-lead p {
+  font-size: var(--fs-base);
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-sm);
+  max-width: 52ch;
+}
+
+.yakap-start-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.yakap-start-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  transition:
+    background-color var(--duration-base) ease,
+    border-color var(--duration-base) ease,
+    transform var(--duration-fast) ease;
+}
+
+.yakap-start-grid .yakap-start-actions .yakap-start-btn-primary {
+  background: var(--color-primary-solid);
+  color: #ffffff;
+  border: 1px solid var(--color-primary-solid);
+}
+
+.yakap-start-grid .yakap-start-actions .yakap-start-btn-primary:hover,
+.yakap-start-grid .yakap-start-actions .yakap-start-btn-primary:focus-visible {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.yakap-start-grid .yakap-start-actions .yakap-start-btn-secondary {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.yakap-start-grid .yakap-start-actions .yakap-start-btn-secondary:hover,
+.yakap-start-grid .yakap-start-actions .yakap-start-btn-secondary:focus-visible {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.yakap-start-btn:active {
+  transform: translateY(0);
+}
+
+.yakap-start-side {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.yakap-start-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color var(--duration-base) ease,
+    box-shadow var(--duration-base) ease,
+    transform var(--duration-fast) ease;
+}
+
+.yakap-start-card:hover,
+.yakap-start-card:focus-visible {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.yakap-start-card-icon {
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.yakap-start-side .yakap-start-card h3 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.yakap-start-side .yakap-start-card p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  line-height: 1.55;
+  margin: 0 0 10px;
+}
+
+.yakap-start-card-link {
+  margin-top: auto;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.yakap-start-card-link i {
+  transition: transform var(--duration-fast) ease;
+}
+
+.yakap-start-card:hover .yakap-start-card-link i {
+  transform: translateX(2px);
+}
+
+[data-theme='dark'] .yakap-start-lead,
+[data-theme='dark'] .yakap-start-card {
+  background: var(--color-bg-alt);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .yakap-start-lead {
+  border-top-color: var(--color-primary);
+}
+
+@media (max-width: 992px) {
+  .yakap-start-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yakap-start-side {
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .yakap-start-section {
+    padding: var(--spacing-md) 0 var(--spacing-sm);
+  }
+
+  .yakap-start-lead p {
+    max-width: none;
+  }
+
+  .yakap-start-actions {
+    flex-direction: column;
+  }
+
+  .yakap-start-btn {
+    width: 100%;
+  }
+
+  .yakap-start-side {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   15. Facility address as a directions link
+   -------------------------------------------------------------------------- */
+.yakap-fac-map-link {
+  color: var(--color-text-light);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-border);
+}
+
+.yakap-fac-map-link:hover,
+.yakap-fac-map-link:focus-visible {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.yakap-fac-map-cue {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  background: rgba(0, 50, 160, 0.08);
+  border-radius: var(--radius-pill);
+  padding: 1px 8px;
+  margin-left: 4px;
+}
+
+[data-theme='dark'] .yakap-fac-map-cue {
+  /* Literal, not var(--color-white): that token is a surface colour and dark
+     mode sets it to #1e293b, which lands at 1.6:1 on this tint. */
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yakap-start-btn,
+  .yakap-start-card,
+  .yakap-start-card-link i {
+    transition: none;
+  }
+
+  .yakap-start-btn:hover,
+  .yakap-start-btn:focus-visible,
+  .yakap-start-card:hover,
+  .yakap-start-card:focus-visible,
+  .yakap-start-card:hover .yakap-start-card-link i {
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   16. Print
+
+   Residents print or screenshot this page to carry to the clinic, and mobile
+   data in Legazpi is not free. Printing gives them the five steps, the clinic
+   list and the phone numbers on paper: chrome, controls and the medicine
+   search are dropped, and every accordion is forced open so nothing that was
+   collapsed on screen goes missing on the printed page.
+   -------------------------------------------------------------------------- */
+@media print {
+  .yakap-subnav-wrapper,
+  .yakap-start-section,
+  .yakap-catalog-controls,
+  .yakap-filter-pills-row,
+  .yakap-tabs-nav,
+  .yakap-cat-chevron,
+  .yakap-fac-map-cue,
+  .yakap-issuances-section {
+    display: none !important;
+  }
+
+  /* Anything the reader left collapsed on screen still prints. */
+  .yakap-cat-body,
+  .yakap-faq-answer,
+  .yakap-tab-pane {
+    display: block !important;
+    max-height: none !important;
+    height: auto !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+
+  .yakap-step-card,
+  .yakap-fac-card,
+  .yakap-support-card,
+  .yakap-faq-item,
+  .yakap-item-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  .yakap-facilities-grid,
+  .yakap-steps-timeline,
+  .yakap-items-grid,
+  .yakap-support-grid {
+    display: block !important;
   }
 }

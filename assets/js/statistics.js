@@ -7,10 +7,11 @@
 const COLORS = {
   primary: '#0032a0',
   primaryDark: '#002170',
-  secondary: '#003D82',
-  accent: '#F77F00',
-  success: '#06A77D',
-  info: '#0077BE',
+  secondary: '#003d82',
+  accent: '#c2410c',
+  success: '#067a5e',
+  danger: '#d62828',
+  info: '#0077be',
 };
 
 // Cohesive 10-shade monochromatic blue-teal gradient palette for Doughnut chart
@@ -1017,14 +1018,39 @@ function animateBars(container) {
 }
 
 /**
+ * Dark Mode & Theme Color Helpers
+ */
+function isDarkMode() {
+  return typeof document !== 'undefined' && document.documentElement.getAttribute('data-theme') === 'dark';
+}
+
+function getChartThemeColors() {
+  const dark = isDarkMode();
+  return {
+    isDark: dark,
+    textColor: dark ? '#e2e8f0' : '#334155',
+    textMuted: dark ? '#94a3b8' : '#64748b',
+    gridColor: dark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.05)',
+    tooltipBg: dark ? 'rgba(15, 23, 42, 0.96)' : 'rgba(0, 50, 160, 0.95)',
+    doughnutBorder: dark ? '#1e293b' : '#ffffff',
+    otherBarColor: dark ? '#475569' : '#cbd5e1',
+    otherBorderColor: dark ? '#64748b' : '#94a3b8',
+    otherHoverColor: dark ? '#64748b' : '#64748b',
+    avgLineColor: dark ? '#f59e0b' : '#f59e0b',
+    avgTextColor: dark ? '#fbbf24' : '#b45309',
+  };
+}
+
+/**
  * Create Historical Line Chart
  */
 function createHistoricalChart() {
   const ctx = document.getElementById('historicalLineChart');
   if (!ctx) return;
 
+  const theme = getChartThemeColors();
   const gradient = ctx.getContext('2d').createLinearGradient(0, 0, 0, 400);
-  gradient.addColorStop(0, 'rgba(0, 50, 160, 0.2)');
+  gradient.addColorStop(0, 'rgba(0, 50, 160, 0.25)');
   gradient.addColorStop(1, 'rgba(0, 50, 160, 0)');
 
   const points = historicalData.years.map((year, index) => ({
@@ -1044,7 +1070,7 @@ function createHistoricalChart() {
           fill: true,
           tension: 0.3,
           pointBackgroundColor: COLORS.primary,
-          pointBorderColor: '#fff',
+          pointBorderColor: theme.doughnutBorder,
           pointBorderWidth: 3,
           pointRadius: 6,
           pointHoverRadius: 8,
@@ -1056,7 +1082,7 @@ function createHistoricalChart() {
       responsive: true,
       maintainAspectRatio: false,
       animation: {
-        duration: 2000,
+        duration: 1500,
         easing: 'easeOutQuart',
       },
       interaction: {
@@ -1066,7 +1092,7 @@ function createHistoricalChart() {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: 'rgba(0, 50, 160, 0.95)',
+          backgroundColor: theme.tooltipBg,
           titleFont: { size: 14, weight: '600' },
           bodyFont: { size: 13 },
           padding: 12,
@@ -1087,16 +1113,18 @@ function createHistoricalChart() {
           ticks: {
             stepSize: 5,
             font: { size: 12 },
+            color: theme.textMuted,
             callback: (v) => v.toString(),
           },
         },
         y: {
           min: 120000,
           max: 220000,
-          grid: { color: 'rgba(0,0,0,0.05)' },
+          grid: { color: theme.gridColor },
           ticks: {
             stepSize: 20000,
             font: { size: 12 },
+            color: theme.textMuted,
             callback: (v) => v / 1000 + 'K',
           },
         },
@@ -1112,6 +1140,7 @@ function createDistributionChart() {
   const ctx = document.getElementById('distributionPieChart');
   if (!ctx) return;
 
+  const theme = getChartThemeColors();
   const top10 = barangayData.slice(0, 10);
   const totalCityPop = 210616;
 
@@ -1123,7 +1152,7 @@ function createDistributionChart() {
         {
           data: top10.map((d) => d.pop || d.population),
           backgroundColor: DOUGHNUT_COLORS,
-          borderColor: '#fff',
+          borderColor: theme.doughnutBorder,
           borderWidth: 2,
           hoverBorderWidth: 3,
           hoverOffset: 8,
@@ -1147,12 +1176,13 @@ function createDistributionChart() {
             boxWidth: 12,
             padding: 10,
             font: { size: 11, family: "'Outfit', 'Inter', sans-serif" },
+            color: theme.textColor,
             usePointStyle: true,
             pointStyle: 'circle',
           },
         },
         tooltip: {
-          backgroundColor: 'rgba(0, 43, 122, 0.96)',
+          backgroundColor: theme.tooltipBg,
           titleFont: { size: 13, weight: '600' },
           bodyFont: { size: 12 },
           padding: 12,
@@ -1184,6 +1214,8 @@ function createPovertyChart() {
     console.warn('Chart.js is not loaded yet');
     return;
   }
+
+  const theme = getChartThemeColors();
 
   // Destroy previous instance if exists
   if (charts.povertyAlbay) {
@@ -1228,10 +1260,10 @@ function createPovertyChart() {
   // Sorted items from lowest to highest poverty incidence
   const displayItems = items.slice().sort((a, b) => a.rate - b.rate);
 
-  // Generate colors
-  const backgroundColors = displayItems.map((d) => (d.isLegazpi ? '#0032a0' : '#cbd5e1'));
-  const borderColors = displayItems.map((d) => (d.isLegazpi ? '#002170' : '#94a3b8'));
-  const hoverColors = displayItems.map((d) => (d.isLegazpi ? '#002170' : '#64748b'));
+  // Generate colors based on active theme
+  const backgroundColors = displayItems.map((d) => (d.isLegazpi ? '#0032a0' : theme.otherBarColor));
+  const borderColors = displayItems.map((d) => (d.isLegazpi ? '#002170' : theme.otherBorderColor));
+  const hoverColors = displayItems.map((d) => (d.isLegazpi ? '#002170' : theme.otherHoverColor));
   const labels = displayItems.map((d) => (d.isLegazpi ? `⭐ ${d.name}` : d.name));
   const rates = displayItems.map((d) => d.rate);
 
@@ -1256,14 +1288,14 @@ function createPovertyChart() {
       chartCtx.save();
       chartCtx.beginPath();
       chartCtx.setLineDash([4, 4]);
-      chartCtx.strokeStyle = '#f59e0b';
+      chartCtx.strokeStyle = theme.avgLineColor;
       chartCtx.lineWidth = 2;
       chartCtx.moveTo(xPos, top);
       chartCtx.lineTo(xPos, bottom);
       chartCtx.stroke();
 
       // Label at top
-      chartCtx.fillStyle = '#b45309';
+      chartCtx.fillStyle = theme.avgTextColor;
       chartCtx.font = 'bold 11px Outfit, Inter, sans-serif';
       chartCtx.textAlign = 'center';
       chartCtx.fillText(`Albay Avg: ${albayAvg}%`, xPos, Math.max(10, top - 6));
@@ -1304,7 +1336,7 @@ function createPovertyChart() {
         plugins: {
           legend: { display: false },
           tooltip: {
-            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+            backgroundColor: theme.tooltipBg,
             titleFont: { size: 13, weight: 'bold', family: "'Outfit', 'Inter', sans-serif" },
             bodyFont: { size: 12, family: "'Outfit', 'Inter', sans-serif" },
             padding: 12,
@@ -1342,24 +1374,25 @@ function createPovertyChart() {
           x: {
             min: 0,
             max: 48,
-            grid: { color: 'rgba(0, 0, 0, 0.05)' },
+            grid: { color: theme.gridColor },
             ticks: {
               stepSize: 5,
               font: { size: 11, family: "'Outfit', 'Inter', sans-serif" },
+              color: theme.textMuted,
               callback: (v) => v + '%',
             },
             title: {
               display: true,
               text: 'Poverty Incidence (%)',
               font: { size: 11, weight: 'bold' },
-              color: '#64748b',
+              color: theme.textMuted,
             },
           },
           y: {
             grid: { display: false },
             ticks: {
               font: { size: 11, family: "'Outfit', 'Inter', sans-serif" },
-              color: '#334155',
+              color: theme.textColor,
             },
           },
         },
@@ -1385,15 +1418,6 @@ function initPovertyControls() {
       createPovertyChart();
     });
   });
-}
-
-/**
- * Initialize all Core Charts
- */
-function initCharts() {
-  createHistoricalChart();
-  createDistributionChart();
-  createPovertyChart();
 }
 
 /**
@@ -1530,7 +1554,7 @@ function escapeHtml(str) {
 }
 
 /**
- * Initialize all charts with lazy loading (bar chart removed)
+ * Initialize all core charts with lazy intersection observer
  */
 function initCharts() {
   const chartObserver = new IntersectionObserver(
@@ -1543,6 +1567,8 @@ function initCharts() {
             createHistoricalChart();
           } else if (chartId === 'distributionPieChart' && !charts.distribution) {
             createDistributionChart();
+          } else if (chartId === 'povertyAlbayChart' && !charts.povertyAlbay) {
+            createPovertyChart();
           }
 
           chartObserver.unobserve(entry.target);
@@ -1558,27 +1584,84 @@ function initCharts() {
 }
 
 /**
- * Initialize economy section counters
+ * Dynamically synchronize all Chart.js instances with current Dark/Light theme
  */
-function initEconomyCounters() {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const countEl = entry.target.querySelector('[data-count]');
-          if (countEl) {
-            const target = parseInt(countEl.dataset.count);
-            animateCount(countEl, target, 1500);
-          }
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
+function updateAllChartsTheme() {
+  const theme = getChartThemeColors();
 
-  document.querySelectorAll('.economy-card').forEach((card) => {
-    observer.observe(card);
+  // 1. Historical Line Chart
+  if (charts.historical && charts.historical.options) {
+    if (charts.historical.options.scales) {
+      if (charts.historical.options.scales.x && charts.historical.options.scales.x.ticks) {
+        charts.historical.options.scales.x.ticks.color = theme.textMuted;
+      }
+      if (charts.historical.options.scales.y) {
+        if (charts.historical.options.scales.y.ticks) {
+          charts.historical.options.scales.y.ticks.color = theme.textMuted;
+        }
+        if (charts.historical.options.scales.y.grid) {
+          charts.historical.options.scales.y.grid.color = theme.gridColor;
+        }
+      }
+    }
+    if (charts.historical.options.plugins && charts.historical.options.plugins.tooltip) {
+      charts.historical.options.plugins.tooltip.backgroundColor = theme.tooltipBg;
+    }
+    if (charts.historical.data.datasets[0]) {
+      charts.historical.data.datasets[0].pointBorderColor = theme.doughnutBorder;
+    }
+    charts.historical.update('none');
+  }
+
+  // 2. Population Distribution Doughnut Chart
+  if (charts.distribution && charts.distribution.options) {
+    if (charts.distribution.options.plugins && charts.distribution.options.plugins.legend) {
+      charts.distribution.options.plugins.legend.labels.color = theme.textColor;
+    }
+    if (charts.distribution.options.plugins && charts.distribution.options.plugins.tooltip) {
+      charts.distribution.options.plugins.tooltip.backgroundColor = theme.tooltipBg;
+    }
+    if (charts.distribution.data.datasets[0]) {
+      charts.distribution.data.datasets[0].borderColor = theme.doughnutBorder;
+    }
+    charts.distribution.update('none');
+  }
+
+  // 3. Poverty Comparison Chart (re-render to update plugin & dataset colors cleanly)
+  if (charts.povertyAlbay) {
+    createPovertyChart();
+  }
+
+  // 4. CMCI Overview & Pillar Charts
+  const cmciChartKeys = [
+    'cmciOverview',
+    'cmciEconomicChart',
+    'cmciGovernmentChart',
+    'cmciInfraChart',
+    'cmciResiliencyChart',
+    'cmciInnovationChart',
+  ];
+  cmciChartKeys.forEach((key) => {
+    const chart = charts[key];
+    if (chart && chart.options) {
+      if (chart.options.scales) {
+        if (chart.options.scales.x && chart.options.scales.x.ticks) {
+          chart.options.scales.x.ticks.color = theme.textMuted;
+        }
+        if (chart.options.scales.y) {
+          if (chart.options.scales.y.ticks) {
+            chart.options.scales.y.ticks.color = theme.textMuted;
+          }
+          if (chart.options.scales.y.grid) {
+            chart.options.scales.y.grid.color = theme.gridColor;
+          }
+        }
+      }
+      if (chart.options.plugins && chart.options.plugins.tooltip) {
+        chart.options.plugins.tooltip.backgroundColor = theme.tooltipBg;
+      }
+      chart.update('none');
+    }
   });
 }
 
@@ -1927,6 +2010,7 @@ function createCMCIOverviewChart() {
   const ctx = document.getElementById('cmciOverviewChart');
   if (!ctx || charts.cmciOverview) return;
 
+  const theme = getChartThemeColors();
   const labels = cmciData.keyIndicators.labels;
 
   charts.cmciOverview = new Chart(ctx, {
@@ -1956,7 +2040,7 @@ function createCMCIOverviewChart() {
           display: false,
         },
         tooltip: {
-          backgroundColor: 'rgba(0, 50, 160, 0.95)',
+          backgroundColor: theme.tooltipBg,
           padding: 12,
           cornerRadius: 8,
           callbacks: {
@@ -1968,11 +2052,11 @@ function createCMCIOverviewChart() {
         },
       },
       scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+        x: { grid: { display: false }, ticks: { font: { size: 11 }, color: theme.textMuted } },
         y: {
           beginAtZero: true,
-          grid: { color: 'rgba(0,0,0,0.05)' },
-          ticks: { font: { size: 11 } },
+          grid: { color: theme.gridColor },
+          ticks: { font: { size: 11 }, color: theme.textMuted },
         },
       },
     },
@@ -1989,6 +2073,7 @@ function createCMCIPillarChart(pillarKey, canvasId) {
   const ctx = document.getElementById(canvasId);
   if (!ctx || charts[canvasId]) return;
 
+  const theme = getChartThemeColors();
   const pillarData = cmciData.pillars[pillarKey];
   if (!pillarData) return;
 
@@ -2019,7 +2104,7 @@ function createCMCIPillarChart(pillarKey, canvasId) {
           display: false,
         },
         tooltip: {
-          backgroundColor: 'rgba(0, 50, 160, 0.95)',
+          backgroundColor: theme.tooltipBg,
           padding: 10,
           cornerRadius: 6,
           callbacks: {
@@ -2031,11 +2116,11 @@ function createCMCIPillarChart(pillarKey, canvasId) {
         },
       },
       scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+        x: { grid: { display: false }, ticks: { font: { size: 10 }, color: theme.textMuted } },
         y: {
           beginAtZero: true,
-          grid: { color: 'rgba(0,0,0,0.05)' },
-          ticks: { font: { size: 10 } },
+          grid: { color: theme.gridColor },
+          ticks: { font: { size: 10 }, color: theme.textMuted },
         },
       },
     },
@@ -2294,9 +2379,13 @@ function initAllStatistics() {
   initPovertyControls();
   loadBarangayData();
   initBarangaySearch();
-  initEconomyCounters();
   initCMCISection();
   loadFiscalData();
+
+  // Listen to universal theme changes dispatched from main.js
+  if (typeof document !== 'undefined') {
+    document.addEventListener('themechange', updateAllChartsTheme);
+  }
 }
 
 // Initialize on DOM ready or immediately if already loaded

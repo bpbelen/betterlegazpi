@@ -94,7 +94,12 @@
     <!-- Theme Initialization Script -->
     <script>
       (function () {
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+          /* storage blocked (private browsing): fall back to the system preference */
+        }
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -103,7 +108,7 @@
     </script>
   </head>
 
-  <body>
+  <body class="page-history">
     <!-- Top Reading Progress Indicator -->
     <div
       id="history-progress-bar"
@@ -245,19 +250,32 @@
 
       <!-- Page Header -->
       <section class="page-header">
+        <img
+          class="page-header-photo"
+          src="../assets/images/banners/legazpi-sunrise-kapuntukan-c1910.jpg"
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+          decoding="async"
+        />
         <div class="container">
           <div class="page-header-content">
-            <span class="page-header-badge">
-              <i class="bi bi-compass" aria-hidden="true"></i>
-              <span>Heritage &amp; Chronology of Legazpi</span>
-            </span>
             <h1>History of Legazpi City</h1>
             <p class="page-header-desc">
-              "Renowned worldwide, the City of Legazpi embraces the transition from once a humble
-              city to the ever-developing largest city in Bicol Region." -
-              <strong>City of Fun and Adventure</strong>
+              Four thousand years on Albay Gulf, from the fishing village of Sawangan to the
+              regional capital of Bicol.
             </p>
           </div>
+          <p class="page-header-credit">
+            Sunrise in Legazpi, with Kapuntukan (Sleeping Lion Hill) in the background, early 20th
+            century.
+            <a
+              href="https://www.facebook.com/share/1EeDqFCKqi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Legazpi City</a
+            >
+          </p>
         </div>
       </section>
 
@@ -368,6 +386,9 @@
               <table class="facts-table">
                 <tbody>
                   <tr>
+                    <th colspan="2" class="facts-cluster-label" scope="colgroup">Identity</th>
+                  </tr>
+                  <tr>
                     <th><i class="bi bi-geo-alt-fill"></i> Original Name</th>
                     <td>
                       <strong>Sawangan</strong> (now Legazpi Port), a fishing and farming village
@@ -381,6 +402,11 @@
                     <th><i class="bi bi-person-badge-fill"></i> Founding Leadership</th>
                     <td>Don Lorenzo Hao (1st Gobernadorcillo) &amp; Rev. Camilo Abainza</td>
                   </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <th colspan="2" class="facts-cluster-label" scope="colgroup">Charter</th>
+                  </tr>
                   <tr>
                     <th><i class="bi bi-buildings-fill"></i> First Cityhood</th>
                     <td>1892 under the Becerra Law (Ayuntamiento de Legazpi)</td>
@@ -391,6 +417,13 @@
                       <strong>Republic Act No. 2234</strong> (June 12, 1959), amended by RA 5525
                     </td>
                   </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <th colspan="2" class="facts-cluster-label" scope="colgroup">
+                      Land &amp; People
+                    </th>
+                  </tr>
                   <tr>
                     <th><i class="bi bi-people-fill"></i> Population &amp; Area</th>
                     <td>209,533-210,616 residents · ~15,600-20,400 hectares (1st Class City)</td>
@@ -400,7 +433,7 @@
                     <td>Simple: 99% · Functional: 77% · Bikol, Filipino, English, Chinese</td>
                   </tr>
                   <tr>
-                    <th><i class="bi bi-gem-fill"></i> Natural Resources</th>
+                    <th><i class="bi bi-gem"></i> Natural Resources</th>
                     <td>Pyrite, perlite, manganese, clay, coal reserves, fertile volcanic soil</td>
                   </tr>
                 </tbody>
@@ -499,162 +532,186 @@
       <section class="history-timeline-section">
         <div class="container">
           <div class="section-headline" style="margin-bottom: 24px">
-            <h2>Chronological Milestones</h2>
+            <h2>Historical Turning Points</h2>
             <p>
-              Pivotal moments that forged Legazpi across four millennia. Click any milestone to jump
-              directly into the full narrative.
+              Thirteen moments that redirected the city, from a prehistoric shell scoop to today's
+              push for cityhood. Each one opens the matching chapter of the full archive.
             </p>
           </div>
 
-          <div class="timeline-track-wrapper">
-            <div class="timeline-track">
-              <!-- Node 1: 2000 BCE -->
-              <a href="#ch-pre-hispanic" class="timeline-node" data-target="ch-pre-hispanic">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-hourglass-split"></i> c. 2000 BCE</span>
-                <h4 class="timeline-node-title">Mataas Shell Scoop</h4>
-                <p class="timeline-node-desc">
-                  Earliest archaeological artifact in Albay Gulf; ancient seafaring networks.
-                </p>
-              </a>
+          <div class="timeline-rail" data-overflow-start="false" data-overflow-end="false">
+            <button
+              type="button"
+              class="timeline-nav timeline-nav-prev"
+              data-timeline-scroll="-1"
+              aria-label="Show earlier milestones"
+            >
+              <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            </button>
 
-              <!-- Node 2: 1587 -->
-              <a href="#ch-spanish-era" class="timeline-node" data-target="ch-spanish-era">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-bank"></i> 1587</span>
-                <h4 class="timeline-node-title">Mission of Sawangan</h4>
-                <p class="timeline-node-desc">
-                  Franciscans establish the first chapel dedicated to St. Gregory the Great.
-                </p>
-              </a>
+            <div class="timeline-track-wrapper">
+              <div class="timeline-track">
+                <!-- Node 1: 2000 BCE -->
+                <a href="#ch-pre-hispanic" class="timeline-node" data-target="ch-pre-hispanic">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"
+                    ><i class="bi bi-hourglass-split"></i> c. 2000 BCE</span
+                  >
+                  <h4 class="timeline-node-title">Mataas Shell Scoop</h4>
+                  <p class="timeline-node-desc">
+                    Earliest archaeological artifact in Albay Gulf; ancient seafaring networks.
+                  </p>
+                </a>
 
-              <!-- Node 3: 1616 -->
-              <a href="#ch-spanish-era" class="timeline-node" data-target="ch-spanish-era">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-flag"></i> 1616</span>
-                <h4 class="timeline-node-title">Pueblo de Albay</h4>
-                <p class="timeline-node-desc">
-                  Elevated to capital of the sprawling Partido de Ibalón colonial province.
-                </p>
-              </a>
+                <!-- Node 2: 1587 -->
+                <a href="#ch-spanish-era" class="timeline-node" data-target="ch-spanish-era">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-bank"></i> 1587</span>
+                  <h4 class="timeline-node-title">Mission of Sawangan</h4>
+                  <p class="timeline-node-desc">
+                    Franciscans establish the first chapel dedicated to St. Gregory the Great.
+                  </p>
+                </a>
 
-              <!-- Node 4: 1814 -->
-              <a href="#ch-1814-eruption" class="timeline-node" data-target="ch-1814-eruption">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-fire"></i> Feb 1, 1814</span>
-                <h4 class="timeline-node-title">Cataclysmic Mayon Eruption</h4>
-                <p class="timeline-node-desc">
-                  1,200 casualties; survivors rebuild Albay Nuevo inland and Binanuahan on the
-                  coast.
-                </p>
-              </a>
+                <!-- Node 3: 1616 -->
+                <a href="#ch-spanish-era" class="timeline-node" data-target="ch-spanish-era">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-flag"></i> 1616</span>
+                  <h4 class="timeline-node-title">Pueblo de Albay</h4>
+                  <p class="timeline-node-desc">
+                    Elevated to capital of the sprawling Partido de Ibalón colonial province.
+                  </p>
+                </a>
 
-              <!-- Node 5: 1856 -->
-              <a href="#ch-1856-founding" class="timeline-node" data-target="ch-1856-founding">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-feather"></i> Sept 22, 1856</span>
-                <h4 class="timeline-node-title">Named "Legazpi"</h4>
-                <p class="timeline-node-desc">
-                  Royal Decree officially christens the town; Don Lorenzo Hao becomes 1st
-                  Gobernadorcillo.
-                </p>
-              </a>
+                <!-- Node 4: 1814 -->
+                <a href="#ch-1814-eruption" class="timeline-node" data-target="ch-1814-eruption">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-fire"></i> Feb 1, 1814</span>
+                  <h4 class="timeline-node-title">Cataclysmic Mayon Eruption</h4>
+                  <p class="timeline-node-desc">
+                    1,200 casualties; survivors rebuild Albay Nuevo inland and Binanuahan on the
+                    coast.
+                  </p>
+                </a>
 
-              <!-- Node 6: 1892 -->
-              <a href="#ch-first-cityhood" class="timeline-node" data-target="ch-first-cityhood">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-award"></i> 1892</span>
-                <h4 class="timeline-node-title">Becerra Law Cityhood</h4>
-                <p class="timeline-node-desc">
-                  First city status uniting Legazpi Port, Albay, and Daraga into one Ayuntamiento.
-                </p>
-              </a>
+                <!-- Node 5: 1856 -->
+                <a href="#ch-1856-founding" class="timeline-node" data-target="ch-1856-founding">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-feather"></i> Sept 22, 1856</span>
+                  <h4 class="timeline-node-title">Named "Legazpi"</h4>
+                  <p class="timeline-node-desc">
+                    Royal Decree officially christens the town; Don Lorenzo Hao becomes 1st
+                    Gobernadorcillo.
+                  </p>
+                </a>
 
-              <!-- Node 7: 1900 -->
-              <a href="#ch-american-era" class="timeline-node" data-target="ch-american-era">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-shield-shaded"></i> Jan 23, 1900</span>
-                <h4 class="timeline-node-title">Battle of Legazpi</h4>
-                <p class="timeline-node-desc">
-                  Fierce Philippine-American War action at San Rafael Bridge led by Gen. Paua.
-                </p>
-              </a>
+                <!-- Node 6: 1892 -->
+                <a href="#ch-first-cityhood" class="timeline-node" data-target="ch-first-cityhood">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-award"></i> 1892</span>
+                  <h4 class="timeline-node-title">Becerra Law Cityhood</h4>
+                  <p class="timeline-node-desc">
+                    First city status uniting Legazpi Port, Albay, and Daraga into one Ayuntamiento.
+                  </p>
+                </a>
 
-              <!-- Node 8: 1945 -->
-              <a href="#ch-wwii" class="timeline-node" data-target="ch-wwii">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-peace"></i> Apr 1945</span>
-                <h4 class="timeline-node-title">Allied Liberation</h4>
-                <p class="timeline-node-desc">
-                  U.S. 158th RCT and Bicolano guerrillas liberate the ruined port district.
-                </p>
-              </a>
+                <!-- Node 7: 1900 -->
+                <a href="#ch-american-era" class="timeline-node" data-target="ch-american-era">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"
+                    ><i class="bi bi-shield-shaded"></i> Jan 23, 1900</span
+                  >
+                  <h4 class="timeline-node-title">Battle of Legazpi</h4>
+                  <p class="timeline-node-desc">
+                    Fierce Philippine-American War action at San Rafael Bridge led by Gen. Paua.
+                  </p>
+                </a>
 
-              <!-- Node 9: 1959 -->
-              <a
-                href="#ch-cityhood-restoration"
-                class="timeline-node"
-                data-target="ch-cityhood-restoration"
-              >
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"
-                  ><i class="bi bi-file-earmark-ruled"></i> Jun 12, 1959</span
+                <!-- Node 8: 1945 -->
+                <a href="#ch-wwii" class="timeline-node" data-target="ch-wwii">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-peace"></i> Apr 1945</span>
+                  <h4 class="timeline-node-title">Allied Liberation</h4>
+                  <p class="timeline-node-desc">
+                    U.S. 158th RCT and Bicolano guerrillas liberate the ruined port district.
+                  </p>
+                </a>
+
+                <!-- Node 9: 1959 -->
+                <a
+                  href="#ch-cityhood-restoration"
+                  class="timeline-node"
+                  data-target="ch-cityhood-restoration"
                 >
-                <h4 class="timeline-node-title">Republic Act No. 2234</h4>
-                <p class="timeline-node-desc">
-                  Permanent cityhood chartered; Mayor Ramon A. Arnaldo serves as first city mayor.
-                </p>
-              </a>
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"
+                    ><i class="bi bi-file-earmark-ruled"></i> Jun 12, 1959</span
+                  >
+                  <h4 class="timeline-node-title">Republic Act No. 2234</h4>
+                  <p class="timeline-node-desc">
+                    Permanent cityhood chartered; Mayor Ramon A. Arnaldo serves as first city mayor.
+                  </p>
+                </a>
 
-              <!-- Node 10: 1972 -->
-              <a
-                href="#ch-regional-capital"
-                class="timeline-node"
-                data-target="ch-regional-capital"
-              >
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-star-fill"></i> 1972</span>
-                <h4 class="timeline-node-title">Bicol Regional Capital</h4>
-                <p class="timeline-node-desc">
-                  Presidential Decree No. 1 designates Legazpi the administrative hub of Region V.
-                </p>
-              </a>
+                <!-- Node 10: 1972 -->
+                <a
+                  href="#ch-regional-capital"
+                  class="timeline-node"
+                  data-target="ch-regional-capital"
+                >
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-star-fill"></i> 1972</span>
+                  <h4 class="timeline-node-title">Bicol Regional Capital</h4>
+                  <p class="timeline-node-desc">
+                    Presidential Decree No. 1 designates Legazpi the administrative hub of Region V.
+                  </p>
+                </a>
 
-              <!-- Node 11: 1995 -->
-              <a
-                href="#ch-regional-capital"
-                class="timeline-node"
-                data-target="ch-regional-capital"
-              >
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-shield-check"></i> 1995</span>
-                <h4 class="timeline-node-title">APSEMO &amp; Resilience</h4>
-                <p class="timeline-node-desc">
-                  Pioneering first permanent provincial disaster risk reduction office in the
-                  nation.
-                </p>
-              </a>
+                <!-- Node 11: 1995 -->
+                <a
+                  href="#ch-regional-capital"
+                  class="timeline-node"
+                  data-target="ch-regional-capital"
+                >
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-shield-check"></i> 1995</span>
+                  <h4 class="timeline-node-title">APSEMO &amp; Resilience</h4>
+                  <p class="timeline-node-desc">
+                    Pioneering first permanent provincial disaster risk reduction office in the
+                    nation.
+                  </p>
+                </a>
 
-              <!-- Node 12: 2021 -->
-              <a href="#ch-modern-era" class="timeline-node" data-target="ch-modern-era">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-airplane-fill"></i> 2021</span>
-                <h4 class="timeline-node-title">Bicol Int'l Airport</h4>
-                <p class="timeline-node-desc">
-                  Modern international gateway opens; commercial expansion accelerates.
-                </p>
-              </a>
+                <!-- Node 12: 2021 -->
+                <a href="#ch-modern-era" class="timeline-node" data-target="ch-modern-era">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-airplane-fill"></i> 2021</span>
+                  <h4 class="timeline-node-title">Bicol Int'l Airport</h4>
+                  <p class="timeline-node-desc">
+                    Modern international gateway opens; commercial expansion accelerates.
+                  </p>
+                </a>
 
-              <!-- Node 13: 2025+ -->
-              <a href="#ch-modern-era" class="timeline-node" data-target="ch-modern-era">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year"><i class="bi bi-graph-up-arrow"></i> Present</span>
-                <h4 class="timeline-node-title">HUC Reclassification Bid</h4>
-                <p class="timeline-node-desc">
-                  Mayor Hisham Ismail leads push toward Highly Urbanized City status.
-                </p>
-              </a>
+                <!-- Node 13: 2025+ -->
+                <a href="#ch-modern-era" class="timeline-node" data-target="ch-modern-era">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-year"><i class="bi bi-graph-up-arrow"></i> Present</span>
+                  <h4 class="timeline-node-title">HUC Reclassification Bid</h4>
+                  <p class="timeline-node-desc">
+                    Mayor Hisham Ismail leads push toward Highly Urbanized City status.
+                  </p>
+                </a>
+              </div>
             </div>
+
+            <button
+              type="button"
+              class="timeline-nav timeline-nav-next"
+              data-timeline-scroll="1"
+              aria-label="Show later milestones"
+            >
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
       </section>
@@ -848,11 +905,26 @@
 
                 <!-- Chapter 1 -->
                 <article id="ch-pre-hispanic" class="chapter-block">
+                  <figure class="chapter-figure">
+                    <img
+                      src="../assets/images/tourism/photos/attraction_sawangan_park.webp"
+                      alt="Sawangan Park, a seaside park on the Albay Gulf shore in Legazpi City."
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>
+                      Sawangan Park, on the stretch of Albay Gulf shore where the fishing and
+                      farming settlement of Sawangan stood.
+                      <span class="figure-credit">Photograph: 2024 Travel Guide</span>
+                    </figcaption>
+                  </figure>
                   <div class="chapter-header">
+                    <h2>Pre-Hispanic and Early Settlement</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-compass"></i> Era 01 · Pre-Colonial Period</span
+                      ><i class="bi bi-compass" aria-hidden="true"></i> Pre-Colonial Period</span
                     >
-                    <h2>1. Pre-Hispanic and Early Settlement</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -883,11 +955,26 @@
 
                 <!-- Chapter 2 -->
                 <article id="ch-spanish-era" class="chapter-block">
+                  <figure class="chapter-figure">
+                    <img
+                      src="../assets/images/tourism/photos/attraction_albay_cathedral.webp"
+                      alt="Albay Cathedral of St. Gregory the Great in the Old Albay District of Legazpi City."
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>
+                      Albay Cathedral, seat of the Diocese of Legazpi. The 1587 Franciscan mission
+                      at Sawangan was dedicated to the same patron, St. Gregory the Great.
+                      <span class="figure-credit">Photograph: 2024 Travel Guide</span>
+                    </figcaption>
+                  </figure>
                   <div class="chapter-header">
+                    <h2>Spanish Contact and the Mission Era</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-brightness-alt-high"></i> Era 02 · 1573-1750s</span
+                      ><i class="bi bi-brightness-alt-high" aria-hidden="true"></i> 1573-1750s</span
                     >
-                    <h2>2. Spanish Contact and the Mission Era</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -925,11 +1012,26 @@
 
                 <!-- Chapter 3 -->
                 <article id="ch-1814-eruption" class="chapter-block">
+                  <figure class="chapter-figure">
+                    <img
+                      src="../assets/images/tourism/photos/attraction_st_raphael_church.webp"
+                      alt="St. Raphael Church, a stone church in the Legazpi Port District with an altar of volcanic rock."
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>
+                      St. Raphael Church in the Port District. The survivors who returned to the
+                      coast and rebuilt Binanuahan raised a sanctuary to this patron in 1834.
+                      <span class="figure-credit">Photograph: 2024 Travel Guide</span>
+                    </figcaption>
+                  </figure>
                   <div class="chapter-header">
+                    <h2>The 1814 Mayon Eruption and Refounding</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-fire"></i> Era 03 · 1814-1850s</span
+                      ><i class="bi bi-fire" aria-hidden="true"></i> 1814-1850s</span
                     >
-                    <h2>3. The 1814 Mayon Eruption and Refounding</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -971,11 +1073,26 @@
 
                 <!-- Chapter 4 -->
                 <article id="ch-1856-founding" class="chapter-block">
+                  <figure class="chapter-figure">
+                    <img
+                      src="../assets/images/tourism/photos/attraction_miguel_lopez_de_legazpi.webp"
+                      alt="Monument to Miguel Lopez de Legazpi, the Basque-Spanish navigator, in Legazpi City."
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>
+                      Miguel Lopez de Legazpi. The royal decree of September 22, 1856 named the new
+                      town after him.
+                      <span class="figure-credit">Photograph: 2024 Travel Guide</span>
+                    </figcaption>
+                  </figure>
                   <div class="chapter-header">
+                    <h2>The Naming and Founding of Legazpi</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-feather"></i> Era 04 · 1856</span
+                      ><i class="bi bi-feather" aria-hidden="true"></i> 1856</span
                     >
-                    <h2>4. The Naming and Founding of Legazpi</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -1002,11 +1119,26 @@
 
                 <!-- Chapter 5 -->
                 <article id="ch-first-cityhood" class="chapter-block">
+                  <figure class="chapter-figure">
+                    <img
+                      src="../assets/images/tourism/photos/attraction_embarcadero_de_legazpi.webp"
+                      alt="Embarcadero de Legazpi, a waterfront promenade and harbour development on Albay Gulf."
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>
+                      The present-day Embarcadero, on the harbour that became an official port of
+                      entry in 1872 and one of the busiest trading ports in the archipelago.
+                      <span class="figure-credit">Photograph: 2024 Travel Guide</span>
+                    </figcaption>
+                  </figure>
                   <div class="chapter-header">
+                    <h2>Port, Trade, and First Cityhood</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-water"></i> Era 05 · 1872-1898</span
+                      ><i class="bi bi-water" aria-hidden="true"></i> 1872-1898</span
                     >
-                    <h2>5. Port, Trade, and First Cityhood</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -1037,11 +1169,26 @@
 
                 <!-- Chapter 6 -->
                 <article id="ch-american-era" class="chapter-block">
+                  <figure class="chapter-figure">
+                    <img
+                      src="../assets/images/tourism/photos/attraction_battle_of_legazpi_pylon.webp"
+                      alt="The Battle of Legazpi Pylon, a stone memorial marker in Legazpi City."
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>
+                      The Battle of Legazpi Pylon, memorial to the defence of the town on January
+                      23, 1900.
+                      <span class="figure-credit">Photograph: 2024 Travel Guide</span>
+                    </figcaption>
+                  </figure>
                   <div class="chapter-header">
+                    <h2>The American Period</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-shield-fill"></i> Era 06 · 1900-1941</span
+                      ><i class="bi bi-shield-fill" aria-hidden="true"></i> 1900-1941</span
                     >
-                    <h2>6. The American Period</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -1073,11 +1220,26 @@
 
                 <!-- Chapter 7 -->
                 <article id="ch-wwii" class="chapter-block">
+                  <figure class="chapter-figure">
+                    <img
+                      src="../assets/images/tourism/photos/attraction_albay_gulf_landing_monument.webp"
+                      alt="The Albay Gulf Landing Monument commemorating the 1945 Allied landing at Legazpi."
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>
+                      The Albay Gulf Landing Monument, raised in 1995 for the fiftieth anniversary
+                      of the Allied landing.
+                      <span class="figure-credit">Photograph: 2024 Travel Guide</span>
+                    </figcaption>
+                  </figure>
                   <div class="chapter-header">
+                    <h2>World War II and Allied Liberation</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-peace"></i> Era 07 · 1941-1945</span
+                      ><i class="bi bi-peace" aria-hidden="true"></i> 1941-1945</span
                     >
-                    <h2>7. World War II and Allied Liberation</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -1104,10 +1266,11 @@
                 <!-- Chapter 8 -->
                 <article id="ch-cityhood-restoration" class="chapter-block">
                   <div class="chapter-header">
+                    <h2>Post-War Cityhood, Dissolution, and Permanent Restoration</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-file-earmark-ruled-fill"></i> Era 08 · 1945-1959</span
+                      ><i class="bi bi-file-earmark-ruled-fill" aria-hidden="true"></i>
+                      1945-1959</span
                     >
-                    <h2>8. Post-War Cityhood, Dissolution, and Permanent Restoration</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -1137,11 +1300,26 @@
 
                 <!-- Chapter 9 -->
                 <article id="ch-regional-capital" class="chapter-block">
+                  <figure class="chapter-figure">
+                    <img
+                      src="../assets/images/tourism/photos/attraction_mayon_volcano.webp"
+                      alt="Mayon Volcano rising above the landscape near Legazpi City."
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>
+                      Mayon. The eruptions of 1968, 1984 and 1993 are what led the province to found
+                      APSEMO in 1995.
+                      <span class="figure-credit">Photograph: 2024 Travel Guide</span>
+                    </figcaption>
+                  </figure>
                   <div class="chapter-header">
+                    <h2>Regional Capital and Natural Disasters</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-building-gear"></i> Era 09 · 1960s-1990s</span
+                      ><i class="bi bi-building-gear" aria-hidden="true"></i> 1960s-1990s</span
                     >
-                    <h2>9. Regional Capital and Natural Disasters</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -1178,11 +1356,26 @@
 
                 <!-- Chapter 10 -->
                 <article id="ch-modern-era" class="chapter-block">
+                  <figure class="chapter-figure">
+                    <img
+                      src="../assets/images/tourism/photos/attraction_legazpi_boulevard.webp"
+                      alt="Legazpi Boulevard, a coastal promenade along Albay Gulf with Kapuntukan Hill beyond."
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>
+                      Legazpi Boulevard, built after the 2006 lahars as both a seaside corridor and
+                      a storm surge seawall.
+                      <span class="figure-credit">Photograph: 2024 Travel Guide</span>
+                    </figcaption>
+                  </figure>
                   <div class="chapter-header">
+                    <h2>Modern Legazpi</h2>
                     <span class="chapter-era-badge"
-                      ><i class="bi bi-buildings"></i> Era 10 · 2000s-Present</span
+                      ><i class="bi bi-buildings" aria-hidden="true"></i> 2000s-Present</span
                     >
-                    <h2>10. Modern Legazpi</h2>
                   </div>
                   <div class="chapter-body">
                     <p>
@@ -1278,6 +1471,16 @@
                 Official Portal.
                 <a href="https://legazpi.gov.ph/about-us/" target="_blank" rel="noopener noreferrer"
                   >https://legazpi.gov.ph/about-us/</a
+                >
+              </li>
+              <li>
+                City Government of Legazpi. (2025). <em>Explore the City of Fun and Adventure</em>
+                [Travel guide]. Legazpi City Official Portal.
+                <a
+                  href="https://legazpi.gov.ph/wp-content/uploads/2025/03/Explore-LGP_Travel-Guide.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >https://legazpi.gov.ph/wp-content/uploads/2025/03/Explore-LGP_Travel-Guide.pdf</a
                 >
               </li>
               <li>

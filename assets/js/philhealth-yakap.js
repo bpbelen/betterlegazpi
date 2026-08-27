@@ -209,6 +209,10 @@
   /* --------------------------------------------------------------------------
      5. Sticky Sub-Nav Intersection Observer
      -------------------------------------------------------------------------- */
+  function prefersReducedMotion() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
   function initStickyNavObserver() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.yakap-subnav-link');
@@ -223,8 +227,16 @@
             navLinks.forEach((link) => {
               if (link.getAttribute('href') === `#${currentId}`) {
                 link.classList.add('active');
-                // Scroll pill into view on mobile overflow
-                link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                // Track the active pill in the sub-nav's own horizontal overflow.
+                // scrollIntoView() was scrolling the *page* here, fighting the
+                // reader's own scroll on mobile, so drive scrollLeft directly.
+                const strip = link.parentElement;
+                if (strip && strip.scrollWidth > strip.clientWidth) {
+                  strip.scrollTo({
+                    left: link.offsetLeft - (strip.clientWidth - link.offsetWidth) / 2,
+                    behavior: prefersReducedMotion() ? 'auto' : 'smooth',
+                  });
+                }
               } else {
                 link.classList.remove('active');
               }

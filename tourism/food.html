@@ -43,7 +43,7 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#059669" />
+    <meta name="theme-color" content="#0032a0" />
 
     <title>Cuisine &amp; Dining Directory | BetterLegazpi.org</title>
     <link rel="icon" type="image/png" href="../assets/images/logo/betterlegazpi-favicon.png" />
@@ -73,7 +73,12 @@
     <!-- Theme State Initializer -->
     <script>
       (function () {
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+          /* storage blocked (private browsing): fall back to the system preference */
+        }
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -203,10 +208,17 @@
     </div>
 
     <!-- Subpage Header -->
-    <section class="page-header">
+    <section class="page-header page-header--photo">
+      <img
+        class="page-header-photo"
+        src="../assets/images/tourism/photos/resto_mesa_filipino_moderne.webp"
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+        decoding="async"
+      />
       <div class="container">
         <div class="page-header-content">
-          <span class="page-header-badge"><i class="bi bi-cup-hot-fill"></i> <span>Cuisine &amp; Dining</span></span>
           <h1>Cuisine &amp; Dining Directory</h1>
           <p class="page-header-desc">
             Explore Bicol's legendary culinary heritage and search through 240+ permitted
@@ -364,14 +376,15 @@
         <aside class="tourism-source-card" style="margin-top: 40px" aria-label="Source Attribution">
           <i class="bi bi-shield-check"></i>
           <p>
-            <strong>Official Municipal Source:</strong> All 240 permitted food and dining
-            establishments are curated directly from the City Government of Legazpi (<a
+            <strong>Official Municipal Source:</strong> All 240 food and dining business permits are
+            curated directly from the City Government of Legazpi (<a
               href="https://legazpi.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
               >legazpi.gov.ph</a
             >) and the official <em>City of Fun and Adventure Travel Guide</em> (City Tourism
-            Services Unit).
+            Services Unit). A business holding more than one permit class is listed once, so the
+            count of places shown is lower than the count of permits.
           </p>
         </aside>
       </div>

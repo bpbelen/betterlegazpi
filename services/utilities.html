@@ -91,7 +91,12 @@
     <!-- Theme State Initializer -->
     <script>
       (function () {
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+          /* storage blocked (private browsing): fall back to the system preference */
+        }
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -246,79 +251,56 @@
         </div>
       </section>
 
-      <!-- Master Switcher Pill Controls -->
-      <section class="utility-switcher-section">
+      <!-- Utility Switcher -->
+      <nav class="utility-switcher-section" aria-label="Choose a utility">
         <div class="container">
           <div class="utility-switcher-wrapper">
-            <div class="utility-switcher" role="tablist" aria-label="Utility Providers">
-              <button
-                class="utility-tab-btn active electricity-tab"
-                id="tab-electricity"
+            <div class="utility-switcher">
+              <a
+                href="#electricity"
+                class="utility-switch-link active"
                 data-target="electricity"
-                role="tab"
-                aria-selected="true"
-                aria-controls="electricity-section"
+                aria-current="true"
               >
-                <i class="bi bi-lightning-charge-fill"></i>
+                <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
                 <span>Electricity (ALECO)</span>
-              </button>
-              <button
-                class="utility-tab-btn water-tab"
-                id="tab-water"
-                data-target="water"
-                role="tab"
-                aria-selected="false"
-                aria-controls="water-section"
-              >
-                <i class="bi bi-droplet-fill"></i>
+              </a>
+              <a href="#water" class="utility-switch-link" data-target="water">
+                <i class="bi bi-droplet-fill" aria-hidden="true"></i>
                 <span>Water (LCWD)</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </nav>
 
-      <!-- Sticky Sub-Navigation Bar -->
-      <nav class="utility-subnav-sticky" aria-label="Utilities Sub-navigation">
+      <!-- Sticky Sub-Navigation -->
+      <nav class="utility-subnav-sticky" aria-label="Sections on this page">
         <div class="container">
           <div class="utility-subnav-container">
-            <div class="utility-subnav-badge" id="current-utility-badge">
-              <i class="bi bi-lightning-charge-fill" style="color: var(--color-accent-text)"></i>
-              <span>Electricity (ALECO)</span>
-            </div>
             <ul class="utility-subnav-links">
               <li>
-                <a href="#electricity-apply" class="utility-subnav-link" data-section="apply">
-                  <i class="bi bi-file-earmark-check"></i>
-                  <span>How to Apply</span>
+                <a href="#electricity-status" class="utility-subnav-link" data-section="status">
+                  <i class="bi bi-broadcast" aria-hidden="true"></i>
+                  <span>Outages &amp; advisories</span>
                 </a>
               </li>
               <li>
                 <a href="#electricity-pay" class="utility-subnav-link" data-section="pay">
-                  <i class="bi bi-credit-card-2-front"></i>
-                  <span>How to Pay</span>
+                  <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                  <span>Pay my bill</span>
                 </a>
               </li>
               <li>
-                <a href="#electricity-feeders" class="utility-subnav-link" data-section="feeders">
-                  <i class="bi bi-diagram-3"></i>
-                  <span>Feeders &amp; Coverage</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#electricity-announcements"
-                  class="utility-subnav-link"
-                  data-section="announcements"
-                >
-                  <i class="bi bi-megaphone"></i>
-                  <span>Announcements</span>
+                <a href="#electricity-apply" class="utility-subnav-link" data-section="apply">
+                  <i class="bi bi-file-earmark-check" aria-hidden="true"></i>
+                  <span>New connection</span>
                 </a>
               </li>
               <li>
                 <a href="#electricity-office" class="utility-subnav-link" data-section="office">
-                  <i class="bi bi-geo-alt"></i>
-                  <span>Office &amp; Contacts</span>
+                  <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                  <span>Office &amp; contacts</span>
                 </a>
               </li>
             </ul>
@@ -327,23 +309,18 @@
       </nav>
 
       <!-- ===================================================================
-           SECTION 1: ELECTRICITY (ALECO - Albay Electric Cooperative, Inc.)
+           ELECTRICITY (ALECO - Albay Electric Cooperative, Inc.)
            =================================================================== -->
-      <section
-        id="electricity-section"
-        class="section electricity-section"
-        role="tabpanel"
-        aria-labelledby="tab-electricity"
-      >
+      <section id="electricity-section" class="section electricity-section">
         <div class="container">
-          <!-- Emergency Hotline Banner -->
+          <!-- Emergency Hotlines -->
           <div class="utility-emergency-banner">
             <div class="utility-emergency-info">
               <div class="utility-emergency-icon">
-                <i class="bi bi-lightning-fill"></i>
+                <i class="bi bi-lightning-fill" aria-hidden="true"></i>
               </div>
               <div class="utility-emergency-text">
-                <h4>ALECO 24/7 Power Outage &amp; Emergency Hotlines</h4>
+                <h2>ALECO 24/7 outage and emergency hotlines</h2>
                 <p>
                   Report power interruptions, fallen wires, sparking transformers, or electrical
                   hazards immediately.
@@ -351,333 +328,203 @@
               </div>
             </div>
             <div class="utility-emergency-actions">
-              <a href="tel:0524810237" class="emergency-dial-btn">
-                <i class="bi bi-telephone-outbound-fill"></i>
-                <span>(052) 481-0237</span>
-              </a>
-              <a href="tel:09177002532" class="emergency-dial-btn">
-                <i class="bi bi-phone-vibrate-fill"></i>
-                <span>0917 700 ALECO (2532)</span>
-              </a>
-              <button
-                type="button"
-                class="copy-hotline-btn"
-                data-phone="(052) 481-0237 / 0917-700-2532"
-                title="Copy hotlines"
-              >
-                <i class="bi bi-copy"></i>
-                <span>Copy</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Section: How to Apply (Electricity) -->
-          <div id="electricity-apply" style="scroll-margin-top: 130px; margin-bottom: 56px">
-            <div class="utility-section-title">
-              <i class="bi bi-file-earmark-text-fill"></i>
-              <span>How to Apply for a New ALECO Electric Connection</span>
-            </div>
-            <p class="utility-section-subtitle">
-              Standard procedure and requirements for residential and commercial electric service
-              connections in Legazpi City.
-            </p>
-
-            <!-- 4-Step Application Pipeline -->
-            <div class="application-pipeline">
-              <div class="pipeline-step-card">
-                <div class="pipeline-step-number">1</div>
-                <h4>Pre-Membership Orientation</h4>
-                <p>
-                  Attend the Pre-Membership Orientation Seminar (PMOS) conducted at the ALECO
-                  compound or accredited online session.
-                </p>
-                <div class="pipeline-step-meta">
-                  <i class="bi bi-calendar-event"></i>
-                  <span>Schedule: Tuesdays &amp; Thursdays</span>
-                </div>
-              </div>
-
-              <div class="pipeline-step-card">
-                <div class="pipeline-step-number">2</div>
-                <h4>Secure Permits &amp; Inspection</h4>
-                <p>
-                  Secure Certificate of Final Electrical Inspection (CFEI) and Wiring Permit from
-                  the Legazpi City Engineering Office (CEO).
-                </p>
-                <div class="pipeline-step-meta">
-                  <i class="bi bi-building-check"></i>
-                  <span>City Engineering Office (City Hall)</span>
-                </div>
-              </div>
-
-              <div class="pipeline-step-card">
-                <div class="pipeline-step-number">3</div>
-                <h4>Submit Application &amp; Deposit</h4>
-                <p>
-                  Submit completed Membership Application, valid IDs, proof of ownership or tenancy,
-                  and pay bill deposit and connection fees.
-                </p>
-                <div class="pipeline-step-meta">
-                  <i class="bi bi-cash-stack"></i>
-                  <span>ALECO Member Services Desk</span>
-                </div>
-              </div>
-
-              <div class="pipeline-step-card">
-                <div class="pipeline-step-number">4</div>
-                <h4>Meter Installation &amp; Energization</h4>
-                <p>
-                  ALECO technical crew inspects service drop line, installs electric kilowatt-hour
-                  meter, and energizes your property.
-                </p>
-                <div class="pipeline-step-meta">
-                  <i class="bi bi-lightning-charge-fill"></i>
-                  <span>Estimated: 3 - 5 Working Days</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Official Application Portals Banner -->
-            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px">
-              <a
-                href="https://web.alecoinc.com.ph/newconnection.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="complaint-egov-btn"
-                style="padding: 10px 16px; font-weight: 700"
-              >
-                <i class="bi bi-box-arrow-up-right"></i>
-                <span>ALECO New Connection Web Portal (web.alecoinc.com.ph)</span>
-              </a>
-              <a
-                href="https://web.alecoinc.com.ph/webapp/apply.php"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="complaint-egov-btn"
-                style="padding: 10px 16px; font-weight: 700"
-              >
-                <i class="bi bi-laptop"></i>
-                <span>ALECO Online Application System (webapp/apply.php)</span>
-              </a>
-              <a
-                href="https://www.facebook.com/albayelectric/photos/we-are-now-accepting-application-for-%F0%9D%90%8D%F0%9D%90%84%F0%9D%97%AA-%F0%9D%90%82%F0%9D%90%8E%F0%9D%90%8D%F0%9D%90%8D%F0%9D%90%84%F0%9D%90%82%F0%9D%90%93%F0%9D%90%88%F0%9D%90%8E%F0%9D%90%8Dkindly-read-the-following-pro/535352938707538/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="complaint-egov-btn"
-                style="padding: 10px 16px; font-weight: 600"
-              >
-                <i class="bi bi-facebook" style="color: #1877f2"></i>
-                <span>Official ALECO Advisory Post</span>
-              </a>
-            </div>
-
-            <!-- Interactive Requirements Checklist -->
-            <div class="requirements-container" id="checklist-aleco">
-              <div class="requirements-header">
-                <h3>
-                  <i class="bi bi-card-checklist" style="color: var(--color-primary)"></i>
-                  <span
-                    >Official Required Documents Checklist (ALECO Charter &amp; Web Portal)</span
-                  >
-                </h3>
-                <span class="requirements-counter">0 of 9 Ready</span>
-              </div>
-              <div class="requirements-grid">
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>1. Pre-Membership Education Seminar (PMES) Certificate</strong>
-                    <p>
-                      Mandatory Certificate of Attendance from ALECO PMES (held every Saturday, 9:00
-                      AM at ALECO Main Office, Washington Drive or Area Offices).
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>2. Duly Accomplished Application &amp; Membership Forms</strong>
-                    <p>
-                      Filled-out Application for Electric Service Connection and Application for
-                      Membership (downloadable or via webapp/apply.php).
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>3. Approved Electrical Permit &amp; CFEI</strong>
-                    <p>
-                      Approved Electrical Permit and Certificate of Final Electrical Inspection
-                      (CFEI) issued by the Legazpi City Engineering Office (OBO).
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>4. Barangay Clearance for Electric Connection</strong>
-                    <p>
-                      Issued by the Punong Barangay of your registered Legazpi barangay certifying
-                      address and no illegal tapping/unsettled accounts.
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>5. Proof of Ownership, Tenancy, or Right to Occupy</strong>
-                    <p>
-                      Lot Title (TCT), Deed of Absolute Sale, Deed of Donation, or Notarized Lease
-                      Contract with Landowner's Consent &amp; ID.
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>6. Valid Government-Issued ID &amp; 2x2 Photos</strong>
-                    <p>
-                      Photocopy of valid Government ID with 3 specimen signatures, plus 2 pcs latest
-                      2x2 ID photos (1 pc for spouse if joint account).
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>7. Civil Registry / Corporate Documents</strong>
-                    <p>
-                      Birth Certificate (single/sole proprietor) or Marriage Contract (joint);
-                      DTI/SEC registration and Secretary's Certificate (corporations).
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>8. Location Sketch &amp; Neighbor's Electric Bill</strong>
-                    <p>
-                      Sketch map showing nearest tapping pole, photo of house/service entrance, and
-                      photocopy of nearest neighbor's ALECO bill.
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>9. Special Power of Attorney (If Represented)</strong>
-                    <p>
-                      Notarized Special Power of Attorney (SPA) and valid government ID of the
-                      authorized representative if applicant is unavailable.
-                    </p>
-                  </div>
-                </label>
-              </div>
-
-              <!-- Special Application Categories Note Box -->
-              <div
-                style="
-                  margin-top: 20px;
-                  padding: 16px;
-                  background: var(--color-bg-alt, #f8f9fa);
-                  border-radius: 12px;
-                  border-left: 4px solid var(--color-primary);
-                  font-size: 0.86rem;
-                  line-height: 1.5;
-                  color: var(--color-text-light);
-                "
-              >
-                <strong style="color: var(--color-text); display: block; margin-bottom: 6px"
-                  ><i class="bi bi-info-circle-fill"></i> Specific Category Guidelines (Per ALECO
-                  Citizen's Charter):</strong
+              <div class="emergency-number">
+                <a href="tel:0524810237" class="emergency-dial-btn">
+                  <i class="bi bi-telephone-outbound-fill" aria-hidden="true"></i>
+                  <span>(052) 481-0237</span>
+                </a>
+                <button
+                  type="button"
+                  class="copy-hotline-btn"
+                  data-phone="(052) 481-0237"
+                  aria-label="Copy (052) 481-0237"
                 >
-                <ul style="margin: 0; padding-left: 18px">
-                  <li>
-                    <strong>Renters / Lessees:</strong> Submit Notarized Lease Contract +
-                    Certification/Consent from the lot owner + Photocopy of Lot Owner's ID.
-                  </li>
-                  <li>
-                    <strong>Informal Settlers / Public Land:</strong> Submit Certificate of
-                    Residency / Right to Occupy from LGU Legazpi City or BAPA Clearance.
-                  </li>
-                  <li>
-                    <strong>Private Lots with Permission:</strong> Submit Notarized Certification /
-                    Waiver from the registered landowner.
-                  </li>
-                  <li>
-                    <strong>Commercial / Juridical Entities:</strong> Submit SEC/DTI Registration,
-                    Mayor's Business Permit, and Board Resolution/Secretary's Certificate
-                    designating the authorized signatory.
-                  </li>
-                </ul>
+                  <i class="bi bi-copy" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="emergency-number">
+                <a href="tel:09177002532" class="emergency-dial-btn">
+                  <i class="bi bi-phone-vibrate-fill" aria-hidden="true"></i>
+                  <span>0917 700 2532</span>
+                </a>
+                <button
+                  type="button"
+                  class="copy-hotline-btn"
+                  data-phone="0917 700 2532"
+                  aria-label="Copy 0917 700 2532"
+                >
+                  <i class="bi bi-copy" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- Section: How to Pay (Electricity) -->
-          <div id="electricity-pay" style="scroll-margin-top: 130px; margin-bottom: 56px">
-            <div class="utility-section-title">
-              <i class="bi bi-wallet2"></i>
-              <span>How to Pay Your ALECO Electric Bill</span>
-            </div>
+          <!-- What do you need to do? -->
+          <h2 class="triage-heading">What do you need to do?</h2>
+          <div class="triage-row">
+            <a href="#electricity-status" class="triage-tile" data-section="status">
+              <i class="bi bi-lightning-charge" aria-hidden="true"></i>
+              <span class="triage-tile-label">The power is out</span>
+              <span class="triage-tile-sub">Check advisories and find your line</span>
+            </a>
+            <a href="#electricity-pay" class="triage-tile" data-section="pay">
+              <i class="bi bi-wallet2" aria-hidden="true"></i>
+              <span class="triage-tile-label">Pay my bill</span>
+              <span class="triage-tile-sub">E-wallets, banks, payment centers</span>
+            </a>
+            <a href="#electricity-apply" class="triage-tile" data-section="apply">
+              <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+              <span class="triage-tile-label">New connection</span>
+              <span class="triage-tile-sub">Steps and documents to bring</span>
+            </a>
+            <a href="#electricity-office" class="triage-tile" data-section="office">
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              <span class="triage-tile-label">Office &amp; contacts</span>
+              <span class="triage-tile-sub">Address, hours, complaints</span>
+            </a>
+          </div>
+
+          <!-- Outages and advisories -->
+          <div id="electricity-status" class="utility-block">
+            <h2 class="utility-section-title">
+              <i class="bi bi-broadcast" aria-hidden="true"></i>
+              <span>Is my area affected?</span>
+            </h2>
             <p class="utility-section-subtitle">
-              Multiple official payment centers, authorized banks, and online e-wallet channels
-              available across Albay.
+              ALECO names the affected feeder in its interruption notices. Find your feeder first,
+              then read the advisories against it.
             </p>
 
-            <!-- Official Payment Advisory Reference Badge -->
-            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px">
-              <a
-                href="https://www.facebook.com/albayelectric/posts/%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%AF%F0%9D%90%9E-%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%9E-%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%AC%F0%9D%90%A5%F0%9D%90%9E-pay-your-aleco-bills-the-easy-and-convenient-way-through-our-tru/1318120897097401/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="complaint-egov-btn"
-                style="padding: 10px 16px; font-weight: 600"
-              >
-                <i class="bi bi-facebook" style="color: #1877f2"></i>
-                <span>Official ALECO Accredited Payment Partners Advisory</span>
-                <i class="bi bi-box-arrow-up-right"></i>
-              </a>
+            <!-- Feeder lookup -->
+            <div class="feeder-lookup">
+              <div class="feeder-lookup-field">
+                <label for="barangay-input">Your barangay</label>
+                <input
+                  type="text"
+                  id="barangay-input"
+                  list="barangay-options"
+                  class="feeder-lookup-input"
+                  placeholder="Start typing, for example Rawis"
+                  autocomplete="off"
+                />
+                <datalist id="barangay-options"></datalist>
+                <p class="feeder-lookup-help">
+                  Covers all 70 Legazpi barangays, plus the Daraga, Camalig, Jovellar, and Manito
+                  areas that share ALECO lines.
+                </p>
+              </div>
+
+              <div
+                id="feeder-answer"
+                class="feeder-answer"
+                role="status"
+                aria-live="polite"
+                hidden
+              ></div>
             </div>
 
-            <!-- Categorized Payment Grid (Balanced 2x2 Bento) -->
+            <details class="feeder-browse">
+              <summary>See all 8 feeders and their coverage</summary>
+              <div id="feeder-cards-grid" class="feeder-cards-grid"></div>
+            </details>
+
+            <h3 class="advisory-heading">Current advisories</h3>
+            <div class="advisory-list" data-utility="electricity" aria-live="polite">
+              <div class="advisory-empty">
+                <p class="advisory-empty-title">No advisory recorded here right now.</p>
+                <p>
+                  ALECO posts interruption notices on its Facebook page as they happen. Open the
+                  live feed below to check.
+                </p>
+              </div>
+            </div>
+
+            <div class="advisory-support">
+              <div class="fb-fallback-card">
+                <h4>ALECO on Facebook</h4>
+                <p>
+                  ALECO posts its interruption notices, restoration updates, and rate advisories to
+                  its Facebook page as they happen.
+                </p>
+                <div class="fb-fallback-actions">
+                  <a
+                    href="https://www.facebook.com/albayelectric"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="fb-visit-btn"
+                  >
+                    <i class="bi bi-facebook" aria-hidden="true"></i>
+                    <span>Open @albayelectric on Facebook</span>
+                  </a>
+                  <button type="button" class="fb-load-btn" aria-controls="fb-slot-electricity">
+                    Load the live feed here
+                  </button>
+                </div>
+                <div
+                  class="fb-embed-slot"
+                  id="fb-slot-electricity"
+                  hidden
+                  data-title="ALECO official Facebook timeline"
+                  data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falbayelectric&tabs=timeline&width=500&height=540&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                ></div>
+              </div>
+
+              <div class="advisory-guide-sidebar">
+                <div class="advisory-card">
+                  <h4>Scheduled outages</h4>
+                  <p>
+                    ALECO posts 24 to 48-hour advance notices for preventive maintenance, pole
+                    relocations, and line clearing.
+                  </p>
+                </div>
+                <div class="advisory-card">
+                  <h4>Typhoon and weather alerts</h4>
+                  <p>
+                    During severe weather, ALECO runs round-the-clock response teams and posts
+                    restoration progress per feeder.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pay -->
+          <div id="electricity-pay" class="utility-block">
+            <h2 class="utility-section-title">
+              <i class="bi bi-wallet2" aria-hidden="true"></i>
+              <span>Pay your ALECO bill</span>
+            </h2>
+            <p class="utility-section-subtitle">
+              Official payment centers, accredited banks, and e-wallet channels across Albay.
+            </p>
+
+            <div class="posting-notice posting-notice--instant">
+              <p class="posting-notice-value">Payments confirm instantly</p>
+              <p>
+                GCash and the bank portals post to your ALECO account on the spot, so paying on the
+                due date itself still counts. You need your 10-digit account number.
+              </p>
+            </div>
+
             <div class="payment-grid">
               <div class="payment-card">
                 <div class="payment-card-header">
                   <div class="payment-icon-box">
-                    <i class="bi bi-phone"></i>
+                    <i class="bi bi-phone" aria-hidden="true"></i>
                   </div>
-                  <div>
-                    <h4>E-Wallets &amp; Mobile Apps</h4>
-                    <span class="status-caption--positive"
-                      >Current Bills • 24/7 Processing</span
-                    >
-                  </div>
+                  <h3>E-wallets and mobile apps</h3>
                 </div>
                 <div class="payment-card-body">
                   <div class="payment-channel-list">
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> GCash</span
-                      >
+                      <span class="payment-channel-name">GCash</span>
                       <span class="payment-channel-guide"
                         >Pay Bills &gt; Electric Utilities &gt; ALECO</span
                       >
                     </div>
                   </div>
                   <div class="payment-pills">
-                    <span class="payment-pill">Instant Confirmation</span>
-                    <span class="payment-pill">No Queue</span>
-                    <span class="payment-pill">10-Digit Account #</span>
+                    <span class="payment-pill">10-digit account number</span>
                   </div>
                 </div>
               </div>
@@ -685,40 +532,24 @@
               <div class="payment-card">
                 <div class="payment-card-header">
                   <div class="payment-icon-box">
-                    <i class="bi bi-bank"></i>
+                    <i class="bi bi-bank" aria-hidden="true"></i>
                   </div>
-                  <div>
-                    <h4>Accredited Partner Banks</h4>
-                    <span
-                      style="font-size: 0.82rem; color: var(--color-text-light); font-weight: 600"
-                      >Current Bills • OTC &amp; Online</span
-                    >
-                  </div>
+                  <h3>Accredited partner banks</h3>
                 </div>
                 <div class="payment-card-body">
                   <div class="payment-channel-list">
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> BDO</span
-                      >
-                      <span class="payment-channel-guide">Banco De Oro Branches &amp; Online</span>
+                      <span class="payment-channel-name">BDO</span>
+                      <span class="payment-channel-guide">Branches and online banking</span>
                     </div>
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> UnionBank</span
-                      >
-                      <span class="payment-channel-guide">Online Banking App &amp; Tellers</span>
+                      <span class="payment-channel-name">UnionBank</span>
+                      <span class="payment-channel-guide">App and branch tellers</span>
                     </div>
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> Camalig Bank</span
-                      >
-                      <span class="payment-channel-guide">Over-the-Counter Branch Tellers</span>
+                      <span class="payment-channel-name">Camalig Bank</span>
+                      <span class="payment-channel-guide">Over-the-counter tellers</span>
                     </div>
-                  </div>
-                  <div class="payment-pills">
-                    <span class="payment-pill">Bank Counters</span>
-                    <span class="payment-pill">Mobile Banking</span>
                   </div>
                 </div>
               </div>
@@ -726,34 +557,20 @@
               <div class="payment-card">
                 <div class="payment-card-header">
                   <div class="payment-icon-box">
-                    <i class="bi bi-shop-window"></i>
+                    <i class="bi bi-shop-window" aria-hidden="true"></i>
                   </div>
-                  <div>
-                    <h4>Authorized Payment Centers</h4>
-                    <span
-                      style="font-size: 0.82rem; color: var(--color-text-light); font-weight: 600"
-                      >Current Bills • Nationwide Network</span
-                    >
-                  </div>
+                  <h3>Authorized payment centers</h3>
                 </div>
                 <div class="payment-card-body">
                   <div class="payment-channel-list">
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> Bayad Center</span
-                      >
-                      <span class="payment-channel-guide">Bayad Outlets &amp; Franchises</span>
+                      <span class="payment-channel-name">Bayad Center</span>
+                      <span class="payment-channel-guide">Outlets and franchises</span>
                     </div>
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> ECPay</span
-                      >
-                      <span class="payment-channel-guide">7-Eleven CLIQQ &amp; Partner Stores</span>
+                      <span class="payment-channel-name">ECPay</span>
+                      <span class="payment-channel-guide">7-Eleven CLIQQ and partner stores</span>
                     </div>
-                  </div>
-                  <div class="payment-pills">
-                    <span class="payment-pill">Cash Accepted</span>
-                    <span class="payment-pill">Official Receipt Issued</span>
                   </div>
                 </div>
               </div>
@@ -761,308 +578,391 @@
               <div class="payment-card">
                 <div class="payment-card-header">
                   <div class="payment-icon-box">
-                    <i class="bi bi-building"></i>
+                    <i class="bi bi-building" aria-hidden="true"></i>
                   </div>
-                  <div>
-                    <h4>ALECO Service &amp; Collection Offices</h4>
-                    <span class="status-caption--urgent"
-                      >Required for Past Due / Disconnection</span
-                    >
-                  </div>
+                  <h3>ALECO offices</h3>
                 </div>
                 <div class="payment-card-body">
                   <div class="payment-channel-list">
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> Main Office</span
-                      >
+                      <span class="payment-channel-name">Main office</span>
                       <span class="payment-channel-guide">Washington Drive, Legazpi City</span>
                     </div>
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> Area Offices</span
-                      >
-                      <span class="payment-channel-guide">Designated Sub-station Tellers</span>
+                      <span class="payment-channel-name">Area offices</span>
+                      <span class="payment-channel-guide">Designated sub-station tellers</span>
                     </div>
                   </div>
-                  <p
-                    style="
-                      font-size: 0.84rem;
-                      color: var(--color-text-light);
-                      margin: 10px 0 0 0;
-                      line-height: 1.4;
-                    "
-                  >
-                    Operating Hours: Monday - Friday, 8:00 AM to 5:00 PM (No Noon Break).
+                  <p class="payment-card-note">
+                    Monday to Friday, 8:00 AM to 5:00 PM, no noon break.
                   </p>
                   <div class="payment-pills">
-                    <span class="payment-pill">Same-Day Posting</span>
-                    <span class="payment-pill">Reconnection Processing</span>
+                    <span class="payment-pill payment-pill--required">
+                      Required for past due and reconnection
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Visual Bill Explainer Box -->
             <div class="bill-guide-box">
-              <div class="bill-guide-header">
-                <i
-                  class="bi bi-info-circle-fill"
-                  style="font-size: 1.5rem; color: var(--color-primary)"
-                ></i>
-                <h3>How to Read Your ALECO Electric Bill &amp; Account Number</h3>
-              </div>
+              <h3 class="bill-guide-header">Reading your ALECO bill</h3>
               <div class="bill-guide-grid">
                 <div class="bill-guide-tip">
-                  <h5><i class="bi bi-hash"></i> 10-Digit Account Number</h5>
+                  <h4>10-digit account number</h4>
                   <p>
-                    Located on the upper left portion of your Monthly Electricity Statement. Always
-                    enter this 10-digit number when paying through GCash, Maya, or Bank portals.
+                    Upper left of your monthly statement. This is the number every e-wallet and bank
+                    portal asks for.
                   </p>
                 </div>
                 <div class="bill-guide-tip">
-                  <h5><i class="bi bi-speedometer2"></i> Meter Serial Number</h5>
+                  <h4>Meter serial number</h4>
                   <p>
-                    Printed under the consumer details box and etched on your physical electric
-                    meter glass to verify that billing corresponds to your unit.
+                    Under the consumer details box, and etched on the glass of your physical meter.
+                    Use it to check the bill is for your unit.
                   </p>
                 </div>
                 <div class="bill-guide-tip">
-                  <h5><i class="bi bi-calendar2-check"></i> Due Date &amp; Disconnection Notice</h5>
+                  <h4>Due date</h4>
                   <p>
-                    Bills have a 9-day payment grace period from delivery date. Settle on or before
-                    the indicated Due Date to prevent automated disconnection fees.
+                    Bills carry a 9-day grace period from the delivery date. Settle on or before the
+                    due date to avoid disconnection fees.
                   </p>
                 </div>
               </div>
             </div>
+
+            <p class="utility-source-link">
+              <a
+                href="https://www.facebook.com/albayelectric/posts/%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%AF%F0%9D%90%9E-%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%9E-%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%AC%F0%9D%90%A5%F0%9D%90%9E-pay-your-aleco-bills-the-easy-and-convenient-way-through-our-tru/1318120897097401/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ALECO's own list of accredited payment partners</a
+              >
+            </p>
           </div>
 
-          <!-- Section: Feeder Directory & PSGC Barangay Lookup -->
-          <div id="electricity-feeders" style="scroll-margin-top: 130px; margin-bottom: 56px">
-            <div class="utility-section-title">
-              <i class="bi bi-diagram-3-fill"></i>
-              <span>ALECO Electricity Substations and Feeders in Legazpi City</span>
-            </div>
+          <!-- New connection -->
+          <div id="electricity-apply" class="utility-block">
+            <h2 class="utility-section-title">
+              <i class="bi bi-file-earmark-text-fill" aria-hidden="true"></i>
+              <span>Apply for a new ALECO connection</span>
+            </h2>
             <p class="utility-section-subtitle">
-              Find which ALECO Feeder and Substation powers your barangay. Official mapping across
-              all 70 Legazpi City barangays.
+              The standard route for residential and commercial connections in Legazpi City.
             </p>
 
-            <div class="feeder-directory-box">
-              <!-- Integrated Search & Substation Filter Toolbar (Option B) -->
-              <div class="feeder-toolbar">
-                <div class="feeder-search-input-wrap">
-                  <i class="bi bi-search"></i>
-                  <input
-                    type="search"
-                    id="feeder-search-input"
-                    class="feeder-search-input"
-                    placeholder="Search your barangay name here"
-                    aria-label="Search your barangay name here"
-                  />
-                </div>
+            <ol class="application-pipeline">
+              <li class="pipeline-step-card">
+                <h3>Attend the orientation</h3>
+                <p>
+                  Sit the Pre-Membership Education Seminar at the ALECO compound or an accredited
+                  online session.
+                </p>
+                <p class="pipeline-step-meta">Saturdays, 9:00 AM, ALECO main office</p>
+              </li>
+              <li class="pipeline-step-card">
+                <h3>Secure permits and inspection</h3>
+                <p>
+                  Get the Certificate of Final Electrical Inspection and the wiring permit from the
+                  City Engineering Office.
+                </p>
+                <p class="pipeline-step-meta">City Engineering Office, City Hall</p>
+              </li>
+              <li class="pipeline-step-card">
+                <h3>Submit and pay the deposit</h3>
+                <p>
+                  Hand in the membership application with your documents, then pay the bill deposit
+                  and connection fees.
+                </p>
+                <p class="pipeline-step-meta">ALECO Member Services desk</p>
+              </li>
+              <li class="pipeline-step-card">
+                <h3>Meter installation</h3>
+                <p>
+                  The ALECO crew inspects the service drop line, installs your kilowatt-hour meter,
+                  and energizes the property.
+                </p>
+                <p class="pipeline-step-meta">3 to 5 working days</p>
+              </li>
+            </ol>
 
-                <div class="feeder-filter-controls">
-                  <!-- Substation Level Selector -->
-                  <div
-                    class="feeder-substation-pills"
-                    role="group"
-                    aria-label="Substation Selection"
-                  >
-                    <button type="button" class="substation-pill active" data-substation="all">
-                      All Feeders
-                    </button>
-                    <button type="button" class="substation-pill" data-substation="washington">
-                      Washington Substation
-                    </button>
-                    <button type="button" class="substation-pill" data-substation="bitano">
-                      Bitano Substation
-                    </button>
-                  </div>
+            <div class="utility-portal-links">
+              <a
+                href="https://web.alecoinc.com.ph/newconnection.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="complaint-egov-btn"
+              >
+                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                <span>ALECO new connection portal</span>
+              </a>
+              <a
+                href="https://web.alecoinc.com.ph/webapp/apply.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="complaint-egov-btn"
+              >
+                <i class="bi bi-laptop" aria-hidden="true"></i>
+                <span>Apply online</span>
+              </a>
+            </div>
 
-                  <!-- Contextual Feeder Sub-chips -->
-                  <div class="feeder-subchips" id="feeder-subchips" style="display: none"></div>
-                </div>
+            <div class="requirements-container" id="checklist-aleco">
+              <div class="requirements-header">
+                <h3>Documents to bring</h3>
+                <span class="requirements-counter" aria-live="polite">0 of 6 ready</span>
               </div>
 
-              <!-- Feeder Cards Container (Populated via JS) -->
-              <div id="feeder-cards-grid" class="feeder-cards-grid">
-                <!-- Javascript injects all 8 feeder cards with PSGC barangays here -->
+              <div class="requirements-grid">
+                <label class="requirement-item" data-req-id="aleco-pmes">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Pre-Membership Education Seminar certificate</strong>
+                    <p>
+                      Certificate of attendance from the PMES, held every Saturday at 9:00 AM at the
+                      ALECO main office on Washington Drive or at an area office.
+                    </p>
+                  </div>
+                </label>
+
+                <label class="requirement-item" data-req-id="aleco-forms">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Application and membership forms</strong>
+                    <p>
+                      The Application for Electric Service Connection and the Application for
+                      Membership, both downloadable from the ALECO portal.
+                    </p>
+                  </div>
+                </label>
+
+                <label class="requirement-item" data-req-id="aleco-permit">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Electrical permit and CFEI</strong>
+                    <p>
+                      Approved electrical permit and Certificate of Final Electrical Inspection from
+                      the Legazpi City Engineering Office.
+                    </p>
+                  </div>
+                </label>
+
+                <label class="requirement-item" data-req-id="aleco-brgy">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Barangay clearance for electric connection</strong>
+                    <p>
+                      From your Punong Barangay, certifying your address and that there is no
+                      illegal tapping or unsettled account at the property.
+                    </p>
+                  </div>
+                </label>
+
+                <label class="requirement-item" data-req-id="aleco-id">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Valid government ID and 2x2 photos</strong>
+                    <p>
+                      Photocopy of a valid government ID with three specimen signatures, plus two
+                      2x2 photos. One more for your spouse on a joint account.
+                    </p>
+                  </div>
+                </label>
+
+                <label class="requirement-item" data-req-id="aleco-sketch">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Location sketch and a neighbour's bill</strong>
+                    <p>
+                      A sketch showing the nearest tapping pole, a photo of your service entrance,
+                      and a photocopy of the nearest neighbour's ALECO bill.
+                    </p>
+                  </div>
+                </label>
+              </div>
+
+              <fieldset class="situation-filter">
+                <legend>Which describes you?</legend>
+                <p class="situation-filter-help">
+                  The rest of the list depends on your situation. Pick one to see only what applies.
+                </p>
+                <div class="situation-options">
+                  <label class="situation-option">
+                    <input type="radio" name="situation" value="owner" />
+                    <span>I own the lot</span>
+                  </label>
+                  <label class="situation-option">
+                    <input type="radio" name="situation" value="renter" />
+                    <span>I rent</span>
+                  </label>
+                  <label class="situation-option">
+                    <input type="radio" name="situation" value="settler" />
+                    <span>Public or occupied land</span>
+                  </label>
+                  <label class="situation-option">
+                    <input type="radio" name="situation" value="business" />
+                    <span>Business or company</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <p class="situation-prompt">
+                Pick your situation above to see the remaining documents.
+              </p>
+
+              <div class="requirements-grid requirements-grid--conditional">
+                <label
+                  class="requirement-item"
+                  data-req-id="aleco-ownership"
+                  data-situations="owner"
+                  hidden
+                >
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Proof of ownership</strong>
+                    <p>
+                      Transfer Certificate of Title, Deed of Absolute Sale, or Deed of Donation for
+                      the lot.
+                    </p>
+                  </div>
+                </label>
+
+                <label
+                  class="requirement-item"
+                  data-req-id="aleco-lease"
+                  data-situations="renter"
+                  hidden
+                >
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Lease contract and owner's consent</strong>
+                    <p>
+                      Notarized lease contract, a certification of consent from the lot owner, and a
+                      photocopy of the owner's ID.
+                    </p>
+                  </div>
+                </label>
+
+                <label
+                  class="requirement-item"
+                  data-req-id="aleco-occupy"
+                  data-situations="settler"
+                  hidden
+                >
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Certificate of residency or right to occupy</strong>
+                    <p>
+                      Issued by LGU Legazpi City, or a BAPA clearance. If the lot is private and you
+                      have permission, bring the owner's notarized waiver instead.
+                    </p>
+                  </div>
+                </label>
+
+                <label
+                  class="requirement-item"
+                  data-req-id="aleco-civil"
+                  data-situations="owner renter settler"
+                  hidden
+                >
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Birth certificate or marriage contract</strong>
+                    <p>
+                      Birth certificate if you are applying alone, marriage contract for a joint
+                      account.
+                    </p>
+                  </div>
+                </label>
+
+                <label
+                  class="requirement-item"
+                  data-req-id="aleco-corporate"
+                  data-situations="business"
+                  hidden
+                >
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Corporate registration documents</strong>
+                    <p>
+                      SEC or DTI registration, Mayor's business permit, and a board resolution or
+                      secretary's certificate naming the authorized signatory.
+                    </p>
+                  </div>
+                </label>
+
+                <label
+                  class="requirement-item"
+                  data-req-id="aleco-spa"
+                  data-situations="owner renter settler business"
+                  hidden
+                >
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Special Power of Attorney, only if someone files for you</strong>
+                    <p>
+                      Notarized SPA plus a valid government ID of your representative. Skip this if
+                      you are filing in person.
+                    </p>
+                  </div>
+                </label>
               </div>
             </div>
           </div>
 
-          <!-- Section: Announcements & Official Facebook Embed -->
-          <div id="electricity-announcements" style="scroll-margin-top: 130px; margin-bottom: 56px">
-            <div class="utility-section-title">
-              <i class="bi bi-megaphone-fill"></i>
-              <span>Official Announcements &amp; Power Advisory Feed</span>
-            </div>
+          <!-- Office and contacts -->
+          <div id="electricity-office" class="utility-block">
+            <h2 class="utility-section-title">
+              <i class="bi bi-building-fill" aria-hidden="true"></i>
+              <span>ALECO office and contacts</span>
+            </h2>
             <p class="utility-section-subtitle">
-              Live scheduled maintenance notices, emergency power restoration updates, and rate
-              advisories directly from Albay Electric Cooperative.
-            </p>
-
-            <div class="announcements-box">
-              <div class="announcements-header">
-                <div class="announcements-header-left">
-                  <h3>
-                    <i class="bi bi-facebook" style="color: #1877f2"></i>
-                    <span>Albay Electric Cooperative, Inc. (ALECO) Official Page</span>
-                  </h3>
-                  <p>
-                    Official Facebook updates, power curtailment alerts, and technical team field
-                    bulletins.
-                  </p>
-                </div>
-                <span class="fb-official-badge">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span>Verified Page @albayelectric</span>
-                </span>
-              </div>
-
-              <div class="announcements-content-grid">
-                <!-- Facebook Page Plugin Iframe Container -->
-                <div class="fb-embed-container">
-                  <iframe
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falbayelectric&tabs=timeline&width=500&height=540&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                    class="fb-embed-frame"
-                    title="ALECO Official Facebook Timeline"
-                    scrolling="no"
-                    frameborder="0"
-                    allowfullscreen="true"
-                    allow="
-                      autoplay;
-                      clipboard-write;
-                      encrypted-media;
-                      picture-in-picture;
-                      web-share;
-                    "
-                    loading="lazy"
-                  ></iframe>
-
-                  <!-- Graceful Fallback if blocked by browser privacy/extensions -->
-                  <noscript>
-                    <div class="fb-fallback-card">
-                      <div class="fb-fallback-icon"><i class="bi bi-facebook"></i></div>
-                      <h4>View Latest ALECO Announcements on Facebook</h4>
-                      <p>
-                        Stay updated with scheduled power interruptions, emergency restoration
-                        bulletins, and consumer advisories directly on ALECO's Facebook page.
-                      </p>
-                      <a
-                        href="https://www.facebook.com/albayelectric"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="fb-visit-btn"
-                      >
-                        <i class="bi bi-box-arrow-up-right"></i>
-                        <span>Visit @albayelectric on Facebook</span>
-                      </a>
-                    </div>
-                  </noscript>
-                </div>
-
-                <!-- Advisory Guide & Quick Info Sidebar -->
-                <div class="advisory-guide-sidebar">
-                  <div class="advisory-card">
-                    <h5>
-                      <i class="bi bi-cone-striped" style="color: var(--color-accent-text)"></i>
-                      Scheduled Power Outages
-                    </h5>
-                    <p>
-                      ALECO regularly posts 24 to 48-hour advance advisories for preventive
-                      maintenance, pole relocations, and vegetation clearing along line corridors.
-                    </p>
-                  </div>
-
-                  <div class="advisory-card">
-                    <h5>
-                      <i class="bi bi-cloud-lightning-rain-fill" style="color: #0284c7"></i> Typhoon
-                      &amp; Weather Alerts
-                    </h5>
-                    <p>
-                      During severe weather disturbances, ALECO operates round-the-clock emergency
-                      response teams with regular hourly restoration percentages posted per feeder.
-                    </p>
-                  </div>
-
-                  <div class="advisory-card" style="border-left: 4px solid #1877f2">
-                    <h5><i class="bi bi-link-45deg"></i> Direct Social Links</h5>
-                    <p style="margin-bottom: 12px">
-                      Access photos, feeder albums, and consumer advisories:
-                    </p>
-                    <a
-                      href="https://www.facebook.com/albayelectric"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="fb-visit-btn"
-                      style="
-                        width: 100%;
-                        justify-content: center;
-                        padding: 10px 16px;
-                        font-size: 0.88rem;
-                      "
-                    >
-                      <span>Open Facebook Page</span>
-                      <i class="bi bi-arrow-up-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Section: Office & Contact Info -->
-          <div id="electricity-office" style="scroll-margin-top: 130px; margin-bottom: 32px">
-            <div class="utility-section-title">
-              <i class="bi bi-building-fill"></i>
-              <span>ALECO Office Location &amp; Customer Support</span>
-            </div>
-            <p class="utility-section-subtitle">
-              Visit the main cooperative headquarters or reach out through official institutional
-              communication channels.
+              Visit the cooperative headquarters or reach it through its official channels.
             </p>
 
             <div class="utility-office-card">
               <div class="office-info-item">
-                <div class="office-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="office-info-icon">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                </div>
                 <div class="office-info-content">
-                  <h5>Main Office Address</h5>
-                  <p>ALECO Compound, Washington Drive, Legazpi City, 4500 Albay, Philippines</p>
+                  <h3>Main office</h3>
+                  <p>ALECO Compound, Washington Drive, Legazpi City, 4500 Albay</p>
                   <a
                     href="https://maps.google.com/?q=Albay+Electric+Cooperative+Washington+Drive+Legazpi+City"
                     target="_blank"
                     rel="noopener noreferrer"
+                    >View on Google Maps</a
                   >
-                    <i class="bi bi-map"></i> View on Google Maps
-                  </a>
                 </div>
               </div>
 
               <div class="office-info-item">
-                <div class="office-info-icon"><i class="bi bi-clock-fill"></i></div>
+                <div class="office-info-icon">
+                  <i class="bi bi-clock-fill" aria-hidden="true"></i>
+                </div>
                 <div class="office-info-content">
-                  <h5>Business Hours</h5>
-                  <p>Monday to Friday: 8:00 AM - 5:00 PM</p>
-                  <p class="status-caption--positive">
-                    Technical Dispatch: 24 Hours / 7 Days
+                  <h3>Hours</h3>
+                  <p>Monday to Friday, 8:00 AM to 5:00 PM</p>
+                  <p class="status-caption status-caption--positive">
+                    Technical dispatch runs 24 hours, 7 days
                   </p>
                 </div>
               </div>
 
               <div class="office-info-item">
-                <div class="office-info-icon"><i class="bi bi-envelope-fill"></i></div>
+                <div class="office-info-icon">
+                  <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                </div>
                 <div class="office-info-content">
-                  <h5>Email &amp; Digital Inquiries</h5>
+                  <h3>Email and website</h3>
                   <p>
                     <a href="mailto:customerservice@albayelectric.com"
                       >customerservice@albayelectric.com</a
                     >
                   </p>
                   <p>
-                    Official Website:
                     <a href="https://albayelectric.com" target="_blank" rel="noopener noreferrer"
                       >albayelectric.com</a
                     >
@@ -1071,21 +971,16 @@
               </div>
 
               <div class="office-info-item">
-                <div
-                  class="office-info-icon"
-                  style="background: rgba(220, 38, 38, 0.1); color: #b91c1c"
-                >
-                  <i class="bi bi-shield-exclamation"></i>
+                <div class="office-info-icon office-info-icon--alert">
+                  <i class="bi bi-shield-exclamation" aria-hidden="true"></i>
                 </div>
                 <div class="office-info-content">
-                  <h5>Complaints &amp; Red-Tape Escalation</h5>
-                  <p style="margin-bottom: 8px">
-                    For unresolved disputes, billing complaints, or delayed services:
-                  </p>
-                  <div style="display: flex; flex-direction: column; gap: 6px">
+                  <h3>If ALECO does not respond</h3>
+                  <p>For unresolved disputes, billing complaints, or delayed service:</p>
+                  <div class="complaint-actions">
                     <a href="tel:8888" class="complaint-hotline-btn">
-                      <i class="bi bi-telephone-fill"></i>
-                      <span><strong>8888</strong> Citizens' Complaint Center (Toll-Free 24/7)</span>
+                      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                      <span><strong>8888</strong> Citizens' Complaint Center, toll-free 24/7</span>
                     </a>
                     <a
                       href="https://egov.ph"
@@ -1093,9 +988,8 @@
                       rel="noopener noreferrer"
                       class="complaint-egov-btn"
                     >
-                      <i class="bi bi-phone-fill"></i>
-                      <span><strong>eGov PH App (eReport)</strong> • egov.ph</span>
-                      <i class="bi bi-box-arrow-up-right" style="font-size: 0.75rem"></i>
+                      <i class="bi bi-phone-fill" aria-hidden="true"></i>
+                      <span><strong>eGov PH app</strong>, eReport</span>
                     </a>
                   </div>
                 </div>
@@ -1106,642 +1000,493 @@
       </section>
 
       <!-- ===================================================================
-           SECTION 2: WATER (Legazpi City Water District - LCWD)
+           WATER (Legazpi City Water District - LCWD)
            =================================================================== -->
-      <section
-        id="water-section"
-        class="section water-section"
-        style="display: none"
-        role="tabpanel"
-        aria-labelledby="tab-water"
-      >
+      <section id="water-section" class="section water-section" hidden>
         <div class="container">
-          <!-- Emergency Hotline Banner (Water) -->
-          <div class="utility-emergency-banner water-emergency">
+          <!-- Emergency Hotlines -->
+          <div class="utility-emergency-banner">
             <div class="utility-emergency-info">
               <div class="utility-emergency-icon">
-                <i class="bi bi-droplet-half"></i>
+                <i class="bi bi-droplet-half" aria-hidden="true"></i>
               </div>
               <div class="utility-emergency-text">
-                <h4>LCWD 24/7 Water Leak &amp; Interruption Hotlines</h4>
+                <h2>LCWD 24/7 leak and interruption hotlines</h2>
                 <p>
-                  Report mainline pipe bursts, water contamination, low pressure, or request
-                  emergency water tanker delivery.
+                  Report mainline bursts, contamination, low pressure, or request an emergency water
+                  tanker.
                 </p>
               </div>
             </div>
             <div class="utility-emergency-actions">
-              <a href="tel:0527423377" class="emergency-dial-btn">
-                <i class="bi bi-telephone-outbound-fill"></i>
-                <span>(052) 742-3377</span>
-              </a>
-              <a href="tel:09175582377" class="emergency-dial-btn">
-                <i class="bi bi-phone-vibrate-fill"></i>
-                <span>0917 558 2377</span>
-              </a>
-              <button
-                type="button"
-                class="copy-hotline-btn"
-                data-phone="(052) 742-3377 / 0917-558-2377"
-                title="Copy hotlines"
-              >
-                <i class="bi bi-copy"></i>
-                <span>Copy</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Section: How to Apply (Water) -->
-          <div id="water-apply" style="scroll-margin-top: 130px; margin-bottom: 56px">
-            <div class="utility-section-title">
-              <i class="bi bi-file-earmark-text-fill"></i>
-              <span>How to Apply for a New LCWD Water Service Connection</span>
-            </div>
-            <p class="utility-section-subtitle">
-              Step-by-step guide for residential, commercial, and institutional water tapping in
-              Legazpi City.
-            </p>
-
-            <!-- 4-Step Water Application Pipeline -->
-            <div class="application-pipeline">
-              <div class="pipeline-step-card">
-                <div class="pipeline-step-number">1</div>
-                <h4>Orientation &amp; Application Form</h4>
-                <p>
-                  Attend the applicant briefing at the LCWD Commercial Division (Bitano) and secure
-                  the New Water Service Application Form.
-                </p>
-                <div class="pipeline-step-meta">
-                  <i class="bi bi-person-video3"></i>
-                  <span>Commercial Division Desk</span>
-                </div>
+              <div class="emergency-number">
+                <a href="tel:0527423377" class="emergency-dial-btn">
+                  <i class="bi bi-telephone-outbound-fill" aria-hidden="true"></i>
+                  <span>(052) 742-3377</span>
+                </a>
+                <button
+                  type="button"
+                  class="copy-hotline-btn"
+                  data-phone="(052) 742-3377"
+                  aria-label="Copy (052) 742-3377"
+                >
+                  <i class="bi bi-copy" aria-hidden="true"></i>
+                </button>
               </div>
-
-              <div class="pipeline-step-card">
-                <div class="pipeline-step-number">2</div>
-                <h4>Site Inspection &amp; Pressure Test</h4>
-                <p>
-                  An LCWD technical inspector surveys your site to determine the nearest
-                  distribution mainline, tapping distance, and water pressure.
-                </p>
-                <div class="pipeline-step-meta">
-                  <i class="bi bi-tools"></i>
-                  <span>Inspection: Within 24-48 Hours</span>
-                </div>
-              </div>
-
-              <div class="pipeline-step-card">
-                <div class="pipeline-step-number">3</div>
-                <h4>Plumbing &amp; Fee Settlement</h4>
-                <p>
-                  Complete standard private house plumbing up to the meter stand and settle the
-                  connection fee, meter deposit, and inspection charges.
-                </p>
-                <div class="pipeline-step-meta">
-                  <i class="bi bi-cash-stack"></i>
-                  <span>LCWD Cashier (Bitano)</span>
-                </div>
-              </div>
-
-              <div class="pipeline-step-card">
-                <div class="pipeline-step-number">4</div>
-                <h4>Mainline Tapping &amp; Meter Install</h4>
-                <p>
-                  The LCWD installation team installs the calibrated water meter, connects service
-                  pipes to the mainline, and commences water flow.
-                </p>
-                <div class="pipeline-step-meta">
-                  <i class="bi bi-droplet-fill"></i>
-                  <span>Installation: 2 - 4 Working Days</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Official Application Portals Banner (Water) -->
-            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px">
-              <a
-                href="https://legazpicitywater.gov.ph/water-connection-application-and-other-services/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="complaint-egov-btn"
-                style="
-                  padding: 10px 16px;
-                  font-weight: 700;
-                  color: #0284c7 !important;
-                  border-color: #0284c7;
-                "
-              >
-                <i class="bi bi-box-arrow-up-right"></i>
-                <span>LCWD Online Water Connection Application Portal</span>
-              </a>
-              <a
-                href="https://www.facebook.com/legazpicity.waterdistrict/posts/apply-your-service-connection-and-selected-lcwd-services-onlineyou-may-access-th/451654733882335/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="complaint-egov-btn"
-                style="padding: 10px 16px; font-weight: 600"
-              >
-                <i class="bi bi-facebook" style="color: #1877f2"></i>
-                <span>Official LCWD Online Service Announcement</span>
-              </a>
-            </div>
-
-            <!-- Interactive Requirements Checklist (Water) -->
-            <div class="requirements-container" id="checklist-lcwd">
-              <div class="requirements-header">
-                <h3>
-                  <i class="bi bi-card-checklist" style="color: #0284c7"></i>
-                  <span>Official LCWD Application Requirements Checklist</span>
-                </h3>
-                <span class="requirements-counter">0 of 5 Ready</span>
-              </div>
-              <div class="requirements-grid">
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>Duly Accomplished LCWD Application Form</strong>
-                    <p>
-                      Submitted online via the LCWD web portal or at the Commercial Services
-                      Division (Rizal St., Bitano).
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>Proof of Ownership or Notarized Contract of Lease</strong>
-                    <p>
-                      Transfer Certificate of Title (TCT), Deed of Absolute Sale, or Notarized Lease
-                      Contract with Landowner Consent.
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>Valid Government-Issued Identification</strong>
-                    <p>
-                      Photocopy of PhilID (National ID), Passport, Driver's License, SSS/GSIS, or
-                      Voter's ID with 3 specimen signatures.
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>Site Inspection &amp; Pressure Assessment</strong>
-                    <p>
-                      Conducted by an LCWD Technical Inspector to verify mainline tapping distance,
-                      elevation, and pressure.
-                    </p>
-                  </div>
-                </label>
-
-                <label class="requirement-item">
-                  <input type="checkbox" />
-                  <div class="requirement-text">
-                    <strong>Approved Private House Plumbing</strong>
-                    <p>
-                      Completion of standard private service line piping up to the designated water
-                      meter stand.
-                    </p>
-                  </div>
-                </label>
+              <div class="emergency-number">
+                <a href="tel:09175582377" class="emergency-dial-btn">
+                  <i class="bi bi-phone-vibrate-fill" aria-hidden="true"></i>
+                  <span>0917 558 2377</span>
+                </a>
+                <button
+                  type="button"
+                  class="copy-hotline-btn"
+                  data-phone="0917 558 2377"
+                  aria-label="Copy 0917 558 2377"
+                >
+                  <i class="bi bi-copy" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- Section: How to Pay (Water) -->
-          <div id="water-pay" style="scroll-margin-top: 130px; margin-bottom: 56px">
-            <div class="utility-section-title">
-              <i class="bi bi-wallet2"></i>
-              <span>How to Pay Your LCWD Water Bill</span>
-            </div>
+          <!-- What do you need to do? -->
+          <h2 class="triage-heading">What do you need to do?</h2>
+          <div class="triage-row">
+            <a href="#water-status" class="triage-tile" data-section="status">
+              <i class="bi bi-droplet" aria-hidden="true"></i>
+              <span class="triage-tile-label">No water</span>
+              <span class="triage-tile-sub">Check interruption advisories</span>
+            </a>
+            <a href="#water-pay" class="triage-tile" data-section="pay">
+              <i class="bi bi-wallet2" aria-hidden="true"></i>
+              <span class="triage-tile-label">Pay my bill</span>
+              <span class="triage-tile-sub">E-wallets, banks, payment centers</span>
+            </a>
+            <a href="#water-apply" class="triage-tile" data-section="apply">
+              <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+              <span class="triage-tile-label">New connection</span>
+              <span class="triage-tile-sub">Steps and documents to bring</span>
+            </a>
+            <a href="#water-office" class="triage-tile" data-section="office">
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              <span class="triage-tile-label">Office &amp; contacts</span>
+              <span class="triage-tile-sub">Address, hours, complaints</span>
+            </a>
+          </div>
+
+          <!-- Interruptions and advisories -->
+          <div id="water-status" class="utility-block">
+            <h2 class="utility-section-title">
+              <i class="bi bi-broadcast" aria-hidden="true"></i>
+              <span>Is my area affected?</span>
+            </h2>
             <p class="utility-section-subtitle">
-              Pay conveniently online via mobile e-wallets, bank portals, or over-the-counter
-              payment centers in Legazpi City.
+              Scheduled interruptions, pipeline maintenance, valve repairs, and water quality
+              notices.
             </p>
 
-            <!-- Official Payment Advisory Reference Badge (Water) -->
-            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px">
-              <a
-                href="https://www.facebook.com/legazpicity.waterdistrict/posts/%F0%9D%90%92%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%AD%F0%9D%90%A5%F0%9D%90%9E-%F0%9D%90%B2%F0%9D%90%A8%F0%9D%90%AE%F0%9D%90%AB-%F0%9D%90%B0%F0%9D%90%9A%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%AB-%F0%9D%90%9B%F0%9D%90%A2%F0%9D%90%A5%F0%9D%90%A5-%F0%9D%90%B0%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%A1-%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%9Echeck-out-the-updated-list-of-%F0%9D%90%84%F0%9D%90%82-%F0%9D%90%8F%F0%9D%90%9A%F0%9D%90%B2-%F0%9D%90%A9%F0%9D%90%9A%F0%9D%90%B2%F0%9D%90%A6%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD-%F0%9D%90%9C%F0%9D%90%A1%F0%9D%90%9A/967853988929071/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="complaint-egov-btn"
-                style="padding: 10px 16px; font-weight: 600"
-              >
-                <i class="bi bi-facebook" style="color: #1877f2"></i>
-                <span>Official LCWD Payment Channels &amp; EC-Pay Advisory</span>
-                <i class="bi bi-box-arrow-up-right"></i>
-              </a>
+            <h3 class="advisory-heading">Current advisories</h3>
+            <div class="advisory-list" data-utility="water" aria-live="polite">
+              <div class="advisory-empty">
+                <p class="advisory-empty-title">No advisory recorded here right now.</p>
+                <p>
+                  LCWD posts interruption notices on its Facebook page as they happen. Open the live
+                  feed below to check.
+                </p>
+              </div>
             </div>
 
-            <!-- Categorized Payment Grid (Water - Balanced 2x2 Bento) -->
+            <div class="advisory-support">
+              <div class="fb-fallback-card">
+                <h4>LCWD on Facebook</h4>
+                <p>
+                  LCWD posts its maintenance advisories, emergency repair bulletins, and tanker
+                  schedules to its Facebook page as they happen.
+                </p>
+                <div class="fb-fallback-actions">
+                  <a
+                    href="https://www.facebook.com/legazpicity.waterdistrict"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="fb-visit-btn"
+                  >
+                    <i class="bi bi-facebook" aria-hidden="true"></i>
+                    <span>Open @legazpicity.waterdistrict on Facebook</span>
+                  </a>
+                  <button type="button" class="fb-load-btn" aria-controls="fb-slot-water">
+                    Load the live feed here
+                  </button>
+                </div>
+                <div
+                  class="fb-embed-slot"
+                  id="fb-slot-water"
+                  hidden
+                  data-title="LCWD official Facebook timeline"
+                  data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flegazpicity.waterdistrict&tabs=timeline&width=500&height=540&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                ></div>
+              </div>
+
+              <div class="advisory-guide-sidebar">
+                <div class="advisory-card">
+                  <h4>Scheduled interruptions</h4>
+                  <p>
+                    LCWD posts 24-hour advance notices naming the affected barangays, the duration,
+                    and how much water to store.
+                  </p>
+                </div>
+                <div class="advisory-card">
+                  <h4>Water tanker rationing</h4>
+                  <p>
+                    During long mainline emergencies, LCWD coordinates with CDRRMO and the barangays
+                    for free tanker delivery.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pay -->
+          <div id="water-pay" class="utility-block">
+            <h2 class="utility-section-title">
+              <i class="bi bi-wallet2" aria-hidden="true"></i>
+              <span>Pay your LCWD bill</span>
+            </h2>
+            <p class="utility-section-subtitle">
+              E-wallets, bank portals, and over-the-counter payment centers in Legazpi City.
+            </p>
+
+            <div class="posting-notice posting-notice--delayed">
+              <p class="posting-notice-value">Payments take 2 to 3 days to post</p>
+              <p>
+                E-wallet and bank payments reach LCWD after two to three working days. If you are
+                close to a disconnection date, pay at the LCWD office instead. You need your 8-digit
+                account number.
+              </p>
+            </div>
+
             <div class="payment-grid">
               <div class="payment-card">
                 <div class="payment-card-header">
-                  <div
-                    class="payment-icon-box"
-                    style="background: rgba(2, 132, 199, 0.1); color: #0369a1"
-                  >
-                    <i class="bi bi-phone"></i>
+                  <div class="payment-icon-box">
+                    <i class="bi bi-phone" aria-hidden="true"></i>
                   </div>
-                  <div>
-                    <h4>E-Wallets &amp; Digital Apps</h4>
-                    <span class="status-caption--positive"
-                      >2-3 Days Posting Time</span
-                    >
-                  </div>
+                  <h3>E-wallets and mobile apps</h3>
                 </div>
                 <div class="payment-card-body">
                   <div class="payment-channel-list">
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> GCash</span
-                      >
+                      <span class="payment-channel-name">GCash</span>
                       <span class="payment-channel-guide"
                         >Pay Bills &gt; Water Utilities &gt; LCWD</span
                       >
                     </div>
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> GoTyme Bank</span
-                      >
-                      <span class="payment-channel-guide">Pay Bills &gt; Utilities &gt; LCWD</span>
-                    </div>
-                    <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> Maya</span
-                      >
+                      <span class="payment-channel-name">Maya</span>
                       <span class="payment-channel-guide">Bills Payment &gt; Water Utilities</span>
                     </div>
+                    <div class="payment-channel-item">
+                      <span class="payment-channel-name">GoTyme Bank</span>
+                      <span class="payment-channel-guide">Pay Bills &gt; Utilities &gt; LCWD</span>
+                    </div>
                   </div>
                   <div class="payment-pills">
-                    <span class="payment-pill">8-Digit Account #</span>
-                    <span class="payment-pill">Mobile E-Wallets</span>
+                    <span class="payment-pill">8-digit account number</span>
                   </div>
                 </div>
               </div>
 
               <div class="payment-card">
                 <div class="payment-card-header">
-                  <div
-                    class="payment-icon-box"
-                    style="background: rgba(2, 132, 199, 0.1); color: #0369a1"
-                  >
-                    <i class="bi bi-shop"></i>
+                  <div class="payment-icon-box">
+                    <i class="bi bi-shop" aria-hidden="true"></i>
                   </div>
-                  <div>
-                    <h4>EC-Pay &amp; Payment Centers</h4>
-                    <span
-                      style="font-size: 0.82rem; color: var(--color-text-light); font-weight: 600"
-                      >Authorized Retail Merchants</span
-                    >
-                  </div>
+                  <h3>EC-Pay and payment centers</h3>
                 </div>
                 <div class="payment-card-body">
                   <div class="payment-channel-list">
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> ECPay Outlets</span
-                      >
-                      <span class="payment-channel-guide">7-Eleven CLIQQ &amp; Partner Stores</span>
+                      <span class="payment-channel-name">ECPay outlets</span>
+                      <span class="payment-channel-guide">7-Eleven CLIQQ and partner stores</span>
                     </div>
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> Bayad Center</span
-                      >
-                      <span class="payment-channel-guide"
-                        >Outlets, SM Bills Pay &amp; Robinsons</span
-                      >
+                      <span class="payment-channel-name">Bayad Center</span>
+                      <span class="payment-channel-guide">Outlets, SM Bills Pay, Robinsons</span>
                     </div>
-                  </div>
-                  <div class="payment-pills">
-                    <span class="payment-pill">Cash Accepted</span>
-                    <span class="payment-pill">Receipt Provided</span>
                   </div>
                 </div>
               </div>
 
               <div class="payment-card">
                 <div class="payment-card-header">
-                  <div
-                    class="payment-icon-box"
-                    style="background: rgba(2, 132, 199, 0.1); color: #0369a1"
-                  >
-                    <i class="bi bi-bank"></i>
+                  <div class="payment-icon-box">
+                    <i class="bi bi-bank" aria-hidden="true"></i>
                   </div>
-                  <div>
-                    <h4>Partner Banks</h4>
-                    <span
-                      style="font-size: 0.82rem; color: var(--color-text-light); font-weight: 600"
-                      >Over-the-Counter &amp; Online</span
-                    >
-                  </div>
+                  <h3>Partner banks</h3>
                 </div>
                 <div class="payment-card-body">
                   <div class="payment-channel-list">
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> LandBank</span
-                      >
-                      <span class="payment-channel-guide">Link.BizPortal &amp; Branch Tellers</span>
+                      <span class="payment-channel-name">LandBank</span>
+                      <span class="payment-channel-guide">Link.BizPortal and branch tellers</span>
                     </div>
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> DBP</span
-                      >
+                      <span class="payment-channel-name">DBP</span>
                       <span class="payment-channel-guide">Development Bank of the Philippines</span>
                     </div>
                   </div>
-                  <div class="payment-pills">
-                    <span class="payment-pill">Link.BizPortal</span>
-                    <span class="payment-pill">Bank Portals</span>
-                  </div>
                 </div>
               </div>
 
               <div class="payment-card">
                 <div class="payment-card-header">
-                  <div
-                    class="payment-icon-box"
-                    style="background: rgba(2, 132, 199, 0.1); color: #0369a1"
-                  >
-                    <i class="bi bi-building"></i>
+                  <div class="payment-icon-box">
+                    <i class="bi bi-building" aria-hidden="true"></i>
                   </div>
-                  <div>
-                    <h4>LCWD Main Office &amp; Hubs</h4>
-                    <span class="status-caption--urgent"
-                      >Required for Disconnection Notices</span
-                    >
-                  </div>
+                  <h3>LCWD offices</h3>
                 </div>
                 <div class="payment-card-body">
                   <div class="payment-channel-list">
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> Main Building</span
-                      >
+                      <span class="payment-channel-name">Main building</span>
                       <span class="payment-channel-guide">Rizal Street, Bitano, Legazpi City</span>
                     </div>
                     <div class="payment-channel-item">
-                      <span class="payment-channel-name"
-                        ><i class="bi bi-check-circle-fill"></i> Sub-Office</span
-                      >
-                      <span class="payment-channel-guide">City Hall Compound Annex Desk</span>
+                      <span class="payment-channel-name">Sub-office</span>
+                      <span class="payment-channel-guide">City Hall compound annex desk</span>
                     </div>
                   </div>
-                  <p
-                    style="
-                      font-size: 0.84rem;
-                      color: var(--color-text-light);
-                      margin: 10px 0 0 0;
-                      line-height: 1.4;
-                    "
-                  >
-                    Hours: Monday to Friday, 8:00 AM - 5:00 PM (Continuous service).
+                  <p class="payment-card-note">
+                    Monday to Friday, 8:00 AM to 5:00 PM, continuous service.
                   </p>
                   <div class="payment-pills">
-                    <span class="payment-pill">Same-Day Posting</span>
-                    <span class="payment-pill">Reconnection Processing</span>
+                    <span class="payment-pill payment-pill--required">
+                      Posts same day, and required for reconnection
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Visual Bill Explainer Box (Water) -->
             <div class="bill-guide-box">
-              <div class="bill-guide-header">
-                <i class="bi bi-info-circle-fill" style="font-size: 1.5rem; color: #0284c7"></i>
-                <h3>How to Read Your LCWD Water Bill</h3>
-              </div>
+              <h3 class="bill-guide-header">Reading your LCWD bill</h3>
               <div class="bill-guide-grid">
                 <div class="bill-guide-tip">
-                  <h5><i class="bi bi-hash"></i> Account Number (8 Digits)</h5>
+                  <h4>8-digit account number</h4>
                   <p>
-                    Displayed at the upper left section of your water bill. Use this exact 8-digit
-                    number for online and e-wallet payments.
+                    Upper left of your water bill. This is the number every e-wallet and bank portal
+                    asks for.
                   </p>
                 </div>
                 <div class="bill-guide-tip">
-                  <h5><i class="bi bi-water"></i> Current &amp; Previous Reading</h5>
+                  <h4>Current and previous reading</h4>
                   <p>
-                    Indicates cubic meters (cu.m) consumed during the billing cycle. Subtract
-                    previous reading from current reading to verify your volume.
+                    Cubic meters consumed this billing cycle. Subtract the previous reading from the
+                    current one to check the volume yourself.
                   </p>
                 </div>
                 <div class="bill-guide-tip">
-                  <h5><i class="bi bi-calendar-x"></i> Due Date &amp; Disconnection Notice</h5>
+                  <h4>Due date</h4>
                   <p>
-                    Water bills must be paid within 15 days of reading. Overdue accounts after the
-                    disconnection date incur a penalty and reconnection fee.
+                    Water bills are due within 15 days of the reading. Overdue accounts past the
+                    disconnection date incur a penalty and a reconnection fee.
                   </p>
                 </div>
               </div>
             </div>
+
+            <p class="utility-source-link">
+              <a
+                href="https://www.facebook.com/legazpicity.waterdistrict/posts/%F0%9D%90%92%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%AD%F0%9D%90%A5%F0%9D%90%9E-%F0%9D%90%B2%F0%9D%90%A8%F0%9D%90%AE%F0%9D%90%AB-%F0%9D%90%B0%F0%9D%90%9A%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%AB-%F0%9D%90%9B%F0%9D%90%A2%F0%9D%90%A5%F0%9D%90%A5-%F0%9D%90%B0%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%A1-%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%9Echeck-out-the-updated-list-of-%F0%9D%90%84%F0%9D%90%82-%F0%9D%90%8F%F0%9D%90%9A%F0%9D%90%B2-%F0%9D%90%A9%F0%9D%90%9A%F0%9D%90%B2%F0%9D%90%A6%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD-%F0%9D%90%9C%F0%9D%90%A1%F0%9D%90%9A/967853988929071/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LCWD's own list of payment channels</a
+              >
+            </p>
           </div>
 
-          <!-- Section: Announcements & Official Facebook Embed (Water) -->
-          <div id="water-announcements" style="scroll-margin-top: 130px; margin-bottom: 56px">
-            <div class="utility-section-title">
-              <i class="bi bi-megaphone-fill"></i>
-              <span>Official Water Advisories &amp; Maintenance Notices</span>
-            </div>
+          <!-- New connection -->
+          <div id="water-apply" class="utility-block">
+            <h2 class="utility-section-title">
+              <i class="bi bi-file-earmark-text-fill" aria-hidden="true"></i>
+              <span>Apply for a new LCWD connection</span>
+            </h2>
             <p class="utility-section-subtitle">
-              Stay informed on scheduled water service interruptions, pipeline maintenance, valve
-              repairs, and water quality reports.
+              For residential, commercial, and institutional water tapping in Legazpi City.
             </p>
 
-            <div class="announcements-box">
-              <div class="announcements-header">
-                <div class="announcements-header-left">
-                  <h3>
-                    <i class="bi bi-facebook" style="color: #1877f2"></i>
-                    <span>Legazpi City Water District (LCWD) Official Facebook Page</span>
-                  </h3>
-                  <p>
-                    Official water maintenance advisories, emergency repair bulletins, and
-                    conservation tips.
-                  </p>
-                </div>
-                <span class="fb-official-badge">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span>Official Page @legazpicity.waterdistrict</span>
-                </span>
+            <ol class="application-pipeline">
+              <li class="pipeline-step-card">
+                <h3>Orientation and application form</h3>
+                <p>
+                  Attend the applicant briefing at the LCWD Commercial Division in Bitano and
+                  collect the new service application form.
+                </p>
+                <p class="pipeline-step-meta">Commercial Division desk</p>
+              </li>
+              <li class="pipeline-step-card">
+                <h3>Site inspection and pressure test</h3>
+                <p>
+                  An LCWD inspector surveys your site for the nearest distribution mainline, the
+                  tapping distance, and water pressure.
+                </p>
+                <p class="pipeline-step-meta">Within 24 to 48 hours</p>
+              </li>
+              <li class="pipeline-step-card">
+                <h3>Plumbing and fees</h3>
+                <p>
+                  Finish the private plumbing up to the meter stand, then settle the connection fee,
+                  meter deposit, and inspection charges.
+                </p>
+                <p class="pipeline-step-meta">LCWD cashier, Bitano</p>
+              </li>
+              <li class="pipeline-step-card">
+                <h3>Mainline tapping and meter</h3>
+                <p>
+                  The installation team fits the calibrated meter, connects your service pipe to the
+                  mainline, and starts the flow.
+                </p>
+                <p class="pipeline-step-meta">2 to 4 working days</p>
+              </li>
+            </ol>
+
+            <div class="utility-portal-links">
+              <a
+                href="https://legazpicitywater.gov.ph/water-connection-application-and-other-services/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="complaint-egov-btn"
+              >
+                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                <span>LCWD online application portal</span>
+              </a>
+            </div>
+
+            <div class="requirements-container" id="checklist-lcwd">
+              <div class="requirements-header">
+                <h3>Documents to bring</h3>
+                <span class="requirements-counter" aria-live="polite">0 of 5 ready</span>
               </div>
-
-              <div class="announcements-content-grid">
-                <!-- Facebook Page Plugin Iframe Container (LCWD) -->
-                <div class="fb-embed-container">
-                  <iframe
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flegazpicity.waterdistrict&tabs=timeline&width=500&height=540&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                    class="fb-embed-frame"
-                    title="LCWD Official Facebook Timeline"
-                    scrolling="no"
-                    frameborder="0"
-                    allowfullscreen="true"
-                    allow="
-                      autoplay;
-                      clipboard-write;
-                      encrypted-media;
-                      picture-in-picture;
-                      web-share;
-                    "
-                    loading="lazy"
-                  ></iframe>
-
-                  <!-- Graceful Fallback if blocked -->
-                  <noscript>
-                    <div class="fb-fallback-card">
-                      <div class="fb-fallback-icon"><i class="bi bi-facebook"></i></div>
-                      <h4>View Latest LCWD Water Advisories on Facebook</h4>
-                      <p>
-                        Read real-time maintenance updates, pressure adjustments, and emergency
-                        tanker schedules directly on LCWD's official Facebook page.
-                      </p>
-                      <a
-                        href="https://www.facebook.com/legazpicity.waterdistrict"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="fb-visit-btn"
-                      >
-                        <i class="bi bi-box-arrow-up-right"></i>
-                        <span>Visit @legazpicity.waterdistrict on Facebook</span>
-                      </a>
-                    </div>
-                  </noscript>
-                </div>
-
-                <!-- Advisory Guide & Quick Info Sidebar (LCWD) -->
-                <div class="advisory-guide-sidebar">
-                  <div class="advisory-card">
-                    <h5>
-                      <i class="bi bi-cone-striped" style="color: #0284c7"></i> Scheduled Water
-                      Interruptions
-                    </h5>
+              <div class="requirements-grid">
+                <label class="requirement-item" data-req-id="lcwd-form">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>LCWD application form</strong>
                     <p>
-                      LCWD posts 24-hour advance notices detailing exact barangays affected,
-                      duration, and recommended water storage guidelines.
+                      Submitted through the LCWD web portal, or at the Commercial Services Division
+                      on Rizal Street, Bitano.
                     </p>
                   </div>
+                </label>
 
-                  <div class="advisory-card">
-                    <h5>
-                      <i class="bi bi-truck status-icon--positive"></i> Water Tanker Rationing
-                    </h5>
+                <label class="requirement-item" data-req-id="lcwd-ownership">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Proof of ownership or a lease contract</strong>
                     <p>
-                      During extended mainline emergencies or major pipe replacement works, LCWD
-                      coordinates with CDRRMO and barangays for free water tanker delivery.
+                      Transfer Certificate of Title, Deed of Absolute Sale, or a notarized lease
+                      contract with the landowner's consent.
                     </p>
                   </div>
+                </label>
 
-                  <div class="advisory-card" style="border-left: 4px solid #1877f2">
-                    <h5><i class="bi bi-link-45deg"></i> Direct Official Link</h5>
-                    <p style="margin-bottom: 12px">
-                      Visit LCWD on Facebook for instant updates and customer support messaging:
+                <label class="requirement-item" data-req-id="lcwd-id">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Valid government ID</strong>
+                    <p>
+                      Photocopy of your PhilID, passport, driver's licence, SSS, GSIS, or voter's ID
+                      with three specimen signatures.
                     </p>
-                    <a
-                      href="https://www.facebook.com/legazpicity.waterdistrict"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="fb-visit-btn"
-                      style="
-                        width: 100%;
-                        justify-content: center;
-                        padding: 10px 16px;
-                        font-size: 0.88rem;
-                      "
-                    >
-                      <span>Open LCWD Facebook</span>
-                      <i class="bi bi-arrow-up-right"></i>
-                    </a>
                   </div>
-                </div>
+                </label>
+
+                <label class="requirement-item" data-req-id="lcwd-inspection">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Site inspection and pressure assessment</strong>
+                    <p>
+                      Carried out by an LCWD technical inspector to verify the tapping distance,
+                      elevation, and pressure at your site.
+                    </p>
+                  </div>
+                </label>
+
+                <label class="requirement-item" data-req-id="lcwd-plumbing">
+                  <input type="checkbox" />
+                  <div class="requirement-text">
+                    <strong>Private plumbing finished</strong>
+                    <p>
+                      Your service line piping completed up to the designated water meter stand.
+                    </p>
+                  </div>
+                </label>
               </div>
             </div>
           </div>
 
-          <!-- Section: Office & Contact Info (Water) -->
-          <div id="water-office" style="scroll-margin-top: 130px; margin-bottom: 32px">
-            <div class="utility-section-title">
-              <i class="bi bi-building-fill"></i>
-              <span>LCWD Office Location &amp; Customer Support</span>
-            </div>
+          <!-- Office and contacts -->
+          <div id="water-office" class="utility-block">
+            <h2 class="utility-section-title">
+              <i class="bi bi-building-fill" aria-hidden="true"></i>
+              <span>LCWD office and contacts</span>
+            </h2>
             <p class="utility-section-subtitle">
-              Contact or visit the Legazpi City Water District headquarters in Bitano, Legazpi City.
+              Contact or visit the Legazpi City Water District headquarters in Bitano.
             </p>
 
             <div class="utility-office-card">
               <div class="office-info-item">
-                <div
-                  class="office-info-icon"
-                  style="background: rgba(2, 132, 199, 0.1); color: #0369a1"
-                >
-                  <i class="bi bi-geo-alt-fill"></i>
+                <div class="office-info-icon">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
                 </div>
                 <div class="office-info-content">
-                  <h5>Main Office Address</h5>
-                  <p>LCWD Building, Rizal Street, Bitano, Legazpi City, 4500 Albay, Philippines</p>
+                  <h3>Main office</h3>
+                  <p>LCWD Building, Rizal Street, Bitano, Legazpi City, 4500 Albay</p>
                   <a
                     href="https://maps.google.com/?q=Legazpi+City+Water+District+Rizal+Street+Bitano+Legazpi+City"
                     target="_blank"
                     rel="noopener noreferrer"
+                    >View on Google Maps</a
                   >
-                    <i class="bi bi-map"></i> View on Google Maps
-                  </a>
                 </div>
               </div>
 
               <div class="office-info-item">
-                <div
-                  class="office-info-icon"
-                  style="background: rgba(2, 132, 199, 0.1); color: #0369a1"
-                >
-                  <i class="bi bi-clock-fill"></i>
+                <div class="office-info-icon">
+                  <i class="bi bi-clock-fill" aria-hidden="true"></i>
                 </div>
                 <div class="office-info-content">
-                  <h5>Office Hours</h5>
-                  <p>Monday to Friday: 8:00 AM - 5:00 PM (No Noon Break)</p>
-                  <p class="status-caption--positive">
-                    24/7 Leak Dispatch &amp; Hotline Response
+                  <h3>Hours</h3>
+                  <p>Monday to Friday, 8:00 AM to 5:00 PM, no noon break</p>
+                  <p class="status-caption status-caption--positive">
+                    Leak dispatch and hotline response run 24/7
                   </p>
                 </div>
               </div>
 
               <div class="office-info-item">
-                <div
-                  class="office-info-icon"
-                  style="background: rgba(2, 132, 199, 0.1); color: #0369a1"
-                >
-                  <i class="bi bi-envelope-fill"></i>
+                <div class="office-info-icon">
+                  <i class="bi bi-envelope-fill" aria-hidden="true"></i>
                 </div>
                 <div class="office-info-content">
-                  <h5>Customer Desk &amp; Email</h5>
+                  <h3>Customer desk</h3>
                   <p><a href="mailto:lcwd_legazpicity@yahoo.com">lcwd_legazpicity@yahoo.com</a></p>
-                  <p>Hotlines: (052) 742-3377 / 0917 558 2377</p>
+                  <p>(052) 742-3377 and 0917 558 2377</p>
                 </div>
               </div>
 
               <div class="office-info-item">
-                <div
-                  class="office-info-icon"
-                  style="background: rgba(220, 38, 38, 0.1); color: #b91c1c"
-                >
-                  <i class="bi bi-shield-exclamation"></i>
+                <div class="office-info-icon office-info-icon--alert">
+                  <i class="bi bi-shield-exclamation" aria-hidden="true"></i>
                 </div>
                 <div class="office-info-content">
-                  <h5>Complaints &amp; Red-Tape Escalation</h5>
-                  <p style="margin-bottom: 8px">
-                    For unresolved disputes, water quality, or billing issues:
-                  </p>
-                  <div style="display: flex; flex-direction: column; gap: 6px">
+                  <h3>If LCWD does not respond</h3>
+                  <p>For unresolved disputes, water quality, or billing issues:</p>
+                  <div class="complaint-actions">
                     <a href="tel:8888" class="complaint-hotline-btn">
-                      <i class="bi bi-telephone-fill"></i>
-                      <span><strong>8888</strong> Citizens' Complaint Center (Toll-Free 24/7)</span>
+                      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                      <span><strong>8888</strong> Citizens' Complaint Center, toll-free 24/7</span>
                     </a>
                     <a
                       href="https://egov.ph"
@@ -1749,9 +1494,8 @@
                       rel="noopener noreferrer"
                       class="complaint-egov-btn"
                     >
-                      <i class="bi bi-phone-fill"></i>
-                      <span><strong>eGov PH App (eReport)</strong> • egov.ph</span>
-                      <i class="bi bi-box-arrow-up-right" style="font-size: 0.75rem"></i>
+                      <i class="bi bi-phone-fill" aria-hidden="true"></i>
+                      <span><strong>eGov PH app</strong>, eReport</span>
                     </a>
                   </div>
                 </div>

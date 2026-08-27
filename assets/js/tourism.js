@@ -6,6 +6,24 @@
 (function () {
   'use strict';
 
+  // ==========================================================================
+  // Header photograph guard. If the header picture 404s, flag the page so
+  // tourism.css can drop the scrim and the credit line, leaving the standard
+  // brand gradient rather than a caption for a picture that is not there.
+  // ==========================================================================
+  (function guardHeaderPhoto() {
+    const photo = document.querySelector('.page-header-photo');
+    if (!photo) return;
+
+    const markMissing = () => document.body.classList.add('page-header-photo-missing');
+
+    if (photo.complete) {
+      if (!photo.naturalWidth) markMissing();
+      return;
+    }
+    photo.addEventListener('error', markMissing, { once: true });
+  })();
+
   // State
   const state = {
     pageType: 'hub', // 'hub' | 'attractions' | 'experience' | 'food' | 'accommodations' | 'landmarks'
@@ -20,7 +38,7 @@
     sortBy: 'default',
     viewMode: 'grid', // 'grid' | 'table'
     currentPage: 1,
-    itemsPerPage: 24
+    itemsPerPage: 24,
   };
 
   // DOM References
@@ -44,30 +62,33 @@
     nextPageBtn: document.getElementById('tourism-next-page'),
     pageInfo: document.getElementById('tourism-page-info'),
     viewGridBtn: document.getElementById('tourism-view-grid'),
-    viewTableBtn: document.getElementById('tourism-view-table')
+    viewTableBtn: document.getElementById('tourism-view-table'),
   };
 
   const DISTRICTS = {
     port: {
       name: 'Port District',
-      numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+      numbers: [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35,
+        36, 37, 38, 39, 40,
+      ],
     },
     old_albay: {
       name: 'Old Albay District',
-      numbers: [11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 41, 48, 49, 50]
+      numbers: [11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 41, 48, 49, 50],
     },
     northern: {
       name: 'Northern Coastal',
-      numbers: [42, 45, 46, 47, 51, 52, 53, 54, 65]
+      numbers: [42, 45, 46, 47, 51, 52, 53, 54, 65],
     },
     southern: {
       name: 'Southern Coastal',
-      numbers: [55, 56, 57, 58, 59, 60, 61, 62]
+      numbers: [55, 56, 57, 58, 59, 60, 61, 62],
     },
     upland: {
       name: 'Upland & Rural',
-      numbers: [43, 44, 63, 64, 66, 67, 68, 69, 70]
-    }
+      numbers: [43, 44, 63, 64, 66, 67, 68, 69, 70],
+    },
   };
 
   function getBarangayNumber(name) {
@@ -96,19 +117,88 @@
 
   const LEGAZPI_SEAL_PATH = '../assets/images/logo/legazpi-city-seal.png';
 
+  // ==========================================================================
+  // Presentation clean-up for directory rows.
+  //
+  // The food and accommodation datasets come straight out of the business
+  // permit register, so the raw values are written for a clerk, not a visitor:
+  // names shout in caps, categories carry permit codes, and most descriptions
+  // were generated from the category plus the address. These helpers fix that
+  // at render time, which keeps data/*.json faithful to the source register.
+  // ==========================================================================
+
+  // Initialisms that stay upper case through title-casing. Business suffixes
+  // like Inc. and Corp. are deliberately absent: they read correctly in title
+  // case, and leaving them shouting next to a title-cased name looks broken.
+  // Listed explicitly rather than derived. A "two letters with no vowel means
+  // initials" rule looks tempting but turns ST. into a shout and misses JG.
+  const KEEP_UPPER =
+    /^(JCI|LGU|DOT|DTI|MSME|OTOP|ATV|BBQ|KTV|SM|VIP|PRO|JC|JG|JR|TJ|MJ|RJ|DJ|KM|II|III|IV|VI|VII|VIII|IX|XI|XII)\.?$/;
+
+  // Lower case inside a name, but never as the first word.
+  const MINOR_WORD = /^(and|or|of|the|a|an|in|on|at|to|by|for|de|del|na|ng|y)$/;
+
+  function toTitleCase(str) {
+    if (!str) return '';
+    // Leave names that already carry lower case alone: they were typed by a
+    // human and are more trustworthy than anything we would derive.
+    if (/[a-z]/.test(str)) return str;
+
+    let index = 0;
+    return str
+      .toLowerCase()
+      .replace(/[^\s/-]+/g, (word) => {
+        const position = index++;
+        const bare = word.replace(/[^A-Za-z.]/g, '').toUpperCase();
+        if (KEEP_UPPER.test(bare)) return word.toUpperCase();
+        // Ordinals: "1ST" should read "1st", not "1St".
+        if (/^\d+(st|nd|rd|th)\b/.test(word)) return word;
+        // A lone letter is an initial ("A and A Bed"), not a word.
+        if (/^[a-z][.,]?$/.test(word)) return word.toUpperCase();
+        if (position > 0 && MINOR_WORD.test(word.replace(/[^a-z]/g, ''))) return word;
+        // Capitalise the first letter, not the first character: a word wrapped
+        // in brackets or quotes starts with punctuation.
+        return word.replace(/[a-z]/, (c) => c.toUpperCase());
+      })
+      .replace(/\bD'(\w)/g, (m, c) => "D'" + c.toUpperCase());
+  }
+
+  // "BAR (B900) (NSP)" and "RESTOBAR (1800)" are permit classes. A visitor
+  // reading "Bar" learns everything the code was going to tell them.
+  function cleanCategoryLabel(str) {
+    if (!str) return '';
+    return toTitleCase(
+      String(str)
+        .replace(/\((?:[A-Z]?\d{3,4}|NSP|S|SP)\)/gi, '')
+        .replace(/\s{2,}/g, ' ')
+        .trim()
+    );
+  }
+
+  // Matches the generated "CATEGORY located in ADDRESS." descriptions, which
+  // only restate the category and address already shown on the card.
+  const GENERATED_DESC = /^[A-Z0-9 ()&'.,/-]+ located in /;
+
+  function usableDescription(item) {
+    const desc = (item.description || '').trim();
+    if (!desc) return '';
+    return GENERATED_DESC.test(desc) ? '' : desc;
+  }
+
   function setupGlobalImageFallbacks() {
     function processImage(img) {
       if (!img || img.getAttribute('data-fallback-applied') === 'true') return;
       if (img.complete && (img.naturalWidth === 0 || img.naturalHeight === 0)) {
-        applySealFallback(img);
+        dropBrokenMedia(img);
       } else {
         img.addEventListener('error', function () {
-          applySealFallback(this);
+          dropBrokenMedia(this);
         });
       }
     }
 
-    const selectors = '.tourism-featured-card__img, .tourism-exp-card__img, .tourism-delicacy-card__img, .tourism-card__img, .place-cell-thumb';
+    const selectors =
+      '.tourism-featured-card__img, .tourism-exp-card__img, .tourism-delicacy-card__img, .tourism-card__img, .place-cell-thumb';
     document.querySelectorAll(selectors).forEach(processImage);
 
     // Capture phase listener for any async or dynamic images
@@ -116,11 +206,8 @@
       'error',
       function (e) {
         if (e.target && e.target.tagName === 'IMG') {
-          if (
-            e.target.matches &&
-            e.target.matches(selectors)
-          ) {
-            applySealFallback(e.target);
+          if (e.target.matches && e.target.matches(selectors)) {
+            dropBrokenMedia(e.target);
           }
         }
       },
@@ -128,14 +215,29 @@
     );
   }
 
-  function applySealFallback(img) {
+  /**
+   * A picture that will not load is removed along with its frame, and the card
+   * is flagged so it can lay itself out as a text card. The old behaviour swapped
+   * in the city seal, which turned a missing photo into a dark tile carrying the
+   * same seal as every other missing photo on the page.
+   */
+  function dropBrokenMedia(img) {
     if (!img || img.getAttribute('data-fallback-applied') === 'true') return;
     img.setAttribute('data-fallback-applied', 'true');
-    img.src = LEGAZPI_SEAL_PATH;
-    img.classList.add('tourism-seal-fallback-img');
-    if (img.parentElement) {
-      img.parentElement.classList.add('tourism-seal-fallback-media');
+
+    const card = img.closest(
+      '.tourism-card, .tourism-featured-card, .tourism-exp-card, .tourism-delicacy-card'
+    );
+    if (card) card.classList.add('tourism-card--no-photo');
+
+    const media = img.closest(
+      '.tourism-card__media, .tourism-featured-card__media, .tourism-exp-card__media, .tourism-delicacy-card__media'
+    );
+    if (media) {
+      media.remove();
+      return;
     }
+    img.remove();
   }
 
   /**
@@ -153,8 +255,8 @@
     try {
       // Fetch PSGC Barangays
       fetch(basePath + 'barangays.json')
-        .then(r => (r.ok ? r.json() : { data: [] }))
-        .then(bgData => {
+        .then((r) => (r.ok ? r.json() : { data: [] }))
+        .then((bgData) => {
           state.barangays = bgData.data || [];
           populateBarangayDropdown();
         })
@@ -179,16 +281,23 @@
 
       // Format items
       if (state.pageType === 'food') {
-        const ests = (json.establishments || json.data || []).map(e => ({
+        const ests = (json.establishments || json.data || []).map((e) => ({
           ...e,
           categoryLabel: 'Food Establishment',
-          foodGroup: getFoodNormalizedGroup(e)
+          foodGroup: getFoodNormalizedGroup(e),
         }));
-        state.items = ests;
+        state.items = mergeDuplicateEstablishments(ests);
       } else {
-        state.items = (json.data || json.attractions || json.activities || json.accommodations || json.travel_spots || []).map(i => ({
+        state.items = (
+          json.data ||
+          json.attractions ||
+          json.activities ||
+          json.accommodations ||
+          json.travel_spots ||
+          []
+        ).map((i) => ({
           ...i,
-          categoryLabel: getCategoryDisplayName(state.pageType)
+          categoryLabel: getCategoryDisplayName(state.pageType),
         }));
       }
 
@@ -211,20 +320,77 @@
     }
   }
 
+  /**
+   * The permit register holds one row per business permit, so a place holding
+   * both a restaurant and a bar permit arrives as two rows with the same name
+   * and address. Rendered as-is that reads as a broken directory. Merge them
+   * into one entry and keep every permit class as a list, so nothing is lost
+   * and the visitor sees each business once.
+   */
+  function mergeDuplicateEstablishments(items) {
+    const byKey = new Map();
+
+    for (const item of items) {
+      const key = [item.name, item.address]
+        .map((v) => (v || '').trim().toUpperCase().replace(/\s+/g, ' '))
+        .join('||');
+
+      const existing = byKey.get(key);
+      if (!existing) {
+        byKey.set(key, { ...item, subcategories: [item.subcategory].filter(Boolean) });
+        continue;
+      }
+
+      if (item.subcategory && !existing.subcategories.includes(item.subcategory)) {
+        existing.subcategories.push(item.subcategory);
+      }
+      // Prefer whichever duplicate actually carries a photo, a contact number
+      // or a real description, so merging never drops the richer row.
+      if (!existing.image && !existing.image_url && (item.image || item.image_url)) {
+        existing.image = item.image;
+        existing.image_url = item.image_url;
+        existing.imageAttribution = item.imageAttribution;
+      }
+      if (!existing.contact && item.contact) existing.contact = item.contact;
+      if (!usableDescription(existing) && usableDescription(item)) {
+        existing.description = item.description;
+      }
+    }
+
+    return Array.from(byKey.values());
+  }
+
   function getFoodNormalizedGroup(item) {
     const raw = (item.subcategory || item.classification || '').toUpperCase();
     if (raw.includes('RESTAURANT') || raw.includes('GRILL') || raw.includes('KOREAN BBQ')) {
       if (raw.includes('BAR')) return 'restobars';
       return 'restaurants';
     }
-    if (raw.includes('CAFE') || raw.includes('COFFEE') || raw.includes('TEA') || raw.includes('PASTRIES') || raw.includes('BAKERY')) {
+    if (
+      raw.includes('CAFE') ||
+      raw.includes('COFFEE') ||
+      raw.includes('TEA') ||
+      raw.includes('PASTRIES') ||
+      raw.includes('BAKERY')
+    ) {
       if (raw.includes('MILK TEA')) return 'milktea';
       return 'cafes';
     }
-    if (raw.includes('BAR') || raw.includes('RESTOBAR') || raw.includes('LOUNGE') || raw.includes('CLUB')) {
+    if (
+      raw.includes('BAR') ||
+      raw.includes('RESTOBAR') ||
+      raw.includes('LOUNGE') ||
+      raw.includes('CLUB')
+    ) {
       return 'restobars';
     }
-    if (raw.includes('FASTFOOD') || raw.includes('FOOD SERVICE') || raw.includes('SNACK') || raw.includes('KIOSK') || raw.includes('FOOD HUB')) {
+    if (
+      raw.includes('FASTFOOD') ||
+      raw.includes('FOOD SERVICE') ||
+      raw.includes('SNACK') ||
+      raw.includes('KIOSK') ||
+      raw.includes('FOOD HUB')
+    ) {
       return 'fastfood';
     }
     if (raw.includes('MILK TEA')) return 'milktea';
@@ -247,12 +413,18 @@
 
   function getCategoryDisplayName(type) {
     switch (type) {
-      case 'attractions': return 'Tourist Attraction';
-      case 'experience': return 'Experience & Adventure';
-      case 'food': return 'Cuisine & Dining';
-      case 'accommodations': return 'Accommodation';
-      case 'landmarks': return 'Landmark & Spot';
-      default: return 'Destination';
+      case 'attractions':
+        return 'Tourist Attraction';
+      case 'experience':
+        return 'Experience & Adventure';
+      case 'food':
+        return 'Cuisine & Dining';
+      case 'accommodations':
+        return 'Accommodation';
+      case 'landmarks':
+        return 'Landmark & Spot';
+      default:
+        return 'Destination';
     }
   }
 
@@ -261,14 +433,16 @@
 
     let optionsHtml = '<option value="all">All Barangays</option>';
 
-    let list = [...state.barangays].sort((a, b) => (a.barangay_number || 0) - (b.barangay_number || 0));
+    let list = [...state.barangays].sort(
+      (a, b) => (a.barangay_number || 0) - (b.barangay_number || 0)
+    );
 
     if (state.selectedDistrict !== 'all') {
       const distNumbers = DISTRICTS[state.selectedDistrict]?.numbers || [];
-      list = list.filter(bg => distNumbers.includes(bg.barangay_number));
+      list = list.filter((bg) => distNumbers.includes(bg.barangay_number));
     }
 
-    list.forEach(bg => {
+    list.forEach((bg) => {
       optionsHtml += `<option value="${escapeHTML(bg.name)}">${escapeHTML(bg.name)}</option>`;
     });
 
@@ -285,12 +459,12 @@
     if (state.pageType === 'food') {
       const counts = {
         all: state.items.length,
-        restaurants: state.items.filter(i => i.foodGroup === 'restaurants').length,
-        cafes: state.items.filter(i => i.foodGroup === 'cafes').length,
-        restobars: state.items.filter(i => i.foodGroup === 'restobars').length,
-        fastfood: state.items.filter(i => i.foodGroup === 'fastfood').length,
-        milktea: state.items.filter(i => i.foodGroup === 'milktea').length,
-        other: state.items.filter(i => i.foodGroup === 'other').length
+        restaurants: state.items.filter((i) => i.foodGroup === 'restaurants').length,
+        cafes: state.items.filter((i) => i.foodGroup === 'cafes').length,
+        restobars: state.items.filter((i) => i.foodGroup === 'restobars').length,
+        fastfood: state.items.filter((i) => i.foodGroup === 'fastfood').length,
+        milktea: state.items.filter((i) => i.foodGroup === 'milktea').length,
+        other: state.items.filter((i) => i.foodGroup === 'other').length,
       };
 
       const primary = [
@@ -298,18 +472,18 @@
         { id: 'restaurants', label: 'Restaurants & Dining', count: counts.restaurants },
         { id: 'cafes', label: 'Cafes & Coffee Shops', count: counts.cafes },
         { id: 'restobars', label: 'Restobars & Grills', count: counts.restobars },
-        { id: 'fastfood', label: 'Fast Food & Snacks', count: counts.fastfood }
+        { id: 'fastfood', label: 'Fast Food & Snacks', count: counts.fastfood },
       ];
 
       const niche = [
         { id: 'milktea', label: 'Milk Tea & Beverages', count: counts.milktea },
-        { id: 'other', label: 'Food Hubs & Specialty', count: counts.other }
+        { id: 'other', label: 'Food Hubs & Specialty', count: counts.other },
       ];
 
       DOM.subcategoryContainer.style.display = 'flex';
       let chipsHtml = '';
 
-      primary.forEach(p => {
+      primary.forEach((p) => {
         const isActive = state.activeSubcategory === p.id;
         chipsHtml += `
           <button type="button" class="tourism-sub-chip ${isActive ? 'active' : ''}" data-subcat="${p.id}">
@@ -318,11 +492,11 @@
         `;
       });
 
-      const isNicheActive = niche.some(n => n.id === state.activeSubcategory);
+      const isNicheActive = niche.some((n) => n.id === state.activeSubcategory);
       chipsHtml += `
         <select id="tourism-more-category-select" class="tourism-niche-select ${isNicheActive ? 'active' : ''}" aria-label="More Dining Categories">
           <option value="">More Categories...</option>
-          ${niche.map(n => `<option value="${n.id}" ${state.activeSubcategory === n.id ? 'selected' : ''}>${escapeHTML(n.label)} (${n.count})</option>`).join('')}
+          ${niche.map((n) => `<option value="${n.id}" ${state.activeSubcategory === n.id ? 'selected' : ''}>${escapeHTML(n.label)} (${n.count})</option>`).join('')}
         </select>
       `;
 
@@ -331,7 +505,7 @@
     }
 
     const subcats = new Set();
-    state.items.forEach(item => {
+    state.items.forEach((item) => {
       if (item.subcategory) subcats.add(item.subcategory);
     });
 
@@ -347,14 +521,16 @@
       </button>
     `;
 
-    Array.from(subcats).sort().forEach(sc => {
-      const count = state.items.filter(i => i.subcategory === sc).length;
-      chipsHtml += `
+    Array.from(subcats)
+      .sort()
+      .forEach((sc) => {
+        const count = state.items.filter((i) => i.subcategory === sc).length;
+        chipsHtml += `
         <button type="button" class="tourism-sub-chip ${state.activeSubcategory === sc ? 'active' : ''}" data-subcat="${escapeHTML(sc)}">
-          ${escapeHTML(sc)} (${count})
+          ${escapeHTML(cleanCategoryLabel(sc))} (${count})
         </button>
       `;
-    });
+      });
 
     DOM.subcategoryContainer.innerHTML = chipsHtml;
   }
@@ -391,29 +567,40 @@
     // Subcategory / Category Group filter
     if (state.activeSubcategory !== 'all') {
       if (state.pageType === 'food') {
-        result = result.filter(item => item.foodGroup === state.activeSubcategory);
+        result = result.filter((item) => item.foodGroup === state.activeSubcategory);
       } else {
-        result = result.filter(item => item.subcategory === state.activeSubcategory);
+        result = result.filter((item) => item.subcategory === state.activeSubcategory);
       }
     }
 
     // District filter
     if (state.selectedDistrict !== 'all') {
       const distNumbers = DISTRICTS[state.selectedDistrict]?.numbers || [];
-      result = result.filter(item => {
+      result = result.filter((item) => {
         const bNum = getBarangayNumber(item.barangay_name);
         if (bNum && distNumbers.includes(bNum)) return true;
 
         const addr = (item.address || '').toLowerCase();
-        if (state.selectedDistrict === 'old_albay' && (addr.includes('old albay') || addr.includes('peñaranda') || addr.includes('penaranda'))) return true;
-        if (state.selectedDistrict === 'port' && (addr.includes('port') || addr.includes('pier') || addr.includes('embarcadero') || addr.includes('rizal'))) return true;
+        if (
+          state.selectedDistrict === 'old_albay' &&
+          (addr.includes('old albay') || addr.includes('peñaranda') || addr.includes('penaranda'))
+        )
+          return true;
+        if (
+          state.selectedDistrict === 'port' &&
+          (addr.includes('port') ||
+            addr.includes('pier') ||
+            addr.includes('embarcadero') ||
+            addr.includes('rizal'))
+        )
+          return true;
         return false;
       });
     }
 
     // Barangay filter
     if (state.selectedBarangay !== 'all') {
-      result = result.filter(item => {
+      result = result.filter((item) => {
         if (!item.barangay_name) return false;
         return item.barangay_name.toLowerCase() === state.selectedBarangay.toLowerCase();
       });
@@ -422,7 +609,7 @@
     // Search query filter
     if (state.searchQuery.trim() !== '') {
       const q = state.searchQuery.toLowerCase();
-      result = result.filter(item => {
+      result = result.filter((item) => {
         return (
           (item.name && item.name.toLowerCase().includes(q)) ||
           (item.description && item.description.toLowerCase().includes(q)) ||
@@ -486,7 +673,7 @@
           fastfood: 'Fast Food & Snacks',
           milktea: 'Milk Tea & Beverages',
           delicacies: 'Signature Delicacies',
-          other: 'Specialty & Hubs'
+          other: 'Specialty & Hubs',
         };
         label = labels[state.activeSubcategory] || state.activeSubcategory;
       }
@@ -571,22 +758,36 @@
     if (!DOM.gridContainer) return;
     let html = '';
 
-    items.forEach(item => {
-      const imgSrc = item.image || item.image_url;
-      const attrHtml = item.imageAttribution
-        ? `<div class="tourism-card__attribution" title="Photo Source: ${escapeHTML(item.imageAttribution)}"><i class="bi bi-camera-fill"></i> ${escapeHTML(item.imageAttribution)}</div>`
-        : '';
+    // A stock photo is sometimes attached to several rows: two branches of one
+    // restaurant, or a generic shot reused across a category. Side by side in
+    // the grid that reads as a rendering bug, so only the first card to claim a
+    // given picture keeps it and the rest fall back to the text layout.
+    const usedPhotos = new Set();
 
+    items.forEach((item) => {
+      const rawSrc = item.image || item.image_url;
+      let imgSrc = rawSrc;
+      if (imgSrc) {
+        if (usedPhotos.has(imgSrc)) imgSrc = null;
+        else usedPhotos.add(imgSrc);
+      }
+
+      // No photograph means no picture frame. This used to render the city
+      // seal on a dark tile, which on the dining directory produced twenty
+      // identical black squares per screen. A text-only card reads as
+      // finished; a wall of repeated seals reads as broken.
       const mediaHtml = imgSrc
-        ? `<img src="${escapeHTML(imgSrc)}" alt="${escapeHTML(item.name)}" class="tourism-card__img" loading="lazy" onerror="this.onerror=null; this.src='${LEGAZPI_SEAL_LOCAL}'; this.classList.add('tourism-seal-fallback-img'); this.parentElement.classList.add('tourism-seal-fallback-media'); const b = this.parentElement.querySelector('.tourism-card__attribution'); if (b) b.remove();" />${attrHtml}`
-        : `<img src="${LEGAZPI_SEAL_LOCAL}" alt="City of Legazpi Seal" class="tourism-card__img tourism-seal-fallback-img" loading="lazy" onerror="this.src='${LEGAZPI_SEAL_URL}';" />`;
+        ? `<div class="tourism-card__media">
+            <img src="${escapeHTML(imgSrc)}" alt="${escapeHTML(item.name)}" class="tourism-card__img" loading="lazy" onerror="this.onerror=null; this.closest('.tourism-card')?.classList.add('tourism-card--no-photo'); this.parentElement.remove();" />
+          </div>`
+        : '';
 
       let metaHtml = '';
       if (item.address) {
         metaHtml += `
           <div class="tourism-meta-item">
             <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-            <span>${escapeHTML(item.address)}</span>
+            <span>${escapeHTML(toTitleCase(item.address))}</span>
           </div>
         `;
       }
@@ -619,18 +820,27 @@
         `;
       }
 
+      // Every permit class this business holds, cleaned of permit codes. A
+      // merged row carries more than one; everything else carries exactly one.
+      const tagList = (
+        item.subcategories && item.subcategories.length
+          ? item.subcategories
+          : [item.subcategory || item.categoryLabel]
+      )
+        .map(cleanCategoryLabel)
+        .filter(Boolean);
+
+      const desc = usableDescription(item);
+
       html += `
-        <article class="tourism-card" data-id="${escapeHTML(item.id)}">
-          <div class="tourism-card__media ${!imgSrc ? 'tourism-seal-fallback-media' : ''}">
-            ${mediaHtml}
-            <div class="tourism-card__badges">
-              <span class="tourism-badge tourism-badge--category">${escapeHTML(item.subcategory || item.categoryLabel)}</span>
-              ${item.classification || item.contact ? `<span class="tourism-badge tourism-badge--verified"><i class="bi bi-patch-check-fill"></i> LGU Verified</span>` : ''}
-            </div>
-          </div>
+        <article class="tourism-card${imgSrc ? '' : ' tourism-card--no-photo'}" data-id="${escapeHTML(item.id)}">
+          ${mediaHtml}
           <div class="tourism-card__body">
-            <h3 class="tourism-card__title">${escapeHTML(item.name)}</h3>
-            ${item.description ? `<p class="tourism-card__desc">${escapeHTML(item.description)}</p>` : ''}
+            <p class="tourism-card__tags">
+              ${tagList.map((t) => `<span class="tourism-badge tourism-badge--category">${escapeHTML(t)}</span>`).join('')}
+            </p>
+            <h3 class="tourism-card__title">${escapeHTML(toTitleCase(item.name))}</h3>
+            ${desc ? `<p class="tourism-card__desc">${escapeHTML(desc)}</p>` : ''}
             <div class="tourism-card__meta">
               ${metaHtml}
             </div>
@@ -653,7 +863,7 @@
     if (!DOM.tableBody) return;
     let html = '';
 
-    items.forEach(item => {
+    items.forEach((item) => {
       const imgSrc = item.image || item.image_url;
       const thumbHtml = imgSrc
         ? `<img src="${escapeHTML(imgSrc)}" alt="" class="place-cell-thumb" loading="lazy" onerror="this.onerror=null; this.src='${LEGAZPI_SEAL_LOCAL}';" />`
@@ -670,13 +880,13 @@
             <div class="place-cell">
               ${thumbHtml}
               <div class="place-cell-meta">
-                <span class="place-cell-name">${escapeHTML(item.name)}</span>
-                <span class="place-cell-category">${escapeHTML(item.subcategory || item.categoryLabel)}</span>
+                <span class="place-cell-name">${escapeHTML(toTitleCase(item.name))}</span>
+                <span class="place-cell-category">${escapeHTML(cleanCategoryLabel(item.subcategory || item.categoryLabel))}</span>
               </div>
             </div>
           </td>
           <td><span class="barangay-tag"><i class="bi bi-pin-map-fill"></i> ${escapeHTML(item.barangay_name || 'Legazpi City')}</span></td>
-          <td><span class="tourism-table-desc">${escapeHTML(item.address || '-')}</span></td>
+          <td><span class="tourism-table-desc">${escapeHTML(toTitleCase(item.address) || '-')}</span></td>
           <td>${contactCell}</td>
           <td>
             <a href="${escapeHTML(item.google_maps_url)}" target="_blank" rel="noopener noreferrer" class="tourism-btn-table-map" aria-label="Map directions for ${escapeHTML(item.name)}">
@@ -692,9 +902,12 @@
 
   function formatContactLinks(contactStr) {
     if (!contactStr) return '-';
-    const parts = contactStr.split(/[\/,]/).map(s => s.trim()).filter(Boolean);
+    const parts = contactStr
+      .split(/[\/,]/)
+      .map((s) => s.trim())
+      .filter(Boolean);
     return parts
-      .map(p => {
+      .map((p) => {
         if (p.includes('@')) {
           return `<a href="mailto:${escapeHTML(p)}" class="contact-pill"><i class="bi bi-envelope-fill"></i> ${escapeHTML(p)}</a>`;
         }
@@ -730,7 +943,7 @@
     if (DOM.searchInput) {
       DOM.searchInput.addEventListener(
         'input',
-        debounce(e => {
+        debounce((e) => {
           state.searchQuery = e.target.value.trim();
           if (DOM.clearSearchBtn) {
             DOM.clearSearchBtn.style.display = state.searchQuery ? 'block' : 'none';
@@ -750,7 +963,7 @@
     }
 
     if (DOM.districtSelect) {
-      DOM.districtSelect.addEventListener('change', e => {
+      DOM.districtSelect.addEventListener('change', (e) => {
         state.selectedDistrict = e.target.value;
         state.selectedBarangay = 'all';
         populateBarangayDropdown();
@@ -759,26 +972,26 @@
     }
 
     if (DOM.barangaySelect) {
-      DOM.barangaySelect.addEventListener('change', e => {
+      DOM.barangaySelect.addEventListener('change', (e) => {
         state.selectedBarangay = e.target.value;
         applyFilters();
       });
     }
 
     if (DOM.sortSelect) {
-      DOM.sortSelect.addEventListener('change', e => {
+      DOM.sortSelect.addEventListener('change', (e) => {
         state.sortBy = e.target.value;
         applyFilters();
       });
     }
 
     if (DOM.subcategoryContainer) {
-      DOM.subcategoryContainer.addEventListener('click', e => {
+      DOM.subcategoryContainer.addEventListener('click', (e) => {
         const chip = e.target.closest('.tourism-sub-chip');
         if (!chip) return;
         state.activeSubcategory = chip.getAttribute('data-subcat');
         const allChips = DOM.subcategoryContainer.querySelectorAll('.tourism-sub-chip');
-        allChips.forEach(c => c.classList.remove('active'));
+        allChips.forEach((c) => c.classList.remove('active'));
         chip.classList.add('active');
         const nicheSelect = document.getElementById('tourism-more-category-select');
         if (nicheSelect) {
@@ -788,13 +1001,13 @@
         applyFilters();
       });
 
-      DOM.subcategoryContainer.addEventListener('change', e => {
+      DOM.subcategoryContainer.addEventListener('change', (e) => {
         if (e.target && e.target.id === 'tourism-more-category-select') {
           const val = e.target.value;
           if (val) {
             state.activeSubcategory = val;
             const allChips = DOM.subcategoryContainer.querySelectorAll('.tourism-sub-chip');
-            allChips.forEach(c => c.classList.remove('active'));
+            allChips.forEach((c) => c.classList.remove('active'));
             e.target.classList.add('active');
             applyFilters();
           } else {
@@ -833,7 +1046,7 @@
     }
 
     if (DOM.activeFilters) {
-      DOM.activeFilters.addEventListener('click', e => {
+      DOM.activeFilters.addEventListener('click', (e) => {
         const btn = e.target.closest('button[data-clear]');
         if (!btn) return;
         const type = btn.getAttribute('data-clear');

@@ -764,13 +764,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateToggleIcons();
 
+    // Storage can throw outright (Safari private browsing, cookies blocked), so
+    // every access is guarded: the theme still applies, it just isn't remembered.
+    function readStoredTheme() {
+      try {
+        return localStorage.getItem('theme');
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function storeTheme(theme) {
+      try {
+        localStorage.setItem('theme', theme);
+      } catch (e) {
+        /* not remembered across visits; the page still renders correctly */
+      }
+    }
+
     function setTheme(theme) {
       if (theme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
+        storeTheme('dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
+        storeTheme('light');
       }
       updateToggleIcons();
       document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: theme } }));
@@ -789,7 +807,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.matchMedia) {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       mediaQuery.addEventListener('change', function (e) {
-        if (!localStorage.getItem('theme')) {
+        if (!readStoredTheme()) {
           if (e.matches) {
             document.documentElement.setAttribute('data-theme', 'dark');
           } else {

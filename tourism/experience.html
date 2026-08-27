@@ -46,7 +46,7 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#ea580c" />
+    <meta name="theme-color" content="#0032a0" />
 
     <title>The Legazpi Experience &amp; Adventures | BetterLegazpi.org</title>
     <link rel="icon" type="image/png" href="../assets/images/logo/betterlegazpi-favicon.png" />
@@ -76,7 +76,12 @@
     <!-- Theme State Initializer -->
     <script>
       (function () {
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+          /* storage blocked (private browsing): fall back to the system preference */
+        }
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -206,10 +211,17 @@
     </div>
 
     <!-- Subpage Header -->
-    <section class="page-header">
+    <section class="page-header page-header--photo">
+      <img
+        class="page-header-photo"
+        src="../assets/images/tourism/photos/experience_mayon_atv_ride.webp"
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+        decoding="async"
+      />
       <div class="container">
         <div class="page-header-content">
-          <span class="page-header-badge"><i class="bi bi-compass-fill"></i> <span>Adventures &amp; ATV</span></span>
           <h1>The Legazpi Experience &amp; Adventures</h1>
           <p class="page-header-desc">
             From extreme volcanic lava trail rides on all-terrain vehicles to skywalks, high-speed

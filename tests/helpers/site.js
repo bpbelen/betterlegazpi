@@ -72,7 +72,13 @@ async function settle(page, route) {
       .first()
       .waitFor({ state: 'attached', timeout: 15_000 })
       .catch(() => {
-        /* absent content is itself a finding; let the assertions report it */
+        throw new Error(
+          `${route}: waitForSelector "${override.waitForSelector}" never attached. ` +
+            'Either the page stopped rendering that content, or the entry for this route in ' +
+            'tests/pages.overrides.js is stale and names a container the markup no longer has. ' +
+            'A stale entry costs every test on this route a 15s wait, so fix the entry rather ' +
+            'than widening the timeout.'
+        );
       });
   }
 

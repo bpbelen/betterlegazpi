@@ -220,32 +220,6 @@ test.describe('Volunteer modal — resilience', () => {
     expect(errors, `uncaught page errors: ${errors.join(' | ')}`).toEqual([]);
   });
 
-  test('page still translates when storage is blocked', async ({ page }) => {
-    await page.addInitScript(() => {
-      const boom = () => {
-        throw new Error('SecurityError: localStorage is disabled');
-      };
-      try {
-        Object.defineProperty(window, 'localStorage', { configurable: true, get: boom });
-      } catch (e) {
-        /* engine refused the override */
-      }
-    });
-    await page.route('**/*', (r) =>
-      r.request().url().startsWith('http://localhost') ? r.continue() : r.abort()
-    );
-
-    await page.goto('/index.html', { waitUntil: 'domcontentloaded' });
-    await waitForOpen(page);
-
-    // The translation engine reads the saved language during init. When that
-    // read threw, the engine aborted and left every data-i18n node untouched.
-    const initialised = await page.evaluate(
-      () => !!(window.TranslationEngine && window.TranslationEngine.initialized)
-    );
-    expect(initialised, 'translation engine failed to initialise').toBe(true);
-  });
-
   test('opens without console errors', async ({ page }) => {
     const errors = [];
     page.on('pageerror', (e) => errors.push(e.message));

@@ -1,0 +1,18 @@
+{
+  "_comment": "Curated utility advisories rendered by assets/js/utilities.js on /services/utilities. Not synced automatically: scripts/data/sync-facebook.js needs a Page access token with an Editor role on the page it reads, and BetterLegazpi holds no such role on the ALECO or LCWD pages. Add entries by hand from the official posts, and delete them once endsAt has passed.",
+  "_schema": {
+    "kind": "Interruption | Maintenance | Restoration | Notice",
+    "title": "One line, as specific as the official post allows.",
+    "window": "Human-readable time range, e.g. '8:00 AM to 4:00 PM, 12 March 2026'.",
+    "areas": "Array of affected feeders or barangays. Use the feeder displayName (e.g. 'Feeder 3 (W-F3)') so it matches the lookup above.",
+    "body": "Optional extra detail, one short paragraph.",
+    "source": "URL of the official Facebook post.",
+    "postedAt": "ISO 8601 date the utility posted it.",
+    "endsAt": "ISO 8601 date after which the advisory stops rendering. Omit for open-ended notices."
+  },
+  "updated": null,
+  "advisories": {
+    "electricity": [],
+    "water": []
+  }
+}

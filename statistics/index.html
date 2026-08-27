@@ -80,7 +80,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="../assets/css/statistics.css?v=1.1.21" />
+    <link rel="stylesheet" href="../assets/css/statistics.css?v=1.1.24" />
     <!-- Dev: Force-clear stale service worker caches on localhost -->
     <script>
       if (
@@ -103,7 +103,12 @@
     </script>
     <script>
       (function () {
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+          /* storage blocked (private browsing): fall back to the system preference */
+        }
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -237,15 +242,17 @@
         </nav>
       </div>
 
-      <!-- Hero Section -->
-      <section class="stats-hero">
+      <!-- Page Header -->
+      <section class="page-header">
         <div class="container">
-          <div class="stats-hero-content">
-            <span class="stats-hero-badge"
+          <div class="page-header-content">
+            <span class="page-header-badge"
               ><i class="bi bi-bar-chart-fill"></i> <span>City Data</span></span
             >
             <h1>City Statistics</h1>
-            <p>Data and statistics about Legazpi City, Albay</p>
+            <p class="page-header-desc">
+              Data and statistics about Legazpi City, Albay
+            </p>
           </div>
         </div>
       </section>
@@ -510,100 +517,6 @@
               >Philippine Statistics Authority (PSA)</a
             >
             - 2024 Census
-          </p>
-        </div>
-      </section>
-
-      <!-- Economic Indicators -->
-      <section class="stats-section stats-economy animate-on-scroll">
-        <div class="container">
-          <div class="section-header-minimal">
-            <span class="section-tag"
-              ><i class="bi bi-briefcase-fill"></i> <span>Economy</span></span
-            >
-            <h2>Economic Indicators</h2>
-            <p>Key economic data and business statistics</p>
-          </div>
-
-          <div class="economy-grid">
-            <div class="economy-card">
-              <div class="economy-icon"><i class="bi bi-shop"></i></div>
-              <div class="economy-content">
-                <div class="economy-value" data-count="1200">0</div>
-                <div class="economy-label">Registered Businesses</div>
-                <div class="economy-trend"><i class="bi bi-arrow-up"></i> +8% from last year</div>
-              </div>
-            </div>
-            <div class="economy-card">
-              <div class="economy-icon"><i class="bi bi-tree-fill"></i></div>
-              <div class="economy-content">
-                <div class="economy-value">8,500 ha</div>
-                <div class="economy-label">Agricultural Land</div>
-                <div class="economy-trend">Rice & Corn Production</div>
-              </div>
-            </div>
-            <div class="economy-card">
-              <div class="economy-icon"><i class="bi bi-person-check-fill"></i></div>
-              <div class="economy-content">
-                <div class="economy-value">94.2%</div>
-                <div class="economy-label">Employment Rate</div>
-                <div class="economy-trend">Labor Force Participation</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="sectors-chart animate-on-scroll">
-            <h4>Economic Sectors</h4>
-            <div class="sc-bars">
-              <div class="sc-row">
-                <div class="sc-meta">
-                  <span class="sc-dot sc-color-agri"></span>
-                  <span class="sc-name">Agriculture</span>
-                </div>
-                <span class="sc-pct">45%</span>
-                <div class="sc-track">
-                  <div class="sc-fill sc-color-agri" data-width="45"></div>
-                </div>
-              </div>
-              <div class="sc-row">
-                <div class="sc-meta">
-                  <span class="sc-dot sc-color-trade"></span>
-                  <span class="sc-name">Trade &amp; Commerce</span>
-                </div>
-                <span class="sc-pct">30%</span>
-                <div class="sc-track">
-                  <div class="sc-fill sc-color-trade" data-width="30"></div>
-                </div>
-              </div>
-              <div class="sc-row">
-                <div class="sc-meta">
-                  <span class="sc-dot sc-color-services"></span>
-                  <span class="sc-name">Services</span>
-                </div>
-                <span class="sc-pct">20%</span>
-                <div class="sc-track">
-                  <div class="sc-fill sc-color-services" data-width="20"></div>
-                </div>
-              </div>
-              <div class="sc-row">
-                <div class="sc-meta">
-                  <span class="sc-dot sc-color-industry"></span>
-                  <span class="sc-name">Industry</span>
-                </div>
-                <span class="sc-pct">5%</span>
-                <div class="sc-track">
-                  <div class="sc-fill sc-color-industry" data-width="5"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <p class="data-source">
-            <i class="bi bi-info-circle"></i> Source:
-            <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer"
-              >Bureau of Local Government Finance (BLGF)</a
-            >
-            - 2023
           </p>
         </div>
       </section>
@@ -1279,6 +1192,6 @@
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
-    <script defer src="../assets/js/statistics.js?v=1.1.20"></script>
+    <script defer src="../assets/js/statistics.js?v=1.1.23"></script>
   </body>
 </html>

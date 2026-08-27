@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Comprehensive guide to PhilHealth YAKAP (Yaman ng Kalusugan Program) in Legazpi City, Albay. Access free primary care check-ups, 13+ diagnostic tests, ₱20,000 annual maintenance medicines (GAMOT), and cancer screenings at 13 accredited Legazpi facilities with 100% zero copay."
+      content="Comprehensive guide to PhilHealth YAKAP (Yaman ng Kalusugan Program) in Legazpi City, Albay. Access free primary care check-ups, 13+ diagnostic tests, ₱20,000 annual maintenance medicines (GAMOT), and cancer screenings at 12 accredited Legazpi facilities with 100% zero copay."
     />
     <meta name="author" content="BetterLegazpi.org" />
     <meta
@@ -86,7 +86,12 @@
 
     <script>
       (function () {
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+          /* storage blocked (private browsing): fall back to the system preference */
+        }
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -234,8 +239,8 @@
             </span>
             <h1>PhilHealth YAKAP in Legazpi City</h1>
             <p class="page-header-desc">
-              Access free primary care check-ups, 13+ laboratory diagnostics, cancer screenings,
-              and up to <strong>₱20,000 in free maintenance medicines</strong> annually under the
+              Access free primary care check-ups, 13+ laboratory diagnostics, cancer screenings, and
+              up to <strong>₱20,000 in free maintenance medicines</strong> annually under the
               <em>Yaman ng Kalusugan Program</em> across accredited clinics in Legazpi City with
               100% zero copayment.
             </p>
@@ -243,29 +248,61 @@
         </div>
       </section>
 
-      <!-- Key Metrics -->
-      <section class="yakap-metrics-section">
+      <!-- Start Here: the three doors into the programme -->
+      <section class="yakap-start-section" aria-labelledby="yakap-start-heading">
         <div class="container">
-          <div class="yakap-hero-metrics">
-            <div class="yakap-metric-card">
-              <i class="bi bi-capsule-pill yakap-metric-icon" aria-hidden="true"></i>
-              <span class="yakap-metric-num">₱20,000</span>
-              <span class="yakap-metric-label">Annual Free Maintenance Medicines (GAMOT)</span>
+          <h2 class="yakap-start-heading" id="yakap-start-heading">Where do you want to start?</h2>
+
+          <div class="yakap-start-grid">
+            <div class="yakap-start-lead">
+              <span class="yakap-start-step">You only do this once</span>
+              <h3>Sign up at a clinic near you</h3>
+              <p>
+                Pick one accredited clinic in Legazpi and register with it. You can do this in the
+                eGovPH app, on the PhilHealth member portal, or by walking in. Bring one government
+                ID. There is no fee and no queue number to buy.
+              </p>
+              <div class="yakap-start-actions">
+                <a
+                  href="https://memberinquiry.philhealth.gov.ph/member/"
+                  class="yakap-start-btn yakap-start-btn-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Register on the PhilHealth portal</span>
+                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <a href="#facilities" class="yakap-start-btn yakap-start-btn-secondary">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                  <span>Or walk into one of 12 clinics</span>
+                </a>
+              </div>
             </div>
-            <div class="yakap-metric-card">
-              <i class="bi bi-shield-check yakap-metric-icon" aria-hidden="true"></i>
-              <span class="yakap-metric-num">0 Copay</span>
-              <span class="yakap-metric-label">100% Free at Public &amp; Partner Facilities</span>
-            </div>
-            <div class="yakap-metric-card">
-              <i class="bi bi-clipboard2-pulse yakap-metric-icon" aria-hidden="true"></i>
-              <span class="yakap-metric-num">13+ Labs</span>
-              <span class="yakap-metric-label">Diagnostic Tests &amp; Cancer Screenings</span>
-            </div>
-            <div class="yakap-metric-card">
-              <i class="bi bi-building-check yakap-metric-icon" aria-hidden="true"></i>
-              <span class="yakap-metric-num">13 Clinics</span>
-              <span class="yakap-metric-label">Accredited YAKAP Providers in Legazpi</span>
+
+            <div class="yakap-start-side">
+              <a href="#roadmap" class="yakap-start-card">
+                <i class="bi bi-signpost-2-fill yakap-start-card-icon" aria-hidden="true"></i>
+                <h3>Already signed up?</h3>
+                <p>
+                  See what happens at each visit, what to bring, and how your free medicines are
+                  released.
+                </p>
+                <span class="yakap-start-card-link"
+                  >Walk through the 5 steps <i class="bi bi-arrow-right" aria-hidden="true"></i
+                ></span>
+              </a>
+
+              <a href="#catalog" class="yakap-start-card">
+                <i class="bi bi-search yakap-start-card-icon" aria-hidden="true"></i>
+                <h3>Is my medicine covered?</h3>
+                <p>
+                  Search by generic name or by the test your doctor ordered, and see it before you
+                  travel to the clinic.
+                </p>
+                <span class="yakap-start-card-link"
+                  >Search medicines and tests <i class="bi bi-arrow-right" aria-hidden="true"></i
+                ></span>
+              </a>
             </div>
           </div>
         </div>
@@ -275,37 +312,25 @@
       <nav class="yakap-subnav-wrapper" aria-label="PhilHealth YAKAP Navigation">
         <div class="container">
           <div class="yakap-subnav-items">
-            <a href="#overview" class="yakap-subnav-link active">
-              <i class="bi bi-info-circle" aria-hidden="true"></i>
-              <span>Overview</span>
-            </a>
-            <a href="#pillars" class="yakap-subnav-link">
-              <i class="bi bi-grid-fill" aria-hidden="true"></i>
-              <span>4 Core Benefits</span>
-            </a>
-            <a href="#roadmap" class="yakap-subnav-link">
+            <a href="#roadmap" class="yakap-subnav-link active">
               <i class="bi bi-signpost-split" aria-hidden="true"></i>
-              <span>5-Step Journey</span>
-            </a>
-            <a href="#catalog" class="yakap-subnav-link">
-              <i class="bi bi-capsule" aria-hidden="true"></i>
-              <span>GAMOT Medicines &amp; Labs</span>
+              <span>How to avail</span>
             </a>
             <a href="#facilities" class="yakap-subnav-link">
               <i class="bi bi-hospital" aria-hidden="true"></i>
-              <span>Legazpi Clinics</span>
+              <span>Where to go</span>
+            </a>
+            <a href="#catalog" class="yakap-subnav-link">
+              <i class="bi bi-capsule" aria-hidden="true"></i>
+              <span>What&rsquo;s covered</span>
             </a>
             <a href="#support" class="yakap-subnav-link">
               <i class="bi bi-headset" aria-hidden="true"></i>
-              <span>Local Helpdesk</span>
+              <span>Get help</span>
             </a>
             <a href="#faq" class="yakap-subnav-link">
               <i class="bi bi-question-circle" aria-hidden="true"></i>
-              <span>FAQs</span>
-            </a>
-            <a href="#issuances" class="yakap-subnav-link">
-              <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
-              <span>Official Issuances</span>
+              <span>Questions</span>
             </a>
           </div>
         </div>
@@ -330,339 +355,14 @@
         </div>
       </div>
 
-      <!-- Section 1: The 4 Core Benefit Pillars (Interactive Tabs) -->
-      <section class="yakap-pillars-section" id="pillars">
-        <div class="container">
-          <div class="section-header-center">
-            <h2 class="section-title">The 4 Core Benefit Pillars</h2>
-            <p class="section-subtitle">
-              PhilHealth YAKAP (formerly Konsulta) provides four comprehensive healthcare guarantees
-              designed for preventive treatment and continuous outpatient care.
-            </p>
-          </div>
-
-          <!-- Tab Selector Buttons -->
-          <div class="yakap-tabs-nav" role="tablist" aria-label="YAKAP Benefit Pillars">
-            <button
-              type="button"
-              class="yakap-tab-btn active"
-              data-tab="tab-primary-care"
-              role="tab"
-              aria-selected="true"
-              aria-controls="tab-primary-care"
-              id="btn-tab-primary-care"
-            >
-              <i class="bi bi-heart-pulse-fill" aria-hidden="true"></i>
-              <span>1. Primary Care &amp; Consults</span>
-            </button>
-            <button
-              type="button"
-              class="yakap-tab-btn"
-              data-tab="tab-diagnostic-labs"
-              role="tab"
-              aria-selected="false"
-              aria-controls="tab-diagnostic-labs"
-              id="btn-tab-diagnostic-labs"
-            >
-              <i class="bi bi-prescription2" aria-hidden="true"></i>
-              <span>2. 13+ Diagnostic Labs</span>
-            </button>
-            <button
-              type="button"
-              class="yakap-tab-btn"
-              data-tab="tab-gamot-medicines"
-              role="tab"
-              aria-selected="false"
-              aria-controls="tab-gamot-medicines"
-              id="btn-tab-gamot-medicines"
-            >
-              <i class="bi bi-capsule-pill" aria-hidden="true"></i>
-              <span>3. ₱20K GAMOT Medicines</span>
-            </button>
-            <button
-              type="button"
-              class="yakap-tab-btn"
-              data-tab="tab-cancer-screening"
-              role="tab"
-              aria-selected="false"
-              aria-controls="tab-cancer-screening"
-              id="btn-tab-cancer-screening"
-            >
-              <i class="bi bi-shield-plus" aria-hidden="true"></i>
-              <span>4. Cancer Screening</span>
-            </button>
-          </div>
-
-          <!-- Tab Panes Content -->
-          <div class="yakap-tabs-content">
-            <!-- Pane 1: Primary Care -->
-            <div
-              class="yakap-tab-pane active"
-              id="tab-primary-care"
-              role="tabpanel"
-              aria-labelledby="btn-tab-primary-care"
-            >
-              <div class="yakap-pillar-card">
-                <div class="yakap-pillar-header">
-                  <div class="yakap-pillar-icon-box">
-                    <i class="bi bi-heart-pulse-fill" aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <h3>Primary Care &amp; Clinical Consultations</h3>
-                    <p>
-                      Continuous health monitoring, lifestyle profiling, and early disease detection
-                      with your designated YAKAP physician.
-                    </p>
-                  </div>
-                </div>
-                <div class="yakap-pillar-grid">
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> First Patient Encounter (FPE)</h4>
-                    <p>
-                      Comprehensive initial health profiling, medical history recording, and
-                      biometric screening (blood pressure, BMI, vitals) during your first visit.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Annual Regular Check-ups</h4>
-                    <p>
-                      Unlimited routine outpatient medical consultations for members and registered
-                      dependents to catch chronic illnesses before hospital intervention is needed.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4>
-                      <i class="bi bi-check-circle-fill"></i> Health Education &amp; Counseling
-                    </h4>
-                    <p>
-                      Personalized dietary, lifestyle, smoking cessation, and physical activity
-                      guidance tailored to your age bracket and risk assessment.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Specialized Referrals</h4>
-                    <p>
-                      Coordinated referral system to higher-level apex hospitals (such as BRHMC in
-                      Legazpi) when specialized surgical or inpatient care is diagnosed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pane 2: Diagnostic Labs -->
-            <div
-              class="yakap-tab-pane"
-              id="tab-diagnostic-labs"
-              role="tabpanel"
-              aria-labelledby="btn-tab-diagnostic-labs"
-            >
-              <div class="yakap-pillar-card">
-                <div class="yakap-pillar-header">
-                  <div class="yakap-pillar-icon-box">
-                    <i class="bi bi-prescription2" aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <h3>13+ Essential Diagnostic &amp; Laboratory Tests</h3>
-                    <p>
-                      Free standard and specialized laboratory examinations ordered by your
-                      accredited YAKAP physician to monitor vital organs.
-                    </p>
-                  </div>
-                </div>
-                <div class="yakap-pillar-grid">
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Complete Blood Count (CBC)</h4>
-                    <p>
-                      Evaluates overall health, detects infections, anemia, leukemia, and immune
-                      system abnormalities.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4>
-                      <i class="bi bi-check-circle-fill"></i> Fasting Blood Sugar (FBS) &amp; HbA1c
-                    </h4>
-                    <p>
-                      Routine screening and glycemic monitoring for diabetes mellitus, pre-diabetes,
-                      and metabolic disorders.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Lipid Profile Examination</h4>
-                    <p>
-                      Measures Total Cholesterol, Triglycerides, HDL, and LDL levels to assess
-                      cardiovascular and stroke risks.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4>
-                      <i class="bi bi-check-circle-fill"></i> Chest X-Ray &amp; Electrocardiogram
-                      (ECG)
-                    </h4>
-                    <p>
-                      Diagnostic radiology for respiratory conditions (pneumonia, PTB) and 12-lead
-                      ECG for heart rhythm monitoring.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Urinalysis &amp; Fecalysis</h4>
-                    <p>
-                      Screens for kidney disease, urinary tract infections (UTI), gastrointestinal
-                      bleeding, and parasitic infections.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4>
-                      <i class="bi bi-check-circle-fill"></i> Pap Smear &amp; Visual Inspection with
-                      Acetic Acid (VIA)
-                    </h4>
-                    <p>
-                      Preventive cervical cancer screening for women to detect pre-cancerous lesions
-                      at an early, curable stage.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pane 3: GAMOT Maintenance Medicines -->
-            <div
-              class="yakap-tab-pane"
-              id="tab-gamot-medicines"
-              role="tabpanel"
-              aria-labelledby="btn-tab-gamot-medicines"
-            >
-              <div class="yakap-pillar-card">
-                <div class="yakap-pillar-header">
-                  <div class="yakap-pillar-icon-box">
-                    <i class="bi bi-capsule-pill" aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <h3>PhilHealth GAMOT Maintenance Medicines (₱20,000 / Year)</h3>
-                    <p>
-                      Guaranteed and Accessible Medications for Outpatient Treatment (PhilHealth
-                      GAMOT) covering 21+ essential prescription drugs.
-                    </p>
-                  </div>
-                </div>
-                <div class="yakap-pillar-grid">
-                  <div class="yakap-feature-box">
-                    <h4>
-                      <i class="bi bi-check-circle-fill"></i> Cardiovascular &amp; Hypertension
-                    </h4>
-                    <p>
-                      Free maintenance drugs including Amlodipine, Losartan Potassium, Metoprolol
-                      Tartrate, and Co-Amoxiclav when indicated.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Diabetes &amp; Metabolic Care</h4>
-                    <p>
-                      Essential oral anti-diabetic medications including Metformin HCl and
-                      Gliclazide to prevent diabetic complications.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Dyslipidemia / Cholesterol</h4>
-                    <p>
-                      Statin therapies (Simvastatin / Atorvastatin) to manage elevated cholesterol
-                      and reduce heart attack risks.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Respiratory &amp; Asthma</h4>
-                    <p>
-                      Salbutamol inhalers, Salbutamol nebulizing solutions, and Fluticasone-based
-                      therapies for chronic asthma and COPD.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4>
-                      <i class="bi bi-check-circle-fill"></i> Essential Antibiotics &amp; Infection
-                    </h4>
-                    <p>
-                      Amoxicillin, Ciprofloxacin, Cefalexin, and Azithromycin for common outpatient
-                      bacterial infections.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4>
-                      <i class="bi bi-check-circle-fill"></i> Electronic Prescription (ePresS /
-                      UPSC)
-                    </h4>
-                    <p>
-                      Prescriptions are issued electronically with a Unique Prescription Security
-                      Code for seamless dispensing at accredited pharmacies.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pane 4: Cancer Screening -->
-            <div
-              class="yakap-tab-pane"
-              id="tab-cancer-screening"
-              role="tabpanel"
-              aria-labelledby="btn-tab-cancer-screening"
-            >
-              <div class="yakap-pillar-card">
-                <div class="yakap-pillar-header">
-                  <div class="yakap-pillar-icon-box">
-                    <i class="bi bi-shield-plus" aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <h3>Targeted Outpatient Cancer Screening Tests</h3>
-                    <p>
-                      Expanded quality standard packages introduced under PhilHealth Circular No.
-                      2024-0014 and primary care guidelines.
-                    </p>
-                  </div>
-                </div>
-                <div class="yakap-pillar-grid">
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Breast Cancer Screening</h4>
-                    <p>
-                      Annual screening mammography and breast ultrasound for qualified women aged 40
-                      and above or those with family risk history.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Lung Cancer Screening</h4>
-                    <p>
-                      Low-Dose Chest Computed Tomography (LDCT) for high-risk individuals, long-term
-                      smokers, and occupational risk groups.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Colorectal Cancer Screening</h4>
-                    <p>
-                      Fecal Immunochemical Test (FIT) / Fecal Occult Blood Test (FOBT) and
-                      diagnostic colonoscopy referrals for early polyps detection.
-                    </p>
-                  </div>
-                  <div class="yakap-feature-box">
-                    <h4><i class="bi bi-check-circle-fill"></i> Liver Cancer Screening</h4>
-                    <p>
-                      Alpha-fetoprotein (AFP) quantitative serum test and liver ultrasound for
-                      patients with chronic Hepatitis B/C or liver cirrhosis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 2: Visual 5-Step Patient Roadmap -->
+      <!-- Section 1: Visual 5-Step Patient Roadmap -->
       <section class="yakap-roadmap-section" id="roadmap">
         <div class="container">
           <div class="section-header-center">
-            <h2 class="section-title">How to Avail: 5-Step Patient Journey</h2>
+            <h2 class="section-title">How to avail, in five steps</h2>
             <p class="section-subtitle">
-              Follow this step-by-step patient pathway to register, undergo medical evaluation, and
-              receive your covered laboratory tests and maintenance medications in Legazpi City.
+              From signing up to walking out with your medicines. Most people finish steps 1 and 2
+              in a single morning.
             </p>
           </div>
 
@@ -673,15 +373,16 @@
                 <div class="yakap-step-badge">1</div>
               </div>
               <div class="yakap-step-content">
-                <h4>Register &amp; Empanel</h4>
+                <h4>Sign up with one clinic</h4>
                 <p>
-                  Choose and register with any accredited YAKAP Clinic in Legazpi City using the
+                  Choose one accredited YAKAP clinic in Legazpi City and register with it through
+                  the
                   <strong>eGovPH App</strong>, the <strong>PhilHealth Member Portal</strong>, or via
                   walk-in at your preferred health facility.
                 </p>
                 <div class="yakap-step-tip">
-                  <strong>Legazpi Tip:</strong> Walk-in registration is available at the Legazpi
-                  City Health Office (Main CHO) or Homapon Super Health Center.
+                  <strong>No smartphone?</strong> Walk in and register at the Legazpi City Health
+                  Office or the Homapon Super Health Center. Staff will do it for you.
                 </div>
               </div>
             </div>
@@ -692,10 +393,11 @@
                 <div class="yakap-step-badge">2</div>
               </div>
               <div class="yakap-step-content">
-                <h4>First Patient Encounter</h4>
+                <h4>Go for your first check-up</h4>
                 <p>
-                  Visit your registered clinic for your initial health risk assessment, medical
-                  history recording, baseline vital signs check, and physical examination.
+                  Your clinic records your medical history, checks your blood pressure, weight and
+                  other vital signs, and gives you a physical exam. This visit is what opens your
+                  benefits.
                 </p>
                 <div class="yakap-step-tip">
                   <strong>What to bring:</strong> 1 valid government-issued photo ID and your
@@ -710,10 +412,10 @@
                 <div class="yakap-step-badge">3</div>
               </div>
               <div class="yakap-step-content">
-                <h4>Diagnostic Lab Tests</h4>
+                <h4>Get your lab tests done</h4>
                 <p>
-                  Your attending physician evaluates your health risk profile and issues laboratory
-                  orders for covered blood tests, urinalysis, X-ray, ECG, or cancer screenings.
+                  Based on that first visit, your doctor orders whichever covered tests you need:
+                  blood tests, urinalysis, X-ray, ECG or a cancer screening.
                 </p>
                 <div class="yakap-step-tip">
                   <strong>Zero Copay:</strong> Diagnostic tests conducted at accredited facility
@@ -728,11 +430,11 @@
                 <div class="yakap-step-badge">4</div>
               </div>
               <div class="yakap-step-content">
-                <h4>Electronic Prescription</h4>
+                <h4>Receive your prescription</h4>
                 <p>
-                  If maintenance or essential medications are required, your physician generates an
-                  electronic prescription (ePresS) with a
-                  <strong>Unique Prescription Security Code (UPSC)</strong>.
+                  If you need maintenance medicines, your doctor issues an electronic prescription
+                  carrying a security code. That code is what the pharmacy scans, so keep the
+                  prescription safe.
                 </p>
                 <div class="yakap-step-tip">
                   <strong>Benefit Allocation:</strong> The UPSC validates dispensation against your
@@ -747,10 +449,10 @@
                 <div class="yakap-step-badge">5</div>
               </div>
               <div class="yakap-step-content">
-                <h4>Claim Free Medications</h4>
+                <h4>Collect your free medicines</h4>
                 <p>
-                  Present your ePresS prescription at the health center pharmacy or an accredited
-                  partner pharmacy in Legazpi City to claim your medications with zero copay.
+                  Show that prescription at the health centre pharmacy or an accredited partner
+                  pharmacy in Legazpi City. You pay nothing.
                 </p>
                 <div class="yakap-step-tip">
                   <strong>Dispensation:</strong> Chronic maintenance medicines may be dispensed in
@@ -762,14 +464,464 @@
         </div>
       </section>
 
+      <!-- Section 2: Legazpi City Accredited YAKAP Facilities Showcase -->
+      <section class="yakap-facilities-section" id="facilities">
+        <div class="container">
+          <div class="section-header-center">
+            <h2 class="section-title">Where to go in Legazpi City</h2>
+            <p class="section-subtitle">
+              You register with one of these and it becomes your home clinic. Tap any address for
+              directions, or any number to call ahead and check the queue.
+            </p>
+          </div>
+
+          <!-- Facility Category Quick Filter -->
+          <div
+            class="yakap-filter-pills-row"
+            style="justify-content: center; margin-bottom: 20px"
+            role="group"
+            aria-label="Filter Legazpi facilities by category"
+          >
+            <button
+              type="button"
+              class="yakap-filter-pill yakap-fac-filter-pill active"
+              data-fac-filter="all"
+            >
+              All 12 clinics
+            </button>
+            <button
+              type="button"
+              class="yakap-filter-pill yakap-fac-filter-pill"
+              data-fac-filter="public-hub"
+            >
+              City Health Office &amp; RHUs
+            </button>
+            <button
+              type="button"
+              class="yakap-filter-pill yakap-fac-filter-pill"
+              data-fac-filter="hospital"
+            >
+              Hospitals
+            </button>
+            <button
+              type="button"
+              class="yakap-filter-pill yakap-fac-filter-pill"
+              data-fac-filter="birthing"
+            >
+              Birthing Homes
+            </button>
+            <button
+              type="button"
+              class="yakap-filter-pill yakap-fac-filter-pill"
+              data-fac-filter="private-clinic"
+            >
+              Private Partners
+            </button>
+          </div>
+
+          <div class="yakap-facilities-grid">
+            <!-- Facility 1: Legazpi City Health Office (Main CHO) -->
+            <div class="yakap-fac-card" data-fac-type="public-hub">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Primary LGU Hub</span>
+                <span class="yakap-fac-ownership">Government (LGU)</span>
+              </div>
+              <h3 class="yakap-fac-name">Legazpi City Health Office (Main CHO)</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=City+Hall+Compound%2C+Rizal+St.%2C+Bgy.+24+-+Rizal+Street%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >City Hall Compound, Rizal St., Bgy. 24 - Rizal Street, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">YAKAP Consultations</li>
+                <li class="yakap-fac-service-pill">GAMOT Dispensing</li>
+                <li class="yakap-fac-service-pill">Diagnostic Lab</li>
+                <li class="yakap-fac-service-pill">Immunization</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0524350832"
+                  ><i class="bi bi-telephone-fill"></i> (052) 435-0832 / (052) 742-2000</a
+                >
+                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
+                <span><strong>Hours:</strong> Mon - Fri 8:00 AM - 5:00 PM</span>
+              </div>
+            </div>
+
+            <!-- Facility 2: Homapon Super Health Center -->
+            <div class="yakap-fac-card" data-fac-type="public-hub">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Super Health Center</span>
+                <span class="yakap-fac-ownership">Government (LGU)</span>
+              </div>
+              <h3 class="yakap-fac-name">Legazpi CHO RHU III (Super Health Center)</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Homapon+National+Highway%2C+Bgy.+62+-+Homapon%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Homapon National Highway, Bgy. 62 - Homapon, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">YAKAP Consultations</li>
+                <li class="yakap-fac-service-pill">24/7 Birthing Facility</li>
+                <li class="yakap-fac-service-pill">Diagnostic Labs &amp; Ultrasound</li>
+                <li class="yakap-fac-service-pill">GAMOT Pharmacy</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0524800695"><i class="bi bi-telephone-fill"></i> (052) 480-0695</a>
+                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
+                <span><strong>Hours:</strong> 24/7 Active Primary Care</span>
+              </div>
+            </div>
+
+            <!-- Facility 3: Bicol Regional Hospital and Medical Center (BRHMC) -->
+            <div class="yakap-fac-card" data-fac-type="hospital">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Level 3 Apex Medical Center</span>
+                <span class="yakap-fac-ownership">Government (DOH)</span>
+              </div>
+              <h3 class="yakap-fac-name">Bicol Regional Hospital and Medical Center (BRHMC)</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=BRHMC+Medical+Complex%2C+Rizal+St.%2C+Bgy.+1+-+Em's+Barrio%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >BRHMC Medical Complex, Rizal St., Bgy. 1 - Em's Barrio, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">24/7 Apex Emergency</li>
+                <li class="yakap-fac-service-pill">Specialized Diagnostics</li>
+                <li class="yakap-fac-service-pill">Cancer Screening Hub</li>
+                <li class="yakap-fac-service-pill">Hemodialysis &amp; Surgery</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0524830017"
+                  ><i class="bi bi-telephone-fill"></i> (052) 483-0017 / (052) 483-0014</a
+                >
+                <a href="tel:09178266467"><i class="bi bi-phone-fill"></i> 0917 826 6467</a>
+                <span><strong>Hours:</strong> 24/7 Inpatient &amp; Outpatient Clinics</span>
+              </div>
+            </div>
+
+            <!-- Facility 4: Legazpi City Hospital -->
+            <div class="yakap-fac-card" data-fac-type="hospital">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Level 1 City Hospital</span>
+                <span class="yakap-fac-ownership">Government (LGU)</span>
+              </div>
+              <h3 class="yakap-fac-name">Legazpi City Hospital</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Zone+9%2C+Bgy.+37+-+Bitano%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Zone 9, Bgy. 37 - Bitano, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">24/7 Emergency Care</li>
+                <li class="yakap-fac-service-pill">YAKAP Primary Consults</li>
+                <li class="yakap-fac-service-pill">GAMOT Dispensing</li>
+                <li class="yakap-fac-service-pill">Clinical Laboratory</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0527421234"><i class="bi bi-telephone-fill"></i> (052) 742-1234</a>
+                <a href="tel:09058921185"><i class="bi bi-phone-fill"></i> 0905 892 1185</a>
+                <span><strong>Hours:</strong> 24/7 Emergency &amp; Routine OPD</span>
+              </div>
+            </div>
+
+            <!-- Facility 5: Albay Doctors' Hospital -->
+            <div class="yakap-fac-card" data-fac-type="hospital">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Level 2 General Hospital</span>
+                <span class="yakap-fac-ownership">Private Partner</span>
+              </div>
+              <h3 class="yakap-fac-name">Albay Doctors' Hospital, Inc.</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Peñaranda+Street%2C+Bgy.+15+-+Ilawod%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Peñaranda Street, Bgy. 15 - Ilawod, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">24/7 Emergency</li>
+                <li class="yakap-fac-service-pill">YAKAP Accredited Clinic</li>
+                <li class="yakap-fac-service-pill">Comprehensive Lab</li>
+                <li class="yakap-fac-service-pill">Inpatient &amp; Surgical</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0524807777"
+                  ><i class="bi bi-telephone-fill"></i> (052) 480-7777 / (052) 480-7778</a
+                >
+                <a href="tel:09175823977"><i class="bi bi-phone-fill"></i> 0917 582 3977</a>
+                <span><strong>Hours:</strong> 24/7 Service</span>
+              </div>
+            </div>
+
+            <!-- Facility 6: Tanchuling General Hospital -->
+            <div class="yakap-fac-card" data-fac-type="hospital">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Level 2 General Hospital</span>
+                <span class="yakap-fac-ownership">Private Partner</span>
+              </div>
+              <h3 class="yakap-fac-name">Tanchuling General Hospital, Inc.</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Imperial+Court+Subd.%2C+Rizal+St.%2C+Bgy.+24+-+Rizal+Street%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Imperial Court Subd., Rizal St., Bgy. 24 - Rizal Street, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">24/7 Emergency</li>
+                <li class="yakap-fac-service-pill">YAKAP Primary Clinic</li>
+                <li class="yakap-fac-service-pill">Ultrasound &amp; X-Ray</li>
+                <li class="yakap-fac-service-pill">Maternal &amp; Child Care</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0524807411"><i class="bi bi-telephone-fill"></i> (052) 480-7411</a>
+                <a href="tel:09453853587"><i class="bi bi-phone-fill"></i> 0945 385 3587</a>
+                <span><strong>Hours:</strong> 24/7 Service</span>
+              </div>
+            </div>
+
+            <!-- Facility 7: Buyuan Maternity Lying-in Clinic -->
+            <div class="yakap-fac-card" data-fac-type="birthing">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Northern Birthing Home</span>
+                <span class="yakap-fac-ownership">Government (LGU)</span>
+              </div>
+              <h3 class="yakap-fac-name">Legazpi CHO Northern District Maternity Clinic</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Buyuan+Health+Center+Compound%2C+Bgy.+51+-+Buyuan%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Buyuan Health Center Compound, Bgy. 51 - Buyuan, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">24/7 Normal Delivery</li>
+                <li class="yakap-fac-service-pill">YAKAP Primary Care</li>
+                <li class="yakap-fac-service-pill">Prenatal &amp; Postnatal</li>
+                <li class="yakap-fac-service-pill">Newborn Screening</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0524800695"><i class="bi bi-telephone-fill"></i> (052) 480-0695</a>
+                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
+                <span><strong>Hours:</strong> 24/7 Active Maternity Service</span>
+              </div>
+            </div>
+
+            <!-- Facility 8: Banquerohan Maternity Clinic -->
+            <div class="yakap-fac-card" data-fac-type="birthing">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Southern Birthing Home</span>
+                <span class="yakap-fac-ownership">Government (LGU)</span>
+              </div>
+              <h3 class="yakap-fac-name">Legazpi CHO Southern District Maternity Clinic</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Banquerohan+Health+Station+Compound%2C+Bgy.+66+-+Banquerohan%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Banquerohan Health Station Compound, Bgy. 66 - Banquerohan, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">24/7 Normal Delivery</li>
+                <li class="yakap-fac-service-pill">YAKAP Maternal Care</li>
+                <li class="yakap-fac-service-pill">Immunization</li>
+                <li class="yakap-fac-service-pill">Family Planning</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0524800695"><i class="bi bi-telephone-fill"></i> (052) 480-0695</a>
+                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
+                <span><strong>Hours:</strong> 24/7 Active Maternity Service</span>
+              </div>
+            </div>
+
+            <!-- Facility 9: PremierMD Health Care Clinic -->
+            <div class="yakap-fac-card" data-fac-type="private-clinic">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Accredited Private Clinic</span>
+                <span class="yakap-fac-ownership">Private Partner</span>
+              </div>
+              <h3 class="yakap-fac-name">PremierMD Health Care Clinic</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=213+Magallanes+Street%2C+Bgy.+34+-+Oro+Site%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >213 Magallanes Street, Bgy. 34 - Oro Site, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">YAKAP Konsulta Package</li>
+                <li class="yakap-fac-service-pill">GAMOT Prescription</li>
+                <li class="yakap-fac-service-pill">General Consultations</li>
+                <li class="yakap-fac-service-pill">Diagnostic Lab</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0527428899"><i class="bi bi-telephone-fill"></i> (052) 742-8899</a>
+                <a href="tel:09163738055"><i class="bi bi-phone-fill"></i> 0916 373 8055</a>
+                <span><strong>Hours:</strong> Mon - Sat 8:00 AM - 5:00 PM</span>
+              </div>
+            </div>
+
+            <!-- Facility 10: Southeast Health Services -->
+            <div class="yakap-fac-card" data-fac-type="private-clinic">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Primary Care &amp; Occupational</span>
+                <span class="yakap-fac-ownership">Private Partner</span>
+              </div>
+              <h3 class="yakap-fac-name">Southeast Occupational Health &amp; Safety Services</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=2F+Towermall+Bldg+4%2C+Landco+Business+Park%2C+Bgy.+36+-+Capantawan%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >2F Towermall Bldg 4, Landco Business Park, Bgy. 36 - Capantawan, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">YAKAP Primary Provider</li>
+                <li class="yakap-fac-service-pill">Executive Checkups</li>
+                <li class="yakap-fac-service-pill">Diagnostic Laboratory</li>
+                <li class="yakap-fac-service-pill">Pre-Employment Exams</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0528367014"><i class="bi bi-telephone-fill"></i> (052) 836-7014</a>
+                <a href="tel:09562211360"><i class="bi bi-phone-fill"></i> 0956 221 1360</a>
+                <span><strong>Hours:</strong> Mon - Fri 8:00 AM - 5:00 PM</span>
+              </div>
+            </div>
+
+            <!-- Facility 11: Regional Medical and Dental Unit 5 (RMDU 5) -->
+            <div class="yakap-fac-card" data-fac-type="public-hub">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Institutional Clinic</span>
+                <span class="yakap-fac-ownership">Government (PNP)</span>
+              </div>
+              <h3 class="yakap-fac-name">Regional Medical and Dental Unit 5 (RMDU 5)</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Camp+BGen+Simeon+A.+Ola%2C+Bgy.+1+-+Em's+Barrio%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Camp BGen Simeon A. Ola, Bgy. 1 - Em's Barrio, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">YAKAP Primary Care</li>
+                <li class="yakap-fac-service-pill">General Medical Consults</li>
+                <li class="yakap-fac-service-pill">Dental Examinations</li>
+                <li class="yakap-fac-service-pill">First Aid &amp; Triage</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0524801234"><i class="bi bi-telephone-fill"></i> (052) 480-1234</a>
+                <a href="tel:09568758958"><i class="bi bi-phone-fill"></i> 0956 875 8958</a>
+                <span><strong>Hours:</strong> Mon - Fri 8:00 AM - 5:00 PM</span>
+              </div>
+            </div>
+
+            <!-- Facility 12: Taysan Maternity Lying-in Clinic -->
+            <div class="yakap-fac-card" data-fac-type="birthing">
+              <div class="yakap-fac-badge-row">
+                <span class="yakap-fac-type-badge">Southern Birthing Home 2</span>
+                <span class="yakap-fac-ownership">Government (LGU)</span>
+              </div>
+              <h3 class="yakap-fac-name">Legazpi CHO Southern District 2 (Taysan Clinic)</h3>
+              <p class="yakap-fac-address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <a
+                  class="yakap-fac-map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Taysan+Health+Station+Compound%2C+Bgy.+58+-+Taysan%2C+Legazpi+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Taysan Health Station Compound, Bgy. 58 - Taysan, Legazpi City
+                  <span class="yakap-fac-map-cue">Directions</span></a
+                >
+              </p>
+              <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">24/7 Normal Spontaneous Delivery</li>
+                <li class="yakap-fac-service-pill">YAKAP Primary Care</li>
+                <li class="yakap-fac-service-pill">Prenatal &amp; Postnatal Care</li>
+                <li class="yakap-fac-service-pill">Newborn Care</li>
+              </ul>
+              <div class="yakap-fac-contact-row">
+                <a href="tel:0524800695"><i class="bi bi-telephone-fill"></i> (052) 480-0695</a>
+                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
+                <span><strong>Hours:</strong> 24/7 Active Birthing Service</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 24px">
+            <a
+              href="../services/health#health-directory-app"
+              class="yakap-btn-primary"
+              style="display: inline-flex"
+            >
+              <i class="bi bi-search"></i>
+              <span
+                >Explore All 88 Health Facilities &amp; 70 Barangay Health Stations in Legazpi</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
+
       <!-- Section 3: Searchable GAMOT Medicines & Diagnostic Tests Catalog -->
       <section class="yakap-catalog-section" id="catalog">
         <div class="container">
           <div class="section-header-center">
-            <h2 class="section-title">GAMOT Medicines &amp; Diagnostic Tests Catalog</h2>
+            <h2 class="section-title">Check if your medicine or test is covered</h2>
             <p class="section-subtitle">
-              Search covered outpatient maintenance medications, essential drugs, and diagnostic
-              laboratory examinations included under PhilHealth YAKAP and GAMOT.
+              Type the generic name on your prescription, or the test your doctor ordered. Check
+              here before you travel to the clinic.
             </p>
           </div>
 
@@ -781,7 +933,7 @@
                 type="text"
                 id="yakap-catalog-search"
                 class="yakap-search-input"
-                placeholder="Search generic medicine name, indication, or diagnostic test (e.g. Amlodipine, Metformin, Salbutamol, Chest X-Ray, ECG)..."
+                placeholder="Try Amlodipine, Metformin, Chest X-Ray..."
                 aria-label="Search GAMOT medicines and diagnostic tests"
               />
             </div>
@@ -1156,374 +1308,327 @@
         </div>
       </section>
 
-      <!-- Section 4: Legazpi City Accredited YAKAP Facilities Showcase -->
-      <section class="yakap-facilities-section" id="facilities">
+      <!-- Section 4: The 4 Core Benefit Pillars (Interactive Tabs) -->
+      <section class="yakap-pillars-section" id="pillars">
         <div class="container">
           <div class="section-header-center">
-            <h2 class="section-title">Accredited YAKAP Facilities in Legazpi City</h2>
+            <h2 class="section-title">What YAKAP pays for</h2>
             <p class="section-subtitle">
-              Verified list of licensed primary care clinics, public hospitals, super health
-              centers, and birthing homes in Legazpi City accredited under PhilHealth YAKAP for CY
-              2026.
+              PhilHealth YAKAP (formerly Konsulta) provides four comprehensive healthcare guarantees
+              designed for preventive treatment and continuous outpatient care.
             </p>
           </div>
 
-          <!-- Facility Category Quick Filter -->
-          <div
-            class="yakap-filter-pills-row"
-            style="justify-content: center; margin-bottom: 20px"
-            role="group"
-            aria-label="Filter Legazpi facilities by category"
-          >
+          <!-- Tab Selector Buttons -->
+          <div class="yakap-tabs-nav" role="tablist" aria-label="YAKAP Benefit Pillars">
             <button
               type="button"
-              class="yakap-filter-pill yakap-fac-filter-pill active"
-              data-fac-filter="all"
+              class="yakap-tab-btn active"
+              data-tab="tab-primary-care"
+              role="tab"
+              aria-selected="true"
+              aria-controls="tab-primary-care"
+              id="btn-tab-primary-care"
             >
-              All 13 Facilities
+              <i class="bi bi-heart-pulse-fill" aria-hidden="true"></i>
+              <span>1. Primary Care &amp; Consults</span>
             </button>
             <button
               type="button"
-              class="yakap-filter-pill yakap-fac-filter-pill"
-              data-fac-filter="public-hub"
+              class="yakap-tab-btn"
+              data-tab="tab-diagnostic-labs"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-diagnostic-labs"
+              id="btn-tab-diagnostic-labs"
             >
-              City Health Office &amp; RHUs
+              <i class="bi bi-prescription2" aria-hidden="true"></i>
+              <span>2. 13+ Diagnostic Labs</span>
             </button>
             <button
               type="button"
-              class="yakap-filter-pill yakap-fac-filter-pill"
-              data-fac-filter="hospital"
+              class="yakap-tab-btn"
+              data-tab="tab-gamot-medicines"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-gamot-medicines"
+              id="btn-tab-gamot-medicines"
             >
-              Hospitals
+              <i class="bi bi-capsule-pill" aria-hidden="true"></i>
+              <span>3. ₱20K GAMOT Medicines</span>
             </button>
             <button
               type="button"
-              class="yakap-filter-pill yakap-fac-filter-pill"
-              data-fac-filter="birthing"
+              class="yakap-tab-btn"
+              data-tab="tab-cancer-screening"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-cancer-screening"
+              id="btn-tab-cancer-screening"
             >
-              Birthing Homes
-            </button>
-            <button
-              type="button"
-              class="yakap-filter-pill yakap-fac-filter-pill"
-              data-fac-filter="private-clinic"
-            >
-              Private Partners
+              <i class="bi bi-shield-plus" aria-hidden="true"></i>
+              <span>4. Cancer Screening</span>
             </button>
           </div>
 
-          <div class="yakap-facilities-grid">
-            <!-- Facility 1: Legazpi City Health Office (Main CHO) -->
-            <div class="yakap-fac-card" data-fac-type="public-hub">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Primary LGU Hub</span>
-                <span class="yakap-fac-ownership">Government (LGU)</span>
-              </div>
-              <h3 class="yakap-fac-name">Legazpi City Health Office (Main CHO)</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>City Hall Compound, Rizal St., Bgy. 24 - Rizal Street, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">YAKAP Consultations</li>
-                <li class="yakap-fac-service-pill">GAMOT Dispensing</li>
-                <li class="yakap-fac-service-pill">Diagnostic Lab</li>
-                <li class="yakap-fac-service-pill">Immunization</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0524350832"
-                  ><i class="bi bi-telephone-fill"></i> (052) 435-0832 / (052) 742-2000</a
-                >
-                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
-                <span><strong>Hours:</strong> Mon - Fri 8:00 AM - 5:00 PM</span>
-              </div>
-            </div>
-
-            <!-- Facility 2: Homapon Super Health Center -->
-            <div class="yakap-fac-card" data-fac-type="public-hub">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Super Health Center</span>
-                <span class="yakap-fac-ownership">Government (LGU)</span>
-              </div>
-              <h3 class="yakap-fac-name">Legazpi CHO RHU III (Super Health Center)</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>Homapon National Highway, Bgy. 62 - Homapon, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">YAKAP Consultations</li>
-                <li class="yakap-fac-service-pill">24/7 Birthing Facility</li>
-                <li class="yakap-fac-service-pill">Diagnostic Labs &amp; Ultrasound</li>
-                <li class="yakap-fac-service-pill">GAMOT Pharmacy</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0524800695"><i class="bi bi-telephone-fill"></i> (052) 480-0695</a>
-                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
-                <span><strong>Hours:</strong> 24/7 Active Primary Care</span>
-              </div>
-            </div>
-
-            <!-- Facility 3: Bicol Regional Hospital and Medical Center (BRHMC) -->
-            <div class="yakap-fac-card" data-fac-type="hospital">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Level 3 Apex Medical Center</span>
-                <span class="yakap-fac-ownership">Government (DOH)</span>
-              </div>
-              <h3 class="yakap-fac-name">Bicol Regional Hospital and Medical Center (BRHMC)</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>BRHMC Medical Complex, Rizal St., Bgy. 1 - Em's Barrio, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">24/7 Apex Emergency</li>
-                <li class="yakap-fac-service-pill">Specialized Diagnostics</li>
-                <li class="yakap-fac-service-pill">Cancer Screening Hub</li>
-                <li class="yakap-fac-service-pill">Hemodialysis &amp; Surgery</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0524830017"
-                  ><i class="bi bi-telephone-fill"></i> (052) 483-0017 / (052) 483-0014</a
-                >
-                <a href="tel:09178266467"><i class="bi bi-phone-fill"></i> 0917 826 6467</a>
-                <span><strong>Hours:</strong> 24/7 Inpatient &amp; Outpatient Clinics</span>
-              </div>
-            </div>
-
-            <!-- Facility 4: Legazpi City Hospital -->
-            <div class="yakap-fac-card" data-fac-type="hospital">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Level 1 City Hospital</span>
-                <span class="yakap-fac-ownership">Government (LGU)</span>
-              </div>
-              <h3 class="yakap-fac-name">Legazpi City Hospital</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>Zone 9, Bgy. 37 - Bitano, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">24/7 Emergency Care</li>
-                <li class="yakap-fac-service-pill">YAKAP Primary Consults</li>
-                <li class="yakap-fac-service-pill">GAMOT Dispensing</li>
-                <li class="yakap-fac-service-pill">Clinical Laboratory</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0527421234"><i class="bi bi-telephone-fill"></i> (052) 742-1234</a>
-                <a href="tel:09058921185"><i class="bi bi-phone-fill"></i> 0905 892 1185</a>
-                <span><strong>Hours:</strong> 24/7 Emergency &amp; Routine OPD</span>
-              </div>
-            </div>
-
-            <!-- Facility 5: Albay Doctors' Hospital -->
-            <div class="yakap-fac-card" data-fac-type="hospital">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Level 2 General Hospital</span>
-                <span class="yakap-fac-ownership">Private Partner</span>
-              </div>
-              <h3 class="yakap-fac-name">Albay Doctors' Hospital, Inc.</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>Peñaranda Street, Bgy. 15 - Ilawod, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">24/7 Emergency</li>
-                <li class="yakap-fac-service-pill">YAKAP Accredited Clinic</li>
-                <li class="yakap-fac-service-pill">Comprehensive Lab</li>
-                <li class="yakap-fac-service-pill">Inpatient &amp; Surgical</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0524807777"
-                  ><i class="bi bi-telephone-fill"></i> (052) 480-7777 / (052) 480-7778</a
-                >
-                <a href="tel:09175823977"><i class="bi bi-phone-fill"></i> 0917 582 3977</a>
-                <span><strong>Hours:</strong> 24/7 Service</span>
-              </div>
-            </div>
-
-            <!-- Facility 6: Tanchuling General Hospital -->
-            <div class="yakap-fac-card" data-fac-type="hospital">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Level 2 General Hospital</span>
-                <span class="yakap-fac-ownership">Private Partner</span>
-              </div>
-              <h3 class="yakap-fac-name">Tanchuling General Hospital, Inc.</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>Imperial Court Subd., Rizal St., Bgy. 24 - Rizal Street, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">24/7 Emergency</li>
-                <li class="yakap-fac-service-pill">YAKAP Primary Clinic</li>
-                <li class="yakap-fac-service-pill">Ultrasound &amp; X-Ray</li>
-                <li class="yakap-fac-service-pill">Maternal &amp; Child Care</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0524807411"><i class="bi bi-telephone-fill"></i> (052) 480-7411</a>
-                <a href="tel:09453853587"><i class="bi bi-phone-fill"></i> 0945 385 3587</a>
-                <span><strong>Hours:</strong> 24/7 Service</span>
-              </div>
-            </div>
-
-            <!-- Facility 7: Buyuan Maternity Lying-in Clinic -->
-            <div class="yakap-fac-card" data-fac-type="birthing">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Northern Birthing Home</span>
-                <span class="yakap-fac-ownership">Government (LGU)</span>
-              </div>
-              <h3 class="yakap-fac-name">Legazpi CHO Northern District Maternity Clinic</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>Buyuan Health Center Compound, Bgy. 51 - Buyuan, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">24/7 Normal Delivery</li>
-                <li class="yakap-fac-service-pill">YAKAP Primary Care</li>
-                <li class="yakap-fac-service-pill">Prenatal &amp; Postnatal</li>
-                <li class="yakap-fac-service-pill">Newborn Screening</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0524800695"><i class="bi bi-telephone-fill"></i> (052) 480-0695</a>
-                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
-                <span><strong>Hours:</strong> 24/7 Active Maternity Service</span>
-              </div>
-            </div>
-
-            <!-- Facility 8: Banquerohan Maternity Clinic -->
-            <div class="yakap-fac-card" data-fac-type="birthing">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Southern Birthing Home</span>
-                <span class="yakap-fac-ownership">Government (LGU)</span>
-              </div>
-              <h3 class="yakap-fac-name">Legazpi CHO Southern District Maternity Clinic</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span
-                  >Banquerohan Health Station Compound, Bgy. 66 - Banquerohan, Legazpi City</span
-                >
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">24/7 Normal Delivery</li>
-                <li class="yakap-fac-service-pill">YAKAP Maternal Care</li>
-                <li class="yakap-fac-service-pill">Immunization</li>
-                <li class="yakap-fac-service-pill">Family Planning</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0524800695"><i class="bi bi-telephone-fill"></i> (052) 480-0695</a>
-                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
-                <span><strong>Hours:</strong> 24/7 Active Maternity Service</span>
-              </div>
-            </div>
-
-            <!-- Facility 9: PremierMD Health Care Clinic -->
-            <div class="yakap-fac-card" data-fac-type="private-clinic">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Accredited Private Clinic</span>
-                <span class="yakap-fac-ownership">Private Partner</span>
-              </div>
-              <h3 class="yakap-fac-name">PremierMD Health Care Clinic</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>213 Magallanes Street, Bgy. 34 - Oro Site, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">YAKAP Konsulta Package</li>
-                <li class="yakap-fac-service-pill">GAMOT Prescription</li>
-                <li class="yakap-fac-service-pill">General Consultations</li>
-                <li class="yakap-fac-service-pill">Diagnostic Lab</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0527428899"><i class="bi bi-telephone-fill"></i> (052) 742-8899</a>
-                <a href="tel:09163738055"><i class="bi bi-phone-fill"></i> 0916 373 8055</a>
-                <span><strong>Hours:</strong> Mon - Sat 8:00 AM - 5:00 PM</span>
-              </div>
-            </div>
-
-            <!-- Facility 10: Southeast Health Services -->
-            <div class="yakap-fac-card" data-fac-type="private-clinic">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Primary Care &amp; Occupational</span>
-                <span class="yakap-fac-ownership">Private Partner</span>
-              </div>
-              <h3 class="yakap-fac-name">Southeast Occupational Health &amp; Safety Services</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span
-                  >2F Towermall Bldg 4, Landco Business Park, Bgy. 36 - Capantawan, Legazpi
-                  City</span
-                >
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">YAKAP Primary Provider</li>
-                <li class="yakap-fac-service-pill">Executive Checkups</li>
-                <li class="yakap-fac-service-pill">Diagnostic Laboratory</li>
-                <li class="yakap-fac-service-pill">Pre-Employment Exams</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0528367014"><i class="bi bi-telephone-fill"></i> (052) 836-7014</a>
-                <a href="tel:09562211360"><i class="bi bi-phone-fill"></i> 0956 221 1360</a>
-                <span><strong>Hours:</strong> Mon - Fri 8:00 AM - 5:00 PM</span>
-              </div>
-            </div>
-
-            <!-- Facility 11: Regional Medical and Dental Unit 5 (RMDU 5) -->
-            <div class="yakap-fac-card" data-fac-type="public-hub">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Institutional Clinic</span>
-                <span class="yakap-fac-ownership">Government (PNP)</span>
-              </div>
-              <h3 class="yakap-fac-name">Regional Medical and Dental Unit 5 (RMDU 5)</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>Camp BGen Simeon A. Ola, Bgy. 1 - Em's Barrio, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">YAKAP Primary Care</li>
-                <li class="yakap-fac-service-pill">General Medical Consults</li>
-                <li class="yakap-fac-service-pill">Dental Examinations</li>
-                <li class="yakap-fac-service-pill">First Aid &amp; Triage</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0524801234"><i class="bi bi-telephone-fill"></i> (052) 480-1234</a>
-                <a href="tel:09568758958"><i class="bi bi-phone-fill"></i> 0956 875 8958</a>
-                <span><strong>Hours:</strong> Mon - Fri 8:00 AM - 5:00 PM</span>
-              </div>
-            </div>
-
-            <!-- Facility 12: Taysan Maternity Lying-in Clinic -->
-            <div class="yakap-fac-card" data-fac-type="birthing">
-              <div class="yakap-fac-badge-row">
-                <span class="yakap-fac-type-badge">Southern Birthing Home 2</span>
-                <span class="yakap-fac-ownership">Government (LGU)</span>
-              </div>
-              <h3 class="yakap-fac-name">Legazpi CHO Southern District 2 (Taysan Clinic)</h3>
-              <p class="yakap-fac-address">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>Taysan Health Station Compound, Bgy. 58 - Taysan, Legazpi City</span>
-              </p>
-              <ul class="yakap-fac-services">
-                <li class="yakap-fac-service-pill">24/7 Normal Spontaneous Delivery</li>
-                <li class="yakap-fac-service-pill">YAKAP Primary Care</li>
-                <li class="yakap-fac-service-pill">Prenatal &amp; Postnatal Care</li>
-                <li class="yakap-fac-service-pill">Newborn Care</li>
-              </ul>
-              <div class="yakap-fac-contact-row">
-                <a href="tel:0524800695"><i class="bi bi-telephone-fill"></i> (052) 480-0695</a>
-                <a href="tel:09568416087"><i class="bi bi-phone-fill"></i> 0956 841 6087</a>
-                <span><strong>Hours:</strong> 24/7 Active Birthing Service</span>
-              </div>
-            </div>
-          </div>
-
-          <div style="text-align: center; margin-top: 24px">
-            <a
-              href="../services/health#health-directory-app"
-              class="yakap-btn-primary"
-              style="display: inline-flex"
+          <!-- Tab Panes Content -->
+          <div class="yakap-tabs-content">
+            <!-- Pane 1: Primary Care -->
+            <div
+              class="yakap-tab-pane active"
+              id="tab-primary-care"
+              role="tabpanel"
+              aria-labelledby="btn-tab-primary-care"
             >
-              <i class="bi bi-search"></i>
-              <span
-                >Explore All 88 Health Facilities &amp; 70 Barangay Health Stations in Legazpi</span
-              >
-            </a>
+              <div class="yakap-pillar-card">
+                <div class="yakap-pillar-header">
+                  <div class="yakap-pillar-icon-box">
+                    <i class="bi bi-heart-pulse-fill" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h3>Primary Care &amp; Clinical Consultations</h3>
+                    <p>
+                      Continuous health monitoring, lifestyle profiling, and early disease detection
+                      with your designated YAKAP physician.
+                    </p>
+                  </div>
+                </div>
+                <div class="yakap-pillar-grid">
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> First Patient Encounter (FPE)</h4>
+                    <p>
+                      Comprehensive initial health profiling, medical history recording, and
+                      biometric screening (blood pressure, BMI, vitals) during your first visit.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Annual Regular Check-ups</h4>
+                    <p>
+                      Unlimited routine outpatient medical consultations for members and registered
+                      dependents to catch chronic illnesses before hospital intervention is needed.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4>
+                      <i class="bi bi-check-circle-fill"></i> Health Education &amp; Counseling
+                    </h4>
+                    <p>
+                      Personalized dietary, lifestyle, smoking cessation, and physical activity
+                      guidance tailored to your age bracket and risk assessment.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Specialized Referrals</h4>
+                    <p>
+                      Coordinated referral system to higher-level apex hospitals (such as BRHMC in
+                      Legazpi) when specialized surgical or inpatient care is diagnosed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pane 2: Diagnostic Labs -->
+            <div
+              class="yakap-tab-pane"
+              id="tab-diagnostic-labs"
+              role="tabpanel"
+              aria-labelledby="btn-tab-diagnostic-labs"
+            >
+              <div class="yakap-pillar-card">
+                <div class="yakap-pillar-header">
+                  <div class="yakap-pillar-icon-box">
+                    <i class="bi bi-prescription2" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h3>13+ Essential Diagnostic &amp; Laboratory Tests</h3>
+                    <p>
+                      Free standard and specialized laboratory examinations ordered by your
+                      accredited YAKAP physician to monitor vital organs.
+                    </p>
+                  </div>
+                </div>
+                <div class="yakap-pillar-grid">
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Complete Blood Count (CBC)</h4>
+                    <p>
+                      Evaluates overall health, detects infections, anemia, leukemia, and immune
+                      system abnormalities.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4>
+                      <i class="bi bi-check-circle-fill"></i> Fasting Blood Sugar (FBS) &amp; HbA1c
+                    </h4>
+                    <p>
+                      Routine screening and glycemic monitoring for diabetes mellitus, pre-diabetes,
+                      and metabolic disorders.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Lipid Profile Examination</h4>
+                    <p>
+                      Measures Total Cholesterol, Triglycerides, HDL, and LDL levels to assess
+                      cardiovascular and stroke risks.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4>
+                      <i class="bi bi-check-circle-fill"></i> Chest X-Ray &amp; Electrocardiogram
+                      (ECG)
+                    </h4>
+                    <p>
+                      Diagnostic radiology for respiratory conditions (pneumonia, PTB) and 12-lead
+                      ECG for heart rhythm monitoring.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Urinalysis &amp; Fecalysis</h4>
+                    <p>
+                      Screens for kidney disease, urinary tract infections (UTI), gastrointestinal
+                      bleeding, and parasitic infections.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4>
+                      <i class="bi bi-check-circle-fill"></i> Pap Smear &amp; Visual Inspection with
+                      Acetic Acid (VIA)
+                    </h4>
+                    <p>
+                      Preventive cervical cancer screening for women to detect pre-cancerous lesions
+                      at an early, curable stage.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pane 3: GAMOT Maintenance Medicines -->
+            <div
+              class="yakap-tab-pane"
+              id="tab-gamot-medicines"
+              role="tabpanel"
+              aria-labelledby="btn-tab-gamot-medicines"
+            >
+              <div class="yakap-pillar-card">
+                <div class="yakap-pillar-header">
+                  <div class="yakap-pillar-icon-box">
+                    <i class="bi bi-capsule-pill" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h3>PhilHealth GAMOT Maintenance Medicines (₱20,000 / Year)</h3>
+                    <p>
+                      Guaranteed and Accessible Medications for Outpatient Treatment (PhilHealth
+                      GAMOT) covering 21+ essential prescription drugs.
+                    </p>
+                  </div>
+                </div>
+                <div class="yakap-pillar-grid">
+                  <div class="yakap-feature-box">
+                    <h4>
+                      <i class="bi bi-check-circle-fill"></i> Cardiovascular &amp; Hypertension
+                    </h4>
+                    <p>
+                      Free maintenance drugs including Amlodipine, Losartan Potassium, Metoprolol
+                      Tartrate, and Co-Amoxiclav when indicated.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Diabetes &amp; Metabolic Care</h4>
+                    <p>
+                      Essential oral anti-diabetic medications including Metformin HCl and
+                      Gliclazide to prevent diabetic complications.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Dyslipidemia / Cholesterol</h4>
+                    <p>
+                      Statin therapies (Simvastatin / Atorvastatin) to manage elevated cholesterol
+                      and reduce heart attack risks.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Respiratory &amp; Asthma</h4>
+                    <p>
+                      Salbutamol inhalers, Salbutamol nebulizing solutions, and Fluticasone-based
+                      therapies for chronic asthma and COPD.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4>
+                      <i class="bi bi-check-circle-fill"></i> Essential Antibiotics &amp; Infection
+                    </h4>
+                    <p>
+                      Amoxicillin, Ciprofloxacin, Cefalexin, and Azithromycin for common outpatient
+                      bacterial infections.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4>
+                      <i class="bi bi-check-circle-fill"></i> Electronic Prescription (ePresS /
+                      UPSC)
+                    </h4>
+                    <p>
+                      Prescriptions are issued electronically with a Unique Prescription Security
+                      Code for seamless dispensing at accredited pharmacies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pane 4: Cancer Screening -->
+            <div
+              class="yakap-tab-pane"
+              id="tab-cancer-screening"
+              role="tabpanel"
+              aria-labelledby="btn-tab-cancer-screening"
+            >
+              <div class="yakap-pillar-card">
+                <div class="yakap-pillar-header">
+                  <div class="yakap-pillar-icon-box">
+                    <i class="bi bi-shield-plus" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h3>Targeted Outpatient Cancer Screening Tests</h3>
+                    <p>
+                      Expanded quality standard packages introduced under PhilHealth Circular No.
+                      2024-0014 and primary care guidelines.
+                    </p>
+                  </div>
+                </div>
+                <div class="yakap-pillar-grid">
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Breast Cancer Screening</h4>
+                    <p>
+                      Annual screening mammography and breast ultrasound for qualified women aged 40
+                      and above or those with family risk history.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Lung Cancer Screening</h4>
+                    <p>
+                      Low-Dose Chest Computed Tomography (LDCT) for high-risk individuals, long-term
+                      smokers, and occupational risk groups.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Colorectal Cancer Screening</h4>
+                    <p>
+                      Fecal Immunochemical Test (FIT) / Fecal Occult Blood Test (FOBT) and
+                      diagnostic colonoscopy referrals for early polyps detection.
+                    </p>
+                  </div>
+                  <div class="yakap-feature-box">
+                    <h4><i class="bi bi-check-circle-fill"></i> Liver Cancer Screening</h4>
+                    <p>
+                      Alpha-fetoprotein (AFP) quantitative serum test and liver ultrasound for
+                      patients with chronic Hepatitis B/C or liver cirrhosis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1532,10 +1637,10 @@
       <section class="yakap-support-section" id="support">
         <div class="container">
           <div class="section-header-center">
-            <h2 class="section-title">Legazpi City YAKAP Support Hub</h2>
+            <h2 class="section-title">Who to call when something goes wrong</h2>
             <p class="section-subtitle">
-              Need assistance with empanelment, updating your PhilHealth member data, or resolving
-              prescription concerns? Contact verified local agencies in Legazpi City.
+              If you were turned away, your records are wrong, or a pharmacy would not honour your
+              prescription, these are the offices that can fix it.
             </p>
           </div>
 

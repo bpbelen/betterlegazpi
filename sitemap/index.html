@@ -83,7 +83,12 @@
     <link rel="stylesheet" href="../assets/css/footer.css" />
       <script>
       (function () {
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+          /* storage blocked (private browsing): fall back to the system preference */
+        }
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -372,6 +377,10 @@
               <a href="../tourism/landmarks" class="sitemap-link-item"
                 ><i class="bi bi-arrow-right"></i>
                 <span>Scenic Landmarks &amp; Parks</span></a
+              >
+              <a href="../tourism/ibalong" class="sitemap-link-item"
+                ><i class="bi bi-arrow-right"></i>
+                <span>The Ibalong Epic</span></a
               >
             </div>
           </div>

@@ -24,6 +24,14 @@
   --hist-card-shadow: var(--shadow-sm);
   --hist-card-shadow-hover: var(--shadow-md);
   --hist-transition: all var(--duration-slow) var(--ease-out);
+
+  /* Height of the two stacked sticky bars. history.js measures the real
+     values onto :root at load and on resize; these are the no-JS fallbacks.
+     Anything that pins itself or offsets an anchor must read these rather
+     than hard-code a number, or the two drift apart. */
+  --site-header-h: 80px;
+  --reading-toolbar-h: 65px;
+  --sticky-stack-h: calc(var(--site-header-h) + var(--reading-toolbar-h));
 }
 
 [data-theme='dark'] {
@@ -60,6 +68,134 @@
   background: linear-gradient(90deg, var(--hist-terracotta), #f97316);
   z-index: 1000;
   will-change: transform;
+}
+
+/* Drive the bar off the scroll timeline so it runs on the compositor and
+   works before history.js loads. The JS fallback in history.js only binds
+   itself when this is unsupported. */
+@supports (animation-timeline: scroll()) {
+  .history-progress-bar {
+    animation: history-progress linear;
+    animation-timeline: scroll(root block);
+  }
+
+  @keyframes history-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Page Header (history only: photograph behind the shared .page-header)
+   -------------------------------------------------------------------------- */
+/* Sizing is inherited from the shared .page-header in style.css so this page
+   matches every other section header on the site. Only the ground changes:
+   a photograph instead of the navy gradient. */
+.page-history .page-header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Decorative, so it carries an empty alt. If the file is missing, history.js
+   flags the page and the header falls back to the brand gradient that every
+   other page uses, with the credit line removed. */
+.page-history .page-header-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  /* An <img> needs an explicit size here: with auto width it falls back to its
+     intrinsic pixel width instead of filling the header. */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 46%;
+}
+
+.page-history.page-header-photo-missing .page-header-photo,
+.page-history.page-header-photo-missing .page-header::before,
+.page-history.page-header-photo-missing .page-header-credit {
+  display: none;
+}
+
+/* Scrim. The gradient carries the original brand navy, so the header still
+   reads as the same page furniture it did before, just with a picture in it.
+   Contrast over the darkest part of the photo stays above 7:1 for the title. */
+.page-history .page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 33, 112, 0.42) 0%,
+    rgba(0, 33, 112, 0.5) 48%,
+    rgba(0, 33, 112, 0.66) 100%
+  );
+}
+
+.page-history .page-header .container {
+  position: relative;
+}
+
+.page-history .page-header .container::before {
+  content: '';
+  position: absolute;
+  inset: -60px -14%;
+  z-index: -1;
+  /* closest-side keeps the ellipse inside its own box, so it reaches full
+     transparency before the edge. Sizing it in percentages let the radii run
+     past the box and the gradient got cut off mid-ramp, leaving a visible
+     rectangle across the header. */
+  background: radial-gradient(
+    ellipse closest-side at 50% 50%,
+    rgba(0, 20, 70, 0.74) 0%,
+    rgba(0, 20, 70, 0.52) 52%,
+    rgba(0, 20, 70, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.page-history.page-header-photo-missing .page-header .container::before {
+  display: none;
+}
+
+.page-history .page-header-content {
+  max-width: 680px;
+}
+
+.page-history .page-header h1 {
+  text-shadow: 0 1px 14px rgba(0, 20, 70, 0.6);
+  text-wrap: balance;
+}
+
+.page-history .page-header-desc {
+  text-shadow: 0 1px 10px rgba(0, 20, 70, 0.55);
+  color: rgba(255, 255, 255, 0.94);
+}
+
+/* Photo credit, per the source's own caption. */
+.page-history .page-header-credit {
+  margin: 22px 0 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.page-history .page-header-credit a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.page-history .page-header-credit a:hover,
+.page-history .page-header-credit a:focus-visible {
+  color: #ffffff;
 }
 
 /* --------------------------------------------------------------------------
@@ -132,10 +268,13 @@
 /* --------------------------------------------------------------------------
    Sticky Reading Tools Bar
    -------------------------------------------------------------------------- */
+/* Sits below .site-header (z-index 1000, pinned to top: 0) rather than
+   underneath it. Both the offset and the z-index have to stay on this side
+   of the header or the toolbar becomes unreachable once the page scrolls. */
 .reading-toolbar-wrapper {
   position: sticky;
-  top: 0;
-  z-index: 99;
+  top: var(--site-header-h);
+  z-index: 90;
   background: var(--hist-surface);
   border-bottom: 1px solid var(--hist-border);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -204,9 +343,9 @@
 
 .reading-search-input:focus {
   outline: none;
-  border-color: var(--hist-terracotta);
+  border-color: var(--hist-navy);
   background: var(--hist-surface);
-  box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 50, 160, 0.15);
 }
 
 .reading-search-clear {
@@ -281,6 +420,7 @@
 }
 
 .bento-grid {
+  align-items: start;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
@@ -330,8 +470,8 @@
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  background: var(--hist-terracotta-light);
-  color: var(--hist-terracotta);
+  background: rgba(0, 50, 160, 0.1);
+  color: var(--hist-navy);
   flex-shrink: 0;
 }
 
@@ -374,27 +514,24 @@
 /* --------------------------------------------------------------------------
    City Seal Showcase Card
    -------------------------------------------------------------------------- */
+/* No inner card frame here. The section is already inside .bento-card, and a
+   second border around the same content communicated no extra hierarchy. */
 .city-seal-showcase {
   display: flex;
   align-items: center;
   gap: 20px;
-  background: var(--hist-surface-alt);
-  border: 1px solid var(--hist-border);
-  border-radius: var(--radius-md);
-  padding: 16px 20px;
-  margin-bottom: 20px;
+  padding: 4px 0 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--hist-border-light);
 }
 
+/* The seal artwork carries its own gold ring, so it needs no disc behind it.
+   The old hard-coded white disc was what haloed the seal in dark mode. */
 .city-seal-img-wrapper {
   position: relative;
   width: 110px;
   height: 110px;
   min-width: 110px;
-  border-radius: var(--radius-circle);
-  background: #ffffff;
-  padding: 6px;
-  border: 2px solid var(--hist-terracotta-border);
-  box-shadow: 0 4px 12px rgba(194, 65, 12, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -404,7 +541,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: var(--radius-circle);
 }
 
 .city-seal-info h4 {
@@ -430,12 +566,40 @@
   font-size: 0.9375rem;
 }
 
-.facts-table tr {
-  border-bottom: 1px solid var(--hist-border-light);
+/* Grouped into three clusters (identity, charter, land and people) with one
+   rule between clusters. A hairline under all eight rows read as noise. */
+.facts-table tbody + tbody {
+  border-top: 1px solid var(--hist-border-light);
 }
 
-.facts-table tr:last-child {
-  border-bottom: none;
+.facts-table tbody + tbody th,
+.facts-table tbody + tbody td {
+  padding-top: 18px;
+}
+
+.facts-table tbody tr:last-child th,
+.facts-table tbody tr:last-child td {
+  padding-bottom: 18px;
+}
+
+.facts-table tbody:last-child tr:last-child th,
+.facts-table tbody:last-child tr:last-child td {
+  padding-bottom: 0;
+}
+
+.facts-cluster-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hist-text-muted);
+  padding: 0 0 10px;
+  text-align: left;
+  font-family: inherit;
+}
+
+.facts-table tbody + tbody .facts-cluster-label {
+  padding-top: 20px;
 }
 
 .facts-table th {
@@ -448,7 +612,7 @@
 }
 
 .facts-table th i {
-  color: var(--hist-terracotta);
+  color: var(--hist-navy);
   margin-right: 6px;
   font-size: 0.95rem;
 }
@@ -464,33 +628,25 @@
    -------------------------------------------------------------------------- */
 .seal-items-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 22px 26px;
 }
 
+/* Third level of framing removed. These six are separated by space, which is
+   all the grouping they ever needed. */
 .seal-item-card {
-  padding: 12px 14px;
-  border-radius: var(--radius-md);
-  background: var(--hist-surface-alt);
-  border: 1px solid var(--hist-border);
+  padding: 0;
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  transition: var(--hist-transition);
-}
-
-.seal-item-card:hover {
-  background: var(--hist-surface);
-  border-color: var(--hist-terracotta-border);
-  transform: translateY(-2px);
 }
 
 .seal-icon-box {
   width: 34px;
   height: 34px;
   border-radius: var(--radius-md);
-  background: rgba(194, 65, 12, 0.12);
-  color: var(--hist-terracotta);
+  background: rgba(0, 50, 160, 0.1);
+  color: var(--hist-navy);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -559,12 +715,41 @@ a.timeline-node:hover *,
   border-bottom: 1px solid var(--hist-border);
 }
 
+/* The rail holds the scroller plus its two controls. */
+.timeline-rail {
+  position: relative;
+}
+
 .timeline-track-wrapper {
   position: relative;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-left: 4px;
   padding: 20px 4px 28px 4px;
   scrollbar-width: thin;
-  scrollbar-color: var(--hist-terracotta) var(--hist-surface-muted);
+  scrollbar-color: var(--hist-navy) var(--hist-surface-muted);
+}
+
+/* Fades the clipped edge so a cut-off card reads as "there is more" rather
+   than as a broken layout. history.js toggles the two flags with an
+   IntersectionObserver on sentinels at each end of the track. */
+.timeline-rail[data-overflow-start='true'] .timeline-track-wrapper {
+  mask-image: linear-gradient(to right, transparent 0, #000 56px, #000 100%);
+}
+
+.timeline-rail[data-overflow-end='true'] .timeline-track-wrapper {
+  mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 56px), transparent 100%);
+}
+
+.timeline-rail[data-overflow-start='true'][data-overflow-end='true'] .timeline-track-wrapper {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 56px,
+    #000 calc(100% - 56px),
+    transparent 100%
+  );
 }
 
 .timeline-track {
@@ -573,6 +758,45 @@ a.timeline-node:hover *,
   min-width: max-content;
   position: relative;
   padding-top: 24px;
+}
+
+.timeline-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: var(--radius-circle);
+  border: 1px solid var(--hist-border);
+  background: var(--hist-surface);
+  color: var(--hist-text-primary);
+  box-shadow: var(--hist-card-shadow-hover);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: var(--hist-transition);
+}
+
+.timeline-rail[data-overflow-start='true'] .timeline-nav-prev,
+.timeline-rail[data-overflow-end='true'] .timeline-nav-next {
+  display: flex;
+}
+
+.timeline-nav-prev {
+  left: -4px;
+}
+
+.timeline-nav-next {
+  right: -4px;
+}
+
+.timeline-nav:hover {
+  border-color: var(--hist-navy);
+  color: var(--hist-navy);
 }
 
 .timeline-track::before {
@@ -589,6 +813,7 @@ a.timeline-node:hover *,
 .timeline-node {
   position: relative;
   z-index: 2;
+  scroll-snap-align: start;
   width: 220px;
   background: var(--hist-surface-alt);
   border: 1px solid var(--hist-border);
@@ -604,7 +829,7 @@ a.timeline-node:hover *,
 }
 
 .timeline-node:hover {
-  border-color: var(--hist-terracotta);
+  border-color: var(--hist-navy);
   transform: translateY(-4px);
   box-shadow: var(--hist-card-shadow-hover);
 }
@@ -618,13 +843,13 @@ a.timeline-node:hover *,
   height: 18px;
   border-radius: var(--radius-circle);
   background: var(--hist-surface);
-  border: 4px solid var(--hist-terracotta);
-  box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.2);
+  border: 4px solid var(--hist-navy);
+  box-shadow: 0 0 0 3px rgba(0, 50, 160, 0.16);
   transition: var(--hist-transition);
 }
 
 .timeline-node:hover .timeline-dot {
-  background: var(--hist-terracotta);
+  background: var(--hist-navy);
   transform: translateX(-50%) scale(1.2);
 }
 
@@ -632,7 +857,7 @@ a.timeline-node:hover *,
   display: inline-block;
   font-size: var(--fs-base);
   font-weight: 700;
-  color: var(--hist-terracotta);
+  color: var(--hist-navy);
   margin-bottom: 6px;
 }
 
@@ -654,9 +879,12 @@ a.timeline-node:hover *,
 /* --------------------------------------------------------------------------
    Narrative Content Area (Concise vs Comprehensive)
    -------------------------------------------------------------------------- */
+/* Banding runs bento (alt) / timeline (surface) / narrative (alt) /
+   scholarly (surface). Cards below are flipped to match, so nothing ends up
+   the same colour as the section behind it. */
 .history-narrative-section {
   padding: var(--spacing-xl) 0;
-  background: var(--hist-surface);
+  background: var(--hist-surface-alt);
 }
 
 /* View Containers */
@@ -688,20 +916,26 @@ a.timeline-node:hover *,
   margin: 0 auto;
 }
 
+/* No card. There is nothing beside the summary for a card to group it
+   against, and the frame made the page's opening read as a sidebar. */
+/* Narrower than the highlight cards below it, so the summary reads as prose
+   at about 70 characters a line rather than spanning the whole container. */
+/* Wider than the chapter column on purpose: this is a short summary with no
+   figure rail beside it, and at 30rem it ran past a full screen. */
 .concise-lead-card {
-  background: var(--hist-surface-alt);
-  border: 1px solid var(--hist-border);
-  border-radius: var(--radius-md);
-  padding: 32px;
-  margin-bottom: 36px;
-  box-shadow: var(--hist-card-shadow);
+  max-width: 36rem;
+  margin: 0 auto 44px;
 }
 
 .concise-story-paragraph {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  line-height: 1.68;
   color: var(--hist-text-primary);
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+}
+
+.concise-story-paragraph:first-child {
+  margin-bottom: 18px;
 }
 
 .concise-story-paragraph:last-child {
@@ -725,7 +959,7 @@ a.timeline-node:hover *,
 
 .concise-highlight-icon {
   font-size: 1.5rem;
-  color: var(--hist-terracotta);
+  color: var(--hist-navy);
   margin-bottom: 12px;
 }
 
@@ -746,20 +980,32 @@ a.timeline-node:hover *,
 /* --------------------------------------------------------------------------
    Comprehensive View Layout (With Sidebar)
    -------------------------------------------------------------------------- */
+/* Chapter nav plus the chapter flow. The flow is wide enough to carry both
+   the text column and a margin rail; see .chapter-block below. */
 .comprehensive-layout {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 48px;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 44px;
   align-items: start;
+}
+
+.chapters-flow {
+  min-width: 0;
+}
+
+/* Scrolls within itself rather than stretching its parent to max-content. */
+.mobile-era-bar {
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* Sticky Chapter Sidebar */
 .chapter-sidebar {
   position: sticky;
-  top: 72px;
-  max-height: calc(100vh - 90px);
+  top: calc(var(--sticky-stack-h) + 16px);
+  max-height: calc(100dvh - var(--sticky-stack-h) - 36px);
   overflow-y: auto;
-  background: var(--hist-surface-alt);
+  background: var(--hist-surface);
   border: 1px solid var(--hist-border);
   border-radius: var(--radius-md);
   padding: 20px;
@@ -859,14 +1105,66 @@ a.timeline-node:hover *,
 
 /* Main Chapters Flow */
 .chapters-flow {
-  max-width: 72ch;
+  max-width: none;
 }
 
+/* Text at a readable measure, with a margin rail beside it for the chapter
+   figure. The measure was ~87 characters before, with the right third of the
+   page empty; capping it at 62ch is what freed the rail.
+   scroll-margin clears both pinned bars, whatever they currently measure. */
 .chapter-block {
+  display: grid;
+  grid-template-columns: minmax(0, 28rem) minmax(0, 280px);
+  grid-template-rows: auto 1fr;
+  column-gap: 44px;
   padding-bottom: 48px;
   margin-bottom: 48px;
   border-bottom: 1px solid var(--hist-border);
-  scroll-margin-top: 90px;
+  scroll-margin-top: calc(var(--sticky-stack-h) + 20px);
+}
+
+.chapter-header,
+.chapter-body {
+  grid-column: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Chapter Figures (margin rail)
+   -------------------------------------------------------------------------- */
+.chapter-figure {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin: 6px 0 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--sticky-stack-h) + 20px);
+}
+
+.chapter-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--hist-surface-muted);
+  border: 1px solid var(--hist-border);
+}
+
+.chapter-figure figcaption {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--hist-text-secondary);
+  margin-top: 10px;
+}
+
+/* Says who took the photograph, and keeps the caption honest about the fact
+   that these are present-day pictures of the places, not period images. */
+.chapter-figure .figure-credit {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--hist-text-muted);
 }
 
 .chapter-block:last-child {
@@ -879,14 +1177,16 @@ a.timeline-node:hover *,
   margin-bottom: 20px;
 }
 
+/* A dateline under the heading, not a label above it. The chapter number
+   lives in the sidebar, where it does navigational work; repeating it here
+   and again in the heading told the reader the same thing three times. */
 .chapter-era-badge {
-  display: inline-block;
+  display: block;
   font-size: var(--fs-sm);
-  font-weight: 700;
-  color: var(--hist-terracotta);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--hist-text-secondary);
+  letter-spacing: 0.01em;
+  margin-top: 8px;
 }
 
 .chapter-header h2 {
@@ -898,10 +1198,13 @@ a.timeline-node:hover *,
   margin: 0;
 }
 
+/* The measure lives here rather than on the grid track, so it stays right
+   whatever width the rail beside it ends up with. */
 .chapter-body p {
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--hist-text-primary);
+  max-width: 28rem;
   margin-bottom: 20px;
 }
 
@@ -916,7 +1219,7 @@ a.timeline-node:hover *,
 
 /* Callout Boxes */
 .history-callout {
-  background: var(--hist-surface-alt);
+  background: var(--hist-surface);
   border: 1px solid var(--hist-border);
   border-radius: var(--radius-md);
   padding: 20px 24px;
@@ -948,12 +1251,12 @@ a.timeline-node:hover *,
    -------------------------------------------------------------------------- */
 .scholarly-section {
   padding: var(--spacing-xl) 0;
-  background: var(--hist-surface-alt);
+  background: var(--hist-surface);
   border-top: 1px solid var(--hist-border);
 }
 
 .discrepancy-card {
-  background: var(--hist-surface);
+  background: var(--hist-surface-alt);
   border: 1px solid var(--hist-border);
   border-radius: var(--radius-md);
   padding: 32px;
@@ -972,8 +1275,8 @@ a.timeline-node:hover *,
   width: 38px;
   height: 38px;
   border-radius: var(--radius-md);
-  background: var(--hist-terracotta-light);
-  color: var(--hist-terracotta);
+  background: rgba(0, 50, 160, 0.1);
+  color: var(--hist-navy);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1008,7 +1311,7 @@ a.timeline-node:hover *,
   content: '•';
   position: absolute;
   left: 6px;
-  color: var(--hist-terracotta);
+  color: var(--hist-navy);
   font-size: 1.3rem;
   line-height: 1;
 }
@@ -1019,7 +1322,7 @@ a.timeline-node:hover *,
 
 /* Citations & Disclaimer */
 .references-card {
-  background: var(--hist-surface);
+  background: var(--hist-surface-alt);
   border: 1px solid var(--hist-border);
   border-radius: var(--radius-md);
   padding: 28px 32px;
@@ -1056,7 +1359,7 @@ a.timeline-node:hover *,
 }
 
 .citation-list a {
-  color: var(--hist-terracotta);
+  color: var(--hist-navy);
   word-break: break-all;
   text-decoration: underline;
 }
@@ -1093,10 +1396,37 @@ mark.history-search-highlight {
 /* --------------------------------------------------------------------------
    Responsive Breakpoints
    -------------------------------------------------------------------------- */
+@media (max-width: 1180px) {
+  .chapter-block {
+    grid-template-columns: minmax(0, 28rem) minmax(0, 200px);
+    column-gap: 32px;
+  }
+}
+
 @media (max-width: 1024px) {
   .comprehensive-layout {
-    grid-template-columns: 240px minmax(0, 1fr);
+    grid-template-columns: 230px minmax(0, 1fr);
     gap: 32px;
+  }
+
+  /* Not enough width left for a rail. The figure drops into the text column,
+     above the prose, and stops being sticky. */
+  .chapter-block {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .chapter-body p,
+  .chapter-header {
+    max-width: 28rem;
+  }
+
+  .chapter-figure {
+    grid-column: 1;
+    grid-row: auto;
+    position: static;
+    order: -1;
+    max-width: 460px;
+    margin: 0 0 22px;
   }
 
   .bento-col-4 {
@@ -1109,7 +1439,7 @@ mark.history-search-highlight {
 
 @media (max-width: 840px) {
   .comprehensive-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .chapter-sidebar {
@@ -1123,42 +1453,153 @@ mark.history-search-highlight {
   .bento-col-6 {
     grid-column: span 12;
   }
+}
 
+/* --------------------------------------------------------------------------
+   Phone layout
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  /* Reading toolbar collapses to a single row: search, then icon-only actions.
+     It was three stacked rows and 173px tall, a fifth of the screen, pinned. */
   .reading-toolbar {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .reading-meta-group {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 0;
   }
 
   .reading-search-box {
-    max-width: 100%;
-    min-width: 100%;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: none;
   }
 
-  .reading-meta-group,
+  /* Duplicated by the minute badges on the two view-switcher buttons. */
+  .reading-time-pill {
+    display: none;
+  }
+
   .reading-actions-group {
-    justify-content: space-between;
+    flex: 0 0 auto;
+    gap: 6px;
+  }
+
+  .toolbar-action-btn {
+    padding: 0;
+    width: 44px;
+    min-width: 44px;
+    justify-content: center;
+  }
+
+  .toolbar-action-btn span {
+    /* Icon-only, but the accessible name stays on the button's title/aria. */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .search-match-count:empty {
+    display: none;
+  }
+
+  .page-history .page-header-photo {
+    object-position: center 50%;
+  }
+
+  /* Timeline reads as a vertical spine on a phone, which is how a timeline
+     wants to work here anyway. No horizontal scroller, no hidden cards. */
+  .timeline-track-wrapper {
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding: 4px 0 0 0;
+  }
+
+  .timeline-rail[data-overflow-start='true'] .timeline-track-wrapper,
+  .timeline-rail[data-overflow-end='true'] .timeline-track-wrapper,
+  .timeline-rail[data-overflow-start='true'][data-overflow-end='true'] .timeline-track-wrapper {
+    mask-image: none;
+  }
+
+  .timeline-nav {
+    display: none !important;
+  }
+
+  .timeline-track {
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+    padding-top: 0;
+    padding-left: 26px;
+  }
+
+  .timeline-track::before {
+    top: 8px;
+    bottom: 8px;
+    left: 5px;
+    right: auto;
+    width: 3px;
+    height: auto;
+  }
+
+  .timeline-node {
     width: 100%;
+    margin-bottom: 14px;
+  }
+
+  .timeline-node:hover {
+    transform: none;
+  }
+
+  .timeline-dot {
+    top: 20px;
+    left: -26px;
+    transform: none;
+    width: 13px;
+    height: 13px;
+    border-width: 3px;
+  }
+
+  .timeline-node:hover .timeline-dot {
+    transform: scale(1.15);
   }
 }
 
 @media (max-width: 640px) {
+  /* Two-up segmented control. The pill radius used to wrap a two-row stack,
+     leaving crescent gaps at the corners. */
   .view-switcher {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
+    border-radius: var(--radius-md);
+    gap: 4px;
+    padding: 4px;
   }
 
   .view-switch-btn {
     width: 100%;
-    padding: 8px 16px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 10px;
+    border-radius: calc(var(--radius-md) - 2px);
     font-size: 0.875rem;
+    white-space: normal;
+    text-align: center;
   }
 
   .timeline-node {
-    width: 180px;
-  }
-
-  .concise-lead-card {
-    padding: 20px;
+    width: 100%;
   }
 
   .discrepancy-card,
@@ -1191,6 +1632,7 @@ mark.history-search-highlight {
   .reading-toolbar-wrapper,
   .chapter-sidebar,
   .mobile-era-bar,
+  .timeline-nav,
   .site-footer,
   .vol-popup-overlay,
   .toolbar-action-btn {
@@ -1208,6 +1650,23 @@ mark.history-search-highlight {
   }
 
   .chapter-block {
+    display: block;
     page-break-inside: avoid;
+  }
+
+  .chapter-figure {
+    position: static;
+    max-width: 320px;
+    margin: 0 0 16px;
+  }
+
+  .timeline-track-wrapper {
+    overflow: visible;
+    mask-image: none;
+  }
+
+  .timeline-track {
+    flex-wrap: wrap;
+    min-width: 0;
   }
 }

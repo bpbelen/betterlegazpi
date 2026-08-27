@@ -4,29 +4,24 @@
    ========================================================================== */
 
 /* --- Custom Variables & Tokens for Tourism ---
-   Primary/accent are aliased onto the global accent so tourism stays in the
-   same terracotta family as the rest of the site instead of running its own. */
+   Tourism follows the site palette: the brand navy is primary and carries the
+   structure (buttons, chips, focus rings, links, icons), and terracotta is the
+   accent, used sparingly for emphasis.
+
+   These used to be aliased the other way round, with --tourism-primary pointing
+   at --color-accent. That made every tourism page terracotta and left the brand
+   navy showing nowhere except the shared page furniture. The emerald, sky,
+   amber and purple families that sat alongside it are gone: a page carries one
+   accent, not five. */
 :root {
-  --tourism-primary: var(--color-accent);
-  --tourism-primary-hover: #9a3412;
-  --tourism-primary-light: rgba(194, 65, 12, 0.1);
+  --tourism-primary: var(--color-primary);
+  --tourism-primary-hover: var(--color-primary-dark);
+  --tourism-primary-solid: var(--color-primary-solid);
+  --tourism-primary-light: rgba(0, 50, 160, 0.1);
+  /* Text on the -light tint above. Navy is dark enough to use as-is, unlike the
+     accent, which needs --color-accent-badge-text to clear 4.5:1 on its tint. */
+  --tourism-primary-badge-text: var(--color-primary);
   --tourism-accent: var(--color-accent);
-  /* Category badge families. Each has a plain role (icons/inline text on the
-     page's own background) and a badge-text role (text on its own -light
-     tint), mirroring --color-accent vs --color-accent-badge-text. */
-  --tourism-emerald: #047857;
-  --tourism-emerald-light: rgba(5, 150, 105, 0.12);
-  --tourism-emerald-badge-text: #047857;
-  --tourism-sky: #0284c7;
-  --tourism-sky-light: rgba(2, 132, 199, 0.12);
-  --tourism-sky-badge-text: #0369a1;
-  --tourism-sky-solid: #0369a1; /* solid fills paired with white text; fixed across themes like --color-accent-solid */
-  --tourism-amber: #d97706;
-  --tourism-amber-light: rgba(217, 119, 6, 0.12);
-  --tourism-amber-badge-text: #92400e;
-  --tourism-purple: #7c3aed;
-  --tourism-purple-light: rgba(124, 58, 237, 0.12);
-  --tourism-purple-badge-text: #6d28d9;
 
   --tourism-glass-bg: rgba(255, 255, 255, 0.85);
   --tourism-glass-border: rgba(255, 255, 255, 0.6);
@@ -35,7 +30,7 @@
   --tourism-card-bg: rgba(255, 255, 255, 0.92);
   --tourism-card-border: rgba(226, 232, 240, 0.8);
   --tourism-card-hover-shadow:
-    0 24px 48px -12px rgba(194, 65, 12, 0.18), 0 0 0 1px rgba(194, 65, 12, 0.25);
+    0 24px 48px -12px rgba(0, 50, 160, 0.18), 0 0 0 1px rgba(0, 50, 160, 0.25);
   --tourism-text-muted: #64748b;
   --tourism-tag-bg: var(--color-bg-muted);
   --tourism-tag-text: #334155;
@@ -43,16 +38,11 @@
 }
 
 [data-theme='dark'] {
-  --tourism-primary: var(--color-accent);
-  --tourism-accent: var(--color-accent);
-  --tourism-emerald: #34d399;
-  --tourism-emerald-badge-text: #34d399;
-  --tourism-sky: #38bdf8;
-  --tourism-sky-badge-text: #6f9dff;
-  --tourism-amber: #fbbf24;
-  --tourism-amber-badge-text: #fbbf24;
-  --tourism-purple: #c4b5fd;
-  --tourism-purple-badge-text: #c4b5fd;
+  /* --tourism-primary and friends alias onto --color-* tokens, which the site
+     already re-points for dark mode, so only the tints need redeclaring here.
+     Held at 0.10: at 0.16 the tint lifts enough that #6f9dff text on it falls to
+     4.19:1, under AA for the 14px labels that use this pairing. */
+  --tourism-primary-light: rgba(111, 157, 255, 0.1);
   --tourism-glass-bg: rgba(15, 23, 42, 0.88);
   --tourism-glass-border: rgba(255, 255, 255, 0.12);
   --tourism-glass-shadow:
@@ -60,14 +50,118 @@
   --tourism-card-bg: rgba(30, 41, 59, 0.85);
   --tourism-card-border: rgba(255, 255, 255, 0.1);
   --tourism-card-hover-shadow:
-    0 24px 48px -12px rgba(234, 88, 12, 0.25), 0 0 0 1px rgba(251, 146, 60, 0.35);
+    0 24px 48px -12px rgba(29, 78, 216, 0.3), 0 0 0 1px rgba(111, 157, 255, 0.35);
   --tourism-text-muted: #94a3b8;
   --tourism-tag-bg: rgba(51, 65, 85, 0.8);
   --tourism-tag-text: var(--color-text-light);
   --tourism-table-stripe: rgba(15, 23, 42, 0.4);
 }
 
-/* --- Quick Jump & Stats (sits below the shared .page-header) --- */
+/* --------------------------------------------------------------------------
+   Page Header (photograph behind the shared .page-header)
+   --------------------------------------------------------------------------
+   Same treatment the history page uses, opted into with .page-header--photo so
+   a tourism page without a picture keeps the plain brand gradient. Sizing still
+   comes from .page-header in style.css, so this stays the same piece of page
+   furniture as every other section header on the site. Only the ground changes.
+   -------------------------------------------------------------------------- */
+.page-header--photo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  /* Taller than the shared header. The archival panorama on the history page
+     reads fine in a thin band; a volcano does not, and this picture is the
+     reason anyone books a trip. Still a header band, not a full-screen hero. */
+  padding: clamp(3.5rem, 8vw, 5.5rem) 0;
+}
+
+/* Decorative, so it carries an empty alt. If the file is missing, tourism.js
+   flags the page and the header falls back to the gradient, credit removed. */
+.page-header--photo .page-header-photo {
+  position: absolute;
+  inset: 0;
+  /* An <img> needs an explicit size here: with auto width it falls back to its
+     intrinsic pixel width instead of filling the header. */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Keeps the summit in frame. Centring the crop cut the peak off. */
+  object-position: center 34%;
+  z-index: -2;
+}
+
+.page-header-photo-missing .page-header-photo,
+.page-header-photo-missing .page-header--photo::before,
+.page-header-photo-missing .page-header-credit {
+  display: none;
+}
+
+/* Scrim, carrying the brand navy so the header still reads as the same
+   furniture it did before, just with a picture in it. Much lighter than the
+   history page's: that photo is a low-contrast sepia archival scan, this one is
+   a saturated colour photograph and a heavy scrim turned it into a blue
+   rectangle. The radial behind the type below does the legibility work, which
+   leaves the sky and the cone at the edges more or less untouched. */
+.page-header--photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 33, 112, 0.16) 0%,
+    rgba(0, 33, 112, 0.24) 48%,
+    rgba(0, 33, 112, 0.46) 100%
+  );
+}
+
+.page-header--photo .container {
+  position: relative;
+}
+
+/* Carries the type contrast on its own now that the flat scrim is light. Sized
+   to the text block so the volcano stays clear either side of it. */
+.page-header--photo .container::before {
+  content: '';
+  position: absolute;
+  inset: -32px -8% -20px;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse 58% 76% at 50% 50%,
+    rgba(0, 18, 62, 0.82) 0%,
+    rgba(0, 18, 62, 0.62) 52%,
+    rgba(0, 18, 62, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.page-header-photo-missing .page-header--photo .container::before {
+  display: none;
+}
+
+.page-header--photo .page-header-content {
+  max-width: 680px;
+}
+
+.page-header--photo h1 {
+  text-shadow: 0 1px 14px rgba(0, 20, 70, 0.6);
+  text-wrap: balance;
+}
+
+.page-header--photo .page-header-desc {
+  text-shadow: 0 1px 10px rgba(0, 20, 70, 0.55);
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.page-header--photo .page-header-credit {
+  margin: 22px 0 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* --- Quick Jump (sits below the shared .page-header) --- */
 .tourism-gateway-section {
   background: var(--color-bg-alt);
   border-bottom: 1px solid var(--color-border);
@@ -98,8 +192,8 @@
 }
 
 .tourism-hero-gateway-pill:hover {
-  background: var(--color-accent-solid);
-  border-color: var(--color-accent-solid);
+  background: var(--tourism-primary-solid);
+  border-color: var(--tourism-primary-solid);
   color: #ffffff !important;
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
@@ -111,34 +205,6 @@
 
 .tourism-hero-gateway-pill:hover i {
   color: #ffffff;
-}
-
-/* Stats Pill Grid */
-.tourism-stats-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-border);
-}
-
-.tourism-stat-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  border-radius: var(--radius-pill);
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-light);
-  font-size: 0.85rem;
-}
-
-.tourism-stat-pill strong {
-  color: var(--tourism-primary);
-  font-weight: 700;
 }
 
 /* --- Official City Seal Fallback Presentation --- */
@@ -202,52 +268,21 @@
   max-width: var(--measure);
 }
 
+/* One of only two places terracotta appears on a tourism page. The accent earns
+   its emphasis by being rare, so it is spent on the single section eyebrow and
+   on the top-rated flag in the hub markup, and nowhere else. */
 .tourism-section-header__badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 4px 12px;
   border-radius: var(--radius-pill);
-  background: var(--tourism-primary-light);
+  background: rgba(194, 65, 12, 0.1);
   color: var(--color-accent-badge-text);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 8px;
-}
-
-/* Category color modifiers, shared across every badge/icon chip that follows
-   the "-light background + -badge-text color" pattern. */
-.tourism-section-header__badge--emerald,
-.tourism-itinerary-card__badge--emerald,
-.tourism-gateway-icon--emerald,
-.tourism-product-icon--emerald {
-  background: var(--tourism-emerald-light);
-  color: var(--tourism-emerald-badge-text);
-}
-
-.tourism-section-header__badge--sky,
-.tourism-itinerary-card__badge--sky,
-.tourism-gateway-icon--sky,
-.tourism-product-icon--sky {
-  background: var(--tourism-sky-light);
-  color: var(--tourism-sky-badge-text);
-}
-
-.tourism-section-header__badge--amber,
-.tourism-itinerary-card__badge--amber,
-.tourism-gateway-icon--amber,
-.tourism-product-icon--amber {
-  background: var(--tourism-amber-light);
-  color: var(--tourism-amber-badge-text);
-}
-
-.tourism-section-header__badge--purple,
-.tourism-itinerary-card__badge--purple,
-.tourism-gateway-icon--purple,
-.tourism-product-icon--purple {
-  background: var(--tourism-purple-light);
-  color: var(--tourism-purple-badge-text);
 }
 
 .tourism-section-header h2 {
@@ -275,7 +310,7 @@
   border-radius: var(--radius-pill);
   background: var(--tourism-card-bg);
   border: 1px solid var(--tourism-card-border);
-  color: var(--color-accent-text) !important;
+  color: var(--tourism-primary) !important;
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none !important;
@@ -283,9 +318,9 @@
 }
 
 .tourism-section-header__link:hover {
-  background: var(--color-accent-solid);
+  background: var(--tourism-primary-solid);
   color: #ffffff !important;
-  border-color: var(--color-accent-solid);
+  border-color: var(--tourism-primary-solid);
   transform: translateX(4px);
 }
 
@@ -360,15 +395,15 @@
   pointer-events: none;
 }
 
-.tourism-featured-card__badges {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
+/* Category caption. This used to be a pair of pills stamped on top of the
+   photograph; it now sits above the title as a plain line of small caps, so the
+   picture is just a picture and the category still reads. */
+.tourism-card__tags {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin: 0 0 8px;
 }
 
 .tourism-featured-card__body {
@@ -394,11 +429,44 @@
   flex-grow: 1;
 }
 
-/* --- The Legazpi Experience & Adventure Cards --- */
+/* --- The Legazpi Experience & Adventure Cards ---
+   Lead plus two, not three equal columns. The ATV ride is the draw here, so it
+   runs full width as a horizontal split and the other two sit under it. That
+   also keeps this section from reading as a repeat of the bento above. */
 .tourism-experience-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .tourism-experience-grid > .tourism-exp-card:first-child {
+    grid-column: 1 / -1;
+    flex-direction: row;
+  }
+
+  .tourism-experience-grid > .tourism-exp-card:first-child > .tourism-exp-card__media {
+    width: 52%;
+    height: auto;
+    min-height: 300px;
+    flex-shrink: 0;
+  }
+
+  .tourism-experience-grid > .tourism-exp-card:first-child > .tourism-exp-card__body {
+    justify-content: center;
+    padding: 32px;
+  }
+
+  .tourism-experience-grid > .tourism-exp-card:first-child .tourism-exp-card__title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Below 768px every card is a plain stacked card, lead included. */
+@media (max-width: 767px) {
+  .tourism-experience-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .tourism-exp-card {
@@ -415,8 +483,8 @@
 
 .tourism-exp-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 48px -12px rgba(234, 88, 12, 0.25);
-  border-color: var(--color-accent);
+  box-shadow: var(--tourism-card-hover-shadow);
+  border-color: var(--tourism-primary);
 }
 
 .tourism-exp-card__media {
@@ -460,11 +528,47 @@
   flex-grow: 1;
 }
 
-/* --- Signature Delicacies Showcase --- */
+/* --- Signature Delicacies Showcase ---
+   A flick-through strip rather than a fourth card grid. Nine dishes in an
+   auto-fit grid left an orphan on its own row at most widths, and it made this
+   section look identical to the two above it. Scroll-snap also suits the
+   content: these are things to browse, not to compare side by side. */
+/* Flex, not grid: grid columns still shrink to fit the container even inside a
+   scroller, which squashed all nine cards into slivers. flex-shrink: 0 is what
+   actually makes a track overflow. */
 .tourism-delicacy-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
   gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  /* Room for the cards' hover lift and shadow, which a clipped scroller eats. */
+  padding: 4px 4px 18px;
+  margin: -4px -4px -18px;
+  scrollbar-width: thin;
+}
+
+.tourism-delicacy-grid > .tourism-delicacy-card {
+  flex: 0 0 auto;
+  /* One and a bit cards visible on a phone, so the strip reads as scrollable. */
+  width: 76%;
+  max-width: 300px;
+  scroll-snap-align: start;
+}
+
+/* Two and a bit on a tablet, four and a bit on a desktop. The partial card at
+   the right edge is what tells the reader there is more. No "scroll" label. */
+@media (min-width: 640px) {
+  .tourism-delicacy-grid > .tourism-delicacy-card {
+    width: calc((100% - 2 * 20px) / 2.4);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tourism-delicacy-grid > .tourism-delicacy-card {
+    width: calc((100% - 4 * 20px) / 4.35);
+    max-width: none;
+  }
 }
 
 .tourism-delicacy-card {
@@ -512,95 +616,6 @@
   margin-bottom: 0;
 }
 
-/* --- Suggested Itineraries Section --- */
-.tourism-itinerary-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-}
-
-.tourism-itinerary-card {
-  background: var(--tourism-glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--tourism-glass-border);
-  box-shadow: var(--tourism-glass-shadow);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.tourism-itinerary-card__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 14px;
-  border-radius: var(--radius-pill);
-  background: var(--tourism-emerald-light);
-  color: var(--tourism-emerald-badge-text);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  align-self: flex-start;
-}
-
-.tourism-itinerary-card__title {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--color-text);
-  margin-bottom: 16px;
-}
-
-.tourism-itinerary-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  position: relative;
-  padding-left: 24px;
-  margin-bottom: 24px;
-}
-
-.tourism-itinerary-timeline::before {
-  content: '';
-  position: absolute;
-  left: 6px;
-  top: 6px;
-  bottom: 6px;
-  width: 2px;
-  background: var(--tourism-primary-light);
-}
-
-.tourism-itinerary-step {
-  position: relative;
-}
-
-.tourism-itinerary-step::before {
-  content: '';
-  position: absolute;
-  left: -24px;
-  top: 6px;
-  width: 14px;
-  height: 14px;
-  border-radius: var(--radius-circle);
-  background: var(--tourism-primary);
-  border: 3px solid var(--color-bg);
-}
-
-.tourism-itinerary-step strong {
-  display: block;
-  font-size: 0.95rem;
-  color: var(--color-text);
-  margin-bottom: 2px;
-}
-
-.tourism-itinerary-step span {
-  font-size: 0.85rem;
-  color: var(--tourism-text-muted);
-}
-
 /* --- Category Portal Gateway Cards (5 Columns by Default) --- */
 .tourism-gateways-grid {
   display: grid;
@@ -638,7 +653,7 @@
   justify-content: center;
   font-size: 1.6rem;
   background: var(--tourism-primary-light);
-  color: var(--color-accent-badge-text);
+  color: var(--tourism-primary-badge-text);
   transition: all var(--duration-slow) ease;
 }
 
@@ -851,7 +866,7 @@
 .tourism-sub-chip.active {
   background: var(--tourism-primary-light);
   border-color: var(--tourism-primary);
-  color: var(--color-accent-badge-text);
+  color: var(--tourism-primary-badge-text);
   font-weight: 600;
 }
 
@@ -902,9 +917,14 @@
 /* --- Card Grid Styles --- */
 .tourism-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr));
   gap: 24px;
   margin-bottom: 40px;
+  /* Cards without a photograph are shorter than cards with one. Letting them
+     size to their content is the point: the photographed entries stand taller
+     and read as the richer listings, instead of every card being padded out to
+     match. */
+  align-items: start;
 }
 
 .tourism-card {
@@ -961,7 +981,7 @@
 
 .tourism-card__placeholder i {
   font-size: 2.75rem;
-  color: var(--tourism-accent);
+  color: var(--tourism-text-muted);
 }
 
 .tourism-card__placeholder span {
@@ -969,16 +989,14 @@
   font-weight: 500;
 }
 
-.tourism-card__badges {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  right: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  pointer-events: none;
-  z-index: 2;
+/* A card with no picture keeps a coloured edge so it still reads as a listing
+   rather than as a gap in the grid. */
+.tourism-card--no-photo {
+  border-left: 3px solid var(--tourism-primary-solid);
+}
+
+.tourism-card--no-photo .tourism-card__body {
+  padding-top: 20px;
 }
 
 .tourism-badge {
@@ -1003,13 +1021,13 @@
 }
 
 .tourism-badge--subcategory {
-  background: rgba(234, 88, 12, 0.9);
+  background: var(--tourism-primary-solid);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .tourism-badge--delicacy {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%);
+  background: var(--tourism-primary-solid);
   color: #ffffff;
 }
 
@@ -1019,32 +1037,35 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Micro-Attribution Badge */
-.tourism-card__attribution {
-  position: absolute;
-  bottom: 10px;
-  right: 12px;
-  background: rgba(15, 23, 42, 0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #ffffff;
+/* Inside the caption line a badge is text, not a pill: no fill, no blur, no
+   shadow. The first one carries the accent, the rest stay muted, which keeps
+   one voice per card instead of two competing chips. */
+.tourism-card__tags .tourism-badge {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
   font-size: 0.7rem;
-  font-weight: 600;
-  padding: 3px 9px;
-  border-radius: var(--radius-sm);
-  pointer-events: none;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: opacity var(--duration-base) ease;
+  letter-spacing: 0.08em;
+  color: var(--tourism-text-muted);
 }
 
-.tourism-card__attribution i {
-  font-size: 0.75rem;
-  opacity: 0.9;
+.tourism-card__tags .tourism-badge:first-child {
+  color: var(--tourism-primary);
+}
+
+/* Hairline between two categories, in place of the old pill edges. */
+.tourism-card__tags .tourism-badge + .tourism-badge::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 0.72em;
+  margin-right: 10px;
+  vertical-align: -0.02em;
+  background: var(--color-border);
 }
 
 /* Card Body */
@@ -1110,7 +1131,7 @@
 
 .tourism-meta-item .barangay-tag i {
   font-size: 0.8rem;
-  color: var(--tourism-emerald);
+  color: var(--tourism-primary);
   margin: 0;
 }
 
@@ -1126,8 +1147,8 @@
   gap: 6px;
   padding: 4px 12px;
   border-radius: var(--radius-md);
-  background: var(--tourism-sky-light);
-  color: var(--tourism-sky-badge-text);
+  background: var(--tourism-primary-light);
+  color: var(--tourism-primary-badge-text);
   font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none !important;
@@ -1135,7 +1156,7 @@
 }
 
 .tourism-contact-btn:hover {
-  background: var(--tourism-sky-solid);
+  background: var(--tourism-primary-solid);
   color: #ffffff;
 }
 
@@ -1156,8 +1177,8 @@
   padding: 10px 16px;
   border-radius: var(--radius-md);
   background: var(--tourism-primary-light);
-  color: var(--color-accent-badge-text);
-  border: 1px solid rgba(194, 65, 12, 0.25);
+  color: var(--tourism-primary-badge-text);
+  border: 1px solid rgba(0, 50, 160, 0.25);
   font-size: 0.88rem;
   font-weight: 600;
   text-decoration: none !important;
@@ -1168,7 +1189,7 @@
   background: var(--tourism-primary);
   color: #ffffff;
   border-color: var(--tourism-primary);
-  box-shadow: 0 4px 14px rgba(194, 65, 12, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 50, 160, 0.35);
   transform: translateY(-1px);
 }
 
@@ -1254,7 +1275,7 @@
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   background: var(--tourism-primary-light);
-  color: var(--color-accent-badge-text);
+  color: var(--tourism-primary-badge-text);
   font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none !important;
@@ -1279,7 +1300,7 @@
 
 .tourism-empty-state i {
   font-size: 3.5rem;
-  color: var(--tourism-accent);
+  color: var(--tourism-text-muted);
   margin-bottom: 16px;
   display: inline-block;
 }
@@ -1428,7 +1449,7 @@
 /* --- Products of Pride (Orgullo de Legazpi) --- */
 .tourism-products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 24px;
 }
 
@@ -1455,7 +1476,7 @@
   height: 52px;
   border-radius: var(--radius-lg);
   background: var(--tourism-primary-light);
-  color: var(--color-accent-badge-text);
+  color: var(--tourism-primary-badge-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1476,7 +1497,7 @@
   gap: 6px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--tourism-emerald);
+  color: var(--tourism-primary);
   margin-bottom: 12px;
 }
 
@@ -1504,8 +1525,8 @@
 
 /* --- Ibalong Festival Feature --- */
 .tourism-festival-feature {
-  background: linear-gradient(135deg, rgba(234, 88, 12, 0.08) 0%, rgba(220, 38, 38, 0.04) 100%);
-  border: 1px solid rgba(234, 88, 12, 0.2);
+  background: linear-gradient(135deg, rgba(0, 50, 160, 0.07) 0%, rgba(0, 50, 160, 0.03) 100%);
+  border: 1px solid rgba(0, 50, 160, 0.18);
   border-radius: var(--radius-lg);
   padding: 36px;
   display: grid;
@@ -1560,7 +1581,7 @@
 .tourism-festival-highlight h4 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-accent);
+  color: var(--tourism-primary);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1569,7 +1590,7 @@
 /* --- Legazpi Hospitality Cards --- */
 .tourism-hospitality-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 24px;
 }
 
@@ -1606,7 +1627,7 @@
 /* --- 16 Dive Reef Sites --- */
 .tourism-dives-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
   gap: 12px;
   margin-top: 16px;
 }
@@ -1689,4 +1710,285 @@
   .tourism-section {
     padding: 64px 0;
   }
+}
+
+/* --------------------------------------------------------------------------
+   The Ibalong Epic
+   --------------------------------------------------------------------------
+   A reading page, not a directory, so it drops the card grids entirely and
+   runs on measure and rhythm. The two tellings are switched in place by
+   ibalong.js; only one panel is in the accessibility tree at a time.
+   -------------------------------------------------------------------------- */
+.epic-switcher-section {
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-md) 0;
+}
+
+.epic-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.epic-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  /* 44px keeps the control inside the touch-target floor the responsive spec
+     checks for. */
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background var(--duration-base) ease,
+    border-color var(--duration-base) ease,
+    color var(--duration-base) ease;
+}
+
+.epic-switch-btn:hover {
+  border-color: var(--tourism-primary);
+  color: var(--tourism-primary);
+}
+
+.epic-switch-btn.active {
+  background: var(--tourism-primary-solid);
+  border-color: var(--tourism-primary-solid);
+  color: #ffffff;
+}
+
+.epic-switch-btn:active {
+  transform: scale(0.98);
+}
+
+.epic-switch-time {
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--tourism-primary-light);
+  color: var(--tourism-primary-badge-text);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* Darkens rather than lightens. A white veil over the button lifted the pill to
+   #4f75e1 in dark mode, where white 11.5px bold text on it falls to 4.23:1.
+   Going the other way holds 8.7:1 in dark and 12.8:1 in light. */
+.epic-switch-btn.active .epic-switch-time {
+  background: rgba(0, 0, 0, 0.18);
+  color: #ffffff;
+}
+
+/* Only the chosen telling exists as far as the page, and assistive tech, is
+   concerned. display:none rather than visually-hidden, so the inactive
+   version's headings stay out of the document outline. */
+.epic-view {
+  display: none;
+}
+
+.epic-view.active {
+  display: block;
+}
+
+.epic-section {
+  padding: 48px 0;
+}
+
+.epic-section--alt {
+  background: var(--color-bg-alt);
+  border-block: 1px solid var(--color-border);
+}
+
+/* Prose measure. Long-form reading wants a line length, not the full grid. */
+.epic-measure {
+  max-width: 68ch;
+}
+
+.epic-measure p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  margin: 0 0 1.15em;
+}
+
+.epic-lead {
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  color: var(--color-text) !important;
+  font-weight: 500;
+}
+
+.epic-h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin: 2em 0 0.6em;
+  scroll-margin-top: 90px;
+}
+
+.epic-measure > .epic-h2:first-child,
+.epic-section > .container > .epic-h2:first-child {
+  margin-top: 0;
+}
+
+.epic-list {
+  margin: 0 0 1.4em;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.7em;
+}
+
+.epic-list li {
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.epic-jump {
+  margin-top: 2em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--color-border);
+}
+
+.epic-jump a {
+  font-weight: 600;
+  color: var(--tourism-primary);
+}
+
+/* --- The three heroes ---------------------------------------------------- */
+.epic-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.epic-hero-card {
+  background: var(--tourism-card-bg);
+  border: 1px solid var(--tourism-card-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.epic-hero-card__media {
+  height: 200px;
+  overflow: hidden;
+  background: var(--color-bg-muted);
+}
+
+.epic-hero-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.epic-hero-card__body {
+  padding: 22px;
+}
+
+.epic-hero-card__body h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--tourism-primary);
+  margin: 0 0 8px;
+}
+
+.epic-hero-card__body p {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--tourism-text-muted);
+  margin: 0;
+}
+
+/* --- The bestiary -------------------------------------------------------- */
+/* Eight short entries. A hairline-per-row list would be the lazy shape, so
+   these sit as their own small blocks with one divider each. */
+.epic-beast-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  margin: 1.5em 0 2em;
+}
+
+.epic-beast {
+  padding: 16px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.epic-beast:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.epic-beast h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 4px;
+}
+
+.epic-beast p {
+  font-size: 0.92rem !important;
+  line-height: 1.6 !important;
+  color: var(--tourism-text-muted) !important;
+  margin: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .epic-section {
+    padding: 64px 0;
+  }
+
+  .epic-hero-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .epic-beast-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+
+  /* In two columns the second column needs its own top rule, and the
+     last-child bottom rule would land in the wrong place. */
+  .epic-beast:nth-last-child(-n + 2) {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .epic-beast:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+/* Route from the hub's festival panel into the full epic page. */
+.tourism-festival-link {
+  margin: 18px 0 0;
+}
+
+.tourism-festival-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-weight: 600;
+  color: var(--tourism-primary);
+}
+
+.tourism-festival-link a:hover i {
+  transform: translateX(3px);
+}
+
+.tourism-festival-link i {
+  transition: transform var(--duration-base) ease;
+}
+
+.epic-sources {
+  padding-bottom: 48px;
 }

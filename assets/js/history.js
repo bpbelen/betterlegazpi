@@ -21,8 +21,66 @@
   const mobileEraPills = document.querySelectorAll('.mobile-era-pill');
   const timelineNodes = document.querySelectorAll('.timeline-node');
   const chapterBlocks = document.querySelectorAll('.chapter-block');
+  const siteHeader = document.querySelector('.site-header');
+  const toolbarWrapper = document.querySelector('.reading-toolbar-wrapper');
+  const timelineRail = document.querySelector('.timeline-rail');
 
   let currentView = 'concise';
+
+  function prefersReducedMotion() {
+    return (
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    );
+  }
+
+  // ==========================================================================
+  // Sticky Stack Metrics
+  //
+  // .site-header and .reading-toolbar-wrapper are both pinned. The toolbar
+  // offset, the sidebar offset and every anchor's scroll-margin are derived
+  // from these two heights in CSS, so they are measured here rather than
+  // hard-coded per breakpoint. history.css carries static fallbacks.
+  // ==========================================================================
+  function syncStickyMetrics() {
+    const root = document.documentElement;
+    if (siteHeader) {
+      root.style.setProperty('--site-header-h', Math.round(siteHeader.offsetHeight) + 'px');
+    }
+    if (toolbarWrapper) {
+      root.style.setProperty('--reading-toolbar-h', Math.round(toolbarWrapper.offsetHeight) + 'px');
+    }
+  }
+
+  syncStickyMetrics();
+
+  // ==========================================================================
+  // Page Header Photograph
+  //
+  // The header photo is decorative. If it fails to load we flag the page so
+  // history.css can drop the scrim and the credit line, leaving the standard
+  // brand gradient rather than a caption for a picture that is not there.
+  // ==========================================================================
+  (function guardHeaderPhoto() {
+    const photo = document.querySelector('.page-header-photo');
+    if (!photo) return;
+
+    const markMissing = () => document.body.classList.add('page-header-photo-missing');
+
+    if (photo.complete) {
+      if (!photo.naturalWidth) markMissing();
+      return;
+    }
+    photo.addEventListener('error', markMissing, { once: true });
+  })();
+
+  if (window.ResizeObserver) {
+    const stickyObserver = new ResizeObserver(syncStickyMetrics);
+    if (siteHeader) stickyObserver.observe(siteHeader);
+    if (toolbarWrapper) stickyObserver.observe(toolbarWrapper);
+  } else {
+    window.addEventListener('resize', syncStickyMetrics);
+  }
 
   // ==========================================================================
   // View Switcher (Concise vs Comprehensive)
@@ -113,7 +171,69 @@
     progressBar.style.transform = `scaleX(${scrollRatio})`;
   }
 
-  window.addEventListener('scroll', updateProgressBar, { passive: true });
+  // history.css drives this off scroll(root block) where that is supported,
+  // which keeps it on the compositor and working before this file loads. The
+  // listener below only binds on browsers without scroll-driven animations.
+  const supportsScrollTimeline =
+    window.CSS &&
+    typeof window.CSS.supports === 'function' &&
+    window.CSS.supports('animation-timeline: scroll()');
+
+  if (!supportsScrollTimeline) {
+    window.addEventListener('scroll', updateProgressBar, { passive: true });
+    updateProgressBar();
+  }
+
+  // ==========================================================================
+  // Timeline Overflow Affordance
+  //
+  // Thirteen milestones do not fit at any desktop width. We watch whether the
+  // first and last cards are fully in view; history.css uses the two flags to
+  // fade that edge and reveal the matching control. No scroll listener is
+  // involved. Below 767px the track is a vertical spine, every card is in
+  // view, and both flags settle to false.
+  // ==========================================================================
+  if (timelineRail && window.IntersectionObserver) {
+    const trackWrapper = timelineRail.querySelector('.timeline-track-wrapper');
+    const nodes = timelineRail.querySelectorAll('.timeline-node');
+
+    if (trackWrapper && nodes.length > 1) {
+      const firstNode = nodes[0];
+      const lastNode = nodes[nodes.length - 1];
+
+      const edgeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            // The edge is still clipped while its end card is not fully shown.
+            const clipped = entry.intersectionRatio < 0.98 ? 'true' : 'false';
+            if (entry.target === firstNode) {
+              timelineRail.setAttribute('data-overflow-start', clipped);
+            } else if (entry.target === lastNode) {
+              timelineRail.setAttribute('data-overflow-end', clipped);
+            }
+          });
+        },
+        { root: trackWrapper, threshold: [0, 0.98, 1] }
+      );
+
+      edgeObserver.observe(firstNode);
+      edgeObserver.observe(lastNode);
+
+      timelineRail.querySelectorAll('[data-timeline-scroll]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const direction = Number(btn.getAttribute('data-timeline-scroll')) || 1;
+          // Two cards plus their gaps, or most of a screenful if that fails.
+          const step = firstNode
+            ? (firstNode.getBoundingClientRect().width + 20) * 2
+            : trackWrapper.clientWidth * 0.8;
+          trackWrapper.scrollBy({
+            left: direction * step,
+            behavior: prefersReducedMotion() ? 'auto' : 'smooth',
+          });
+        });
+      });
+    }
+  }
 
   // ==========================================================================
   // Timeline Node Jump to Chapter
@@ -131,7 +251,10 @@
 
       const targetEl = document.getElementById(targetId);
       if (targetEl) {
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        targetEl.scrollIntoView({
+          behavior: prefersReducedMotion() ? 'auto' : 'smooth',
+          block: 'start',
+        });
       }
     });
   });
@@ -143,7 +266,7 @@
     const observerOptions = {
       root: null,
       rootMargin: '-20% 0px -70% 0px',
-      threshold: 0
+      threshold: 0,
     };
 
     const chapterObserver = new IntersectionObserver((entries) => {
@@ -186,7 +309,10 @@
         const targetEl = document.querySelector(targetHref);
         if (targetEl) {
           e.preventDefault();
-          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          targetEl.scrollIntoView({
+            behavior: prefersReducedMotion() ? 'auto' : 'smooth',
+            block: 'start',
+          });
         }
       }
     });
@@ -242,7 +368,7 @@
             return NodeFilter.FILTER_REJECT;
           }
           return NodeFilter.FILTER_ACCEPT;
-        }
+        },
       },
       false
     );
@@ -341,7 +467,10 @@
         performSearch(searchInput.value);
         const firstMark = document.querySelector('mark.history-search-highlight');
         if (firstMark) {
-          firstMark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstMark.scrollIntoView({
+            behavior: prefersReducedMotion() ? 'auto' : 'smooth',
+            block: 'center',
+          });
         }
       }
     });

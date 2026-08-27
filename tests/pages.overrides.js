@@ -12,16 +12,19 @@
  * containers themselves ship in the static HTML, so waiting on them would
  * resolve instantly and defeat the point.
  *
+ * Keep entries in step with the markup. A selector that never attaches fails the
+ * route's tests with an explicit "stale override" message rather than passing
+ * quietly, because the silent version cost every test on the route a 15s wait.
+ *
  * Supported keys per route:
  *   waitForSelector — wait for this to attach before measuring
  *   skip            — skip the route entirely, with `reason`
  */
 module.exports = {
-  '/index.html': { waitForSelector: '#home-news-grid > *' },
   '/news/index.html': { waitForSelector: '#news-grid > *' },
   '/government/officials.html': { waitForSelector: '#officials-container > *' },
   '/services/health.html': { waitForSelector: '#facilities-grid > *' },
   '/statistics/index.html': { waitForSelector: '#barangayListContainer > *' },
   '/legislative/ordinance-framework.html': { waitForSelector: '#ordinance-table-body > *' },
-  '/budget/index.html': { waitForSelector: '#dpwh-contractor-list > *' },
+  '/budget/index.html': { waitForSelector: '#dpwh-projects-container > *' },
 };

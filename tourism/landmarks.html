@@ -43,7 +43,7 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#d97706" />
+    <meta name="theme-color" content="#0032a0" />
 
     <title>Scenic Landmarks &amp; Parks | BetterLegazpi.org</title>
     <link rel="icon" type="image/png" href="../assets/images/logo/betterlegazpi-favicon.png" />
@@ -73,7 +73,12 @@
     <!-- Theme State Initializer -->
     <script>
       (function () {
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+          /* storage blocked (private browsing): fall back to the system preference */
+        }
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -203,10 +208,17 @@
     </div>
 
     <!-- Subpage Header -->
-    <section class="page-header">
+    <section class="page-header page-header--photo">
+      <img
+        class="page-header-photo"
+        src="../assets/images/tourism/photos/attraction_legazpi_boulevard.webp"
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+        decoding="async"
+      />
       <div class="container">
         <div class="page-header-content">
-          <span class="page-header-badge"><i class="bi bi-camera-fill"></i> <span>Scenic Landmarks</span></span>
           <h1>Scenic Landmarks &amp; Parks</h1>
           <p class="page-header-desc">
             Explore picturesque parks, seaside promenades, waterfront bridges, and iconic city

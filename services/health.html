@@ -89,7 +89,12 @@
     <link rel="stylesheet" href="../assets/css/philhealth-yakap.css" />
     <script>
       (function () {
-        const savedTheme = localStorage.getItem('theme');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+          /* storage blocked (private browsing): fall back to the system preference */
+        }
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -322,65 +327,56 @@
       </section>
 
       <!-- PhilHealth YAKAP Highlight Section (Alternating Background) -->
-      <section
-        class="section section-compact bg-alt"
-        aria-label="PhilHealth YAKAP Feature in Legazpi City"
-      >
+      <section class="section section-compact bg-alt" aria-labelledby="yakap-spotlight-title">
         <div class="container">
           <div class="yakap-spotlight-card">
             <div class="yakap-spotlight-main">
               <span class="yakap-spotlight-badge">
                 <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
-                <span>Universal Healthcare Guarantee</span>
+                <span>Free for every Legazpe&ntilde;o</span>
               </span>
-              <h2 class="yakap-spotlight-title">PhilHealth YAKAP in Legazpi City</h2>
+              <h2 class="yakap-spotlight-title" id="yakap-spotlight-title">
+                Your check-ups and medicines are already paid for
+              </h2>
               <p class="yakap-spotlight-desc">
-                Avail of <strong>₱20,000 in annual free maintenance medicines (GAMOT)</strong>, 13+
-                covered diagnostic tests, and check-ups with <strong>100% zero copayment</strong>
-                across 13 accredited Legazpi clinics.
+                PhilHealth YAKAP covers consultations, 13+ tests and &#8369;20,000 of maintenance
+                medicines a year at 12 clinics in Legazpi.
               </p>
 
-              <!-- Mobile-only compact pill strip (avoids scroll fatigue) -->
-              <div class="yakap-spotlight-mobile-pills" aria-label="Key YAKAP benefits">
-                <span class="yakap-mini-pill"><i class="bi bi-capsule"></i> ₱20K Free Meds</span>
-                <span class="yakap-mini-pill"><i class="bi bi-shield-check"></i> 0 Copay</span>
-                <span class="yakap-mini-pill"><i class="bi bi-hospital"></i> 13 Clinics</span>
-              </div>
-
               <div class="yakap-spotlight-ctas">
-                <a href="../service-details/philhealth-yakap" class="btn btn-primary yakap-spotlight-btn-primary">
-                  <span>Open Full YAKAP Guide</span>
+                <a
+                  href="../service-details/philhealth-yakap"
+                  class="yakap-spotlight-btn yakap-spotlight-btn-primary"
+                >
+                  <span>How to sign up</span>
                   <i class="bi bi-arrow-right" aria-hidden="true"></i>
                 </a>
-                <a
-                  href="../service-details/philhealth-yakap#facilities"
-                  class="btn btn-outline yakap-spotlight-btn-secondary"
-                >
-                  <i class="bi bi-hospital" aria-hidden="true"></i>
-                  <span>13 Accredited Clinics</span>
+                <a href="tel:0524350832" class="yakap-spotlight-btn yakap-spotlight-btn-secondary">
+                  <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                  <span>Ask the City Health Office</span>
                 </a>
               </div>
             </div>
 
-            <!-- Desktop-only 4-metric grid (unified palette) -->
-            <div class="yakap-spotlight-metrics" aria-hidden="false">
+            <!-- One rendering of the figures, 4-up on desktop, 2x2 on mobile -->
+            <dl class="yakap-spotlight-metrics">
               <div class="yakap-spotlight-metric-pill">
-                <span class="yakap-spotlight-metric-num">₱20,000</span>
-                <span class="yakap-spotlight-metric-label">Free GAMOT Meds / Year</span>
+                <dt class="yakap-spotlight-metric-label">Medicines per year</dt>
+                <dd class="yakap-spotlight-metric-num">&#8369;20,000</dd>
               </div>
               <div class="yakap-spotlight-metric-pill">
-                <span class="yakap-spotlight-metric-num">0 Copay</span>
-                <span class="yakap-spotlight-metric-label">100% Free at Public Clinics</span>
+                <dt class="yakap-spotlight-metric-label">You pay at the counter</dt>
+                <dd class="yakap-spotlight-metric-num">&#8369;0</dd>
               </div>
               <div class="yakap-spotlight-metric-pill">
-                <span class="yakap-spotlight-metric-num">13+ Labs</span>
-                <span class="yakap-spotlight-metric-label">Diagnostics &amp; Screenings</span>
+                <dt class="yakap-spotlight-metric-label">Free lab tests covered</dt>
+                <dd class="yakap-spotlight-metric-num">13+</dd>
               </div>
               <div class="yakap-spotlight-metric-pill">
-                <span class="yakap-spotlight-metric-num">13 Clinics</span>
-                <span class="yakap-spotlight-metric-label">Accredited in Legazpi City</span>
+                <dt class="yakap-spotlight-metric-label">Clinics in Legazpi</dt>
+                <dd class="yakap-spotlight-metric-num">12</dd>
               </div>
-            </div>
+            </dl>
           </div>
         </div>
       </section>
