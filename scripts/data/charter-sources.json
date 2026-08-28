@@ -139,6 +139,44 @@
       "extraction": "text",
       "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-COOP.pdf",
       "sourceNote": "Published under the City Mayor's Office as CMO-CITY-COOP."
+    },
+    {
+      "slug": "orhcd",
+      "hub": "service-details/orhcd-services.html",
+      "office": "Office of Resettlement, Housing and Community Development",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/OFFICE-OF-RESETTLEMENT-HOUSING-AND-COMMUNITY-DEVELOPMENT-CITIZENS-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "cvo",
+      "hub": "service-details/cvo-services.html",
+      "office": "City Veterinary Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-VETERINARY-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "sp-secretariat",
+      "hub": "service-details/sangguniang-panlungsod-secretariat.html",
+      "office": "Office of the Sangguniang Panlungsod, Secretariat",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/SANGGUNIANG-PANLUNGSOD-B.-SECRETARIAT-CITIZENS-CHARTER-2026.pdf",
+      "sourceNote": "Published as the Sangguniang Panlungsod B. Secretariat charter."
+    },
+    {
+      "slug": "cadc",
+      "hub": "service-details/cadc-services.html",
+      "office": "City Anti-Drug Abuse Council",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-ANTI-DRUG-ABUSE-COUNCIL-CITIZENS-CHARTER-2026.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-CITY-ANTI-DRUG-ABUSE-COUNCIL."
+    },
+    {
+      "slug": "gad",
+      "hub": "service-details/gad-services.html",
+      "office": "Gender and Development Division",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CMO-GENDER-AN-DEVELOPMENT-DIVISION-2026.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-GENDER-AN-DEVELOPMENT-DIVISION (the filename misspells AND)."
     }
   ]
 }

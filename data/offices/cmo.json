@@ -1,0 +1,380 @@
+{
+  "slug": "cmo",
+  "route": "service-details/cmo-services.html",
+  "charter": {
+    "office": "City Mayor's Office",
+    "abbreviation": "CMO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-MAYORS-OFFICE-CITIZENS-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/cmo.md",
+    "personnel": [
+      {
+        "name": "Ronaldo A. Garbin",
+        "position": "Executive Assistant IV",
+        "unit": "City Mayor's Office",
+        "isHead": true
+      },
+      {
+        "name": "Joselito G. Martinez",
+        "position": "Executive Assistant IV",
+        "unit": "City Mayor's Office"
+      },
+      {
+        "name": "Jan Stephanie V. Lucila",
+        "position": "Executive Assistant III",
+        "unit": "City Mayor's Office"
+      },
+      {
+        "name": "Hanna Luz B. Curaming",
+        "position": "Community Affairs Assistant II",
+        "unit": "City Mayor's Office"
+      },
+      {
+        "name": "Sarah Mae O. Caballo",
+        "position": "Administrative Aide IV",
+        "unit": "Assistance to Clients"
+      },
+      {
+        "name": "Estifanny B. Abejuela",
+        "position": "Administrative Aide IV",
+        "unit": "Assistance to Clients"
+      },
+      {
+        "name": "Analyn Malate",
+        "position": "Administrative Aide IV",
+        "unit": "Financial Transactions"
+      },
+      {
+        "name": "Marychel Bertumen",
+        "position": "Administrative Aide I",
+        "unit": "Financial Transactions"
+      },
+      {
+        "name": "Nicole Villanueva",
+        "position": "Administrative Aide I",
+        "unit": "Communication Letters"
+      },
+      {
+        "name": "Maria Karen Hermio",
+        "position": "Administrative Aide I",
+        "unit": "Communication Letters"
+      },
+      {
+        "name": "Catherine Barrameda",
+        "position": "Administrative Aide I",
+        "unit": "Venue Bookings"
+      },
+      {
+        "name": "Roxan S. Arcos",
+        "position": "Administrative Aide I",
+        "unit": "Venue Bookings"
+      }
+    ],
+    "personnelNotes": [
+      "The charter also names a large number of job order and contract of service staff against individual steps: Mary Hamsel Asejo, Mary Margarette A. Abadeza, Zaira M. Penarubia, Merylle Andes, Jay-Ann Arena, Kathlen Ascutia, Joy Pauline L. Marticio, Evelyn Ariola, Jynkyryx Diaz, Ram Elika Jane Rito, Marie Joyce Arena, Floresse Gail M. Orense, Francis Louie D. Darag, Charlene Bagato, Irene Ros and Shiela Jadie. They are recorded here rather than in the roster above because the charter does not give them plantilla positions.",
+      "The City Mayor is the Local Chief Executive referred to throughout this charter as the LCE. Several services end at his signature or approval."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Answer the client feedback form and drop it in the box at the Public Assistance and Complaint Desk in the City Hall lobby.",
+      "howFeedbackIsProcessed": "The person in charge opens the drop box and evaluates each form; feedback needing an answer is forwarded to the office concerned. Complaints may be filed in writing or in person to the City Mayor, by email, or on (052) 732 7988. After evaluation and investigation the Local Chief Executive calls both parties in for consultation and appropriate action.",
+      "contacts": ["bagonglegazpi24@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "cmo-client-assistance",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "External Services",
+        "title": "Asking the Mayor's Office for medical, burial or financial assistance",
+        "description": "Help from the City Mayor's Office with hospital bills and medicines, a funeral, or other financial need. What you bring depends on which kind of help you are asking for, and the office is explicit that incomplete documents are not accommodated.",
+        "office": "Office of the City Mayor",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Internal or external clients",
+        "requirements": [
+          {
+            "item": "For medical assistance: medical prescription and bills, photocopied",
+            "whereToSecure": "Hospital or private clinic"
+          },
+          {
+            "item": "For medical assistance: certificate of indigency, original",
+            "whereToSecure": "Barangay"
+          },
+          {
+            "item": "For burial assistance: death certificate, certified true copy",
+            "whereToSecure": "Office of the City Civil Registrar"
+          },
+          {
+            "item": "For burial assistance: certificate of indigency, original, and the funeral contract, photocopied",
+            "whereToSecure": "Barangay, and the funeral parlour"
+          },
+          {
+            "item": "For financial assistance: letter, original, and certificate of indigency, original",
+            "whereToSecure": "Client, and the barangay"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements for the kind of assistance you need at the receiving area.",
+            "agency": "Receives the required documents for pre-assessment, then photocopies the pre-assessed documents.",
+            "feeText": "None",
+            "processingTime": "10 minutes per client",
+            "personResponsible": "Administrative Aide IV and job order staff"
+          },
+          {
+            "client": "Receive the assistance from the City Mayor's Office.",
+            "agency": "Releases the medical, burial or financial assistance to the client.",
+            "feeText": "None",
+            "processingTime": "5 minutes per client",
+            "personResponsible": "Executive Assistant IV / Administrative Aide IV"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "15 MINS." },
+        "notes": [
+          "Incomplete documents are not accommodated, so bring everything on the list for the kind of assistance you need.",
+          "The charter states these times as per client, being served one at a time."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's requirements table lists three documents against three sources without pairing them to the medical, burial and financial cases. The grouping recorded here is read from the client step, which does pair them, and should be checked."
+        ]
+      },
+      {
+        "id": "cmo-document-receiving",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "External Services",
+        "title": "Getting a document signed by the Mayor",
+        "description": "How financial documents and communication letters reach the City Mayor for signature and come back out. This covers obligation requests, vouchers, purchase requests and orders, and letters addressed to the Mayor.",
+        "office": "Office of the City Mayor",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Internal or external clients",
+        "requirements": [
+          {
+            "item": "For financial transactions: 3 copies of obligation requests",
+            "whereToSecure": "Client or the City Budget Office"
+          },
+          {
+            "item": "For financial transactions: 2 copies of vouchers",
+            "whereToSecure": "Client or the Accounting Office"
+          },
+          {
+            "item": "For financial transactions: 3 copies of purchase requests and 2 copies of purchase orders",
+            "whereToSecure": "Client or the General Services Office"
+          },
+          {
+            "item": "For financial transactions: 1 certification on the alternative method of procurement",
+            "whereToSecure": "General Services Office"
+          },
+          {
+            "item": "For a communication letter to be endorsed to the Mayor: the letter, original",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the documents at the receiving area.",
+            "agency": "Receives and records the documents in the logbook, forwards them to the Executive Secretary of the Mayor for instructions and signature, then forwards them to the Mayor. Signed and noted financial documents and letters go back for release and endorsement, and noted documents are endorsed to barangays, private agencies and other city offices for action.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Administrative Aides I and IV, Executive Assistant III, and job order and contract of service staff"
+          },
+          {
+            "client": "Claim the signed documents.",
+            "agency": "Releases the financial documents signed by the City Mayor to the client.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Aide IV / Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "40 MINS." },
+        "notes": [
+          "The charter notes that endorsement, and the release of signed documents, may take longer depending on when the Mayor approves them.",
+          "Clients are advised to follow up the next working day for documents still pending because of circumstances beyond the office's control."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter runs agency actions 1.1 to 1.5 under a single client step with one processing time of 30 minutes, so they are recorded as one step.",
+          "Two of the agency actions carry the note that timing may vary with the Mayor's availability rather than a duration. Those are recorded in the service notes rather than as step durations."
+        ]
+      },
+      {
+        "id": "cmo-venue-booking",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "External Services",
+        "title": "Booking a city venue for an event",
+        "description": "Reserving the Legazpi Convention Center, the Ibalong Centrum for Recreation, the Ibalong Conference Room, the Gregorian basketball court or Ibalong Park. You get the letter approved first, then pay, then come back to reserve the date.",
+        "office": "Office of the City Mayor",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Internal or external clients",
+        "requirements": [
+          {
+            "item": "Letter request addressed to the City Mayor, original",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the original letter request addressed to the Mayor.",
+            "agency": "Receives the letter request for scheduling and checks whether the venue is available. If it is, the letter goes to the Mayor for approval; if not, you are told which dates are open. Once approved, you are given a copy of the approved letter to pay against.",
+            "feeText": "None",
+            "processingTime": "15 minutes per client",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Pay the rental at the City Treasurer's Office, or at the City Engineer's Office for Ibalong Park.",
+            "agency": "Receives the payment and issues an official receipt.",
+            "feeText": "P40,000.00 to P60,000.00; P350 a day",
+            "feeTiers": [
+              { "label": "Venue rental, lower end", "amount": 40000, "currency": "PHP" },
+              { "label": "Venue rental, upper end", "amount": 60000, "currency": "PHP" },
+              { "label": "Per day rate", "amount": 350, "currency": "PHP" }
+            ],
+            "processingTime": "5 minutes per client",
+            "personResponsible": "City Treasurer's Office and City Engineer's Office cashiers"
+          },
+          {
+            "client": "Go back to the City Mayor's Office with the official receipt to reserve the venue.",
+            "agency": "Acknowledges and keeps a copy of the official receipt and reserves the venue for your event.",
+            "feeText": "None",
+            "processingTime": "3 minutes per client",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "23 MINS." },
+        "notes": [
+          "Ibalong Park is paid for at the City Engineer's Office; the other venues at the City Treasurer's Office."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter gives the fee as a range of P40,000.00 to P60,000.00 with a separate P350 a day, without saying which venue each applies to. Recorded as printed; the amounts need checking against the PDF before this service is verified.",
+          "The charter distinguishes availability checks for the Gregorian Mall from those for the Convention Center, Ibalong Centrum and Ibalong Park, but gives no separate durations. Recorded as one step."
+        ]
+      },
+      {
+        "id": "cmo-appointments",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "External Services",
+        "title": "Requesting a meeting or inviting the Mayor",
+        "description": "Asking for an appointment with the City Mayor, or inviting him to a wedding, a courtesy call or a speaking engagement. You are told by email, phone or text once it is confirmed.",
+        "office": "Office of the City Mayor",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Internal or external clients",
+        "requirements": [
+          {
+            "item": "Letter request addressed to the City Mayor, for a meeting, wedding, courtesy call or speaking engagement",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request at the receiving area.",
+            "agency": "Receives the letter and forwards it to the Executive Secretary of the Mayor for instructions, then to the Mayor. If he approves and is free on the dates asked for, the event is added to his schedule, and you are told by email, phone call or text message that the meeting, courtesy call or speaking engagement is confirmed.",
+            "feeText": "None",
+            "processingTime": "10 minutes per client",
+            "personResponsible": "Executive Assistant III and job order staff"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "10 MINS." },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter runs agency actions 1.1 to 1.4 under a single client step with one processing time, so they are recorded as one step."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-building-fill-check",
+    "categories": [
+      {
+        "id": "assistance",
+        "title": "Assistance",
+        "icon": "bi-heart-pulse",
+        "services": ["cmo-client-assistance"]
+      },
+      {
+        "id": "documents-and-signatures",
+        "title": "Documents and signatures",
+        "icon": "bi-file-earmark-check",
+        "services": ["cmo-document-receiving"]
+      },
+      {
+        "id": "venues-and-appointments",
+        "title": "Venues and appointments",
+        "icon": "bi-calendar-event",
+        "services": ["cmo-venue-booking", "cmo-appointments"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "need-help-with-bills",
+        "title": "You need help with hospital or funeral costs",
+        "presentation": "rail",
+        "icon": "bi-heart-pulse",
+        "services": ["cmo-client-assistance"]
+      },
+      {
+        "id": "holding-an-event-cmo",
+        "title": "You are holding an event",
+        "presentation": "rail",
+        "icon": "bi-calendar-event",
+        "services": ["cmo-venue-booking", "cmo-appointments"]
+      },
+      {
+        "id": "document-for-the-mayor",
+        "title": "You have a document for the Mayor",
+        "presentation": "rail",
+        "icon": "bi-file-earmark-check",
+        "services": ["cmo-document-receiving"]
+      }
+    ],
+    "searchAliases": {
+      "cmo-client-assistance": [
+        "ayuda",
+        "medical assistance",
+        "burial assistance",
+        "financial assistance",
+        "libing",
+        "gamot",
+        "indigency",
+        "tulong"
+      ],
+      "cmo-document-receiving": [
+        "voucher",
+        "obligation request",
+        "purchase request",
+        "purchase order",
+        "signature",
+        "letter to the mayor",
+        "endorsement"
+      ],
+      "cmo-venue-booking": [
+        "venue",
+        "legazpi convention center",
+        "ibalong centrum",
+        "ibalong park",
+        "gregorian",
+        "basketball court",
+        "rental",
+        "event"
+      ],
+      "cmo-appointments": [
+        "appointment",
+        "meeting",
+        "wedding",
+        "courtesy call",
+        "speaking engagement",
+        "invitation",
+        "kasal",
+        "mayor"
+      ]
+    },
+    "contact": null
+  }
+}

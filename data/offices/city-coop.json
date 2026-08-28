@@ -1,0 +1,468 @@
+{
+  "slug": "city-coop",
+  "route": "service-details/city-coop-services.html",
+  "charter": {
+    "office": "City Cooperative Development Office",
+    "abbreviation": "CCDO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-COOP.pdf",
+    "transcript": "docs/sources/citizens-charter/city-coop.md",
+    "personnel": [],
+    "personnelNotes": [
+      "This charter names roles rather than people: the City Cooperative Development Officer, the Cooperatives Development Specialist I and an Administrative Aide I. There is no personnel roster to reproduce.",
+      "The office is published under the City Mayor's Office."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Fill up the CCDO Feedback and Complaint Form and drop it in the box at the receiving desk, or send a direct message to the office's Facebook page. You can also call 742-6136 or 0910 333 9650 or 0917 158 2837, or email.",
+      "howFeedbackIsProcessed": "Completed forms are gathered and encoded every other day and summarised into a client feedback report for the CCDO Officer, who reviews and analyses it and acts on any complaints. The CCDO Officer then updates the client on the action taken.",
+      "contacts": ["legazpicoopoffice@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "coop-registration-endorsement",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Registering a new cooperative",
+        "description": "The city's endorsement for a group wanting to become a registered cooperative. The registration itself is issued by the Cooperative Development Authority, and you collect it from their Albay field office.",
+        "office": "City Cooperative Development Office",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Organizations and associations that want to establish and be recognised as a cooperative",
+        "requirements": [
+          {
+            "item": "Letter of intent, 1 original copy",
+            "whereToSecure": "The organization or association"
+          },
+          {
+            "item": "List of members and their addresses, 1 original copy",
+            "whereToSecure": "The organization or association"
+          },
+          {
+            "item": "Profile of the association, 1 original copy",
+            "whereToSecure": "The organization or association"
+          },
+          {
+            "item": "Members' information sheet, 1 photocopy, and other supporting documents, 1 photocopy",
+            "whereToSecure": "The organization or association"
+          },
+          {
+            "item": "Application form, 1 original copy. It can be downloaded from the Cooperative Development Authority website",
+            "whereToSecure": "City Cooperative Development Office, or cda.gov.ph"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application for registration.",
+            "agency": "Reviews and checks the documents submitted, then schedules an orientation on cooperative formation.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "City Cooperative Development Officer"
+          },
+          {
+            "client": "Receive the endorsement letter.",
+            "agency": "Releases the official endorsement letter.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Cooperatives Development Specialist I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "Claim your Certificate of Registration in person from the Cooperative Development Authority Albay Field Office at Cabangan, Camalig, Albay, from the third working day after you submit."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "This charter prints no TOTAL row for any of its services, so every total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "coop-orientation",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "Frontline Services",
+        "title": "Requesting an orientation",
+        "description": "An orientation session run by the City Cooperative Development Officer for a registered cooperative.",
+        "office": "City Cooperative Development Office",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Registered cooperatives",
+        "requirements": [
+          {
+            "item": "Request letter, 1 original copy",
+            "whereToSecure": "The cooperative concerned"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request letter.",
+            "agency": "Receives the letter of request.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Consult the CDO Officer.",
+            "agency": "Discusses the details of the orientation.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "City Cooperative Development Officer"
+          },
+          {
+            "client": "Attend the orientation.",
+            "agency": "Facilitates the orientation.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "City Cooperative Development Officer"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": ["Wait for the official notice from the office about your training schedule."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The charter titles this service's third step \"Conduct of Pre-Membership Education Seminar\" while its agency action reads \"Facilitate the Orientation\", which duplicates the heading of the next service. Recorded as the orientation, which is what the service is titled."
+        ]
+      },
+      {
+        "id": "coop-pmes",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Requesting a Pre-Membership Education Seminar",
+        "description": "The Pre-Membership Education Seminar a cooperative's prospective members go through, facilitated by the City Cooperative Development Officer.",
+        "office": "City Cooperative Development Office",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Registered cooperatives",
+        "requirements": [
+          {
+            "item": "Request letter, 1 original copy",
+            "whereToSecure": "The cooperative concerned"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request letter.",
+            "agency": "Receives the letter of request.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Consult the CDO Officer.",
+            "agency": "Discusses the details of the training.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "City Cooperative Development Officer"
+          },
+          {
+            "client": "Attend the seminar.",
+            "agency": "Conducts the Pre-Membership Education Seminar.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "City Cooperative Development Officer"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": ["Wait for the official notice from the office about your training schedule."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "coop-mandatory-report",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "Frontline Services",
+        "title": "Endorsing a mandatory cooperative report",
+        "description": "The city's endorsement of the mandatory annual report a registered cooperative has to file.",
+        "office": "City Cooperative Development Office",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Registered cooperatives",
+        "requirements": [
+          {
+            "item": "Mandatory cooperative report, 1 original copy",
+            "whereToSecure": "The cooperative concerned"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the annual report.",
+            "agency": "Reviews and checks the documents submitted.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "City Cooperative Development Officer"
+          },
+          {
+            "client": "Receive the endorsement letter.",
+            "agency": "Releases the endorsement letter.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Cooperatives Development Specialist I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "coop-mandatory-training",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "Frontline Services",
+        "title": "Arranging a mandatory training",
+        "description": "The mandatory training a registered cooperative needs, run with speakers and trainers accredited by the Cooperative Development Authority. The office has to request the schedule from the CDA, which is what makes this the longest service it publishes.",
+        "office": "City Cooperative Development Office",
+        "classification": "Highly Technical",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Registered cooperatives",
+        "requirements": [
+          {
+            "item": "Certificate of registration, 1 photocopy",
+            "whereToSecure": "The cooperative concerned"
+          },
+          {
+            "item": "Request letter, 1 original copy",
+            "whereToSecure": "The cooperative concerned"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request letter.",
+            "agency": "Receives the letter of request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Consult the CDO Officer.",
+            "agency": "Discusses the details of the training.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "City Cooperative Development Officer"
+          },
+          {
+            "client": null,
+            "agency": "Requests the training schedule from the Cooperative Development Authority.",
+            "feeText": "None",
+            "processingTime": "7 days",
+            "personResponsible": "City Cooperative Development Officer"
+          },
+          {
+            "client": "Attend the training.",
+            "agency": "Facilitates the training with CDA-accredited speakers and trainers.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "City Cooperative Development Officer / Cooperatives Development Specialist I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "The charter notes that the CDA requires 16 hours of training. That is the requirement the training has to meet, not an extra wait on top of the schedule.",
+          "Wait for the official notice from the office about your training schedule."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The charter's last row shows both \"1 days\" and \"16 hours required by CDA\" against the training. The day is recorded as the step duration and the sixteen hours as a note, since counting both would double the training. Check the PDF."
+        ]
+      },
+      {
+        "id": "coop-business-permit-endorsement",
+        "number": 6,
+        "charterNumber": 6,
+        "charterGroup": "Frontline Services",
+        "title": "Endorsement for a cooperative's business permit",
+        "description": "The endorsement a registered cooperative needs when applying for or renewing its business permit with BPLO.",
+        "office": "City Cooperative Development Office",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Registered cooperatives",
+        "requirements": [
+          {
+            "item": "Previous business permit, 1 photocopy, for a renewal",
+            "whereToSecure": "The registered cooperative"
+          },
+          {
+            "item": "BIR registration, 1 photocopy",
+            "whereToSecure": "Bureau of Internal Revenue"
+          },
+          {
+            "item": "Other requirements specified by BPLO",
+            "whereToSecure": "Business Permits and Licensing Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the documents.",
+            "agency": "Checks that the documents submitted are complete.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "City Cooperative Development Officer"
+          },
+          {
+            "client": "Receive the endorsement letter.",
+            "agency": "Releases the endorsement letter.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Cooperatives Development Specialist I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "coop-cso-accreditation",
+        "number": 7,
+        "charterNumber": 7,
+        "charterGroup": "Frontline Services",
+        "title": "Endorsement for civil society organization accreditation",
+        "description": "The endorsement a cooperative needs to be accredited as a civil society organization.",
+        "office": "City Cooperative Development Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "Cooperatives with civil society organizations",
+        "requirements": [
+          {
+            "item": "Accreditation form, 1 original copy",
+            "whereToSecure": "City Cooperative Development Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the accreditation form.",
+            "agency": "Reviews and checks the documents submitted.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "City Cooperative Development Officer"
+          },
+          {
+            "client": "Receive the endorsement letter.",
+            "agency": "Releases the endorsement letter.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Cooperatives Development Specialist I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-people-fill",
+    "categories": [
+      {
+        "id": "starting-a-cooperative",
+        "title": "Starting a cooperative",
+        "icon": "bi-plus-circle",
+        "services": ["coop-registration-endorsement", "coop-orientation", "coop-pmes"]
+      },
+      {
+        "id": "running-a-cooperative",
+        "title": "Running a cooperative",
+        "icon": "bi-file-earmark-check",
+        "services": [
+          "coop-mandatory-report",
+          "coop-business-permit-endorsement",
+          "coop-cso-accreditation"
+        ]
+      },
+      {
+        "id": "coop-training",
+        "title": "Training",
+        "icon": "bi-mortarboard",
+        "services": ["coop-mandatory-training"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "want-to-form-a-coop",
+        "title": "Your group wants to become a cooperative",
+        "presentation": "rail",
+        "icon": "bi-plus-circle",
+        "services": ["coop-registration-endorsement", "coop-orientation", "coop-pmes"]
+      },
+      {
+        "id": "coop-annual-obligations",
+        "title": "Your cooperative has reports or permits due",
+        "presentation": "rail",
+        "icon": "bi-file-earmark-check",
+        "services": ["coop-mandatory-report", "coop-business-permit-endorsement"]
+      },
+      {
+        "id": "coop-needs-training",
+        "title": "Your cooperative needs training",
+        "presentation": "rail",
+        "icon": "bi-mortarboard",
+        "services": ["coop-mandatory-training", "coop-pmes"]
+      }
+    ],
+    "searchAliases": {
+      "coop-registration-endorsement": [
+        "cooperative",
+        "coop",
+        "registration",
+        "cda",
+        "kooperatiba",
+        "new cooperative"
+      ],
+      "coop-orientation": ["orientation", "cooperative formation", "seminar", "coop"],
+      "coop-pmes": ["pmes", "pre-membership education seminar", "seminar", "coop members"],
+      "coop-mandatory-report": ["mandatory report", "annual report", "coop report", "endorsement"],
+      "coop-mandatory-training": [
+        "mandatory training",
+        "cda training",
+        "coop training",
+        "accredited trainer"
+      ],
+      "coop-business-permit-endorsement": [
+        "business permit",
+        "coop permit",
+        "renewal",
+        "endorsement",
+        "bplo"
+      ],
+      "coop-cso-accreditation": ["cso", "civil society organization", "accreditation", "coop"]
+    },
+    "contact": null
+  }
+}
