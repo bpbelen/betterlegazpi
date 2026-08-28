@@ -143,6 +143,38 @@
           "slug": "cadc",
           "description": "Drug testing, prevention seminars, and the community-based drug intervention programme."
         }
+      ],
+      "featured": [
+        {
+          "service": "cho-medical-consultation",
+          "icon": "bi-hospital",
+          "description": "General consultation, physical examination and medico-legal examination at the Out-Patient Department."
+        },
+        {
+          "service": "cho-ekonsulta",
+          "icon": "bi-shield-plus",
+          "description": "Registration for PhilHealth Konsulta, which covers consultations, diagnostic tests and maintenance medicines."
+        },
+        {
+          "service": "cho-under-five-clinic",
+          "icon": "bi-capsule",
+          "description": "Routine childhood immunisation and well-child checks for newborns and children under five."
+        },
+        {
+          "service": "cho-prenatal-postnatal",
+          "icon": "bi-heart",
+          "description": "Antenatal and postnatal check-ups, tetanus-diphtheria immunisation and counselling, with referral for oral health and nutrition."
+        },
+        {
+          "service": "cho-tb-casefinding",
+          "icon": "bi-lungs",
+          "description": "Sputum testing, chest X-ray review and the National TB Programme drug regimen for anyone coughing two weeks or more."
+        },
+        {
+          "service": "cho-hiv-rpr-hepb",
+          "icon": "bi-clipboard2-pulse",
+          "description": "Free, confidential screening and counselling for HIV, syphilis and Hepatitis B at the Social Hygiene Clinic."
+        }
       ]
     },
     {

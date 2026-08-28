@@ -68,7 +68,11 @@ function deriveFee(service) {
  */
 function deriveTime(service) {
   const summed = sumSteps(service.steps || []);
-  return summed.text || null;
+  // formatDuration returns the literal string "None" when nothing quantifiable was
+  // found - the hub's own placeholder. Reported as null here so the pages show
+  // "not stated in the charter" rather than a bare "None" beside a clock icon.
+  if (!summed.text || summed.text === 'None') return null;
+  return summed.text;
 }
 
 function build() {

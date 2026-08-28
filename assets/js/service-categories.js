@@ -313,6 +313,47 @@
       </section>`;
   }
 
+  /* ---------- featured services ---------- */
+
+  /**
+   * A hand-picked row of charter services, for a page that wants a few named
+   * programmes above its own content. The blurb and icon are editorial and live in
+   * the category JSON; the fee and processing time are read from the charter index
+   * like everywhere else, because those are the parts that go stale.
+   */
+  function renderFeatured(category, index) {
+    const picks = category.featured || [];
+    if (!picks.length) return '';
+
+    return picks
+      .map((pick) => {
+        const service = index.services[pick.service];
+        if (!service) return '';
+        const office = index.offices[service.office];
+        const href = `${HUB}${office.route.split('/').pop()}#${pick.service}`;
+
+        const time = service.time
+          ? `<span class="sc-meta-item"><i class="bi bi-clock" aria-hidden="true"></i>${esc(service.time)}</span>`
+          : `<span class="sc-meta-item sc-meta-missing"><i class="bi bi-clock" aria-hidden="true"></i>Time not stated in the charter</span>`;
+
+        return `
+        <a class="sc-feature" href="${esc(href)}">
+          <span class="sc-feature-title">
+            <i class="bi ${esc(pick.icon || 'bi-dot')}" aria-hidden="true"></i>
+            <span>${esc(service.title)}</span>
+          </span>
+          <span class="sc-feature-desc">${esc(pick.description || '')}</span>
+          <span class="sc-feature-meta">
+            <span class="sc-meta-item sc-fee sc-fee--${esc(service.fee.kind)}">
+              <i class="bi bi-tag" aria-hidden="true"></i>${esc(service.fee.text)}</span>
+            ${time}
+          </span>
+        </a>`;
+      })
+      .filter(Boolean)
+      .join('');
+  }
+
   /* ---------- fallback ---------- */
 
   function renderFallback(hasJourneys) {
@@ -344,6 +385,9 @@
     const root = document.getElementById('service-category-app');
     if (!root) return;
 
+    // An optional second target, for a page that keeps its own sections and only
+    // wants a row of charter-backed programme cards inside one of them.
+    const featuredRoot = document.getElementById('service-category-featured');
     const id = root.dataset.category;
 
     try {
@@ -363,6 +407,8 @@
       });
 
       const hasJourneys = journeyData.journeys.some((j) => j.category === category.id);
+
+      if (featuredRoot) featuredRoot.innerHTML = renderFeatured(category, index);
 
       root.innerHTML = [
         renderSummary(category, index),

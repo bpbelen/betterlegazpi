@@ -144,19 +144,23 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
-          <a href="../">
-            <img
+          <a href="../" aria-label="Return to Homepage"
+            ><img
               src="../assets/images/logo/betterlegazpi-logo.png"
               alt="Better Legazpi Logo"
               class="logo-img"
-            />
-          </a>
+          /></a>
         </div>
         <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" class="active" aria-haspopup="true" aria-expanded="false"
+              <a
+                href="../services/"
+                class="active"
+                aria-current="page"
+                aria-haspopup="true"
+                aria-expanded="false"
                 >Services</a
               >
               <ul class="dropdown-menu">
@@ -257,55 +261,15 @@
               <span>Core Public Health Programs</span>
             </h2>
             <p class="sc-section-lead">
-              Accessible healthcare programs offered by the City Government of Legazpi and
-              accredited PhilHealth partners.
+              The programmes people come to the City Health Office for. Every fee and processing
+              time below is read from the office&rsquo;s published citizen&rsquo;s charter, and each
+              card opens the full requirements and steps.
             </p>
-            <div class="grid grid-3">
-              <div class="service-item-card">
-                <h3 class="service-item-title">
-                  <i class="bi bi-hospital"></i>
-                  <span>Medical Consultation</span>
-                </h3>
-                <p class="service-item-desc">
-                  Free general medical consultation, triage, and physical exams at the City Health
-                  Office (CHO), RHUs, and Homapon Super Health Center
-                </p>
-                <div class="service-item-meta">
-                  <span><strong>Fee:</strong> Free</span>
-                  <span><strong>Time:</strong> 15-30 mins</span>
-                </div>
-              </div>
-
-              <a href="../service-details/philhealth-yakap" class="service-item-card">
-                <h3 class="service-item-title">
-                  <i class="bi bi-shield-plus"></i>
-                  <span>PhilHealth YAKAP &amp; GAMOT</span>
-                </h3>
-                <p class="service-item-desc">
-                  Accredited primary care package covering free consultations, 13+ diagnostic tests,
-                  and up to ₱20,000 in free maintenance medicines
-                </p>
-                <div class="service-item-meta">
-                  <span><strong>Fee:</strong> 100% Zero Copay</span>
-                  <span><strong>Time:</strong> 1-3 days (FPE &amp; Meds)</span>
-                </div>
-              </a>
-
-              <div class="service-item-card">
-                <h3 class="service-item-title">
-                  <i class="bi bi-capsule"></i>
-                  <span>Immunization &amp; Vaccination</span>
-                </h3>
-                <p class="service-item-desc">
-                  Expanded Program on Immunization (EPI) for infants, children, pregnant women, and
-                  senior citizen flu and pneumonia vaccines
-                </p>
-                <div class="service-item-meta">
-                  <span><strong>Fee:</strong> Free</span>
-                  <span><strong>Time:</strong> 15-20 mins</span>
-                </div>
-              </div>
-            </div>
+            <!-- Rendered by assets/js/service-categories.js from the featured list in
+                 data/service-categories.json. The blurbs are editorial; the fees and
+                 processing times come from the City Health Office charter, so they
+                 cannot drift the way the hand-typed ones they replace had. -->
+            <div class="sc-features" id="service-category-featured"></div>
           </div>
         </div>
       </section>
@@ -590,7 +554,7 @@
           <div class="footer-brand">
             <img
               src="../assets/images/logo/betterlegazpi-logo-white.png"
-              alt="BetterLegazpi logo"
+              alt="Better Legazpi Logo"
               class="footer-logo"
             />
             <p class="footer-tagline">

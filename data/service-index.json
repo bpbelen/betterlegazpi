@@ -1595,7 +1595,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "None"
+      "time": null
     },
     "cho-tb-casefinding": {
       "office": "cho",
@@ -2134,7 +2134,7 @@
         "kind": "amount",
         "text": "Certification Fee of Php 50.00"
       },
-      "time": "None"
+      "time": null
     },
     "cto-salaries-monetary-claims-cash": {
       "office": "cto",
