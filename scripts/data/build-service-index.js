@@ -46,6 +46,12 @@ function deriveFee(service) {
   if (/ordinance/i.test(text) && !/\d/.test(text.replace(/(no\.?|ordinance)[^,;]*/gi, ''))) {
     return { kind: 'ordinance', text: 'Fee set by ordinance' };
   }
+  // Seven Assessor services record the fee as a bare number - "100", "50.00" - which
+  // renders as an amount with no currency. The peso sign is added rather than the
+  // number changed, so the figure still matches the charter exactly.
+  if (/^[\d,]+(\.\d+)?$/.test(text)) {
+    return { kind: 'amount', text: '₱' + text.replace(/\.00$/, '') };
+  }
   return { kind: 'amount', text };
 }
 

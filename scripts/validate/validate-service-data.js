@@ -91,12 +91,16 @@ for (const journey of journeyData.journeys) {
       errors.push(`journey "${journey.id}": unknown service id "${step.service}"`);
       continue;
     }
-    // The step must be reachable from a category that actually lists its office,
-    // or the reader lands on a hub the page never introduced them to.
-    const owner = taxonomy.categories.find((c) => c.id === journey.category);
-    if (owner && !owner.offices.some((o) => o.slug === service.office)) {
+    // Crossing offices is the whole point of a journey, so a step outside the
+    // owning category's own offices is expected. What matters is that the office
+    // appears under *some* category, or the hub it links to is unreachable by
+    // browsing and the reader has no way back to it.
+    const reachable = taxonomy.categories.some((c) =>
+      c.offices.some((o) => o.slug === service.office)
+    );
+    if (!reachable) {
       warnings.push(
-        `journey "${journey.id}": step "${step.service}" belongs to ${service.office}, which category "${journey.category}" does not list`
+        `journey "${journey.id}": step "${step.service}" belongs to ${service.office}, which no category lists - its hub is unreachable by browsing`
       );
     }
   }

@@ -32,8 +32,10 @@ const EXCLUDED_DIRS = new Set([
 const CI_ROUTES = [
   '/index.html', // homepage — the only page loading all 8 scripts
   '/services/index.html', // services landing
-  '/services/certificates.html', // old tier: page-header + office-card
-  '/services/infrastructure.html', // service-category.css: the standardized category layout, shared by all nine
+  // certificates.html used to sit here as the "old tier" page-header + office-card
+  // example. It is now the standardized layout like the other eight, so it would be
+  // duplicate coverage - infrastructure.html represents that generation instead.
+  '/services/infrastructure.html', // service-category.css, and the shared category renderer
   '/service-details/cto-services.html', // new tier A, 1442-line inline <style>
   '/service-details/human-resource-management.html', // new tier B outlier
   '/statistics/index.html', // statistics.css

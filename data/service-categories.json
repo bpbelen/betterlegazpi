@@ -141,7 +141,6 @@
       "name": "Housing & Resettlement",
       "icon": "bi-house-heart-fill",
       "tagline": "Relocation, socialized housing and homeowners' associations",
-      "planned": true,
       "offices": [
         {
           "slug": "orhcd",
@@ -197,6 +196,7 @@
       "name": "Tax & Payments",
       "icon": "bi-cash-coin",
       "tagline": "Assessments, tax payments and property records",
+      "onlineNote": "Not yet. Neither the Treasurer's nor the Assessor's citizen's charter describes an online route - every assessment, payment and clearance listed here is a counter transaction. The city's online services page lists \"Taxes\", but the link behind it is an explanatory video rather than a portal. Business permit transactions are the exception, and those are under Business & Trade.",
       "offices": [
         {
           "slug": "cto",

@@ -460,7 +460,7 @@
       "requirementCount": 9,
       "fee": {
         "kind": "amount",
-        "text": "100"
+        "text": "₱100"
       },
       "time": "2.8 hours"
     },
@@ -471,7 +471,7 @@
       "requirementCount": 5,
       "fee": {
         "kind": "amount",
-        "text": "100"
+        "text": "₱100"
       },
       "time": "10.55 hours"
     },
@@ -482,7 +482,7 @@
       "requirementCount": 6,
       "fee": {
         "kind": "amount",
-        "text": "100"
+        "text": "₱100"
       },
       "time": "10 hours"
     },
@@ -493,7 +493,7 @@
       "requirementCount": 3,
       "fee": {
         "kind": "amount",
-        "text": "50"
+        "text": "₱50"
       },
       "time": "26 minutes"
     },
@@ -504,7 +504,7 @@
       "requirementCount": 2,
       "fee": {
         "kind": "amount",
-        "text": "50"
+        "text": "₱50"
       },
       "time": "30 minutes"
     },
@@ -515,7 +515,7 @@
       "requirementCount": 3,
       "fee": {
         "kind": "amount",
-        "text": "50"
+        "text": "₱50"
       },
       "time": "1.68 hours"
     },
@@ -537,7 +537,7 @@
       "requirementCount": 4,
       "fee": {
         "kind": "amount",
-        "text": "50.00"
+        "text": "₱50"
       },
       "time": "58 minutes"
     },

@@ -4,7 +4,7 @@
     {
       "id": "building-a-house",
       "category": "infrastructure",
-      "relatedCategories": [],
+      "relatedCategories": ["tax-payments"],
       "title": "I'm building a house",
       "icon": "bi-house-add",
       "summary": "Two offices, in this order. The building permit can't be filed until City Planning has cleared the location, and the location can't be cleared until you know how the lot is zoned.",
@@ -84,6 +84,683 @@
           "service": "ceo-truck-ban-permit",
           "label": "Get a truck ban exemption, if you're bringing floats or heavy vehicles",
           "note": "Only if your event needs trucks on city roads during truck ban hours.",
+          "conditional": true
+        }
+      ]
+    },
+
+    {
+      "id": "opening-a-business",
+      "category": "business",
+      "relatedCategories": ["infrastructure", "tax-payments"],
+      "title": "I'm opening a business",
+      "icon": "bi-shop-window",
+      "summary": "Four offices. City Planning clears the location, BPLO issues the permit, the Treasurer collects, and the City Engineer inspects the premises.",
+      "steps": [
+        {
+          "service": "cpdo-lc-new-business",
+          "label": "Get locational clearance for the site",
+          "note": "City Planning confirms your address is zoned for the business you intend to run. The zoning fee is folded into BPLO's one-time assessment."
+        },
+        {
+          "service": "bplo-new-face-to-face",
+          "label": "Apply for the new business permit",
+          "note": "At the office. There is an online route as well - see the section below."
+        },
+        {
+          "service": "cto-payment-of-business-tax",
+          "label": "Pay the business tax and permit fees",
+          "note": "At the One-Stop Shop, against the order of payment BPLO assesses."
+        },
+        {
+          "service": "ceo-annual-inspection-simple",
+          "label": "Get the annual inspection certificate",
+          "note": "The City Engineer inspects the premises. Large or complex establishments take longer.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "renewing-a-business",
+      "category": "business",
+      "relatedCategories": ["tax-payments"],
+      "title": "I'm renewing my business permit",
+      "icon": "bi-arrow-repeat",
+      "summary": "Shorter than a new application, but still three offices. Renewals run in January, when the queues are longest.",
+      "steps": [
+        {
+          "service": "cpdo-lc-business-renewal",
+          "label": "Get locational clearance for the renewal",
+          "note": "Confirms nothing about the site has changed since last year."
+        },
+        {
+          "service": "bplo-renew-face-to-face",
+          "label": "File the renewal",
+          "note": "The Priority, Express and Bulk lanes exist for this - which one you use depends on your requirements."
+        },
+        {
+          "service": "cto-payment-of-business-tax",
+          "label": "Pay the assessed business tax",
+          "note": "Against the order of payment issued at filing."
+        }
+      ]
+    },
+    {
+      "id": "starting-a-cooperative",
+      "category": "business",
+      "relatedCategories": [],
+      "title": "We're starting a cooperative",
+      "icon": "bi-people",
+      "summary": "The Cooperative Development Office runs the whole path, but the seminars come before the paperwork, not after.",
+      "steps": [
+        {
+          "service": "coop-orientation",
+          "label": "Request an orientation",
+          "note": "Where the office explains what forming a cooperative commits you to."
+        },
+        {
+          "service": "coop-pmes",
+          "label": "Complete the Pre-Membership Education Seminar",
+          "note": "Required of your members before registration will be endorsed."
+        },
+        {
+          "service": "coop-registration-endorsement",
+          "label": "Get your registration endorsed",
+          "note": "The city endorses; the Cooperative Development Authority registers."
+        },
+        {
+          "service": "coop-business-permit-endorsement",
+          "label": "Get an endorsement for the cooperative's business permit",
+          "note": "Only once the cooperative is registered and trading.",
+          "conditional": true
+        }
+      ]
+    },
+
+    {
+      "id": "death-in-the-family",
+      "category": "certificates",
+      "relatedCategories": ["social-services"],
+      "title": "Someone in my family has died",
+      "icon": "bi-file-earmark-medical",
+      "summary": "Register within 30 days - after that it becomes a delayed registration with more requirements. The Mayor's Office also has burial assistance.",
+      "steps": [
+        {
+          "service": "ccr-death-on-time",
+          "label": "Register the death within 30 days",
+          "note": "Past 30 days this becomes a delayed registration, which asks for more."
+        },
+        {
+          "service": "ccr-certified-copies",
+          "label": "Get certified copies of the death certificate",
+          "note": "Banks, insurers and the courts will each want their own."
+        },
+        {
+          "service": "ccr-electronic-endorsement",
+          "label": "Endorse the record to the PSA",
+          "note": "So a PSA copy can be issued anywhere in the country, not only here."
+        },
+        {
+          "service": "cmo-client-assistance",
+          "label": "Ask the Mayor's Office about burial assistance",
+          "note": "Medical, burial and financial assistance are handled together at the City Mayor's Office.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "having-a-baby",
+      "category": "certificates",
+      "relatedCategories": [],
+      "title": "I've had a baby",
+      "icon": "bi-emoji-smile",
+      "summary": "Register within 30 days. The PSA endorsement is the step people forget, and it's the one that lets you get a copy anywhere in the country.",
+      "steps": [
+        {
+          "service": "ccr-birth-on-time",
+          "label": "Register the birth within 30 days",
+          "note": "After 30 days it becomes a delayed registration, with more requirements."
+        },
+        {
+          "service": "ccr-change-surname-9255",
+          "label": "File for the child to use the father's surname",
+          "note": "Only if the parents are not married and you want the father's surname on the record.",
+          "conditional": true
+        },
+        {
+          "service": "ccr-certified-copies",
+          "label": "Get a certified copy of the birth certificate",
+          "note": "Schools and passports will ask for it."
+        },
+        {
+          "service": "ccr-electronic-endorsement",
+          "label": "Endorse the record to the PSA",
+          "note": "So a PSA copy can be issued outside Legazpi."
+        }
+      ]
+    },
+    {
+      "id": "getting-married",
+      "category": "certificates",
+      "relatedCategories": [],
+      "title": "We're getting married",
+      "icon": "bi-suit-heart",
+      "summary": "The licence comes first and takes time to release. Registering the marriage afterwards is a separate visit.",
+      "steps": [
+        {
+          "service": "ccr-marriage-license",
+          "label": "Apply for the marriage licence",
+          "note": "Apply well before the date - the licence is not issued the same day."
+        },
+        {
+          "service": "ccr-marriage-on-time",
+          "label": "Register the marriage",
+          "note": "After the ceremony. The solemnising officer files, but the record is registered here."
+        },
+        {
+          "service": "ccr-certified-copies",
+          "label": "Get a certified copy of the marriage certificate",
+          "note": "Needed for name changes, benefits and immigration."
+        }
+      ]
+    },
+
+    {
+      "id": "looking-for-work",
+      "category": "employment",
+      "relatedCategories": [],
+      "title": "I'm looking for work",
+      "icon": "bi-search",
+      "summary": "PESO is the front door. Which programme fits depends on whether you're a student, a first-time jobseeker, or between jobs.",
+      "steps": [
+        {
+          "service": "peso-jobseekers",
+          "label": "Register as a jobseeker",
+          "note": "Job matching and referrals to employers hiring through PESO."
+        },
+        {
+          "service": "peso-jobstart",
+          "label": "Join JobStart, if you're a first-time jobseeker",
+          "note": "Life skills and technical training with a paid internship.",
+          "conditional": true
+        },
+        {
+          "service": "peso-dole-grant-programs",
+          "label": "Ask about TUPAD, GIP or DILEEP",
+          "note": "DOLE grant-based programmes for emergency employment and livelihood.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "working-for-the-city",
+      "category": "employment",
+      "relatedCategories": [],
+      "title": "I want to work for the city",
+      "icon": "bi-building",
+      "summary": "A different office from the one that helps jobseekers. Human Resource Management handles city posts, from application to your certificate of employment years later.",
+      "steps": [
+        {
+          "service": "hrmo-recruitment-selection-placement",
+          "label": "Apply for a city post",
+          "note": "Recruitment, selection and placement for vacancies at the city."
+        },
+        {
+          "service": "hrmo-contract-of-services-job-order-appointments",
+          "label": "Have your appointment or contract prepared",
+          "note": "Contracts of service, job orders and appointments are all prepared here."
+        },
+        {
+          "service": "hrmo-certificate-of-employment",
+          "label": "Request a certificate of employment when you need one",
+          "note": "For loans, visas or a new employer.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "hiring-staff",
+      "category": "employment",
+      "relatedCategories": ["business"],
+      "title": "I'm hiring",
+      "icon": "bi-person-plus",
+      "summary": "PESO recruits on an employer's behalf at no charge, and runs the student and grant programmes that subsidise some hires.",
+      "steps": [
+        {
+          "service": "peso-employers",
+          "label": "Register as an employer with PESO",
+          "note": "PESO refers matched jobseekers to you."
+        },
+        {
+          "service": "peso-spes",
+          "label": "Hire students through SPES",
+          "note": "The Special Program for the Employment of Students, for seasonal work.",
+          "conditional": true
+        },
+        {
+          "service": "peso-jobstart",
+          "label": "Take on a JobStart intern",
+          "note": "Trainees complete their internship with a partner employer.",
+          "conditional": true
+        }
+      ]
+    },
+
+    {
+      "id": "environmental-certificate",
+      "category": "environment",
+      "relatedCategories": ["business"],
+      "title": "My business needs an Environmental Certificate",
+      "icon": "bi-patch-check",
+      "summary": "A seminar, then the certificate. You can attend in person or online - the two routes are separate services with different processing times.",
+      "steps": [
+        {
+          "service": "ocenr-ec-seminar-new-renewal",
+          "label": "Attend the environmental seminar in person",
+          "note": "For a new certificate or a renewal."
+        },
+        {
+          "service": "ocenr-ec-webinar-new-renewal",
+          "label": "Or attend the same seminar online",
+          "note": "The webinar route, if you'd rather not attend in person.",
+          "conditional": true
+        },
+        {
+          "service": "ocenr-ec-seminar-noncompliant",
+          "label": "Take the non-compliant route, if your certificate lapsed",
+          "note": "A separate seminar for businesses whose certificate has expired.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "waste-and-septic",
+      "category": "environment",
+      "relatedCategories": [],
+      "title": "I need waste or a septic tank dealt with",
+      "icon": "bi-trash3",
+      "summary": "Desludging is requested directly. Hauling anything to the landfill yourself needs a permit first.",
+      "steps": [
+        {
+          "service": "ocenr-septic-desludging",
+          "label": "Request septic tank desludging",
+          "note": "For households and establishments."
+        },
+        {
+          "service": "ocenr-permit-to-dump",
+          "label": "Get a Permit to Dump, if you're hauling waste yourself",
+          "note": "Required before the city disposal facility will accept your load.",
+          "conditional": true
+        },
+        {
+          "service": "ocenr-slf-visitors-pass",
+          "label": "Get a visitor's pass for the Sanitary Landfill Facility",
+          "note": "For site visits and research, not for disposal.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "trees-and-greening",
+      "category": "environment",
+      "relatedCategories": [],
+      "title": "I want to plant, or cut, a tree",
+      "icon": "bi-tree",
+      "summary": "Seedlings are free. Cutting a tree - even on your own land - needs a certificate of no objection first.",
+      "steps": [
+        {
+          "service": "ocenr-tree-seedlings",
+          "label": "Request free tree seedlings",
+          "note": "For households, schools, barangays and organisations."
+        },
+        {
+          "service": "ocenr-no-objection-cut-tree",
+          "label": "Get a Certificate of No Objection before cutting a tree",
+          "note": "Required before any tree is cut, including on private property.",
+          "conditional": true
+        },
+        {
+          "service": "ocenr-chainsaw-certification",
+          "label": "Get a certification to register a chainsaw",
+          "note": "Chainsaws must be registered, and registration needs this certification first.",
+          "conditional": true
+        }
+      ]
+    },
+
+    {
+      "id": "relocation-slot",
+      "category": "housing",
+      "relatedCategories": ["social-services"],
+      "title": "I need a relocation slot",
+      "icon": "bi-house-heart",
+      "summary": "The application comes first. The utility certification is what actually gets power and water connected once you're there.",
+      "steps": [
+        {
+          "service": "orhcd-relocation-site",
+          "label": "Apply for a slot in a relocation site",
+          "note": "For families qualified under the city's resettlement programme."
+        },
+        {
+          "service": "orhcd-financial-assistance",
+          "label": "Ask about financial assistance after an eviction",
+          "note": "Support for families displaced by demolition or eviction.",
+          "conditional": true
+        },
+        {
+          "service": "orhcd-aleco-lcwd-certification",
+          "label": "Get the certification for an ALECO or LCWD connection",
+          "note": "The utilities will not connect a relocation address without it."
+        }
+      ]
+    },
+    {
+      "id": "buying-a-city-lot",
+      "category": "housing",
+      "relatedCategories": [],
+      "title": "I want to buy a city lot through socialized housing",
+      "icon": "bi-key",
+      "summary": "A city-owned lot sold under the socialized housing programme, not on the open market.",
+      "steps": [
+        {
+          "service": "orhcd-city-property",
+          "label": "Apply to buy a city-owned lot",
+          "note": "Through the socialized housing programme."
+        },
+        {
+          "service": "orhcd-technical-assistance",
+          "label": "Have a subdivision plan or scheme prepared",
+          "note": "The office prepares the plan for the lot being conveyed.",
+          "conditional": true
+        },
+        {
+          "service": "orhcd-other-certifications",
+          "label": "Request any certification the sale needs",
+          "note": "Certifications the Assessor or Registry of Deeds asks for.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "homeowners-association",
+      "category": "housing",
+      "relatedCategories": [],
+      "title": "We're forming a homeowners' association",
+      "icon": "bi-people-fill",
+      "summary": "The office assists with formation, and issues the certifications an association needs afterwards.",
+      "steps": [
+        {
+          "service": "orhcd-homeowners-association",
+          "label": "Get help forming the association",
+          "note": "The office assists residents through formation and organisation."
+        },
+        {
+          "service": "orhcd-other-certifications",
+          "label": "Request the certifications the association needs",
+          "note": "For registration and for dealings with national agencies.",
+          "conditional": true
+        },
+        {
+          "service": "orhcd-agency-meetings",
+          "label": "Request a meeting with a national agency",
+          "note": "The office arranges meetings with HLURB, NHA and others on residents' behalf.",
+          "conditional": true
+        }
+      ]
+    },
+
+    {
+      "id": "needing-assistance",
+      "category": "social-services",
+      "relatedCategories": ["certificates"],
+      "title": "I need financial or medical assistance",
+      "icon": "bi-life-preserver",
+      "summary": "The certificate of indigency is the document most assistance depends on, so it comes first. Two offices offer help and they are not the same programme.",
+      "steps": [
+        {
+          "service": "cswdo-certificate-of-indigency",
+          "label": "Get a certificate of indigency",
+          "note": "With the social case study and assessment report that go with it."
+        },
+        {
+          "service": "cswdo-financial-assistance-aics",
+          "label": "Apply for assistance to individuals in crisis (AICS)",
+          "note": "Limited financial assistance for medical, burial and other crisis situations."
+        },
+        {
+          "service": "cmo-client-assistance",
+          "label": "Ask the Mayor's Office about its own assistance",
+          "note": "A separate programme from AICS, for medical, burial and financial help.",
+          "conditional": true
+        },
+        {
+          "service": "cswdo-philhealth-financial-capability",
+          "label": "Get the PhilHealth certification of financial incapacity",
+          "note": "For Universal Health Care coverage of a hospital bill.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "pwd-id",
+      "category": "social-services",
+      "relatedCategories": [],
+      "title": "I need a PWD ID",
+      "icon": "bi-person-wheelchair",
+      "summary": "One application covers the ID and both booklets - the medicine booklet and the purchase booklet that carry the discounts.",
+      "steps": [
+        {
+          "service": "pdao-pwd-id",
+          "label": "Apply for the PWD ID, medicine booklet and purchase booklet",
+          "note": "All three are issued together by the Persons with Disability Affairs Office."
+        },
+        {
+          "service": "cswdo-certificate-of-indigency",
+          "label": "Get a certificate of indigency, if you're also applying for assistance",
+          "note": "Most welfare assistance depends on this document.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "drug-dependency-help",
+      "category": "social-services",
+      "relatedCategories": ["health"],
+      "title": "Someone I know needs help with drug dependency",
+      "icon": "bi-heart",
+      "summary": "The council handles this as a health and community matter. Asking a question first costs nothing and commits no one.",
+      "steps": [
+        {
+          "service": "cadc-communications",
+          "label": "Ask the council a question",
+          "note": "Before anything formal starts."
+        },
+        {
+          "service": "cadc-drug-test",
+          "label": "Arrange a drug test",
+          "note": "Through the council rather than privately."
+        },
+        {
+          "service": "cadc-community-intervention",
+          "label": "Join the community-based intervention programme",
+          "note": "The city's own programme, run in the community rather than a facility."
+        }
+      ]
+    },
+
+    {
+      "id": "buying-property",
+      "category": "tax-payments",
+      "relatedCategories": [],
+      "title": "I'm buying or selling property",
+      "icon": "bi-file-earmark-ruled",
+      "summary": "Two offices, and the order matters - the Treasurer assesses and collects the transfer tax before the Assessor will move the tax declaration to the new owner.",
+      "steps": [
+        {
+          "service": "cto-assessment-of-transfer-tax",
+          "label": "Have the transfer tax assessed",
+          "note": "The Treasurer computes what is due on the sale."
+        },
+        {
+          "service": "cto-payment-of-transfer-tax",
+          "label": "Pay the transfer tax",
+          "note": "Against the assessment."
+        },
+        {
+          "service": "casso-transfer-ownership",
+          "label": "Transfer the tax declaration to the new owner",
+          "note": "At the Assessor's Office. The property stays in the seller's name until this is done."
+        },
+        {
+          "service": "cto-real-property-tax-clearance",
+          "label": "Get a real property tax clearance",
+          "note": "Proof that nothing is owed on the property.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "declaring-a-building",
+      "category": "tax-payments",
+      "relatedCategories": ["infrastructure"],
+      "title": "I've built something and need it declared",
+      "icon": "bi-house-check",
+      "summary": "A new house, building or machine has to be declared with the Assessor before it can be taxed - and it will be taxed from the year it was completed.",
+      "steps": [
+        {
+          "service": "casso-assess-building",
+          "label": "Declare the new house, building or machine",
+          "note": "The Assessor inspects and assesses it for tax purposes."
+        },
+        {
+          "service": "cto-real-property-tax-statement",
+          "label": "Request the real property tax statement of account",
+          "note": "What is now due on the property."
+        },
+        {
+          "service": "cto-payment-of-real-property-tax",
+          "label": "Pay the real property tax",
+          "note": "Annually, or quarterly if you prefer."
+        }
+      ]
+    },
+    {
+      "id": "paying-business-tax",
+      "category": "tax-payments",
+      "relatedCategories": ["business"],
+      "title": "I'm paying my business tax",
+      "icon": "bi-receipt",
+      "summary": "Get the billing statement, have it assessed, then pay. Delinquencies from previous years are assessed separately.",
+      "steps": [
+        {
+          "service": "cto-business-tax-billing-statement",
+          "label": "Request the quarterly billing statement",
+          "note": "What is due this quarter."
+        },
+        {
+          "service": "cto-assessment-of-business-tax",
+          "label": "Have the business tax assessed",
+          "note": "The Treasurer computes the amount."
+        },
+        {
+          "service": "cto-business-tax-previous-year-delinquency",
+          "label": "Settle any previous-year delinquency",
+          "note": "Assessed separately from the current year's tax.",
+          "conditional": true
+        },
+        {
+          "service": "cto-payment-of-business-tax",
+          "label": "Pay the business tax",
+          "note": "At the One-Stop Shop or through the online billing portal."
+        }
+      ]
+    },
+
+    {
+      "id": "registering-as-a-farmer",
+      "category": "agriculture",
+      "relatedCategories": [],
+      "title": "I'm registering as a farmer or fisherfolk",
+      "icon": "bi-person-badge",
+      "summary": "RSBSA registration comes first - it's what most support and insurance depends on. Inputs and advice follow from it.",
+      "steps": [
+        {
+          "service": "cao-certification-rsbsa-pcic-boat",
+          "label": "Register in RSBSA, PCIC insurance or boat registration",
+          "note": "The national registry of farmers and fisherfolk, plus crop insurance and boat registration."
+        },
+        {
+          "service": "cao-technical-assistance",
+          "label": "Request technical advice or a farm visit",
+          "note": "Agri-fishery advice, site visitation and capacity-building."
+        },
+        {
+          "service": "cao-production-inputs",
+          "label": "Request seeds, seedlings, fertilizer or fingerlings",
+          "note": "Distribution of production inputs to registered farmers."
+        }
+      ]
+    },
+    {
+      "id": "farm-machinery",
+      "category": "agriculture",
+      "relatedCategories": [],
+      "title": "I need farm machinery",
+      "icon": "bi-gear-wide-connected",
+      "summary": "The Agricultural and Biosystems Engineering division advises, lends and registers. Machinery you own has to be registered whether or not you borrow from the city.",
+      "steps": [
+        {
+          "service": "abe-technical-assistance",
+          "label": "Get advice on farm structures, machines or irrigation",
+          "note": "Includes a field visit and ocular inspection of your site."
+        },
+        {
+          "service": "abe-machinery-service",
+          "label": "Borrow pre- and postharvest machinery",
+          "note": "City-owned machinery lent to registered farmers and associations."
+        },
+        {
+          "service": "abe-machinery-registration",
+          "label": "Register machinery you own",
+          "note": "Farm and fishery machinery must be registered.",
+          "conditional": true
+        },
+        {
+          "service": "abe-training",
+          "label": "Request a training or seminar on farm machinery",
+          "note": "For farmers' associations and cooperatives.",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "animals-and-livestock",
+      "category": "agriculture",
+      "relatedCategories": ["health"],
+      "title": "I have pets or livestock",
+      "icon": "bi-heart-pulse",
+      "summary": "Dogs and cats are pre-registered at the barangay before the city's rabies vaccination reaches them. Travelling with a pet needs a health certificate.",
+      "steps": [
+        {
+          "service": "cvo-pet-pre-registration",
+          "label": "Pre-register your dogs and cats at the barangay",
+          "note": "The list the city works from when vaccination comes round."
+        },
+        {
+          "service": "cvo-rabies-vaccination",
+          "label": "Have them vaccinated during the mass rabies vaccination",
+          "note": "Run by the City Veterinary Office across the barangays."
+        },
+        {
+          "service": "cvo-health-certificate",
+          "label": "Get a veterinary health certificate to travel with a pet",
+          "note": "Airlines and shipping lines will ask for it.",
+          "conditional": true
+        },
+        {
+          "service": "cvo-treatment-out-patient",
+          "label": "Ask for a farm or home visit",
+          "note": "For livestock and animals that cannot be brought in.",
           "conditional": true
         }
       ]

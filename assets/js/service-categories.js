@@ -171,21 +171,37 @@
         entries.push({ entry, office: index.offices[office.slug] });
       }
     }
-    if (!entries.length) return '';
+    // A category with nothing online still deserves the question answered. Saying
+    // so plainly is more use than an empty section or a list of links that turn out
+    // to be videos - see the note on tax-payments in data/service-categories.json.
+    if (!entries.length) {
+      if (!category.onlineNote) return '';
+      return `
+      <section class="section sc-section sc-section--alt" aria-labelledby="online-heading">
+        <div class="container">
+          <h2 class="sc-section-title" id="online-heading">Can I do this online?</h2>
+          <p class="sc-section-lead sc-online-none">${esc(category.onlineNote)}</p>
+        </div>
+      </section>`;
+    }
 
     const cards = entries
       .map(({ entry, office }) => {
         const kind = kinds[entry.kind] || kinds.portal;
-        return `
-        <a class="sc-portal sc-portal--${esc(entry.kind)}" href="${esc(entry.url)}"
-           target="_blank" rel="noopener noreferrer">
+        const inner = `
           <span class="sc-portal-kind">
             <i class="bi ${esc(kind.icon)}" aria-hidden="true"></i>${esc(kind.label)}
           </span>
           <span class="sc-portal-title">${esc(entry.title)}</span>
           <span class="sc-portal-office">${esc(office ? office.abbreviation || office.name : '')}</span>
-          ${entry.caveat ? `<span class="sc-portal-caveat">${esc(entry.caveat)}</span>` : ''}
-        </a>`;
+          ${entry.caveat ? `<span class="sc-portal-caveat">${esc(entry.caveat)}</span>` : ''}`;
+
+        // Not every remote option is a URL. An email-based service has no page to
+        // link to, and a link to nowhere is worse than no link.
+        return entry.url
+          ? `<a class="sc-portal sc-portal--${esc(entry.kind)}" href="${esc(entry.url)}"
+               target="_blank" rel="noopener noreferrer">${inner}</a>`
+          : `<div class="sc-portal sc-portal--${esc(entry.kind)} sc-portal--static">${inner}</div>`;
       })
       .join('');
 
@@ -194,8 +210,9 @@
         <div class="container">
           <h2 class="sc-section-title" id="online-heading">Can I do this online?</h2>
           <p class="sc-section-lead">
-            Some of it. Each link below is labelled with what it actually is - a working
-            online portal, or a document describing a procedure you still finish in person.
+            Each option below is labelled with what it actually is - a working online
+            portal, a document describing a procedure you still finish in person, or a
+            request you can send by email.
           </p>
           <div class="sc-portals">${cards}</div>
         </div>

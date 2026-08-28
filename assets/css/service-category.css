@@ -369,6 +369,25 @@
   box-shadow: var(--shadow-sm);
 }
 
+/* An email-based service has no page to link to. It still belongs in this section,
+   but it must not look tappable. */
+.sc-portal--static,
+.sc-portal--static:hover {
+  border-style: dashed;
+  border-color: var(--color-border);
+  box-shadow: none;
+  cursor: default;
+}
+
+.sc-portal--remote .sc-portal-kind {
+  background: var(--color-bg-muted);
+  color: var(--color-text-light);
+}
+
+.sc-online-none {
+  max-width: var(--measure);
+}
+
 /* The badge is the point of this card: a reader must know before tapping whether
    this is a working portal or a PDF explaining a counter visit. */
 .sc-portal-kind {
@@ -384,9 +403,11 @@
   border-radius: var(--radius-pill);
 }
 
+/* Not var(--color-success): #067a5e on its own 12% tint is 4.49:1, which misses AA
+   by a hair and axe flags. #05654e clears it at 5.96:1. */
 .sc-portal--portal .sc-portal-kind {
   background: rgba(6, 122, 94, 0.12);
-  color: var(--color-success);
+  color: #05654e;
 }
 
 /* --color-accent-badge-text, not --color-accent-text: the lighter accent fails

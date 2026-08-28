@@ -80,6 +80,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-category.css" />
     <style>
       .service-item-card {
         display: block;
@@ -250,78 +251,10 @@
         </div>
       </section>
 
-      <!-- 3 Service Action Cards (Direct without section header) -->
-      <section class="section">
-        <div class="container">
-          <div class="grid grid-3">
-            <a href="../service-details/cao-services#farm-registration" class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-person-badge"></i>
-                <span>Get on record</span>
-              </h3>
-              <p class="service-item-desc">
-                RSBSA registration, crop insurance (PCIC), and official farmer certifications
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>N/A</span></span>
-                <span><strong>Time:</strong> <span>11 mins</span></span>
-              </div>
-            </a>
-
-            <a href="../service-details/cao-services#agri-fishery" class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-water"></i>
-                <span>Get supported</span>
-              </h3>
-              <p class="service-item-desc">
-                Technical assistance, site visitation, and capacity-building lectures
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>N/A</span></span>
-                <span><strong>Time:</strong> <span>17 mins</span></span>
-              </div>
-            </a>
-
-            <a href="../service-details/cao-services#production-inputs" class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-box-seam"></i>
-                <span>Get resourced</span>
-              </h3>
-              <p class="service-item-desc">
-                Distribution of certified seeds, fertilizers, fingerlings, and seedlings
-              </p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>N/A</span></span>
-                <span><strong>Time:</strong> <span>14 mins</span></span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Responsible Offices -->
-      <section class="section section-compact bg-alt">
-        <div class="container">
-          <h2 class="section-title-sm">Responsible Offices</h2>
-          <div class="office-cards-grid">
-            <a href="../service-details/cao-services" class="office-card">
-              <div class="office-card-icon">
-                <i class="bi bi-tree-fill"></i>
-              </div>
-              <div class="office-card-content">
-                <h3 class="office-card-title">CAO Services</h3>
-                <p class="office-card-desc">
-                  Register in RSBSA, request agri-fishery technical assistance, and acquire
-                  certified seeds and planting inputs.
-                </p>
-              </div>
-              <div class="office-card-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <!-- Standardized category sections, rendered from data/service-categories.json,
+           data/journeys.json, data/online-portals.json and data/service-index.json
+           by assets/js/service-categories.js. -->
+      <div id="service-category-app" data-category="agriculture"></div>
     </main>
 
     <footer class="site-footer">
@@ -490,6 +423,7 @@
       </div>
     </footer>
     <script defer src="../assets/js/info-bar.js"></script>
+    <script defer src="../assets/js/service-categories.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
   </body>

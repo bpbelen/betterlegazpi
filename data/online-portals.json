@@ -3,7 +3,8 @@
   "kinds": {
     "portal": { "label": "Online portal", "icon": "bi-globe" },
     "guide": { "label": "Procedure guide (PDF)", "icon": "bi-file-earmark-pdf" },
-    "payment": { "label": "Payment channel", "icon": "bi-credit-card" }
+    "payment": { "label": "Payment channel", "icon": "bi-credit-card" },
+    "remote": { "label": "By email, no visit", "icon": "bi-envelope" }
   },
   "offices": {
     "bplo": [
@@ -23,6 +24,14 @@
         "kind": "portal",
         "title": "Business billing and payment",
         "url": "https://www.filipizen.com/partners/albay_legazpi/bpls/billing"
+      }
+    ],
+    "ccr": [
+      {
+        "kind": "remote",
+        "title": "Check a civil registry record by email",
+        "service": "ccr-email-verification",
+        "caveat": "A charter service, not a portal: you email the request and the office replies. Collecting the document itself still means a visit."
       }
     ],
     "ceo": [

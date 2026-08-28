@@ -31,5 +31,13 @@ module.exports = {
   // Service category pages: every section below the page header is rendered by
   // assets/js/service-categories.js from four JSON files, so #service-category-app
   // ships empty and the whole page body is late-arriving content.
+  '/services/agriculture.html': { waitForSelector: '#service-category-app > *' },
+  '/services/business.html': { waitForSelector: '#service-category-app > *' },
+  '/services/certificates.html': { waitForSelector: '#service-category-app > *' },
+  '/services/employment.html': { waitForSelector: '#service-category-app > *' },
+  '/services/environment.html': { waitForSelector: '#service-category-app > *' },
+  '/services/housing.html': { waitForSelector: '#service-category-app > *' },
   '/services/infrastructure.html': { waitForSelector: '#service-category-app > *' },
+  '/services/social-services.html': { waitForSelector: '#service-category-app > *' },
+  '/services/tax-payments.html': { waitForSelector: '#service-category-app > *' },
 };
