@@ -1,0 +1,379 @@
+{
+  "slug": "cadc",
+  "route": "service-details/cadc-services.html",
+  "charter": {
+    "office": "City Anti-Drug Abuse Council",
+    "abbreviation": "CADAC",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-ANTI-DRUG-ABUSE-COUNCIL-CITIZENS-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/cadc.md",
+    "personnel": [],
+    "personnelNotes": [
+      "This charter names roles rather than people: the Officer-in-Charge of CADAC, CADAC staff, and the CADAC Action Officer. There is no personnel roster to reproduce.",
+      "The council is published under the City Mayor's Office."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Raise any concern or complaint with the office in writing or verbally. You can also send feedback to 0912 252 6865 or by email.",
+      "howFeedbackIsProcessed": "Feedback is gathered and processed by the assigned staff and prepared for documentation and monitoring. All gathered reports are filed and secured, and CADAC coordinates with the individual, agency or office that can respond to the person's problem or needs.",
+      "contacts": ["legazpicadac@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "cadc-communications",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Administrative Services",
+        "title": "Asking the council a question",
+        "description": "Walk in or call the council with a query, a request, or a question about how treatment and rehabilitation work. Barangays also submit their BADAC plans and utilization reports here.",
+        "office": "City Anti-Drug Abuse Council (CADAC)",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "Walk-in clients and all government agencies",
+        "requirements": [
+          {
+            "item": "Letter of request, or the submission of a BADAC plan and utilization report",
+            "whereToSecure": "The barangay or agency concerned"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Come to the office or call with your concern.",
+            "agency": "Receives the communication and answers queries, requests and other information.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": null,
+            "agency": "Coordinates with the section or department concerned.",
+            "feeText": "None",
+            "processingTime": "5-10 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": null,
+            "agency": "Assists walk-in clients with their questions about the processes for treatment and rehabilitation and any other request or concern.",
+            "feeText": "None",
+            "processingTime": "5-10 minutes",
+            "personResponsible": "CADAC Staff"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "25 Minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The last two steps are ranges. The arithmetic reads the upper figure of a range, which is what makes the derived total match the charter's stated 25 minutes."
+        ]
+      },
+      {
+        "id": "cadc-prevention-seminar",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "External Services",
+        "title": "Requesting a drug prevention seminar",
+        "description": "A drug prevention education and awareness seminar run for a school, a barangay, a youth organization, an NGO or a private organization.",
+        "office": "City Anti-Drug Abuse Council (CADAC)",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "Schools, barangay officials and members, youth organizations, NGOs and private organizations",
+        "requirements": [
+          {
+            "item": "Letter of request indicating the seminar topic and the target participants",
+            "whereToSecure": "The requesting party"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Send the request letter to the CADAC office or by email, naming the topic you want covered.",
+            "agency": "Receives the letter requesting the training or seminar.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the request and schedules it.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Officer-in-Charge, CADAC"
+          },
+          {
+            "client": "Attend the seminar.",
+            "agency": "Conducts the lecture seminar.",
+            "feeText": "None",
+            "processingTime": "2 hours to 1 day",
+            "personResponsible": "CADAC Staff"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "1 Day to 3 Hours" },
+        "notes": [
+          "Topics the charter names include the International Day Against Drug Abuse and Illicit Trafficking, and drug abuse prevention."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's stated total reads \"1 Day to 3 Hours\", a range written from the larger figure to the smaller one. The derived total takes the upper end of each step. Check the PDF."
+        ]
+      },
+      {
+        "id": "cadc-drug-test",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "External Services",
+        "title": "Arranging a drug test",
+        "description": "Drug testing for monitoring Community-Based Drug Rehabilitation Program clients, government officials and employees, and barangay officials, and in support of the drug-free workplace programme.",
+        "office": "City Anti-Drug Abuse Council (CADAC) and Core Team",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "Government officials and employees, barangay officials and members, and CBDRP clients",
+        "requirements": [
+          {
+            "item": "Letter of request and the list of clients to be tested",
+            "whereToSecure": "The requesting party"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Send the request letter with the list of individuals to be tested.",
+            "agency": "Receives the request letter.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the request and schedules the drug testing.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Officer-in-Charge, CADAC"
+          },
+          {
+            "client": "On the day of the scheduled test, each person fills out the consent form.",
+            "agency": "Accepts the duly accomplished form.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": null,
+            "agency": "Collects the urine sample.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": null,
+            "agency": "Tests the urine using the drug test kit.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": "Receive the result.",
+            "agency": "Releases the result.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "CADAC Staff"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "4 Days and 25 Minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's client step directs requests to the \"QCADAAC Office\" at qcadaac@quezoncity.gov.ph. That is Quezon City's anti-drug council, carried into this Legazpi charter in error. The office's own address, given in its feedback section, is legazpicadac@gmail.com. The step here does not reproduce the wrong address; confirm the correct one with the office before this service is verified."
+        ]
+      },
+      {
+        "id": "cadc-community-intervention",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "External Services",
+        "title": "Joining the community-based drug intervention programme",
+        "description": "A treatment programme run in the community, from general interventions through to relapse prevention. Surrenderees and persons deprived of liberty report for six months; aftercare clients report for eighteen, twice a month.",
+        "office": "City Anti-Drug Abuse Council (CADAC)",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "Persons who used drugs (surrenderees), persons deprived of liberty, and aftercare clients who have completed treatment and rehabilitation",
+        "requirements": [
+          { "item": "Court release order", "whereToSecure": "The court concerned" },
+          {
+            "item": "The other requirements the office asks for at intake, in photocopy or original",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the court release order.",
+            "agency": "Asks for the court release order and files it properly for future reference.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": "Sit the intake interview.",
+            "agency": "Conducts the intake interview to gather basic and essential information, and explains the reporting requirements.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "CADAC Action Officer"
+          },
+          {
+            "client": "Submit the needed requirements to the office.",
+            "agency": "Receives the copies of the requirements and files them in the client's folder.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": "Receive your reporting schedule.",
+            "agency": "Gives the schedule of reporting and tells the client to bring their own food each time they attend the programme.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "CADAC Staff"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "1 hour and 20 mins. per transaction; 30 mins. twice a month for reporting"
+        },
+        "notes": [
+          "Surrenderees and persons deprived of liberty report for six months; aftercare clients for eighteen months, twice a month.",
+          "Bring your own food to each session."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The steps read here sum to 45 minutes against the charter's stated 1 hour and 20 minutes per transaction, a gap of 35 minutes. Check the PDF for a missing row.",
+          "The charter's total also carries a second figure, 30 minutes for each twice-monthly reporting session, which is the ongoing commitment rather than part of the intake. It is recorded in statedTotals as printed and in the notes."
+        ]
+      },
+      {
+        "id": "cadc-badac-seminar",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "External Services",
+        "title": "BADAC revitalization seminar for barangays",
+        "description": "Orientation and reorientation for a Barangay Anti-Drug Abuse Council auxiliary team and its committee on operations, on their roles and functions under Dangerous Drugs Board Regulation No. 3, Series of 2017.",
+        "office": "City Anti-Drug Abuse Council (CADAC) and Core Team",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "Legazpi City barangays, barangay auxiliary team clusters, and BADAC committees on operations",
+        "requirements": [
+          {
+            "item": "Letter of request indicating the seminar, the target date and the participants",
+            "whereToSecure": "The requesting party or barangay"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Send the request letter for the seminar or training.",
+            "agency": "Receives the letter request.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": null,
+            "agency": "Reviews the request and schedules it.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Officer-in-Charge, CADAC"
+          },
+          {
+            "client": null,
+            "agency": "Writes to the police and the police station concerned to request a resource speaker.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "CADAC Staff"
+          },
+          {
+            "client": "Attend the seminar.",
+            "agency": "The council, with the police and the station concerned, conducts the training or seminar.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "CADAC Staff and Core Team"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "3 Days and 5 Minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "As with the drug test service, this page directs requests to the \"QCADAAC Office\" at qcadaac@quezoncity.gov.ph and names QCPD as the police force. Those are Quezon City references carried into a Legazpi charter in error, and are not reproduced in the steps here. Confirm the correct office and police contact before verifying."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-shield-plus",
+    "categories": [
+      {
+        "id": "treatment-and-recovery",
+        "title": "Treatment and recovery",
+        "icon": "bi-heart-pulse",
+        "services": ["cadc-community-intervention", "cadc-drug-test"]
+      },
+      {
+        "id": "seminars",
+        "title": "Seminars and training",
+        "icon": "bi-mortarboard",
+        "services": ["cadc-prevention-seminar", "cadc-badac-seminar"]
+      },
+      {
+        "id": "asking-the-council",
+        "title": "Asking the council",
+        "icon": "bi-chat-left-text",
+        "services": ["cadc-communications"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "seeking-help-drugs",
+        "title": "You or someone close to you needs help",
+        "presentation": "rail",
+        "icon": "bi-heart-pulse",
+        "services": ["cadc-community-intervention", "cadc-communications"]
+      },
+      {
+        "id": "school-or-group-seminar",
+        "title": "Your school or group wants a seminar",
+        "presentation": "rail",
+        "icon": "bi-mortarboard",
+        "services": ["cadc-prevention-seminar"]
+      },
+      {
+        "id": "barangay-official-badac",
+        "title": "You are a barangay official",
+        "presentation": "rail",
+        "icon": "bi-buildings",
+        "services": ["cadc-badac-seminar", "cadc-communications"]
+      },
+      {
+        "id": "workplace-drug-testing",
+        "title": "Your office needs drug testing",
+        "presentation": "rail",
+        "icon": "bi-clipboard-check",
+        "services": ["cadc-drug-test"]
+      }
+    ],
+    "searchAliases": {
+      "cadc-communications": ["cadac", "anti drug", "query", "badac plan", "utilization report"],
+      "cadc-prevention-seminar": [
+        "drug prevention",
+        "seminar",
+        "awareness",
+        "school seminar",
+        "substance abuse"
+      ],
+      "cadc-drug-test": ["drug test", "drug testing", "urine test", "drug free workplace", "cbdrp"],
+      "cadc-community-intervention": [
+        "rehabilitation",
+        "surrenderee",
+        "cbdrp",
+        "aftercare",
+        "pdl",
+        "recovery",
+        "intervention",
+        "droga"
+      ],
+      "cadc-badac-seminar": ["badac", "barangay anti drug", "revitalization", "seminar", "workshop"]
+    },
+    "contact": null
+  }
+}
