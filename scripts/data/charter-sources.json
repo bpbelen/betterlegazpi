@@ -78,6 +78,52 @@
       "office": "City Human Resource Management Office",
       "extraction": "text",
       "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-HUMAN-RESOURCE-MANAGEMENT-OFFICE-CITIZENS-CHARTER-2026-1.pdf"
+    },
+    {
+      "slug": "gso",
+      "hub": "service-details/gso-services.html",
+      "office": "General Services Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/GENERAL-SERVICES-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "peso",
+      "hub": "service-details/peso-services.html",
+      "office": "Public Employment Service Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/PUBLIC-EMPLOYMENT-SERVICE-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "pdao",
+      "hub": "service-details/pdao-services.html",
+      "office": "Persons with Disability Affairs Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-PDAO-2026.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-PDAO-2026."
+    },
+    {
+      "slug": "abe",
+      "hub": "service-details/abe-services.html",
+      "office": "Albay Boulevard Enterprise",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-ABE.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-ABE."
+    },
+    {
+      "slug": "eemd-legazpi",
+      "hub": "service-details/eemd-legazpi-public-market.html",
+      "office": "City Economic Enterprise and Management Division, Legazpi Public Market",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-ECONOMIC-AND-ENTERPRISE-AND-MANAGEMENT-DIVISION-LEGAZPI-2026.pdf",
+      "sourceNote": "Published under the City Mayor's Office. EEMD publishes a separate charter per market."
+    },
+    {
+      "slug": "eemd-albay",
+      "hub": "service-details/eemd-albay-public-market.html",
+      "office": "City Economic Enterprise and Management Division, Albay Public Market",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CMO-CITY-ECONOMIC-AND-ENTERPRISE-AND-MANAGEMENT-DIVISION-ALBAY-2026.pdf",
+      "sourceNote": "Published under the City Mayor's Office. EEMD publishes a separate charter per market."
     }
   ]
 }

@@ -1,0 +1,569 @@
+{
+  "slug": "gso",
+  "route": "service-details/gso-services.html",
+  "charter": {
+    "office": "General Services Office",
+    "abbreviation": "GSO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/GENERAL-SERVICES-OFFICE-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/gso.md",
+    "personnel": [
+      {
+        "name": "Maria Chona A. Riocasa",
+        "position": "General Services Officer",
+        "unit": "General Services Office",
+        "isHead": true
+      },
+      {
+        "name": "Harry M. Quigaman Jr.",
+        "position": "Administrative Officer I, Records Officer",
+        "unit": "Records Division"
+      }
+    ],
+    "personnelNotes": [
+      "The charter names only these two officers. Its process tables identify everyone else by position and division."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Answer the Client Satisfaction Measurement Survey at the front desk of the office, or email gso.legazpi@gmail.com. The office is on the ground floor of the City Hall compound, Rizal Street, Barangay 13 Ilawod West.",
+      "howFeedbackIsProcessed": "Every Friday the Officer-in-Charge compiles and records the feedback submitted. Feedback needing an answer goes to the division concerned, which must reply within two days of receipt, and the office's answer is relayed to the client. Complaints are evaluated by the Officer-in-Charge, forwarded to the division concerned for explanation, written up in a report for the Department Head to act on, and the outcome is given back to the client.",
+      "contacts": ["gso.leg@legazpi.gov.ph", "gso.legazpi@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "gso-purchase-request",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Procurement Services",
+        "title": "Filing a purchase request and getting the mode of procurement certified",
+        "description": "The purchase request is prepared by the end-user office for supplies, property or equipment. It is the basis for canvassing before a purchase order is drawn up. Once the City Mayor approves it, the Bids and Awards Committee certifies which mode of procurement applies.",
+        "office": "General Services Office, Administrative and Procurement Divisions",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "End-user offices and departments of the city government",
+        "requirements": [
+          { "item": "Approved purchase request", "whereToSecure": "Client or end-user" },
+          { "item": "Approved obligation request", "whereToSecure": "Client or end-user" },
+          {
+            "item": "Approved procurement plan by the end-user, department head or City Mayor",
+            "whereToSecure": "Client or end-user"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the duly approved purchase request, obligation request and annual procurement plan, approved by the end-user, department head or City Mayor, with the supporting documents attached.",
+            "agency": "Checks and receives the approved purchase request and obligation request with the supporting documents.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Aide I, Administrative Division"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the certification for the mode of procurement, to be signed by the Bids and Awards Committee members.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Administrative Aide VI / Administrative Aide I, Procurement Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "1 day 5 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "gso-philgeps-posting",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "Procurement Services",
+        "title": "Posting a procurement on PhilGEPS",
+        "description": "Every government procurement has to be posted on the Philippine Government Electronic Procurement System, the central portal for government procurement information.",
+        "office": "General Services Office, Procurement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "End-user offices and departments of the city government",
+        "requirements": [
+          {
+            "item": "Approved purchase request and obligation request",
+            "whereToSecure": "Client or end-user"
+          },
+          { "item": "Certification", "whereToSecure": "General Services Office" }
+        ],
+        "steps": [
+          {
+            "client": "Present the approved purchase request, obligation request and certification.",
+            "agency": "Posts the details of the documents on the PhilGEPS website at https://www.philgeps.gov.ph.",
+            "feeText": "None",
+            "processingTime": "3 hours",
+            "personResponsible": "Senior Administrative Assistant II / Administrative Aide II, Procurement Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "3 hours" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "gso-rfq-abstract",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "Procurement Services",
+        "title": "Request for quotation and abstract of canvass",
+        "description": "The request for quotation sets out the specification, quantity, approved budget for the contract and terms for the items being procured, and goes to at least three qualified suppliers, contractors or consultants. The abstract of canvass and award summarises the quotations that come back.",
+        "office": "General Services Office, Procurement and Administrative Divisions",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Suppliers, contractors and consultants, and end-user offices",
+        "requirements": [
+          {
+            "item": "Approved documents for procurement",
+            "whereToSecure": "General Services Office"
+          },
+          { "item": "Other supporting documents", "whereToSecure": "Client or end-user" }
+        ],
+        "steps": [
+          {
+            "client": "Present the approved documents for procurement and the supporting documents.",
+            "agency": "Prepares and dispatches the request for quotation to at least three suppliers, contractors or consultants of known qualifications.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Administrative Officer I / Administrative Aide I, Procurement Division"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the abstract of canvass and award once the dispatched quotations are back from the suppliers, contractors or consultants, for the signature of the Bids and Awards Committee members.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Administrative Officer I / Administrative Aide IV / Administrative Aide I, Administrative Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "2 days" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The extraction shows three processing-time values (1 day, 1 day, 2 days) against two agency actions. The third is read as the TOTAL row, which reconciles: one day plus one day is the two days shown. Check the PDF."
+        ]
+      },
+      {
+        "id": "gso-purchase-order",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "Procurement Services",
+        "title": "Preparing a purchase order",
+        "description": "The purchase order goes to the winning supplier or bidder, telling them to deliver the requested quantities of supplies, goods or property on the stated terms.",
+        "office": "General Services Office, Procurement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business (G2B)", "Government to Government (G2G)"],
+        "whoMayAvail": "Winning suppliers and bidders, and end-user offices",
+        "requirements": [
+          {
+            "item": "Approved abstract of canvass and award",
+            "whereToSecure": "General Services Office"
+          },
+          {
+            "item": "Approved documents for procurement",
+            "whereToSecure": "General Services Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the approved abstract of canvass and award and the approved documents for procurement.",
+            "agency": "Prepares the purchase order once the quotations and the abstract of canvass and award are complete.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Administrative Assistant VI / Administrative Assistant II / Administrative Aide IV, Procurement Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "2 hours" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "gso-inspection-acceptance",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "Procurement Services",
+        "title": "Accepting a delivery and issuing the supplies",
+        "description": "Inspection and acceptance of a delivery against the approved purchase order, then issuing the items. A property acknowledgement receipt covers property worth Php 50,000.00 and above; an inventory custodian slip covers supplies or equipment worth Php 14,999.00 or below. Both are signed by the accountable employee.",
+        "office": "General Services Office, Procurement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "End-user offices and departments of the city government",
+        "requirements": [
+          {
+            "item": "Delivery receipt, charge invoice, statement of account, sales invoice, or official receipt if the supplier has a collection receipt",
+            "whereToSecure": "Winning bidder"
+          },
+          {
+            "item": "Complete documents for procurement",
+            "whereToSecure": "General Services Office"
+          },
+          { "item": "Other supporting documents", "whereToSecure": "Client or end-user" },
+          { "item": "Approved purchase order", "whereToSecure": "General Services Office" }
+        ],
+        "steps": [
+          {
+            "client": "Present the delivery receipt, charge invoice, statement of account, sales invoice or official receipt, together with the complete procurement and supporting documents.",
+            "agency": "Inspects and accepts the delivered supplies or equipment, prepares the acceptance and inspection report, and prepares the requisition issue slip.",
+            "feeText": "None",
+            "processingTime": "3 hours",
+            "personResponsible": "Administrative Aide IV / RMO II, Procurement Division"
+          },
+          {
+            "client": "Present the approved requisition issue slip.",
+            "agency": "Prepares the property acknowledgement receipt or the inventory custodian slip.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "City General Services Officer (CGDH I) / Administrative Aide IV, Procurement Division"
+          },
+          {
+            "client": null,
+            "agency": "Releases the supplies or equipment to the client or end-user.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Administrative Officer I, Administrative Division / Administrative Assistant I, Administrative Aide IV and RMO II, Procurement Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "2 days and 4 hours" },
+        "notes": [
+          "Which form you sign depends on what the item cost: Php 50,000.00 and above gets a property acknowledgement receipt, Php 14,999.00 and below an inventory custodian slip."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter lists five agency actions against three processing times. The grouping recorded here reconciles with the charter's own total of two days and four hours, but which actions share the three hours should be checked against the PDF."
+        ]
+      },
+      {
+        "id": "gso-coa-receipt",
+        "number": 6,
+        "charterNumber": 6,
+        "charterGroup": "Procurement Services",
+        "title": "Submitting the COA receipt",
+        "description": "The COA receipt goes to the Commission on Audit so the city's procurement transactions stay on record.",
+        "office": "General Services Office, Procurement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "End-user offices and departments of the city government",
+        "requirements": [
+          {
+            "item": "Approved documents for procurement",
+            "whereToSecure": "General Services Office"
+          },
+          { "item": "Other supporting documents", "whereToSecure": "Client or end-user" }
+        ],
+        "steps": [
+          {
+            "client": "Present the approved documents for procurement and the supporting documents.",
+            "agency": "Prepares the COA receipt on receiving the documents, then submits it to the Commission on Audit.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Administrative Aide II / Administrative Aide I, Procurement Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "1 hour" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "gso-procurement-clearance",
+        "number": 7,
+        "charterNumber": 7,
+        "charterGroup": "Procurement Services",
+        "title": "Clearing a completed procurement",
+        "description": "Once a procurement is finished, the office marks the file to show the transaction followed the proper procedure under Republic Act 9184.",
+        "office": "General Services Office, Procurement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "End-user offices and departments of the city government",
+        "requirements": [
+          {
+            "item": "Approved documents for procurement",
+            "whereToSecure": "General Services Office"
+          },
+          { "item": "Other supporting documents", "whereToSecure": "General Services Office" }
+        ],
+        "steps": [
+          {
+            "client": "Present the approved documents for procurement and the supporting documents.",
+            "agency": "Indicates on the file documents that the transaction is completed.",
+            "feeText": "None",
+            "processingTime": "3 hours",
+            "personResponsible": "Administrative Assistant II / Reproduction and Machine Operator II, Procurement Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "3 hours" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "gso-letter-of-intent",
+        "number": 8,
+        "charterNumber": 8,
+        "charterGroup": "Procurement Services",
+        "title": "Filing a letter of intent as a prospective bidder",
+        "description": "A letter of intent formally declares that a party intends to do something needing action or acknowledgement from another, and usually comes before a binding document such as a contract.",
+        "office": "General Services Office, Procurement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Business (G2B)"],
+        "whoMayAvail": "Interested and prospective bidders",
+        "requirements": [
+          { "item": "Letter of intent", "whereToSecure": "Interested or prospective bidder" }
+        ],
+        "steps": [
+          {
+            "client": "Present the letter of intent.",
+            "agency": "Receives the letter of intent.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Senior Administrative Assistant II / Clerk IV, Procurement Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "30 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "gso-bac-queries",
+        "number": 9,
+        "charterNumber": 9,
+        "charterGroup": "Procurement Services",
+        "title": "Asking the Bids and Awards Committee a question",
+        "description": "Queries about the Bids and Awards Committee, which advertises invitations to bid, runs pre-procurement and pre-bid conferences, determines bidder eligibility, receives and evaluates bids, undertakes post-qualification, and recommends contract awards and sanctions under R.A. 9184.",
+        "office": "General Services Office, Procurement Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Business (G2B)"],
+        "whoMayAvail": "Prospective bidders and the general public",
+        "requirements": [{ "item": "Queries", "whereToSecure": "BAC Secretariat" }],
+        "steps": [
+          {
+            "client": "Present your queries about BAC concerns.",
+            "agency": "Receives the queries for immediate response.",
+            "feeText": "None",
+            "processingTime": "4 hours",
+            "personResponsible": "Senior Administrative Assistant II / Administrative Assistant II / Administrative Aide IV, Procurement Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "4 hours" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "gso-mayors-solicitation",
+        "number": 10,
+        "charterNumber": 10,
+        "charterGroup": "Procurement Services",
+        "title": "Following up a solicitation approved by the City Mayor",
+        "description": "A solicitation letter may ask for a donation, for business, or for the Mayor's presence at an occasion. Where the City Mayor approves a request for a donation, it comes to the General Services Office to be procured and released.",
+        "office": "General Services Office, Procurement Division",
+        "classification": "Highly Technical",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Business (G2B)"],
+        "whoMayAvail": "Anyone whose solicitation letter the City Mayor has approved",
+        "requirements": [
+          {
+            "item": "Letter request approved by the City Mayor, with the purchase request",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Approved purchase request, purchase order or requisition issue slip",
+            "whereToSecure": "General Services Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the letter request approved by the City Mayor with the purchase request, and the approved purchase request, purchase order or requisition issue slip.",
+            "agency": "Receives the letter request for the procurement process.",
+            "feeText": "None",
+            "processingTime": "40 minutes",
+            "personResponsible": "Administrative Aide III, Procurement Division"
+          },
+          {
+            "client": null,
+            "agency": "Provides the acknowledgement receipt, purchase order or requisition issue slip for the client's and the office's records.",
+            "feeText": "None",
+            "processingTime": "20 days",
+            "personResponsible": "Administrative Aide IV / RMO II, Procurement Division"
+          },
+          {
+            "client": "Receive the solicited items.",
+            "agency": "Releases the solicited items.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Administrative Aide IV / RMO II, Procurement Division"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "20 days 40 minutes" },
+        "notes": [
+          "At twenty days this is the longest service the office publishes, and the only one it classifies as highly technical."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The extraction shows the processing-time column as 40 minutes, 20 days, 20 days, 40 minutes against three agency actions. It is read as 40 minutes and 20 days for the first two actions, with the repeat being the TOTAL row, which reconciles. Check the PDF for whether the release step carries its own duration."
+        ]
+      },
+      {
+        "id": "gso-employee-clearance",
+        "number": 11,
+        "charterNumber": 1,
+        "charterGroup": "Administrative Services",
+        "title": "Getting a clearance when you leave city employment",
+        "description": "The clearance an employee needs when retiring, resigning, transferring to another office, going on official leave, or travelling abroad while still in government service. It clears you of the property and equipment you are accountable for, which has to be transferred, returned or condemned first.",
+        "office": "General Services Office, Administrative and Records Divisions",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "City government employees who are retiring, resigning, transferring or going on leave",
+        "requirements": [
+          {
+            "item": "Clearance form for retirement, resignation, transfer or leave",
+            "whereToSecure": "City Human Resource Management Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the clearance form for retirement, resignation, transfer or leave, and request the transfer, return or condemnation of property, plant and equipment if that applies.",
+            "agency": "Checks the accountabilities of the client.",
+            "feeText": "None",
+            "processingTime": "40 minutes",
+            "personResponsible": "Administrative Officer I / Administrative Aide IV / RMO II, Administrative and Records Divisions"
+          },
+          {
+            "client": null,
+            "agency": "Recommends the next steps to complete the clearance form, prepares the property acknowledgement receipt or inventory custodian slip for a transfer, prepares the form for returning items, prepares the inspection and inventory or report of waste materials for property, plant and equipment, and submits it initialled and dated to the department head for final signature.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Administrative Officer I / Administrative Aide IV / RMO II, Administrative and Records Divisions"
+          },
+          {
+            "client": "Have the clearance approved by your department head.",
+            "agency": "The department head signs the document and it is released to the client.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "City General Services Officer (CGDH I)"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "3 hours 40 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter numbers this service's agency actions from 2 to 9, with no action 1. The order is kept as printed."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-box-seam",
+    "categories": [
+      {
+        "id": "starting-a-procurement",
+        "title": "Starting a procurement",
+        "icon": "bi-file-earmark-plus",
+        "services": ["gso-purchase-request", "gso-philgeps-posting", "gso-rfq-abstract"]
+      },
+      {
+        "id": "ordering-and-delivery",
+        "title": "Ordering and delivery",
+        "icon": "bi-truck",
+        "services": ["gso-purchase-order", "gso-inspection-acceptance"]
+      },
+      {
+        "id": "closing-a-procurement",
+        "title": "Closing a procurement",
+        "icon": "bi-check2-square",
+        "services": ["gso-coa-receipt", "gso-procurement-clearance"]
+      },
+      {
+        "id": "for-suppliers-and-the-public",
+        "title": "For suppliers and the public",
+        "icon": "bi-people",
+        "services": ["gso-letter-of-intent", "gso-bac-queries", "gso-mayors-solicitation"]
+      },
+      {
+        "id": "for-city-employees",
+        "title": "For city employees",
+        "icon": "bi-person-badge",
+        "services": ["gso-employee-clearance"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "supplier-wanting-to-bid",
+        "title": "You want to supply the city",
+        "presentation": "rail",
+        "icon": "bi-briefcase",
+        "services": ["gso-letter-of-intent", "gso-bac-queries", "gso-rfq-abstract"]
+      },
+      {
+        "id": "leaving-city-employment",
+        "title": "You are retiring, resigning or transferring",
+        "presentation": "rail",
+        "icon": "bi-person-badge",
+        "services": ["gso-employee-clearance"]
+      },
+      {
+        "id": "mayor-approved-your-request",
+        "title": "The Mayor approved your solicitation",
+        "presentation": "rail",
+        "icon": "bi-gift",
+        "services": ["gso-mayors-solicitation"]
+      },
+      {
+        "id": "office-needs-supplies",
+        "title": "Your office needs supplies or equipment",
+        "presentation": "rail",
+        "icon": "bi-box-seam",
+        "services": ["gso-purchase-request", "gso-purchase-order", "gso-inspection-acceptance"]
+      }
+    ],
+    "searchAliases": {
+      "gso-purchase-request": [
+        "purchase request",
+        "pr",
+        "obligation request",
+        "obr",
+        "mode of procurement",
+        "bac"
+      ],
+      "gso-philgeps-posting": ["philgeps", "posting", "procurement portal", "bid posting"],
+      "gso-rfq-abstract": [
+        "rfq",
+        "request for quotation",
+        "canvass",
+        "abstract of canvass",
+        "quotation",
+        "supplier"
+      ],
+      "gso-purchase-order": ["purchase order", "po", "winning bidder", "delivery"],
+      "gso-inspection-acceptance": [
+        "iar",
+        "ris",
+        "par",
+        "ics",
+        "inspection",
+        "acceptance",
+        "delivery",
+        "supplies"
+      ],
+      "gso-coa-receipt": ["coa", "commission on audit", "coa receipt", "audit"],
+      "gso-procurement-clearance": ["clearance", "procurement clearance", "ra 9184", "completed"],
+      "gso-letter-of-intent": ["letter of intent", "loi", "bidder", "prospective supplier"],
+      "gso-bac-queries": ["bac", "bids and awards", "query", "bidding", "invitation to bid"],
+      "gso-mayors-solicitation": ["solicitation", "donation", "mayor", "ayuda", "request letter"],
+      "gso-employee-clearance": [
+        "clearance",
+        "retirement",
+        "resignation",
+        "transfer",
+        "leave",
+        "accountability",
+        "employee"
+      ]
+    },
+    "contact": null
+  }
+}
