@@ -1,0 +1,246 @@
+{
+  "slug": "pdao",
+  "route": "service-details/pdao-services.html",
+  "charter": {
+    "office": "Persons with Disability Affairs Office",
+    "abbreviation": "PDAO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-PDAO-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/pdao.md",
+    "personnel": [
+      {
+        "name": "Catalina Z. Maraña, RSW",
+        "position": "Disability Affairs Officer II",
+        "unit": "Persons with Disability Affairs Office",
+        "isHead": true
+      },
+      {
+        "name": "Jennifer M. Arao",
+        "position": "Disability Affairs Assistant",
+        "unit": "Persons with Disability Affairs Office"
+      },
+      {
+        "name": "Ahlmy Joy N. Armario",
+        "position": "Encoder (Job Order)",
+        "unit": "Persons with Disability Affairs Office"
+      },
+      {
+        "name": "Crisanta Daet",
+        "position": "Staff (Job Order)",
+        "unit": "Persons with Disability Affairs Office"
+      },
+      {
+        "name": "Florenda D. Azupardo",
+        "position": "Staff (Job Order)",
+        "unit": "Persons with Disability Affairs Office"
+      }
+    ],
+    "personnelNotes": [
+      "PDAO is published under the City Mayor's Office. Its charter names its staff in the process table itself, including job order staff."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Answer the Client's Satisfaction Survey Form and put it in the folder or envelope provided. You can also text, email or call the office on 0923-726-5010 or 0917-777-9695.",
+      "howFeedbackIsProcessed": "Every 4:30pm the job order staff compile the forms and submit them to the Disability Affairs Officer II. Feedback needing an answer goes to the division or section concerned, which must reply within three days of receipt, and the office's answer is relayed to the client. Complaints by phone or online message are acknowledged, logged, checked for the identity of the complainant, analysed and acted on, and the client is told what was done by text, email or letter. Anything beyond the office's authority is forwarded to the head of office. Complaints written on the survey form are opened daily, passed to the Disability Affairs Officer II or Administrative Officer IV, investigated with the section concerned, written up in a report for HR, and the outcome given back to the client.",
+      "contacts": ["pdaocmolegazpicity@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "pdao-pwd-id",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a PWD ID, medicine booklet and purchase booklet",
+        "description": "The PWD identification card and the medicine and purchase booklets that let a person with disability claim the discounts and privileges under Republic Act 9442. You or your representative have to present the ID and booklet to get the discount, and this office issues all three. The same process covers a renewal and a replacement for a lost card.",
+        "office": "Persons with Disability Affairs Office (PDAO)",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Residents only",
+        "requirements": [
+          {
+            "item": "Medical certificate of non-apparent disability, certified by a doctor or specialist",
+            "whereToSecure": "Doctor"
+          },
+          {
+            "item": "Certificate of apparent disability. Attach a whole-body picture showing the disability if the person cannot appear in person",
+            "whereToSecure": "Processing Officer, PDAO"
+          },
+          {
+            "item": "PWD ID application form, printed or downloaded from the DOH Philippine Registry for Persons with Disability, latest version",
+            "whereToSecure": "Persons with Disability Affairs Office"
+          },
+          { "item": "Barangay certificate of residency", "whereToSecure": "Barangay" },
+          {
+            "item": "Birth certificate",
+            "whereToSecure": "Philippine Statistics Authority or the Local Civil Registrar"
+          },
+          {
+            "item": "Valid government ID. A school ID is accepted for a minor applicant",
+            "whereToSecure": "PhilHealth, COMELEC, GSIS, SSS, LTO, Pag-IBIG, Post Office, PSA, DSWD, barangay, school or Local Civil Registrar"
+          },
+          {
+            "item": "Two recent 1x1 ID pictures and two recent 2x2 ID pictures",
+            "whereToSecure": "Photo centre"
+          },
+          {
+            "item": "If a guardian is applying: proof of guardianship from the barangay. If a representative: a notarized authorization letter",
+            "whereToSecure": "Barangay, or a notary public"
+          },
+          {
+            "item": "For a renewal: the application form with the Renewal box ticked, one 1x1 ID picture, and the expired PWD ID surrendered",
+            "whereToSecure": "PDAO and photo centre"
+          },
+          {
+            "item": "For a lost ID or booklet: an affidavit of loss, and 1x1 or 2x2 ID pictures",
+            "whereToSecure": "Attorney, and photo centre"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements, including the medical certificate of non-apparent disability.",
+            "agency": "The Processing Officer reviews the submitted documents.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Disability Affairs Officer II / Disability Affairs Assistant"
+          },
+          {
+            "client": null,
+            "agency": "Certifies the certificate of apparent disability.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Disability Affairs Officer II / Disability Affairs Assistant"
+          },
+          {
+            "client": "Submit the accomplished application form with your ID pictures.",
+            "agency": "The Processing Officer reviews the filled-out application form for discrepancies.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Disability Affairs Officer II / Disability Affairs Assistant"
+          },
+          {
+            "client": "Submit the barangay certificate of residency, birth certificate and valid ID, and the proof of guardianship or authorization letter if someone is applying for you.",
+            "agency": "Counter-checks that the data in the application form is correct.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Disability Affairs Officer II / Disability Affairs Assistant"
+          },
+          {
+            "client": "Wait while your form and documents are checked.",
+            "agency": "Reviews the application form and the submitted documents. If there are discrepancies the documents are returned to you; otherwise they go to the encoder.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Disability Affairs Officer II / Disability Affairs Assistant"
+          },
+          {
+            "client": "Wait for your PWD ID number to be assigned.",
+            "agency": "Checks the records and encodes the application in the DOH online Philippine Registry for Persons with Disabilities.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Encoder"
+          },
+          {
+            "client": null,
+            "agency": "With no discrepancies, the encoder assigns a PWD ID number.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Disability Affairs Officer II"
+          },
+          {
+            "client": null,
+            "agency": "If you are found to be registered in another municipality or city and that ID is still valid, the Processing Officer advises you what to do.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Disability Affairs Assistant"
+          },
+          {
+            "client": null,
+            "agency": "Types the basic information into the PWD ID and the medicine and purchase booklets.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Staff (Job Order)"
+          },
+          {
+            "client": null,
+            "agency": "Double-checks the data and forwards the PWD ID and the booklets to the City Mayor's Office for signature.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Disability Affairs Assistant"
+          },
+          {
+            "client": "Check that the information is correct, and ask for it to be changed if anything is wrong.",
+            "agency": "Once the Mayor has signed, tells you to claim the PWD ID and the booklets. Any error is corrected.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Disability Affairs Officer II / Disability Affairs Assistant"
+          },
+          {
+            "client": "Claim the PWD ID and the medicine and purchase booklets, and sign the logbook.",
+            "agency": "Issues the PWD ID and the booklets to you or your authorized representative and explains the law.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "Disability Affairs Officer II / Disability Affairs Assistant"
+          },
+          {
+            "client": "Make sure the ID and the booklets are signed before lamination. Lamination is your choice.",
+            "agency": "Laminates the PWD ID if you ask for it.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Staff (Job Order)"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "1 hour and 13 minutes" },
+        "notes": [
+          "The ID and both booklets are free.",
+          "Get the ID and booklets signed before they are laminated. Lamination itself is optional."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter runs application, renewal and replacement of a lost ID through one process table, with the renewal and lost-ID requirements listed as extra client steps rather than as separate services. Recorded as one service, as printed.",
+          "The charter's client column numbers its items 1.1 to 1.13 and the agency column numbers separately, so the pairing between the two columns is an inference in places. The derived total reconciles exactly with the charter's own 1 hour and 13 minutes.",
+          "One agency action, informing the client after the Mayor signs, carries no processing time in the charter."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-person-wheelchair",
+    "categories": [
+      {
+        "id": "pwd-id",
+        "title": "PWD ID and booklets",
+        "icon": "bi-person-vcard",
+        "services": ["pdao-pwd-id"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "first-pwd-id",
+        "title": "You are applying for a PWD ID",
+        "presentation": "rail",
+        "icon": "bi-person-vcard",
+        "services": ["pdao-pwd-id"]
+      },
+      {
+        "id": "renew-or-replace",
+        "title": "Your PWD ID expired or was lost",
+        "presentation": "rail",
+        "icon": "bi-arrow-repeat",
+        "services": ["pdao-pwd-id"]
+      }
+    ],
+    "searchAliases": {
+      "pdao-pwd-id": [
+        "pwd",
+        "pwd id",
+        "disability",
+        "may kapansanan",
+        "purchase booklet",
+        "medicine booklet",
+        "ra 9442",
+        "discount",
+        "senior discount",
+        "pdao"
+      ]
+    },
+    "contact": null
+  }
+}

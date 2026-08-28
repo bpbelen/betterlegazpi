@@ -1,0 +1,550 @@
+{
+  "slug": "peso",
+  "route": "service-details/peso-services.html",
+  "charter": {
+    "office": "Public Employment Service Office",
+    "abbreviation": "PESO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/PUBLIC-EMPLOYMENT-SERVICE-OFFICE-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/peso.md",
+    "personnel": [
+      {
+        "name": "Diosdado R. Rañeses",
+        "position": "CGDH I, PESO Manager",
+        "unit": "Public Employment Service Office",
+        "isHead": true
+      }
+    ],
+    "personnelNotes": [
+      "The charter names only the PESO Manager. Its process tables identify everyone else by position, including job order and contract of service staff."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Feedback and complaints may be filed with PESO Legazpi on the 3rd floor of SM City Legazpi, by mobile on 0927 532 3801, or by email.",
+      "contacts": ["peso.leg@legazpi.gov.ph"]
+    },
+    "services": [
+      {
+        "id": "peso-jobseekers",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Looking for work",
+        "description": "Register as a jobseeker, see what vacancies the office holds, and get referred to an employer. The office keeps a catalogue of vacancies from partner employers and can also point you at technical and vocational training.",
+        "office": "Public Employment Service Office",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Jobseekers",
+        "requirements": [
+          { "item": "Resume", "whereToSecure": "Hand carried by the applicant" },
+          { "item": "NSRP Form 1", "whereToSecure": "PESO front desk" }
+        ],
+        "steps": [
+          {
+            "client": "Submit your resume, ask to see the available job vacancies, and request a job referral.",
+            "agency": "Registers you and issues the National Skills Registration Program form (NSRP Form 1).",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Accepts the resume and collects the accomplished NSRP Form 1.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Assesses and evaluates the documents for completeness of the data required in the form.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "If you are only asking for the list of available vacancies, presents the PESO job vacancies catalogue.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "For job matching or referral, interviews the qualified applicant and suggests vacancies from partner employers or technical and vocational institutions.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Supervising Labor and Employment Officer / Labor and Employment Officer III"
+          },
+          {
+            "client": "Receive the referral slip.",
+            "agency": "Issues the referral slip.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Supervising Labor and Employment Officer / Labor and Employment Officer III"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": ["Every PESO service is free."],
+        "verified": false,
+        "verifyNotes": [
+          "This charter prints no TOTAL row for any of its services, so every total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "peso-employers",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "Frontline Services",
+        "title": "Hiring through PESO as an employer",
+        "description": "Accreditation for a local or overseas employer or agency wanting to use PESO Legazpi, and the follow-on services once accredited: browsing resumes, posting jobs, and scheduling a local or overseas recruitment activity.",
+        "office": "Public Employment Service Office",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Employers",
+        "requirements": [
+          {
+            "item": "PESO checklist of requirements for local and overseas employers",
+            "whereToSecure": "PESO front desk"
+          },
+          { "item": "NSRP Form 2", "whereToSecure": "PESO front desk" },
+          {
+            "item": "Letter of intent, for resume browsing, job posting or a recruitment activity",
+            "whereToSecure": "Employer"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Request accreditation for a new agency or employer to access PESO Legazpi services.",
+            "agency": "Registers you and issues the National Skills Registration Program form (NSRP Form 2).",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Collects the accomplished NSRP Form 2.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Issues the list of requirements.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": "Submit the requirements for accreditation.",
+            "agency": "Registers the submission.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Assesses and evaluates the documents for completeness of requirements.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Assists you based on your request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": "Request resume browsing, job posting, or the scheduling of a local or overseas recruitment activity.",
+            "agency": "Registers the request.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Officer III / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Collects the letter of intent and evaluates the request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Officer III / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Verifies whether you have already submitted your complete requirements.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Officer III / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "If you have no requirements yet, or the documents you submitted have expired, gives you the list of documents needed.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Officer III / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Assists you based on your request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Officer III / Admin Aide I or IV"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "The charter runs accreditation and the services that follow it as one block, so the total covers a first-time employer going all the way through."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The extraction interleaves the processing-time column badly in the middle of this service, stacking four values before the client steps they belong to. The attribution recorded here is an inference and must be checked against the PDF."
+        ]
+      },
+      {
+        "id": "peso-ofw-help-desk",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "OFW help desk",
+        "description": "Help for returning overseas Filipino workers and displaced workers, including referral to the agency or programme that handles your concern.",
+        "office": "Public Employment Service Office",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Returning overseas Filipino workers and displaced workers",
+        "requirements": [
+          {
+            "item": "Official documents relating to your concern",
+            "whereToSecure": "Hand carried by the client"
+          },
+          {
+            "item": "Any other documents pertaining to your concern",
+            "whereToSecure": "Hand carried by the client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Ask for information or assistance on an OFW concern or programme.",
+            "agency": "Registers you.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide IV"
+          },
+          {
+            "client": null,
+            "agency": "Assists you based on your request.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Labor and Employment Officer III or I"
+          },
+          {
+            "client": "Receive the referral.",
+            "agency": "Issues a referral or assists you to the proper agency or programme.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "PESO Manager / Labor and Employment Officer III or I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "peso-spes",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "Frontline Services",
+        "title": "Special Program for the Employment of Students (SPES)",
+        "description": "The DOLE programme that puts students and out-of-school youth into paid work. PESO checks your papers and forwards qualified applicants to DOLE for final approval.",
+        "office": "Public Employment Service Office",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Students and out-of-school youth",
+        "requirements": [
+          {
+            "item": "Photocopy of the birth certificate",
+            "whereToSecure": "Hand carried by the client"
+          },
+          {
+            "item": "Parents' income tax return or BIR tax exemption if they are employed, or a barangay indigency certificate if they are not",
+            "whereToSecure": "Hand carried by the client"
+          },
+          { "item": "Certificate of grades", "whereToSecure": "Hand carried by the client" },
+          { "item": "Two 2x2 pictures", "whereToSecure": "Hand carried by the client" },
+          {
+            "item": "Certification from the barangay or the CSWD if you are an out-of-school youth",
+            "whereToSecure": "Hand carried by the client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Apply for the SPES programme.",
+            "agency": "Registers you.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant"
+          },
+          {
+            "client": null,
+            "agency": "Assesses and evaluates the documents for completeness of requirements.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Labor and Employment Assistant / Labor and Employment Officer III or I"
+          },
+          {
+            "client": null,
+            "agency": "If you qualify and your documents are complete, processes the application and includes you in the list of qualified beneficiaries submitted to DOLE for final approval.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Officer III or I / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "If you do not qualify or your documents are incomplete, notifies you so you can act on it.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Officer III or I / Admin Aide IV"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "PESO's part is the screening. The final approval is DOLE's, and the charter puts no time on it."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "peso-jobstart",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "Frontline Services",
+        "title": "JobStart Philippines Program",
+        "description": "The DOLE programme giving young people life skills training, technical training and a paid internship. PESO screens applicants and forwards the qualified to DOLE.",
+        "office": "Public Employment Service Office",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Students and out-of-school youth",
+        "requirements": [
+          {
+            "item": "Photocopy of the birth certificate",
+            "whereToSecure": "Hand carried by the client"
+          },
+          { "item": "Barangay certificate", "whereToSecure": "Hand carried by the client" },
+          { "item": "Certificate of grades", "whereToSecure": "Hand carried by the client" },
+          { "item": "At least a high school graduate", "whereToSecure": "Client" }
+        ],
+        "steps": [
+          {
+            "client": "Apply for the JobStart Philippines programme.",
+            "agency": "Registers you.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Assesses and evaluates the documents for completeness of requirements.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "PESO Manager / Labor and Employment Officer III / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "If you qualify and your documents are complete, processes the application and includes you in the list of qualified beneficiaries submitted to DOLE for final approval.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "PESO Manager / Labor and Employment Officer III / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "If you do not qualify or your documents are incomplete, notifies you so you can act on it.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Officer III / Admin Aide I or IV"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "PESO's part is the screening. The final approval is DOLE's, and the charter puts no time on it."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "peso-dole-grant-programs",
+        "number": 6,
+        "charterNumber": 6,
+        "charterGroup": "Frontline Services",
+        "title": "Other DOLE grant-based programmes (TUPAD, GIP, DILEEP)",
+        "description": "Grant-based DOLE programmes such as TUPAD emergency employment, the Government Internship Program and DILEEP livelihood assistance. Slots are limited: if you qualify you are given a form and a list of requirements to bring back the next day, or the slot passes to the next qualified applicant.",
+        "office": "Public Employment Service Office",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Qualified beneficiaries, depending on the programme (TUPAD, GIP, DILEEP and others)",
+        "requirements": [
+          {
+            "item": "At least one valid ID, or a barangay certification",
+            "whereToSecure": "Hand carried by the client"
+          },
+          {
+            "item": "Other requirements to follow, depending on which programmes are running",
+            "whereToSecure": "PESO"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Apply for a DOLE grant-based programme.",
+            "agency": "Registers you.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Labor and Employment Assistant / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "Conducts an initial interview and assessment of your qualifications.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Labor and Employment Officer III / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "If you qualify, gives you the form and the list of requirements to submit the following day. If they are not submitted, the slot goes to the next qualified applicant.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Officer III / Admin Aide I or IV"
+          },
+          {
+            "client": null,
+            "agency": "If you do not qualify, notifies you so you can act on it.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Labor and Employment Officer III / Admin Aide I or IV"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "Bring your requirements back the next day. The charter is explicit that an unclaimed slot passes to the next qualified applicant."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "Which programmes are open changes over time. The charter names TUPAD, GIP and DILEEP followed by \"etc.\", so this list is not exhaustive."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-person-workspace",
+    "categories": [
+      {
+        "id": "finding-work",
+        "title": "Finding work",
+        "icon": "bi-search",
+        "services": ["peso-jobseekers", "peso-ofw-help-desk"]
+      },
+      {
+        "id": "programmes-for-young-people",
+        "title": "Programmes for students and youth",
+        "icon": "bi-mortarboard",
+        "services": ["peso-spes", "peso-jobstart"]
+      },
+      {
+        "id": "livelihood-grants",
+        "title": "Livelihood and grant programmes",
+        "icon": "bi-cash-stack",
+        "services": ["peso-dole-grant-programs"]
+      },
+      {
+        "id": "for-employers",
+        "title": "For employers",
+        "icon": "bi-building",
+        "services": ["peso-employers"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "looking-for-a-job",
+        "title": "You are looking for a job",
+        "presentation": "rail",
+        "icon": "bi-search",
+        "services": ["peso-jobseekers", "peso-dole-grant-programs"]
+      },
+      {
+        "id": "student-or-out-of-school",
+        "title": "You are a student or out of school",
+        "presentation": "rail",
+        "icon": "bi-mortarboard",
+        "services": ["peso-spes", "peso-jobstart"]
+      },
+      {
+        "id": "came-home-from-abroad",
+        "title": "You came home from working abroad",
+        "presentation": "rail",
+        "icon": "bi-airplane",
+        "services": ["peso-ofw-help-desk"]
+      },
+      {
+        "id": "you-are-hiring",
+        "title": "You are hiring",
+        "presentation": "rail",
+        "icon": "bi-building",
+        "services": ["peso-employers"]
+      }
+    ],
+    "searchAliases": {
+      "peso-jobseekers": [
+        "job",
+        "trabaho",
+        "hanap trabaho",
+        "vacancies",
+        "referral",
+        "nsrp",
+        "resume",
+        "employment"
+      ],
+      "peso-employers": [
+        "employer",
+        "hiring",
+        "job posting",
+        "recruitment",
+        "accreditation",
+        "agency",
+        "manpower"
+      ],
+      "peso-ofw-help-desk": [
+        "ofw",
+        "overseas",
+        "balikbayan",
+        "displaced worker",
+        "help desk",
+        "abroad"
+      ],
+      "peso-spes": [
+        "spes",
+        "student employment",
+        "summer job",
+        "estudyante",
+        "out of school youth",
+        "osy"
+      ],
+      "peso-jobstart": ["jobstart", "internship", "youth", "training", "life skills"],
+      "peso-dole-grant-programs": [
+        "tupad",
+        "gip",
+        "dileep",
+        "dole",
+        "livelihood",
+        "ayuda",
+        "grant",
+        "emergency employment"
+      ]
+    },
+    "contact": null
+  }
+}

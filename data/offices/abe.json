@@ -1,0 +1,267 @@
+{
+  "slug": "abe",
+  "route": "service-details/abe-services.html",
+  "charter": {
+    "office": "Agricultural and Biosystems Engineering Division",
+    "abbreviation": "ABE",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-ABE.pdf",
+    "transcript": "docs/sources/citizens-charter/abe.md",
+    "personnel": [
+      {
+        "name": "Engr. Ryan De Real",
+        "position": "Engineer II",
+        "unit": "Agricultural and Biosystems Engineering Division",
+        "isHead": true
+      },
+      {
+        "name": "Engr. C. Villaraza",
+        "position": "Engineer I",
+        "unit": "Agricultural and Biosystems Engineering Division"
+      },
+      {
+        "name": "Mr. Brian Penillos",
+        "position": "Farm Machine Operator",
+        "unit": "Agricultural and Biosystems Engineering Division"
+      }
+    ],
+    "personnelNotes": [
+      "ABE is published under the City Mayor's Office. Its charter is shorter than the ARTA format the other offices use: it gives who may avail, requirements, client steps, agency action, fees and responsible personnel, but no office or division, classification or transaction type."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Feedback and complaints may be filed with the ABE Division at Gogon, Legazpi City, by mobile on 0927 720 0359, or by email.",
+      "howFeedbackIsProcessed": "The division's performance pledge, integrated into the city's broader charter, is to serve farmers and fisherfolk by applying engineering principles to improve agriculture, food production, natural resources and environmental management.",
+      "contacts": ["abe.cmo.legazpi@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "abe-technical-assistance",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Getting advice on farm structures, machines or irrigation",
+        "description": "Engineering advice for farmers on farm structures, mechanization and irrigation, including a field visit and ocular inspection of your site.",
+        "office": "Agricultural and Biosystems Engineering Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Registered farmers, and registered farmers' associations and cooperatives",
+        "requirements": [{ "item": "Letter request", "whereToSecure": "Client" }],
+        "steps": [
+          {
+            "client": "Submit a letter request.",
+            "agency": "Receives and records the original letter request, refers you to the ABE staff concerned, and conducts a field visit and ocular inspection so you can be advised properly.",
+            "feeText": "None",
+            "processingTime": "2 working days",
+            "personResponsible": "Engineer II / Engineer I"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "Maximum of two (2) working days"
+        },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "This charter gives one processing time for the whole service and does not break its agency column into numbered actions, so all three actions are recorded as one step.",
+          "The charter states its processing time as a maximum. The derived total is that same figure and should be read the same way.",
+          "The charter gives no classification or transaction type. Both are inferred here from the service itself and must be checked."
+        ]
+      },
+      {
+        "id": "abe-machinery-service",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "Frontline Services",
+        "title": "Borrowing pre and postharvest machinery",
+        "description": "The city's pre and postharvest machinery sent out to your area, with an operator. The service itself is free but you supply the fuel the machine runs on.",
+        "office": "Agricultural and Biosystems Engineering Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Registered farmers, registered farmers' associations and cooperatives, schools, and government offices",
+        "requirements": [
+          {
+            "item": "Filled-out machinery dispatch slip form",
+            "whereToSecure": "Agricultural and Biosystems Engineering Division"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements, then accompany the ABE staff to your area.",
+            "agency": "Checks and records the filled-out machinery dispatch slip form, conducts a site inspection to see whether machinery service is possible in the area, schedules the date of the machinery service operation, and asks you to fill up the client satisfaction feedback form.",
+            "feeText": "None, but the client is advised to provide the required gasoline or diesel for the actual machinery operation",
+            "processingTime": "2 working days",
+            "personResponsible": "Engineer II / Engineer I / Farm Machine Operator"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "Maximum of two (2) working days"
+        },
+        "notes": [
+          "There is no fee, but you have to provide the gasoline or diesel the machine uses."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; all agency actions recorded as one step.",
+          "The charter gives no classification or transaction type. Both are inferred here."
+        ]
+      },
+      {
+        "id": "abe-machinery-registration",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Registering farm or fishery machinery",
+        "description": "Registration of agricultural and fishery machinery and equipment. You get a Certificate of Agricultural and Fisheries Machinery and Equipment Registration approved by the City Mayor, and a registration sticker with a QR code.",
+        "office": "Agricultural and Biosystems Engineering Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "All owners of agricultural and fisheries machinery and equipment, whether an individual farmer or fisherfolk or a registered farmers' association or cooperative",
+        "requirements": [
+          {
+            "item": "Prescribed registration application form",
+            "whereToSecure": "Agricultural and Biosystems Engineering Division"
+          },
+          { "item": "Proof of ownership", "whereToSecure": "Client" },
+          {
+            "item": "Barangay-issued certificate of location or address of the machinery owner",
+            "whereToSecure": "Barangay"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements, then pay the registration fee.",
+            "agency": "Verifies compliance and processes the application, refers you to the City Treasurer's Office to pay the registration fee, recommends issuance of the Certificate of Agricultural and Fisheries Machinery and Equipment Registration for the City Mayor's approval, and issues the registration sticker with a QR code.",
+            "feeText": "Registration fee of 300 pesos per machinery or equipment",
+            "feeTiers": [
+              {
+                "label": "Registration, per machine or equipment",
+                "amount": 300,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": "3 working days",
+            "personResponsible": "Engineer II / Engineer I"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "300 pesos per machinery or equipment",
+          "processingTime": "Maximum of Three (3) working days"
+        },
+        "notes": ["The 300-peso fee is charged for each machine or piece of equipment."],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; all agency actions recorded as one step.",
+          "The charter gives no classification or transaction type. Both are inferred here."
+        ]
+      },
+      {
+        "id": "abe-training",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "Frontline Services",
+        "title": "Requesting a training or seminar on farm machinery",
+        "description": "A meeting, training or seminar on mechanization and facility operations, arranged for a farmers' group, barangay or school. At five minutes this is the quickest thing the division publishes: it is the arranging, not the event.",
+        "office": "Agricultural and Biosystems Engineering Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Registered farmers and fisherfolk, registered farmers' and fisherfolk's associations and cooperatives, barangays, and schools",
+        "requirements": [{ "item": "Letter request", "whereToSecure": "Client" }],
+        "steps": [
+          {
+            "client": "Submit a letter request.",
+            "agency": "Records the letter request, discusses the details of the meeting, training or seminar with you, and schedules its date and venue.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Engineer II / Engineer I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "Maximum of five (5) minutes" },
+        "notes": [
+          "The five minutes covers arranging the session. The training itself is scheduled for a later date."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; all agency actions recorded as one step.",
+          "The charter gives no classification or transaction type. Both are inferred here."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-tractor",
+    "categories": [
+      {
+        "id": "machinery",
+        "title": "Farm machinery",
+        "icon": "bi-gear-wide-connected",
+        "services": ["abe-machinery-service", "abe-machinery-registration"]
+      },
+      {
+        "id": "advice-and-training",
+        "title": "Advice and training",
+        "icon": "bi-mortarboard",
+        "services": ["abe-technical-assistance", "abe-training"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "need-a-machine",
+        "title": "You need a machine for your farm",
+        "presentation": "rail",
+        "icon": "bi-gear-wide-connected",
+        "services": ["abe-machinery-service"]
+      },
+      {
+        "id": "own-a-machine",
+        "title": "You own farm or fishery machinery",
+        "presentation": "rail",
+        "icon": "bi-patch-check",
+        "services": ["abe-machinery-registration"]
+      },
+      {
+        "id": "building-on-the-farm",
+        "title": "You are building or irrigating on the farm",
+        "presentation": "rail",
+        "icon": "bi-water",
+        "services": ["abe-technical-assistance"]
+      },
+      {
+        "id": "training-for-a-group",
+        "title": "Your group wants training",
+        "presentation": "rail",
+        "icon": "bi-mortarboard",
+        "services": ["abe-training"]
+      }
+    ],
+    "searchAliases": {
+      "abe-technical-assistance": [
+        "farm structure",
+        "irrigation",
+        "patubig",
+        "mechanization",
+        "technical assistance",
+        "engineering advice"
+      ],
+      "abe-machinery-service": [
+        "machinery",
+        "makina",
+        "tractor",
+        "harvester",
+        "thresher",
+        "dispatch slip",
+        "postharvest"
+      ],
+      "abe-machinery-registration": [
+        "registration",
+        "cafmer",
+        "machinery registration",
+        "qr sticker",
+        "rehistro",
+        "fishery machinery"
+      ],
+      "abe-training": ["training", "seminar", "meeting", "mechanization", "pagsasanay"]
+    },
+    "contact": null
+  }
+}

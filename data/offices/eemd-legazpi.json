@@ -1,0 +1,491 @@
+{
+  "slug": "eemd-legazpi",
+  "route": "service-details/eemd-legazpi-public-market.html",
+  "charter": {
+    "office": "Economic Enterprise Management Division, Legazpi Public Market",
+    "abbreviation": "EEMD Legazpi",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-ECONOMIC-AND-ENTERPRISE-AND-MANAGEMENT-DIVISION-LEGAZPI-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/eemd-legazpi.md",
+    "personnel": [
+      {
+        "name": "Mr. Ronald H. Pasano",
+        "position": "Local Operations Officer IV, Legazpi Market Administrator",
+        "unit": "Legazpi City Public Market Office",
+        "isHead": true
+      }
+    ],
+    "personnelNotes": [
+      "The Economic Enterprise Management Division is published under the City Mayor's Office and issues a separate charter for each market it runs. This one covers the Legazpi Public Market. It names only the Market Administrator; its process tables identify everyone else by role."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Submit a written complaint to the Public Market Office, or use the hotline or email.",
+      "howFeedbackIsProcessed": "A complaint is acknowledged within three working days and acted on accordingly.",
+      "contacts": []
+    },
+    "services": [
+      {
+        "id": "eemd-legazpi-new-stall-lease",
+        "number": 1,
+        "charterNumber": 4,
+        "charterGroup": "External Services",
+        "title": "Applying for a new stall lease",
+        "description": "Applying for a stall at the Legazpi Public Market if you do not already hold one. The application goes to the Market Committee, and where more than one person applies for the same stall it is decided by raffle. At roughly twenty-one working days this is much the longest service the market publishes.",
+        "office": "Legazpi City Public Market Office / Economic Enterprise Management Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Qualified applicants with no existing lease",
+        "requirements": [
+          {
+            "item": "Letter of intent, or an accomplished application form",
+            "whereToSecure": "Legazpi City Public Market Office"
+          },
+          {
+            "item": "Valid government-issued ID, photocopy",
+            "whereToSecure": "Government or private sector"
+          },
+          { "item": "Latest barangay clearance", "whereToSecure": "Barangay" },
+          { "item": "2x2 photo", "whereToSecure": "Client" }
+        ],
+        "steps": [
+          {
+            "client": "Submit the application and the requirements.",
+            "agency": "Receives and records the application.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Market Staff"
+          },
+          {
+            "client": "The application is endorsed for review.",
+            "agency": "Conducts an initial review of the documents and forwards them to the Market Committee.",
+            "feeText": "None",
+            "processingTime": "1-2 working days",
+            "personResponsible": "Market Administrator"
+          },
+          {
+            "client": "Your eligibility is screened and validated.",
+            "agency": "Evaluates the applications. Where there is more than one applicant, conducts a raffle.",
+            "feeText": "None",
+            "processingTime": "within the day",
+            "personResponsible": "Market Committee"
+          },
+          {
+            "client": "The stall is approved and awarded.",
+            "agency": "Issues the notice of award to the raffle winner or the qualified applicant.",
+            "feeText": "None",
+            "processingTime": "10-15 working days",
+            "personResponsible": "Market Administrator / Market Committee"
+          },
+          {
+            "client": "Pay the lease fee and goodwill.",
+            "agency": "Issues the official receipt.",
+            "feeText": "As per approved rates",
+            "processingTime": "5 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Sign the contract.",
+            "agency": "Records and releases the contract copy.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Market Administrator"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "21 working days & 20 minutes"
+        },
+        "notes": [
+          "Where more than one person applies for the same stall, it is decided by raffle."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's own total of 21 working days and 20 minutes does not reconcile with the durations it prints, however the ranges are read. The steps recorded here come to 18 days and 35 minutes at their upper bounds, and one step reads only \"within the day\", which the arithmetic cannot count. Check the PDF.",
+          "The charter's client and agency columns are offset against each other on this page, so the pairing of client steps to agency actions is an inference.",
+          "The charter's person-responsible column contains a stray \"Responsible3\" heading artefact."
+        ]
+      },
+      {
+        "id": "eemd-legazpi-renew-stall-lease",
+        "number": 2,
+        "charterNumber": 3,
+        "charterGroup": "External Services",
+        "title": "Renewing a stall lease",
+        "description": "Renewing an existing stall lease at the Legazpi Public Market.",
+        "office": "Legazpi City Public Market Office / Economic Enterprise Management Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Existing stallholders with a valid lease contract",
+        "requirements": [
+          {
+            "item": "Valid government-issued ID, photocopy",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "Official receipt of payment for the last rental",
+            "whereToSecure": "Legazpi City Public Market Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements.",
+            "agency": "Verifies the documents.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Market Staff"
+          },
+          {
+            "client": "Pay the lease renewal fee.",
+            "agency": "Issues the official receipt.",
+            "feeText": "As per approved rates",
+            "processingTime": "5 minutes",
+            "personResponsible": "Cashier"
+          },
+          {
+            "client": "Sign the renewal contract.",
+            "agency": "Records and releases the contract copy.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Market Administrator"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "30 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's column order on this page puts Person Responsible before Processing Time and Fees, unlike its other services. The values are recorded in their proper fields."
+        ]
+      },
+      {
+        "id": "eemd-legazpi-market-clearance",
+        "number": 3,
+        "charterNumber": 2,
+        "charterGroup": "External Services",
+        "title": "Getting a market clearance",
+        "description": "The clearance a stallholder needs for a renewal, a transfer, a termination or any other official purpose. You have to settle any unpaid obligations first.",
+        "office": "Legazpi City Public Market Office",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Market stallholders needing a clearance for renewal, transfer, termination or other official purposes",
+        "requirements": [
+          {
+            "item": "Valid government-issued ID",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "Clearance of financial obligations, meaning the official receipt",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit your request for a market clearance.",
+            "agency": "Receives and reviews the documents.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Market Office Personnel"
+          },
+          {
+            "client": "Settle any unpaid obligations.",
+            "agency": "Issues the statement of account and accepts payment.",
+            "feeText": "Based on arrears",
+            "processingTime": "10 minutes",
+            "personResponsible": "City Treasurer's Office"
+          },
+          {
+            "client": "Claim the market clearance certificate.",
+            "agency": "Prepares and releases the clearance.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Market Administrator"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "20 minutes" },
+        "notes": [
+          "What you pay depends on what you owe. The charter puts no figure on it because it is your own arrears."
+        ],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "eemd-legazpi-terminate-lease",
+        "number": 4,
+        "charterNumber": 1,
+        "charterGroup": "External Services",
+        "title": "Ending a stall lease",
+        "description": "Terminating or cancelling a stall lease at the Legazpi Public Market. You settle any arrears, then surrender the stall and its keys.",
+        "office": "Legazpi City Public Market Office",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Registered market stallholders who wish to terminate their lease",
+        "requirements": [
+          {
+            "item": "Formal letter of request for termination addressed to the City Market Administrator",
+            "whereToSecure": "Client"
+          },
+          { "item": "Photocopy of the lease contract", "whereToSecure": "Client" },
+          {
+            "item": "Valid government-issued ID",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "Clearance of outstanding financial obligations, if any",
+            "whereToSecure": "City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter request and the required documents.",
+            "agency": "Receives and reviews the documents.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Market Office Personnel"
+          },
+          {
+            "client": "Settle any unpaid rental or arrears.",
+            "agency": "Issues the statement of account and accepts payment.",
+            "feeText": "Based on arrears",
+            "processingTime": "10 minutes",
+            "personResponsible": "City Treasurer's Office"
+          },
+          {
+            "client": "Surrender the stall and its keys.",
+            "agency": "Conducts the inspection and accepts the turnover.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Market Officer-in-Charge"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "45 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The steps read here sum to 30 minutes against the charter's stated total of 45 minutes, a gap of fifteen. Check the PDF for a missing row."
+        ]
+      },
+      {
+        "id": "eemd-legazpi-promotional-sales",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "External Services",
+        "title": "Getting a permit for a promotional sale",
+        "description": "A permit for an accredited business or corporation to run a promotional sale in the market for a day or several days.",
+        "office": "Legazpi City Public Market Office / Economic Enterprise Management Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Accredited or registered business establishments and corporations",
+        "requirements": [
+          {
+            "item": "Letter of request addressed to the Market Administrator",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Valid stall lease contract",
+            "whereToSecure": "Legazpi City Public Market Office"
+          },
+          { "item": "Proposed dates of the promotional sale", "whereToSecure": "Client" }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request letter with the requirements.",
+            "agency": "Receives and logs the application.",
+            "feeText": "None",
+            "processingTime": "5-10 minutes",
+            "personResponsible": "Market Staff"
+          },
+          {
+            "client": "Your proposed dates and compliance are reviewed.",
+            "agency": "Evaluates and approves or disapproves the request.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Market Administrator"
+          },
+          {
+            "client": "Pay the promotional fee, if one applies.",
+            "agency": "Issues the official receipt.",
+            "feeText": "As per approved rates",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Treasurer's Office"
+          },
+          {
+            "client": "Receive the permit or the approval notice.",
+            "agency": "Records and releases the permit.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Market Administrator"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "35 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The first step is a range, 5 to 10 minutes. The arithmetic reads the upper figure, which is what makes the derived total match the charter's stated 35 minutes."
+        ]
+      },
+      {
+        "id": "eemd-legazpi-complaint",
+        "number": 6,
+        "charterNumber": 6,
+        "charterGroup": "External Services",
+        "title": "Making a complaint about the market",
+        "description": "How a vendor, a customer or anyone else raises a complaint about the Legazpi Public Market. It can end in a mediated dialogue between the parties, and you get a written response.",
+        "office": "Legazpi City Public Market Office",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Vendors, customers or the general public with a valid complaint about the public market",
+        "requirements": [
+          {
+            "item": "Duly accomplished complaint form",
+            "whereToSecure": "Legazpi City Public Market Office"
+          },
+          {
+            "item": "Supporting documents or evidence, if applicable",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "File the complaint verbally or in writing at the Market Office.",
+            "agency": "Records and acknowledges the complaint, and gives you a complaint form if you need one.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Market Office Personnel"
+          },
+          {
+            "client": "Submit the accomplished complaint form with any evidence.",
+            "agency": "Reviews and evaluates the complaint.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Market Administrator / Supervisor"
+          },
+          {
+            "client": "Attend the dialogue or mediation, if one is required.",
+            "agency": "Facilitates a resolution between the parties.",
+            "feeText": "None",
+            "processingTime": "Within 3 working days",
+            "personResponsible": "Market Officer-in-Charge"
+          },
+          {
+            "client": "Receive feedback on how the complaint was resolved.",
+            "agency": "Issues the written response or resolution.",
+            "feeText": "None",
+            "processingTime": "Within 5 working days",
+            "personResponsible": "Market Administrator / Supervisor"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "8 days and 20 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-shop-window",
+    "categories": [
+      {
+        "id": "stall-leases",
+        "title": "Stall leases",
+        "icon": "bi-shop",
+        "services": [
+          "eemd-legazpi-new-stall-lease",
+          "eemd-legazpi-renew-stall-lease",
+          "eemd-legazpi-terminate-lease"
+        ]
+      },
+      {
+        "id": "clearances-and-permits",
+        "title": "Clearances and permits",
+        "icon": "bi-patch-check",
+        "services": ["eemd-legazpi-market-clearance", "eemd-legazpi-promotional-sales"]
+      },
+      {
+        "id": "complaints",
+        "title": "Complaints",
+        "icon": "bi-chat-left-text",
+        "services": ["eemd-legazpi-complaint"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "want-a-stall-legazpi",
+        "title": "You want a stall at the Legazpi Public Market",
+        "presentation": "rail",
+        "icon": "bi-shop",
+        "services": ["eemd-legazpi-new-stall-lease"]
+      },
+      {
+        "id": "keeping-your-stall",
+        "title": "You are keeping or leaving your stall",
+        "presentation": "rail",
+        "icon": "bi-file-earmark-text",
+        "services": [
+          "eemd-legazpi-renew-stall-lease",
+          "eemd-legazpi-terminate-lease",
+          "eemd-legazpi-market-clearance"
+        ]
+      },
+      {
+        "id": "running-a-promo",
+        "title": "You want to run a promotional sale",
+        "presentation": "rail",
+        "icon": "bi-megaphone",
+        "services": ["eemd-legazpi-promotional-sales"]
+      },
+      {
+        "id": "something-is-wrong-market",
+        "title": "Something in the market needs reporting",
+        "presentation": "rail",
+        "icon": "bi-chat-left-text",
+        "services": ["eemd-legazpi-complaint"]
+      }
+    ],
+    "searchAliases": {
+      "eemd-legazpi-new-stall-lease": [
+        "new stall",
+        "puwesto",
+        "stall application",
+        "raffle",
+        "legazpi market",
+        "palengke",
+        "goodwill"
+      ],
+      "eemd-legazpi-renew-stall-lease": [
+        "renew stall",
+        "renewal",
+        "lease renewal",
+        "palengke",
+        "stallholder"
+      ],
+      "eemd-legazpi-market-clearance": [
+        "market clearance",
+        "clearance",
+        "arrears",
+        "transfer",
+        "palengke"
+      ],
+      "eemd-legazpi-terminate-lease": [
+        "terminate lease",
+        "cancel lease",
+        "surrender stall",
+        "quit",
+        "palengke"
+      ],
+      "eemd-legazpi-promotional-sales": [
+        "promotional sale",
+        "promo",
+        "bazaar",
+        "sale permit",
+        "palengke"
+      ],
+      "eemd-legazpi-complaint": [
+        "complaint",
+        "reklamo",
+        "market complaint",
+        "mediation",
+        "palengke"
+      ]
+    },
+    "contact": null
+  }
+}

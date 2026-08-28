@@ -1,0 +1,242 @@
+{
+  "slug": "eemd-albay",
+  "route": "service-details/eemd-albay-public-market.html",
+  "charter": {
+    "office": "Economic Enterprise Management Division, Albay Public Market",
+    "abbreviation": "EEMD Albay",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CMO-CITY-ECONOMIC-AND-ENTERPRISE-AND-MANAGEMENT-DIVISION-ALBAY-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/eemd-albay.md",
+    "personnel": [
+      {
+        "name": "Ralph Vincent L. Lasin",
+        "position": "Market Supervisor IV",
+        "unit": "Albay Public Market",
+        "isHead": true
+      },
+      {
+        "name": "Elsa A. Bulawan",
+        "position": "Administrative Aide I",
+        "unit": "Albay Public Market"
+      },
+      {
+        "name": "Christian Amata",
+        "position": "Administrative Aide I",
+        "unit": "Albay Public Market"
+      },
+      {
+        "name": "Jose Carlo L. Valencia",
+        "position": "Administrative Aide II",
+        "unit": "Albay Public Market"
+      }
+    ],
+    "personnelNotes": [
+      "The Economic Enterprise Management Division is published under the City Mayor's Office and issues a separate charter for each market it runs. This one covers the Albay Public Market."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Answer the client feedback form and drop it in the box at the Albay Public Market Office.",
+      "howFeedbackIsProcessed": "Issues are discussed so a solution can be reached. A complaint may be filed in writing or verbally at the market office, and the complainant and the respondent appear together at a preliminary conference.",
+      "contacts": []
+    },
+    "services": [
+      {
+        "id": "eemd-albay-stall-awarding",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "External Services",
+        "title": "Being awarded a vacant market stall",
+        "description": "How a vacant stall at the Albay Public Market is awarded, after the vacancy has been posted for thirty days. If only one person applies the stall goes to them; if there is more than one, it is drawn by lot.",
+        "office": "CMO-EEMD Albay Public Market",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "The public, meaning interested applicants",
+        "requirements": [
+          {
+            "item": "Copy of the application letter, acknowledged by the City Mayor's Office",
+            "whereToSecure": "City Mayor's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit a copy of the application letter.",
+            "agency": "Receives the application letter.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Administrative Aide I / Administrative Aide II"
+          },
+          {
+            "client": "Attend the awarding of the stall.",
+            "agency": "Awards the stall to the sole applicant. Where there is more than one applicant, a drawing of lots is conducted.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Market Supervisor IV"
+          },
+          {
+            "client": null,
+            "agency": "Gives the qualified applicant or awardee the essential forms.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Fill out the stallholder information sheet, the application to lease a market stall and the licence to conduct business, and sign the lease contract.",
+            "agency": null,
+            "feeText": "None",
+            "processingTime": "25 minutes",
+            "personResponsible": "Market Supervisor IV"
+          },
+          {
+            "client": "Return the duly filled-out forms.",
+            "agency": "Checks and reviews the forms submitted.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Wait for the release of the market clearance.",
+            "agency": "Signs the market clearance.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Market Supervisor IV"
+          },
+          {
+            "client": null,
+            "agency": "Releases the market clearance.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Records and files the duplicate copy of the market clearance.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": ["A stall is only awarded after its vacancy has been posted for thirty days."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's TOTAL row for this service is blank in the source, so the total shown is summed from the steps alone.",
+          "The charter lists eight processing times against seven numbered agency actions. The twenty-five minutes is read here as the client's own time filling out and signing the forms, which is the only step without an agency action. Check the PDF.",
+          "The charter numbers its later agency actions 4.1, 5.1 and 5.2 under client step 5. The order is kept as printed."
+        ]
+      },
+      {
+        "id": "eemd-albay-lease-contract",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "External Services",
+        "title": "Signing a market stall lease contract",
+        "description": "The lease contract between a stallholder and the City Government of Legazpi. The contract goes to the City Mayor's Office for signature, which is what makes this take days rather than minutes.",
+        "office": "CMO-EEMD Albay Public Market",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Albay Public Market stallholders",
+        "requirements": [
+          {
+            "item": "Latest community tax certificate (cedula)",
+            "whereToSecure": "City Treasurer's Office or the barangay"
+          },
+          {
+            "item": "Current Mayor's Permit, 1 photocopy",
+            "whereToSecure": "Business Permits and Licensing Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Approach the Officer of the Day.",
+            "agency": "Acknowledges the client.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "Administrative Aide II"
+          },
+          {
+            "client": "Give a photocopy of the business permit.",
+            "agency": "Receives and checks the documents.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the lease contract.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Sign the lease contract.",
+            "agency": "Forwards the lease contract to the City Mayor's Office for signature.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Wait for the release of the lease contract.",
+            "agency": "Releases the signed lease contract.",
+            "feeText": "None",
+            "processingTime": "1-3 days",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 days and 28 minutes" },
+        "notes": [
+          "Everything but the last step happens at the market office in under half an hour. The wait is the City Mayor's Office signing."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The last step is a range, 1 to 3 days. The arithmetic reads the upper figure of a range, which is what makes the derived total match the charter's stated 3 days and 28 minutes."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-shop",
+    "categories": [
+      {
+        "id": "getting-a-stall",
+        "title": "Getting and keeping a stall",
+        "icon": "bi-shop",
+        "services": ["eemd-albay-stall-awarding", "eemd-albay-lease-contract"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "want-a-stall",
+        "title": "You want a stall at the Albay Public Market",
+        "presentation": "rail",
+        "icon": "bi-shop",
+        "services": ["eemd-albay-stall-awarding"]
+      },
+      {
+        "id": "already-a-stallholder",
+        "title": "You already hold a stall",
+        "presentation": "rail",
+        "icon": "bi-file-earmark-text",
+        "services": ["eemd-albay-lease-contract"]
+      }
+    ],
+    "searchAliases": {
+      "eemd-albay-stall-awarding": [
+        "stall",
+        "puwesto",
+        "albay market",
+        "vacant stall",
+        "drawing of lots",
+        "awarding",
+        "palengke"
+      ],
+      "eemd-albay-lease-contract": [
+        "lease contract",
+        "kontrata",
+        "stall lease",
+        "market clearance",
+        "albay market",
+        "palengke"
+      ]
+    },
+    "contact": null
+  }
+}

@@ -104,10 +104,10 @@
     {
       "slug": "abe",
       "hub": "service-details/abe-services.html",
-      "office": "Albay Boulevard Enterprise",
+      "office": "Agricultural and Biosystems Engineering Division",
       "extraction": "text",
       "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-ABE.pdf",
-      "sourceNote": "Published under the City Mayor's Office as CMO-ABE."
+      "sourceNote": "Published under the City Mayor's Office as CMO-ABE. ABE is the Agricultural and Biosystems Engineering Division."
     },
     {
       "slug": "eemd-legazpi",
@@ -124,6 +124,21 @@
       "extraction": "text",
       "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CMO-CITY-ECONOMIC-AND-ENTERPRISE-AND-MANAGEMENT-DIVISION-ALBAY-2026.pdf",
       "sourceNote": "Published under the City Mayor's Office. EEMD publishes a separate charter per market."
+    },
+    {
+      "slug": "cmo",
+      "hub": "service-details/cmo-services.html",
+      "office": "City Mayor's Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-MAYORS-OFFICE-CITIZENS-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "city-coop",
+      "hub": "service-details/city-coop-services.html",
+      "office": "City Cooperative Development Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-COOP.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-CITY-COOP."
     }
   ]
 }
