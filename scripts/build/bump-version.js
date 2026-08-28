@@ -86,7 +86,7 @@ try {
 const htmlDirs = [
   '.',
   'accessibility',
-  'budget',
+  'transparency',
   'contact',
   'faq',
   'government',

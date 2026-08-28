@@ -217,18 +217,66 @@ function updateDisplay(quarter) {
 let activeExpFocus = null; // 'gps', 'social', 'economic', 'debt'
 let activeIncomeFocus = null; // 'local', 'external', 'tax-revenue', 'nontax-revenue', 'rpt'
 
-const MACRO_EXP_COLORS = ['#2563eb', '#f43f5e', '#d97706', '#be123c'];
-const MACRO_INCOME_COLORS = ['#059669', '#0284c7'];
-const MUTED_INCOME_COLOR = '#d1fae5'; // Fresh minty tint
-const MUTED_EXP_COLOR = '#cbd5e1'; // Clean slate tint
+// The two focusable sets, named once. They were spelled out inline in the
+// accordion handler, so a row type could be added to the markup and silently
+// match neither list.
+const EXPENDITURE_KEYS = ['gps', 'social', 'economic', 'debt'];
+const INCOME_KEYS = ['local', 'tax-revenue', 'nontax-revenue', 'rpt', 'external'];
 
-// Sub-allocation colors (High-contrast families)
+/* Categorical hues for the four expenditure sectors, in fixed order.
+ *
+ * The previous set was ['#2563eb', '#f43f5e', '#d97706', '#be123c']. Measured as
+ * OKLab dE x100, rose #f43f5e against crimson #be123c was 13.2 to normal vision,
+ * under the 15 floor where two categories stop being separable at all, and amber
+ * #d97706 against that same rose was 6.4 under deuteranopia. Two of the four
+ * sectors were effectively one colour.
+ *
+ * Light and dark are steps of the same four ramps rather than one set reused:
+ * the dark surface has a narrower usable lightness band (0.48-0.67 against
+ * 0.43-0.77), so a light-tuned step falls out of it. Worst adjacent pair is now
+ * 33.6 normal / 24.7 protan in light and 27.0 / 26.0 in dark.
+ *
+ * The yellow sits under 3:1 against the light surface. That is allowed here
+ * because identity never rests on the arc colour alone: the legend table under
+ * each chart names every sector with its amount and share.
+ */
+const MACRO_EXP_COLORS_LIGHT = ['#2a78d6', '#eb6834', '#4a3aa7', '#eda100'];
+const MACRO_EXP_COLORS_DARK = ['#3987e5', '#d95926', '#9085e9', '#c98500'];
+const MACRO_INCOME_COLORS = ['#059669', '#0284c7'];
+
+// The muted fills are what an arc becomes while a sibling is focused, so they
+// have to recede from the card behind them. A single light tint did that in
+// light mode and did the opposite in dark, where it outshone the focused arc.
+const MUTED_INCOME_COLOR_LIGHT = '#d1fae5';
+const MUTED_INCOME_COLOR_DARK = '#1f3b34';
+const MUTED_EXP_COLOR_LIGHT = '#cbd5e1';
+const MUTED_EXP_COLOR_DARK = '#334155';
+
+function isDarkTheme() {
+  return document.documentElement.getAttribute('data-theme') === 'dark';
+}
+
+function macroExpColors() {
+  return isDarkTheme() ? MACRO_EXP_COLORS_DARK : MACRO_EXP_COLORS_LIGHT;
+}
+
+function mutedExpColor() {
+  return isDarkTheme() ? MUTED_EXP_COLOR_DARK : MUTED_EXP_COLOR_LIGHT;
+}
+
+function mutedIncomeColor() {
+  return isDarkTheme() ? MUTED_INCOME_COLOR_DARK : MUTED_INCOME_COLOR_LIGHT;
+}
+
+// Drilling into Social Services replaces one arc with its five parts. That is a
+// magnitude breakdown of a single category, so it is one hue stepped light to
+// dark - the parent's orange - not five new categorical hues.
 const SOCIAL_SUB_COLORS = {
-  health_nutrition: '#f43f5e',
-  social_welfare: '#e11d48',
-  education_culture_sports: '#be123c',
-  housing_community_dev: '#fb7185',
-  labor_employment: '#fda4af',
+  health_nutrition: '#eb6834',
+  social_welfare: '#c9521f',
+  education_culture_sports: '#a03f14',
+  housing_community_dev: '#f2916a',
+  labor_employment: '#f7b79c',
 };
 
 const LOCAL_SUB_COLORS = {
@@ -265,8 +313,8 @@ function updateActiveCharts() {
       const isLocal = ['local', 'tax-revenue', 'nontax-revenue', 'rpt'].includes(activeIncomeFocus);
       incomeChart.data.datasets[0].offset = isLocal ? [16, 0] : [0, 16];
       incomeChart.data.datasets[0].backgroundColor = isLocal
-        ? [MACRO_INCOME_COLORS[0], MUTED_INCOME_COLOR]
-        : [MUTED_INCOME_COLOR, MACRO_INCOME_COLORS[1]];
+        ? [MACRO_INCOME_COLORS[0], mutedIncomeColor()]
+        : [mutedIncomeColor(), MACRO_INCOME_COLORS[1]];
       renderIncomeCallout(activeIncomeFocus, data);
     } else {
       incomeChart.data.datasets[0].offset = [0, 0];
@@ -288,12 +336,12 @@ function updateActiveCharts() {
       const targetIdx = sectors.indexOf(activeExpFocus);
       expenditureChart.data.datasets[0].offset = sectors.map((_, i) => (i === targetIdx ? 16 : 0));
       expenditureChart.data.datasets[0].backgroundColor = sectors.map((_, i) =>
-        i === targetIdx ? MACRO_EXP_COLORS[i] : MUTED_EXP_COLOR
+        i === targetIdx ? macroExpColors()[i] : mutedExpColor()
       );
       renderExpenditureCallout(activeExpFocus, data);
     } else {
       expenditureChart.data.datasets[0].offset = [0, 0, 0, 0];
-      expenditureChart.data.datasets[0].backgroundColor = [...MACRO_EXP_COLORS];
+      expenditureChart.data.datasets[0].backgroundColor = [...macroExpColors()];
     }
     expenditureChart.update('active');
   }
@@ -359,7 +407,7 @@ function focusExpenditure(sectorKey) {
 
   const offsets = sectors.map((_, i) => (i === targetIndex ? 16 : 0));
   const bgColors = sectors.map((_, i) =>
-    i === targetIndex ? MACRO_EXP_COLORS[i] : MUTED_EXP_COLOR
+    i === targetIndex ? macroExpColors()[i] : mutedExpColor()
   );
 
   expenditureChart.data.datasets[0].offset = offsets;
@@ -381,7 +429,7 @@ function resetExpenditureFocus() {
   activeExpFocus = null;
 
   expenditureChart.data.datasets[0].offset = [0, 0, 0, 0];
-  expenditureChart.data.datasets[0].backgroundColor = [...MACRO_EXP_COLORS];
+  expenditureChart.data.datasets[0].backgroundColor = [...macroExpColors()];
   expenditureChart.update('active');
 
   const resetBtn = document.getElementById('exp-chart-reset');
@@ -445,21 +493,35 @@ function renderExpenditureCallout(sectorKey, data) {
     buildCalloutBarsAndBadges(subItems, socTotal, totalExp, bar, badges);
     callout.style.display = 'block';
   } else {
+    // 'social' is listed here too. It is handled by the branch above whenever
+    // its breakdown is present, but when it is not, this path used to fall
+    // through to `sectorKey` and 0, rendering "social Allocation - P0.00 M"
+    // for a sector the page had already printed as P29.16 M just below.
+    // Degrading to the macro figure is the honest fallback; degrading to zero
+    // states something false.
     const sectorNames = {
       gps: 'General Public Services',
+      social: 'Social Services',
       economic: 'Economic Services',
       debt: 'Debt Service',
     };
     const sectorVals = {
       gps: data.expenditures.gps,
+      social: data.expenditures.social,
       economic: data.expenditures.economic,
       debt: data.expenditures.debt,
     };
-    const sectorColors = { gps: '#2563eb', economic: '#d97706', debt: '#be123c' };
+    const palette = macroExpColors();
+    const sectorColors = {
+      gps: palette[0],
+      social: palette[1],
+      economic: palette[2],
+      debt: palette[3],
+    };
 
     const name = sectorNames[sectorKey] || sectorKey;
-    const val = sectorVals[sectorKey] || 0;
-    const color = sectorColors[sectorKey] || '#2563eb';
+    const val = sectorVals[sectorKey] != null ? sectorVals[sectorKey] : 0;
+    const color = sectorColors[sectorKey] || palette[0];
 
     dot.style.backgroundColor = color;
     title.innerHTML = `<strong>${name}</strong> Allocation • ₱${val.toFixed(2)} M (${calcPercent(val, totalExp)} of total budget)`;
@@ -492,8 +554,8 @@ function focusIncome(sectorKey) {
 
   const offsets = isLocal ? [16, 0] : [0, 16];
   const bgColors = isLocal
-    ? [MACRO_INCOME_COLORS[0], MUTED_INCOME_COLOR]
-    : [MUTED_INCOME_COLOR, MACRO_INCOME_COLORS[1]];
+    ? [MACRO_INCOME_COLORS[0], mutedIncomeColor()]
+    : [mutedIncomeColor(), MACRO_INCOME_COLORS[1]];
 
   incomeChart.data.datasets[0].offset = offsets;
   incomeChart.data.datasets[0].backgroundColor = bgColors;
@@ -649,6 +711,27 @@ function renderIncomeCallout(sectorKey, data) {
     ];
     buildCalloutBarsAndBadges(items, extTotal, totalIncome, bar, badges, focusIncome);
     callout.style.display = 'block';
+  } else {
+    // Neither branch matched, which means the breakdown for this arc is absent.
+    // Without this the function returned having drawn nothing, so clicking an
+    // income arc appeared to do nothing at all - the expenditure side at least
+    // drew something. Fall back to the macro figure, which is always present.
+    const isLocal = ['local', 'tax-revenue', 'nontax-revenue', 'rpt'].includes(sectorKey);
+    const name = isLocal ? 'Local Sources' : 'External Sources';
+    const val = isLocal ? data.income.local : data.income.external;
+    const color = isLocal ? MACRO_INCOME_COLORS[0] : MACRO_INCOME_COLORS[1];
+
+    dot.style.backgroundColor = color;
+    title.innerHTML = `<strong>${name}</strong> • ₱${val.toFixed(2)} M (${calcPercent(val, totalIncome)} of total income)`;
+    bar.innerHTML = `<div class="sre-callout-segment" style="width: 100%; background: ${color};"></div>`;
+    badges.innerHTML = `
+      <div class="sre-callout-badge">
+        <span class="sre-callout-badge-dot" style="background: ${color};"></span>
+        <span class="sre-callout-badge-name">${name}</span>
+        <span class="sre-callout-badge-val">₱${val.toFixed(2)} M (${calcPercent(val, totalIncome)})</span>
+      </div>
+    `;
+    callout.style.display = 'block';
   }
 }
 
@@ -767,7 +850,7 @@ function initCharts() {
             data.expenditures.economic,
             data.expenditures.debt,
           ],
-          backgroundColor: [...MACRO_EXP_COLORS],
+          backgroundColor: [...macroExpColors()],
           borderWidth: 2,
           borderColor: chartBorderColor,
           offset: [0, 0, 0, 0],
@@ -791,7 +874,11 @@ function initCharts() {
   const expClose = document.getElementById('exp-callout-close');
   if (expClose) expClose.addEventListener('click', resetExpenditureFocus);
 
-  // Listen for theme changes to keep chart borders in sync
+  // Keep the chart borders and the series fills in step with the theme. The
+  // fills matter as much as the borders: each mode draws its own steps of the
+  // four ramps, so a toggle that only repainted the borders would leave the
+  // light-tuned arcs on the dark surface. updateActiveCharts() re-derives the
+  // fills through macroExpColors(), which honours whichever focus is open.
   document.addEventListener('themechange', function (e) {
     const isDarkNow =
       (e.detail && e.detail.theme === 'dark') ||
@@ -799,12 +886,11 @@ function initCharts() {
     const newBorder = isDarkNow ? '#1e293b' : '#ffffff';
     if (incomeChart && incomeChart.data && incomeChart.data.datasets[0]) {
       incomeChart.data.datasets[0].borderColor = newBorder;
-      incomeChart.update('none');
     }
     if (expenditureChart && expenditureChart.data && expenditureChart.data.datasets[0]) {
       expenditureChart.data.datasets[0].borderColor = newBorder;
-      expenditureChart.update('none');
     }
+    updateActiveCharts();
   });
 }
 
@@ -968,6 +1054,24 @@ function initBreakdownInteractions() {
         highlightChartSegment(type, false);
       }
     });
+
+    // Rows that have children get their click from initBreakdownAccordion,
+    // which expands them and focuses the chart. Rows without children got no
+    // handler at all, so clicking General Public Services, Economic Services
+    // or Debt Service left whichever callout was already open on screen,
+    // showing one sector's figures under another sector's name.
+    if (!item.classList.contains('has-children')) {
+      item.addEventListener('click', function (e) {
+        const type = this.dataset.type;
+        if (!type) return;
+        e.stopPropagation();
+        if (EXPENDITURE_KEYS.includes(type)) {
+          focusExpenditure(type);
+        } else if (INCOME_KEYS.includes(type)) {
+          focusIncome(type);
+        }
+      });
+    }
   });
 }
 
@@ -991,9 +1095,9 @@ function initBreakdownAccordion() {
 
       const type = this.dataset.type;
       if (!isExpanded && type) {
-        if (['gps', 'social', 'economic', 'debt'].includes(type)) {
+        if (EXPENDITURE_KEYS.includes(type)) {
           focusExpenditure(type);
-        } else if (['local', 'tax-revenue', 'nontax-revenue', 'rpt', 'external'].includes(type)) {
+        } else if (INCOME_KEYS.includes(type)) {
           focusIncome(type);
         }
       } else if (isExpanded && type) {
@@ -1035,7 +1139,7 @@ function highlightChartSegment(type, highlight) {
   // Only apply hover dimming if chart is not currently locked into an exploded focus state
   if (chart && index >= 0 && !isFocused) {
     const dataset = chart.data.datasets[0];
-    const originalColors = chart === incomeChart ? MACRO_INCOME_COLORS : MACRO_EXP_COLORS;
+    const originalColors = chart === incomeChart ? MACRO_INCOME_COLORS : macroExpColors();
     if (highlight) {
       const dimmedColors = originalColors.map((color, i) => (i === index ? color : color + '40'));
       dataset.backgroundColor = dimmedColors;
@@ -1050,9 +1154,20 @@ function highlightChartSegment(type, highlight) {
  */
 async function loadBudgetSREData() {
   try {
-    const basePath = window.location.pathname.includes('/budget') ? '../' : './';
+    // Derived from the depth of the URL, not from the directory's name. This
+    // read '/budget' until that directory was renamed to '/transparency', at
+    // which point the fetch resolved against the wrong root, 404'd, and the
+    // catch below quietly dropped the page onto the fallback constant. The
+    // fallback carries the macro totals but no breakdowns, so the page still
+    // looked populated while every sub-allocation silently read zero.
+    // The page is reachable both as /transparency/ and /transparency/index.html,
+    // so the trailing slash decides whether the last segment is a directory.
+    const path = window.location.pathname;
+    const segments = path.split('/').filter(Boolean);
+    const dirDepth = path.endsWith('/') ? segments.length : Math.max(0, segments.length - 1);
+    const basePath = dirDepth > 0 ? '../'.repeat(dirDepth) : './';
     const response = await fetch(`${basePath}data/fiscal-transparency.json`);
-    if (!response.ok) return;
+    if (!response.ok) throw new Error(`fiscal-transparency.json: ${response.status}`);
 
     const json = await response.json();
     if (json.quarterly_sre_reports) {

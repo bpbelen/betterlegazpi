@@ -28,7 +28,7 @@ module.exports = {
   '/news/index.html': { waitForSelector: '#news-grid > *' },
   '/government/officials.html': { waitForSelector: '#officials-container > *' },
   '/statistics/index.html': { waitForSelector: '#barangayListContainer > *' },
-  '/budget/index.html': { waitForSelector: '#dpwh-projects-container > *' },
+  '/transparency/index.html': { waitForSelector: '#dpwh-projects-container > *' },
 
   // Service category pages: every section below the page header is rendered by
   // assets/js/service-categories.js from four JSON files, so #service-category-app

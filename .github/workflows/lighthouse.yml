@@ -53,7 +53,7 @@ jobs:
             http://localhost:8080/service-details/cto-services.html
             http://localhost:8080/government/
             http://localhost:8080/statistics/
-            http://localhost:8080/budget/
+            http://localhost:8080/transparency/
             http://localhost:8080/policies/
             http://localhost:8080/contact/
           configPath: ${{ matrix.formFactor == 'desktop' && '.lighthouserc.desktop.json' || '.lighthouserc.json' }}

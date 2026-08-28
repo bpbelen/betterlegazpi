@@ -30,7 +30,7 @@ const ROUTES = [
   ['hub-cto', '/service-details/cto-services.html'],
   ['government', '/government/index.html'],
   ['policies', '/policies/index.html'],
-  ['budget', '/budget/index.html'],
+  ['transparency', '/transparency/index.html'],
   ['statistics', '/statistics/index.html'],
   ['tourism', '/tourism/index.html'],
   ['history', '/history/index.html'],

@@ -40,7 +40,7 @@
     if (
       path.includes('/services/') ||
       path.includes('/government/') ||
-      path.includes('/budget/') ||
+      path.includes('/transparency/') ||
       path.includes('/contact/') ||
       path.includes('/faq/') ||
       path.includes('/accessibility/') ||

@@ -599,17 +599,33 @@
 .sre-indicator-external {
   background: #0284c7;
 }
+/* These four must track MACRO_EXP_COLORS_* in assets/js/budget.js: the dot is
+   the legend for the arc, so a drift between the two files mislabels the chart.
+   Each mode uses its own step of the same ramp, as the arcs do. */
 .sre-indicator-gps {
-  background: #2563eb;
+  background: #2a78d6;
 }
 .sre-indicator-social {
-  background: #f43f5e;
+  background: #eb6834;
 }
 .sre-indicator-economic {
-  background: #d97706;
+  background: #4a3aa7;
 }
 .sre-indicator-debt {
-  background: #be123c;
+  background: #eda100;
+}
+
+[data-theme='dark'] .sre-indicator-gps {
+  background: #3987e5;
+}
+[data-theme='dark'] .sre-indicator-social {
+  background: #d95926;
+}
+[data-theme='dark'] .sre-indicator-economic {
+  background: #9085e9;
+}
+[data-theme='dark'] .sre-indicator-debt {
+  background: #c98500;
 }
 
 .sre-callout-badge.is-clickable {

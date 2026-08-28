@@ -40,7 +40,7 @@ const CI_ROUTES = [
   '/service-details/cho-services.html', // largest charter: 44 services across 12 divisions
   '/service-details/human-resource-management.html', // new tier B outlier
   '/statistics/index.html', // statistics.css
-  '/budget/index.html', // budget.css
+  '/transparency/index.html', // budget.css
   '/history/index.html', // history.css
   '/services/utilities.html', // utilities.css, and the only JSON-rendered services page
   '/service-details/philhealth-yakap.html', // philhealth-yakap.css: inverted spotlight panel, tabs, accordions
