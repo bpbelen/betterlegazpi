@@ -1,0 +1,618 @@
+{
+  "slug": "gad",
+  "route": "service-details/gad-services.html",
+  "charter": {
+    "office": "Gender and Development Division",
+    "abbreviation": "GAD",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CMO-GENDER-AN-DEVELOPMENT-DIVISION-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/gad.md",
+    "personnel": [
+      {
+        "name": "Marites V. Tagle-Pasa",
+        "position": "Officer-in-Charge, GAD Focal Person",
+        "unit": "Gender and Development Division",
+        "isHead": true
+      }
+    ],
+    "personnelNotes": [
+      "The charter names only the Officer-in-Charge. Everyone else appears by role: GAD Staff, the GAD Focal Person, the GAD Focal Point System, and the GAD Technical Working Group of the office concerned.",
+      "The division is published under the City Mayor's Office."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Write to the office or email gadlegazpihb1@gmail.com. You can also call 0912 158 3909.",
+      "howFeedbackIsProcessed": "To complain, write on the Complaint Form (CSC Form No. 3) or email, giving your full name, address and contact information, an account of the complaint, any evidence, and the name of the person being complained about. Complaints are processed and acted on, and the outcome is communicated to the complainant by email or by phone.",
+      "contacts": ["gadlegazpihb1@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "gad-incoming-communications",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "External Services",
+        "title": "Writing to the GAD Division",
+        "description": "How a letter or message sent to the division by post, email or Messenger is received and passed to the GAD Focal Person.",
+        "office": "GAD Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Non-Government (G2N)"],
+        "whoMayAvail": "General public, private sectors and residents of Legazpi City",
+        "requirements": [
+          {
+            "item": "Letter or communication, original copy, by email or hard copy",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit a formal request letter or communication by hard copy, official email or Messenger.",
+            "agency": "Receives and records the letters and communications from the clients.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": null,
+            "agency": "Refers the concern to the GAD Focal Person for clarification and proper action.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "GAD Staff / GAD Focal Person"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "13 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "gad-referral-services",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "External Services",
+        "title": "Asking for GAD information or a referral",
+        "description": "Information on gender and development concerns, and referral to the agency or department that can help where the matter is beyond the division's mandate. How long the information takes depends on whether it is already to hand.",
+        "office": "GAD Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Non-Government (G2N)"],
+        "whoMayAvail": "General public, private sectors and residents of Legazpi City",
+        "requirements": [
+          { "item": "Written request, by email or hard copy", "whereToSecure": "Requesting party" },
+          { "item": "Request or referral form", "whereToSecure": "GAD Division" },
+          {
+            "item": "Visitor's attendance form, for walk-in clients",
+            "whereToSecure": "GAD Division"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit your written request.",
+            "agency": "Receives and records the written request.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": null,
+            "agency": "Refers the concern to the GAD Focal Person for clarification and proper action.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "GAD Staff / GAD Focal Person"
+          },
+          {
+            "client": null,
+            "agency": "Advises you on the appropriate action to take and refers you to the agency or institution with the mandate or competence to give the assistance you need.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "GAD Focal Person"
+          },
+          {
+            "client": "Wait for the information.",
+            "agency": "Releases the information. A simple transaction is GAD-related information or data already readily available; a complex one is information not readily available, needing review and approval by the appropriate authorities before release; a highly technical one needs further research, consultation with other stakeholders, processing of raw tables from available databases, or review and approval by the GAD Focal Point System.",
+            "feeText": "None",
+            "processingTime": "3 days for a simple transaction, 7 days for a complex one, 15 days for a highly technical one",
+            "personResponsible": "GAD Staff / GAD Focal Point System"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "How long you wait depends on the information, not on you: three days if the division already holds it, up to fifteen if it has to be researched or cleared first.",
+          "The charter gives the service's availability as eight hours and its email as gadlegazpihb1@gmail.com."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row for this service, so the total shown is summed from the steps alone.",
+          "The last step carries all three complexity figures in one cell and the office decides which applies after it sees the request, so they are kept on one step rather than split into three services. The arithmetic adds all three, which makes the derived total an upper bound rather than any real case.",
+          "This service's header block is badly interleaved in the source: the Frontline Service, Clients, Requirements, Schedule, E-mail and Fees labels appear in one column with their values in another, out of order. The values recorded here are read from that block and should be checked."
+        ]
+      },
+      {
+        "id": "gad-training-walk-in",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "External Services",
+        "title": "Asking about GAD training in person",
+        "description": "Walking in to ask about capacity-building on gender and development, which all offices, departments, agencies and barangay officials have to undergo under the Magna Carta of Women.",
+        "office": "GAD Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Non-Government (G2N)"],
+        "whoMayAvail": "General public, city government employees and the private sector",
+        "requirements": [
+          { "item": "Letter request, by email or hard copy", "whereToSecure": "Requesting party" },
+          { "item": "Visitor's attendance form", "whereToSecure": "GAD Division" }
+        ],
+        "steps": [
+          {
+            "client": "Submit your written request.",
+            "agency": "Receives and records the written request.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": "Go to the GAD Focal Person with your concern or inquiry.",
+            "agency": "Advises you on the appropriate action to take and refers you to the agency or institution that can give the assistance you asked for.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "GAD Focal Person"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "13 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter runs three channels for a training request under one heading, each with its own TOTAL row: walk-in, telephone, and written. They are split here into three services sharing charter number 3, because the charter gives each its own total."
+        ]
+      },
+      {
+        "id": "gad-training-phone",
+        "number": 4,
+        "charterNumber": 3,
+        "charterGroup": "External Services",
+        "title": "Asking about GAD training by phone",
+        "description": "Phoning the division about training or other GAD services. You are advised what to do next.",
+        "office": "GAD Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Non-Government (G2N)"],
+        "whoMayAvail": "General public, city government employees and the private sector",
+        "requirements": [
+          { "item": "No documents; a phone call is enough to start", "whereToSecure": "Client" }
+        ],
+        "steps": [
+          {
+            "client": "Call the division about training or other GAD services.",
+            "agency": "Receives the phone inquiry and advises you on the next step.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "GAD Staff"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "5 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined training request block; see the note on asking in person."
+        ]
+      },
+      {
+        "id": "gad-training-written",
+        "number": 5,
+        "charterNumber": 3,
+        "charterGroup": "External Services",
+        "title": "Requesting a GAD training in writing",
+        "description": "The full route for a barangay, department, national agency, private institution or LGU asking for a training to be run. It goes to the GAD Focal Person, then the Local Chief Executive, then a resource speaker, and ends in the training itself with an evaluation and documentation report.",
+        "office": "GAD Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Non-Government (G2N)"],
+        "whoMayAvail": "Barangays, departments, national agencies, private institutions, LGUs and other clients",
+        "requirements": [
+          {
+            "item": "Letter of training request",
+            "whereToSecure": "Requesting barangay, department, agency, institution or LGU"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of training request.",
+            "agency": "Receives and records the letter request and forwards it to the GAD Focal Person for approval.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": null,
+            "agency": "The GAD Focal Person reviews the request and recommends approval to the Local Chief Executive.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "GAD Focal Person / Local Chief Executive"
+          },
+          {
+            "client": null,
+            "agency": "Coordinates with the City Human Resource Management Office for the office order covering the personnel attending, approved by the Local Chief Executive.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "GAD Staff / CHRMO / Local Chief Executive"
+          },
+          {
+            "client": "Discuss the training needs, profile and preliminary requirements, and confirm the dates and venue.",
+            "agency": "Coordinates with the GAD resource speaker and discusses with you the training needs, profile and preliminary requirements, the programme, the materials needed, and the confirmation of dates, venues and other arrangements.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "GAD Staff / GAD Focal Person / Secretariat / Resource Speaker"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the letter to the GAD resource person, reviewed by the GAD Focal Person and approved by the Local Chief Executive.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "GAD Staff / GAD Focal Person / Local Chief Executive"
+          },
+          {
+            "client": "Attend the training.",
+            "agency": "The resource speaker and training team conduct the training, with an evaluation and documentation report.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "GAD Resource Speaker / GAD Training Team"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "8 days and 32 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined training request block; see the note on asking in person."
+        ]
+      },
+      {
+        "id": "gad-barangay-gpb-assistance",
+        "number": 6,
+        "charterNumber": 4,
+        "charterGroup": "External Services",
+        "title": "Help preparing a barangay GAD plan and budget",
+        "description": "Technical assistance for a barangay preparing its GAD Plan and Budget and its GAD Accomplishment Reports.",
+        "office": "GAD Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "City government employees and barangays",
+        "requirements": [
+          {
+            "item": "GAD Plan and Budget and GAD Accomplishment Report forms, prepared by the barangay GAD Focal Point System",
+            "whereToSecure": "Barangay GAD Focal Point System"
+          },
+          {
+            "item": "Approval by the Barangay Chairperson or the barangay GAD Focal Point System chair",
+            "whereToSecure": "Barangay"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Ask for technical assistance for your barangay.",
+            "agency": "Refers the client to the GAD Focal Person for their concerns.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": null,
+            "agency": "Provides technical assistance in preparing the GAD Plan and Budget and the GAD Accomplishment Reports.",
+            "feeText": "None",
+            "processingTime": "1-2 hours",
+            "personResponsible": "GAD Staff / GAD Focal Person"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "2 hours & 2 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The second step is a range of one to two hours. The arithmetic reads the upper figure, which is what makes the derived total match the charter's stated 2 hours and 2 minutes."
+        ]
+      },
+      {
+        "id": "gad-barangay-gpb-compilation",
+        "number": 7,
+        "charterNumber": 5,
+        "charterGroup": "External Services",
+        "title": "Submitting a barangay GAD plan and accomplishment report",
+        "description": "Where a barangay files its GAD Plan and Budget for the coming year and its accomplishment reports for the year past. The checked reports are forwarded to the City DILG, with a copy to the City COA.",
+        "office": "GAD Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "Legazpi City barangays",
+        "requirements": [
+          {
+            "item": "GAD Plan and Budget prepared by the barangay GAD Focal Point System",
+            "whereToSecure": "Barangay GAD Focal Point System"
+          },
+          {
+            "item": "Approval by the Barangay Chairperson or the barangay GAD Focal Point System chair",
+            "whereToSecure": "Barangay"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the barangay GAD accomplishment reports for the preceding year and the GAD Plan and Budget for the next.",
+            "agency": "Receives the submitted and endorsed barangay GAD Plan and Budget and accomplishment reports.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": null,
+            "agency": "Checks the submitted accomplishment reports for the preceding year and the GAD Plan and Budget for the next, with complete attachments.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": null,
+            "agency": "Forwards the checked and reviewed plans and reports to the City DILG, copy furnished to the City COA.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "GAD Staff"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "1 day, 1 hour & 5 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "gad-department-gpb-assistance",
+        "number": 8,
+        "charterNumber": 6,
+        "charterGroup": "Internal Services",
+        "title": "Help preparing a department GAD plan and budget",
+        "description": "Technical assistance for a city department, office or division preparing its GAD Plan and Budget and GAD Accomplishment Report, including a discussion with its technical working group and advice on revisions.",
+        "office": "GAD Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "City government departments, offices and divisions concerned",
+        "requirements": [
+          {
+            "item": "GAD Plan and Budget prepared by the department, office or division concerned",
+            "whereToSecure": "The department, office or division concerned"
+          },
+          {
+            "item": "GAD Accomplishment Reports prepared by the department, office or division concerned",
+            "whereToSecure": "The department, office or division concerned"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Ask for technical assistance preparing the GAD Plan and Budget and accomplishment report.",
+            "agency": "Refers the client to the GAD Focal Person on their GAD Plan and Budget and accomplishment report concerns.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": "Discuss what assistance your office needs.",
+            "agency": "The GAD Focal Person discusses the concerns with the GAD technical working group of the office concerned and provides technical assistance in revising its plan and report.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "GAD Focal Person / GAD Technical Working Group of the office concerned"
+          },
+          {
+            "client": null,
+            "agency": "Advises the offices concerned on the corrections or revisions to their GAD Plan and Budget and accomplishment report.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "GAD Focal Person"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 hours & 2 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The steps read here sum to 2 hours and 2 minutes against the charter's stated 3 hours and 2 minutes. The last agency action, advising on corrections, carries no duration in the source, and one hour is unaccounted for. Check the PDF."
+        ]
+      },
+      {
+        "id": "gad-internal-training-request",
+        "number": 9,
+        "charterNumber": 7,
+        "charterGroup": "Internal Services",
+        "title": "City staff asking about GAD training",
+        "description": "How a city government employee asks the division about capacity-building, which all offices and local officials have to undergo under the Magna Carta of Women.",
+        "office": "GAD Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "City Government of Legazpi employees",
+        "requirements": [
+          {
+            "item": "GAD Plan and Budget and GAD Accomplishment Report forms prepared by the department, office or division concerned",
+            "whereToSecure": "The department, office or division concerned"
+          },
+          {
+            "item": "Approval by the head of the department, office or division concerned",
+            "whereToSecure": "The department, office or division concerned"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit your written request.",
+            "agency": "Receives, records and refers the written request to the GAD Focal Person.",
+            "feeText": "None",
+            "processingTime": "2 minutes",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": "Discuss your concern so the request can be assessed.",
+            "agency": "Discusses the concern with you to get the relevant information needed and refers it to the GAD Focal Person.",
+            "feeText": "None",
+            "processingTime": "3 minutes",
+            "personResponsible": "GAD Staff"
+          },
+          {
+            "client": null,
+            "agency": "Assesses the request.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "GAD Staff / GAD Focal Person"
+          },
+          {
+            "client": "Go to the GAD Focal Person with your concern or inquiry.",
+            "agency": "Advises you on the appropriate action to take and refers you to the agency or institution that can give the assistance you asked for.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "GAD Focal Person"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's TOTAL row for this service is blank in the source, so the total shown is summed from the steps alone.",
+          "The charter's third agency action reads only \"GAD focal person advises the client on the appropriate they can take\", with a word missing and its five-minute and ten-minute figures split across two rows. The pairing recorded here is an inference."
+        ]
+      },
+      {
+        "id": "gad-internal-training-phone",
+        "number": 10,
+        "charterNumber": 7,
+        "charterGroup": "Internal Services",
+        "title": "City staff asking about GAD training by phone",
+        "description": "Phoning the division from another city office about training or other GAD services.",
+        "office": "GAD Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Government (G2G)"],
+        "whoMayAvail": "City Government of Legazpi employees",
+        "requirements": [
+          { "item": "No documents; a phone call is enough to start", "whereToSecure": "Client" }
+        ],
+        "steps": [
+          {
+            "client": "Call the division about training or other GAD services.",
+            "agency": "Receives the phone inquiry and advises you on the next step.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "GAD Staff"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "5 minutes" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined internal training request block, which gives the telephone channel its own TOTAL row."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-gender-ambiguous",
+    "categories": [
+      {
+        "id": "gad-information",
+        "title": "Information and referral",
+        "icon": "bi-info-circle",
+        "services": ["gad-referral-services", "gad-incoming-communications"]
+      },
+      {
+        "id": "gad-training",
+        "title": "Training",
+        "icon": "bi-mortarboard",
+        "services": [
+          "gad-training-written",
+          "gad-training-walk-in",
+          "gad-training-phone",
+          "gad-internal-training-request",
+          "gad-internal-training-phone"
+        ]
+      },
+      {
+        "id": "gad-plans-and-budgets",
+        "title": "GAD plans and budgets",
+        "icon": "bi-clipboard-data",
+        "services": [
+          "gad-barangay-gpb-assistance",
+          "gad-barangay-gpb-compilation",
+          "gad-department-gpb-assistance"
+        ]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "need-gad-information",
+        "title": "You need information or a referral",
+        "presentation": "rail",
+        "icon": "bi-info-circle",
+        "services": ["gad-referral-services", "gad-incoming-communications"]
+      },
+      {
+        "id": "want-a-training",
+        "title": "Your group wants a GAD training",
+        "presentation": "rail",
+        "icon": "bi-mortarboard",
+        "services": ["gad-training-written", "gad-training-walk-in", "gad-training-phone"]
+      },
+      {
+        "id": "barangay-gad-plan",
+        "title": "Your barangay has a GAD plan due",
+        "presentation": "rail",
+        "icon": "bi-clipboard-data",
+        "services": ["gad-barangay-gpb-assistance", "gad-barangay-gpb-compilation"]
+      },
+      {
+        "id": "city-office-gad-plan",
+        "title": "Your city office has a GAD plan due",
+        "presentation": "rail",
+        "icon": "bi-buildings",
+        "services": ["gad-department-gpb-assistance", "gad-internal-training-request"]
+      }
+    ],
+    "searchAliases": {
+      "gad-incoming-communications": [
+        "letter",
+        "communication",
+        "gad division",
+        "email",
+        "messenger"
+      ],
+      "gad-referral-services": [
+        "gad",
+        "gender and development",
+        "referral",
+        "information",
+        "kasarian",
+        "magna carta of women"
+      ],
+      "gad-training-walk-in": [
+        "training",
+        "seminar",
+        "capacity building",
+        "walk in",
+        "gad training"
+      ],
+      "gad-training-phone": ["training", "phone", "call", "inquiry", "gad"],
+      "gad-training-written": [
+        "training request",
+        "seminar",
+        "resource speaker",
+        "barangay training",
+        "capacity building"
+      ],
+      "gad-barangay-gpb-assistance": [
+        "gad plan",
+        "gpb",
+        "accomplishment report",
+        "barangay",
+        "technical assistance"
+      ],
+      "gad-barangay-gpb-compilation": [
+        "gad plan and budget",
+        "gpb",
+        "ar",
+        "barangay",
+        "dilg",
+        "submission"
+      ],
+      "gad-department-gpb-assistance": [
+        "gad plan",
+        "gpb",
+        "department",
+        "technical working group",
+        "twg"
+      ],
+      "gad-internal-training-request": ["training", "city employee", "gad", "capacity building"],
+      "gad-internal-training-phone": ["training", "phone", "city employee", "gad"]
+    },
+    "contact": null
+  }
+}
