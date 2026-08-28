@@ -86,6 +86,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-category.css" />
     <link rel="stylesheet" href="../assets/css/philhealth-yakap.css" />
     <script>
       (function () {
@@ -250,33 +251,15 @@
       <!-- Key Health Services Highlights -->
       <section class="section">
         <div class="container">
-          <div style="margin-bottom: var(--spacing-lg)">
-            <div
-              style="
-                margin-bottom: var(--spacing-md);
-                border-bottom: 2px solid var(--color-primary-light, #e5e7eb);
-                padding-bottom: 8px;
-              "
-            >
-              <h2
-                style="
-                  font-size: 1.25rem;
-                  font-weight: 700;
-                  color: var(--color-primary);
-                  display: flex;
-                  align-items: center;
-                  gap: 10px;
-                  margin: 0;
-                "
-              >
-                <i class="bi bi-heart-pulse-fill" style="color: var(--color-primary)"></i>
-                <span>Core Public Health Programs</span>
-              </h2>
-              <p style="font-size: 0.84rem; color: var(--color-text-light); margin: 4px 0 0 0">
-                Accessible healthcare programs offered by the City Government of Legazpi and
-                accredited PhilHealth partners.
-              </p>
-            </div>
+          <div class="sc-block">
+            <h2 class="sc-section-title">
+              <i class="bi bi-heart-pulse-fill" aria-hidden="true"></i>
+              <span>Core Public Health Programs</span>
+            </h2>
+            <p class="sc-section-lead">
+              Accessible healthcare programs offered by the City Government of Legazpi and
+              accredited PhilHealth partners.
+            </p>
             <div class="grid grid-3">
               <div class="service-item-card">
                 <h3 class="service-item-title">
@@ -594,6 +577,11 @@
           </div>
         </div>
       </section>
+
+      <!-- Offices responsible and the fallback block, rendered by
+           assets/js/service-categories.js. This page keeps its own bespoke
+           sections above; only the shared tail is generated. -->
+      <div id="service-category-app" data-category="health"></div>
     </main>
 
     <footer class="site-footer">
@@ -762,6 +750,7 @@
       </div>
     </footer>
     <script defer src="../assets/js/info-bar.js"></script>
+    <script defer src="../assets/js/service-categories.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
     <script defer src="../assets/js/health-directory.js"></script>

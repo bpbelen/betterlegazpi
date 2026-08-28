@@ -80,6 +80,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/service-category.css" />
     <script>
       (function () {
         let savedTheme = null;
@@ -234,18 +235,18 @@
       </section>
       <section class="section">
         <div class="container">
-          <div class="grid grid-3">
-            <div class="service-item-card">
-              <h3 class="service-item-title">
-                <i class="bi bi-award"></i>
-                <span>Scholarship Programs</span>
-              </h3>
-              <p class="service-item-desc">Municipal scholarships for deserving students</p>
-              <div class="service-item-meta">
-                <span><strong>Fee:</strong> <span>Free</span></span>
-                <span><strong>Time:</strong> Annual application</span>
-              </div>
-            </div>
+          <div class="sc-block">
+            <h2 class="sc-section-title">
+              <i class="bi bi-award" aria-hidden="true"></i>
+              <span>Scholarship Programs</span>
+            </h2>
+            <p class="sc-section-lead">
+              The city runs municipal scholarships for deserving students, opening once a year. No
+              citizen&rsquo;s charter has been published for them yet, so this page cannot show the
+              requirements, fees or processing times the way the other service pages do &mdash;
+              contact the City Mayor&rsquo;s Office for the current round.
+            </p>
+            <p><a class="btn sc-btn-quiet" href="../contact/">Contact the city</a></p>
           </div>
         </div>
       </section>
@@ -6698,6 +6699,11 @@
           </div>
         </div>
       </section>
+
+      <!-- Offices responsible and the fallback block, rendered by
+           assets/js/service-categories.js. This page keeps its own bespoke
+           sections above; only the shared tail is generated. -->
+      <div id="service-category-app" data-category="education"></div>
     </main>
     <footer class="site-footer">
       <div class="container">
@@ -6865,6 +6871,7 @@
       </div>
     </footer>
     <script defer src="../assets/js/info-bar.js"></script>
+    <script defer src="../assets/js/service-categories.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
   </body>

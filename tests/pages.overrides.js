@@ -23,7 +23,6 @@
 module.exports = {
   '/news/index.html': { waitForSelector: '#news-grid > *' },
   '/government/officials.html': { waitForSelector: '#officials-container > *' },
-  '/services/health.html': { waitForSelector: '#facilities-grid > *' },
   '/statistics/index.html': { waitForSelector: '#barangayListContainer > *' },
   '/legislative/ordinance-framework.html': { waitForSelector: '#ordinance-table-body > *' },
   '/budget/index.html': { waitForSelector: '#dpwh-projects-container > *' },
@@ -34,8 +33,12 @@ module.exports = {
   '/services/agriculture.html': { waitForSelector: '#service-category-app > *' },
   '/services/business.html': { waitForSelector: '#service-category-app > *' },
   '/services/certificates.html': { waitForSelector: '#service-category-app > *' },
+  '/services/education.html': { waitForSelector: '#service-category-app > *' },
   '/services/employment.html': { waitForSelector: '#service-category-app > *' },
   '/services/environment.html': { waitForSelector: '#service-category-app > *' },
+  // health also renders its facilities directory from JSON, but the category app sits
+  // last on the page, so waiting for it covers both.
+  '/services/health.html': { waitForSelector: '#service-category-app > *' },
   '/services/housing.html': { waitForSelector: '#service-category-app > *' },
   '/services/infrastructure.html': { waitForSelector: '#service-category-app > *' },
   '/services/social-services.html': { waitForSelector: '#service-category-app > *' },

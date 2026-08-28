@@ -137,12 +137,31 @@
       .filter(Boolean)
       .join('');
 
+    const referralGrid = `<div class="sc-referrals-grid">
+        ${borrowed.map((j) => renderReferral(j, categoriesById)).join('')}
+      </div>`;
+
+    // A category can have referrals but no journeys of its own - Health is one.
+    // Heading it "What do you want to do?" and promising step-by-step paths, then
+    // showing only pointers elsewhere, reads as a section that failed to load.
+    if (!owned.length) {
+      return `
+      <section class="section sc-section" id="journeys" aria-labelledby="journeys-heading">
+        <div class="container">
+          <h2 class="sc-section-title" id="journeys-heading">Related journeys</h2>
+          <p class="sc-section-lead">
+            No step-by-step journey starts here, but these ones pass through this
+            category on their way somewhere else.
+          </p>
+          <div class="sc-referrals">${referralGrid}</div>
+        </div>
+      </section>`;
+    }
+
     const borrowedHtml = borrowed.length
       ? `<div class="sc-referrals">
            <h3 class="sc-referrals-title">Related journeys in other categories</h3>
-           <div class="sc-referrals-grid">
-             ${borrowed.map((j) => renderReferral(j, categoriesById)).join('')}
-           </div>
+           ${referralGrid}
          </div>`
       : '';
 
@@ -282,15 +301,19 @@
 
   /* ---------- fallback ---------- */
 
-  function renderFallback() {
+  function renderFallback(hasJourneys) {
+    // Health and Education carry no journeys of their own, so the usual line would
+    // point at something that isn't on the page.
+    const text = hasJourneys
+      ? 'The journeys above cover the most common paths, not every service.'
+      : 'This page covers the most common needs, not every service the city offers.';
+
     return `
       <section class="section sc-section sc-section--alt" aria-labelledby="fallback-heading">
         <div class="container">
           <div class="sc-fallback">
             <h2 class="sc-fallback-title" id="fallback-heading">Not what you're looking for?</h2>
-            <p class="sc-fallback-text">
-              The journeys above cover the most common paths, not every service.
-            </p>
+            <p class="sc-fallback-text">${text}</p>
             <div class="sc-fallback-actions">
               <a class="btn btn-primary" href="./">All service categories</a>
               <a class="btn sc-btn-quiet" href="../sitemap/">Browse the full sitemap</a>
@@ -325,12 +348,14 @@
         categoriesById[c.id] = c;
       });
 
+      const hasJourneys = journeyData.journeys.some((j) => j.category === category.id);
+
       root.innerHTML = [
         renderSummary(category, index),
         renderJourneys(category, journeyData.journeys, index, categoriesById),
         renderOnline(category, portals, index),
         renderOffices(category, index),
-        renderFallback(),
+        renderFallback(hasJourneys),
       ].join('');
     } catch (error) {
       console.error('service-categories:', error);

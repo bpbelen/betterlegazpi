@@ -78,7 +78,6 @@
       "name": "Education & Scholarship",
       "icon": "bi-mortarboard-fill",
       "tagline": "Schools, scholarships and learning support",
-      "deferred": true,
       "offices": []
     },
     {
@@ -88,8 +87,16 @@
       "icon": "bi-briefcase-fill",
       "tagline": "Finding work, and working for the city",
       "groups": [
-        { "id": "job-seekers", "label": "Looking for work", "icon": "bi-search" },
-        { "id": "city-staff", "label": "Working for the city", "icon": "bi-building" }
+        {
+          "id": "job-seekers",
+          "label": "Looking for work",
+          "icon": "bi-search"
+        },
+        {
+          "id": "city-staff",
+          "label": "Working for the city",
+          "icon": "bi-building"
+        }
       ],
       "offices": [
         {
@@ -123,7 +130,6 @@
       "name": "Health & Wellness",
       "icon": "bi-heart-pulse-fill",
       "tagline": "Health facilities, programmes and public health services",
-      "deferred": true,
       "offices": [
         {
           "slug": "cvo",

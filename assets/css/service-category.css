@@ -28,6 +28,20 @@
   color: var(--color-text);
   margin: 0 0 var(--spacing-xs);
   line-height: var(--line-height-heading);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sc-section-title i {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* Health and Education keep their own bespoke sections rather than the standard
+   ones, but still borrow the shared heading rhythm so the pages read as a set. */
+.sc-block {
+  margin-bottom: var(--spacing-lg);
 }
 
 .sc-section-lead {
