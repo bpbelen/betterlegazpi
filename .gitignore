@@ -26,3 +26,8 @@ __pycache__/
 # Citizen's Charter PDFs (19 MB). The committed transcripts carry the content and
 # pin each source by sha256; scripts/data/fetch-charters.js re-downloads on demand.
 docs/sources/citizens-charter/pdf/
+
+# Office temporary files & raw spreadsheets
+~$*
+*.xlsx
+

@@ -2184,3 +2184,109 @@ canvas {
   border-color: var(--color-primary);
   color: #ffffff;
 }
+
+/* ==========================================================================
+   Documentary Sources & References
+   ========================================================================== */
+.stats-scholarly-section {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+}
+
+.stats-references-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.stats-references-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.stats-citation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+.stats-citation-list li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.stats-citation-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--color-text-light);
+}
+
+.stats-citation-list a {
+  color: var(--color-primary);
+  word-break: break-all;
+  text-decoration: underline;
+}
+
+.stats-citation-list a:hover {
+  text-decoration: underline;
+}
+
+.stats-disclaimer-banner {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  font-size: var(--fs-base);
+  line-height: 1.55;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
+}
+
+.stats-disclaimer-banner i {
+  margin-right: 6px;
+  color: var(--color-accent);
+}
+
+@media (max-width: 640px) {
+  .stats-references-card {
+    padding: 20px;
+  }
+}
+
+[data-theme='dark'] .stats-scholarly-section {
+  background: var(--color-bg);
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .stats-references-card {
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme='dark'] .stats-references-card h4 {
+  color: var(--color-text);
+}
+
+[data-theme='dark'] .stats-citation-list {
+  color: var(--color-text-light);
+}
+
+[data-theme='dark'] .stats-citation-list a {
+  color: #93c5fd;
+}
+
+[data-theme='dark'] .stats-disclaimer-banner {
+  background: var(--color-bg);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-light);
+}
