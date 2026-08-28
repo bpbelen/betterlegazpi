@@ -1,0 +1,724 @@
+/**
+ * BetterLegazpi - Service category pages
+ *
+ * Styles for the standardized category sections: orienting line, user journeys,
+ * online options, offices, and the fallback block.
+ *
+ * Written against the existing design tokens rather than introducing a new visual
+ * language, because a reader moves straight from these pages into an office hub and
+ * the two must feel like one site. Dark mode is handled here with explicit rules:
+ * the sitewide dark styling is element-level rather than token-level, so a component
+ * stylesheet cannot yet inherit a dark palette. That is what the token restructure
+ * changes; until then these rules carry their own.
+ */
+
+/* ---------- shared section rhythm ---------- */
+
+.sc-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.sc-section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.sc-section-title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-xs);
+  line-height: var(--line-height-heading);
+}
+
+.sc-section-lead {
+  font-size: var(--fs-md);
+  color: var(--color-text-light);
+  max-width: var(--measure);
+  margin: 0 0 var(--spacing-lg);
+  line-height: var(--line-height-body);
+}
+
+/* ---------- orienting line ---------- */
+
+.sc-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-sm);
+  font-size: var(--fs-md);
+  color: var(--color-text-light);
+  line-height: var(--line-height-body);
+}
+
+.sc-summary i {
+  color: var(--color-primary);
+  font-size: 1.1em;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sc-summary strong {
+  color: var(--color-text);
+  font-weight: var(--fw-semibold);
+}
+
+/* ---------- journeys ---------- */
+
+.sc-journeys {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.sc-journey {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.sc-journey-head {
+  margin-bottom: var(--spacing-md);
+}
+
+.sc-journey-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: 0 0 6px;
+  line-height: var(--line-height-heading);
+}
+
+.sc-journey-title i {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.sc-journey-summary {
+  font-size: var(--fs-md);
+  color: var(--color-text-light);
+  margin: 0;
+  line-height: var(--line-height-body);
+  max-width: var(--measure);
+}
+
+/* Steps: a numbered rail with a connecting line, so the order reads as an order
+   rather than as a list of options. */
+.sc-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.sc-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: var(--spacing-sm);
+  padding-bottom: var(--spacing-md);
+}
+
+.sc-step:last-child {
+  padding-bottom: 0;
+}
+
+/* The rail is drawn from each number down to the next, skipping the last. */
+.sc-step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 34px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.sc-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-circle);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.sc-step--conditional .sc-step-number {
+  background: var(--color-bg-muted);
+  color: var(--color-text-light);
+  border: 2px dashed var(--color-border);
+}
+
+/* The step body is the anchor: a title line alone is ~24px tall, under the 44px
+   touch target, and everything inside describes the same service. */
+.sc-step-body {
+  min-width: 0;
+  padding: 3px 0 8px;
+  display: block;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: background var(--duration-base) ease;
+}
+
+.sc-step-body:hover,
+.sc-step-body:focus-visible {
+  text-decoration: none;
+}
+
+.sc-step-title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  margin: 0 0 4px;
+  line-height: var(--line-height-heading);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--color-text);
+}
+
+.sc-step-label {
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--duration-base) ease;
+}
+
+.sc-step-body:hover .sc-step-label,
+.sc-step-body:focus-visible .sc-step-label {
+  border-bottom-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.sc-step-tag {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-light);
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-pill);
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
+.sc-step-note {
+  display: block;
+  font-size: var(--fs-base);
+  color: var(--color-text-light);
+  margin: 0 0 8px;
+  line-height: var(--line-height-body);
+  max-width: var(--measure);
+}
+
+.sc-step-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0;
+  font-size: var(--fs-sm);
+}
+
+.sc-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-light);
+}
+
+.sc-meta-item i {
+  font-size: 0.95em;
+  opacity: 0.75;
+}
+
+.sc-meta-office {
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+}
+
+/* A stated fee is worth reading; an absent one must not look like a stated one. */
+.sc-fee--amount,
+.sc-fee--assessed,
+.sc-fee--ordinance {
+  color: var(--color-accent-text);
+  font-weight: var(--fw-medium);
+}
+
+.sc-fee--free {
+  color: var(--color-success);
+  font-weight: var(--fw-semibold);
+}
+
+.sc-meta-missing {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* ---------- referral cards ---------- */
+
+.sc-referrals {
+  margin-top: var(--spacing-xl);
+}
+
+.sc-referrals-title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--spacing-sm);
+}
+
+.sc-referrals-grid {
+  display: grid;
+  gap: var(--spacing-sm);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.sc-referral {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition:
+    border-color var(--duration-base) ease,
+    box-shadow var(--duration-base) ease;
+}
+
+.sc-referral:hover,
+.sc-referral:focus-visible {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.sc-referral-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-muted);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.sc-referral-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sc-referral-title {
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  font-size: var(--fs-md);
+}
+
+.sc-referral-meta {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+}
+
+.sc-referral-arrow {
+  margin-left: auto;
+  color: var(--color-text-light);
+  flex-shrink: 0;
+}
+
+/* ---------- online portals ---------- */
+
+.sc-portals {
+  display: grid;
+  gap: var(--spacing-sm);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.sc-portal {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--spacing-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition:
+    border-color var(--duration-base) ease,
+    box-shadow var(--duration-base) ease;
+}
+
+.sc-portal:hover,
+.sc-portal:focus-visible {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* The badge is the point of this card: a reader must know before tapping whether
+   this is a working portal or a PDF explaining a counter visit. */
+.sc-portal-kind {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.sc-portal--portal .sc-portal-kind {
+  background: rgba(6, 122, 94, 0.12);
+  color: var(--color-success);
+}
+
+/* --color-accent-badge-text, not --color-accent-text: the lighter accent fails
+   AA against its own tint at this size, which axe flags. */
+.sc-portal--guide .sc-portal-kind {
+  background: rgba(194, 65, 12, 0.12);
+  color: var(--color-accent-badge-text);
+}
+
+.sc-portal--payment .sc-portal-kind {
+  background: rgba(0, 50, 160, 0.1);
+  color: var(--color-primary);
+}
+
+.sc-portal-title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
+}
+
+.sc-portal-office {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  font-weight: var(--fw-medium);
+}
+
+.sc-portal-caveat {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  line-height: var(--line-height-body);
+  padding-top: 4px;
+  border-top: 1px solid var(--color-border);
+  margin-top: 2px;
+}
+
+/* ---------- offices ---------- */
+
+.sc-office-group + .sc-office-group {
+  margin-top: var(--spacing-lg);
+}
+
+.sc-office-group-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.sc-office-group-title i {
+  color: var(--color-primary);
+}
+
+.sc-offices {
+  display: grid;
+  gap: var(--spacing-sm);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.sc-office {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: var(--spacing-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition:
+    border-color var(--duration-base) ease,
+    box-shadow var(--duration-base) ease,
+    transform var(--duration-base) ease;
+}
+
+.sc-office:hover,
+.sc-office:focus-visible {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.sc-office-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sc-office-name {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
+}
+
+.sc-office-abbr {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  background: rgba(0, 50, 160, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.sc-office-desc {
+  font-size: var(--fs-base);
+  color: var(--color-text-light);
+  line-height: var(--line-height-body);
+  flex-grow: 1;
+}
+
+.sc-office-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+}
+
+.sc-office-charter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: var(--fw-medium);
+}
+
+.sc-office-foot .bi-arrow-right {
+  color: var(--color-primary);
+  transition: transform var(--duration-base) ease;
+}
+
+.sc-office:hover .bi-arrow-right {
+  transform: translateX(3px);
+}
+
+/* ---------- fallback ---------- */
+
+.sc-fallback {
+  text-align: center;
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.sc-fallback-title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: 0 0 8px;
+}
+
+.sc-fallback-text {
+  font-size: var(--fs-md);
+  color: var(--color-text-light);
+  margin: 0 0 var(--spacing-md);
+}
+
+.sc-fallback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  justify-content: center;
+}
+
+/* Not .btn-outline: that one is white-on-transparent, built for the dark hero
+   sections, and disappears entirely on a light background like this one. */
+.sc-btn-quiet {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  transition:
+    border-color var(--duration-base) ease,
+    background var(--duration-base) ease;
+}
+
+.sc-btn-quiet:hover,
+.sc-btn-quiet:focus-visible {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-white);
+  text-decoration: none;
+}
+
+.sc-error {
+  text-align: center;
+  color: var(--color-text-light);
+  padding: var(--spacing-lg) 0;
+}
+
+/* ---------- mobile ---------- */
+
+@media (max-width: 767px) {
+  .sc-section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .sc-journey {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+  }
+
+  .sc-step {
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+  }
+
+  .sc-step-number {
+    width: 28px;
+    height: 28px;
+    font-size: var(--fs-xs);
+  }
+
+  .sc-step:not(:last-child)::before {
+    left: 13px;
+    top: 30px;
+  }
+
+  /* Stacked rather than inline, so a long fee string doesn't wrap into an
+     unreadable ribbon on a narrow screen. */
+  .sc-step-meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sc-fallback-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ---------- dark theme ---------- */
+
+[data-theme='dark'] .sc-journey,
+[data-theme='dark'] .sc-office,
+[data-theme='dark'] .sc-portal,
+[data-theme='dark'] .sc-referral {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .sc-section--alt {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme='dark'] .sc-step:not(:last-child)::before,
+[data-theme='dark'] .sc-office-foot,
+[data-theme='dark'] .sc-portal-caveat {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme='dark'] .sc-step:not(:last-child)::before {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme='dark'] .sc-step-tag,
+[data-theme='dark'] .sc-referral-icon {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .sc-step--conditional .sc-step-number {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .sc-btn-quiet {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .sc-btn-quiet:hover,
+[data-theme='dark'] .sc-btn-quiet:focus-visible {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: #93b4ff;
+  color: #93b4ff;
+}
+
+[data-theme='dark'] .sc-office-abbr {
+  background: rgba(255, 255, 255, 0.1);
+  color: #93b4ff;
+}
+
+[data-theme='dark'] .sc-summary i,
+[data-theme='dark'] .sc-journey-title i,
+[data-theme='dark'] .sc-office-group-title i,
+[data-theme='dark'] .sc-office-foot .bi-arrow-right {
+  color: #93b4ff;
+}
+
+[data-theme='dark'] .sc-portal--payment .sc-portal-kind {
+  background: rgba(147, 180, 255, 0.15);
+  color: #93b4ff;
+}
+
+[data-theme='dark'] .sc-fee--amount,
+[data-theme='dark'] .sc-fee--assessed,
+[data-theme='dark'] .sc-fee--ordinance {
+  color: #fb923c;
+}
+
+[data-theme='dark'] .sc-portal--guide .sc-portal-kind {
+  background: rgba(251, 146, 60, 0.15);
+  color: #fb923c;
+}
+
+[data-theme='dark'] .sc-fee--free,
+[data-theme='dark'] .sc-portal--portal .sc-portal-kind {
+  color: #34d399;
+}
+
+[data-theme='dark'] .sc-portal--portal .sc-portal-kind {
+  background: rgba(52, 211, 153, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-office,
+  .sc-office .bi-arrow-right {
+    transition: none;
+  }
+
+  .sc-office:hover,
+  .sc-office:focus-visible {
+    transform: none;
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "note": "Life-event journeys. Every step must reference a real service id from data/service-index.json; fees and processing times are NOT stored here, they are read from that index at render time. Each journey has exactly one owning category - other categories listing it in relatedCategories show a referral card, not the full journey. Draft copy and reviewer notes live in docs/journeys-draft.md.",
+  "journeys": [
+    {
+      "id": "building-a-house",
+      "category": "infrastructure",
+      "relatedCategories": [],
+      "title": "I'm building a house",
+      "icon": "bi-house-add",
+      "summary": "Two offices, in this order. The building permit can't be filed until City Planning has cleared the location, and the location can't be cleared until you know how the lot is zoned.",
+      "steps": [
+        {
+          "service": "cpdo-site-zoning-certification",
+          "label": "Check what your lot is zoned for",
+          "note": "A site zoning or land use certification tells you whether a house is allowed there at all."
+        },
+        {
+          "service": "cpdo-lc-building-permit",
+          "label": "Get locational clearance for the building permit",
+          "note": "City Planning confirms the plan fits the zoning before the engineers will look at it."
+        },
+        {
+          "service": "ceo-building-permit",
+          "label": "Apply for the building permit",
+          "note": "The long one - 16 documentary requirements."
+        },
+        {
+          "service": "ceo-electrical-permit",
+          "label": "Apply for the electrical permit",
+          "note": "Filed alongside the building permit at the same window, not after it."
+        },
+        {
+          "service": "ceo-certificate-occupancy",
+          "label": "Get the certificate of occupancy",
+          "note": "Once built. You are not allowed to occupy the building without it."
+        }
+      ]
+    },
+    {
+      "id": "subdividing-land",
+      "category": "infrastructure",
+      "relatedCategories": [],
+      "title": "I'm subdividing or developing land",
+      "icon": "bi-map",
+      "summary": "All at City Planning, but budget for two months if the land needs reclassifying first.",
+      "steps": [
+        {
+          "service": "cpdo-site-zoning-certification",
+          "label": "Confirm the current land use",
+          "note": "What the land is zoned for today."
+        },
+        {
+          "service": "cpdo-land-use-reclassification",
+          "label": "Reclassify the land, if it isn't zoned for what you plan",
+          "note": "The step people don't expect, and the one that sets the timeline. Skip it if the land is already zoned for your use.",
+          "conditional": true
+        },
+        {
+          "service": "cpdo-palc",
+          "label": "Apply for preliminary approval and locational clearance",
+          "note": "The subdivision approval itself."
+        }
+      ]
+    },
+    {
+      "id": "event-on-a-road",
+      "category": "infrastructure",
+      "relatedCategories": [],
+      "title": "I'm holding an event on a public road",
+      "icon": "bi-megaphone",
+      "summary": "A fiesta procession, motorcade, recorrida or fun run. Three separate permits, all at the City Engineer's Office - the banners are charged separately from the road.",
+      "steps": [
+        {
+          "service": "ceo-road-use-permit",
+          "label": "Get the road use permit",
+          "note": "To close or use a city road for the activity."
+        },
+        {
+          "service": "ceo-banner-permit",
+          "label": "Get a permit for your banners and tarpaulins",
+          "note": "Separate from the road permit, and charged by size and duration."
+        },
+        {
+          "service": "ceo-truck-ban-permit",
+          "label": "Get a truck ban exemption, if you're bringing floats or heavy vehicles",
+          "note": "Only if your event needs trucks on city roads during truck ban hours.",
+          "conditional": true
+        }
+      ]
+    }
+  ]
+}

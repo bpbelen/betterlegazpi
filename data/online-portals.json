@@ -1,0 +1,45 @@
+{
+  "note": "Portal URLs for services that can be started online. These are deliberately NOT in data/offices/*.json - those files are faithful transcriptions of published citizen's charters, and vendor URLs are neither charter content nor stable. Kinds are honest about what each link actually is: 'portal' is a working online transaction, 'guide' is a document describing a procedure you still complete in person, 'payment' is a payment channel only. Sources: legazpi.gov.ph/online-services-services and the city's Filipizen tenant.",
+  "kinds": {
+    "portal": { "label": "Online portal", "icon": "bi-globe" },
+    "guide": { "label": "Procedure guide (PDF)", "icon": "bi-file-earmark-pdf" },
+    "payment": { "label": "Payment channel", "icon": "bi-credit-card" }
+  },
+  "offices": {
+    "bplo": [
+      {
+        "kind": "portal",
+        "title": "New business application",
+        "url": "https://www.filipizen.com/partners/albay_legazpi/bpls/newbusiness",
+        "service": "bplo-new-online"
+      },
+      {
+        "kind": "portal",
+        "title": "Business permit renewal",
+        "url": "https://www.filipizen.com/partners/albay_legazpi/bpls/renewbusiness",
+        "service": "bplo-renew-online"
+      },
+      {
+        "kind": "portal",
+        "title": "Business billing and payment",
+        "url": "https://www.filipizen.com/partners/albay_legazpi/bpls/billing"
+      }
+    ],
+    "ceo": [
+      {
+        "kind": "guide",
+        "title": "Building permit online application",
+        "url": "https://legazpi.gov.ph/wp-content/uploads/2022/11/BP_OBO_procedure.pdf",
+        "service": "ceo-building-permit",
+        "caveat": "A PDF describing the procedure. The application itself is still completed at the City Engineer's Office."
+      },
+      {
+        "kind": "guide",
+        "title": "Certificate of occupancy online application",
+        "url": "https://legazpi.gov.ph/wp-content/uploads/2022/11/COO_procedure.pdf",
+        "service": "ceo-certificate-occupancy",
+        "caveat": "A PDF describing the procedure. The application itself is still completed at the City Engineer's Office."
+      }
+    ]
+  }
+}

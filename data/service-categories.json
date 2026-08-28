@@ -1,0 +1,221 @@
+{
+  "note": "Service category taxonomy. Office descriptions are per-category on purpose: the same office does a different job for a different audience, so CPDO reads as zoning-and-permits under Infrastructure and locational-clearance under Business. See docs/adr/0003-service-category-taxonomy.md.",
+  "categories": [
+    {
+      "id": "agriculture",
+      "route": "services/agriculture.html",
+      "name": "Agriculture & Veterinary",
+      "icon": "bi-tree-fill",
+      "tagline": "Support for farmers, fisherfolk and animal owners",
+      "offices": [
+        {
+          "slug": "cao",
+          "description": "Register in RSBSA, request agri-fishery technical assistance, and claim certified seeds and planting inputs."
+        },
+        {
+          "slug": "abe",
+          "description": "Engineering advice on farm structures, machinery and irrigation, including a field visit to your site."
+        },
+        {
+          "slug": "cvo",
+          "description": "Animal treatment, farm and home visits, livestock breeding advice, and travel health certificates for pets."
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "route": "services/business.html",
+      "name": "Business & Trade",
+      "icon": "bi-shop",
+      "tagline": "Starting, running and growing a business in Legazpi",
+      "offices": [
+        {
+          "slug": "bplo",
+          "description": "New business permits, renewals, added lines of business, and Mayor's clearances."
+        },
+        {
+          "slug": "cpdo",
+          "description": "Locational clearance confirming your site is zoned for the business you intend to run."
+        },
+        {
+          "slug": "city-coop",
+          "description": "Register a cooperative, arrange mandatory training, and get endorsements for permits and accreditation."
+        },
+        {
+          "slug": "eemd-legazpi",
+          "description": "Stall applications and rentals at Legazpi Public Market."
+        },
+        {
+          "slug": "eemd-albay",
+          "description": "Stall applications and rentals at Albay Public Market."
+        },
+        {
+          "slug": "gso",
+          "description": "Selling to the city: bidder registration, PhilGEPS postings, quotations, and questions to the Bids and Awards Committee."
+        }
+      ]
+    },
+    {
+      "id": "certificates",
+      "route": "services/certificates.html",
+      "name": "Certificates & Records",
+      "icon": "bi-file-earmark-text",
+      "tagline": "Civil registry documents and official city records",
+      "offices": [
+        {
+          "slug": "ccr",
+          "description": "Birth, marriage and death records, corrections, legitimation, and certified copies."
+        },
+        {
+          "slug": "cmo",
+          "description": "Getting a document signed by the Mayor, and booking a city venue for an event."
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "route": "services/education.html",
+      "name": "Education & Scholarship",
+      "icon": "bi-mortarboard-fill",
+      "tagline": "Schools, scholarships and learning support",
+      "deferred": true,
+      "offices": []
+    },
+    {
+      "id": "employment",
+      "route": "services/employment.html",
+      "name": "Employment & Livelihood",
+      "icon": "bi-briefcase-fill",
+      "tagline": "Finding work, and working for the city",
+      "groups": [
+        { "id": "job-seekers", "label": "Looking for work", "icon": "bi-search" },
+        { "id": "city-staff", "label": "Working for the city", "icon": "bi-building" }
+      ],
+      "offices": [
+        {
+          "slug": "peso",
+          "group": "job-seekers",
+          "description": "Job matching and referrals, the OFW help desk, SPES, JobStart, and DOLE livelihood programmes."
+        },
+        {
+          "slug": "hrmo",
+          "group": "city-staff",
+          "description": "Applying for a city post, OJT and immersion placements, certificates of employment, and service records."
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "route": "services/environment.html",
+      "name": "Environment",
+      "icon": "bi-tree",
+      "tagline": "Natural resources, waste and environmental compliance",
+      "offices": [
+        {
+          "slug": "ocenr",
+          "description": "Environmental clearances and compliance, tree cutting permits, waste concerns, and natural resource management."
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "route": "services/health.html",
+      "name": "Health & Wellness",
+      "icon": "bi-heart-pulse-fill",
+      "tagline": "Health facilities, programmes and public health services",
+      "deferred": true,
+      "offices": [
+        {
+          "slug": "cvo",
+          "description": "Rabies mass vaccination, dog and cat registration, and reporting stray animals."
+        },
+        {
+          "slug": "cadc",
+          "description": "Drug testing, prevention seminars, and the community-based drug intervention programme."
+        }
+      ]
+    },
+    {
+      "id": "housing",
+      "route": "services/housing.html",
+      "name": "Housing & Resettlement",
+      "icon": "bi-house-heart-fill",
+      "tagline": "Relocation, socialized housing and homeowners' associations",
+      "planned": true,
+      "offices": [
+        {
+          "slug": "orhcd",
+          "description": "Relocation site applications, buying a city-owned lot through socialized housing, forming a homeowners' association, and assistance after eviction."
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "route": "services/infrastructure.html",
+      "name": "Infrastructure",
+      "icon": "bi-buildings",
+      "tagline": "Building permits, land use and public works",
+      "offices": [
+        {
+          "slug": "ceo",
+          "description": "Building, electrical, mechanical and demolition permits, occupancy certificates, road and excavation permits, and reporting broken streetlights or drainage."
+        },
+        {
+          "slug": "cpdo",
+          "description": "Zoning and land use certification, locational clearance, land reclassification, and subdivision approval."
+        }
+      ]
+    },
+    {
+      "id": "social-services",
+      "route": "services/social-services.html",
+      "name": "Social Services",
+      "icon": "bi-people-fill",
+      "tagline": "Welfare, assistance and support programmes",
+      "offices": [
+        {
+          "slug": "cswdo",
+          "description": "Social welfare assistance, case management, and support for families in crisis."
+        },
+        {
+          "slug": "pdao",
+          "description": "PWD identification cards, medicine booklets and purchase booklets."
+        },
+        {
+          "slug": "cadc",
+          "description": "Community-based drug intervention, prevention seminars, and barangay anti-drug council support."
+        },
+        {
+          "slug": "cmo",
+          "description": "Medical, burial and financial assistance requested through the Mayor's Office."
+        }
+      ]
+    },
+    {
+      "id": "tax-payments",
+      "route": "services/tax-payments.html",
+      "name": "Tax & Payments",
+      "icon": "bi-cash-coin",
+      "tagline": "Assessments, tax payments and property records",
+      "offices": [
+        {
+          "slug": "cto",
+          "description": "Paying business tax, real property tax, transfer tax and community tax, and getting statements of account and clearances."
+        },
+        {
+          "slug": "casso",
+          "description": "Tax declarations, property transfers, reassessment, tax mapping, and certified copies of property records."
+        }
+      ]
+    },
+    {
+      "id": "utilities",
+      "route": "services/utilities.html",
+      "name": "Public Utilities",
+      "icon": "bi-lightning-charge-fill",
+      "tagline": "Electricity and water",
+      "deferred": true,
+      "offices": []
+    }
+  ]
+}

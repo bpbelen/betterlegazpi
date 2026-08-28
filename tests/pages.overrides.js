@@ -27,4 +27,9 @@ module.exports = {
   '/statistics/index.html': { waitForSelector: '#barangayListContainer > *' },
   '/legislative/ordinance-framework.html': { waitForSelector: '#ordinance-table-body > *' },
   '/budget/index.html': { waitForSelector: '#dpwh-projects-container > *' },
+
+  // Service category pages: every section below the page header is rendered by
+  // assets/js/service-categories.js from four JSON files, so #service-category-app
+  // ships empty and the whole page body is late-arriving content.
+  '/services/infrastructure.html': { waitForSelector: '#service-category-app > *' },
 };

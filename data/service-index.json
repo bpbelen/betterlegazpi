@@ -1,0 +1,2569 @@
+{
+  "generatedFrom": "data/offices/*.json",
+  "officeCount": 23,
+  "serviceCount": 216,
+  "offices": {
+    "abe": {
+      "slug": "abe",
+      "route": "service-details/abe-services.html",
+      "name": "Agricultural and Biosystems Engineering Division",
+      "abbreviation": "ABE",
+      "edition": "2026 First Edition",
+      "serviceCount": 4
+    },
+    "bplo": {
+      "slug": "bplo",
+      "route": "service-details/business-permits-licensing.html",
+      "name": "Business Permits and Licensing Office",
+      "abbreviation": "BPLO",
+      "edition": "2026 First Edition",
+      "serviceCount": 12
+    },
+    "cadc": {
+      "slug": "cadc",
+      "route": "service-details/cadc-services.html",
+      "name": "City Anti-Drug Abuse Council",
+      "abbreviation": "CADAC",
+      "edition": "2026 First Edition",
+      "serviceCount": 5
+    },
+    "cao": {
+      "slug": "cao",
+      "route": "service-details/cao-services.html",
+      "name": "City Agriculture Office",
+      "abbreviation": "CAO",
+      "edition": "2026 First Edition",
+      "serviceCount": 3
+    },
+    "casso": {
+      "slug": "casso",
+      "route": "service-details/casso-services.html",
+      "name": "City Assessor's Office",
+      "abbreviation": "CAssO",
+      "edition": "2026 First Edition",
+      "serviceCount": 12
+    },
+    "ccr": {
+      "slug": "ccr",
+      "route": "service-details/city-civil-registrar.html",
+      "name": "Office of the City Civil Registrar",
+      "abbreviation": "CCR",
+      "edition": "2026 First Edition",
+      "serviceCount": 17
+    },
+    "ceo": {
+      "slug": "ceo",
+      "route": "service-details/ceo-services.html",
+      "name": "City Engineer's Office",
+      "abbreviation": "CEO",
+      "edition": "2026 First Edition",
+      "serviceCount": 30
+    },
+    "city-coop": {
+      "slug": "city-coop",
+      "route": "service-details/city-coop-services.html",
+      "name": "City Cooperative Development Office",
+      "abbreviation": "CCDO",
+      "edition": "2026 First Edition",
+      "serviceCount": 7
+    },
+    "cmo": {
+      "slug": "cmo",
+      "route": "service-details/cmo-services.html",
+      "name": "City Mayor's Office",
+      "abbreviation": "CMO",
+      "edition": "2026 First Edition",
+      "serviceCount": 4
+    },
+    "cpdo": {
+      "slug": "cpdo",
+      "route": "service-details/cpdo-services.html",
+      "name": "City Planning and Development Office",
+      "abbreviation": "CPDO",
+      "edition": "2026 First Edition",
+      "serviceCount": 17
+    },
+    "cswdo": {
+      "slug": "cswdo",
+      "route": "service-details/cswdo-services.html",
+      "name": "City Social Welfare and Development Office",
+      "abbreviation": "CSWDO",
+      "edition": "2026 First Edition",
+      "serviceCount": 4
+    },
+    "cto": {
+      "slug": "cto",
+      "route": "service-details/cto-services.html",
+      "name": "City Treasurer's Office",
+      "abbreviation": "CTO",
+      "edition": "2026 First Edition",
+      "serviceCount": 21
+    },
+    "cvo": {
+      "slug": "cvo",
+      "route": "service-details/cvo-services.html",
+      "name": "City Veterinary Office",
+      "abbreviation": "CVO",
+      "edition": "2026 First Edition",
+      "serviceCount": 7
+    },
+    "eemd-albay": {
+      "slug": "eemd-albay",
+      "route": "service-details/eemd-albay-public-market.html",
+      "name": "Economic Enterprise Management Division, Albay Public Market",
+      "abbreviation": "EEMD Albay",
+      "edition": "2026 First Edition",
+      "serviceCount": 2
+    },
+    "eemd-legazpi": {
+      "slug": "eemd-legazpi",
+      "route": "service-details/eemd-legazpi-public-market.html",
+      "name": "Economic Enterprise Management Division, Legazpi Public Market",
+      "abbreviation": "EEMD Legazpi",
+      "edition": "2026 First Edition",
+      "serviceCount": 6
+    },
+    "gad": {
+      "slug": "gad",
+      "route": "service-details/gad-services.html",
+      "name": "Gender and Development Division",
+      "abbreviation": "GAD",
+      "edition": "2026 First Edition",
+      "serviceCount": 10
+    },
+    "gso": {
+      "slug": "gso",
+      "route": "service-details/gso-services.html",
+      "name": "General Services Office",
+      "abbreviation": "GSO",
+      "edition": "2026 First Edition",
+      "serviceCount": 11
+    },
+    "hrmo": {
+      "slug": "hrmo",
+      "route": "service-details/human-resource-management.html",
+      "name": "City Human Resource Management Office",
+      "abbreviation": "CHRMO",
+      "edition": "2026 First Edition",
+      "serviceCount": 8
+    },
+    "ocenr": {
+      "slug": "ocenr",
+      "route": "service-details/ocenr-services.html",
+      "name": "Office of the City Environment and Natural Resources",
+      "abbreviation": "OCENR",
+      "edition": "2026 First Edition",
+      "serviceCount": 11
+    },
+    "orhcd": {
+      "slug": "orhcd",
+      "route": "service-details/orhcd-services.html",
+      "name": "Office of Resettlement, Housing and Community Development",
+      "abbreviation": "ORHCD",
+      "edition": "2026 First Edition",
+      "serviceCount": 12
+    },
+    "pdao": {
+      "slug": "pdao",
+      "route": "service-details/pdao-services.html",
+      "name": "Persons with Disability Affairs Office",
+      "abbreviation": "PDAO",
+      "edition": "2026 First Edition",
+      "serviceCount": 1
+    },
+    "peso": {
+      "slug": "peso",
+      "route": "service-details/peso-services.html",
+      "name": "Public Employment Service Office",
+      "abbreviation": "PESO",
+      "edition": "2026 First Edition",
+      "serviceCount": 6
+    },
+    "sp-secretariat": {
+      "slug": "sp-secretariat",
+      "route": "service-details/sangguniang-panlungsod-secretariat.html",
+      "name": "Office of the Sangguniang Panlungsod, Secretariat",
+      "abbreviation": "SP Secretariat",
+      "edition": "2026 First Edition",
+      "serviceCount": 6
+    }
+  },
+  "services": {
+    "abe-technical-assistance": {
+      "office": "abe",
+      "title": "Getting advice on farm structures, machines or irrigation",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "Maximum of two (2) working days"
+    },
+    "abe-machinery-service": {
+      "office": "abe",
+      "title": "Borrowing pre and postharvest machinery",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "None, but the client is advised to provide the required gasoline or diesel for the actual machinery operation"
+      },
+      "time": "Maximum of two (2) working days"
+    },
+    "abe-machinery-registration": {
+      "office": "abe",
+      "title": "Registering farm or fishery machinery",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "Registration fee of 300 pesos per machinery or equipment"
+      },
+      "time": "Maximum of Three (3) working days"
+    },
+    "abe-training": {
+      "office": "abe",
+      "title": "Requesting a training or seminar on farm machinery",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "Maximum of five (5) minutes"
+    },
+    "bplo-renew-face-to-face": {
+      "office": "bplo",
+      "title": "Renewing a business permit at the office",
+      "group": "Frontline Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "2 hours (maximum)"
+    },
+    "bplo-new-face-to-face": {
+      "office": "bplo",
+      "title": "Applying for a new business permit at the office",
+      "group": "Frontline Services",
+      "requirementCount": 6,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "3 days (maximum)"
+    },
+    "bplo-new-online": {
+      "office": "bplo",
+      "title": "Applying for a new business permit online",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "3 days (maximum)"
+    },
+    "bplo-renew-online": {
+      "office": "bplo",
+      "title": "Renewing a business permit online",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "1 hr. and 30 mins. (maximum)"
+    },
+    "bplo-additional-line-face-to-face": {
+      "office": "bplo",
+      "title": "Adding a line of business at the office",
+      "group": "Frontline Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "3 days (maximum)"
+    },
+    "bplo-additional-line-online": {
+      "office": "bplo",
+      "title": "Adding a line of business online",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "3 days (maximum)"
+    },
+    "bplo-transfer-location": {
+      "office": "bplo",
+      "title": "Moving a business to a new location",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "3 days (maximum)"
+    },
+    "bplo-non-revenue-permit": {
+      "office": "bplo",
+      "title": "Getting a non-revenue miscellaneous permit",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "30 mins. (maximum)"
+    },
+    "bplo-certified-true-copy": {
+      "office": "bplo",
+      "title": "Getting a certified true copy of a business permit",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "10 mins. (maximum)"
+    },
+    "bplo-certification-business-record": {
+      "office": "bplo",
+      "title": "Getting a certification of a business record",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "30 mins. (maximum)"
+    },
+    "bplo-tricycle-operators-permit": {
+      "office": "bplo",
+      "title": "Getting a Mayor's tricycle operators' permit",
+      "group": "Frontline Services",
+      "requirementCount": 6,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "1 hour (maximum)"
+    },
+    "bplo-mayors-clearance": {
+      "office": "bplo",
+      "title": "Getting a Mayor's clearance",
+      "group": "Frontline Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "20 mins. (maximum)"
+    },
+    "cadc-communications": {
+      "office": "cadc",
+      "title": "Asking the council a question",
+      "group": "Administrative Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "25 Minutes"
+    },
+    "cadc-prevention-seminar": {
+      "office": "cadc",
+      "title": "Requesting a drug prevention seminar",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 Day to 3 Hours"
+    },
+    "cadc-drug-test": {
+      "office": "cadc",
+      "title": "Arranging a drug test",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "4 Days and 25 Minutes"
+    },
+    "cadc-community-intervention": {
+      "office": "cadc",
+      "title": "Joining the community-based drug intervention programme",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hour and 20 mins. per transaction; 30 mins. twice a month for reporting"
+    },
+    "cadc-badac-seminar": {
+      "office": "cadc",
+      "title": "BADAC revitalization seminar for barangays",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 Days and 5 Minutes"
+    },
+    "cao-production-inputs": {
+      "office": "cao",
+      "title": "Requesting seeds, seedlings, fertilizer or fingerlings",
+      "group": "Frontline Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "cao-technical-assistance": {
+      "office": "cao",
+      "title": "Getting agri-fishery technical advice or a farm visit",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "cao-certification-rsbsa-pcic-boat": {
+      "office": "cao",
+      "title": "Getting an RSBSA, PCIC insurance or boat registration certificate",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "casso-transfer-ownership": {
+      "office": "casso",
+      "title": "Transferring real property to a new owner",
+      "group": "External Services",
+      "requirementCount": 9,
+      "fee": {
+        "kind": "amount",
+        "text": "100"
+      },
+      "time": "2.8 hours"
+    },
+    "casso-assess-building": {
+      "office": "casso",
+      "title": "Declaring a newly built house, building or machine",
+      "group": "External Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "amount",
+        "text": "100"
+      },
+      "time": "10.55 hours"
+    },
+    "casso-segregation-consolidation": {
+      "office": "casso",
+      "title": "Splitting, merging or subdividing a lot",
+      "group": "External Services",
+      "requirementCount": 6,
+      "fee": {
+        "kind": "amount",
+        "text": "100"
+      },
+      "time": "10 hours"
+    },
+    "casso-true-copy-tax-declaration": {
+      "office": "casso",
+      "title": "Getting a certified true copy of a tax declaration",
+      "group": "External Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "50"
+      },
+      "time": "26 minutes"
+    },
+    "casso-certifications": {
+      "office": "casso",
+      "title": "Getting a landholding, no improvement or no property certification",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "50"
+      },
+      "time": "30 minutes"
+    },
+    "casso-traceback": {
+      "office": "casso",
+      "title": "Tracing the history of a property record",
+      "group": "External Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "50"
+      },
+      "time": "1.68 hours"
+    },
+    "casso-tax-mapping": {
+      "office": "casso",
+      "title": "Seeing where a lot sits on the tax map",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "15 minutes"
+    },
+    "casso-mortgage-annotation": {
+      "office": "casso",
+      "title": "Annotating a mortgage or claim on a tax declaration",
+      "group": "External Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "amount",
+        "text": "50.00"
+      },
+      "time": "58 minutes"
+    },
+    "casso-reclassification": {
+      "office": "casso",
+      "title": "Re-classifying a property",
+      "group": "External Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "58 minutes"
+    },
+    "casso-reassessment-building": {
+      "office": "casso",
+      "title": "Having a building re-assessed",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "9.18 hours"
+    },
+    "casso-correction": {
+      "office": "casso",
+      "title": "Correcting an error on a tax declaration",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2.1 hours"
+    },
+    "casso-cancel-annotation": {
+      "office": "casso",
+      "title": "Removing a mortgage annotation once a loan is paid",
+      "group": "External Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "38 minutes"
+    },
+    "ccr-birth-on-time": {
+      "office": "ccr",
+      "title": "Registering a birth within 30 days",
+      "group": "Frontline Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "amount",
+        "text": "Marital child: none. Non-marital child: Affidavit to Use the Surname of the Father P200.00, Admission of Paternity P100.00"
+      },
+      "time": "Two (2) hours"
+    },
+    "ccr-birth-delayed": {
+      "office": "ccr",
+      "title": "Registering a birth after 30 days, for people under 80",
+      "group": "Frontline Services",
+      "requirementCount": 15,
+      "fee": {
+        "kind": "amount",
+        "text": "Service fee 500.00. Free under BRAP. For a non-marital child, additional: Admission of Paternity 100.00, Affidavit to Use the Surname of the Father 200.00"
+      },
+      "time": "3 hours and 10 calendar days (posting period)"
+    },
+    "ccr-birth-delayed-80-above": {
+      "office": "ccr",
+      "title": "Registering a birth after 30 days, for people aged 80 and above",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "Service fee 500.00. Free under BRAP"
+      },
+      "time": "3 hours and 10 calendar days (posting period)"
+    },
+    "ccr-legitimation": {
+      "office": "ccr",
+      "title": "Legitimating a child after the parents marry",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "amount",
+        "text": "P250.00 endorsement fee; P155.00 mail fee; P5.00 per page for a copy certified by the Local Civil Registrar"
+      },
+      "time": "3 hours"
+    },
+    "ccr-death-on-time": {
+      "office": "ccr",
+      "title": "Registering a death within 30 days",
+      "group": "Frontline Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "amount",
+        "text": "P30.00 burial fee; P60.00 transfer fee; P30.00 issuance of death certificate"
+      },
+      "time": "One hour"
+    },
+    "ccr-death-delayed": {
+      "office": "ccr",
+      "title": "Registering a death after 30 days",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "amount",
+        "text": "P30.00 burial fee; P60.00 transfer fee; P30.00 issuance of death certificate; P500.00 service fee"
+      },
+      "time": "1 hour and 10 calendar days"
+    },
+    "ccr-marriage-license": {
+      "office": "ccr",
+      "title": "Applying for a marriage licence",
+      "group": "Frontline Services",
+      "requirementCount": 9,
+      "fee": {
+        "kind": "amount",
+        "text": "Family planning fee 100.00; application fee 300.00; marriage licence fee P200.00; solemnization fee"
+      },
+      "time": "3 hours and 10 days posting period"
+    },
+    "ccr-marriage-on-time": {
+      "office": "ccr",
+      "title": "Registering a marriage on time",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hour"
+    },
+    "ccr-marriage-delayed": {
+      "office": "ccr",
+      "title": "Registering a marriage late, or reconstructing a lost record",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "amount",
+        "text": "Service fee P500.00"
+      },
+      "time": "1 hour and 10-day posting period"
+    },
+    "ccr-certified-copies": {
+      "office": "ccr",
+      "title": "Getting a certified copy of a birth, marriage or death record",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "Local: P100.00. Abroad: P200.00"
+      },
+      "time": "1 hour"
+    },
+    "ccr-electronic-endorsement": {
+      "office": "ccr",
+      "title": "Endorsing a record to the PSA so a copy comes out sooner",
+      "group": "Frontline Services",
+      "requirementCount": 6,
+      "fee": {
+        "kind": "amount",
+        "text": "Electronic endorsement fee P100.00; certified copy of the registry book P5.00 per page"
+      },
+      "time": "1 hour, then 4 weeks from the PSA"
+    },
+    "ccr-petition-9048-10172": {
+      "office": "ccr",
+      "title": "Correcting a clerical error or changing a first name",
+      "group": "Frontline Services",
+      "requirementCount": 17,
+      "fee": {
+        "kind": "amount",
+        "text": "P3,200.00 for change of first name or correction of sex, date and month of birth; P1,200.00 for correction of an entry, plus P300.00 endorsement fee to PSA Legal; P5.00 per page authentication fee for supporting documents; publication fee paid to the publisher. A petitioner with a certificate of indigency is exempt from the filing fee"
+      },
+      "time": null
+    },
+    "ccr-change-surname-9255": {
+      "office": "ccr",
+      "title": "Letting a child use the father's surname",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "P200.00 authentication fee; P100.00 if with paternity; P155.00 mailing fee; P5.00 per page for a photocopy certified from the original by the Local Civil Registrar"
+      },
+      "time": "2 hours"
+    },
+    "ccr-court-decrees": {
+      "office": "ccr",
+      "title": "Registering a court decree on adoption, annulment or legal separation",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "P500.00 for registration of an application of a foreign decree or adoption; P700.00 for registration of an annulment or declaration of nullity of marriage; P5.00 per page for a photocopy certified from the original"
+      },
+      "time": "2 hours"
+    },
+    "ccr-supplemental-report": {
+      "office": "ccr",
+      "title": "Adding information left blank on a record",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "P200.00"
+      },
+      "time": "2 hours"
+    },
+    "ccr-other-certificates": {
+      "office": "ccr",
+      "title": "Getting other civil registry certifications",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "P100.00"
+      },
+      "time": "1 hour"
+    },
+    "ccr-email-verification": {
+      "office": "ccr",
+      "title": "Checking a record by email without going to the office",
+      "group": "Frontline Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 hours"
+    },
+    "ceo-truck-ban-permit": {
+      "office": "ceo",
+      "title": "Getting a special permit to drive through the truck ban",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "750 (Class A) below 4,500 gross weight; 1,000 (Class B) 4,500 to 12,000 gross weight; 1,250 (Class C) above 12,000 gross weight"
+      },
+      "time": "1 day, 1 hour & ten minutes"
+    },
+    "ceo-road-use-permit": {
+      "office": "ceo",
+      "title": "Getting a permit to use a road for an event",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "350.00 pesos per day of the activity"
+      },
+      "time": "1 hour & 55 minutes"
+    },
+    "ceo-banner-permit": {
+      "office": "ceo",
+      "title": "Getting a permit to hang a banner, tarpaulin or streamer",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "24.00 pesos per sq.m. per week per piece, with an additional charge for the dismantling fee based on the number of banners per week"
+      },
+      "time": "1 day, 1 hour & five minutes"
+    },
+    "ceo-assistance-researchers": {
+      "office": "ceo",
+      "title": "Asking the office for data or records for research",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 day, 1 hour & five minutes"
+    },
+    "ceo-assistance-students-ojt": {
+      "office": "ceo",
+      "title": "Arranging an immersion, practicum or OJT placement",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 hours and 25 minutes"
+    },
+    "ceo-burial-accommodation": {
+      "office": "ceo",
+      "title": "Getting a certificate of burial accommodation",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hour and 25 minutes"
+    },
+    "ceo-pow-one-storey": {
+      "office": "ceo",
+      "title": "Program of works and estimates for a one-storey building",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "13 days, 2 hours & 30 minutes"
+    },
+    "ceo-pow-two-storey": {
+      "office": "ceo",
+      "title": "Program of works and estimates for a two-storey building",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "19 days, 2 hours & 30 minutes"
+    },
+    "ceo-pow-three-storey": {
+      "office": "ceo",
+      "title": "Program of works and estimates for a three-storey building",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "26 days, 2 hours & 30 minutes"
+    },
+    "ceo-pow-roads": {
+      "office": "ceo",
+      "title": "Program of works and estimates for a road project",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "ceo-pow-drainage": {
+      "office": "ceo",
+      "title": "Program of works and estimates for a drainage project",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "ceo-pow-water-system": {
+      "office": "ceo",
+      "title": "Program of works and estimates for a water system project",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "ceo-pow-bridges": {
+      "office": "ceo",
+      "title": "Program of works and estimates for a bridge project",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "ceo-pow-barangay": {
+      "office": "ceo",
+      "title": "Program of works and estimates for a barangay project",
+      "group": "Internal Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "37 days, 2 hours & 30 minutes"
+    },
+    "ceo-barangay-final-inspection": {
+      "office": "ceo",
+      "title": "Getting a final inspection report on a finished barangay project",
+      "group": "Internal Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 days, 4 hours & 40 minutes"
+    },
+    "ceo-streetlight-repair": {
+      "office": "ceo",
+      "title": "Reporting a broken streetlight",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "7 days"
+    },
+    "ceo-vehicle-repair": {
+      "office": "ceo",
+      "title": "Getting a city vehicle or heavy equipment repaired",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "7 days"
+    },
+    "ceo-road-drainage-maintenance": {
+      "office": "ceo",
+      "title": "Reporting a road or drainage that needs repair",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "7 days"
+    },
+    "ceo-construction-plans": {
+      "office": "ceo",
+      "title": "Preparation of construction plans for a city building or flagship project",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 weeks to 2 Months"
+    },
+    "ceo-annual-inspection-simple": {
+      "office": "ceo",
+      "title": "Annual inspection certificate for a small business",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 days, 1 hr. & 45 mins. (for simple construction / establishment)"
+    },
+    "ceo-annual-inspection-complex": {
+      "office": "ceo",
+      "title": "Annual inspection certificate for a large business",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "5 days, 1 hr. & 45 mins. (for complex construction / establishment)"
+    },
+    "ceo-excavation-permit-maintenance": {
+      "office": "ceo",
+      "title": "Getting an excavation permit to dig on a city road",
+      "group": "External Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": null
+    },
+    "ceo-building-permit": {
+      "office": "ceo",
+      "title": "Getting a building permit",
+      "group": "External Services",
+      "requirementCount": 16,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": null
+    },
+    "ceo-certificate-occupancy": {
+      "office": "ceo",
+      "title": "Getting a certificate of occupancy",
+      "group": "External Services",
+      "requirementCount": 8,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": null
+    },
+    "ceo-electrical-permit": {
+      "office": "ceo",
+      "title": "Getting an electrical permit or a certificate of electrical inspection",
+      "group": "External Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": null
+    },
+    "ceo-mechanical-permit": {
+      "office": "ceo",
+      "title": "Getting a mechanical permit",
+      "group": "External Services",
+      "requirementCount": 8,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": null
+    },
+    "ceo-mechanical-permit-to-operate": {
+      "office": "ceo",
+      "title": "Getting a mechanical permit to operate",
+      "group": "External Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": null
+    },
+    "ceo-demolition-permit": {
+      "office": "ceo",
+      "title": "Getting a demolition permit",
+      "group": "External Services",
+      "requirementCount": 8,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": null
+    },
+    "ceo-excavation-ground-preparation-permit": {
+      "office": "ceo",
+      "title": "Getting an excavation and ground preparation permit",
+      "group": "External Services",
+      "requirementCount": 8,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": null
+    },
+    "ceo-sidewalk-scaffolding-permit": {
+      "office": "ceo",
+      "title": "Getting a temporary sidewalk enclosure or scaffolding permit",
+      "group": "External Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": null
+    },
+    "coop-registration-endorsement": {
+      "office": "city-coop",
+      "title": "Registering a new cooperative",
+      "group": "Frontline Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "coop-orientation": {
+      "office": "city-coop",
+      "title": "Requesting an orientation",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "coop-pmes": {
+      "office": "city-coop",
+      "title": "Requesting a Pre-Membership Education Seminar",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "coop-mandatory-report": {
+      "office": "city-coop",
+      "title": "Endorsing a mandatory cooperative report",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "coop-mandatory-training": {
+      "office": "city-coop",
+      "title": "Arranging a mandatory training",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "coop-business-permit-endorsement": {
+      "office": "city-coop",
+      "title": "Endorsement for a cooperative's business permit",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "coop-cso-accreditation": {
+      "office": "city-coop",
+      "title": "Endorsement for civil society organization accreditation",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "cmo-client-assistance": {
+      "office": "cmo",
+      "title": "Asking the Mayor's Office for medical, burial or financial assistance",
+      "group": "External Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "15 MINS."
+    },
+    "cmo-document-receiving": {
+      "office": "cmo",
+      "title": "Getting a document signed by the Mayor",
+      "group": "External Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "40 MINS."
+    },
+    "cmo-venue-booking": {
+      "office": "cmo",
+      "title": "Booking a city venue for an event",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "P40,000.00 to P60,000.00; P350 a day"
+      },
+      "time": "23 MINS."
+    },
+    "cmo-appointments": {
+      "office": "cmo",
+      "title": "Requesting a meeting or inviting the Mayor",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "10 MINS."
+    },
+    "cpdo-lc-new-business": {
+      "office": "cpdo",
+      "title": "Locational clearance for a new business permit",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "One (1) day max."
+    },
+    "cpdo-lc-business-renewal": {
+      "office": "cpdo",
+      "title": "Locational clearance for a business permit renewal",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "One (1) day MAXIMUM"
+    },
+    "cpdo-lc-building-permit": {
+      "office": "cpdo",
+      "title": "Locational clearance for a building permit",
+      "group": "Frontline Services",
+      "requirementCount": 14,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "One (1) day max."
+    },
+    "cpdo-site-zoning-certification": {
+      "office": "cpdo",
+      "title": "Getting a site zoning or land use certification",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "One (1) day Maximum"
+    },
+    "cpdo-lgu-endorsements": {
+      "office": "cpdo",
+      "title": "Getting an LGU endorsement or other certification",
+      "group": "Frontline Services",
+      "requirementCount": 9,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "One (1) Working Day Max."
+    },
+    "cpdo-da-certification": {
+      "office": "cpdo",
+      "title": "Requesting a Department of Agriculture certification",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "Three (3) working days max. excluding DA Processing Time."
+    },
+    "cpdo-land-use-reclassification": {
+      "office": "cpdo",
+      "title": "Applying to reclassify or rezone land",
+      "group": "Frontline Services",
+      "requirementCount": 14,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "Thirty Three (33) Working Days Maximun"
+    },
+    "cpdo-palc": {
+      "office": "cpdo",
+      "title": "Preliminary approval and locational clearance for a subdivision",
+      "group": "Frontline Services",
+      "requirementCount": 10,
+      "fee": {
+        "kind": "amount",
+        "text": "Processing fee Php 360.00 per hectare (PD 957), Php 90.00 per hectare (BP 220 socialized), Php 216.00 per hectare (BP 220 economic); inspection fee Php 1,500.00 per hectare"
+      },
+      "time": "33 DAYS (MAXIMUM)"
+    },
+    "cpdo-msla-free-patent": {
+      "office": "cpdo",
+      "title": "Endorsement for a residential free patent or public land application",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "Certification fee Php 216.00; inspection fee Php 1,500.00"
+      },
+      "time": "15 DAYS (MAXIMUM)"
+    },
+    "cpdo-4ph-housing": {
+      "office": "cpdo",
+      "title": "Applying to the 4PH national housing programme",
+      "group": "Frontline Services",
+      "requirementCount": 8,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 DAY (MAXIMUM)"
+    },
+    "cpdo-barangay-development-planning": {
+      "office": "cpdo",
+      "title": "Barangay development plan and investment programme review",
+      "group": "Frontline Services",
+      "requirementCount": 14,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "One (1) Day"
+    },
+    "cpdo-ppd-data-request": {
+      "office": "cpdo",
+      "title": "Requesting planning data or research assistance",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "One (1) Day"
+    },
+    "cpdo-spd-technical-assistance": {
+      "office": "cpdo",
+      "title": "Technical assistance and copies of studies or maps",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "Certified copy of a record P50.00 per page; photocopy of documents P5.00 per page; certification or annotation P50.00. Computer-generated maps: black and white bond size P50.00, coloured bond size P100.00, black and white A3 P150.00, thematic maps bond size P200.00, vicinity maps bond size P150.00"
+      },
+      "time": "3 DAYS (MAXIMUM)"
+    },
+    "cpdo-resd-birth-location-certification": {
+      "office": "cpdo",
+      "title": "Certification of the location named on a birth or marriage certificate",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "Certification fee Php 50.00"
+      },
+      "time": "3 DAYS (MAXIMUM)"
+    },
+    "cpdo-resd-data-request": {
+      "office": "cpdo",
+      "title": "Requesting city data, maps or the socio-economic profile",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "Computer-generated maps: black and white bond paper Php 50.00; coloured bond paper Php 100.00; black and white A3 Php 100.00; coloured A3 Php 200.00; land use or thematic maps bond size Php 150.00; land use or thematic maps A3 Php 200.00; tax index maps bond paper Php 200.00; tax index maps A3 Php 300.00; vicinity or location maps black and white bond Php 150.00; vicinity or location maps coloured bond Php 200.00; vicinity or location maps black and white A3 Php 200.00; vicinity or location maps coloured A3 Php 200.00; two-colour plotter prints from Php 2,000.00; full-colour plotter prints from Php 3,000.00. Computer-generated land information: name of owner, title number, lot number, land area and other information Php 20.00; computer print of land information on bond paper Php 125.00. Other fees: certified true copy of records Php 50.00 per page; photocopy of any other copy Php 35.00 per page"
+      },
+      "time": "3 DAYS (MAXIMUM)"
+    },
+    "cpdo-incoming-communications": {
+      "office": "cpdo",
+      "title": "Sending a letter or document to the office",
+      "group": "Internal Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 DAYS (MAXIMUM)"
+    },
+    "cpdo-outgoing-communications": {
+      "office": "cpdo",
+      "title": "How the office sends out its own correspondence",
+      "group": "Internal Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 DAYS (MAXIMUM)"
+    },
+    "cswdo-financial-assistance-aics": {
+      "office": "cswdo",
+      "title": "Limited Financial Assistance / Assistance to Individuals in Crisis Situations (AICS)",
+      "group": "External Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 working days and 4 hours and 35 minutes"
+    },
+    "cswdo-certificate-of-indigency": {
+      "office": "cswdo",
+      "title": "Certificate of Indigency, assessment report, social case study or referral",
+      "group": "External Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 working days and 35 minutes"
+    },
+    "cswdo-philhealth-financial-capability": {
+      "office": "cswdo",
+      "title": "PhilHealth Universal Health Care certification of financial capability",
+      "group": "External Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hour and 15 minutes"
+    },
+    "cswdo-solo-parent-id": {
+      "office": "cswdo",
+      "title": "Solo Parent ID",
+      "group": "External Services",
+      "requirementCount": 6,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 working days and 41 minutes"
+    },
+    "cto-business-tax-billing-statement": {
+      "office": "cto",
+      "title": "Request for Business Tax Quarterly Billing Statement",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "7 Minutes"
+    },
+    "cto-real-property-tax-statement": {
+      "office": "cto",
+      "title": "Request for Real Property Tax Statement of Account",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "9 Minutes"
+    },
+    "cto-assessment-of-business-tax": {
+      "office": "cto",
+      "title": "Assessment of Business Tax",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "20 Minutes"
+    },
+    "cto-business-tax-previous-year-delinquency": {
+      "office": "cto",
+      "title": "Assessment of Business Tax Previous Year Delinquency",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "13 Minutes"
+    },
+    "cto-assessment-of-transfer-tax": {
+      "office": "cto",
+      "title": "Assessment of Transfer Tax",
+      "group": "Frontline Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "amount",
+        "text": "Seventy-Five Percent (75%) of One Percent (1%) of the total consideration or FMV, whichever is higher"
+      },
+      "time": "20 Minutes"
+    },
+    "cto-payment-of-business-tax": {
+      "office": "cto",
+      "title": "Payment of Business Tax / Permit",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "5 Minutes"
+    },
+    "cto-payment-of-real-property-tax": {
+      "office": "cto",
+      "title": "Payment of Real Property Tax",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "5 Minutes"
+    },
+    "cto-payment-of-transfer-tax": {
+      "office": "cto",
+      "title": "Payment of Transfer Tax",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "Seventy-Five Percent (75%) of One Percent (1%) of the total consideration or FMV, whichever is higher. Twenty-Five Percent (25%) surcharge in case of failure to pay the tax imposed on time. Two Percent (2%) interest per month from the due date until the tax is fully paid, but in no case shall the total interest on the unpaid amount or a portion thereof exceed eighteen (18) months."
+      },
+      "time": "5 Minutes"
+    },
+    "cto-payment-of-community-tax": {
+      "office": "cto",
+      "title": "Payment of Community Tax",
+      "group": "Frontline Services",
+      "requirementCount": 6,
+      "fee": {
+        "kind": "amount",
+        "text": "For Individual: Five Pesos (P5.00) and an annual additional tax of One Peso (P1.00) for every One Thousand Pesos (P1,000.00) of income regardless whether from business, exercise of profession or from property, which in no case shall exceed Five Thousand Pesos (P5,000.00). For Juridical Person: Five Hundred Pesos (P500.00) and an annual additional tax which in no case shall exceed Ten Thousand Pesos (P10,000.00) in accordance with the provision under the LGC."
+      },
+      "time": null
+    },
+    "cto-payment-of-ptr-and-occupation-tax": {
+      "office": "cto",
+      "title": "Payment of Professional Tax Receipt (PTR) and Occupation Tax",
+      "group": "Frontline Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "7 Minutes"
+    },
+    "cto-payment-of-other-taxes-fees-charges": {
+      "office": "cto",
+      "title": "Payment of Other Taxes, Fees and Charges",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "9 Minutes"
+    },
+    "cto-sealing-weights-measures-retailers": {
+      "office": "cto",
+      "title": "Sealing and Licensing of Weighing Scales (Retailers)",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "12 minutes for Retailers"
+    },
+    "cto-sealing-weights-measures-fuel-dispensers": {
+      "office": "cto",
+      "title": "Sealing and Licensing of Fuel Dispenser Pumps (Gasoline Stations)",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "ordinance",
+        "text": "Fee set by ordinance"
+      },
+      "time": "14 minutes for Gasoline"
+    },
+    "cto-certification-retirement-of-business": {
+      "office": "cto",
+      "title": "Issuance of Certification for Retirement of Business",
+      "group": "Frontline Services",
+      "requirementCount": 6,
+      "fee": {
+        "kind": "amount",
+        "text": "Based on the assessment. Certification Fee of Php 50.00."
+      },
+      "time": "10 Minutes"
+    },
+    "cto-real-property-tax-clearance": {
+      "office": "cto",
+      "title": "Issuance of Real Property Tax Clearance",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "amount",
+        "text": "Certification Fee of Php 50.00"
+      },
+      "time": null
+    },
+    "cto-salaries-monetary-claims-cash": {
+      "office": "cto",
+      "title": "Payment for Salaries and Other Monetary Claims (by Cash)",
+      "group": "Frontline Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "11 Minutes"
+    },
+    "cto-salaries-monetary-claims-check": {
+      "office": "cto",
+      "title": "Payment for Salaries and Other Monetary Claims (by Check)",
+      "group": "Frontline Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "13 Minutes"
+    },
+    "cto-salaries-monetary-claims-electronic": {
+      "office": "cto",
+      "title": "Payment for Salaries and Other Monetary Claims (by Electronic Payment)",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "5 Minutes"
+    },
+    "cto-accountable-forms-non-deputized": {
+      "office": "cto",
+      "title": "Issuance of Accountable Forms for Non-Deputized Officers",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "Php 100.00 per pad"
+      },
+      "time": "25 Minutes"
+    },
+    "cto-accountable-forms-revenue-collectors": {
+      "office": "cto",
+      "title": "Issuance of Accountable Forms for Revenue Collectors",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "18 Minutes"
+    },
+    "cto-ctc-for-deputized-officers": {
+      "office": "cto",
+      "title": "Issuance of CTC for Deputized Officers",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "24 Minutes"
+    },
+    "cvo-treatment-in-patient": {
+      "office": "cvo",
+      "title": "Bringing an animal in for treatment",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "cvo-treatment-out-patient": {
+      "office": "cvo",
+      "title": "Asking for a farm or home visit",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "cvo-health-certificate": {
+      "office": "cvo",
+      "title": "Getting a veterinary health certificate to travel with a pet",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "P100.00 per head"
+      },
+      "time": null
+    },
+    "cvo-animal-propagation": {
+      "office": "cvo",
+      "title": "Breeding, artificial insemination and livestock advice",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "Varies, according to the price of the semen"
+      },
+      "time": null
+    },
+    "cvo-pet-pre-registration": {
+      "office": "cvo",
+      "title": "Barangay pre-registration of dogs and cats",
+      "group": "External Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "cvo-rabies-vaccination": {
+      "office": "cvo",
+      "title": "Rabies mass vaccination",
+      "group": "External Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "cvo-stray-animals": {
+      "office": "cvo",
+      "title": "Reporting stray dogs and cats",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "Settled at the City Treasurer's Office; the charter publishes no amount"
+      },
+      "time": null
+    },
+    "eemd-albay-stall-awarding": {
+      "office": "eemd-albay",
+      "title": "Being awarded a vacant market stall",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "eemd-albay-lease-contract": {
+      "office": "eemd-albay",
+      "title": "Signing a market stall lease contract",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 days and 28 minutes"
+    },
+    "eemd-legazpi-new-stall-lease": {
+      "office": "eemd-legazpi",
+      "title": "Applying for a new stall lease",
+      "group": "External Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "amount",
+        "text": "As per approved rates"
+      },
+      "time": "21 working days & 20 minutes"
+    },
+    "eemd-legazpi-renew-stall-lease": {
+      "office": "eemd-legazpi",
+      "title": "Renewing a stall lease",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "As per approved rates"
+      },
+      "time": "30 minutes"
+    },
+    "eemd-legazpi-market-clearance": {
+      "office": "eemd-legazpi",
+      "title": "Getting a market clearance",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "Based on arrears"
+      },
+      "time": "20 minutes"
+    },
+    "eemd-legazpi-terminate-lease": {
+      "office": "eemd-legazpi",
+      "title": "Ending a stall lease",
+      "group": "External Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "amount",
+        "text": "Based on arrears"
+      },
+      "time": "45 minutes"
+    },
+    "eemd-legazpi-promotional-sales": {
+      "office": "eemd-legazpi",
+      "title": "Getting a permit for a promotional sale",
+      "group": "External Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "As per approved rates"
+      },
+      "time": "35 minutes"
+    },
+    "eemd-legazpi-complaint": {
+      "office": "eemd-legazpi",
+      "title": "Making a complaint about the market",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "8 days and 20 minutes"
+    },
+    "gad-incoming-communications": {
+      "office": "gad",
+      "title": "Writing to the GAD Division",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "13 minutes"
+    },
+    "gad-referral-services": {
+      "office": "gad",
+      "title": "Asking for GAD information or a referral",
+      "group": "External Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "gad-training-walk-in": {
+      "office": "gad",
+      "title": "Asking about GAD training in person",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "13 minutes"
+    },
+    "gad-training-phone": {
+      "office": "gad",
+      "title": "Asking about GAD training by phone",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "5 minutes"
+    },
+    "gad-training-written": {
+      "office": "gad",
+      "title": "Requesting a GAD training in writing",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "8 days and 32 minutes"
+    },
+    "gad-barangay-gpb-assistance": {
+      "office": "gad",
+      "title": "Help preparing a barangay GAD plan and budget",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 hours & 2 minutes"
+    },
+    "gad-barangay-gpb-compilation": {
+      "office": "gad",
+      "title": "Submitting a barangay GAD plan and accomplishment report",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 day, 1 hour & 5 minutes"
+    },
+    "gad-department-gpb-assistance": {
+      "office": "gad",
+      "title": "Help preparing a department GAD plan and budget",
+      "group": "Internal Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 hours & 2 minutes"
+    },
+    "gad-internal-training-request": {
+      "office": "gad",
+      "title": "City staff asking about GAD training",
+      "group": "Internal Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "gad-internal-training-phone": {
+      "office": "gad",
+      "title": "City staff asking about GAD training by phone",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "5 minutes"
+    },
+    "gso-purchase-request": {
+      "office": "gso",
+      "title": "Filing a purchase request and getting the mode of procurement certified",
+      "group": "Procurement Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 day 5 minutes"
+    },
+    "gso-philgeps-posting": {
+      "office": "gso",
+      "title": "Posting a procurement on PhilGEPS",
+      "group": "Procurement Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 hours"
+    },
+    "gso-rfq-abstract": {
+      "office": "gso",
+      "title": "Request for quotation and abstract of canvass",
+      "group": "Procurement Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 days"
+    },
+    "gso-purchase-order": {
+      "office": "gso",
+      "title": "Preparing a purchase order",
+      "group": "Procurement Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 hours"
+    },
+    "gso-inspection-acceptance": {
+      "office": "gso",
+      "title": "Accepting a delivery and issuing the supplies",
+      "group": "Procurement Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 days and 4 hours"
+    },
+    "gso-coa-receipt": {
+      "office": "gso",
+      "title": "Submitting the COA receipt",
+      "group": "Procurement Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hour"
+    },
+    "gso-procurement-clearance": {
+      "office": "gso",
+      "title": "Clearing a completed procurement",
+      "group": "Procurement Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 hours"
+    },
+    "gso-letter-of-intent": {
+      "office": "gso",
+      "title": "Filing a letter of intent as a prospective bidder",
+      "group": "Procurement Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "30 minutes"
+    },
+    "gso-bac-queries": {
+      "office": "gso",
+      "title": "Asking the Bids and Awards Committee a question",
+      "group": "Procurement Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "4 hours"
+    },
+    "gso-mayors-solicitation": {
+      "office": "gso",
+      "title": "Following up a solicitation approved by the City Mayor",
+      "group": "Procurement Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "20 days 40 minutes"
+    },
+    "gso-employee-clearance": {
+      "office": "gso",
+      "title": "Getting a clearance when you leave city employment",
+      "group": "Administrative Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 hours 40 minutes"
+    },
+    "hrmo-recruitment-selection-placement": {
+      "office": "hrmo",
+      "title": "Recruitment, Selection and Placement",
+      "group": "External Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "29 days, 3 hrs. & 20 minutes"
+    },
+    "hrmo-work-immersion-ojt-deployment": {
+      "office": "hrmo",
+      "title": "Work Immersion / On-the-Job Trainees (WI/OJT) Deployment",
+      "group": "External Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "16 days, 2 hrs. & 52 minutes"
+    },
+    "hrmo-contract-of-services-job-order-appointments": {
+      "office": "hrmo",
+      "title": "Preparation of Contract of Services or Appointments of Job Orders",
+      "group": "Internal Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "hrmo-certificate-of-employment": {
+      "office": "hrmo",
+      "title": "Issuance of Certificate of Employment",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "17 minutes"
+    },
+    "hrmo-service-record": {
+      "office": "hrmo",
+      "title": "Issuance of Service Record",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "27 minutes"
+    },
+    "hrmo-travel-orders-ld": {
+      "office": "hrmo",
+      "title": "Preparation of Travel Orders of City Employees relative to Learning and Development (L&D) Interventions",
+      "group": "Internal Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 days & 1 hr."
+    },
+    "hrmo-application-for-leave": {
+      "office": "hrmo",
+      "title": "Processing Application for Leave",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "5 days & 2 hrs."
+    },
+    "hrmo-processing-retirement": {
+      "office": "hrmo",
+      "title": "Processing Retirement",
+      "group": "Internal Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "ocenr-permit-to-dump": {
+      "office": "ocenr",
+      "title": "Getting a Permit to Dump at the city disposal facility",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 Hour and 35 Minutes"
+    },
+    "ocenr-slf-visitors-pass": {
+      "office": "ocenr",
+      "title": "Visiting the city Sanitary Landfill Facility",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hour and 18 minutes"
+    },
+    "ocenr-ec-webinar-noncompliant": {
+      "office": "ocenr",
+      "title": "Environmental Certificate by online seminar, for a lapsed or missing record",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment."
+      },
+      "time": "2 Hours and 55 Minutes"
+    },
+    "ocenr-ec-webinar-new-renewal": {
+      "office": "ocenr",
+      "title": "Environmental Certificate by online seminar, for a new or renewing business",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment."
+      },
+      "time": "2 Hours and 50 Minutes"
+    },
+    "ocenr-ec-seminar-noncompliant": {
+      "office": "ocenr",
+      "title": "Environmental Certificate in person, for a lapsed or missing record",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment."
+      },
+      "time": "2 Hours and 23 Minutes"
+    },
+    "ocenr-ec-seminar-new-renewal": {
+      "office": "ocenr",
+      "title": "Environmental Certificate in person, for a new or renewing business",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment."
+      },
+      "time": "2 Hours and 13 Minutes"
+    },
+    "ocenr-no-objection-cut-tree": {
+      "office": "ocenr",
+      "title": "Getting a Certificate of No Objection to cut a tree",
+      "group": "External Services",
+      "requirementCount": 15,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "6 days and 40 minutes"
+    },
+    "ocenr-chainsaw-certification": {
+      "office": "ocenr",
+      "title": "Getting a certification to register a chainsaw",
+      "group": "External Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hour and 10 minutes"
+    },
+    "ocenr-tree-seedlings": {
+      "office": "ocenr",
+      "title": "Requesting free tree seedlings",
+      "group": "External Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "4 hours and 35 minutes"
+    },
+    "ocenr-iec-campaign": {
+      "office": "ocenr",
+      "title": "Requesting an environmental talk or IEC campaign",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "20 Minutes"
+    },
+    "ocenr-septic-desludging": {
+      "office": "ocenr",
+      "title": "Having a septic tank desludged",
+      "group": "External Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "Septage fee, as assessed by the City Treasurer's Office or the City Engineer's Office"
+      },
+      "time": "2 hours 12 minutes"
+    },
+    "orhcd-relocation-site": {
+      "office": "orhcd",
+      "title": "Applying for a slot in a relocation site",
+      "group": "Frontline Services",
+      "requirementCount": 9,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-city-property": {
+      "office": "orhcd",
+      "title": "Buying a city-owned lot through socialized housing",
+      "group": "Frontline Services",
+      "requirementCount": 9,
+      "fee": {
+        "kind": "amount",
+        "text": "The appraised value set by the Appraisal Committee, on an instalment scheme, plus penalties for past due amounts"
+      },
+      "time": null
+    },
+    "orhcd-technical-assistance": {
+      "office": "orhcd",
+      "title": "Getting a subdivision plan or scheme prepared",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-homeowners-association": {
+      "office": "orhcd",
+      "title": "Forming a homeowners' association",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-aleco-lcwd-certification": {
+      "office": "orhcd",
+      "title": "Certification for an ALECO or LCWD connection",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-other-certifications": {
+      "office": "orhcd",
+      "title": "Requesting any other certification",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-queries": {
+      "office": "orhcd",
+      "title": "Asking the office a question",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-udha": {
+      "office": "orhcd",
+      "title": "Implementation of the Urban Development and Housing Act",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-financial-assistance": {
+      "office": "orhcd",
+      "title": "Support with financial assistance after eviction",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-incoming-communications": {
+      "office": "orhcd",
+      "title": "Submitting a letter or document to the office",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-outgoing-communications": {
+      "office": "orhcd",
+      "title": "How the office releases its own correspondence",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "orhcd-agency-meetings": {
+      "office": "orhcd",
+      "title": "Requesting a meeting with a national agency",
+      "group": "Internal Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "pdao-pwd-id": {
+      "office": "pdao",
+      "title": "Getting a PWD ID, medicine booklet and purchase booklet",
+      "group": "Frontline Services",
+      "requirementCount": 10,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hour and 13 minutes"
+    },
+    "peso-jobseekers": {
+      "office": "peso",
+      "title": "Looking for work",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "peso-employers": {
+      "office": "peso",
+      "title": "Hiring through PESO as an employer",
+      "group": "Frontline Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "peso-ofw-help-desk": {
+      "office": "peso",
+      "title": "OFW help desk",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "peso-spes": {
+      "office": "peso",
+      "title": "Special Program for the Employment of Students (SPES)",
+      "group": "Frontline Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "peso-jobstart": {
+      "office": "peso",
+      "title": "JobStart Philippines Program",
+      "group": "Frontline Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "peso-dole-grant-programs": {
+      "office": "peso",
+      "title": "Other DOLE grant-based programmes (TUPAD, GIP, DILEEP)",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "sp-receive-documents": {
+      "office": "sp-secretariat",
+      "title": "Submitting a document to the Sangguniang Panlungsod",
+      "group": "Frontline Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "sp-records-research": {
+      "office": "sp-secretariat",
+      "title": "Getting a copy of an ordinance or resolution",
+      "group": "Frontline Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "PHP 5.00 per photocopied page; PHP 50.00 per page for a certified true copy"
+      },
+      "time": null
+    },
+    "sp-franchise-renewal": {
+      "office": "sp-secretariat",
+      "title": "Renewing a tricycle or taxicle franchise",
+      "group": "Frontline Services",
+      "requirementCount": 12,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "sp-franchise-transfer": {
+      "office": "sp-secretariat",
+      "title": "Transferring a franchise to a family member",
+      "group": "Frontline Services",
+      "requirementCount": 9,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "sp-change-motor": {
+      "office": "sp-secretariat",
+      "title": "Changing the motor on a franchised tricycle",
+      "group": "Frontline Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": null
+    },
+    "sp-driver-id": {
+      "office": "sp-secretariat",
+      "title": "Getting a tricycle driver's ID",
+      "group": "Frontline Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "amount",
+        "text": "P50.00, but payment of the ID fee is suspended until there is a new express agreement to the contrary"
+      },
+      "time": null
+    }
+  }
+}

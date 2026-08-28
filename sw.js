@@ -3,7 +3,7 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v8';
+var CACHE_VERSION = 'v9';
 var STATIC_CACHE = 'betterlegazpi-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'betterlegazpi-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
@@ -17,6 +17,7 @@ var PRECACHE_URLS = [
   '/assets/css/footer.css',
   '/assets/css/accessibility.css',
   '/assets/css/service-hub.css',
+  '/assets/css/service-category.css',
   '/assets/css/home.css',
   '/assets/js/main.js',
   '/assets/js/info-bar.js',
