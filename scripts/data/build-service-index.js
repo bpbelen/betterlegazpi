@@ -106,9 +106,21 @@ function build() {
     }
   }
 
+  // The edition every office is expected to be on. An office whose charter differs
+  // is carrying an older document, and the category pages say so rather than letting
+  // a stale fee read as current - the City Health Office is still on its 2023
+  // charter because no 2026 edition has been published.
+  const { edition: currentEdition } = JSON.parse(
+    fs.readFileSync(path.join(ROOT, 'scripts/data/charter-sources.json'), 'utf8')
+  );
+  for (const office of Object.values(offices)) {
+    office.editionIsCurrent = office.edition === currentEdition;
+  }
+
   return {
     // Generated file - do not edit. Run scripts/data/build-service-index.js.
     generatedFrom: 'data/offices/*.json',
+    currentEdition,
     officeCount: Object.keys(offices).length,
     serviceCount: Object.keys(services).length,
     offices,

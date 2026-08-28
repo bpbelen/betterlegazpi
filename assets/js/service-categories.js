@@ -252,10 +252,24 @@
           ${meta.abbreviation ? `<span class="sc-office-abbr">${esc(meta.abbreviation)}</span>` : ''}
         </span>
         <span class="sc-office-desc">${esc(office.description)}</span>
+        ${
+          // An office still on an older charter says so on the card, before anyone
+          // relies on a fee or a processing time from it.
+          meta.edition && !meta.editionIsCurrent
+            ? `<span class="sc-office-dated">
+                 <i class="bi bi-clock-history" aria-hidden="true"></i>
+                 <span><strong>${esc(meta.edition)}</strong> - no newer charter has been
+                 published for this office, so its fees and times are older than the rest
+                 of this site.</span>
+               </span>`
+            : ''
+        }
         <span class="sc-office-foot">
           <span class="sc-office-charter">
             <i class="bi bi-journal-text" aria-hidden="true"></i>
-            Citizen's Charter &middot; ${meta.serviceCount} services
+            Citizen's Charter &middot; ${meta.serviceCount} services${
+              meta.edition ? ` &middot; ${esc(meta.edition)}` : ''
+            }
           </span>
           <i class="bi bi-arrow-right" aria-hidden="true"></i>
         </span>

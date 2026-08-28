@@ -37,6 +37,7 @@ const CI_ROUTES = [
   // duplicate coverage - infrastructure.html represents that generation instead.
   '/services/infrastructure.html', // service-category.css, and the shared category renderer
   '/service-details/cto-services.html', // new tier A, 1442-line inline <style>
+  '/service-details/cho-services.html', // largest charter: 44 services across 12 divisions
   '/service-details/human-resource-management.html', // new tier B outlier
   '/statistics/index.html', // statistics.css
   '/budget/index.html', // budget.css

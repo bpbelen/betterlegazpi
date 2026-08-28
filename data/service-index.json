@@ -1,7 +1,8 @@
 {
   "generatedFrom": "data/offices/*.json",
-  "officeCount": 23,
-  "serviceCount": 216,
+  "currentEdition": "2026 First Edition",
+  "officeCount": 24,
+  "serviceCount": 260,
   "offices": {
     "abe": {
       "slug": "abe",
@@ -9,7 +10,8 @@
       "name": "Agricultural and Biosystems Engineering Division",
       "abbreviation": "ABE",
       "edition": "2026 First Edition",
-      "serviceCount": 4
+      "serviceCount": 4,
+      "editionIsCurrent": true
     },
     "bplo": {
       "slug": "bplo",
@@ -17,7 +19,8 @@
       "name": "Business Permits and Licensing Office",
       "abbreviation": "BPLO",
       "edition": "2026 First Edition",
-      "serviceCount": 12
+      "serviceCount": 12,
+      "editionIsCurrent": true
     },
     "cadc": {
       "slug": "cadc",
@@ -25,7 +28,8 @@
       "name": "City Anti-Drug Abuse Council",
       "abbreviation": "CADAC",
       "edition": "2026 First Edition",
-      "serviceCount": 5
+      "serviceCount": 5,
+      "editionIsCurrent": true
     },
     "cao": {
       "slug": "cao",
@@ -33,7 +37,8 @@
       "name": "City Agriculture Office",
       "abbreviation": "CAO",
       "edition": "2026 First Edition",
-      "serviceCount": 3
+      "serviceCount": 3,
+      "editionIsCurrent": true
     },
     "casso": {
       "slug": "casso",
@@ -41,7 +46,8 @@
       "name": "City Assessor's Office",
       "abbreviation": "CAssO",
       "edition": "2026 First Edition",
-      "serviceCount": 12
+      "serviceCount": 12,
+      "editionIsCurrent": true
     },
     "ccr": {
       "slug": "ccr",
@@ -49,7 +55,8 @@
       "name": "Office of the City Civil Registrar",
       "abbreviation": "CCR",
       "edition": "2026 First Edition",
-      "serviceCount": 17
+      "serviceCount": 17,
+      "editionIsCurrent": true
     },
     "ceo": {
       "slug": "ceo",
@@ -57,7 +64,17 @@
       "name": "City Engineer's Office",
       "abbreviation": "CEO",
       "edition": "2026 First Edition",
-      "serviceCount": 30
+      "serviceCount": 30,
+      "editionIsCurrent": true
+    },
+    "cho": {
+      "slug": "cho",
+      "route": "service-details/cho-services.html",
+      "name": "City Health Office",
+      "abbreviation": "CHO",
+      "edition": "2023 Edition",
+      "serviceCount": 44,
+      "editionIsCurrent": false
     },
     "city-coop": {
       "slug": "city-coop",
@@ -65,7 +82,8 @@
       "name": "City Cooperative Development Office",
       "abbreviation": "CCDO",
       "edition": "2026 First Edition",
-      "serviceCount": 7
+      "serviceCount": 7,
+      "editionIsCurrent": true
     },
     "cmo": {
       "slug": "cmo",
@@ -73,7 +91,8 @@
       "name": "City Mayor's Office",
       "abbreviation": "CMO",
       "edition": "2026 First Edition",
-      "serviceCount": 4
+      "serviceCount": 4,
+      "editionIsCurrent": true
     },
     "cpdo": {
       "slug": "cpdo",
@@ -81,7 +100,8 @@
       "name": "City Planning and Development Office",
       "abbreviation": "CPDO",
       "edition": "2026 First Edition",
-      "serviceCount": 17
+      "serviceCount": 17,
+      "editionIsCurrent": true
     },
     "cswdo": {
       "slug": "cswdo",
@@ -89,7 +109,8 @@
       "name": "City Social Welfare and Development Office",
       "abbreviation": "CSWDO",
       "edition": "2026 First Edition",
-      "serviceCount": 4
+      "serviceCount": 4,
+      "editionIsCurrent": true
     },
     "cto": {
       "slug": "cto",
@@ -97,7 +118,8 @@
       "name": "City Treasurer's Office",
       "abbreviation": "CTO",
       "edition": "2026 First Edition",
-      "serviceCount": 21
+      "serviceCount": 21,
+      "editionIsCurrent": true
     },
     "cvo": {
       "slug": "cvo",
@@ -105,7 +127,8 @@
       "name": "City Veterinary Office",
       "abbreviation": "CVO",
       "edition": "2026 First Edition",
-      "serviceCount": 7
+      "serviceCount": 7,
+      "editionIsCurrent": true
     },
     "eemd-albay": {
       "slug": "eemd-albay",
@@ -113,7 +136,8 @@
       "name": "Economic Enterprise Management Division, Albay Public Market",
       "abbreviation": "EEMD Albay",
       "edition": "2026 First Edition",
-      "serviceCount": 2
+      "serviceCount": 2,
+      "editionIsCurrent": true
     },
     "eemd-legazpi": {
       "slug": "eemd-legazpi",
@@ -121,7 +145,8 @@
       "name": "Economic Enterprise Management Division, Legazpi Public Market",
       "abbreviation": "EEMD Legazpi",
       "edition": "2026 First Edition",
-      "serviceCount": 6
+      "serviceCount": 6,
+      "editionIsCurrent": true
     },
     "gad": {
       "slug": "gad",
@@ -129,7 +154,8 @@
       "name": "Gender and Development Division",
       "abbreviation": "GAD",
       "edition": "2026 First Edition",
-      "serviceCount": 10
+      "serviceCount": 10,
+      "editionIsCurrent": true
     },
     "gso": {
       "slug": "gso",
@@ -137,7 +163,8 @@
       "name": "General Services Office",
       "abbreviation": "GSO",
       "edition": "2026 First Edition",
-      "serviceCount": 11
+      "serviceCount": 11,
+      "editionIsCurrent": true
     },
     "hrmo": {
       "slug": "hrmo",
@@ -145,7 +172,8 @@
       "name": "City Human Resource Management Office",
       "abbreviation": "CHRMO",
       "edition": "2026 First Edition",
-      "serviceCount": 8
+      "serviceCount": 8,
+      "editionIsCurrent": true
     },
     "ocenr": {
       "slug": "ocenr",
@@ -153,7 +181,8 @@
       "name": "Office of the City Environment and Natural Resources",
       "abbreviation": "OCENR",
       "edition": "2026 First Edition",
-      "serviceCount": 11
+      "serviceCount": 11,
+      "editionIsCurrent": true
     },
     "orhcd": {
       "slug": "orhcd",
@@ -161,7 +190,8 @@
       "name": "Office of Resettlement, Housing and Community Development",
       "abbreviation": "ORHCD",
       "edition": "2026 First Edition",
-      "serviceCount": 12
+      "serviceCount": 12,
+      "editionIsCurrent": true
     },
     "pdao": {
       "slug": "pdao",
@@ -169,7 +199,8 @@
       "name": "Persons with Disability Affairs Office",
       "abbreviation": "PDAO",
       "edition": "2026 First Edition",
-      "serviceCount": 1
+      "serviceCount": 1,
+      "editionIsCurrent": true
     },
     "peso": {
       "slug": "peso",
@@ -177,7 +208,8 @@
       "name": "Public Employment Service Office",
       "abbreviation": "PESO",
       "edition": "2026 First Edition",
-      "serviceCount": 6
+      "serviceCount": 6,
+      "editionIsCurrent": true
     },
     "sp-secretariat": {
       "slug": "sp-secretariat",
@@ -185,7 +217,8 @@
       "name": "Office of the Sangguniang Panlungsod, Secretariat",
       "abbreviation": "SP Secretariat",
       "edition": "2026 First Edition",
-      "serviceCount": 6
+      "serviceCount": 6,
+      "editionIsCurrent": true
     }
   },
   "services": {
@@ -1101,6 +1134,490 @@
         "text": "Fee on assessment"
       },
       "time": "2 days & 7 hrs."
+    },
+    "cho-medical-certificate": {
+      "office": "cho",
+      "title": "Getting a medical certificate",
+      "group": "Administrative Services",
+      "requirementCount": 7,
+      "fee": {
+        "kind": "amount",
+        "text": "Regular: P50.00; Student: P30.00"
+      },
+      "time": "21 minutes"
+    },
+    "cho-death-certificate": {
+      "office": "cho",
+      "title": "Getting a death certificate",
+      "group": "Administrative Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "amount",
+        "text": "P60.00"
+      },
+      "time": "44 minutes"
+    },
+    "cho-transfer-permit": {
+      "office": "cho",
+      "title": "Getting a transfer permit for a deceased person",
+      "group": "Administrative Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "P60.00"
+      },
+      "time": "11 minutes"
+    },
+    "cho-medical-team-request": {
+      "office": "cho",
+      "title": "Requesting a medical team, a mission or a speaker",
+      "group": "Administrative Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "5 days & 8 minutes"
+    },
+    "cho-medical-certificate-travel": {
+      "office": "cho",
+      "title": "Getting a medical certificate for travel",
+      "group": "Administrative Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "25 minutes"
+    },
+    "cho-certification-true-copy": {
+      "office": "cho",
+      "title": "Getting a certification or a certified true copy",
+      "group": "Administrative Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "P50.00"
+      },
+      "time": "24 minutes"
+    },
+    "cho-dental-checkup": {
+      "office": "cho",
+      "title": "Getting a dental check-up or a tooth extraction",
+      "group": "Dental Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "P120.00"
+      },
+      "time": "2 hrs. & 10 minutes"
+    },
+    "cho-dental-certificate": {
+      "office": "cho",
+      "title": "Getting a dental certificate",
+      "group": "Dental Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "P50.00"
+      },
+      "time": "55 minutes"
+    },
+    "cho-health-card-registration": {
+      "office": "cho",
+      "title": "Registering your health card or yellow card",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "15 minutes"
+    },
+    "cho-health-card-issuance": {
+      "office": "cho",
+      "title": "Getting a health card issued",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "amount",
+        "text": "Yellow card: health card P30.00, sputum P90.00, PTR fee P100.00. Pink and blue card (non-food handler): health card P30.00, sputum P90.00. Blue card (food handler): health card P30.00, sputum P90.00, stool P60.00, chest X-ray P120.00"
+      },
+      "time": "20 minutes"
+    },
+    "cho-water-refilling-station": {
+      "office": "cho",
+      "title": "Permits for a water refilling station",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "amount",
+        "text": "Operational permit P600.00; certificate of water potability P300.00; drinking water site clearance Level I P100.00, Level II P200.00; sanitary survey P150.00"
+      },
+      "time": "20 days"
+    },
+    "cho-sanitary-vehicle-clearance": {
+      "office": "cho",
+      "title": "Getting a sanitary clearance for a delivery vehicle",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "P150.00"
+      },
+      "time": "3 days & 10 minutes"
+    },
+    "cho-water-sampling": {
+      "office": "cho",
+      "title": "Requesting water sampling",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "P600.00"
+      },
+      "time": "7 days & 5 minutes"
+    },
+    "cho-fumigation": {
+      "office": "cho",
+      "title": "Requesting fumigation or fogging",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "14 days & 5 minutes"
+    },
+    "cho-sanitary-permit-registration": {
+      "office": "cho",
+      "title": "Registering a sanitary permit, health clearance or health card for a business",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 8,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "1 day & 5 minutes"
+    },
+    "cho-smoking-permit": {
+      "office": "cho",
+      "title": "Getting a smoking area permit",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "5 minutes"
+    },
+    "cho-sanitary-complaint": {
+      "office": "cho",
+      "title": "Filing a sanitary complaint",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 day & 10 minutes"
+    },
+    "cho-misting": {
+      "office": "cho",
+      "title": "Requesting misting or disinfection",
+      "group": "Environmental and Sanitation Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "10 minutes"
+    },
+    "cho-ambulance-request": {
+      "office": "cho",
+      "title": "Requesting the use of an ambulance",
+      "group": "Health Program Management Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 days & 14 minutes"
+    },
+    "cho-medical-team-hpmd": {
+      "office": "cho",
+      "title": "Requesting a medical team for an activity",
+      "group": "Health Program Management Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 days & 8 minutes"
+    },
+    "cho-ambulance-transfer": {
+      "office": "cho",
+      "title": "Requesting an ambulance to transfer a patient",
+      "group": "Health Program Management Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "3 days & 18 minutes"
+    },
+    "cho-rtpcr-antigen": {
+      "office": "cho",
+      "title": "Getting an RT-PCR or antigen test",
+      "group": "Health Program Management Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "45 minutes"
+    },
+    "cho-ekonsulta": {
+      "office": "cho",
+      "title": "Registering for Ekonsulta primary care",
+      "group": "Health Program Management Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "15 minutes"
+    },
+    "cho-lab-sputum-fecalysis": {
+      "office": "cho",
+      "title": "Sputum and fecalysis tests for a health card",
+      "group": "Laboratory Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "amount",
+        "text": "P90.00"
+      },
+      "time": "40 minutes"
+    },
+    "cho-lab-blood-chemistry": {
+      "office": "cho",
+      "title": "Blood chemistry and other laboratory tests",
+      "group": "Laboratory Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "amount",
+        "text": "Complete blood count P90.00; blood typing P90.00; urinalysis P60.00; fecalysis P60.00; sputum examination P90.00; FBS P130.00; total cholesterol P130.00; HDL cholesterol P220.00; LDL cholesterol P220.00; triglycerides P130.00; BUN P130.00; BUA P130.00; SGOT P220.00; SGPT P220.00"
+      },
+      "time": "2 days, 2 hrs. & 5 minutes"
+    },
+    "cho-lab-specimen-submission": {
+      "office": "cho",
+      "title": "Submitting a specimen and claiming results",
+      "group": "Laboratory Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "30 minutes"
+    },
+    "cho-medical-consultation": {
+      "office": "cho",
+      "title": "Seeing a doctor at the City Health Office",
+      "group": "Medical Services",
+      "requirementCount": 5,
+      "fee": {
+        "kind": "amount",
+        "text": "P50.00"
+      },
+      "time": "1 hr. & 2 minutes"
+    },
+    "cho-burial-transfer-signing": {
+      "office": "cho",
+      "title": "Getting a burial or transfer permit signed",
+      "group": "Medical Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "assessed",
+        "text": "Fee on assessment"
+      },
+      "time": "10 minutes"
+    },
+    "cho-medical-certificate-signing": {
+      "office": "cho",
+      "title": "Getting your medical certificate signed",
+      "group": "Medical Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "amount",
+        "text": "Medical certificate P50.00 regular, P50.00 student; bond P50.00; health card P30.00"
+      },
+      "time": "27 minutes"
+    },
+    "cho-nursing-general": {
+      "office": "cho",
+      "title": "General consultation and nursing services",
+      "group": "Nursing Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 hrs. & 58 minutes"
+    },
+    "cho-under-five-clinic": {
+      "office": "cho",
+      "title": "Under Five Clinic and childhood immunisation",
+      "group": "Nursing Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hr. & 35 minutes"
+    },
+    "cho-prenatal-postnatal": {
+      "office": "cho",
+      "title": "Prenatal and postnatal care",
+      "group": "Nursing Services",
+      "requirementCount": 4,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 hrs. & 5 minutes"
+    },
+    "cho-under-five-barangay": {
+      "office": "cho",
+      "title": "Under Five Clinic and immunisation at your barangay",
+      "group": "Nursing Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hr. & 35 minutes"
+    },
+    "cho-prenatal-barangay": {
+      "office": "cho",
+      "title": "Prenatal and postnatal care at your barangay",
+      "group": "Nursing Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "2 hrs. & 10 minutes"
+    },
+    "cho-ari-control": {
+      "office": "cho",
+      "title": "Care for a cough or difficulty breathing",
+      "group": "Nursing Services",
+      "requirementCount": 2,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "57 minutes"
+    },
+    "cho-mental-health": {
+      "office": "cho",
+      "title": "Mental health programme services",
+      "group": "Nursing Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "23 minutes"
+    },
+    "cho-nutrition": {
+      "office": "cho",
+      "title": "Nutrition assessment and counselling",
+      "group": "Nutrition Services",
+      "requirementCount": 0,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "1 hr."
+    },
+    "cho-family-planning": {
+      "office": "cho",
+      "title": "Family planning supplies and counselling",
+      "group": "Population Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "P100.00"
+      },
+      "time": "29 minutes"
+    },
+    "cho-pre-marriage-certificate": {
+      "office": "cho",
+      "title": "Pre-marriage counselling and certificate",
+      "group": "Population Services",
+      "requirementCount": 1,
+      "fee": {
+        "kind": "amount",
+        "text": "P100.00"
+      },
+      "time": "1 hr. & 15 minutes"
+    },
+    "cho-sti-checkup": {
+      "office": "cho",
+      "title": "Check-up for a sexually transmitted infection",
+      "group": "Social Hygiene Clinic Services",
+      "requirementCount": 0,
+      "fee": {
+        "kind": "amount",
+        "text": "P150.00"
+      },
+      "time": "2 hrs. & 12 minutes"
+    },
+    "cho-pap-smear": {
+      "office": "cho",
+      "title": "Getting a PAP smear",
+      "group": "Social Hygiene Clinic Services",
+      "requirementCount": 0,
+      "fee": {
+        "kind": "amount",
+        "text": "P170.00"
+      },
+      "time": "7 minutes"
+    },
+    "cho-hiv-rpr-hepb": {
+      "office": "cho",
+      "title": "Free HIV, RPR and Hepatitis B screening",
+      "group": "Social Hygiene Clinic Services",
+      "requirementCount": 0,
+      "fee": {
+        "kind": "free",
+        "text": "Free"
+      },
+      "time": "None"
+    },
+    "cho-tb-casefinding": {
+      "office": "cho",
+      "title": "TB testing and treatment",
+      "group": "TB DOTS Services",
+      "requirementCount": 0,
+      "fee": {
+        "kind": "amount",
+        "text": "P50.00"
+      },
+      "time": "1 hr. & 27 minutes"
+    },
+    "cho-xray": {
+      "office": "cho",
+      "title": "X-ray and ultrasound",
+      "group": "X-Ray Services",
+      "requirementCount": 3,
+      "fee": {
+        "kind": "amount",
+        "text": "X-ray P120.00; ultrasound P900.00"
+      },
+      "time": "22 minutes"
     },
     "coop-registration-endorsement": {
       "office": "city-coop",

@@ -132,6 +132,10 @@
       "tagline": "Health facilities, programmes and public health services",
       "offices": [
         {
+          "slug": "cho",
+          "description": "Medical and dental certificates, health cards, immunisation, prenatal and postnatal care, laboratory tests, X-ray, TB DOTS and confidential screening."
+        },
+        {
           "slug": "cvo",
           "description": "Rabies mass vaccination, dog and cat registration, and reporting stray animals."
         },

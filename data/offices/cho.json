@@ -1,0 +1,3010 @@
+{
+  "slug": "cho",
+  "route": "service-details/cho-services.html",
+  "charter": {
+    "office": "City Health Office",
+    "abbreviation": "CHO",
+    "edition": "2023 Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2023/09/CHO.pdf",
+    "transcript": "docs/sources/citizens-charter/cho.md",
+    "personnel": [
+      {
+        "name": "Dr. Fulbert Alec R. Gillego",
+        "position": "City Health Officer",
+        "unit": "City Health Office",
+        "isHead": true
+      },
+      {
+        "name": "Fatima F. Intia",
+        "position": "Contact person",
+        "unit": "Administrative Division"
+      },
+      {
+        "name": "Dr. Maylen A. Andes",
+        "position": "Contact person",
+        "unit": "Dental Division"
+      },
+      {
+        "name": "Jacquenette Ann V. Calamucha",
+        "position": "Contact person",
+        "unit": "Environmental Sanitation Section"
+      },
+      {
+        "name": "Maricel S. Banzuela",
+        "position": "Contact person",
+        "unit": "Health Program Management Division"
+      },
+      {
+        "name": "Ma. Rosario R. Balonzo",
+        "position": "Contact person",
+        "unit": "Health Program Management Division"
+      },
+      {
+        "name": "Ronald Joy Miña",
+        "position": "Contact person",
+        "unit": "Health Program Management Division"
+      },
+      {
+        "name": "Guadalyn D. Nuyda",
+        "position": "Contact person",
+        "unit": "Laboratory Section and X-Ray Unit"
+      },
+      {
+        "name": "Dr. Adelsa R. Tee",
+        "position": "Contact person",
+        "unit": "Medical Division"
+      },
+      {
+        "name": "Sheila L. Estipona",
+        "position": "Contact person",
+        "unit": "Nursing Division"
+      },
+      {
+        "name": "Mercy A. Morante",
+        "position": "Contact person",
+        "unit": "Nutrition Section"
+      },
+      {
+        "name": "Amylene B. Santillan",
+        "position": "Contact person",
+        "unit": "Population Section"
+      },
+      {
+        "name": "Portia O. Rogando",
+        "position": "Contact person",
+        "unit": "Social Hygiene Clinic"
+      },
+      {
+        "name": "Ma. Cristina P. De Leon",
+        "position": "Contact person",
+        "unit": "PPMD TB DOTS Services"
+      }
+    ],
+    "personnelNotes": [
+      "This charter names a contact person per division at the foot of each service rather than publishing a staff roster. The people listed here are those contacts, not a complete list of who works at the office. Their mobile numbers appear in the feedback mechanism.",
+      "Steps name positions - Administrative Aide I, Sanitary Inspector III, Nurse or Midwife on Duty - because that is what the charter's Person Responsible column records.",
+      "This is the 2023 edition. Every other office hub on this site carries a 2026 First Edition charter; no 2026 edition of the City Health Office charter has been published, so fees, times and named contacts here are three years older than the rest of the site."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Fill in a feedback form at the office, or call the division contact directly. Each division publishes its own number alongside the City Health Officer's.",
+      "howFeedbackIsProcessed": "The office asks short questions, considers the client's experience, acts on what it hears and shares the feedback with the whole office. Complaints are filed on Form 3 from the Public Assistance and Complaint Desk, dropped in the PACD box, and answered by getting the facts, offering a solution and, where warranted, disciplining the employee concerned.",
+      "contacts": [
+        "09771833638 - Dr. Fulbert Alec R. Gillego, City Health Officer",
+        "09175613843 - Fatima F. Intia, Administrative Division",
+        "09173118654 - Dr. Maylen A. Andes, Dental Division",
+        "09392625123 - Jacquenette Ann V. Calamucha, Environmental Sanitation",
+        "09171365502 - Maricel S. Banzuela, Health Program Management",
+        "09696499777 - Guadalyn D. Nuyda, Laboratory and X-Ray",
+        "09453414544 - Dr. Adelsa R. Tee, Medical Division",
+        "09322827914 - Sheila L. Estipona, Nursing Division",
+        "09955726257 - Mercy A. Morante, Nutrition Section",
+        "09238779953 - Amylene B. Santillan, Population Section",
+        "09171085509 - Portia O. Rogando, Social Hygiene Clinic",
+        "09177237060 - Ma. Cristina P. De Leon, TB DOTS"
+      ]
+    },
+    "services": [
+      {
+        "id": "cho-medical-certificate",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Administrative Services",
+        "title": "Getting a medical certificate",
+        "description": "The certificate the City Health Office issues for enrolment, scholarship, employment, training, security guard licensing, OJT or a fitness-to-work clearance. Which laboratory tests you need first depends on which of those you are applying for.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "For enrolment or scholarship: chest X-ray, complete blood count, urinalysis",
+            "whereToSecure": "Laboratory Section and X-Ray Unit"
+          },
+          {
+            "item": "For private employment: complete blood count, urinalysis, fecalysis, chest X-ray, ECG, recent drug test",
+            "whereToSecure": "Laboratory Section and X-Ray Unit"
+          },
+          {
+            "item": "For government employment: complete blood count, urinalysis, chest X-ray, neuropsychiatric examination",
+            "whereToSecure": "Laboratory Section, X-Ray Unit, and an accredited provider for the neuropsychiatric exam"
+          },
+          {
+            "item": "For fitness to work: record of consultation or a recent check-up record",
+            "whereToSecure": "City Health Office"
+          },
+          {
+            "item": "For a security guard: complete blood count, urinalysis, chest X-ray, recent drug test, neuropsychiatric test",
+            "whereToSecure": "Laboratory Section and X-Ray Unit"
+          },
+          {
+            "item": "For a teacher's annual check-up or reinstatement: X-ray, urinalysis, and the baby's birth certificate if returning from maternity leave",
+            "whereToSecure": "Laboratory Section, X-Ray Unit, Local Civil Registrar's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present your official receipt and supporting documents at the Administrative Division.",
+            "agency": "Gives you the list of laboratory examinations to complete first and directs you to pay at the City Treasurer's Office before the certificate is prepared.",
+            "feeText": "Regular: P50.00; Student: P30.00",
+            "processingTime": "3 mins",
+            "personResponsible": "Administrative Aide I / Administrative Officer I"
+          },
+          {
+            "client": "Take the eye acuity test and blood pressure screening.",
+            "agency": "Reviews the submitted documents.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Administrative Aide I / Administrative Officer I"
+          },
+          {
+            "client": "Proceed to the Medical Division.",
+            "agency": "Prepares the medical certificate.",
+            "feeText": "None",
+            "processingTime": "11 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Submit the required documents at the receiving desk.",
+            "agency": "Records the official receipt number and amount in the logbook.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Administrative Officer I / Administrative Aide I"
+          },
+          {
+            "client": "Fill in the information sheet.",
+            "agency": "Assesses the documents presented, conducts the physical examination, and signs the certificate. If there are incidental findings the doctor prescribes medicines and recommends further laboratory tests.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Medical Division"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "15 Minutes" },
+        "notes": [
+          "Queueing time is not included, and the time varies with the flow of conversation and the documents presented."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The checklist is the longest in the charter and is laid out as a set of alternative document sets by purpose. It has been grouped here by purpose rather than reproduced as one flat list.",
+          "The final step states no processing time in the charter, so it contributes nothing to the derived total."
+        ]
+      },
+      {
+        "id": "cho-death-certificate",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "Administrative Services",
+        "title": "Getting a death certificate",
+        "description": "Registration of a death by the City Health Office, for deaths at home or in the community, deaths certified dead on arrival, deaths due to accident, and deaths in hospital. The requirements differ for each.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public - relatives or the closest informant of the deceased",
+        "requirements": [
+          {
+            "item": "For a death at home or in the community: barangay certification stating the deceased's full name including any name extension, and the exact address",
+            "whereToSecure": "Barangay Captain"
+          },
+          {
+            "item": "For a death considered dead on arrival: certification of DOA",
+            "whereToSecure": "The hospital the deceased was taken to"
+          },
+          {
+            "item": "For a death due to accident: autopsy report",
+            "whereToSecure": "Scene of the Crime Office"
+          },
+          {
+            "item": "For a death in hospital: the hospital issues the death certificate, reviewed by the City Health Officer or Medical Officer",
+            "whereToSecure": "The hospital concerned"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit your request at the receiving desk.",
+            "agency": "Assists you and instructs you to pay the fee at the City Treasurer's Office.",
+            "feeText": "P60.00",
+            "processingTime": "1 min",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Pay the fee at the City Treasurer's Office.",
+            "agency": "Reviews the submitted documents.",
+            "feeText": "None",
+            "processingTime": "1 min",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Submit the required documents at the receiving desk.",
+            "agency": "Instructs you to fill in the information sheet.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Fill in the information sheet.",
+            "agency": "Reviews the information sheet.",
+            "feeText": "None",
+            "processingTime": "1 min",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Review the prepared death certificate.",
+            "agency": "Prepares the death certificate.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Proceed to the Medical Division for signature.",
+            "agency": "Forwards the death certificate to the Administrative Officer IV for signature, or to a designated CHO staff member in their absence.",
+            "feeText": "None",
+            "processingTime": "1 min",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Proceed to the embalmer for signature.",
+            "agency": "Conducts an interview with the informant or relative to establish the cause of death.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "Medical Division"
+          },
+          {
+            "client": "Proceed to the Local Civil Registrar's Office to register the death certificate.",
+            "agency": "Types the cause of death into the certificate and records the official receipt at the Administrative Division.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": "P60.00", "processingTime": "47 mins" },
+        "notes": [
+          "Queueing time is not included, and the time varies with the flow of conversation and the documents presented."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's step table repeats steps 3 and 4 with identical wording, and lists two 1-minute recording actions at the end. They are transcribed here as the eight distinct actions the table describes.",
+          "The derived total is 44 minutes against the charter's stated 47, because of the duplicated rows above."
+        ]
+      },
+      {
+        "id": "cho-transfer-permit",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "Administrative Services",
+        "title": "Getting a transfer permit for a deceased person",
+        "description": "The permit needed to move a deceased person's remains, issued once the death certificate is complete and the fee is paid.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Relatives or the closest informant of the deceased",
+        "requirements": [
+          {
+            "item": "Completed death certificate",
+            "whereToSecure": "Local Civil Registrar's Office"
+          },
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" }
+        ],
+        "steps": [
+          {
+            "client": "Pay the fee at the City Treasurer's Office.",
+            "agency": "Instructs you to pay the fee at the City Treasurer's Office.",
+            "feeText": "P60.00",
+            "processingTime": "2 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Present the required documents at the Administrative Division.",
+            "agency": "Reviews the documents presented and prepares the permit.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Present the official receipt.",
+            "agency": "Records the official receipt in the logbook.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Proceed to the Medical Division for the signing of the transfer permit.",
+            "agency": "Instructs you to proceed to the Medical Division for signature.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": "P60.00", "processingTime": "11 mins" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-medical-team-request",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "Administrative Services",
+        "title": "Requesting a medical team, a mission or a speaker",
+        "description": "How a barangay, office or organisation asks the City Health Office for a medical or dental mission, a medical team, or a speaker. The request letter is addressed to the City Mayor through the City Health Officer at least a month before the activity.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "Government agencies, non-government agencies, public and private offices, organisations and barangays",
+        "requirements": [
+          {
+            "item": "Letter of request addressed to the City Mayor and coursed through the City Health Officer, at least one month before the activity",
+            "whereToSecure": "The requesting party"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Coordinate with the City Health Office.",
+            "agency": "Instructs you to write a request letter to the City Mayor coursed through the City Health Officer.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Supervising Administrative Officer"
+          },
+          {
+            "client": "Deliver the letter to the City Mayor's Office.",
+            "agency": "Receives the advance copy of the letter.",
+            "feeText": "None",
+            "processingTime": "1 min",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Return to the City Health Office with an advance copy of the letter.",
+            "agency": "Temporarily calendars the request while waiting for approval from the City Mayor's Office.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Supervising Administrative Officer"
+          },
+          {
+            "client": "Follow up your request.",
+            "agency": "Advises you to follow up on the request.",
+            "feeText": "None",
+            "processingTime": "5 working days",
+            "personResponsible": "Supervising Administrative Officer"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "5 days and 8 minutes" },
+        "notes": [
+          "The charter notes the five working days run from the City Mayor's Office receiving the request letter."
+        ],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-medical-certificate-travel",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "Administrative Services",
+        "title": "Getting a medical certificate for travel",
+        "description": "A medical certificate issued for travel, signed by the City Health Officer and released at the admission area.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "General public",
+        "requirements": [{ "item": "Vaccination card", "whereToSecure": "The client" }],
+        "steps": [
+          {
+            "client": "Present the requirements for the medical certificate.",
+            "agency": "Receives and reviews the requirements.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Administrative Aide I / Administrative Officer I"
+          },
+          {
+            "client": null,
+            "agency": "Encodes and prints the medical certificate.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Records and reviews the certificate and forwards it to the City Health Officer for signature.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Checks the certificate against the logbook and endorses it to the admission area for release.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "25 mins" },
+        "notes": [
+          "The requirement is listed in the charter as applying to non-PUI/PUM and APOR clients, which are COVID-era categories.",
+          "Queueing time is not included."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "This service is a product of the pandemic travel rules in force when the 2023 charter was published, and may no longer operate as described."
+        ]
+      },
+      {
+        "id": "cho-certification-true-copy",
+        "number": 6,
+        "charterNumber": 6,
+        "charterGroup": "Administrative Services",
+        "title": "Getting a certification or a certified true copy",
+        "description": "Two related services: a certification prepared from data you supply, and a certified true copy of a document the office holds. Each is charged separately.",
+        "office": "Administrative Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          {
+            "item": "For a certification: the data needed for the certification, and the official receipt",
+            "whereToSecure": "Administrative Division and City Treasurer's Office"
+          },
+          {
+            "item": "For a certified true copy: the original document or papers to be certified, and the official receipt",
+            "whereToSecure": "The client and the City Treasurer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the data needed for the certification.",
+            "agency": "Assists you and instructs you to pay the fee at the City Treasurer's Office.",
+            "feeText": "P50.00",
+            "processingTime": "2 mins",
+            "personResponsible": "Administrative Aide I / Administrative Officer I"
+          },
+          {
+            "client": "Pay the fee at the City Treasurer's Office.",
+            "agency": "Prepares the certification once the complete data and the official receipt are presented.",
+            "feeText": "None",
+            "processingTime": "12 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Present the official receipt.",
+            "agency": "Forwards the certificate to the head of office for signature.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Administrative Officer"
+          },
+          {
+            "client": "Collect the certification.",
+            "agency": "Releases the certificate.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "For a certified true copy, present the original documents to be certified.",
+            "agency": "Assists you and instructs you to pay the fee at the City Treasurer's Office.",
+            "feeText": "P50.00",
+            "processingTime": "2 mins",
+            "personResponsible": "Administrative Aide I / Nursing Aide"
+          },
+          {
+            "client": "Pay the fee and present the official receipt to the Administrative Division.",
+            "agency": "Asks for the original documents, and forwards them to the Administrative Officer IV for processing.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Supervising Administrative Officer"
+          },
+          {
+            "client": null,
+            "agency": "Releases the certified documents.",
+            "feeText": "None",
+            "processingTime": "1 min",
+            "personResponsible": "Administrative Officer I"
+          }
+        ],
+        "statedTotals": { "feeText": "P100.00", "processingTime": "23 minutes" },
+        "notes": [
+          "The P100.00 stated total is the two P50.00 fees together, one for each of the two services described."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "This entry covers two services under one charter heading, A for certification and B for certified true copy. The step table interleaves them heavily and repeats several rows; the sequence here follows the two paths in order."
+        ]
+      },
+      {
+        "id": "cho-dental-checkup",
+        "number": 7,
+        "charterNumber": 7,
+        "charterGroup": "Dental Services",
+        "title": "Getting a dental check-up or a tooth extraction",
+        "description": "Oral examination at the dental clinic, with extraction, restoration, oral prophylaxis or fluoridisation if the dentist finds it necessary. Extraction is charged and paid at the City Treasurer's Office before the procedure.",
+        "office": "Dental Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "All constituents of Legazpi City",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "PhilHealth ID (Masa or NHTS) or Member Data Record",
+            "whereToSecure": "PhilHealth"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Fill in Form 1.",
+            "agency": "Makes a new individual treatment record for a new patient, or retrieves and updates the existing record.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Dentist I / Dentist II / Dentist III"
+          },
+          {
+            "client": null,
+            "agency": "Carries out the oral examination and determines whether the tooth needs extraction or other treatment.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Dentist I / Dentist II / Dentist III"
+          },
+          {
+            "client": "If extraction is indicated, take the charge slip to the City Treasurer's Office and pay.",
+            "agency": "Issues the charge slip and directs you to the City Treasurer's Office.",
+            "feeText": "P120.00",
+            "processingTime": "15 mins",
+            "personResponsible": "Dentist I / Dentist II / Dentist III"
+          },
+          {
+            "client": "Return and wait for your name to be called for the treatment.",
+            "agency": "Calls patients in turn for treatment.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Dentist I / Dentist II / Dentist III"
+          },
+          {
+            "client": null,
+            "agency": "After the procedure, prescribes the necessary medication and explains the post-operative instructions.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Dentist I / Dentist II / Dentist III"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "2 hours and 2 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's step table lists its times in a column that does not align cleanly with its rows; the assignment here follows the order the times appear."
+        ]
+      },
+      {
+        "id": "cho-dental-certificate",
+        "number": 8,
+        "charterNumber": 8,
+        "charterGroup": "Dental Services",
+        "title": "Getting a dental certificate",
+        "description": "A dental certificate issued after an oral examination. The same charter entry covers the scheduled oral examination for pregnant women, held every Tuesday and Thursday, and fluoridisation for children aged 1 to 5 twice a year.",
+        "office": "Dental Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "All constituents of Legazpi City",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" }
+        ],
+        "steps": [
+          {
+            "client": "Take the charge slip to the City Treasurer's Office and pay.",
+            "agency": "Issues the charge slip and directs you to the City Treasurer's Office.",
+            "feeText": "P50.00",
+            "processingTime": "15 mins",
+            "personResponsible": "Dentist I / Dentist II / Dentist III"
+          },
+          {
+            "client": "Proceed to the Dental Division for the oral examination and fill in the necessary documents.",
+            "agency": "Carries out the oral examination and completes the documents.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Dentist I / Dentist II / Dentist III"
+          },
+          {
+            "client": "For an oral consultation while pregnant, attend on the scheduled day.",
+            "agency": "Holds scheduled oral examinations for pregnant women every Tuesday and Thursday, and runs dental missions, daycare centre visits and barangay requests. Fluoridisation is scheduled twice a year for ages 1 to 5.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Dentist I / Dentist II / Dentist III"
+          }
+        ],
+        "statedTotals": { "feeText": "P60.00", "processingTime": "45 mins" },
+        "notes": [
+          "The charter states a P60.00 total against a P50.00 certificate fee in the step table. The discrepancy is the charter's own."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The stated fee total of P60.00 does not match the P50.00 in the steps. Both are recorded as printed rather than reconciled."
+        ]
+      },
+      {
+        "id": "cho-health-card-registration",
+        "number": 9,
+        "charterNumber": 9,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Registering your health card or yellow card",
+        "description": "Registration and release of a health card once the tests it requires are complete. Which card you need depends on the work: a blue card for food handlers, a pink or blue card for non-food handlers, and a yellow card for entertainers and massage therapists.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Walk-in clients",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "For a blue card (food handler): sputum result, chest X-ray from the last six months, latest residence certificate, food handler's seminar certificate, rectal swab, and a recent 1x1 ID photo",
+            "whereToSecure": "City Health Office Laboratory and X-Ray Unit, place of residency, and the Department of Health"
+          },
+          {
+            "item": "For a pink or blue card (non-food handler): sputum result and a recent 1x1 ID photo",
+            "whereToSecure": "City Health Office Laboratory Section"
+          },
+          {
+            "item": "For a yellow card: latest HIV and RPR result for GROs, latest residence certificate, two recent 2x2 ID photos, and for a massage therapist a photocopy of the NC II certificate or licence",
+            "whereToSecure": "City Health Office Social Hygiene Clinic, place of residency, and TESDA or the Department of Health Regional Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the complete documents to the Environmental Sanitation Section.",
+            "agency": "Registers the health card or yellow card.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": null,
+            "agency": "Releases the health card or yellow card to the client.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": "Proceed to the Medical Division for signature.",
+            "agency": "Instructs you to proceed to the Medical Division for signature.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "15 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-health-card-issuance",
+        "number": 10,
+        "charterNumber": 10,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Getting a health card issued",
+        "description": "Issuance of the health card itself, with the laboratory fees that go with it. The card type sets the fees: the yellow card adds a professional tax receipt fee, and the food handler's blue card adds stool and chest X-ray charges.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Walk-in clients",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "Latest HIV and RPR result for GROs",
+            "whereToSecure": "City Health Office Social Hygiene Clinic"
+          },
+          { "item": "Latest residence certificate", "whereToSecure": "Place of residency" },
+          { "item": "Two recent 2x2 ID photos", "whereToSecure": "The client" }
+        ],
+        "steps": [
+          {
+            "client": "Present the complete documents to the Environmental Sanitation Section.",
+            "agency": "Types the entry onto the health card or yellow card.",
+            "feeText": "Yellow card: health card P30.00, sputum P90.00, PTR fee P100.00. Pink and blue card (non-food handler): health card P30.00, sputum P90.00. Blue card (food handler): health card P30.00, sputum P90.00, stool P60.00, chest X-ray P120.00",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": null,
+            "agency": "Releases the health card or yellow card to the client.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": "Proceed to the CHO laboratory to submit your specimen.",
+            "agency": "Instructs you to proceed to the laboratory for specimen submission.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": "Return for the health card once the laboratory examinations are complete.",
+            "agency": "Advises you to return for the health card after the laboratory requirements are met.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "20 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The fee block in the charter is a table of card types against laboratory charges, printed across two pages. It is recorded here on the first step as a single schedule."
+        ]
+      },
+      {
+        "id": "cho-water-refilling-station",
+        "number": 11,
+        "charterNumber": 11,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Permits for a water refilling station",
+        "description": "The operational permit, certificate of water potability and drinking water site clearance a water refilling station, water vending machine, mobile water tank supplier or water hauler needs. Signed by the City Health Officer and the City Mayor.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Highly Technical",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "Owners of water refilling stations, water vending machines, mobile water tank suppliers and water haulers",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "Operational permit if the water source is Level I or Level II, original copy",
+            "whereToSecure": "Department of Health Regional Office V, Bagtang, Daraga, Albay"
+          },
+          {
+            "item": "Bi-annual physical-chemical water sample results, photocopy",
+            "whereToSecure": "Any DOH-accredited water analysis laboratory"
+          },
+          {
+            "item": "Initial bacteriological water sample result, photocopy",
+            "whereToSecure": "Any DOH-accredited water analysis laboratory"
+          },
+          {
+            "item": "Certification from Legazpi City Water District if the water source is public, original copy",
+            "whereToSecure": "Legazpi City Water District, Bitano, Legazpi City"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the complete documents to the Environmental Sanitation Section.",
+            "agency": "Reviews the submitted documents and gives you a claim stub.",
+            "feeText": "Operational permit P600.00; certificate of water potability P300.00; drinking water site clearance Level I P100.00, Level II P200.00; sanitary survey P150.00",
+            "processingTime": "20 days",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the documents and submits them to the City Health Officer and the City Mayor for signature.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "City Health Officer and City Mayor"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "20 days" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The fee schedule and the 20-day processing time sit in the same table cell in the charter, with the fees listed against the permit types rather than against a step.",
+          "The 2023 charter names the City Mayor of the day as a signatory; the office, not the person, is recorded here."
+        ]
+      },
+      {
+        "id": "cho-sanitary-vehicle-clearance",
+        "number": 12,
+        "charterNumber": 12,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Getting a sanitary clearance for a delivery vehicle",
+        "description": "The clearance a catering service, bakeshop, water refilling station, water tank supplier or restaurant delivering outside the city needs for its delivery vehicle. The section inspects the vehicle before the clearance is issued.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Complex",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "Catering services, bakeshops, water refilling stations, water tank suppliers and haulers, and restaurants with deliveries outside the city",
+        "requirements": [
+          {
+            "item": "Official receipt, original with photocopy",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Photocopy of the official receipt and certificate of registration of the delivery vehicle",
+            "whereToSecure": "The client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Go to the Environmental Sanitation Section.",
+            "agency": "Gives you the order of payment for the sanitary delivery vehicle inspection.",
+            "feeText": "P150.00",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": "Pay at the City Treasurer's Office, then present the receipt and submit the photocopy.",
+            "agency": "Files the photocopy of the receipt and asks you to notify the office when the vehicle is ready for inspection.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "ESS Chief / Sanitary Inspector"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the inspection and asks you to return to the section after two days.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Sanitary Inspector"
+          },
+          {
+            "client": "Return to the section to claim the delivery vehicle clearance.",
+            "agency": "Issues the sanitary vehicle clearance and forwards it to the ESS Chief and the City Health Officer for signature.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "ESS Chief / City Health Officer II"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "4 days and 15 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The derived total is 3 days and 10 minutes against the charter's stated 4 days and 15 minutes."
+        ]
+      },
+      {
+        "id": "cho-water-sampling",
+        "number": 13,
+        "charterNumber": 13,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Requesting water sampling",
+        "description": "Bacteriological testing of a water sample. The section issues a Colilert bottle and instructions for collecting the sample; results follow about a week later.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Government (G2G)",
+          "Government to Business (G2B)",
+          "Government to Client (G2C)"
+        ],
+        "whoMayAvail": "Any client",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" }
+        ],
+        "steps": [
+          {
+            "client": "Go to the Environmental Sanitation Section.",
+            "agency": "Records the receipt, gives you a Colilert bottle, and instructs you on collecting and submitting the water sample.",
+            "feeText": "P600.00",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": "Submit the water sample specimen to the section.",
+            "agency": "Advises you when to collect the results.",
+            "feeText": "None",
+            "processingTime": "1 week",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "1 week and 5 minutes" },
+        "notes": [
+          "Water sampling is scheduled Monday to Thursday only, 8:00am to 3:00pm.",
+          "Queueing time is not included."
+        ],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-fumigation",
+        "number": 14,
+        "charterNumber": 14,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Requesting fumigation or fogging",
+        "description": "Fogging of an area on request. A private requester supplies the fuel for the fogging machine and the unleaded petrol for diluting the chemical, and informs the Bureau of Fire of the schedule.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Highly Technical",
+        "transactionTypes": [
+          "Government to Government (G2G)",
+          "Government to Business (G2B)",
+          "Government to Client (G2C)"
+        ],
+        "whoMayAvail": "Any client",
+        "requirements": [
+          {
+            "item": "Letter of request addressed to the City Health Officer, with a photocopy",
+            "whereToSecure": "The client"
+          },
+          {
+            "item": "For private requests: fuel for the fogging machine, and unleaded petrol for chemical dilution depending on the size of the area",
+            "whereToSecure": "The client"
+          },
+          {
+            "item": "For private requests: letter informing the Bureau of Fire of the fogging schedule",
+            "whereToSecure": "The client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "File the letter of request at the CHO Administrative Division.",
+            "agency": "Receives the photocopy of the letter and advises you to conduct a clean-up drive.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "ESS Chief / Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": null,
+            "agency": "Schedules and carries out the fogging.",
+            "feeText": "None",
+            "processingTime": "2 weeks",
+            "personResponsible": "ESS Chief / Sanitary Inspector III / II / Designate"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "2 weeks and 5 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's step table lists only the first step explicitly; the two-week span comes from the stated total. The second step is recorded here so the derived total matches."
+        ]
+      },
+      {
+        "id": "cho-sanitary-permit-registration",
+        "number": 15,
+        "charterNumber": 15,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Registering a sanitary permit, health clearance or health card for a business",
+        "description": "Annual registration of a business establishment's sanitary permit, health clearance and health cards. The supporting environmental permits differ by trade, and the fee comes from the order of payment the City Treasurer issues.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "All business establishments",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "Duly accomplished sanitary permit, health cards and health clearance",
+            "whereToSecure": "Environmental Sanitation Section"
+          },
+          {
+            "item": "Valid wastewater discharge permit for hotels, restaurants, lodging houses, inns, funeral parlors, apartelles, laboratories, manufacturing and laundry shops and catering services, photocopy",
+            "whereToSecure": "DENR-EMB Regional Center, Rawis, Legazpi City"
+          },
+          {
+            "item": "Permit to operate a generator set, an underground tank for gasoline stations, or a compressor for auto painting shops, photocopy",
+            "whereToSecure": "DENR-EMB Regional Center, Rawis, Legazpi City"
+          },
+          {
+            "item": "FDA licence to operate for drugstores, lying-in clinics, hospitals, bakeries and funeral parlors, photocopy",
+            "whereToSecure": "DOH-FDA Regional Office V, Bagtang, Daraga, Albay"
+          },
+          {
+            "item": "Licence or NC II certificate for a massage therapist at a massage parlor, photocopy",
+            "whereToSecure": "DOH Regional Office V, Bagtang, Daraga, Albay"
+          },
+          {
+            "item": "DENR hazardous waste ID for funeral parlors, hospitals, lying-in and medical clinics",
+            "whereToSecure": "DENR-EMB Regional Center, Rawis, Legazpi City"
+          },
+          {
+            "item": "Operational clearance for cemeteries, photocopy",
+            "whereToSecure": "DOH Regional Office V, Bagtang, Daraga, Albay"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the complete documents to the Environmental Sanitation Section.",
+            "agency": "Reviews the submitted documents and releases a claim stub.",
+            "feeText": "Based on the order of payment issued by the City Treasurer's Office, with reference to City Ordinance No. 13-2007, the Revenue Code of Legazpi City",
+            "processingTime": null,
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": "Present the claim stub.",
+            "agency": "Informs you to claim the submitted documents the following day.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": null,
+            "agency": "Registers the accomplished documents and submits them to the ESS Chief and the City Health Officer for signature.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "2 weeks and 5 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The derived total is 1 day and 5 minutes against the charter's stated 2 weeks and 5 minutes. The charter gives no step that accounts for the fortnight."
+        ]
+      },
+      {
+        "id": "cho-smoking-permit",
+        "number": 16,
+        "charterNumber": 16,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Getting a smoking area permit",
+        "description": "The permit a business with a designated smoking area needs, issued on the strength of a certificate of compliance from the City Engineer's Office.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Business (G2B)"],
+        "whoMayAvail": "All business establishments with a smoking area",
+        "requirements": [
+          {
+            "item": "Certificate of compliance",
+            "whereToSecure": "City Engineer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the required documents to the Environmental Sanitation Section.",
+            "agency": "Prepares the smoking permit and submits it to the ESS Chief for signature.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "ESS Chief / Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": "Proceed to the City Health Officer's office for signature.",
+            "agency": "Releases the smoking permit and advises you to proceed to the City Health Officer for signature.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "5 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-sanitary-complaint",
+        "number": 17,
+        "charterNumber": 17,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Filing a sanitary complaint",
+        "description": "A complaint about food, sanitation or a nuisance, filed either through the barangay or as a walk-in at the office. The section investigates and reports to the City Health Officer.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Simple to Highly Technical",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "Any client",
+        "requirements": [
+          {
+            "item": "Letter of complaint, or a complaint filed at the City Health Office",
+            "whereToSecure": "The complaining party"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the required documents if the complaint comes through the barangay, or go to the section directly to file a food-related complaint.",
+            "agency": "Receives the documents and asks you to return after two weeks.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": null,
+            "agency": "Records the complaint filed.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the investigation.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "ESS Chief / Sanitary Inspector III / II / Designate"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the report and submits it to the City Health Officer for review and evaluation.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "ESS Chief / Sanitary Inspector III / II / Designate"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "4 days and 10 minutes" },
+        "notes": [
+          "The charter gives one day for a walk-in investigation and asks barangay-routed complainants to return after two weeks.",
+          "Queueing time is not included."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The derived total is 1 day and 10 minutes against the charter's stated 4 days and 10 minutes."
+        ]
+      },
+      {
+        "id": "cho-misting",
+        "number": 18,
+        "charterNumber": 18,
+        "charterGroup": "Environmental and Sanitation Services",
+        "title": "Requesting misting or disinfection",
+        "description": "Misting of an area on request, scheduled once the City Health Officer approves the letter.",
+        "office": "Environmental Sanitation Section",
+        "classification": "Highly Technical",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Business (G2B)",
+          "Government to Government (G2G)"
+        ],
+        "whoMayAvail": "General public",
+        "requirements": [{ "item": "Letter of request", "whereToSecure": "The client" }],
+        "steps": [
+          {
+            "client": "Submit the letter of request to the Administrative Division.",
+            "agency": "Receives the letter, enters it in the incoming communications logbook and forwards it to the City Health Officer.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "Follow up your request.",
+            "agency": "Schedules the misting activity once the City Health Officer approves the request.",
+            "feeText": "None",
+            "processingTime": "1-5 mins",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "5-10 mins" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter titles this service \"COVID 19 Related Activities (MISTING)\". It dates from the pandemic response in force when the 2023 edition was published and may no longer operate."
+        ]
+      },
+      {
+        "id": "cho-ambulance-request",
+        "number": 19,
+        "charterNumber": 19,
+        "charterGroup": "Health Program Management Services",
+        "title": "Requesting the use of an ambulance",
+        "description": "An ambulance for transporting a patient, arranged through the Health Emergency Management Service. The request needs a note of approval from the City Mayor's Office.",
+        "office": "Health Program Management Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant women, newborns, under-five children, older children, teenagers, adults and senior citizens",
+        "requirements": [
+          {
+            "item": "For a mentally ill patient, relatives must provide escorts during transport",
+            "whereToSecure": "Public Safety Office or barangay tanod"
+          },
+          { "item": "Referral form", "whereToSecure": "CSWDO" },
+          {
+            "item": "Letter request signed by the City Health Officer",
+            "whereToSecure": "City Health Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Coordinate with the City Health Office.",
+            "agency": "Instructs you to secure a note of approval from the City Mayor's Office.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Population Program Officer I"
+          },
+          {
+            "client": "Go to the City Mayor's Office to seek approval and a note.",
+            "agency": "Interviews the client and schedules the transport.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Population Program Officer I"
+          },
+          {
+            "client": "Return to the City Health Office with an advance copy of the letter.",
+            "agency": "Temporarily calendars the request while waiting for approval from the City Mayor's Office.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Population Program Officer I"
+          },
+          {
+            "client": "Follow up your request.",
+            "agency": "Advises you to follow up on the request.",
+            "feeText": "None",
+            "processingTime": "3 working days",
+            "personResponsible": "Population Program Officer I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 days and 14 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-medical-team-hpmd",
+        "number": 20,
+        "charterNumber": 20,
+        "charterGroup": "Health Program Management Services",
+        "title": "Requesting a medical team for an activity",
+        "description": "A medical team for an event or activity, requested by letter to the City Mayor through the City Health Officer at least a month beforehand.",
+        "office": "Health Program Management Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)", "Government to Government (G2G)"],
+        "whoMayAvail": "All",
+        "requirements": [
+          {
+            "item": "Letter of request addressed to the City Mayor and coursed through the City Health Officer, at least one month before the activity",
+            "whereToSecure": "The requesting party"
+          },
+          { "item": "Referral form", "whereToSecure": "CSWDO" },
+          {
+            "item": "Letter signed by the City Health Officer and the City Mayor",
+            "whereToSecure": "City Health Office and City Mayor's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Coordinate with the City Health Office.",
+            "agency": "Instructs you to write a request letter to the City Mayor coursed through the City Health Officer.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Population Program Officer I"
+          },
+          {
+            "client": "Deliver the letter to the City Mayor's Office.",
+            "agency": "Receives the advance copy of the letter.",
+            "feeText": "None",
+            "processingTime": "1 min",
+            "personResponsible": "Population Program Officer I"
+          },
+          {
+            "client": null,
+            "agency": "Receives, reviews and documents the request.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Population Program Officer I"
+          },
+          {
+            "client": "Follow up your request.",
+            "agency": "Advises you to follow up on the request.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Population Program Officer I"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "11 mins" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The derived total is 3 days and 8 minutes against the charter's stated 11 minutes, because the charter's own total omits the three-day follow-up step in its table."
+        ]
+      },
+      {
+        "id": "cho-ambulance-transfer",
+        "number": 21,
+        "charterNumber": 21,
+        "charterGroup": "Health Program Management Services",
+        "title": "Requesting an ambulance to transfer a patient",
+        "description": "An ambulance to transfer a patient between facilities. A trip ticket is released on approval, and a sworn statement with a release of liability waiver is signed before the ambulance is provided.",
+        "office": "Health Program Management Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant women, newborns, under-five children, older children, teenagers, adults and senior citizens",
+        "requirements": [
+          { "item": "Referral form", "whereToSecure": "CSWDO" },
+          {
+            "item": "Letter signed by the City Health Officer and the City Mayor",
+            "whereToSecure": "City Health Office and City Mayor's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Request the transfer of confinement.",
+            "agency": "Interviews you and asks for the ambulance letter request.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse on Duty"
+          },
+          {
+            "client": "Wait at the designated waiting area.",
+            "agency": "Waits for the Administrative Office or Senior House Officer to approve and release the trip ticket.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Administrative Officer"
+          },
+          {
+            "client": "For a request outside Legazpi City, follow up with HEMS staff.",
+            "agency": "Waits for approval of the travel order and release of the trip ticket.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Administrative Officer / HEMS staff"
+          },
+          {
+            "client": "You are informed whether the request is approved.",
+            "agency": "Approves or disapproves the validity of the verbal or personal request.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Administrative Officer / HEMS staff"
+          },
+          {
+            "client": "Sign the sworn statement and release of liability waiver with a witness.",
+            "agency": "Explains the sworn statement and waiver for ambulance use, and has it signed.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Administrative Officer / HEMS staff"
+          },
+          {
+            "client": "You are given instructions on when the patient will be picked up.",
+            "agency": "Provides the ambulance. HEMS assistance is arranged case by case.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Administrative Officer / HEMS staff"
+          },
+          {
+            "client": "You are informed that the driver is ready to pick up the patient.",
+            "agency": "Picks up the patient.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Driver"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "36 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The final step's processing time is given as \"Travel Time\" in the charter, which is not a quantity, so it contributes nothing to the derived total.",
+          "The derived total is 3 days and 18 minutes against the charter's stated 36 minutes, because the charter's total omits the three-day approval step."
+        ]
+      },
+      {
+        "id": "cho-rtpcr-antigen",
+        "number": 22,
+        "charterNumber": 22,
+        "charterGroup": "Health Program Management Services",
+        "title": "Getting an RT-PCR or antigen test",
+        "description": "COVID-19 testing at the triage area, for close contacts, symptomatic and asymptomatic patients, frontline health workers and travellers. Antigen results come back the same day; RT-PCR specimens go to the regional laboratory.",
+        "office": "Health Program Management Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Close contacts, symptomatic and asymptomatic patients, frontline health care workers and travellers",
+        "requirements": [
+          {
+            "item": "Request letter received and signed by the City Health Officer",
+            "whereToSecure": "City Health Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Go to the triage area.",
+            "agency": "Profiles patients for RT-PCR and antigen testing.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse on Duty"
+          },
+          {
+            "client": "Wait to be called.",
+            "agency": "Swabs the patient for antigen testing.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Medical Technologist on Duty"
+          },
+          {
+            "client": null,
+            "agency": "Collects and examines the specimen.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Medical Technologist on Duty"
+          },
+          {
+            "client": null,
+            "agency": "Transports RT-PCR specimens to the Bicol Regional Diagnostic and Reference Laboratory.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Medical Technologist on Duty and Driver"
+          },
+          {
+            "client": null,
+            "agency": "Checks the antigen specimen for the result.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Medical Technologist on Duty"
+          },
+          {
+            "client": "Wait for the result.",
+            "agency": "Releases the results. Antigen results take about 20 minutes; RT-PCR results take 24 to 48 hours.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Medical Technologist / Nurse on Duty"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "45 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "This is a pandemic-era service published in the 2023 charter and may no longer operate as described.",
+          "The final step's cell gives both 20 minutes for antigen and 24 to 48 hours for RT-PCR. The 20 minutes is recorded, matching the charter's own 45-minute total."
+        ]
+      },
+      {
+        "id": "cho-ekonsulta",
+        "number": 23,
+        "charterNumber": 23,
+        "charterGroup": "Health Program Management Services",
+        "title": "Registering for Ekonsulta primary care",
+        "description": "Registration for PhilHealth's Konsulta primary care benefit, which issues an Authorization Transaction Code so consultations, tests and medicines are covered.",
+        "office": "Health Program Management Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant women, newborns, under-five children, older children, teenagers, adults and senior citizens",
+        "requirements": [
+          {
+            "item": "Any personal identification for validation of spelling, or a Member Data Record for a dependent",
+            "whereToSecure": "PhilHealth Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Fill in the Ekonsulta registration form.",
+            "agency": "Interviews the client. A new patient completes the registration form; an existing patient completes a request for an authorization transaction code.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse on Duty"
+          },
+          {
+            "client": "Wait for the Authorization Transaction Code.",
+            "agency": "Registers the patient on the Ekonsulta website.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse on Duty"
+          },
+          {
+            "client": "Receive the Authorization Transaction Code.",
+            "agency": "Gives the code to the patient with instructions.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse on Duty"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "15 minutes" },
+        "notes": [
+          "The charter leaves the classification blank for this service.",
+          "Queueing time is not included."
+        ],
+        "verified": false,
+        "verifyNotes": ["The charter states no classification for this service."]
+      },
+      {
+        "id": "cho-lab-sputum-fecalysis",
+        "number": 24,
+        "charterNumber": 24,
+        "charterGroup": "Laboratory Services",
+        "title": "Sputum and fecalysis tests for a health card",
+        "description": "The sputum and stool examinations a health card requires, from specimen collection instructions through to releasing the result and the card.",
+        "office": "Laboratory Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "PhilHealth ID or Member Data Record for Masa, NHTS or LGU-paid members, renewed and not expired",
+            "whereToSecure": "PhilHealth"
+          },
+          { "item": "Examination request", "whereToSecure": "City Health Office doctor" },
+          { "item": "Specimen", "whereToSecure": "The client" }
+        ],
+        "steps": [
+          {
+            "client": "Enquire at the Laboratory Section.",
+            "agency": "Receives and assesses the health card and official receipt, and explains how to collect and submit the specimen.",
+            "feeText": "P90.00",
+            "processingTime": "15 mins",
+            "personResponsible": "Medical Technologist / Laboratory Aide"
+          },
+          {
+            "client": "Submit the specimen and the health card.",
+            "agency": "Receives the specimen and checks it was properly collected, labels it, and explains how to claim the card and the result.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Medical Technologist / Laboratory Aide"
+          },
+          {
+            "client": "Present the official receipt for the health card.",
+            "agency": "Checks the official receipt and releases the result.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Medical Technologist / Laboratory Aide"
+          },
+          {
+            "client": "Claim the result and the health card.",
+            "agency": "Releases the result and the health card.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Medical Technologist / Laboratory Aide"
+          }
+        ],
+        "statedTotals": { "feeText": "P90.00", "processingTime": "40 mins" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-lab-blood-chemistry",
+        "number": 25,
+        "charterNumber": 25,
+        "charterGroup": "Laboratory Services",
+        "title": "Blood chemistry and other laboratory tests",
+        "description": "The laboratory's priced test menu, from a complete blood count to liver and kidney panels. If a requested test is unavailable you are free to use a clinical laboratory of your choice. Results take about two days.",
+        "office": "Laboratory Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "PhilHealth ID or Member Data Record for Masa, NHTS or LGU-paid members, renewed and not expired",
+            "whereToSecure": "PhilHealth"
+          },
+          { "item": "Examination request", "whereToSecure": "City Health Office doctor" },
+          { "item": "Specimen", "whereToSecure": "The client" }
+        ],
+        "steps": [
+          {
+            "client": "Enquire about the laboratory services available.",
+            "agency": "Checks whether the requested examination is available.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Medical Technologist III / II, Laboratory Aide / Aide II / Laboratory Technician"
+          },
+          {
+            "client": "Present the request from the physician.",
+            "agency": "If the examination is unavailable you may go to a clinical laboratory of your choice. If it is available, staff give instructions and an order slip.",
+            "feeText": "Complete blood count P90.00; blood typing P90.00; urinalysis P60.00; fecalysis P60.00; sputum examination P90.00; FBS P130.00; total cholesterol P130.00; HDL cholesterol P220.00; LDL cholesterol P220.00; triglycerides P130.00; BUN P130.00; BUA P130.00; SGOT P220.00; SGPT P220.00",
+            "processingTime": null,
+            "personResponsible": "Medical Technologist III / II, Laboratory Aide / Aide II / Laboratory Technician"
+          },
+          {
+            "client": "Go to the City Treasurer's Office to pay.",
+            "agency": "Assesses the documents presented and gives instructions prior to collection.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "Medical Technologist III / II, Laboratory Aide / Aide II / Laboratory Technician"
+          },
+          {
+            "client": "Present the official receipt.",
+            "agency": "Prepares the proper procedure for blood collection.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "Medical Technologist III / II, Laboratory Aide / Aide II / Laboratory Technician"
+          },
+          {
+            "client": "Wait at the designated waiting area until your number is called.",
+            "agency": "Explains the process of the requested laboratory procedure.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "Medical Technologist III / II, Laboratory Aide / Aide II / Laboratory Technician"
+          },
+          {
+            "client": "Submit for blood collection or submit your specimen when called.",
+            "agency": "Extracts the blood sample.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "Medical Technologist III / II, Laboratory Aide / Aide II / Laboratory Technician"
+          },
+          {
+            "client": null,
+            "agency": "Gives instructions on how and when to come back for the result.",
+            "feeText": "None",
+            "processingTime": "2 days",
+            "personResponsible": "Medical Technologist III / II, Laboratory Aide / Aide II / Laboratory Technician"
+          }
+        ],
+        "statedTotals": {
+          "feeText": "None",
+          "processingTime": "2 Days, 2 hours and 5 mins"
+        },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The price list sits in the fee column of the second step and covers the whole menu rather than that step alone."
+        ]
+      },
+      {
+        "id": "cho-lab-specimen-submission",
+        "number": 26,
+        "charterNumber": 26,
+        "charterGroup": "Laboratory Services",
+        "title": "Submitting a specimen and claiming results",
+        "description": "Releasing laboratory results to a client who presents an official receipt or its equivalent at the laboratory information area.",
+        "office": "Laboratory Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "PhilHealth ID or Member Data Record for Masa, NHTS or LGU-paid members, renewed and not expired",
+            "whereToSecure": "PhilHealth"
+          },
+          { "item": "Examination request", "whereToSecure": "City Health Office doctor" },
+          { "item": "Specimen", "whereToSecure": "The client" }
+        ],
+        "steps": [
+          {
+            "client": "Go to the laboratory information area and present the official receipt or its equivalent.",
+            "agency": "Releases the results and records them in the releasing logbook.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "Medical Technologist III / II / Laboratory Aide II"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "36 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter gives one step of 30 minutes against a stated total of 36 minutes."
+        ]
+      },
+      {
+        "id": "cho-medical-consultation",
+        "number": 27,
+        "charterNumber": 27,
+        "charterGroup": "Medical Services",
+        "title": "Seeing a doctor at the City Health Office",
+        "description": "Consultation at the Out-Patient Department: interview, physical examination and, where needed, a medico-legal examination.",
+        "office": "Medical Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public and patients",
+        "requirements": [
+          {
+            "item": "Any personal identification for validation",
+            "whereToSecure": "The client"
+          },
+          {
+            "item": "Copy of the PhilHealth Member Data Record",
+            "whereToSecure": "PhilHealth Office, Legazpi City"
+          },
+          { "item": "Existing immunisation card", "whereToSecure": "The client" },
+          {
+            "item": "Existing mother and baby book, or Home Based Maternal Record",
+            "whereToSecure": "The client"
+          },
+          { "item": "Barangay certification", "whereToSecure": "Barangay" }
+        ],
+        "steps": [
+          {
+            "client": "Go to the Out-Patient Department for the interview.",
+            "agency": "Retrieves the patient's individual treatment record.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "City Health Officer / Medical Officers"
+          },
+          {
+            "client": "Undergo the physical examination.",
+            "agency": "Provides the medical and physical examination or consultation.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "City Health Officer / Medical Officers"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the medical and medico-legal examination.",
+            "feeText": "P50.00",
+            "processingTime": "45 mins",
+            "personResponsible": "City Health Officer / Medical Officers"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "1 hour" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-burial-transfer-signing",
+        "number": 28,
+        "charterNumber": 28,
+        "charterGroup": "Medical Services",
+        "title": "Getting a burial or transfer permit signed",
+        "description": "The doctor's review and verbal autopsy that establishes the cause of death, and the signing of the burial or transfer permit that follows.",
+        "office": "Medical Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public and patients",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" }
+        ],
+        "steps": [
+          {
+            "client": "Go to the City Treasurer's Office to pay.",
+            "agency": "Reviews the case, conducts the verbal autopsy with the relative of the deceased, and states the cause of death.",
+            "feeText": "Burial permit P30.00; transfer permit P60.00, based on the order of payment issued by the City Treasurer's Office with reference to City Ordinance No. 13-2007",
+            "processingTime": "5-10 mins",
+            "personResponsible": "City Health Officer / Medical Officers"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "22 mins" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter gives one step of 5 to 10 minutes against a stated total of 22 minutes."
+        ]
+      },
+      {
+        "id": "cho-medical-certificate-signing",
+        "number": 29,
+        "charterNumber": 29,
+        "charterGroup": "Medical Services",
+        "title": "Getting your medical certificate signed",
+        "description": "The doctor's review of your laboratory results and the signing of the medical certificate, health card or bond certificate that follows.",
+        "office": "Medical Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public and patients",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "Laboratory results - X-ray, urinalysis, fecalysis, ultrasound and others",
+            "whereToSecure": "Laboratory Section, X-Ray Unit or an accredited laboratory"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the requirements.",
+            "agency": "Reviews the documents for completeness of the attached requirements.",
+            "feeText": "None",
+            "processingTime": "7 mins",
+            "personResponsible": "City Health Officer / Medical Officers"
+          },
+          {
+            "client": null,
+            "agency": "Evaluates and manages the laboratory results - X-ray, urinalysis, fecalysis, complete blood count, ultrasound and others.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "City Health Officer / Medical Officers"
+          },
+          {
+            "client": null,
+            "agency": "Signs the medical certificate.",
+            "feeText": "Medical certificate P50.00 regular, P50.00 student; bond P50.00; health card P30.00",
+            "processingTime": "15 mins",
+            "personResponsible": "City Health Officer / Medical Officers"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "22 mins" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints both the regular and student medical certificate fee as P50.00, where the Administrative Division's entry for the same certificate gives P50.00 regular and P30.00 student."
+        ]
+      },
+      {
+        "id": "cho-nursing-general",
+        "number": 30,
+        "charterNumber": 30,
+        "charterGroup": "Nursing Services",
+        "title": "General consultation and nursing services",
+        "description": "The main out-patient path: logbook, vital signs, triage, consultation, and referral onward to the pharmacy, the laboratory, a specialist or an ambulance. Elderly, differently abled and pregnant patients are prioritised.",
+        "office": "Nursing Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant and lactating women, newborns, under-five children, older children, teenagers, adults and senior citizens",
+        "requirements": [
+          {
+            "item": "Any personal identification for validation of spelling",
+            "whereToSecure": "The client"
+          },
+          {
+            "item": "One photocopy of the Member Data Record",
+            "whereToSecure": "PhilHealth"
+          },
+          { "item": "Existing immunisation card", "whereToSecure": "The client" }
+        ],
+        "steps": [
+          {
+            "client": "Fill in the out-patient logbook and take a number for consultation.",
+            "agency": "Interviews the client. A new patient's individual treatment record is created; an existing record is retrieved and updated.",
+            "feeText": "None",
+            "processingTime": "25 minutes",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Go to the vital signs area.",
+            "agency": "Takes the patient's vital signs.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Wait for your number to be called.",
+            "agency": "Directs the patient to the waiting area for consultation. Elderly, differently abled and pregnant patients are given priority.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Undergo triaging for prioritisation.",
+            "agency": "Assesses difficulty of breathing for control of acute respiratory infection.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Proceed to the pharmacy for medicine dispensing.",
+            "agency": "Assesses signs of dehydration for control of diarrhoeal disease.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Attend the information and education campaign.",
+            "agency": "Assesses the mental health status of Mental Health Program clients.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Submit for diagnostic examination.",
+            "agency": "Refers emergency and infectious disease patients to the doctor immediately.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Receive a referral slip for further management and evaluation.",
+            "agency": "Receives the prescription and instructions on the doctor's order.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "If you need immediate care, proceed to hospital.",
+            "agency": "Conducts individual counselling for health and wellness.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Proceed to the Laboratory Section.",
+            "agency": "Refers the patient to the laboratory for the requested examination.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Secure a referral for a higher level of care if needed.",
+            "agency": "Gives a referral to a hospital or specialty clinic for a higher level of care.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Request transport to hospital in an emergency.",
+            "agency": "Arranges ambulance transport for emergency cases.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "Health Program Management Officer"
+          },
+          {
+            "client": null,
+            "agency": "Records the individual treatment record in the General Medical Services logbook.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "2 hrs and 38 min" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The client and agency columns in this table describe parallel activities rather than a strict sequence: the client's numbered actions and the nurse's assessments do not correspond one to one."
+        ]
+      },
+      {
+        "id": "cho-under-five-clinic",
+        "number": 31,
+        "charterNumber": 31,
+        "charterGroup": "Nursing Services",
+        "title": "Under Five Clinic and childhood immunisation",
+        "description": "Immunisation and well-child care for newborns and children under five at the City Health Office, with counselling and the next visit scheduled before you leave.",
+        "office": "Nursing Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant and lactating women, newborns, under-five children, older children, teenagers, adults and senior citizens",
+        "requirements": [
+          {
+            "item": "Any personal identification for validation of spelling",
+            "whereToSecure": "The client"
+          },
+          { "item": "Copy of the Member Data Record", "whereToSecure": "PhilHealth" },
+          { "item": "Existing immunisation card", "whereToSecure": "The client" },
+          {
+            "item": "Existing mother and baby book, or Home Based Maternal Record",
+            "whereToSecure": "The client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Go to the immunisation room and take a number.",
+            "agency": "Interviews the parent. A new under-five clinic record is filled in, or the existing record is retrieved and updated.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "The newborn's vital signs are taken.",
+            "agency": "Takes the newborn's vital signs and records them on the under-five clinic record.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "A sick child is assisted to a doctor.",
+            "agency": "Refers a sick child to a doctor and defers the immunisation.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": null,
+            "agency": "Determines which vaccines are due, administers them and records them on the immunisation card.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Receive health education.",
+            "agency": "Conducts counselling and schedules the next visit.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": null,
+            "agency": "Records the vaccine given in the logbook and on the Target Client List.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "1 hr. & 35 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-prenatal-postnatal",
+        "number": 32,
+        "charterNumber": 32,
+        "charterGroup": "Nursing Services",
+        "title": "Prenatal and postnatal care",
+        "description": "Antenatal and postnatal check-ups at the City Health Office, including tetanus-diphtheria immunisation, counselling, and referral onward to the Dental Division for oral health care and the Nutrition Section for micronutrient supplementation.",
+        "office": "Nursing Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant and lactating women",
+        "requirements": [
+          {
+            "item": "Any personal identification for validation of spelling",
+            "whereToSecure": "The client"
+          },
+          { "item": "Copy of the Member Data Record", "whereToSecure": "PhilHealth" },
+          { "item": "Existing immunisation card", "whereToSecure": "The client" },
+          {
+            "item": "Existing mother and baby book, or Home Based Maternal Record",
+            "whereToSecure": "The client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Go to the prenatal area and take a number.",
+            "agency": "A new maternal record is filled in, or the existing record is retrieved and updated.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Go to the vital signs area.",
+            "agency": "Takes the vital signs of the pregnant or lactating woman.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Go to the examination room.",
+            "agency": "Performs the prenatal examination.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "You are assisted to a doctor for consultation if needed.",
+            "agency": "Refers pregnant or lactating women with medical problems to a doctor.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Receive the tetanus-diphtheria immunisation.",
+            "agency": "Administers the immunisation and records it in the mother and baby book or the Home Based Maternal Record.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Attend the health advocacy session.",
+            "agency": "Conducts counselling for pregnant and lactating women.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": null,
+            "agency": "Records the visit on the Target Client List logbook.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Proceed to the Dental Division.",
+            "agency": "Refers you to the Dental Division for basic oral health care.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          },
+          {
+            "client": "Proceed to the Nutrition Section.",
+            "agency": "Refers you to the Nutrition Section for micronutrient supplementation.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse or Midwife on Duty"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "2 hours and 15 Minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's time column lists nine values against nine rows but the alignment drifts across the page break; the assignment here follows the order printed."
+        ]
+      },
+      {
+        "id": "cho-under-five-barangay",
+        "number": 33,
+        "charterNumber": 33,
+        "charterGroup": "Nursing Services",
+        "title": "Under Five Clinic and immunisation at your barangay",
+        "description": "The same childhood immunisation service delivered at a barangay health centre, with children scheduled five at a time.",
+        "office": "Nursing Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant and lactating women, newborns, under-five children, older children, teenagers, adults and senior citizens",
+        "requirements": [
+          { "item": "Immunisation record or card", "whereToSecure": "The client" },
+          {
+            "item": "Member Data Record or PhilHealth ID",
+            "whereToSecure": "PhilHealth"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Bring the child to the out-patient department, accompanied by a parent or guardian.",
+            "agency": "Schedules children for childcare services five at a time, following the protection protocol issued by the City Health Officer.",
+            "feeText": "None",
+            "processingTime": "1hr and 35 minutes",
+            "personResponsible": "Nurse or Midwife assigned at the barangay"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "1hr and 35 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The scheduling of five children at a time is a social distancing measure from the pandemic response and may no longer apply."
+        ]
+      },
+      {
+        "id": "cho-prenatal-barangay",
+        "number": 34,
+        "charterNumber": 34,
+        "charterGroup": "Nursing Services",
+        "title": "Prenatal and postnatal care at your barangay",
+        "description": "Routine maternal care delivered at the barangay health centre rather than at the City Health Office, so pregnant women avoid exposure at a busier facility.",
+        "office": "Nursing Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant and lactating women, and newborns",
+        "requirements": [
+          {
+            "item": "Existing mother and baby book, or Home Based Maternal Record",
+            "whereToSecure": "The client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Attend your barangay health centre for routine maternal care.",
+            "agency": "Frontline staff assigned at the barangay provide maternal care services, scheduled five at a time following the protection protocol issued by the City Health Officer.",
+            "feeText": "None",
+            "processingTime": "2 hours and 10 minutes",
+            "personResponsible": "Nurse or Midwife assigned at the barangay"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "2 hours and 10 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter frames this service around avoiding exposure during the COVID-19 pandemic and describes pregnant women as a vulnerable group. The arrangement may no longer apply."
+        ]
+      },
+      {
+        "id": "cho-ari-control",
+        "number": 35,
+        "charterNumber": 35,
+        "charterGroup": "Nursing Services",
+        "title": "Care for a cough or difficulty breathing",
+        "description": "The acute respiratory infection pathway: thermal scanning and triage, assessment for difficulty breathing, consultation in a separate tent, and referral or transport onward if needed.",
+        "office": "Nursing Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant and lactating women, newborns, under-five children, older children, teenagers, adults and senior citizens",
+        "requirements": [
+          {
+            "item": "Any personal identification for validation of spelling",
+            "whereToSecure": "The client"
+          },
+          {
+            "item": "PhilHealth ID, Member Data Record, NHTS or Masa",
+            "whereToSecure": "PhilHealth"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit for thermal scanning and sanitise your hands.",
+            "agency": "Subjects the parent and child to thermal scanning and hand sanitising.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          },
+          {
+            "client": "Proceed to the triage area.",
+            "agency": "Instructs you to proceed to the triage area.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          },
+          {
+            "client": "Attend the triage area for assessment of infectious disease.",
+            "agency": "Assesses whether the patient has an infectious disease.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          },
+          {
+            "client": null,
+            "agency": "A new patient gives their details at the initial interview and an individual treatment record is created.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          },
+          {
+            "client": null,
+            "agency": "An existing patient's individual treatment record is retrieved and updated.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          },
+          {
+            "client": "The doctor sees you at consultation tent 2.",
+            "agency": "Assesses the patient for difficulty breathing, notifies the doctor assigned at the quarantine facility, and calls the emergency response team for transport if needed. Emergency cases are referred immediately.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          },
+          {
+            "client": null,
+            "agency": "Issues a prescription if the patient needs medication.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          },
+          {
+            "client": null,
+            "agency": "Gives a laboratory request if an examination is needed.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          },
+          {
+            "client": null,
+            "agency": "Brings the prescription to the pharmacy unit for medicine dispensing.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "1 hr and 6 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The consultation tent, quarantine facility referral and thermal scanning are pandemic-era arrangements published in the 2023 charter and may no longer be in place.",
+          "The charter's time column carries several values with no matching row; the derived total is 57 minutes against a stated 1 hour and 6 minutes."
+        ]
+      },
+      {
+        "id": "cho-mental-health",
+        "number": 36,
+        "charterNumber": 36,
+        "charterGroup": "Nursing Services",
+        "title": "Mental health programme services",
+        "description": "Assessment, interview and counselling for mental health programme clients and their families, with an individual treatment record created or updated at each visit.",
+        "office": "Nursing Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public and patients",
+        "requirements": [
+          {
+            "item": "Any record from a previous consultation",
+            "whereToSecure": "The client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Undergo thermal scanning and sanitise your hands.",
+            "agency": "Checks the client or patient at the triage area for thermal scanning and hand sanitising.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Triage Nurse or Midwife"
+          },
+          {
+            "client": "Submit for interview.",
+            "agency": "Interviews the client or the patient's family. A new patient's individual treatment record is created; an existing record is retrieved and updated.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Nurse on Duty / Nurse Coordinator"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "48 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's step table for this service runs past the page break and the remaining rows are not recoverable from the text layer. The two steps here are those the table states in full; the derived total is 23 minutes against a stated 48."
+        ]
+      },
+      {
+        "id": "cho-nutrition",
+        "number": 37,
+        "charterNumber": 37,
+        "charterGroup": "Nutrition Services",
+        "title": "Nutrition assessment and counselling",
+        "description": "Weight, height and mid-upper arm circumference measurement to assess nutritional status, followed by counselling, provision of services and referral to a physician where treatment is needed.",
+        "office": "Nutrition Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Children, parents, pregnant and postpartum women, and caregivers",
+        "requirements": [],
+        "steps": [
+          {
+            "client": "Register in the logbook and say which service you need.",
+            "agency": "Interviews the client about the services needed.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nutrition Officer IV / III / I"
+          },
+          {
+            "client": "Undergo weight, height and mid-upper arm circumference measurement.",
+            "agency": "Evaluates the nutritional status of the child or client through the measurements and the interview.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Nutrition Officer IV / III / I"
+          },
+          {
+            "client": "Give your details and present your status to the nutrition officer.",
+            "agency": "Gathers data on the client's past and present status.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nutrition Officer IV / III / I"
+          },
+          {
+            "client": "Undergo counselling.",
+            "agency": "Conducts counselling with the client, parent, pregnant or postpartum woman or caregiver.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "Nutrition Officer III / I"
+          },
+          {
+            "client": "Receive the services.",
+            "agency": "Provides the services.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Nutrition Officer IV / III / I"
+          },
+          {
+            "client": null,
+            "agency": "Records the client.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nutrition Officer IV / III / I"
+          },
+          {
+            "client": null,
+            "agency": "Refers patients to a physician for treatment.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nutrition Officer IV / III / I"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "1 hour" },
+        "notes": [
+          "The charter describes the section's wider work as micronutrient supplementation, intensified mothers' classes and related activities.",
+          "Queueing time is not included."
+        ],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-family-planning",
+        "number": 38,
+        "charterNumber": 38,
+        "charterGroup": "Population Services",
+        "title": "Family planning supplies and counselling",
+        "description": "Resupply of pills, condoms and injectables for current users, and counselling for new acceptors of family planning methods. Clients needing a method the office does not carry are referred elsewhere.",
+        "office": "Population Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Women of reproductive age and teenage mothers",
+        "requirements": [
+          {
+            "item": "Six weeks after pregnancy with menstruation",
+            "whereToSecure": "Not applicable"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Go to the Population Section for resupply of pills, condoms or injectables.",
+            "agency": "Facilitates the needs of the client.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Population Program Officer II / Population Program Officer"
+          },
+          {
+            "client": null,
+            "agency": "Records the visit on the Target Client List.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Population Program Officer II / Population Program Officer"
+          },
+          {
+            "client": "For injectables with a lost card, pay at the City Treasurer's Office and return for a new DMPA card.",
+            "agency": "Issues a new DMPA card on presentation of the receipt.",
+            "feeText": "P100.00",
+            "processingTime": "2 mins",
+            "personResponsible": "Population Officer II / Population Program Officer"
+          },
+          {
+            "client": "As a new acceptor, undergo family planning counselling.",
+            "agency": "Fills in the form and gives counselling to the client.",
+            "feeText": "None",
+            "processingTime": "12 mins",
+            "personResponsible": "Population Officer II / Population Program Officer"
+          },
+          {
+            "client": "Receive the requested commodity.",
+            "agency": "Dispenses the requested commodity.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Population Officer II / Population Program Officer"
+          },
+          {
+            "client": "You are referred to another facility for services not available here.",
+            "agency": "Prepares and signs a referral form for the client.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Population Officer II / Population Program Officer"
+          }
+        ],
+        "statedTotals": { "feeText": "P100.00", "processingTime": "17 Mins" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints two totals for this entry, P100.00 and 12 minutes for the current-user path and None and 17 minutes for the new-acceptor path. Both paths are transcribed here as one service and the larger total is recorded."
+        ]
+      },
+      {
+        "id": "cho-pre-marriage-certificate",
+        "number": 39,
+        "charterNumber": 39,
+        "charterGroup": "Population Services",
+        "title": "Pre-marriage counselling and certificate",
+        "description": "The pre-marriage counselling and family planning seminar for couples intending to marry, and the certificate issued afterwards. The same entry covers requests from students and researchers for family planning data.",
+        "office": "Population Section",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Women of reproductive age and teenage mothers",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" }
+        ],
+        "steps": [
+          {
+            "client": "Attend the pre-marriage counselling and family planning seminar.",
+            "agency": "Conducts the pre-marriage counselling and family planning seminar for the would-be couple. A special session is held at the Population Section office, with privacy, for a non-Filipino client.",
+            "feeText": "P100.00",
+            "processingTime": "45 mins",
+            "personResponsible": "Population Officer II / Population Program Officer"
+          },
+          {
+            "client": "Undergo counselling and be introduced to family planning commodities.",
+            "agency": "Asks the would-be couple whether they are pregnant or have children, and their educational attainment.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Population Officer II / Population Program Officer"
+          },
+          {
+            "client": null,
+            "agency": "Counsels the client and introduces family planning commodities.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Population Officer II / Population Program Officer"
+          },
+          {
+            "client": "As a student or researcher, request family planning documents or data.",
+            "agency": "Responds to students, researchers and other agencies requesting documents or data on family planning, once approved by the Local Chief Executive and the City Health Officer.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Population Officer II / Population Program Officer"
+          }
+        ],
+        "statedTotals": { "feeText": "P100.00", "processingTime": "1 hour and 15 mins" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's fee column prints P100.00 twice against the first two rows; it is recorded once here."
+        ]
+      },
+      {
+        "id": "cho-sti-checkup",
+        "number": 40,
+        "charterNumber": 40,
+        "charterGroup": "Social Hygiene Clinic Services",
+        "title": "Check-up for a sexually transmitted infection",
+        "description": "Examination and laboratory testing for sexually transmitted infections at the Social Hygiene Clinic, with pre-counselling, gram staining and microscopy, referral to a physician for treatment, and counselling afterwards.",
+        "office": "Social Hygiene Clinic",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Registered sex workers, freelance sex workers, men who have sex with men, clients of sex workers, and others including housewives, husbands, single men and women, live-in partners, pregnant women and other professions",
+        "requirements": [],
+        "steps": [
+          {
+            "client": "Register in the logbook and say what service you need.",
+            "agency": "Registers the client or patient for admission.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          },
+          {
+            "client": "Undergo pre-counselling.",
+            "agency": "Conducts the pre-counselling.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          },
+          {
+            "client": "Go to the City Treasurer's Office to pay.",
+            "agency": "Gives the client the order of payment.",
+            "feeText": "P150.00",
+            "processingTime": "2 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          },
+          {
+            "client": "Undergo collection and examination of the specimen.",
+            "agency": "Collects and examines the specimen.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          },
+          {
+            "client": null,
+            "agency": "Carries out the gram staining.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          },
+          {
+            "client": null,
+            "agency": "Carries out the microscopic examination.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          },
+          {
+            "client": "Collect the results.",
+            "agency": "Releases the results.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          },
+          {
+            "client": "Go to the physician for treatment.",
+            "agency": "Refers the client to a physician for treatment.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "CHO Physicians"
+          },
+          {
+            "client": "Undergo counselling.",
+            "agency": "Conducts the counselling.",
+            "feeText": "None",
+            "processingTime": "20 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          }
+        ],
+        "statedTotals": { "feeText": "P150.00", "processingTime": "2 hours and 12 mins" },
+        "notes": [
+          "The clinic also provides free condoms and lubricants, and free screening and counselling for HIV, RPR and Hepatitis B.",
+          "Queueing time is not included."
+        ],
+        "verified": false,
+        "verifyNotes": []
+      },
+      {
+        "id": "cho-pap-smear",
+        "number": 41,
+        "charterNumber": 41,
+        "charterGroup": "Social Hygiene Clinic Services",
+        "title": "Getting a PAP smear",
+        "description": "Cervical screening for sexually active women at the Social Hygiene Clinic.",
+        "office": "Social Hygiene Clinic",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Sexually active women",
+        "requirements": [],
+        "steps": [
+          {
+            "client": "Register in the logbook.",
+            "agency": "Assists the client to register in the logbook.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          },
+          {
+            "client": "Go to the City Treasurer's Office to pay.",
+            "agency": "Gives the charge slip for payment.",
+            "feeText": "P170.00",
+            "processingTime": "2 mins",
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          },
+          {
+            "client": "Undergo the collection of the specimen.",
+            "agency": "Collects the specimen and processes it.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "STI Coordinator / Nurse Attendant I / Laboratory Aide II"
+          }
+        ],
+        "statedTotals": { "feeText": "P170.00", "processingTime": "34 mins" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's step table for this service continues past the page break and the remaining rows are not recoverable from the text layer. The derived total is 7 minutes against a stated 34."
+        ]
+      },
+      {
+        "id": "cho-hiv-rpr-hepb",
+        "number": 42,
+        "charterNumber": 42,
+        "charterGroup": "Social Hygiene Clinic Services",
+        "title": "Free HIV, RPR and Hepatitis B screening",
+        "description": "Free screening and counselling for HIV, syphilis and Hepatitis B, offered to all pregnant women and to anyone at risk. A reactive result is taken to the HIV and AIDS Core Team at Bicol Regional Training and Teaching Hospital for baseline testing.",
+        "office": "Social Hygiene Clinic",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Pregnant women and clients at risk or with risky behaviour",
+        "requirements": [],
+        "steps": [
+          {
+            "client": "Attend the Social Hygiene Clinic for screening.",
+            "agency": "Conducts the HIV, RPR and Hepatitis B screening tests.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "STI Coordinator / Medical Technologist"
+          },
+          {
+            "client": "A reactive result is taken forward for baseline testing.",
+            "agency": "Brings a reactive patient to the HIV and AIDS Core Team at Bicol Regional Training and Teaching Hospital for baseline testing and check-up.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "STI Coordinator"
+          }
+        ],
+        "statedTotals": { "feeText": "None", "processingTime": "6 hours and 26 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter leaves the office, classification, transaction type and who-may-avail fields blank for this service and its step table is largely lost across the page break. The classification and transaction type here are inferred from the rest of the Social Hygiene Clinic section, and no step times are recoverable, so nothing is derived.",
+          "This is the least reliable entry in this charter and should be checked against the printed PDF before being relied on."
+        ]
+      },
+      {
+        "id": "cho-tb-casefinding",
+        "number": 43,
+        "charterNumber": 43,
+        "charterGroup": "TB DOTS Services",
+        "title": "TB testing and treatment",
+        "description": "The DOTS pathway for anyone with a cough of two weeks or more: sputum examination, chest X-ray review, registration for treatment, and the National TB Programme drug regimen with scheduled follow-up.",
+        "office": "PPMD TB DOTS Services",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Presumptive TB clients, with a cough of two weeks or more",
+        "requirements": [],
+        "steps": [
+          {
+            "client": "Go to the PPMD unit for registration and consultation.",
+            "agency": "Profiles the client and takes a history for the baseline record.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Nurse III / City Health Physicians"
+          },
+          {
+            "client": null,
+            "agency": "Refers the client to a doctor for medical consultation.",
+            "feeText": "None",
+            "processingTime": "15 mins",
+            "personResponsible": "Nurse III / Nurse Designate / Medical Technologist II"
+          },
+          {
+            "client": null,
+            "agency": "Admits the client and provides National TB Programme drugs for the treatment regimen.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse III / Nurse Designate"
+          },
+          {
+            "client": null,
+            "agency": "Gives the scheduled date of sputum collection and health education on the treatment plan and nutrition.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "Nurse III / Nurse Designate"
+          },
+          {
+            "client": "Present your chest X-ray result.",
+            "agency": "Evaluates the patient's X-ray result.",
+            "feeText": "None",
+            "processingTime": "5 mins",
+            "personResponsible": "City Health Physicians / Nurse III"
+          },
+          {
+            "client": "You are prescribed medicines or given health education.",
+            "agency": "Prescribes medicines or gives health education as needed.",
+            "feeText": "None",
+            "processingTime": "30 mins",
+            "personResponsible": "Nurse III"
+          },
+          {
+            "client": null,
+            "agency": "Instructs the client when to return for a follow-up check-up.",
+            "feeText": "None",
+            "processingTime": "10 mins",
+            "personResponsible": "Nurse III"
+          },
+          {
+            "client": "Go to the City Treasurer's Office to pay for the medical certificate.",
+            "agency": "Requests the client to pay at the City Treasurer's Office.",
+            "feeText": "P50.00",
+            "processingTime": "2 mins",
+            "personResponsible": "City Treasurer's Office"
+          },
+          {
+            "client": null,
+            "agency": "Signs the medical certificate.",
+            "feeText": "None",
+            "processingTime": "5 minutes",
+            "personResponsible": "City Health Officer"
+          }
+        ],
+        "statedTotals": { "feeText": "P50.00", "processingTime": "2 hours & 17 minutes" },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's earlier steps covering sputum collection and examination run across a page break and are only partly recoverable; the steps here begin at the registration stage the table states in full.",
+          "The derived total is 1 hour and 27 minutes against a stated 2 hours and 17 minutes."
+        ]
+      },
+      {
+        "id": "cho-xray",
+        "number": 44,
+        "charterNumber": 44,
+        "charterGroup": "X-Ray Services",
+        "title": "X-ray and ultrasound",
+        "description": "Radiology at the City Health Office X-Ray Unit, on a doctor's examination request. PhilHealth members present their number instead of paying.",
+        "office": "X-Ray Unit",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "General public",
+        "requirements": [
+          { "item": "Official receipt", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "PhilHealth ID or Member Data Record for Masa, NHTS or LGU-paid members, renewed and not expired",
+            "whereToSecure": "PhilHealth"
+          },
+          { "item": "Examination request", "whereToSecure": "City Health Office doctor" }
+        ],
+        "steps": [
+          {
+            "client": "Go to the X-Ray Unit and present the examination request.",
+            "agency": "Receives the accomplished request.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Radiologic Technologist / Clerk"
+          },
+          {
+            "client": "Pay the fee, or present your PhilHealth number instead.",
+            "agency": "Gives the payment slip and instructs the client to pay, or receives and records the PhilHealth number.",
+            "feeText": "X-ray P120.00; ultrasound P900.00",
+            "processingTime": "4 mins",
+            "personResponsible": "Radiologic Technologist / City Treasurer's Office"
+          },
+          {
+            "client": "Present proof of payment and go to the radiology room on the scheduled date.",
+            "agency": "Gives verbal instructions for preparation prior to the procedure.",
+            "feeText": "None",
+            "processingTime": "3 mins",
+            "personResponsible": "Radiologic Technologist / Radiologic Technician / Sonologist"
+          },
+          {
+            "client": "Return on the scheduled date for the release of the result.",
+            "agency": "Registers the patient's name and prepares for the X-ray or ultrasound procedure.",
+            "feeText": "None",
+            "processingTime": "2 mins",
+            "personResponsible": "Radiologic Technologist"
+          },
+          {
+            "client": null,
+            "agency": "Advises the client when to return for the result.",
+            "feeText": "None",
+            "processingTime": "11 mins",
+            "personResponsible": "Radiologic Technician"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": ["Queueing time is not included."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's header block for this service transposes its own labels: Classification reads G2C and Type of Transaction reads General Public. They are recorded here in the fields they belong to.",
+          "The charter's TOTAL row is printed empty, so there is no stated total to compare the derived 22 minutes against.",
+          "One step in the table carries a 2-hour processing time with no matching row; it is not included here."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-heart-pulse-fill",
+    "categories": [
+      {
+        "id": "certificates-and-permits",
+        "title": "Certificates and permits",
+        "icon": "bi-file-earmark-medical",
+        "services": [
+          "cho-medical-certificate",
+          "cho-medical-certificate-travel",
+          "cho-medical-certificate-signing",
+          "cho-dental-certificate",
+          "cho-death-certificate",
+          "cho-transfer-permit",
+          "cho-burial-transfer-signing",
+          "cho-certification-true-copy"
+        ]
+      },
+      {
+        "id": "health-cards",
+        "title": "Health cards and sanitation",
+        "icon": "bi-clipboard2-check",
+        "services": [
+          "cho-health-card-registration",
+          "cho-health-card-issuance",
+          "cho-sanitary-permit-registration",
+          "cho-smoking-permit",
+          "cho-sanitary-vehicle-clearance",
+          "cho-water-refilling-station",
+          "cho-water-sampling",
+          "cho-sanitary-complaint",
+          "cho-fumigation",
+          "cho-misting"
+        ]
+      },
+      {
+        "id": "seeing-a-clinician",
+        "title": "Seeing a clinician",
+        "icon": "bi-hospital",
+        "services": [
+          "cho-medical-consultation",
+          "cho-nursing-general",
+          "cho-ari-control",
+          "cho-mental-health",
+          "cho-dental-checkup",
+          "cho-ekonsulta"
+        ]
+      },
+      {
+        "id": "mothers-and-children",
+        "title": "Mothers and children",
+        "icon": "bi-people",
+        "services": [
+          "cho-prenatal-postnatal",
+          "cho-prenatal-barangay",
+          "cho-under-five-clinic",
+          "cho-under-five-barangay",
+          "cho-nutrition",
+          "cho-family-planning",
+          "cho-pre-marriage-certificate"
+        ]
+      },
+      {
+        "id": "tests-and-screening",
+        "title": "Tests and screening",
+        "icon": "bi-eyedropper",
+        "services": [
+          "cho-lab-sputum-fecalysis",
+          "cho-lab-blood-chemistry",
+          "cho-lab-specimen-submission",
+          "cho-xray",
+          "cho-sti-checkup",
+          "cho-pap-smear",
+          "cho-hiv-rpr-hepb",
+          "cho-tb-casefinding",
+          "cho-rtpcr-antigen"
+        ]
+      },
+      {
+        "id": "asking-the-office",
+        "title": "Asking the office",
+        "icon": "bi-megaphone",
+        "services": [
+          "cho-medical-team-request",
+          "cho-medical-team-hpmd",
+          "cho-ambulance-request",
+          "cho-ambulance-transfer"
+        ]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "need-a-medical-certificate",
+        "title": "You need a medical certificate",
+        "presentation": "rail",
+        "icon": "bi-file-earmark-medical",
+        "services": [
+          "cho-medical-certificate",
+          "cho-medical-certificate-signing",
+          "cho-medical-certificate-travel"
+        ]
+      },
+      {
+        "id": "someone-has-died",
+        "title": "Someone has died",
+        "presentation": "rail",
+        "icon": "bi-flower1",
+        "services": ["cho-death-certificate", "cho-burial-transfer-signing", "cho-transfer-permit"]
+      },
+      {
+        "id": "starting-a-food-job",
+        "title": "You are starting work that needs a health card",
+        "presentation": "rail",
+        "icon": "bi-clipboard2-check",
+        "services": [
+          "cho-health-card-issuance",
+          "cho-lab-sputum-fecalysis",
+          "cho-health-card-registration"
+        ]
+      },
+      {
+        "id": "youre-pregnant",
+        "title": "You are pregnant, or have a new baby",
+        "presentation": "rail",
+        "icon": "bi-heart",
+        "services": [
+          "cho-prenatal-postnatal",
+          "cho-prenatal-barangay",
+          "cho-under-five-clinic",
+          "cho-nutrition"
+        ]
+      },
+      {
+        "id": "youre-unwell",
+        "title": "You are unwell",
+        "presentation": "rail",
+        "icon": "bi-hospital",
+        "services": [
+          "cho-medical-consultation",
+          "cho-nursing-general",
+          "cho-ari-control",
+          "cho-tb-casefinding"
+        ]
+      },
+      {
+        "id": "confidential-screening",
+        "title": "You want a confidential test",
+        "presentation": "rail",
+        "icon": "bi-shield-check",
+        "services": ["cho-hiv-rpr-hepb", "cho-sti-checkup", "cho-pap-smear"]
+      },
+      {
+        "id": "running-a-food-business",
+        "title": "You run a food or water business",
+        "presentation": "rail",
+        "icon": "bi-shop",
+        "services": [
+          "cho-sanitary-permit-registration",
+          "cho-water-refilling-station",
+          "cho-sanitary-vehicle-clearance",
+          "cho-water-sampling"
+        ]
+      }
+    ],
+    "searchAliases": {
+      "cho-medical-certificate": [
+        "medical certificate",
+        "med cert",
+        "fit to work",
+        "medcert",
+        "pre employment"
+      ],
+      "cho-death-certificate": ["death certificate", "namatay", "deceased", "cause of death"],
+      "cho-transfer-permit": ["transfer permit", "move remains", "cadaver transfer"],
+      "cho-burial-transfer-signing": ["burial permit", "libing", "burial", "verbal autopsy"],
+      "cho-health-card-issuance": [
+        "health card",
+        "sanitary card",
+        "yellow card",
+        "blue card",
+        "pink card",
+        "food handler"
+      ],
+      "cho-health-card-registration": ["health card registration", "register health card"],
+      "cho-dental-checkup": ["dentist", "tooth extraction", "bunot ngipin", "dental"],
+      "cho-dental-certificate": ["dental certificate"],
+      "cho-lab-blood-chemistry": [
+        "laboratory",
+        "blood test",
+        "cbc",
+        "urinalysis",
+        "fecalysis",
+        "cholesterol"
+      ],
+      "cho-lab-sputum-fecalysis": ["sputum", "stool exam", "fecalysis"],
+      "cho-xray": ["x-ray", "xray", "chest x-ray", "ultrasound"],
+      "cho-medical-consultation": ["consultation", "see a doctor", "opd", "check up"],
+      "cho-nursing-general": ["nurse", "consultation", "vital signs", "triage"],
+      "cho-ari-control": ["cough", "difficulty breathing", "ari", "respiratory"],
+      "cho-mental-health": ["mental health", "counselling", "psychosocial"],
+      "cho-ekonsulta": ["ekonsulta", "konsulta", "philhealth konsulta", "atc"],
+      "cho-prenatal-postnatal": ["prenatal", "postnatal", "buntis", "maternal care"],
+      "cho-prenatal-barangay": ["prenatal barangay", "maternal care barangay"],
+      "cho-under-five-clinic": ["immunization", "bakuna", "vaccine", "under five"],
+      "cho-under-five-barangay": ["immunization barangay", "bakuna barangay"],
+      "cho-nutrition": ["nutrition", "malnutrition", "weight", "operation timbang"],
+      "cho-family-planning": ["family planning", "pills", "condom", "injectable", "dmpa"],
+      "cho-pre-marriage-certificate": [
+        "pre marriage",
+        "pmc",
+        "marriage counselling",
+        "pre marriage certificate"
+      ],
+      "cho-sti-checkup": ["sti", "std", "sexually transmitted"],
+      "cho-pap-smear": ["pap smear", "cervical screening"],
+      "cho-hiv-rpr-hepb": ["hiv", "hiv test", "rpr", "syphilis", "hepatitis b", "hbsag"],
+      "cho-tb-casefinding": ["tb", "tuberculosis", "dots", "ubo"],
+      "cho-sanitary-permit-registration": ["sanitary permit", "health clearance", "business"],
+      "cho-smoking-permit": ["smoking permit", "smoking area"],
+      "cho-sanitary-vehicle-clearance": ["delivery vehicle", "sanitary clearance", "catering"],
+      "cho-water-refilling-station": ["water refilling", "water station", "potability"],
+      "cho-water-sampling": ["water sampling", "water test", "colilert"],
+      "cho-sanitary-complaint": ["sanitary complaint", "food complaint", "reklamo"],
+      "cho-fumigation": ["fumigation", "fogging", "dengue"],
+      "cho-misting": ["misting", "disinfection", "covid"],
+      "cho-rtpcr-antigen": ["rt-pcr", "antigen", "covid test", "swab"],
+      "cho-ambulance-request": ["ambulance", "ambulansya"],
+      "cho-ambulance-transfer": ["ambulance transfer", "patient transfer"],
+      "cho-medical-team-request": ["medical mission", "dental mission", "medical team"],
+      "cho-medical-team-hpmd": ["medical team", "medical mission"],
+      "cho-certification-true-copy": ["certification", "certified true copy", "true copy"],
+      "cho-medical-certificate-travel": ["travel certificate", "medical certificate travel"],
+      "cho-medical-certificate-signing": ["sign medical certificate", "doctor signature"]
+    },
+    "contact": null
+  }
+}

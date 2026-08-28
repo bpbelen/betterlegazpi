@@ -538,6 +538,26 @@
   flex-grow: 1;
 }
 
+/* The dated-charter warning. Amber rather than red: the charter is still the
+   published document and still useful, it is simply older than the rest. */
+.sc-office-dated {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: var(--fs-sm);
+  line-height: var(--line-height-body);
+  color: var(--color-accent-badge-text);
+  background: rgba(194, 65, 12, 0.08);
+  border-left: 3px solid var(--color-accent-solid);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+}
+
+.sc-office-dated i {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
 .sc-office-foot {
   display: flex;
   align-items: center;
@@ -707,6 +727,12 @@
   background: rgba(255, 255, 255, 0.09);
   border-color: #93b4ff;
   color: #93b4ff;
+}
+
+[data-theme='dark'] .sc-office-dated {
+  background: rgba(251, 146, 60, 0.12);
+  border-left-color: #fb923c;
+  color: #fdba74;
 }
 
 [data-theme='dark'] .sc-office-abbr {
