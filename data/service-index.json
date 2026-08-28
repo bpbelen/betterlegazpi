@@ -198,7 +198,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "Maximum of two (2) working days"
+      "time": "2 days"
     },
     "abe-machinery-service": {
       "office": "abe",
@@ -209,7 +209,7 @@
         "kind": "amount",
         "text": "None, but the client is advised to provide the required gasoline or diesel for the actual machinery operation"
       },
-      "time": "Maximum of two (2) working days"
+      "time": "2 days"
     },
     "abe-machinery-registration": {
       "office": "abe",
@@ -220,7 +220,7 @@
         "kind": "amount",
         "text": "Registration fee of 300 pesos per machinery or equipment"
       },
-      "time": "Maximum of Three (3) working days"
+      "time": "3 days"
     },
     "abe-training": {
       "office": "abe",
@@ -231,7 +231,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "Maximum of five (5) minutes"
+      "time": "5 minutes"
     },
     "bplo-renew-face-to-face": {
       "office": "bplo",
@@ -242,7 +242,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "2 hours (maximum)"
+      "time": "2 hrs."
     },
     "bplo-new-face-to-face": {
       "office": "bplo",
@@ -253,7 +253,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "3 days (maximum)"
+      "time": "3 days"
     },
     "bplo-new-online": {
       "office": "bplo",
@@ -264,7 +264,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "3 days (maximum)"
+      "time": "3 days"
     },
     "bplo-renew-online": {
       "office": "bplo",
@@ -275,7 +275,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "1 hr. and 30 mins. (maximum)"
+      "time": "1 hr. & 30 minutes"
     },
     "bplo-additional-line-face-to-face": {
       "office": "bplo",
@@ -286,7 +286,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "3 days (maximum)"
+      "time": "3 days"
     },
     "bplo-additional-line-online": {
       "office": "bplo",
@@ -297,7 +297,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "3 days (maximum)"
+      "time": "3 days"
     },
     "bplo-transfer-location": {
       "office": "bplo",
@@ -308,7 +308,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "3 days (maximum)"
+      "time": "3 days"
     },
     "bplo-non-revenue-permit": {
       "office": "bplo",
@@ -319,7 +319,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "30 mins. (maximum)"
+      "time": "30 minutes"
     },
     "bplo-certified-true-copy": {
       "office": "bplo",
@@ -330,7 +330,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "10 mins. (maximum)"
+      "time": "10 minutes"
     },
     "bplo-certification-business-record": {
       "office": "bplo",
@@ -341,7 +341,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "30 mins. (maximum)"
+      "time": "30 minutes"
     },
     "bplo-tricycle-operators-permit": {
       "office": "bplo",
@@ -352,7 +352,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "1 hour (maximum)"
+      "time": "1 hr."
     },
     "bplo-mayors-clearance": {
       "office": "bplo",
@@ -363,7 +363,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "20 mins. (maximum)"
+      "time": "20 minutes"
     },
     "cadc-communications": {
       "office": "cadc",
@@ -374,7 +374,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "25 Minutes"
+      "time": "25 minutes"
     },
     "cadc-prevention-seminar": {
       "office": "cadc",
@@ -385,7 +385,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 Day to 3 Hours"
+      "time": "1 day, 4 hrs. & 5 minutes"
     },
     "cadc-drug-test": {
       "office": "cadc",
@@ -396,7 +396,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "4 Days and 25 Minutes"
+      "time": "4 days & 25 minutes"
     },
     "cadc-community-intervention": {
       "office": "cadc",
@@ -407,7 +407,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 hour and 20 mins. per transaction; 30 mins. twice a month for reporting"
+      "time": "45 minutes"
     },
     "cadc-badac-seminar": {
       "office": "cadc",
@@ -418,7 +418,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 Days and 5 Minutes"
+      "time": "3 days & 5 minutes"
     },
     "cao-production-inputs": {
       "office": "cao",
@@ -429,7 +429,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "14 minutes"
     },
     "cao-technical-assistance": {
       "office": "cao",
@@ -440,7 +440,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "17 minutes"
     },
     "cao-certification-rsbsa-pcic-boat": {
       "office": "cao",
@@ -451,7 +451,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "11 minutes"
     },
     "casso-transfer-ownership": {
       "office": "casso",
@@ -462,7 +462,7 @@
         "kind": "amount",
         "text": "₱100"
       },
-      "time": "2.8 hours"
+      "time": "2 hrs. & 48 minutes"
     },
     "casso-assess-building": {
       "office": "casso",
@@ -473,7 +473,7 @@
         "kind": "amount",
         "text": "₱100"
       },
-      "time": "10.55 hours"
+      "time": "10 hrs. & 33 minutes"
     },
     "casso-segregation-consolidation": {
       "office": "casso",
@@ -484,7 +484,7 @@
         "kind": "amount",
         "text": "₱100"
       },
-      "time": "10 hours"
+      "time": "1 day & 2 hrs."
     },
     "casso-true-copy-tax-declaration": {
       "office": "casso",
@@ -495,7 +495,7 @@
         "kind": "amount",
         "text": "₱50"
       },
-      "time": "26 minutes"
+      "time": "31 minutes"
     },
     "casso-certifications": {
       "office": "casso",
@@ -517,7 +517,7 @@
         "kind": "amount",
         "text": "₱50"
       },
-      "time": "1.68 hours"
+      "time": "1 hr. & 41 minutes"
     },
     "casso-tax-mapping": {
       "office": "casso",
@@ -550,7 +550,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "58 minutes"
+      "time": "2 hrs. & 16 minutes"
     },
     "casso-reassessment-building": {
       "office": "casso",
@@ -561,7 +561,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "9.18 hours"
+      "time": "1 day, 1 hr. & 16 minutes"
     },
     "casso-correction": {
       "office": "casso",
@@ -572,7 +572,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2.1 hours"
+      "time": "2 hrs. & 16 minutes"
     },
     "casso-cancel-annotation": {
       "office": "casso",
@@ -583,7 +583,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "38 minutes"
+      "time": "48 minutes"
     },
     "ccr-birth-on-time": {
       "office": "ccr",
@@ -594,7 +594,7 @@
         "kind": "amount",
         "text": "Marital child: none. Non-marital child: Affidavit to Use the Surname of the Father P200.00, Admission of Paternity P100.00"
       },
-      "time": "Two (2) hours"
+      "time": "2 hrs."
     },
     "ccr-birth-delayed": {
       "office": "ccr",
@@ -605,7 +605,7 @@
         "kind": "amount",
         "text": "Service fee 500.00. Free under BRAP. For a non-marital child, additional: Admission of Paternity 100.00, Affidavit to Use the Surname of the Father 200.00"
       },
-      "time": "3 hours and 10 calendar days (posting period)"
+      "time": "10 days & 3 hrs."
     },
     "ccr-birth-delayed-80-above": {
       "office": "ccr",
@@ -616,7 +616,7 @@
         "kind": "amount",
         "text": "Service fee 500.00. Free under BRAP"
       },
-      "time": "3 hours and 10 calendar days (posting period)"
+      "time": "10 days & 3 hrs."
     },
     "ccr-legitimation": {
       "office": "ccr",
@@ -627,7 +627,7 @@
         "kind": "amount",
         "text": "P250.00 endorsement fee; P155.00 mail fee; P5.00 per page for a copy certified by the Local Civil Registrar"
       },
-      "time": "3 hours"
+      "time": "3 hrs."
     },
     "ccr-death-on-time": {
       "office": "ccr",
@@ -638,7 +638,7 @@
         "kind": "amount",
         "text": "P30.00 burial fee; P60.00 transfer fee; P30.00 issuance of death certificate"
       },
-      "time": "One hour"
+      "time": "1 hr."
     },
     "ccr-death-delayed": {
       "office": "ccr",
@@ -649,7 +649,7 @@
         "kind": "amount",
         "text": "P30.00 burial fee; P60.00 transfer fee; P30.00 issuance of death certificate; P500.00 service fee"
       },
-      "time": "1 hour and 10 calendar days"
+      "time": "10 days & 1 hr."
     },
     "ccr-marriage-license": {
       "office": "ccr",
@@ -660,7 +660,7 @@
         "kind": "amount",
         "text": "Family planning fee 100.00; application fee 300.00; marriage licence fee P200.00; solemnization fee"
       },
-      "time": "3 hours and 10 days posting period"
+      "time": "10 days & 3 hrs."
     },
     "ccr-marriage-on-time": {
       "office": "ccr",
@@ -671,7 +671,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 hour"
+      "time": "1 hr."
     },
     "ccr-marriage-delayed": {
       "office": "ccr",
@@ -682,7 +682,7 @@
         "kind": "amount",
         "text": "Service fee P500.00"
       },
-      "time": "1 hour and 10-day posting period"
+      "time": "10 days & 1 hr."
     },
     "ccr-certified-copies": {
       "office": "ccr",
@@ -693,7 +693,7 @@
         "kind": "amount",
         "text": "Local: P100.00. Abroad: P200.00"
       },
-      "time": "1 hour"
+      "time": "1 hr."
     },
     "ccr-electronic-endorsement": {
       "office": "ccr",
@@ -704,7 +704,7 @@
         "kind": "amount",
         "text": "Electronic endorsement fee P100.00; certified copy of the registry book P5.00 per page"
       },
-      "time": "1 hour, then 4 weeks from the PSA"
+      "time": "1 hr."
     },
     "ccr-petition-9048-10172": {
       "office": "ccr",
@@ -715,7 +715,7 @@
         "kind": "amount",
         "text": "P3,200.00 for change of first name or correction of sex, date and month of birth; P1,200.00 for correction of an entry, plus P300.00 endorsement fee to PSA Legal; P5.00 per page authentication fee for supporting documents; publication fee paid to the publisher. A petitioner with a certificate of indigency is exempt from the filing fee"
       },
-      "time": null
+      "time": "14 days & 2 hrs."
     },
     "ccr-change-surname-9255": {
       "office": "ccr",
@@ -726,7 +726,7 @@
         "kind": "amount",
         "text": "P200.00 authentication fee; P100.00 if with paternity; P155.00 mailing fee; P5.00 per page for a photocopy certified from the original by the Local Civil Registrar"
       },
-      "time": "2 hours"
+      "time": "2 hrs."
     },
     "ccr-court-decrees": {
       "office": "ccr",
@@ -737,7 +737,7 @@
         "kind": "amount",
         "text": "P500.00 for registration of an application of a foreign decree or adoption; P700.00 for registration of an annulment or declaration of nullity of marriage; P5.00 per page for a photocopy certified from the original"
       },
-      "time": "2 hours"
+      "time": "2 hrs."
     },
     "ccr-supplemental-report": {
       "office": "ccr",
@@ -748,7 +748,7 @@
         "kind": "amount",
         "text": "P200.00"
       },
-      "time": "2 hours"
+      "time": "2 hrs."
     },
     "ccr-other-certificates": {
       "office": "ccr",
@@ -759,7 +759,7 @@
         "kind": "amount",
         "text": "P100.00"
       },
-      "time": "1 hour"
+      "time": "1 hr."
     },
     "ccr-email-verification": {
       "office": "ccr",
@@ -770,7 +770,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 hours"
+      "time": "2 hrs."
     },
     "ceo-truck-ban-permit": {
       "office": "ceo",
@@ -781,7 +781,7 @@
         "kind": "amount",
         "text": "750 (Class A) below 4,500 gross weight; 1,000 (Class B) 4,500 to 12,000 gross weight; 1,250 (Class C) above 12,000 gross weight"
       },
-      "time": "1 day, 1 hour & ten minutes"
+      "time": "1 day, 1 hr. & 10 minutes"
     },
     "ceo-road-use-permit": {
       "office": "ceo",
@@ -792,7 +792,7 @@
         "kind": "amount",
         "text": "350.00 pesos per day of the activity"
       },
-      "time": "1 hour & 55 minutes"
+      "time": "1 hr. & 55 minutes"
     },
     "ceo-banner-permit": {
       "office": "ceo",
@@ -803,7 +803,7 @@
         "kind": "amount",
         "text": "24.00 pesos per sq.m. per week per piece, with an additional charge for the dismantling fee based on the number of banners per week"
       },
-      "time": "1 day, 1 hour & five minutes"
+      "time": "1 hr. & 55 minutes"
     },
     "ceo-assistance-researchers": {
       "office": "ceo",
@@ -814,7 +814,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 day, 1 hour & five minutes"
+      "time": "3 hrs. & 10 minutes"
     },
     "ceo-assistance-students-ojt": {
       "office": "ceo",
@@ -825,7 +825,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 hours and 25 minutes"
+      "time": "2 hrs. & 25 minutes"
     },
     "ceo-burial-accommodation": {
       "office": "ceo",
@@ -836,7 +836,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 hour and 25 minutes"
+      "time": "1 hr. & 25 minutes"
     },
     "ceo-pow-one-storey": {
       "office": "ceo",
@@ -847,7 +847,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "13 days, 2 hours & 30 minutes"
+      "time": "15.5 days, 6 hrs. & 30 minutes"
     },
     "ceo-pow-two-storey": {
       "office": "ceo",
@@ -858,7 +858,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "19 days, 2 hours & 30 minutes"
+      "time": "24.5 days, 6 hrs. & 30 minutes"
     },
     "ceo-pow-three-storey": {
       "office": "ceo",
@@ -869,7 +869,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "26 days, 2 hours & 30 minutes"
+      "time": "29.5 days, 6 hrs. & 30 minutes"
     },
     "ceo-pow-roads": {
       "office": "ceo",
@@ -880,7 +880,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "17.5 days, 10 hrs. & 30 minutes"
     },
     "ceo-pow-drainage": {
       "office": "ceo",
@@ -891,7 +891,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "20.5 days, 10 hrs. & 30 minutes"
     },
     "ceo-pow-water-system": {
       "office": "ceo",
@@ -902,7 +902,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "20.5 days, 6 hrs. & 30 minutes"
     },
     "ceo-pow-bridges": {
       "office": "ceo",
@@ -913,7 +913,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "17.5 days, 6 hrs. & 30 minutes"
     },
     "ceo-pow-barangay": {
       "office": "ceo",
@@ -924,7 +924,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "37 days, 2 hours & 30 minutes"
+      "time": "24 days, 4 hrs. & 40 minutes"
     },
     "ceo-barangay-final-inspection": {
       "office": "ceo",
@@ -935,7 +935,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 days, 4 hours & 40 minutes"
+      "time": "3 days, 4 hrs. & 40 minutes"
     },
     "ceo-streetlight-repair": {
       "office": "ceo",
@@ -946,7 +946,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "7 days"
+      "time": "1 day, 8 hrs. & 30 minutes"
     },
     "ceo-vehicle-repair": {
       "office": "ceo",
@@ -957,7 +957,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "7 days"
+      "time": "1 day, 4 hrs. & 10 minutes"
     },
     "ceo-road-drainage-maintenance": {
       "office": "ceo",
@@ -968,7 +968,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "7 days"
+      "time": "2 days, 3 hrs. & 40 minutes"
     },
     "ceo-construction-plans": {
       "office": "ceo",
@@ -979,7 +979,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 weeks to 2 Months"
+      "time": "66.5 days & 6 hrs."
     },
     "ceo-annual-inspection-simple": {
       "office": "ceo",
@@ -990,7 +990,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 days, 1 hr. & 45 mins. (for simple construction / establishment)"
+      "time": "6 days, 1 hr. & 45 minutes"
     },
     "ceo-annual-inspection-complex": {
       "office": "ceo",
@@ -1001,7 +1001,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "5 days, 1 hr. & 45 mins. (for complex construction / establishment)"
+      "time": "8 days, 1 hr. & 45 minutes"
     },
     "ceo-excavation-permit-maintenance": {
       "office": "ceo",
@@ -1012,7 +1012,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": null
+      "time": "8 hrs. & 30 minutes"
     },
     "ceo-building-permit": {
       "office": "ceo",
@@ -1023,7 +1023,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": null
+      "time": "20 days & 13 hrs."
     },
     "ceo-certificate-occupancy": {
       "office": "ceo",
@@ -1034,7 +1034,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": null
+      "time": "21 days, 8 hrs. & 30 minutes"
     },
     "ceo-electrical-permit": {
       "office": "ceo",
@@ -1045,7 +1045,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": null
+      "time": "3 days, 7 hrs. & 15 minutes"
     },
     "ceo-mechanical-permit": {
       "office": "ceo",
@@ -1056,7 +1056,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": null
+      "time": "2 days, 7 hrs. & 15 minutes"
     },
     "ceo-mechanical-permit-to-operate": {
       "office": "ceo",
@@ -1067,7 +1067,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": null
+      "time": "4 hrs."
     },
     "ceo-demolition-permit": {
       "office": "ceo",
@@ -1078,7 +1078,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": null
+      "time": "2 days & 7 hrs."
     },
     "ceo-excavation-ground-preparation-permit": {
       "office": "ceo",
@@ -1089,7 +1089,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": null
+      "time": "2 days & 7 hrs."
     },
     "ceo-sidewalk-scaffolding-permit": {
       "office": "ceo",
@@ -1100,7 +1100,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": null
+      "time": "2 days & 7 hrs."
     },
     "coop-registration-endorsement": {
       "office": "city-coop",
@@ -1111,7 +1111,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "45 minutes"
     },
     "coop-orientation": {
       "office": "city-coop",
@@ -1122,7 +1122,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "4 hrs. & 32 minutes"
     },
     "coop-pmes": {
       "office": "city-coop",
@@ -1133,7 +1133,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "4 hrs. & 32 minutes"
     },
     "coop-mandatory-report": {
       "office": "city-coop",
@@ -1144,7 +1144,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "20 minutes"
     },
     "coop-mandatory-training": {
       "office": "city-coop",
@@ -1155,7 +1155,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "8 days & 25 minutes"
     },
     "coop-business-permit-endorsement": {
       "office": "city-coop",
@@ -1166,7 +1166,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "20 minutes"
     },
     "coop-cso-accreditation": {
       "office": "city-coop",
@@ -1177,7 +1177,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "20 minutes"
     },
     "cmo-client-assistance": {
       "office": "cmo",
@@ -1188,7 +1188,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "15 MINS."
+      "time": "15 minutes"
     },
     "cmo-document-receiving": {
       "office": "cmo",
@@ -1199,7 +1199,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "40 MINS."
+      "time": "40 minutes"
     },
     "cmo-venue-booking": {
       "office": "cmo",
@@ -1210,7 +1210,7 @@
         "kind": "amount",
         "text": "P40,000.00 to P60,000.00; P350 a day"
       },
-      "time": "23 MINS."
+      "time": "23 minutes"
     },
     "cmo-appointments": {
       "office": "cmo",
@@ -1221,7 +1221,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "10 MINS."
+      "time": "10 minutes"
     },
     "cpdo-lc-new-business": {
       "office": "cpdo",
@@ -1232,7 +1232,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "One (1) day max."
+      "time": "1 day"
     },
     "cpdo-lc-business-renewal": {
       "office": "cpdo",
@@ -1243,7 +1243,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "One (1) day MAXIMUM"
+      "time": "1 day"
     },
     "cpdo-lc-building-permit": {
       "office": "cpdo",
@@ -1254,7 +1254,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "One (1) day max."
+      "time": "1 day"
     },
     "cpdo-site-zoning-certification": {
       "office": "cpdo",
@@ -1265,7 +1265,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "One (1) day Maximum"
+      "time": "1 day"
     },
     "cpdo-lgu-endorsements": {
       "office": "cpdo",
@@ -1276,7 +1276,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "One (1) Working Day Max."
+      "time": "1 day"
     },
     "cpdo-da-certification": {
       "office": "cpdo",
@@ -1287,7 +1287,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "Three (3) working days max. excluding DA Processing Time."
+      "time": "3 days"
     },
     "cpdo-land-use-reclassification": {
       "office": "cpdo",
@@ -1298,7 +1298,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "Thirty Three (33) Working Days Maximun"
+      "time": "33 days"
     },
     "cpdo-palc": {
       "office": "cpdo",
@@ -1309,7 +1309,7 @@
         "kind": "amount",
         "text": "Processing fee Php 360.00 per hectare (PD 957), Php 90.00 per hectare (BP 220 socialized), Php 216.00 per hectare (BP 220 economic); inspection fee Php 1,500.00 per hectare"
       },
-      "time": "33 DAYS (MAXIMUM)"
+      "time": "33 days"
     },
     "cpdo-msla-free-patent": {
       "office": "cpdo",
@@ -1320,7 +1320,7 @@
         "kind": "amount",
         "text": "Certification fee Php 216.00; inspection fee Php 1,500.00"
       },
-      "time": "15 DAYS (MAXIMUM)"
+      "time": "15 days"
     },
     "cpdo-4ph-housing": {
       "office": "cpdo",
@@ -1331,7 +1331,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 DAY (MAXIMUM)"
+      "time": "1 day"
     },
     "cpdo-barangay-development-planning": {
       "office": "cpdo",
@@ -1342,7 +1342,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "One (1) Day"
+      "time": "1 day"
     },
     "cpdo-ppd-data-request": {
       "office": "cpdo",
@@ -1353,7 +1353,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "One (1) Day"
+      "time": "1 day"
     },
     "cpdo-spd-technical-assistance": {
       "office": "cpdo",
@@ -1364,7 +1364,7 @@
         "kind": "amount",
         "text": "Certified copy of a record P50.00 per page; photocopy of documents P5.00 per page; certification or annotation P50.00. Computer-generated maps: black and white bond size P50.00, coloured bond size P100.00, black and white A3 P150.00, thematic maps bond size P200.00, vicinity maps bond size P150.00"
       },
-      "time": "3 DAYS (MAXIMUM)"
+      "time": "3 days"
     },
     "cpdo-resd-birth-location-certification": {
       "office": "cpdo",
@@ -1375,7 +1375,7 @@
         "kind": "amount",
         "text": "Certification fee Php 50.00"
       },
-      "time": "3 DAYS (MAXIMUM)"
+      "time": "3 days"
     },
     "cpdo-resd-data-request": {
       "office": "cpdo",
@@ -1386,7 +1386,7 @@
         "kind": "amount",
         "text": "Computer-generated maps: black and white bond paper Php 50.00; coloured bond paper Php 100.00; black and white A3 Php 100.00; coloured A3 Php 200.00; land use or thematic maps bond size Php 150.00; land use or thematic maps A3 Php 200.00; tax index maps bond paper Php 200.00; tax index maps A3 Php 300.00; vicinity or location maps black and white bond Php 150.00; vicinity or location maps coloured bond Php 200.00; vicinity or location maps black and white A3 Php 200.00; vicinity or location maps coloured A3 Php 200.00; two-colour plotter prints from Php 2,000.00; full-colour plotter prints from Php 3,000.00. Computer-generated land information: name of owner, title number, lot number, land area and other information Php 20.00; computer print of land information on bond paper Php 125.00. Other fees: certified true copy of records Php 50.00 per page; photocopy of any other copy Php 35.00 per page"
       },
-      "time": "3 DAYS (MAXIMUM)"
+      "time": "3 days"
     },
     "cpdo-incoming-communications": {
       "office": "cpdo",
@@ -1397,7 +1397,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 DAYS (MAXIMUM)"
+      "time": "3 days"
     },
     "cpdo-outgoing-communications": {
       "office": "cpdo",
@@ -1408,7 +1408,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 DAYS (MAXIMUM)"
+      "time": "3 days"
     },
     "cswdo-financial-assistance-aics": {
       "office": "cswdo",
@@ -1419,7 +1419,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 working days and 4 hours and 35 minutes"
+      "time": "2 days, 4 hrs. & 25 minutes"
     },
     "cswdo-certificate-of-indigency": {
       "office": "cswdo",
@@ -1430,7 +1430,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 working days and 35 minutes"
+      "time": "1 day & 35 minutes"
     },
     "cswdo-philhealth-financial-capability": {
       "office": "cswdo",
@@ -1441,7 +1441,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 hour and 15 minutes"
+      "time": "1 hr. & 15 minutes"
     },
     "cswdo-solo-parent-id": {
       "office": "cswdo",
@@ -1452,7 +1452,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 working days and 41 minutes"
+      "time": "2 days & 28 minutes"
     },
     "cto-business-tax-billing-statement": {
       "office": "cto",
@@ -1463,7 +1463,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "7 Minutes"
+      "time": "7 minutes"
     },
     "cto-real-property-tax-statement": {
       "office": "cto",
@@ -1474,7 +1474,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "9 Minutes"
+      "time": "9 minutes"
     },
     "cto-assessment-of-business-tax": {
       "office": "cto",
@@ -1485,7 +1485,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "20 Minutes"
+      "time": "20 minutes"
     },
     "cto-business-tax-previous-year-delinquency": {
       "office": "cto",
@@ -1496,7 +1496,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "13 Minutes"
+      "time": "13 minutes"
     },
     "cto-assessment-of-transfer-tax": {
       "office": "cto",
@@ -1507,7 +1507,7 @@
         "kind": "amount",
         "text": "Seventy-Five Percent (75%) of One Percent (1%) of the total consideration or FMV, whichever is higher"
       },
-      "time": "20 Minutes"
+      "time": "15 minutes"
     },
     "cto-payment-of-business-tax": {
       "office": "cto",
@@ -1518,7 +1518,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "5 Minutes"
+      "time": "5 minutes"
     },
     "cto-payment-of-real-property-tax": {
       "office": "cto",
@@ -1529,7 +1529,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "5 Minutes"
+      "time": "5 minutes"
     },
     "cto-payment-of-transfer-tax": {
       "office": "cto",
@@ -1540,7 +1540,7 @@
         "kind": "amount",
         "text": "Seventy-Five Percent (75%) of One Percent (1%) of the total consideration or FMV, whichever is higher. Twenty-Five Percent (25%) surcharge in case of failure to pay the tax imposed on time. Two Percent (2%) interest per month from the due date until the tax is fully paid, but in no case shall the total interest on the unpaid amount or a portion thereof exceed eighteen (18) months."
       },
-      "time": "5 Minutes"
+      "time": "5 minutes"
     },
     "cto-payment-of-community-tax": {
       "office": "cto",
@@ -1551,7 +1551,7 @@
         "kind": "amount",
         "text": "For Individual: Five Pesos (P5.00) and an annual additional tax of One Peso (P1.00) for every One Thousand Pesos (P1,000.00) of income regardless whether from business, exercise of profession or from property, which in no case shall exceed Five Thousand Pesos (P5,000.00). For Juridical Person: Five Hundred Pesos (P500.00) and an annual additional tax which in no case shall exceed Ten Thousand Pesos (P10,000.00) in accordance with the provision under the LGC."
       },
-      "time": null
+      "time": "7 minutes"
     },
     "cto-payment-of-ptr-and-occupation-tax": {
       "office": "cto",
@@ -1562,7 +1562,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "7 Minutes"
+      "time": "7 minutes"
     },
     "cto-payment-of-other-taxes-fees-charges": {
       "office": "cto",
@@ -1573,7 +1573,7 @@
         "kind": "assessed",
         "text": "Fee on assessment"
       },
-      "time": "9 Minutes"
+      "time": "9 minutes"
     },
     "cto-sealing-weights-measures-retailers": {
       "office": "cto",
@@ -1584,7 +1584,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "12 minutes for Retailers"
+      "time": "12 minutes"
     },
     "cto-sealing-weights-measures-fuel-dispensers": {
       "office": "cto",
@@ -1595,7 +1595,7 @@
         "kind": "ordinance",
         "text": "Fee set by ordinance"
       },
-      "time": "14 minutes for Gasoline"
+      "time": "14 minutes"
     },
     "cto-certification-retirement-of-business": {
       "office": "cto",
@@ -1606,7 +1606,7 @@
         "kind": "amount",
         "text": "Based on the assessment. Certification Fee of Php 50.00."
       },
-      "time": "10 Minutes"
+      "time": "10 minutes"
     },
     "cto-real-property-tax-clearance": {
       "office": "cto",
@@ -1617,7 +1617,7 @@
         "kind": "amount",
         "text": "Certification Fee of Php 50.00"
       },
-      "time": null
+      "time": "None"
     },
     "cto-salaries-monetary-claims-cash": {
       "office": "cto",
@@ -1628,7 +1628,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "11 Minutes"
+      "time": "11 minutes"
     },
     "cto-salaries-monetary-claims-check": {
       "office": "cto",
@@ -1639,7 +1639,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "13 Minutes"
+      "time": "13 minutes"
     },
     "cto-salaries-monetary-claims-electronic": {
       "office": "cto",
@@ -1650,7 +1650,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "5 Minutes"
+      "time": "5 minutes"
     },
     "cto-accountable-forms-non-deputized": {
       "office": "cto",
@@ -1661,7 +1661,7 @@
         "kind": "amount",
         "text": "Php 100.00 per pad"
       },
-      "time": "25 Minutes"
+      "time": "25 minutes"
     },
     "cto-accountable-forms-revenue-collectors": {
       "office": "cto",
@@ -1672,7 +1672,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "18 Minutes"
+      "time": "18 minutes"
     },
     "cto-ctc-for-deputized-officers": {
       "office": "cto",
@@ -1683,7 +1683,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "24 Minutes"
+      "time": "24 minutes"
     },
     "cvo-treatment-in-patient": {
       "office": "cvo",
@@ -1694,7 +1694,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "20 minutes"
     },
     "cvo-treatment-out-patient": {
       "office": "cvo",
@@ -1705,7 +1705,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "25 minutes"
     },
     "cvo-health-certificate": {
       "office": "cvo",
@@ -1716,7 +1716,7 @@
         "kind": "amount",
         "text": "P100.00 per head"
       },
-      "time": null
+      "time": "38 minutes"
     },
     "cvo-animal-propagation": {
       "office": "cvo",
@@ -1727,7 +1727,7 @@
         "kind": "amount",
         "text": "Varies, according to the price of the semen"
       },
-      "time": null
+      "time": "48 minutes"
     },
     "cvo-pet-pre-registration": {
       "office": "cvo",
@@ -1738,7 +1738,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "43 minutes"
     },
     "cvo-rabies-vaccination": {
       "office": "cvo",
@@ -1749,7 +1749,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "59 minutes"
     },
     "cvo-stray-animals": {
       "office": "cvo",
@@ -1760,7 +1760,7 @@
         "kind": "amount",
         "text": "Settled at the City Treasurer's Office; the charter publishes no amount"
       },
-      "time": null
+      "time": "6 days, 1 hr. & 10 minutes"
     },
     "eemd-albay-stall-awarding": {
       "office": "eemd-albay",
@@ -1771,7 +1771,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "50 minutes"
     },
     "eemd-albay-lease-contract": {
       "office": "eemd-albay",
@@ -1782,7 +1782,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 days and 28 minutes"
+      "time": "3 days & 28 minutes"
     },
     "eemd-legazpi-new-stall-lease": {
       "office": "eemd-legazpi",
@@ -1793,7 +1793,7 @@
         "kind": "amount",
         "text": "As per approved rates"
       },
-      "time": "21 working days & 20 minutes"
+      "time": "18 days & 35 minutes"
     },
     "eemd-legazpi-renew-stall-lease": {
       "office": "eemd-legazpi",
@@ -1826,7 +1826,7 @@
         "kind": "amount",
         "text": "Based on arrears"
       },
-      "time": "45 minutes"
+      "time": "30 minutes"
     },
     "eemd-legazpi-promotional-sales": {
       "office": "eemd-legazpi",
@@ -1848,7 +1848,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "8 days and 20 minutes"
+      "time": "8 days & 20 minutes"
     },
     "gad-incoming-communications": {
       "office": "gad",
@@ -1870,7 +1870,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "25 days & 16 minutes"
     },
     "gad-training-walk-in": {
       "office": "gad",
@@ -1903,7 +1903,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "8 days and 32 minutes"
+      "time": "8 days & 32 minutes"
     },
     "gad-barangay-gpb-assistance": {
       "office": "gad",
@@ -1914,7 +1914,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 hours & 2 minutes"
+      "time": "2 hrs. & 2 minutes"
     },
     "gad-barangay-gpb-compilation": {
       "office": "gad",
@@ -1925,7 +1925,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 day, 1 hour & 5 minutes"
+      "time": "1 day, 1 hr. & 5 minutes"
     },
     "gad-department-gpb-assistance": {
       "office": "gad",
@@ -1936,7 +1936,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 hours & 2 minutes"
+      "time": "2 hrs. & 2 minutes"
     },
     "gad-internal-training-request": {
       "office": "gad",
@@ -1947,7 +1947,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "20 minutes"
     },
     "gad-internal-training-phone": {
       "office": "gad",
@@ -1969,7 +1969,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 day 5 minutes"
+      "time": "1 day & 5 minutes"
     },
     "gso-philgeps-posting": {
       "office": "gso",
@@ -1980,7 +1980,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 hours"
+      "time": "3 hrs."
     },
     "gso-rfq-abstract": {
       "office": "gso",
@@ -2002,7 +2002,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 hours"
+      "time": "2 hrs."
     },
     "gso-inspection-acceptance": {
       "office": "gso",
@@ -2013,7 +2013,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 days and 4 hours"
+      "time": "2 days & 4 hrs."
     },
     "gso-coa-receipt": {
       "office": "gso",
@@ -2024,7 +2024,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 hour"
+      "time": "1 hr."
     },
     "gso-procurement-clearance": {
       "office": "gso",
@@ -2035,7 +2035,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 hours"
+      "time": "3 hrs."
     },
     "gso-letter-of-intent": {
       "office": "gso",
@@ -2057,7 +2057,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "4 hours"
+      "time": "4 hrs."
     },
     "gso-mayors-solicitation": {
       "office": "gso",
@@ -2068,7 +2068,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "20 days 40 minutes"
+      "time": "20 days & 40 minutes"
     },
     "gso-employee-clearance": {
       "office": "gso",
@@ -2079,7 +2079,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "3 hours 40 minutes"
+      "time": "3 hrs. & 40 minutes"
     },
     "hrmo-recruitment-selection-placement": {
       "office": "hrmo",
@@ -2101,7 +2101,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "16 days, 2 hrs. & 52 minutes"
+      "time": "16 days, 2 hrs. & 50 minutes"
     },
     "hrmo-contract-of-services-job-order-appointments": {
       "office": "hrmo",
@@ -2112,7 +2112,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "5 days & 3 hrs."
     },
     "hrmo-certificate-of-employment": {
       "office": "hrmo",
@@ -2145,7 +2145,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "2 days & 1 hr."
+      "time": "2 days & 45 minutes"
     },
     "hrmo-application-for-leave": {
       "office": "hrmo",
@@ -2156,7 +2156,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "5 days & 2 hrs."
+      "time": "5 days, 1 hr. & 45 minutes"
     },
     "hrmo-processing-retirement": {
       "office": "hrmo",
@@ -2167,7 +2167,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "11 days & 10 minutes"
     },
     "ocenr-permit-to-dump": {
       "office": "ocenr",
@@ -2178,7 +2178,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 Hour and 35 Minutes"
+      "time": "1 hr. & 35 minutes"
     },
     "ocenr-slf-visitors-pass": {
       "office": "ocenr",
@@ -2189,7 +2189,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 hour and 18 minutes"
+      "time": "1 hr. & 18 minutes"
     },
     "ocenr-ec-webinar-noncompliant": {
       "office": "ocenr",
@@ -2200,7 +2200,7 @@
         "kind": "amount",
         "text": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment."
       },
-      "time": "2 Hours and 55 Minutes"
+      "time": "2 hrs. & 55 minutes"
     },
     "ocenr-ec-webinar-new-renewal": {
       "office": "ocenr",
@@ -2211,7 +2211,7 @@
         "kind": "amount",
         "text": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment."
       },
-      "time": "2 Hours and 50 Minutes"
+      "time": "2 hrs. & 50 minutes"
     },
     "ocenr-ec-seminar-noncompliant": {
       "office": "ocenr",
@@ -2222,7 +2222,7 @@
         "kind": "amount",
         "text": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment."
       },
-      "time": "2 Hours and 23 Minutes"
+      "time": "2 hrs. & 23 minutes"
     },
     "ocenr-ec-seminar-new-renewal": {
       "office": "ocenr",
@@ -2233,7 +2233,7 @@
         "kind": "amount",
         "text": "50.00. For a business establishment with a Mayor's Permit, payment is included in the one-time assessment."
       },
-      "time": "2 Hours and 13 Minutes"
+      "time": "2 hrs. & 13 minutes"
     },
     "ocenr-no-objection-cut-tree": {
       "office": "ocenr",
@@ -2244,7 +2244,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "6 days and 40 minutes"
+      "time": "6 days & 40 minutes"
     },
     "ocenr-chainsaw-certification": {
       "office": "ocenr",
@@ -2255,7 +2255,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 hour and 10 minutes"
+      "time": "1 hr. & 10 minutes"
     },
     "ocenr-tree-seedlings": {
       "office": "ocenr",
@@ -2266,7 +2266,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "4 hours and 35 minutes"
+      "time": "0.5 days & 30 minutes"
     },
     "ocenr-iec-campaign": {
       "office": "ocenr",
@@ -2277,7 +2277,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "20 Minutes"
+      "time": "20 minutes"
     },
     "ocenr-septic-desludging": {
       "office": "ocenr",
@@ -2288,7 +2288,7 @@
         "kind": "amount",
         "text": "Septage fee, as assessed by the City Treasurer's Office or the City Engineer's Office"
       },
-      "time": "2 hours 12 minutes"
+      "time": "2 hrs. & 17 minutes"
     },
     "orhcd-relocation-site": {
       "office": "orhcd",
@@ -2299,7 +2299,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "9 days & 35 minutes"
     },
     "orhcd-city-property": {
       "office": "orhcd",
@@ -2310,7 +2310,7 @@
         "kind": "amount",
         "text": "The appraised value set by the Appraisal Committee, on an instalment scheme, plus penalties for past due amounts"
       },
-      "time": null
+      "time": "59 days"
     },
     "orhcd-technical-assistance": {
       "office": "orhcd",
@@ -2321,7 +2321,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "20 days"
     },
     "orhcd-homeowners-association": {
       "office": "orhcd",
@@ -2332,7 +2332,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "23 days"
     },
     "orhcd-aleco-lcwd-certification": {
       "office": "orhcd",
@@ -2343,7 +2343,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "25 minutes"
     },
     "orhcd-other-certifications": {
       "office": "orhcd",
@@ -2354,7 +2354,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "10 minutes"
     },
     "orhcd-queries": {
       "office": "orhcd",
@@ -2365,7 +2365,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "20 minutes"
     },
     "orhcd-udha": {
       "office": "orhcd",
@@ -2376,7 +2376,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "45 days"
     },
     "orhcd-financial-assistance": {
       "office": "orhcd",
@@ -2387,7 +2387,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "9 days"
     },
     "orhcd-incoming-communications": {
       "office": "orhcd",
@@ -2398,7 +2398,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "10 minutes"
     },
     "orhcd-outgoing-communications": {
       "office": "orhcd",
@@ -2409,7 +2409,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "10 minutes"
     },
     "orhcd-agency-meetings": {
       "office": "orhcd",
@@ -2420,7 +2420,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "17 days"
     },
     "pdao-pwd-id": {
       "office": "pdao",
@@ -2431,7 +2431,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": "1 hour and 13 minutes"
+      "time": "1 hr. & 13 minutes"
     },
     "peso-jobseekers": {
       "office": "peso",
@@ -2442,7 +2442,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "24 minutes"
     },
     "peso-employers": {
       "office": "peso",
@@ -2453,7 +2453,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "43 minutes"
     },
     "peso-ofw-help-desk": {
       "office": "peso",
@@ -2464,7 +2464,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "16 minutes"
     },
     "peso-spes": {
       "office": "peso",
@@ -2475,7 +2475,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "21 minutes"
     },
     "peso-jobstart": {
       "office": "peso",
@@ -2486,7 +2486,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "23 minutes"
     },
     "peso-dole-grant-programs": {
       "office": "peso",
@@ -2497,7 +2497,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "28 minutes"
     },
     "sp-receive-documents": {
       "office": "sp-secretariat",
@@ -2508,7 +2508,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "50 minutes"
     },
     "sp-records-research": {
       "office": "sp-secretariat",
@@ -2519,7 +2519,7 @@
         "kind": "amount",
         "text": "PHP 5.00 per photocopied page; PHP 50.00 per page for a certified true copy"
       },
-      "time": null
+      "time": "7 days, 2 hrs. & 35 minutes"
     },
     "sp-franchise-renewal": {
       "office": "sp-secretariat",
@@ -2530,7 +2530,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "6 days, 1 hr. & 30 minutes"
     },
     "sp-franchise-transfer": {
       "office": "sp-secretariat",
@@ -2541,7 +2541,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "6 days, 1 hr. & 30 minutes"
     },
     "sp-change-motor": {
       "office": "sp-secretariat",
@@ -2552,7 +2552,7 @@
         "kind": "free",
         "text": "Free"
       },
-      "time": null
+      "time": "1 hr. & 10 minutes"
     },
     "sp-driver-id": {
       "office": "sp-secretariat",
@@ -2563,7 +2563,7 @@
         "kind": "amount",
         "text": "P50.00, but payment of the ID fee is suspended until there is a new express agreement to the contrary"
       },
-      "time": null
+      "time": "20 minutes"
     }
   }
 }

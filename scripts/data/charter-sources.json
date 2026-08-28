@@ -5,9 +5,33 @@
     "One PDF per office. `extraction` records how the text was recovered:",
     "  'text'  — pdftotext -layout recovers the full body.",
     "  'image' — the page bodies are rasterized; text must be read from page images.",
-    "`hub` is the route under service-details/ that renders this office."
+    "`hub` is the route under service-details/ that renders this office.",
+    "`edition` may be set per office to override the top-level default; CHO is still on its 2023 charter because no 2026 edition has been published."
   ],
   "offices": [
+    {
+      "slug": "abe",
+      "hub": "service-details/abe-services.html",
+      "office": "Agricultural and Biosystems Engineering Division",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-ABE.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-ABE. ABE is the Agricultural and Biosystems Engineering Division."
+    },
+    {
+      "slug": "bplo",
+      "hub": "service-details/business-permits-licensing.html",
+      "office": "Business Permits and Licensing Office",
+      "extraction": "image",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/BUSINESS-PERMITS-AND-LICENSING-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "cadc",
+      "hub": "service-details/cadc-services.html",
+      "office": "City Anti-Drug Abuse Council",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-ANTI-DRUG-ABUSE-COUNCIL-CITIZENS-CHARTER-2026.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-CITY-ANTI-DRUG-ABUSE-COUNCIL."
+    },
     {
       "slug": "cao",
       "hub": "service-details/cao-services.html",
@@ -23,6 +47,13 @@
       "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-ASSESSOR-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
     },
     {
+      "slug": "ccr",
+      "hub": "service-details/city-civil-registrar.html",
+      "office": "Office of the City Civil Registrar",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-CIVIL-REGISTRAR-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
       "slug": "ceo",
       "hub": "service-details/ceo-services.html",
       "office": "City Engineer's Office",
@@ -30,11 +61,27 @@
       "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-ENGINEERING-OFFICE-CITIZENS-CHARTER-2026-1st-EDITION-1-1.pdf"
     },
     {
-      "slug": "ccr",
-      "hub": "service-details/city-civil-registrar.html",
-      "office": "Office of the City Civil Registrar",
+      "slug": "cho",
+      "hub": "service-details/cho-services.html",
+      "office": "City Health Office",
       "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-CIVIL-REGISTRAR-CITIZEN_S-CHARTER-2026.pdf"
+      "edition": "2023 Edition",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2023/09/CHO.pdf"
+    },
+    {
+      "slug": "city-coop",
+      "hub": "service-details/city-coop-services.html",
+      "office": "City Cooperative Development Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-COOP.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-CITY-COOP."
+    },
+    {
+      "slug": "cmo",
+      "hub": "service-details/cmo-services.html",
+      "office": "City Mayor's Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-MAYORS-OFFICE-CITIZENS-CHARTER-2026.pdf"
     },
     {
       "slug": "cpdo",
@@ -58,64 +105,11 @@
       "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-TREASURERS-OFFICE-CITIZENS-CHARTER-2026.pdf"
     },
     {
-      "slug": "ocenr",
-      "hub": "service-details/ocenr-services.html",
-      "office": "Office of the City Environment and Natural Resources",
+      "slug": "cvo",
+      "hub": "service-details/cvo-services.html",
+      "office": "City Veterinary Office",
       "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-ENVIRONMENT-AND-NARURAL-RESOURCES-CITIZEN_S-CHARTER-2026.pdf",
-      "sourceNote": "The 2026 edition is not linked from the index page (its filename misspells NATURAL as NARURAL); the index still points at a 2024 file. URL supplied directly."
-    },
-    {
-      "slug": "bplo",
-      "hub": "service-details/business-permits-licensing.html",
-      "office": "Business Permits and Licensing Office",
-      "extraction": "image",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/BUSINESS-PERMITS-AND-LICENSING-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
-    },
-    {
-      "slug": "hrmo",
-      "hub": "service-details/human-resource-management.html",
-      "office": "City Human Resource Management Office",
-      "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-HUMAN-RESOURCE-MANAGEMENT-OFFICE-CITIZENS-CHARTER-2026-1.pdf"
-    },
-    {
-      "slug": "gso",
-      "hub": "service-details/gso-services.html",
-      "office": "General Services Office",
-      "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/GENERAL-SERVICES-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
-    },
-    {
-      "slug": "peso",
-      "hub": "service-details/peso-services.html",
-      "office": "Public Employment Service Office",
-      "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/PUBLIC-EMPLOYMENT-SERVICE-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
-    },
-    {
-      "slug": "pdao",
-      "hub": "service-details/pdao-services.html",
-      "office": "Persons with Disability Affairs Office",
-      "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-PDAO-2026.pdf",
-      "sourceNote": "Published under the City Mayor's Office as CMO-PDAO-2026."
-    },
-    {
-      "slug": "abe",
-      "hub": "service-details/abe-services.html",
-      "office": "Agricultural and Biosystems Engineering Division",
-      "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-ABE.pdf",
-      "sourceNote": "Published under the City Mayor's Office as CMO-ABE. ABE is the Agricultural and Biosystems Engineering Division."
-    },
-    {
-      "slug": "eemd-legazpi",
-      "hub": "service-details/eemd-legazpi-public-market.html",
-      "office": "City Economic Enterprise and Management Division, Legazpi Public Market",
-      "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-ECONOMIC-AND-ENTERPRISE-AND-MANAGEMENT-DIVISION-LEGAZPI-2026.pdf",
-      "sourceNote": "Published under the City Mayor's Office. EEMD publishes a separate charter per market."
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-VETERINARY-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
     },
     {
       "slug": "eemd-albay",
@@ -126,19 +120,42 @@
       "sourceNote": "Published under the City Mayor's Office. EEMD publishes a separate charter per market."
     },
     {
-      "slug": "cmo",
-      "hub": "service-details/cmo-services.html",
-      "office": "City Mayor's Office",
+      "slug": "eemd-legazpi",
+      "hub": "service-details/eemd-legazpi-public-market.html",
+      "office": "City Economic Enterprise and Management Division, Legazpi Public Market",
       "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-MAYORS-OFFICE-CITIZENS-CHARTER-2026.pdf"
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-ECONOMIC-AND-ENTERPRISE-AND-MANAGEMENT-DIVISION-LEGAZPI-2026.pdf",
+      "sourceNote": "Published under the City Mayor's Office. EEMD publishes a separate charter per market."
     },
     {
-      "slug": "city-coop",
-      "hub": "service-details/city-coop-services.html",
-      "office": "City Cooperative Development Office",
+      "slug": "gad",
+      "hub": "service-details/gad-services.html",
+      "office": "Gender and Development Division",
       "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-COOP.pdf",
-      "sourceNote": "Published under the City Mayor's Office as CMO-CITY-COOP."
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CMO-GENDER-AN-DEVELOPMENT-DIVISION-2026.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-GENDER-AN-DEVELOPMENT-DIVISION (the filename misspells AND)."
+    },
+    {
+      "slug": "gso",
+      "hub": "service-details/gso-services.html",
+      "office": "General Services Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/GENERAL-SERVICES-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+    },
+    {
+      "slug": "hrmo",
+      "hub": "service-details/human-resource-management.html",
+      "office": "City Human Resource Management Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CITY-HUMAN-RESOURCE-MANAGEMENT-OFFICE-CITIZENS-CHARTER-2026-1.pdf"
+    },
+    {
+      "slug": "ocenr",
+      "hub": "service-details/ocenr-services.html",
+      "office": "Office of the City Environment and Natural Resources",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/OFFICE-OF-THE-CITY-ENVIRONMENT-AND-NARURAL-RESOURCES-CITIZEN_S-CHARTER-2026.pdf",
+      "sourceNote": "The 2026 edition is not linked from the index page (its filename misspells NATURAL as NARURAL); the index still points at a 2024 file. URL supplied directly."
     },
     {
       "slug": "orhcd",
@@ -148,11 +165,19 @@
       "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/OFFICE-OF-RESETTLEMENT-HOUSING-AND-COMMUNITY-DEVELOPMENT-CITIZENS-CHARTER-2026.pdf"
     },
     {
-      "slug": "cvo",
-      "hub": "service-details/cvo-services.html",
-      "office": "City Veterinary Office",
+      "slug": "pdao",
+      "hub": "service-details/pdao-services.html",
+      "office": "Persons with Disability Affairs Office",
       "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-VETERINARY-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-PDAO-2026.pdf",
+      "sourceNote": "Published under the City Mayor's Office as CMO-PDAO-2026."
+    },
+    {
+      "slug": "peso",
+      "hub": "service-details/peso-services.html",
+      "office": "Public Employment Service Office",
+      "extraction": "text",
+      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/PUBLIC-EMPLOYMENT-SERVICE-OFFICE-CITIZEN_S-CHARTER-2026.pdf"
     },
     {
       "slug": "sp-secretariat",
@@ -161,22 +186,6 @@
       "extraction": "text",
       "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/SANGGUNIANG-PANLUNGSOD-B.-SECRETARIAT-CITIZENS-CHARTER-2026.pdf",
       "sourceNote": "Published as the Sangguniang Panlungsod B. Secretariat charter."
-    },
-    {
-      "slug": "cadc",
-      "hub": "service-details/cadc-services.html",
-      "office": "City Anti-Drug Abuse Council",
-      "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/08/CMO-CITY-ANTI-DRUG-ABUSE-COUNCIL-CITIZENS-CHARTER-2026.pdf",
-      "sourceNote": "Published under the City Mayor's Office as CMO-CITY-ANTI-DRUG-ABUSE-COUNCIL."
-    },
-    {
-      "slug": "gad",
-      "hub": "service-details/gad-services.html",
-      "office": "Gender and Development Division",
-      "extraction": "text",
-      "url": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CMO-GENDER-AN-DEVELOPMENT-DIVISION-2026.pdf",
-      "sourceNote": "Published under the City Mayor's Office as CMO-GENDER-AN-DEVELOPMENT-DIVISION (the filename misspells AND)."
     }
   ]
 }

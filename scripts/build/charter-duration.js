@@ -72,6 +72,16 @@ function expandNumerals(text) {
  * "10 working days" and "10-day notice of posting" for the same kind of quantity.
  */
 const UNIT_PATTERNS = [
+  // A week is counted as seven days rather than left unrecognized. Unrecognized
+  // values are dropped from the sum, so "1 week and 5 minutes" would otherwise total
+  // five minutes - a wrong number, not a missing one. Converting weeks to days stays
+  // inside the same opaque unit the charters use, unlike converting days to hours,
+  // which is why that conversion is still refused above.
+  {
+    unit: 'days',
+    factor: 7,
+    re: /(\d+(?:\.\d+)?)[\s-]*(?:wk|wks|week|weeks)\b\.?/gi,
+  },
   {
     unit: 'days',
     re: /(\d+(?:\.\d+)?)[\s-]*(?:calendar\s+|working\s+)?(?:d|day|days)\b\.?/gi,
@@ -99,11 +109,11 @@ function parseDuration(text) {
 
   const expanded = expandNumerals(text);
 
-  for (const { unit, re } of UNIT_PATTERNS) {
+  for (const { unit, re, factor = 1 } of UNIT_PATTERNS) {
     re.lastIndex = 0;
     let m;
     while ((m = re.exec(expanded)) !== null) {
-      out[unit] += Number(m[1]);
+      out[unit] += Number(m[1]) * factor;
       out.recognized = true;
     }
   }

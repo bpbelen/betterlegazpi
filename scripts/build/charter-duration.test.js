@@ -135,6 +135,23 @@ test('unrecognized durations are reported, not silently counted as zero', () => 
   assert.equal(text, '10 minutes');
 });
 
+test('a week is seven days, not an unrecognized value', () => {
+  // The City Health Office charter writes "1 week and 5 minutes" and "2 weeks and 5
+  // minutes". Left unrecognized these total five minutes - a wrong number rather than
+  // a missing one, which is the failure mode the test above guards against.
+  assert.deepEqual(normalize(parseDuration('1 week')), { days: 7, hours: 0, minutes: 0 });
+  assert.deepEqual(normalize(parseDuration('2 weeks and 5 minutes')), {
+    days: 14,
+    hours: 0,
+    minutes: 5,
+  });
+  assert.equal(parseDuration('1 wk').days, 7);
+
+  const { unrecognized, text } = sumSteps([{ processingTime: '1 week and 5 minutes' }]);
+  assert.deepEqual(unrecognized, []);
+  assert.equal(text, '7 days & 5 minutes');
+});
+
 test('formats in the charters house style', () => {
   assert.equal(formatDuration({ days: 29, hours: 3, minutes: 20 }), '29 days, 3 hrs. & 20 minutes');
   assert.equal(formatDuration({ days: 2, hours: 1, minutes: 0 }), '2 days & 1 hr.');

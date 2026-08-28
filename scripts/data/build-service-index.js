@@ -18,6 +18,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { sumSteps } = require('../build/charter-duration.js');
 
 const ROOT = path.resolve(__dirname, '../..');
 const OFFICES_DIR = path.join(ROOT, 'data/offices');
@@ -56,14 +57,18 @@ function deriveFee(service) {
 }
 
 /**
- * Only the charter's own stated total is used. 13 of CEO's 30 services state none -
- * including the building permit - and summing their steps would publish a number the
- * city never did. A missing total is reported as missing.
+ * Totals are summed from the steps, never read from the charter's TOTAL row. That is
+ * ADR 0002 decision 3a, and the office hubs already work this way: several charters
+ * omit the row, and where it is present it is sometimes wrong.
+ *
+ * This file previously used statedTotals and reported a missing row as "not stated",
+ * which put a summed total on a hub and "not stated" on the category page one click
+ * away, for the same service. The arithmetic is shared with the hub renderer so the
+ * two cannot diverge again.
  */
 function deriveTime(service) {
-  const stated = (service.statedTotals || {}).processingTime;
-  if (!stated || !String(stated).trim()) return null;
-  return String(stated).trim();
+  const summed = sumSteps(service.steps || []);
+  return summed.text || null;
 }
 
 function build() {
