@@ -409,7 +409,7 @@
         const uniqueKey = p.projectId || p.id;
         const isExpanded = expandedProjectId === uniqueKey;
         return `
-          <div class="infra-project-v5 sumbong-card ${isExpanded ? 'expanded' : ''}" data-project-key="${uniqueKey}" tabindex="0" role="button" aria-expanded="${isExpanded}">
+          <div class="infra-project-v5 sumbong-card ${isExpanded ? 'expanded' : ''}" data-project-key="${uniqueKey}">
             <div class="infra-project-main">
               <div class="infra-project-tags">
                 <span class="infra-tag-year">${p.fundingYear || p.year || '2024'}</span>
@@ -418,9 +418,9 @@
               </div>
               <div class="sumbong-title-row">
                 <h3>${p.name}</h3>
-                <span class="sumbong-expand-toggle">
-                  ${isExpanded ? 'Hide Details <i class="bi bi-chevron-up"></i>' : 'View Full Details <i class="bi bi-chevron-down"></i>'}
-                </span>
+                <button type="button" class="sumbong-expand-toggle" aria-expanded="${isExpanded}" aria-label="${isExpanded ? 'Hide' : 'Expand'} details for ${p.name.replace(/"/g, '&quot;')}">
+                  ${isExpanded ? 'Hide Details <i class="bi bi-chevron-up" aria-hidden="true"></i>' : 'View Full Details <i class="bi bi-chevron-down" aria-hidden="true"></i>'}
+                </button>
               </div>
               <p class="infra-location">
                 <i class="bi bi-geo-alt"></i>
@@ -489,7 +489,7 @@
       })
       .join('');
 
-    // Attach row click listeners for expanding/collapsing
+    // Attach expand/collapse listeners — card-click (except on links) or button click
     listContainer.querySelectorAll('.sumbong-card').forEach((card) => {
       card.addEventListener('click', (e) => {
         // Prevent expanding if clicking direct external links
@@ -497,6 +497,20 @@
         const key = card.dataset.projectKey;
         expandedProjectId = expandedProjectId === key ? null : key;
         renderCards();
+      });
+    });
+
+    // Keyboard: allow Enter/Space on the card itself (when focus is directly on card)
+    listContainer.querySelectorAll('.sumbong-card').forEach((card) => {
+      card.addEventListener('keydown', (e) => {
+        if (e.target.closest('.sumbong-expand-toggle')) return; // button handles its own keys
+        if (e.target.closest('a')) return;
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const key = card.dataset.projectKey;
+          expandedProjectId = expandedProjectId === key ? null : key;
+          renderCards();
+        }
       });
     });
 

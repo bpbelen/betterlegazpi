@@ -11382,7 +11382,7 @@ a.a11y-contact-item:hover i {
   align-items: center;
   gap: 8px;
   padding: 9px 16px;
-  background: var(--color-primary, #0032a0);
+  background: var(--color-primary-solid);
   color: #ffffff !important;
   font-size: 0.8125rem;
   font-weight: 600;
@@ -11395,7 +11395,7 @@ a.a11y-contact-item:hover i {
 }
 
 .finance-sre-cta-btn:hover {
-  background: #002270;
+  background: var(--color-primary-dark);
   color: #ffffff !important;
   transform: translateX(2px);
 }

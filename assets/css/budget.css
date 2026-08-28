@@ -1361,6 +1361,9 @@
   white-space: nowrap;
   flex-shrink: 0;
   transition: all var(--duration-base) ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .sumbong-card:hover .sumbong-expand-toggle {
