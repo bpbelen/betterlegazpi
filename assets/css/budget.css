@@ -171,9 +171,14 @@
 }
 
 /* Breakdown Panels */
+/* align-items defaults to stretch on a grid, which forced the shorter Income
+   card (2 top-level sources) to match the taller Expenditure card's height
+   (4 sectors) - a card that was mostly blank below its own content, rather
+   than two cards each sized to what they hold. */
 .sre-breakdown-v2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   gap: 24px;
   margin-bottom: 32px;
 }
