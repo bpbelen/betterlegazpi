@@ -83,6 +83,7 @@ if command -v rsync &>/dev/null; then
         --exclude='.agents' \
         --exclude='__pycache__' \
         --exclude='skills-lock.json' \
+        --exclude='skills' \
         . dist/
 else
     # Fallback: cross-platform Node.js copy (Windows / no rsync)

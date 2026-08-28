@@ -38,6 +38,10 @@ const EXCLUDED = new Set([
   '.agents',
   '__pycache__',
   'skills-lock.json',
+  // data/skills/* are symlinks into .agents/skills - agent tooling that happens to
+  // live under data/, not municipal data. .agents is already excluded; this keeps
+  // the links to it out too.
+  'skills',
 ]);
 
 const EXCLUDED_EXT = new Set(['.backup', '.md']);
@@ -58,6 +62,10 @@ function copyDir(src, dest) {
   const entries = fs.readdirSync(src, { withFileTypes: true });
   for (const entry of entries) {
     if (shouldExclude(entry.name)) continue;
+    // A symlink is reported as neither file nor directory, so it would otherwise
+    // fall through to copyFileSync and fail with EPERM on Windows. A build should
+    // not follow links out of the tree in any case.
+    if (entry.isSymbolicLink()) continue;
     const srcPath = path.join(src, entry.name);
     const destPath = path.join(dest, entry.name);
     if (entry.isDirectory()) {
