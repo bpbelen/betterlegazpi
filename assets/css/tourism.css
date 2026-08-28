@@ -57,108 +57,14 @@
   --tourism-table-stripe: rgba(15, 23, 42, 0.4);
 }
 
-/* --------------------------------------------------------------------------
-   Page Header (photograph behind the shared .page-header)
-   --------------------------------------------------------------------------
-   Same treatment the history page uses, opted into with .page-header--photo so
-   a tourism page without a picture keeps the plain brand gradient. Sizing still
-   comes from .page-header in style.css, so this stays the same piece of page
-   furniture as every other section header on the site. Only the ground changes.
-   -------------------------------------------------------------------------- */
-.page-header--photo {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  /* Taller than the shared header. The archival panorama on the history page
-     reads fine in a thin band; a volcano does not, and this picture is the
-     reason anyone books a trip. Still a header band, not a full-screen hero. */
-  padding: clamp(3.5rem, 8vw, 5.5rem) 0;
-}
-
-/* Decorative, so it carries an empty alt. If the file is missing, tourism.js
-   flags the page and the header falls back to the gradient, credit removed. */
+/* Page Header
+   -------------------------------------------------------------------------
+   The photograph band these pages use is the shared .page-header /
+   .page-header--photo pair in style.css - same furniture, same height, same
+   glass panel as the history page. Only the per-page crop lives here. */
 .page-header--photo .page-header-photo {
-  position: absolute;
-  inset: 0;
-  /* An <img> needs an explicit size here: with auto width it falls back to its
-     intrinsic pixel width instead of filling the header. */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   /* Keeps the summit in frame. Centring the crop cut the peak off. */
   object-position: center 34%;
-  z-index: -2;
-}
-
-.page-header-photo-missing .page-header-photo,
-.page-header-photo-missing .page-header--photo::before,
-.page-header-photo-missing .page-header-credit {
-  display: none;
-}
-
-/* Scrim, carrying the brand navy so the header still reads as the same
-   furniture it did before, just with a picture in it. Much lighter than the
-   history page's: that photo is a low-contrast sepia archival scan, this one is
-   a saturated colour photograph and a heavy scrim turned it into a blue
-   rectangle. The radial behind the type below does the legibility work, which
-   leaves the sky and the cone at the edges more or less untouched. */
-.page-header--photo::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 33, 112, 0.16) 0%,
-    rgba(0, 33, 112, 0.24) 48%,
-    rgba(0, 33, 112, 0.46) 100%
-  );
-}
-
-.page-header--photo .container {
-  position: relative;
-}
-
-/* Carries the type contrast on its own now that the flat scrim is light. Sized
-   to the text block so the volcano stays clear either side of it. */
-.page-header--photo .container::before {
-  content: '';
-  position: absolute;
-  inset: -32px -8% -20px;
-  z-index: -1;
-  background: radial-gradient(
-    ellipse 58% 76% at 50% 50%,
-    rgba(0, 18, 62, 0.82) 0%,
-    rgba(0, 18, 62, 0.62) 52%,
-    rgba(0, 18, 62, 0) 100%
-  );
-  pointer-events: none;
-}
-
-.page-header-photo-missing .page-header--photo .container::before {
-  display: none;
-}
-
-.page-header--photo .page-header-content {
-  max-width: 680px;
-}
-
-.page-header--photo h1 {
-  text-shadow: 0 1px 14px rgba(0, 20, 70, 0.6);
-  text-wrap: balance;
-}
-
-.page-header--photo .page-header-desc {
-  text-shadow: 0 1px 10px rgba(0, 20, 70, 0.55);
-  color: rgba(255, 255, 255, 0.94);
-}
-
-.page-header--photo .page-header-credit {
-  margin: 22px 0 0;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.92);
 }
 
 /* --- Quick Jump (sits below the shared .page-header) --- */

@@ -1,8 +1,8 @@
 {
-  "version": "1.1.20",
+  "version": "1.1.21",
   "major": 1,
   "minor": 1,
-  "patch": 20,
+  "patch": 21,
   "lastUpdated": "2026-08-28",
   "changelog": {
     "1.0.0": "Initial release",

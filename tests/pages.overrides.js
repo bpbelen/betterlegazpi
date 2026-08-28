@@ -21,6 +21,10 @@
  *   skip            — skip the route entirely, with `reason`
  */
 module.exports = {
+  // The homepage weather section renders from the Open-Meteo response (with a
+  // mock fallback), and now carries a five-day strip, so measuring before it
+  // arrives sizes an empty container.
+  '/index.html': { waitForSelector: '#weather-container > *' },
   '/news/index.html': { waitForSelector: '#news-grid > *' },
   '/government/officials.html': { waitForSelector: '#officials-container > *' },
   '/statistics/index.html': { waitForSelector: '#barangayListContainer > *' },

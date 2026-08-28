@@ -89,113 +89,13 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Page Header (history only: photograph behind the shared .page-header)
-   -------------------------------------------------------------------------- */
-/* Sizing is inherited from the shared .page-header in style.css so this page
-   matches every other section header on the site. Only the ground changes:
-   a photograph instead of the navy gradient. */
-.page-history .page-header {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-}
-
-/* Decorative, so it carries an empty alt. If the file is missing, history.js
-   flags the page and the header falls back to the brand gradient that every
-   other page uses, with the credit line removed. */
+/* Page Header
+   -------------------------------------------------------------------------
+   The photograph band is the shared .page-header / .page-header--photo pair in
+   style.css - same furniture, same height, same glass panel as the tourism
+   pages. Only the per-page crop lives here. */
 .page-history .page-header-photo {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  /* An <img> needs an explicit size here: with auto width it falls back to its
-     intrinsic pixel width instead of filling the header. */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   object-position: center 46%;
-}
-
-.page-history.page-header-photo-missing .page-header-photo,
-.page-history.page-header-photo-missing .page-header::before,
-.page-history.page-header-photo-missing .page-header-credit {
-  display: none;
-}
-
-/* Scrim. The gradient carries the original brand navy, so the header still
-   reads as the same page furniture it did before, just with a picture in it.
-   Contrast over the darkest part of the photo stays above 7:1 for the title. */
-.page-history .page-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 33, 112, 0.42) 0%,
-    rgba(0, 33, 112, 0.5) 48%,
-    rgba(0, 33, 112, 0.66) 100%
-  );
-}
-
-.page-history .page-header .container {
-  position: relative;
-}
-
-.page-history .page-header .container::before {
-  content: '';
-  position: absolute;
-  inset: -60px -14%;
-  z-index: -1;
-  /* closest-side keeps the ellipse inside its own box, so it reaches full
-     transparency before the edge. Sizing it in percentages let the radii run
-     past the box and the gradient got cut off mid-ramp, leaving a visible
-     rectangle across the header. */
-  background: radial-gradient(
-    ellipse closest-side at 50% 50%,
-    rgba(0, 20, 70, 0.74) 0%,
-    rgba(0, 20, 70, 0.52) 52%,
-    rgba(0, 20, 70, 0) 100%
-  );
-  pointer-events: none;
-}
-
-.page-history.page-header-photo-missing .page-header .container::before {
-  display: none;
-}
-
-.page-history .page-header-content {
-  max-width: 680px;
-}
-
-.page-history .page-header h1 {
-  text-shadow: 0 1px 14px rgba(0, 20, 70, 0.6);
-  text-wrap: balance;
-}
-
-.page-history .page-header-desc {
-  text-shadow: 0 1px 10px rgba(0, 20, 70, 0.55);
-  color: rgba(255, 255, 255, 0.94);
-}
-
-/* Photo credit, per the source's own caption. */
-.page-history .page-header-credit {
-  margin: 22px 0 0;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.page-history .page-header-credit a {
-  color: #ffffff;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.page-history .page-header-credit a:hover,
-.page-history .page-header-credit a:focus-visible {
-  color: #ffffff;
 }
 
 /* --------------------------------------------------------------------------

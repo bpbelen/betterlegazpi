@@ -1,42 +1,7 @@
-/* Legal Pages - Minimal Professional Design */
-
-/* Hero Section */
-.legal-hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  padding: 60px 0;
-  text-align: center;
-}
-
-.legal-hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-.legal-hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  padding: 8px 20px;
-  border-radius: var(--radius-pill);
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-
-.legal-hero h1 {
-  color: white;
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.legal-hero p {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.125rem;
-  margin: 0;
-}
+/* The page's opening band is the shared .page-header in style.css - same
+   height and colours as every other page on the site. The bespoke legal
+   hero that used to live here was a copy of it under different class
+   names, so it has gone. */
 
 /* Content Layout */
 .legal-content {
@@ -310,14 +275,6 @@ Contact Section */
 }
 
 @media (max-width: 575px) {
-  .legal-hero {
-    padding: 40px 0;
-  }
-
-  .legal-hero h1 {
-    font-size: 1.75rem;
-  }
-
   .legal-content {
     padding: 40px 0 60px;
   }
@@ -334,14 +291,6 @@ Contact Section */
   .legal-callout {
     padding: 16px;
   }
-}
-
-/* ==========================================================================
-   LEGAL PAGES (TERMS, PRIVACY) - DARK MODE THEME SYSTEM
-   ========================================================================== */
-[data-theme='dark'] .legal-hero {
-  background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 [data-theme='dark'] .legal-content {

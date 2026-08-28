@@ -1,45 +1,7 @@
-/* Transparency Page V2 - Minimal Modern Design */
-
-/* Hero Section */
-.trans-hero-v2 {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  padding: 48px 0 56px;
-  text-align: center;
-  position: relative;
-}
-
-.trans-hero-content-v2 {
-  position: relative;
-  z-index: 1;
-}
-
-.trans-hero-badge-v2 {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.12);
-  color: white;
-  padding: 6px 16px;
-  border-radius: var(--radius-pill);
-  font-size: 0.8125rem;
-  font-weight: 500;
-  margin-bottom: 12px;
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-}
-
-.trans-hero-v2 h1 {
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.trans-hero-v2 p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
-  margin: 0;
-}
+/* The page's opening band is the shared .page-header in style.css - same
+   height and colours as every other page on the site. The bespoke transparency
+   hero that used to live here was a copy of it under different class
+   names, so it has gone. */
 
 /* SRE Section V2 */
 .sre-section-v2 {
@@ -1134,14 +1096,6 @@
 }
 
 @media (max-width: 575px) {
-  .trans-hero-v2 {
-    padding: 36px 0 44px;
-  }
-
-  .trans-hero-v2 h1 {
-    font-size: 1.5rem;
-  }
-
   .sre-section-v2 {
     padding: 36px 0 48px;
   }
@@ -2802,30 +2756,6 @@
   }
 }
 
-/* ==========================================================================
-   TRANSPARENCY & BUDGET DASHBOARD - DARK MODE THEME SYSTEM
-   ========================================================================== */
-
-/* Hero Section */
-[data-theme='dark'] .trans-hero-v2 {
-  background: linear-gradient(135deg, #0b1528 0%, #1e293b 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-[data-theme='dark'] .trans-hero-badge-v2 {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #e2e8f0;
-}
-
-[data-theme='dark'] .trans-hero-v2 h1 {
-  color: #f8fafc;
-}
-
-[data-theme='dark'] .trans-hero-v2 p {
-  color: #94a3b8;
-}
-
 /* SRE Section */
 [data-theme='dark'] .sre-section-v2 {
   background: var(--color-bg-alt);
@@ -3778,4 +3708,3 @@
 [data-theme='dark'] .resource-arrow-v2 {
   color: var(--color-primary);
 }
-
