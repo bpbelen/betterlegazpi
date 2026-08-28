@@ -2399,9 +2399,9 @@ body.mobile-menu-open {
   right: 12px;
   font-size: 0.65rem;
   font-weight: 700;
-  color: #475569;
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
+  color: var(--color-text-light);
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
   padding: 2px 7px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -2436,13 +2436,16 @@ body.mobile-menu-open {
   gap: 4px;
 }
 
+/* The colour is a token, not a literal: the dark theme repaints .councilor-card
+   to --color-bg (#1e293b) but cannot reach a hardcoded slate here, which left
+   every committee line at 1.41:1 against its own card. */
 .councilor-committee-item {
   display: flex;
   align-items: flex-start;
   gap: 6px;
   font-size: 0.72rem;
   line-height: 1.25;
-  color: #334155;
+  color: var(--color-text-light);
   font-weight: 500;
 }
 
@@ -2523,13 +2526,17 @@ body.mobile-menu-open {
   text-overflow: ellipsis;
 }
 
+/* display:block, not inline-flex. text-overflow only ellipsises a block
+   container's own inline content; under flex the label became an anonymous
+   flex item and the longer names were cut mid-word with no ellipsis
+   ("Arch. Joseph B. Esplana (CPDO Coordinato"). The icon is inline, so it
+   still sits on the same line. Colour is a token for the same reason as
+   .councilor-committee-item: the dark theme repaints .dept-card underneath. */
 .dept-card-head {
   font-size: 0.76rem;
   font-weight: 600;
-  color: #334155;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+  color: var(--color-text-light);
+  display: block;
   min-height: 20px;
   margin-top: 2px;
   white-space: nowrap;
@@ -2539,8 +2546,8 @@ body.mobile-menu-open {
 
 .dept-card-head i {
   font-size: 0.78rem;
-  color: var(--color-primary, #0032a0);
-  flex-shrink: 0;
+  color: var(--color-primary);
+  margin-right: 5px;
 }
 
 .dept-card-contacts {
@@ -7643,9 +7650,10 @@ cklist with Icons - Proper Indentation */
   color: #b45309;
 }
 
+/* #dc2626 on this tint is 3.95:1, under AA for a 13px label. */
 .office-hours-item--closed .office-hours-status {
   background: #fee2e2;
-  color: #dc2626;
+  color: #b91c1c;
 }
 
 .office-hours-item--closed .office-hours-time {

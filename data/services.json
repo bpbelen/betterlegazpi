@@ -23,7 +23,7 @@
       "fee": "Free (Marital) / ₱300.00 (Non-Marital)",
       "processingTime": "2 hours",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#on-time-birth"
+      "url": "service-details/city-civil-registrar.html#ccr-birth-on-time"
     },
     {
       "id": "ccro-delayed-birth",
@@ -43,7 +43,7 @@
       "fee": "₱500.00 (Marital) / ₱800.00 (Non-Marital) / FREE (BRAP)",
       "processingTime": "3 hours + 10-day notice",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#delayed-birth"
+      "url": "service-details/city-civil-registrar.html#ccr-birth-delayed"
     },
     {
       "id": "ccro-legitimation",
@@ -62,7 +62,7 @@
       "fee": "₱410.00",
       "processingTime": "3 hours",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#legitimation"
+      "url": "service-details/city-civil-registrar.html#ccr-legitimation"
     },
     {
       "id": "ccro-on-time-death",
@@ -81,7 +81,7 @@
       "fee": "₱120.00",
       "processingTime": "1 hour",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#on-time-death"
+      "url": "service-details/city-civil-registrar.html#ccr-death-on-time"
     },
     {
       "id": "ccro-delayed-death",
@@ -99,7 +99,7 @@
       "fee": "₱620.00",
       "processingTime": "1 hour + 10-day notice",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#delayed-death"
+      "url": "service-details/city-civil-registrar.html#ccr-death-delayed"
     },
     {
       "id": "ccro-marriage-license",
@@ -119,7 +119,7 @@
       "fee": "₱1,100.00",
       "processingTime": "3 hours + 10-day notice",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#marriage-license"
+      "url": "service-details/city-civil-registrar.html#ccr-marriage-license"
     },
     {
       "id": "ccro-on-time-marriage",
@@ -138,7 +138,7 @@
       "fee": "Free",
       "processingTime": "1 hour",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#on-time-marriage"
+      "url": "service-details/city-civil-registrar.html#ccr-marriage-on-time"
     },
     {
       "id": "ccro-delayed-marriage",
@@ -156,7 +156,7 @@
       "fee": "₱500.00",
       "processingTime": "1 hour + 10-day notice",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#delayed-marriage"
+      "url": "service-details/city-civil-registrar.html#ccr-marriage-delayed"
     },
     {
       "id": "ccro-certified-copies",
@@ -176,7 +176,7 @@
       "fee": "₱100.00 (Local) / ₱200.00 (Abroad)",
       "processingTime": "1 hour",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#certified-copies"
+      "url": "service-details/city-civil-registrar.html#ccr-certified-copies"
     },
     {
       "id": "ccro-electronic-endorsement",
@@ -195,7 +195,7 @@
       "fee": "₱100.00 (+ ₱5/page)",
       "processingTime": "1 hour (+ 4 weeks PSA)",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#electronic-endorsement"
+      "url": "service-details/city-civil-registrar.html#ccr-electronic-endorsement"
     },
     {
       "id": "ccro-ra-9048-10172",
@@ -216,7 +216,7 @@
       "fee": "₱1,200.00 – ₱3,200.00 (Filing)",
       "processingTime": "2 hours + 2-wk publication + 2-5 mos PSA",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#ra-9048-10172"
+      "url": "service-details/city-civil-registrar.html#ccr-petition-9048-10172"
     },
     {
       "id": "ccro-ra-9255",
@@ -234,7 +234,7 @@
       "fee": "₱460.00+",
       "processingTime": "2 hours",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#ra-9255"
+      "url": "service-details/city-civil-registrar.html#ccr-change-surname-9255"
     },
     {
       "id": "ccro-court-decrees",
@@ -253,7 +253,7 @@
       "fee": "₱500.00 – ₱700.00",
       "processingTime": "2 hours",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#court-decrees"
+      "url": "service-details/city-civil-registrar.html#ccr-court-decrees"
     },
     {
       "id": "ccro-supplemental-report",
@@ -270,7 +270,7 @@
       "fee": "₱200.00",
       "processingTime": "2 hours",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#supplemental-report"
+      "url": "service-details/city-civil-registrar.html#ccr-supplemental-report"
     },
     {
       "id": "ccro-other-certificates",
@@ -287,7 +287,7 @@
       "fee": "₱100.00",
       "processingTime": "1 hour",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#other-certificates"
+      "url": "service-details/city-civil-registrar.html#ccr-other-certificates"
     },
     {
       "id": "ccro-online-inquiry",
@@ -305,7 +305,7 @@
       "fee": "Free",
       "processingTime": "2 hours",
       "office": "City Civil Registrar's Office",
-      "url": "service-details/city-civil-registrar.html#online-inquiry"
+      "url": "service-details/city-civil-registrar.html#ccr-email-verification"
     },
     {
       "id": "bplo-new-business",
@@ -313,11 +313,19 @@
       "category": "Business, Trade & Investment",
       "categoryId": "business",
       "description": "Register and obtain Mayor's permit for new commercial establishments in Legazpi City.",
-      "keywords": ["business permit", "bpls", "new business", "mayors permit", "negosyo", "licensing", "registration"],
+      "keywords": [
+        "business permit",
+        "bpls",
+        "new business",
+        "mayors permit",
+        "negosyo",
+        "licensing",
+        "registration"
+      ],
       "fee": "Based on capitalization/scale",
       "processingTime": "1-3 days",
       "office": "Business Permits & Licensing Office",
-      "url": "service-details/business-permits-licensing.html#new-business"
+      "url": "service-details/business-permits-licensing.html#bplo-new-face-to-face"
     },
     {
       "id": "bplo-business-renewal",
@@ -325,11 +333,18 @@
       "category": "Business, Trade & Investment",
       "categoryId": "business",
       "description": "Annual renewal of Mayor's permit and business licenses with one-stop shop assessment.",
-      "keywords": ["renewal", "business renewal", "bpls", "annual permit", "gross sales", "license renewal"],
+      "keywords": [
+        "renewal",
+        "business renewal",
+        "bpls",
+        "annual permit",
+        "gross sales",
+        "license renewal"
+      ],
       "fee": "Based on gross sales",
       "processingTime": "Same day / 1 day",
       "office": "Business Permits & Licensing Office",
-      "url": "service-details/business-permits-licensing.html#business-renewal"
+      "url": "service-details/business-permits-licensing.html#bplo-renew-face-to-face"
     },
     {
       "id": "bplo-business-retirement",
@@ -341,7 +356,7 @@
       "fee": "Clearance fees",
       "processingTime": "2-3 days",
       "office": "Business Permits & Licensing Office",
-      "url": "service-details/business-permits-licensing.html#business-retirement"
+      "url": "service-details/business-permits-licensing.html"
     },
     {
       "id": "bplo-special-permit",
@@ -353,175 +368,277 @@
       "fee": "₱500.00+",
       "processingTime": "1-2 days",
       "office": "Business Permits & Licensing Office",
-      "url": "service-details/business-permits-licensing.html#special-permit"
+      "url": "service-details/business-permits-licensing.html"
     },
     {
       "id": "cto-business-tax-billing",
       "title": "Request for Business Tax Quarterly Billing Statement",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Issuance of quarterly tax billing statement for registered business establishments in Legazpi.",
-      "keywords": ["business tax", "quarterly billing", "statement of account", "billing statement", "tax assessment", "CTO"],
+      "keywords": [
+        "business tax",
+        "quarterly billing",
+        "statement of account",
+        "billing statement",
+        "tax assessment",
+        "CTO"
+      ],
       "fee": "Free",
       "processingTime": "7 minutes",
       "office": "City Treasurer's Office",
-      "url": "service-details/cto-services.html#service-1"
+      "url": "service-details/cto-services.html#cto-business-tax-billing-statement"
     },
     {
       "id": "cto-rpt-statement",
       "title": "Request for Real Property Tax Statement of Account",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Issuance of statement of account and official billing for real property taxation in Legazpi.",
-      "keywords": ["real property tax", "rpt", "statement of account", "amilyar billing", "land tax", "CTO"],
+      "keywords": [
+        "real property tax",
+        "rpt",
+        "statement of account",
+        "amilyar billing",
+        "land tax",
+        "CTO"
+      ],
       "fee": "Free",
       "processingTime": "9 minutes",
       "office": "City Treasurer's Office",
-      "url": "service-details/cto-services.html#service-2"
+      "url": "service-details/cto-services.html#cto-real-property-tax-statement"
     },
     {
       "id": "cto-business-tax-assessment",
       "title": "Assessment of Business Tax",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Computation and official assessment of annual/quarterly local business taxes and regulatory fees.",
-      "keywords": ["business tax assessment", "annual tax", "gross sales", "computation", "tax assessment", "CTO"],
+      "keywords": [
+        "business tax assessment",
+        "annual tax",
+        "gross sales",
+        "computation",
+        "tax assessment",
+        "CTO"
+      ],
       "fee": "Based on Gross Receipts",
       "processingTime": "20 minutes",
       "office": "City Treasurer's Office",
-      "url": "service-details/cto-services.html#service-3"
+      "url": "service-details/cto-services.html#cto-assessment-of-business-tax"
     },
     {
       "id": "cto-transfer-tax",
       "title": "Assessment & Payment of Transfer Tax",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Assessment and collection of transfer tax on real property conveyance, sale, donation, or succession.",
-      "keywords": ["transfer tax", "deed of sale", "conveyance", "donation", "extrajudicial settlement", "CAR", "CTO"],
+      "keywords": [
+        "transfer tax",
+        "deed of sale",
+        "conveyance",
+        "donation",
+        "extrajudicial settlement",
+        "CAR",
+        "CTO"
+      ],
       "fee": "75% of 1% of total consideration or fair market value",
       "processingTime": "25 minutes (Assessment + Payment)",
       "office": "City Treasurer's Office",
-      "url": "service-details/cto-services.html#service-5"
+      "url": "service-details/cto-services.html#cto-assessment-of-transfer-tax"
     },
     {
       "id": "cto-rpt-payment",
       "title": "Payment of Real Property Tax (Amilyar)",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Collection and receipting of basic Real Property Tax and Special Education Fund (SEF) with prompt payment discounts.",
-      "keywords": ["real property tax", "rpt payment", "amilyar", "basic tax", "sef", "land tax", "discount", "CTO"],
+      "keywords": [
+        "real property tax",
+        "rpt payment",
+        "amilyar",
+        "basic tax",
+        "sef",
+        "land tax",
+        "discount",
+        "CTO"
+      ],
       "fee": "2% of Assessed Value (1% Basic + 1% SEF)",
       "processingTime": "5 minutes",
       "office": "City Treasurer's Office",
-      "url": "service-details/cto-services.html#service-7"
+      "url": "service-details/cto-services.html#cto-payment-of-real-property-tax"
     },
     {
       "id": "cto-community-tax",
       "title": "Payment of Community Tax Certificate (Cedula / CTC)",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Issuance of Community Tax Certificate for individual residents and corporations operating in Legazpi City.",
-      "keywords": ["cedula", "community tax certificate", "ctc", "individual cedula", "corporate cedula", "gross earnings", "CTO"],
+      "keywords": [
+        "cedula",
+        "community tax certificate",
+        "ctc",
+        "individual cedula",
+        "corporate cedula",
+        "gross earnings",
+        "CTO"
+      ],
       "fee": "Individual: ₱5.00 + ₱1.00/₱1k earnings; Corporate: ₱500.00 + ₱2.00/₱5k",
       "processingTime": "7 minutes",
       "office": "City Treasurer's Office",
-      "url": "service-details/cto-services.html#service-9"
+      "url": "service-details/cto-services.html#cto-payment-of-community-tax"
     },
     {
       "id": "cto-ptr-occupation-tax",
       "title": "Payment of Professional & Occupation Tax (PTR / OTR)",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Annual tax collection and official receipting for regulated licensed professionals and practiced occupations in Legazpi.",
-      "keywords": ["ptr", "professional tax receipt", "occupation tax", "prc license", "lawyers", "engineers", "doctors", "CTO"],
+      "keywords": [
+        "ptr",
+        "professional tax receipt",
+        "occupation tax",
+        "prc license",
+        "lawyers",
+        "engineers",
+        "doctors",
+        "CTO"
+      ],
       "fee": "PTR: ₱300.00 / ₱200.00; Occupation: ₱150.00 / ₱100.00",
       "processingTime": "7 minutes",
       "office": "City Treasurer's Office",
-      "url": "service-details/cto-services.html#service-10"
+      "url": "service-details/cto-services.html#cto-payment-of-ptr-and-occupation-tax"
     },
     {
       "id": "cto-weights-measures",
       "title": "Sealing and Licensing of Instruments of Weights and Measures",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Annual testing, calibration, sealing, and licensing of commercial weighing scales and gasoline pump meters.",
-      "keywords": ["weights and measures", "timbangan", "gasoline pump", "calibration", "meter test", "sealing", "CTO"],
+      "keywords": [
+        "weights and measures",
+        "timbangan",
+        "gasoline pump",
+        "calibration",
+        "meter test",
+        "sealing",
+        "CTO"
+      ],
       "fee": "Scales: ₱50.00 – ₱500.00; Fuel Pumps: ₱200.00/nozzle",
       "processingTime": "12 – 14 minutes",
       "office": "City Treasurer's Office",
-      "url": "service-details/cto-services.html#service-12"
+      "url": "service-details/cto-services.html#cto-sealing-weights-measures-retailers"
     },
     {
       "id": "cto-rpt-clearance",
       "title": "Issuance of Real Property Tax Clearance",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Official certification verifying complete settlement of all real property tax obligations for land or building.",
-      "keywords": ["tax clearance", "rpt clearance", "certificate of no tax delinquency", "land clearance", "title transfer", "CTO"],
+      "keywords": [
+        "tax clearance",
+        "rpt clearance",
+        "certificate of no tax delinquency",
+        "land clearance",
+        "title transfer",
+        "CTO"
+      ],
       "fee": "₱50.00 per property/tax declaration",
       "processingTime": "16 minutes",
       "office": "City Treasurer's Office",
-      "url": "service-details/cto-services.html#service-14"
+      "url": "service-details/cto-services.html#cto-real-property-tax-clearance"
     },
     {
       "id": "casso-assessment-structures",
       "title": "Assessment of Newly Constructed Buildings & Improvements",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Inspection, appraisal, and issuance of Tax Declaration for new buildings, residential houses, and commercial structures.",
-      "keywords": ["assessor", "tax declaration", "casso", "building assessment", "property declaration", "appraisal"],
+      "keywords": [
+        "assessor",
+        "tax declaration",
+        "casso",
+        "building assessment",
+        "property declaration",
+        "appraisal"
+      ],
       "fee": "Free",
       "processingTime": "2-3 days",
       "office": "City Assessor's Office",
-      "url": "service-details/casso-services.html#sub-svc-assessment-structures"
+      "url": "service-details/casso-services.html#casso-assess-building"
     },
     {
       "id": "casso-transfer-ownership",
       "title": "Transfer of Real Property Ownership in Tax Declaration",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Transfer and update of real property Tax Declaration following deed of sale, inheritance, or donation.",
-      "keywords": ["transfer tax declaration", "title transfer", "casso", "property ownership", "assessor transfer"],
+      "keywords": [
+        "transfer tax declaration",
+        "title transfer",
+        "casso",
+        "property ownership",
+        "assessor transfer"
+      ],
       "fee": "₱100.00 transfer fee",
       "processingTime": "1-2 days",
       "office": "City Assessor's Office",
-      "url": "service-details/casso-services.html#sub-svc-transfer-ownership"
+      "url": "service-details/casso-services.html#casso-transfer-ownership"
     },
     {
       "id": "casso-true-copy-td",
       "title": "Issuance of Certified True Copy of Tax Declaration",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Request certified true copies of active or archived Tax Declarations and Notice of Assessment.",
-      "keywords": ["tax declaration copy", "certified true copy td", "casso", "assessor certification", "land record"],
+      "keywords": [
+        "tax declaration copy",
+        "certified true copy td",
+        "casso",
+        "assessor certification",
+        "land record"
+      ],
       "fee": "₱100.00 / copy",
       "processingTime": "20 minutes",
       "office": "City Assessor's Office",
-      "url": "service-details/casso-services.html#sub-svc-true-copy-td"
+      "url": "service-details/casso-services.html#casso-true-copy-tax-declaration"
     },
     {
       "id": "casso-tax-mapping",
       "title": "Verification of Property Location and Tax Mapping",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Cadastral map verification, PIN identification, and property boundary validation on Legazpi tax maps.",
-      "keywords": ["tax mapping", "cadastral", "casso", "property location", "pin verification", "boundary"],
+      "keywords": [
+        "tax mapping",
+        "cadastral",
+        "casso",
+        "property location",
+        "pin verification",
+        "boundary"
+      ],
       "fee": "₱100.00",
       "processingTime": "30 minutes",
       "office": "City Assessor's Office",
-      "url": "service-details/casso-services.html#sub-svc-tax-mapping"
+      "url": "service-details/casso-services.html#casso-tax-mapping"
     },
     {
       "id": "casso-certifications",
       "title": "Assessor Certifications (No Property, Total Holdings, History)",
       "category": "Tax & Payments",
-      "categoryId": "tax",
+      "categoryId": "tax-payments",
       "description": "Official assessor certifications including Certificate of Non-Improvement, No Landholding, and Aggregate Landholdings.",
-      "keywords": ["certificate of no property", "non-improvement", "casso", "total holdings", "assessor certification"],
+      "keywords": [
+        "certificate of no property",
+        "non-improvement",
+        "casso",
+        "total holdings",
+        "assessor certification"
+      ],
       "fee": "₱100.00",
       "processingTime": "20 minutes",
       "office": "City Assessor's Office",
-      "url": "service-details/casso-services.html#sub-svc-certifications"
+      "url": "service-details/casso-services.html#casso-certifications"
     },
     {
       "id": "cswdo-aics",
@@ -529,11 +646,19 @@
       "category": "Social Services & Assistance",
       "categoryId": "social-services",
       "description": "Financial and material assistance for medical expenses, burial, transportation, and emergency relief.",
-      "keywords": ["aics", "financial assistance", "cswdo", "medical assistance", "burial assistance", "crisis", "ayuda"],
+      "keywords": [
+        "aics",
+        "financial assistance",
+        "cswdo",
+        "medical assistance",
+        "burial assistance",
+        "crisis",
+        "ayuda"
+      ],
       "fee": "Free",
       "processingTime": "Same day / 1 day",
       "office": "City Social Welfare and Development Office",
-      "url": "service-details/cswdo-services.html#financial-assistance-aics"
+      "url": "service-details/cswdo-services.html#cswdo-financial-assistance-aics"
     },
     {
       "id": "cswdo-indigency",
@@ -541,11 +666,18 @@
       "category": "Social Services & Assistance",
       "categoryId": "social-services",
       "description": "Evaluation and issuance of Social Case Study reports and certificates for hospital discounts and scholarship programs.",
-      "keywords": ["certificate of indigency", "social case study", "cswdo", "indigent", "hospital discount", "pao requirement"],
+      "keywords": [
+        "certificate of indigency",
+        "social case study",
+        "cswdo",
+        "indigent",
+        "hospital discount",
+        "pao requirement"
+      ],
       "fee": "Free",
       "processingTime": "1-2 days",
       "office": "City Social Welfare and Development Office",
-      "url": "service-details/cswdo-services.html#certificate-indigency-case-study"
+      "url": "service-details/cswdo-services.html#cswdo-certificate-of-indigency"
     },
     {
       "id": "cswdo-solo-parent",
@@ -553,11 +685,18 @@
       "category": "Social Services & Assistance",
       "categoryId": "social-services",
       "description": "Registration and ID issuance for solo parents under the Expanded Solo Parents Welfare Act.",
-      "keywords": ["solo parent id", "ra 11861", "single mother", "single father", "cswdo", "solo parent booklet"],
+      "keywords": [
+        "solo parent id",
+        "ra 11861",
+        "single mother",
+        "single father",
+        "cswdo",
+        "solo parent booklet"
+      ],
       "fee": "Free",
       "processingTime": "1-2 weeks",
       "office": "City Social Welfare and Development Office",
-      "url": "service-details/cswdo-services.html#solo-parents-id"
+      "url": "service-details/cswdo-services.html#cswdo-solo-parent-id"
     },
     {
       "id": "cswdo-pwd-id",
@@ -569,7 +708,7 @@
       "fee": "Free",
       "processingTime": "3-5 days",
       "office": "City Social Welfare and Development Office / PDAO",
-      "url": "service-details/cswdo-services.html#pwd-id-issuance"
+      "url": "service-details/cswdo-services.html"
     },
     {
       "id": "cswdo-senior-citizen",
@@ -577,11 +716,18 @@
       "category": "Social Services & Assistance",
       "categoryId": "social-services",
       "description": "Registration and issuance of Senior Citizen ID card and medicine/grocery discount booklets for residents aged 60+.",
-      "keywords": ["senior citizen id", "osca", "senior booklet", "elderly discount", "cswdo", "senior benefits"],
+      "keywords": [
+        "senior citizen id",
+        "osca",
+        "senior booklet",
+        "elderly discount",
+        "cswdo",
+        "senior benefits"
+      ],
       "fee": "Free",
       "processingTime": "1-3 days",
       "office": "Office of Senior Citizens Affairs (OSCA) / CSWDO",
-      "url": "service-details/cswdo-services.html#senior-citizens-affairs"
+      "url": "service-details/cswdo-services.html"
     },
     {
       "id": "ceo-building-permit",
@@ -589,11 +735,18 @@
       "category": "Infrastructure & Public Works",
       "categoryId": "infrastructure",
       "description": "Evaluation of architectural, structural, sanitary, and electrical plans for building permit issuance in Legazpi.",
-      "keywords": ["building permit", "construction permit", "ceo", "city engineer", "building official", "blueprints"],
+      "keywords": [
+        "building permit",
+        "construction permit",
+        "ceo",
+        "city engineer",
+        "building official",
+        "blueprints"
+      ],
       "fee": "Based on building classification/area",
       "processingTime": "3-5 days",
       "office": "City Engineering Office - Building Official",
-      "url": "service-details/ceo-services.html#bldg-permit"
+      "url": "service-details/ceo-services.html#ceo-building-permit"
     },
     {
       "id": "ceo-occupancy-permit",
@@ -601,11 +754,17 @@
       "category": "Infrastructure & Public Works",
       "categoryId": "infrastructure",
       "description": "Final site inspection and certification that constructed building complies with approved plans and National Building Code.",
-      "keywords": ["occupancy permit", "certificate of occupancy", "ceo", "building inspection", "final permit"],
+      "keywords": [
+        "occupancy permit",
+        "certificate of occupancy",
+        "ceo",
+        "building inspection",
+        "final permit"
+      ],
       "fee": "Based on NBCP schedule",
       "processingTime": "3-5 days",
       "office": "City Engineering Office - Building Official",
-      "url": "service-details/ceo-services.html#occupancy-app"
+      "url": "service-details/ceo-services.html#ceo-certificate-occupancy"
     },
     {
       "id": "cpdo-locational-clearance",
@@ -613,11 +772,18 @@
       "category": "Infrastructure & Public Works",
       "categoryId": "infrastructure",
       "description": "Review and zoning clearance for proposed building construction, subdivision, and commercial projects in Legazpi.",
-      "keywords": ["locational clearance", "zoning", "cpdo", "zoning clearance", "land use", "building clearance"],
+      "keywords": [
+        "locational clearance",
+        "zoning",
+        "cpdo",
+        "zoning clearance",
+        "land use",
+        "building clearance"
+      ],
       "fee": "Based on project cost/area",
       "processingTime": "2-3 days",
       "office": "City Planning and Development Office",
-      "url": "service-details/cpdo-services.html#locational-building-permit"
+      "url": "service-details/cpdo-services.html#cpdo-lc-building-permit"
     },
     {
       "id": "ocenr-permit-to-dump",
@@ -625,11 +791,18 @@
       "category": "Environment Services",
       "categoryId": "environment",
       "description": "Permit for commercial and institutional waste disposal at the Legazpi City Sanitary Landfill.",
-      "keywords": ["permit to dump", "waste disposal", "ocenr", "sanitary landfill", "solid waste", "garbage"],
+      "keywords": [
+        "permit to dump",
+        "waste disposal",
+        "ocenr",
+        "sanitary landfill",
+        "solid waste",
+        "garbage"
+      ],
       "fee": "₱50.00 / truck load",
       "processingTime": "20 minutes",
       "office": "Office of the City Environment and Natural Resources",
-      "url": "service-details/ocenr-services.html#permit-to-dump"
+      "url": "service-details/ocenr-services.html#ocenr-permit-to-dump"
     },
     {
       "id": "ocenr-septage-management",
@@ -641,7 +814,7 @@
       "fee": "Based on volume",
       "processingTime": "1-2 days",
       "office": "Office of the City Environment and Natural Resources",
-      "url": "service-details/ocenr-services.html#septage-management"
+      "url": "service-details/ocenr-services.html#ocenr-septic-desludging"
     },
     {
       "id": "cao-rsbsa-registration",
@@ -649,31 +822,55 @@
       "category": "Agriculture & Economic Development",
       "categoryId": "agriculture",
       "description": "Registration of farmers and fisherfolk in RSBSA database for government subsidies, seeds, fertilizer, and crop insurance.",
-      "keywords": ["rsbsa", "farmer registration", "cao", "agriculture", "seeds", "fertilizer", "crop insurance", "pcic"],
+      "keywords": [
+        "rsbsa",
+        "farmer registration",
+        "cao",
+        "agriculture",
+        "seeds",
+        "fertilizer",
+        "crop insurance",
+        "pcic"
+      ],
       "fee": "Free",
       "processingTime": "15 minutes",
       "office": "City Agriculture Office",
-      "url": "service-details/cao-services.html#rsbsa-registration"
+      "url": "service-details/cao-services.html#cao-certification-rsbsa-pcic-boat"
     },
     {
       "id": "chrmo-employment-application",
       "title": "Application for City Government Employment & Job Vacancies",
-      "category": "Government Services",
-      "categoryId": "government",
+      "category": "Employment & Livelihood",
+      "categoryId": "employment",
       "description": "Submission of application documents, PDS, and eligibility verification for vacant positions in LGU Legazpi.",
-      "keywords": ["job vacancy", "careers", "chrmo", "employment", "apply job", "civil service", "pds"],
+      "keywords": [
+        "job vacancy",
+        "careers",
+        "chrmo",
+        "employment",
+        "apply job",
+        "civil service",
+        "pds"
+      ],
       "fee": "Free",
       "processingTime": "Varies by hiring cycle",
       "office": "City Human Resource Management Office",
-      "url": "service-details/human-resource-management.html#recruitment-selection-placement"
+      "url": "service-details/human-resource-management.html#hrmo-recruitment-selection-placement"
     },
     {
       "id": "online-rpt-billing",
       "title": "Real Property Tax Online Billing & Payment",
-      "category": "Online Services",
-      "categoryId": "online",
+      "category": "Tax & Payments",
+      "categoryId": "tax-payments",
       "description": "View and pay your real property tax (amilyar) online via Filipizen Legazpi.",
-      "keywords": ["online rpt", "property tax online", "amilyar online", "filipizen legazpi", "e-payment", "rpt billing"],
+      "keywords": [
+        "online rpt",
+        "property tax online",
+        "amilyar online",
+        "filipizen legazpi",
+        "e-payment",
+        "rpt billing"
+      ],
       "fee": "Based on assessment",
       "processingTime": "Instant",
       "office": "City Treasurer's Office",
@@ -682,10 +879,16 @@
     {
       "id": "online-business-billing",
       "title": "Business Tax Online Billing",
-      "category": "Online Services",
-      "categoryId": "online",
+      "category": "Tax & Payments",
+      "categoryId": "tax-payments",
       "description": "Inquire and process billing for business taxes and fees online via Filipizen Legazpi.",
-      "keywords": ["online business tax", "business billing", "filipizen legazpi", "e-payment", "business permit online"],
+      "keywords": [
+        "online business tax",
+        "business billing",
+        "filipizen legazpi",
+        "e-payment",
+        "business permit online"
+      ],
       "fee": "Based on assessment",
       "processingTime": "Instant",
       "office": "City Treasurer's Office",
@@ -697,11 +900,23 @@
       "category": "Public Utilities",
       "categoryId": "utilities",
       "description": "Application requirements, payment channels, feeder coverage by barangay, and power outage advisories for Albay Electric Cooperative (ALECO).",
-      "keywords": ["electricity", "power", "aleco", "albay electric", "electric meter", "power outage", "feeder", "electric bill", "gcash aleco", "maya aleco", "cfei"],
+      "keywords": [
+        "electricity",
+        "power",
+        "aleco",
+        "albay electric",
+        "electric meter",
+        "power outage",
+        "feeder",
+        "electric bill",
+        "gcash aleco",
+        "maya aleco",
+        "cfei"
+      ],
       "fee": "Connection & meter deposit fees apply",
       "processingTime": "3 - 5 days",
       "office": "Albay Electric Cooperative, Inc. (ALECO)",
-      "url": "services/utilities.html#electricity"
+      "url": "services/utilities.html#electricity-section"
     },
     {
       "id": "lcwd-water-service",
@@ -709,12 +924,22 @@
       "category": "Public Utilities",
       "categoryId": "utilities",
       "description": "New water service connection application, online/over-the-counter payments, water supply zones, and maintenance advisories for Legazpi City Water District.",
-      "keywords": ["water", "water district", "lcwd", "water connection", "water meter", "water leak", "water bill", "gcash lcwd", "water interruption", "pumping station"],
+      "keywords": [
+        "water",
+        "water district",
+        "lcwd",
+        "water connection",
+        "water meter",
+        "water leak",
+        "water bill",
+        "gcash lcwd",
+        "water interruption",
+        "pumping station"
+      ],
       "fee": "Connection, inspection & deposit fees apply",
       "processingTime": "2 - 4 days",
       "office": "Legazpi City Water District (LCWD)",
-      "url": "services/utilities.html#water"
+      "url": "services/utilities.html#water-section"
     }
   ]
 }
-

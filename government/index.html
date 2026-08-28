@@ -52,7 +52,7 @@
     />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#c2410c" />
+    <meta name="theme-color" content="#0032a0" />
 
     <title>Government Officials & Structure | BetterLegazpi.org</title>
 
@@ -84,10 +84,33 @@
     <link rel="stylesheet" href="../assets/css/footer.css" />
 
     <style>
+      /* Everything below is written in design tokens rather than literals. The
+         page carries its own <style> because these components appear nowhere
+         else on the site, but they still have to follow the theme: a hardcoded
+         slate here survives the dark repaint of its own card and goes
+         unreadable. */
+      /* One badge for all four section headers. They were four inline gradients
+         in four different hues (primary, success, info, accent), which broke
+         the one-accent rule and, more seriously, all four paired white text
+         with a token that lightens in dark mode: white on --color-success
+         (#34d399 dark) is 1.9:1. --color-primary-solid is the fill token the
+         design system reserves for exactly this, and it holds in both themes. */
+      .gov-section-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--color-primary-solid);
+        color: #ffffff;
+        padding: 8px 20px;
+        border-radius: var(--radius-pill);
+        font-size: 0.875rem;
+        font-weight: var(--fw-medium);
+        margin-bottom: var(--spacing-sm);
+      }
       .source-credit-simple {
         margin-top: 28px;
         font-size: 0.98rem;
-        color: #475569;
+        color: var(--color-text-light);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -95,12 +118,13 @@
         flex-wrap: wrap;
         gap: 6px;
       }
+      /* #0284c7 reached only 3.91:1 on the alt background it sits on. */
       .source-credit-simple a {
-        color: #0284c7;
+        color: var(--color-primary);
         text-decoration: underline;
       }
       .source-credit-simple a:hover {
-        color: #0369a1;
+        color: var(--color-primary-dark);
       }
       .barangay-toolbar {
         display: flex;
@@ -108,12 +132,12 @@
         gap: 12px;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: var(--spacing-lg, 24px);
-        background: white;
+        margin-bottom: var(--spacing-lg);
+        background: var(--color-bg);
         padding: 16px 20px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        border: 1px solid #e2e8f0;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--color-border);
       }
       .bgy-search-wrap {
         flex: 1;
@@ -123,25 +147,32 @@
       .bgy-search-input {
         width: 100%;
         padding: 10px 16px 10px 40px;
-        border-radius: 8px;
-        border: 1px solid #cbd5e1;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--color-border);
+        background: var(--color-bg);
+        color: var(--color-text);
         font-size: 0.95rem;
         font-family: inherit;
         transition:
-          border-color 0.2s,
-          box-shadow 0.2s;
+          border-color var(--duration-base) var(--ease-out),
+          box-shadow var(--duration-base) var(--ease-out);
       }
+      .bgy-search-input::placeholder {
+        color: var(--color-text-light);
+      }
+      /* The ring was rgba(194, 65, 12, …), the retired orange accent, against a
+         primary that is now navy. Both sides come from the same token now. */
       .bgy-search-input:focus {
         outline: none;
-        border-color: var(--color-primary, #c2410c);
-        box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 30%, transparent);
       }
       .bgy-search-icon {
         position: absolute;
         left: 14px;
         top: 50%;
         transform: translateY(-50%);
-        color: #94a3b8;
+        color: var(--color-text-light);
         font-size: 1rem;
       }
       .bgy-filter-btns {
@@ -149,23 +180,29 @@
         gap: 6px;
       }
       .bgy-filter-btn {
-        background: #f1f5f9;
-        border: 1px solid #e2e8f0;
-        color: #475569;
+        background: var(--color-bg-muted);
+        border: 1px solid var(--color-border);
+        color: var(--color-text-light);
         padding: 8px 14px;
-        border-radius: 6px;
+        border-radius: var(--radius-sm);
         font-size: 0.85rem;
         font-weight: 600;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition:
+          background-color var(--duration-base) var(--ease-out),
+          color var(--duration-base) var(--ease-out),
+          border-color var(--duration-base) var(--ease-out);
       }
       .bgy-filter-btn:hover {
-        background: #e2e8f0;
+        background: var(--color-border);
+        color: var(--color-text);
       }
+      /* --color-primary lightens to #6f9dff in dark mode, which cannot carry
+         white text; --color-primary-solid is the fill token that stays navy. */
       .bgy-filter-btn.active {
-        background: var(--color-primary, #c2410c);
-        color: white;
-        border-color: var(--color-primary, #c2410c);
+        background: var(--color-primary-solid);
+        color: #ffffff;
+        border-color: var(--color-primary-solid);
       }
       #barangayGrid {
         display: grid !important;
@@ -185,10 +222,10 @@
         }
       }
       .barangay-card {
-        background: white;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        background: var(--color-bg);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-sm);
         padding: 16px 18px;
         display: flex;
         flex-direction: column;
@@ -205,7 +242,16 @@
       }
       .barangay-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        box-shadow: var(--shadow-md);
+        border-color: var(--color-primary);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .barangay-card {
+          transition: none;
+        }
+        .barangay-card:hover {
+          transform: none;
+        }
       }
       .barangay-card-header {
         display: flex;
@@ -219,34 +265,39 @@
         font-size: 1rem;
         font-weight: 700;
         margin: 0;
-        color: #0f172a;
+        color: var(--color-text);
         line-height: 1.3;
         flex: 1;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
-      .badge-urban {
-        background: #dbeafe;
-        color: #1e40af;
+      /* Urban and rural stay two different hues because the colour carries the
+         classification rather than decorating it. Both are mixed from tokens
+         against the card background, so the pill tints with the theme instead
+         of staying a light island on a dark card. The flat values are the
+         fallback for browsers without color-mix(). */
+      .badge-urban,
+      .badge-rural {
         font-size: 0.68rem;
         font-weight: 700;
         padding: 3px 7px;
-        border-radius: 12px;
+        border-radius: var(--radius-pill);
         text-transform: uppercase;
         flex-shrink: 0;
         margin-top: 1px;
       }
+      .badge-urban {
+        background: #dbeafe;
+        color: #1e40af;
+        background: color-mix(in srgb, var(--color-primary) 14%, var(--color-bg));
+        color: var(--color-primary);
+      }
       .badge-rural {
         background: #dcfce7;
         color: #166534;
-        font-size: 0.68rem;
-        font-weight: 700;
-        padding: 3px 7px;
-        border-radius: 12px;
-        text-transform: uppercase;
-        flex-shrink: 0;
-        margin-top: 1px;
+        background: color-mix(in srgb, var(--color-success) 14%, var(--color-bg));
+        color: var(--color-success);
       }
       .barangay-card-body {
         display: flex;
@@ -269,7 +320,7 @@
         gap: 4px;
         font-size: 0.68rem;
         text-transform: uppercase;
-        color: #64748b;
+        color: var(--color-text-light);
         font-weight: 700;
         letter-spacing: 0.4px;
         margin-bottom: 2px;
@@ -280,7 +331,7 @@
       .bgy-val {
         font-size: 0.86rem;
         font-weight: 600;
-        color: #1e293b;
+        color: var(--color-text);
         line-height: 1.25;
         white-space: nowrap;
         overflow: hidden;
@@ -293,12 +344,12 @@
         gap: 8px;
         margin-top: auto;
         padding-top: 10px;
-        border-top: 1px solid #f1f5f9;
+        border-top: 1px solid var(--color-border);
         font-size: 0.8rem;
         min-height: 36px;
       }
       .bgy-pop {
-        color: #64748b;
+        color: var(--color-text-light);
         font-weight: 500;
         font-size: 0.78rem;
         display: inline-flex;
@@ -307,9 +358,9 @@
         white-space: nowrap;
       }
       .bgy-call-btn {
-        background: #f8fafc;
-        border: 1px solid #cbd5e1;
-        color: var(--color-primary, #c2410c);
+        background: var(--color-bg-alt);
+        border: 1px solid var(--color-border);
+        color: var(--color-primary);
         font-weight: 600;
         font-size: 0.76rem;
         padding: 4px 8px;
@@ -326,12 +377,15 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        transition: all 0.2s ease;
+        transition:
+          background-color var(--duration-base) var(--ease-out),
+          color var(--duration-base) var(--ease-out),
+          border-color var(--duration-base) var(--ease-out);
       }
       .bgy-call-btn:hover {
-        background: var(--color-primary, #c2410c);
-        color: white;
-        border-color: var(--color-primary, #c2410c);
+        background: var(--color-primary-solid);
+        color: #ffffff;
+        border-color: var(--color-primary-solid);
       }
     </style>
     <script>
@@ -418,11 +472,11 @@
               </ul>
             </li>
             <li><a href="../government/" class="active" aria-current="page">Government</a></li>
-            <li><a href="../statistics/">Statistics</a></li>
-
-            <li><a href="../tourism/">Tourism</a></li>
-            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../policies/">Policies</a></li>
             <li><a href="../history/">History</a></li>
+            <li><a href="../tourism/">Travel</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li><a href="../budget/">Transparency</a></li>
             <li><a href="../contact/">Contact</a></li>
           </ul>
         </nav>
@@ -496,22 +550,7 @@
         <div class="container">
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
-            <span
-              style="
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                background: linear-gradient(
-                  135deg,
-                  var(--color-primary) 0%,
-                  var(--color-secondary) 100%
-                );
-                color: white;
-                padding: 8px 20px;
-                border-radius: 50px;
-                font-size: 0.875rem;
-                margin-bottom: var(--spacing-sm);
-              "
+            <span class="gov-section-badge"
               ><i class="bi bi-star-fill"></i> <span>City Leadership</span></span
             >
             <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">
@@ -583,18 +622,7 @@
         <div class="container">
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
-            <span
-              style="
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                background: linear-gradient(135deg, var(--color-success) 0%, #05c793 100%);
-                color: white;
-                padding: 8px 20px;
-                border-radius: 50px;
-                font-size: 0.875rem;
-                margin-bottom: var(--spacing-sm);
-              "
+            <span class="gov-section-badge"
               ><i class="bi bi-people-fill"></i> <span>Legislative Branch</span></span
             >
             <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">
@@ -795,18 +823,7 @@
         <div class="container">
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
-            <span
-              style="
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                background: linear-gradient(135deg, var(--color-info) 0%, #0099cc 100%);
-                color: white;
-                padding: 8px 20px;
-                border-radius: 50px;
-                font-size: 0.875rem;
-                margin-bottom: var(--spacing-sm);
-              "
+            <span class="gov-section-badge"
               ><i class="bi bi-building-fill"></i> <span>Executive Branch</span></span
             >
             <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">Executive Offices</h3>
@@ -1210,22 +1227,7 @@
         <div class="container">
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
-            <span
-              style="
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                background: linear-gradient(
-                  135deg,
-                  var(--color-primary) 0%,
-                  var(--color-secondary) 100%
-                );
-                color: white;
-                padding: 8px 20px;
-                border-radius: 50px;
-                font-size: 0.875rem;
-                margin-bottom: var(--spacing-sm);
-              "
+            <span class="gov-section-badge"
               ><i class="bi bi-geo-alt-fill"></i> <span>Barangay Units</span></span
             >
             <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">

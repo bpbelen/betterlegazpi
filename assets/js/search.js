@@ -47,7 +47,7 @@
       path.includes('/news/') ||
       path.includes('/sitemap/') ||
       path.includes('/statistics/') ||
-      path.includes('/legislative/') ||
+      path.includes('/policies/') ||
       path.includes('/privacy/') ||
       path.includes('/terms/') ||
       path.includes('/service-details/')

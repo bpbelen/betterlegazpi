@@ -29,7 +29,7 @@ const ROUTES = [
   ['hub-ceo', '/service-details/ceo-services.html'],
   ['hub-cto', '/service-details/cto-services.html'],
   ['government', '/government/index.html'],
-  ['legislative', '/legislative/index.html'],
+  ['policies', '/policies/index.html'],
   ['budget', '/budget/index.html'],
   ['statistics', '/statistics/index.html'],
   ['tourism', '/tourism/index.html'],

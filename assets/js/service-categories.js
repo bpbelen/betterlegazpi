@@ -111,7 +111,7 @@
   function renderReferral(journey, categoriesById) {
     const owner = categoriesById[journey.category];
     if (!owner) return '';
-    const href = `../${owner.route.replace('services/', '')}`;
+    const href = owner.route.replace('services/', '');
     const count = journey.steps.length;
 
     return `

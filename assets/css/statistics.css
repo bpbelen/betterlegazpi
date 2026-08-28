@@ -1420,8 +1420,10 @@ canvas {
   color: var(--color-text-light);
 }
 
+/* #059669 measured 3.77:1 here, under AA. The success token is the darker
+   value the design system already reserves for text on light surfaces. */
 .plc-badge-year {
-  color: #059669;
+  color: var(--color-success);
   font-weight: 700;
 }
 
@@ -1557,9 +1559,11 @@ canvas {
   color: var(--color-primary);
 }
 
+/* #94a3b8 is 2.56:1 on the white panel. The dark override below already used
+   the token, so only the light side was ever wrong. */
 .pch-info p {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--color-text-light);
   margin: 0;
 }
 
@@ -1589,14 +1593,14 @@ canvas {
   font-family: 'Outfit', 'Inter', sans-serif;
   background: transparent;
   border: none;
-  color: #64748b;
+  color: var(--color-text-light);
   cursor: pointer;
   transition: all var(--duration-base) ease;
 }
 
 .poverty-year-btn:hover {
   background: var(--color-border);
-  color: #334155;
+  color: var(--color-text);
 }
 
 .poverty-year-btn.active {

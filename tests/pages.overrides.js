@@ -28,7 +28,6 @@ module.exports = {
   '/news/index.html': { waitForSelector: '#news-grid > *' },
   '/government/officials.html': { waitForSelector: '#officials-container > *' },
   '/statistics/index.html': { waitForSelector: '#barangayListContainer > *' },
-  '/legislative/ordinance-framework.html': { waitForSelector: '#ordinance-table-body > *' },
   '/budget/index.html': { waitForSelector: '#dpwh-projects-container > *' },
 
   // Service category pages: every section below the page header is rendered by

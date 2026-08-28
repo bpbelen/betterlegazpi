@@ -42,7 +42,6 @@ const CI_ROUTES = [
   '/statistics/index.html', // statistics.css
   '/budget/index.html', // budget.css
   '/history/index.html', // history.css
-  '/legislative/index.html', // legislative.css
   '/services/utilities.html', // utilities.css, and the only JSON-rendered services page
   '/service-details/philhealth-yakap.html', // philhealth-yakap.css: inverted spotlight panel, tabs, accordions
   '/tourism/index.html', // tourism.css: photo page-header, bento, scroll-snap strip
