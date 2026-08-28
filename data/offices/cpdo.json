@@ -1,0 +1,1602 @@
+{
+  "slug": "cpdo",
+  "route": "service-details/cpdo-services.html",
+  "charter": {
+    "office": "City Planning and Development Office",
+    "abbreviation": "CPDO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-PLANNING-AND-DEVELOPMENT-OFFICE-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/cpdo.md",
+    "personnel": [
+      {
+        "name": "EnP. Jocelyn M. Codorniz",
+        "position": "CGDH I, City Planning and Development Coordinator, Zoning Administrator",
+        "unit": "City Planning and Development Office",
+        "isHead": true
+      },
+      {
+        "name": "Engr. Rey Benedict L. Rico",
+        "position": "Project Dev't. Officer IV, Chief SPD / ACPDC OIC",
+        "unit": "Special Projects Division"
+      },
+      {
+        "name": "Ar. Maridel L. Baldano-Nierva",
+        "position": "HHRO V",
+        "unit": "Housing and Homesite Regulation Division"
+      },
+      {
+        "name": "Ar. Camelle D. Celeste-Abion",
+        "position": "HHRO II",
+        "unit": "Housing and Homesite Regulation Division"
+      },
+      {
+        "name": "Ar. Diana Rose B. Ruivivar",
+        "position": "Draftswoman I",
+        "unit": "Housing and Homesite Regulation Division"
+      },
+      {
+        "name": "Mr. Roderick Alejandro B. Ante",
+        "position": "Draftsman IV",
+        "unit": "Housing and Homesite Regulation Division"
+      },
+      {
+        "name": "Ar. Ma. Joy Antonette A. Balde",
+        "position": "Zoning Officer III",
+        "unit": "Zoning Division"
+      },
+      {
+        "name": "Ar. Jessica O. Rañeses",
+        "position": "Zoning Officer II",
+        "unit": "Zoning Division"
+      },
+      {
+        "name": "Ar. Marion Dale B. Maravilla",
+        "position": "Zoning Officer I",
+        "unit": "Zoning Division"
+      },
+      {
+        "name": "Mr. Francisco (Frankie) Salvador R. Palacio",
+        "position": "Zoning Inspector I",
+        "unit": "Zoning Division"
+      },
+      {
+        "name": "EnP. Maricel L. Juloc",
+        "position": "Planning Officer IV",
+        "unit": "Plans and Programs Division"
+      },
+      {
+        "name": "EnP. Jesus A. Lorenzana",
+        "position": "Planning Officer III",
+        "unit": "Plans and Programs Division"
+      },
+      {
+        "name": "Ms. Mary Ann B. Gaspacho",
+        "position": "Planning Officer I",
+        "unit": "Plans and Programs Division"
+      },
+      {
+        "name": "Ms. Maria Teresita Lapasaran",
+        "position": "HHRO III",
+        "unit": "Special Projects Division"
+      },
+      {
+        "name": "Ar. Renz Archie L. Balmedina",
+        "position": "Project Dev't. Officer II",
+        "unit": "Special Projects Division"
+      },
+      {
+        "name": "Ms. Lilibeth C. Mesias",
+        "position": "PEO IV",
+        "unit": "Research and Statistics Division"
+      },
+      {
+        "name": "Jessica R. Rañeses",
+        "position": "PEO III",
+        "unit": "Research and Statistics Division"
+      },
+      {
+        "name": "Clinton R. Corral",
+        "position": "Stat I",
+        "unit": "Research and Statistics Division"
+      },
+      {
+        "name": "Peter Thomas D. Borlagdatan",
+        "position": "Administrative Officer IV",
+        "unit": "Administrative Section"
+      },
+      {
+        "name": "Marivi I. Doroliat",
+        "position": "Administrative Assistant I",
+        "unit": "Administrative Section"
+      },
+      {
+        "name": "Ma. Edna A. Acerado",
+        "position": "Administrative Aide IV",
+        "unit": "Administrative Section"
+      },
+      {
+        "name": "Joseph M. Trilles",
+        "position": "Administrative Aide IV",
+        "unit": "Administrative Section"
+      },
+      {
+        "name": "Marian Kate B. Ang",
+        "position": "Administrative Aide I",
+        "unit": "Administrative Section"
+      }
+    ],
+    "personnelNotes": [
+      "The office runs six divisions and each charter page is badged with the one that owns the service: Administrative, Zoning, Housing and Homesite Regulation (HHRD), Plans and Programs (PPD), Special Projects (SPD) and Research and Statistics (RESD).",
+      "The charter names a Zoning Officer II as Ar. Jessica O. Rañeses and a Research and Statistics PEO III as Jessica R. Rañeses. Whether these are two people or one name spelled two ways has not been confirmed, so both are listed as printed.",
+      "The City Mayor appears in the responsible-person column of three services as the approving authority. He is not CPDO staff and so is named by office rather than listed here."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Call 742-0821, email legazpicpdo@gmail.com, or fill up the Feedback Form. Clients are given a form for each service they use. The office is on the 2nd floor of the City Hall building.",
+      "howFeedbackIsProcessed": "The assigned officer collects the forms at the end of the transaction day and submits them to the Administrative Officer for recording. They are collated quarterly and averaged into the rating clients gave for each service, presented as the Client Satisfaction Measurement Report, then submitted to the City Human Resource Management Office for the Harmonized CSM Report that goes to the Anti-Red Tape Authority. Complaints may be filed in writing or in person: write to the City Planning and Development Coordinator, email jocelyncodorniz29@gmail.com, or call or text 0919-841-3056. The head of office asks the officer concerned to verify the complaint, then acts on it as a light or grave offence depending on what was done, with the City Human Resource Management Office applying sanctions where it assists. A client who asks for the action in writing is given it.",
+      "contacts": ["legazpicpdo@gmail.com", "jocelyncodorniz29@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "cpdo-lc-new-business",
+        "number": 1,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Locational clearance for a new business permit",
+        "description": "The zoning clearance a new business needs before its permit is issued, confirming the business is allowed at that location under the City Zoning Ordinance. You do not collect it separately: it comes with the Mayor's Permit at the Business Center.",
+        "office": "City Planning and Development Office, Zoning Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Those applying for a locational clearance for a new business permit",
+        "requirements": [
+          {
+            "item": "Properly filled-out application form for a Business or Mayor's Permit, in JPEG format for an online application",
+            "whereToSecure": "Business Permits and Licensing Office"
+          },
+          {
+            "item": "One-page sketch or drawing of the proposed business location, in JPEG format for an online application",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Barangay business clearance for where the business is located, 1 copy, in JPEG format for an online application",
+            "whereToSecure": "Office of the Punong Barangay"
+          },
+          {
+            "item": "If the property is not owned: contract of lease, letter of authorization or consent from the owner, affidavit of undertaking on lot ownership, or award notice, 1 copy, in JPEG format",
+            "whereToSecure": "Property owner"
+          },
+          {
+            "item": "Occupancy permit or certification for the building where the business is located, 1 copy, in JPEG format",
+            "whereToSecure": "City Engineer's Office"
+          },
+          {
+            "item": "Previous locational clearance, 1 original copy, for existing businesses with changes, in JPEG format",
+            "whereToSecure": "City Planning and Development Office"
+          },
+          {
+            "item": "DTI or SEC certificate, or CDA registration, 1 copy, in JPEG format",
+            "whereToSecure": "Department of Trade and Industry, Securities and Exchange Commission, or Cooperative Development Authority"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Send an e-file copy of the documentary requirements to legazpicpdo@gmail.com, or bring them to the CPDO.",
+            "agency": "Zoning Division staff acknowledge the application forwarded by the Business Center. If it is incomplete or has deficiencies, they email you a notice of deficiency and you resubmit for re-evaluation. If it is complete, they issue the zoning fee or order of payment for BPLO's reference and process the application for the Zoning Officer's and Zoning Administrator's signature. If the application does not conform with the City Zoning Ordinance, they prepare a notice of denial for the Zoning Administrator's signature.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Zoning Inspector I / Zoning Officers I, II and III / Zoning Administrator"
+          },
+          {
+            "client": "Pay the zoning fee, which is included in the one-time assessment of fees BPLO issues, at the City Treasurer's Office or through Legazpi City's online services.",
+            "agency": "Zoning Division staff prepare the transmittal and send the approved locational clearances to the Business Center.",
+            "feeText": "Zoning fee, included in the one-time assessment of fees issued by BPLO, under City Ordinance No. 13-2007 and City Zoning Ordinance No. 14-0011-2019",
+            "processingTime": null,
+            "personResponsible": "Revenue Collection Officer, City Treasurer's Office"
+          },
+          {
+            "client": "Receive the locational clearance when the Mayor's or business permit is released at the Business Center.",
+            "agency": "Releasing of documents.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Releasing Officer, Business Permits and Licensing Office"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "One (1) day max." },
+        "notes": [
+          "This clearance is bundled with the business permit. The zoning fee is part of BPLO's one-time assessment, not a separate payment."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "This charter is a set of infographics, one service per page, and gives one processing time for the whole service rather than a figure per step. The day is recorded against the step where the office does the work, so the derived total matches the charter.",
+          "The charter states its processing time as a maximum. The derived total is that same figure and should be read the same way.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences and must be checked."
+        ]
+      },
+      {
+        "id": "cpdo-lc-business-renewal",
+        "number": 2,
+        "charterNumber": 4,
+        "charterGroup": "Frontline Services",
+        "title": "Locational clearance for a business permit renewal",
+        "description": "The same zoning clearance for a business renewing its permit. It also comes with the Mayor's Permit at the Business Center.",
+        "office": "City Planning and Development Office, Zoning Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Those applying for a locational clearance for a business permit renewal",
+        "requirements": [
+          {
+            "item": "Properly filled-out application form for a Business or Mayor's Permit renewal, with updated gross income or sales and number of employees, 1 copy, in JPEG format",
+            "whereToSecure": "Business Permits and Licensing Office"
+          },
+          {
+            "item": "Sketch or vicinity plan of the proposed business location, 1 set, in JPEG format",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Barangay business clearance for where the business is located, 1 copy, in JPEG format",
+            "whereToSecure": "Office of the Punong Barangay"
+          },
+          {
+            "item": "If the property is not owned: contract of lease, letter of authorization or consent from the owner, affidavit of undertaking on lot ownership, or award notice, 1 copy, in JPEG format",
+            "whereToSecure": "Property owner"
+          },
+          {
+            "item": "Affidavit of non-objection, 1 copy, if applicable, in JPEG format",
+            "whereToSecure": "Client, through a notary public"
+          },
+          {
+            "item": "Deed of undertaking, sworn statement or written manifestation regarding the business operation, 1 copy, if applicable, in JPEG format",
+            "whereToSecure": "Client, through a notary public"
+          },
+          {
+            "item": "Other pertinent documents that may be required after evaluation",
+            "whereToSecure": "Various"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Send an e-file copy of the documentary requirements to legazpicpdo@gmail.com, or bring them to the CPDO.",
+            "agency": "Zoning Division staff acknowledge the application. If it is incomplete or has deficiencies, they email you a notice of deficiency and you resubmit for re-evaluation. If it is complete, they issue the zoning fee or order of payment for BPLO's reference and prepare the locational clearance for the Zoning Officer's and Zoning Administrator's signature.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Zoning Inspector I / Zoning Officers I, II and III / Zoning Administrator"
+          },
+          {
+            "client": "Pay the zoning fee, which is included in the one-time assessment of fees BPLO issues, at the City Treasurer's Office or through Legazpi City's online services.",
+            "agency": "Zoning Division staff prepare the transmittal and send the approved locational clearances to the Business Center.",
+            "feeText": "Zoning fee, included in the one-time assessment of fees issued by BPLO, under City Ordinance No. 13-2007 and City Zoning Ordinance No. 14-0011-2019",
+            "processingTime": null,
+            "personResponsible": "Revenue Collection Officer, City Treasurer's Office"
+          },
+          {
+            "client": "Receive the locational clearance when the Mayor's or business permit is released at the Business Center.",
+            "agency": "Releasing.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Releasing Officer, Business Permits and Licensing Office"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "One (1) day MAXIMUM" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work. See the note on the new business locational clearance.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "cpdo-lc-building-permit",
+        "number": 3,
+        "charterNumber": 5,
+        "charterGroup": "Frontline Services",
+        "title": "Locational clearance for a building permit",
+        "description": "The zoning clearance a building permit needs. You apply for it through the building permit application at the Office of the Building Official, not directly with CPDO, and it reaches you by email with the building permit.",
+        "office": "City Planning and Development Office, Zoning Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Those applying for a locational clearance for a building permit",
+        "requirements": [
+          {
+            "item": "Duly accomplished and notarized Unified Application Form for a building permit, 1 copy",
+            "whereToSecure": "Legazpi City website, under Online Services"
+          },
+          {
+            "item": "Plans, 1 set, signed and sealed by the architect or engineers and the owner or applicant, in JPEG format",
+            "whereToSecure": "Licensed design professionals"
+          },
+          {
+            "item": "Latest certified true copy of the land title (TCT) from the Registry of Deeds, blue copy or a clear photocopy of it, 1 copy, in JPEG format",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Latest certified true copy of the tax declaration, 1 copy, in JPEG format",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Latest realty tax clearance, 1 copy, in JPEG format",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Bill of materials, bill of quantities or cost estimate of the project, 1 copy, signed and sealed by the architect or engineer and signed by the owner, in JPEG format",
+            "whereToSecure": "Licensed architect or engineer"
+          },
+          {
+            "item": "If the property is not owned: contract of lease, certification, letter of authorization or consent from the property owner or co-owners, or award notice, 1 copy, in JPEG format",
+            "whereToSecure": "Property owner"
+          },
+          {
+            "item": "If the applicant is represented: authorization letter or Special Power of Attorney, 1 copy, in JPEG format",
+            "whereToSecure": "Client, through a notary public"
+          },
+          {
+            "item": "For corporations: board resolution or secretary's certificate naming the authorized signatory, 1 copy, in JPEG format",
+            "whereToSecure": "The corporation"
+          },
+          {
+            "item": "For alteration, improvement, repair or renovation: latest certified true copy of the tax declaration of the existing building or structure, 1 copy, in JPEG format",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "For alteration, improvement, repair or renovation: latest realty tax clearance of the existing building or structure, 1 copy, in JPEG format",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Environmental Compliance Certificate, 1 copy, if applicable, in JPEG format",
+            "whereToSecure": "DENR Environmental Management Bureau"
+          },
+          {
+            "item": "Height clearance or certificate, 1 copy, if applicable, in JPEG format",
+            "whereToSecure": "Civil Aviation Authority of the Philippines"
+          },
+          {
+            "item": "Affidavit of non-objection, 1 copy, if applicable, in JPEG format",
+            "whereToSecure": "Client, through a notary public"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Create a new application on the Legazpi City website under Online Services, then submit the documentary requirements to the Office of the Building Official at the City Engineer's Office.",
+            "agency": "OBO staff evaluate and forward the application to Zoning Division staff through eTRACS. Zoning Division staff acknowledge it. If it is incomplete or has deficiencies, they email you a notice of deficiency and you resubmit for re-evaluation. If it is complete, they issue the zoning fee or order of payment and process the application for the Zoning Officer's and Zoning Administrator's signature. If the application does not conform with the City Zoning Ordinance, they prepare a notice of denial.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Zoning Officers I, II and III / Zoning Administrator"
+          },
+          {
+            "client": "Pay the zoning fees at the City Treasurer's Office or through Legazpi City's online services, then receive the e-file copy of the approved locational clearance by email through the One-Stop Shop for Construction Permits.",
+            "agency": "The Revenue Collection Officer receives the payment.",
+            "feeText": "Zoning fees under City Ordinance No. 13-2007 and City Zoning Ordinance No. 14-0011-2019",
+            "processingTime": null,
+            "personResponsible": "Revenue Collection Officer, City Treasurer's Office"
+          },
+          {
+            "client": "Receive the e-file copy of the locational clearance when the building permit is released by the Office of the Building Official.",
+            "agency": "Releasing.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Releasing Officer, Office of the Building Official, City Engineer's Office"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "One (1) day max." },
+        "notes": [
+          "You apply for this through the building permit at the City Engineer's Office. CPDO's part happens behind the scenes."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "cpdo-site-zoning-certification",
+        "number": 4,
+        "charterNumber": 7,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a site zoning or land use certification",
+        "description": "A certification of how a lot is classified under the City Zoning Ordinance. Commonly needed for an ECC or CNC application, or as a requirement of another agency.",
+        "office": "City Planning and Development Office, Zoning Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Those applying for a certification",
+        "requirements": [
+          {
+            "item": "Request or letter of intent for land use certification, specifying the reason, 1 copy, in JPEG format",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Blueprint or copy of the lot plan with a vicinity or location map, signed, sealed and certified by a geodetic engineer, 1 copy, in JPEG format",
+            "whereToSecure": "Licensed geodetic engineer"
+          },
+          {
+            "item": "Latest certified copy of the Transfer Certificate of Title, or a certification from the Land Registration Authority or Registry of Deeds if there is no record of a TCT, 1 copy, in JPEG format",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Latest certified tax declaration from the City Assessor's Office, or a certification if there is no record, 1 copy, in JPEG format",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Latest realty tax clearance from the City Treasurer's Office, 1 copy, in JPEG format",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Brief summary of the project signed by the proponent or owner, for ECC or CNC applications only, 1 copy, in JPEG format",
+            "whereToSecure": "Client"
+          },
+          { "item": "Other pertinent documents that may be required", "whereToSecure": "Various" }
+        ],
+        "steps": [
+          {
+            "client": "Send an e-file copy of the documentary requirements to legazpicpdo@gmail.com, or bring them to the CPDO.",
+            "agency": "Zoning Division staff acknowledge the application. If it is incomplete or has deficiencies, they email you a notice of deficiency and you resubmit for re-evaluation. If it is complete, they issue the zoning fee or order of payment and prepare the certification for the Zoning Officer's and Zoning Administrator's signature.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Zoning Inspector I / Zoning Officers I, II and III / Zoning Administrator"
+          },
+          {
+            "client": "Pay the certification fee at the City Treasurer's Office or through Legazpi City's online services.",
+            "agency": "The Revenue Collection Officer receives the payment.",
+            "feeText": "Certification fee under City Ordinance No. 13-2007 and City Zoning Ordinance No. 14-0011-2019",
+            "processingTime": null,
+            "personResponsible": "Revenue Collection Officer, City Treasurer's Office"
+          },
+          {
+            "client": "Receive the certification by email.",
+            "agency": "Releasing.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Zoning Inspector I / Zoning Officers I and II"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "One (1) day Maximum" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "cpdo-lgu-endorsements",
+        "number": 5,
+        "charterNumber": 8,
+        "charterGroup": "Frontline Services",
+        "title": "Getting an LGU endorsement or other certification",
+        "description": "Endorsements and certifications the city issues for activities needing another agency's permit, including quarry permits.",
+        "office": "City Planning and Development Office, Zoning Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Those applying for a certification",
+        "requirements": [
+          {
+            "item": "Request or letter of intent for land use certification, specifying the reason, 1 copy, in JPEG format",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Blueprint or copy of the lot plan with a vicinity or location map, signed, sealed and certified by a geodetic engineer, transferred to electronic files, 1 copy, in JPEG format",
+            "whereToSecure": "Licensed geodetic engineer"
+          },
+          {
+            "item": "Latest certified copy of the Transfer Certificate of Title, or a certification from the Land Registration Authority or Registry of Deeds if there is no record of a TCT, 1 copy, in JPEG format",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Latest certified tax declaration from the City Assessor's Office, or a certification if there is no record, 1 copy, in JPEG format",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Latest realty tax clearance from the City Treasurer's Office, 1 copy, in JPEG format",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "If the property is not owned: contract of lease, deed of sale, deed of assignment or authority from the property owner, 1 copy, in JPEG format",
+            "whereToSecure": "Property owner"
+          },
+          {
+            "item": "Notarized application for a quarry permit from the Provincial Environment and Natural Resources Office, for a quarry permit, 1 copy, in JPEG format",
+            "whereToSecure": "Provincial Environment and Natural Resources Office"
+          },
+          {
+            "item": "Barangay resolution or clearance interposing no objection to the proposed activity, in JPEG format",
+            "whereToSecure": "Office of the Punong Barangay"
+          },
+          { "item": "Other pertinent documents that may be required", "whereToSecure": "Various" }
+        ],
+        "steps": [
+          {
+            "client": "Send an e-file copy of the documentary requirements to legazpicpdo@gmail.com, or bring them to the CPDO.",
+            "agency": "Zoning Division staff acknowledge the application. If it is incomplete or has deficiencies, they email you a notice of deficiency and you resubmit for re-evaluation. If it is complete, they issue the zoning fee or order of payment and prepare the certification for the Zoning Officer's and Zoning Administrator's signature.",
+            "feeText": "None",
+            "processingTime": "1 working day",
+            "personResponsible": "Zoning Inspector I / Zoning Officers I, II and III / Zoning Administrator"
+          },
+          {
+            "client": "Pay the certification fee at the City Treasurer's Office or through Legazpi City's online services.",
+            "agency": "The Revenue Collection Officer receives the payment.",
+            "feeText": "Certification fee under City Ordinance No. 13-2007 and City Zoning Ordinance No. 14-0011-2019",
+            "processingTime": null,
+            "personResponsible": "Revenue Collection Officer, City Treasurer's Office"
+          },
+          {
+            "client": "Receive the certification by email.",
+            "agency": "Releasing.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Zoning Inspector I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "One (1) Working Day Max." },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "cpdo-da-certification",
+        "number": 6,
+        "charterNumber": 9,
+        "charterGroup": "Frontline Services",
+        "title": "Requesting a Department of Agriculture certification",
+        "description": "The city applies to the Department of Agriculture on your behalf for the certification a land use reclassification needs, under DA Memorandum Circular No. 26 Series of 2022. The city's own part takes three days; the DA's own processing is on top of that.",
+        "office": "City Planning and Development Office, Zoning Division",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Those applying for a DA certification for land use reclassification or rezoning",
+        "requirements": [
+          {
+            "item": "Letter request for an LGU application for a DA certification, 1 copy, in JPEG format",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Blueprint or copy of the lot plan with a vicinity or location map, signed, sealed and certified by a geodetic engineer, transferred to electronic files, 1 copy, in JPEG format",
+            "whereToSecure": "Licensed geodetic engineer"
+          },
+          {
+            "item": "Latest certified Transfer Certificate of Title, or a certification from the Land Registration Authority or Registry of Deeds if there is no record of a TCT, 1 copy, in JPEG format",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Latest certified tax declaration from the City Assessor's Office, or a certification if there is no record, 1 copy, in JPEG format",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Latest realty tax clearance from the City Treasurer's Office, 1 copy, in JPEG format",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Panoramic photos of the site, 1 set, labelled facing north, east, west and south, taken no more than a month before the date of application, in JPEG format",
+            "whereToSecure": "Client"
+          },
+          { "item": "Other pertinent documents that may be required", "whereToSecure": "Various" }
+        ],
+        "steps": [
+          {
+            "client": "Send an e-file copy of the documentary requirements to legazpicpdo@gmail.com, or bring them to the CPDO.",
+            "agency": "Zoning Division staff acknowledge the application. If it is incomplete or has deficiencies, they email you a notice of deficiency and you resubmit for re-evaluation. If it is complete, they prepare the documentary requirements for the City Mayor's review and signature.",
+            "feeText": "None",
+            "processingTime": "3 working days",
+            "personResponsible": "Zoning Inspector I / Zoning Officers I, II and III / Zoning Administrator / City Mayor"
+          },
+          {
+            "client": "Receive the DA certification by email.",
+            "agency": "Once the signed application letter is received, the request is submitted to the DA Region 5 email address and copied to you. When the DA certification comes back, Zoning Division staff send you a copy by email.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Zoning Inspector I / Zoning Officers I and II"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "Three (3) working days max. excluding DA Processing Time."
+        },
+        "notes": [
+          "The three days are the city's part only. The charter says explicitly that the Department of Agriculture's own processing time is not included and does not put a figure on it."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter gives this service only two steps, SUBMIT and CLAIM, with no payment step. Recorded as printed.",
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "cpdo-land-use-reclassification",
+        "number": 7,
+        "charterNumber": 6,
+        "charterGroup": "Frontline Services",
+        "title": "Applying to reclassify or rezone land",
+        "description": "Changing the land use classification of a property under the City Zoning Ordinance. It goes to the City Mayor and then to a Sangguniang Panlungsod committee hearing, so it is the longest of the Zoning Division's services.",
+        "office": "City Planning and Development Office, Zoning Division",
+        "classification": "Complex Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Those applying for a land use reclassification or rezoning",
+        "requirements": [
+          {
+            "item": "Request or letter of intent for land use reclassification, specifying the justification, 1 copy, in JPEG format",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Narrative description of the development plan describing in detail the reason for reclassification, 1 copy, in JPEG format",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "5R size photographs of all corners of the landholdings, 1 set, in JPEG format",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Certification from the Department of Agriculture that the landholdings are marginally suitable and not economically viable for agriculture, 1 copy, in JPEG format",
+            "whereToSecure": "Department of Agriculture"
+          },
+          {
+            "item": "Certification from the Municipal Agrarian Reform Officer on whether there are agrarian reform beneficiaries, tenants, occupants or protests, 1 copy, in JPEG format",
+            "whereToSecure": "Municipal Agrarian Reform Officer"
+          },
+          {
+            "item": "Certification from the Philippine Coconut Authority if the area is presently planted with coconut, 1 copy, in JPEG format",
+            "whereToSecure": "Philippine Coconut Authority"
+          },
+          {
+            "item": "Certification from the National Irrigation Administration on whether the area is or will be covered by any irrigation facility, 1 copy, in JPEG format",
+            "whereToSecure": "National Irrigation Administration"
+          },
+          {
+            "item": "Blueprint or copy of the lot plan with a vicinity or location map, signed, sealed and certified by a geodetic engineer, 1 copy; for an online application the data is transferred to the electronic file system",
+            "whereToSecure": "Licensed geodetic engineer"
+          },
+          {
+            "item": "If the property is not owned: contract of lease, deed of sale, deed of assignment, authority or Special Power of Attorney from the property owner, 1 copy, in JPEG format",
+            "whereToSecure": "Property owner"
+          },
+          {
+            "item": "Latest certified copy of the Transfer Certificate of Title, or a certification from the Land Registration Authority if there is no record of a TCT, 1 copy, in JPEG format",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Latest certified tax declaration from the City Assessor's Office, or a certification if there is no record, 1 copy, in JPEG format",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Latest realty tax clearance from the City Treasurer's Office, 1 copy, in JPEG format",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Barangay resolution interposing no objection to the land use reclassification, 1 copy, in JPEG format",
+            "whereToSecure": "Office of the Punong Barangay"
+          },
+          { "item": "Other pertinent documents that may be required", "whereToSecure": "Various" }
+        ],
+        "steps": [
+          {
+            "client": "Send an e-file copy of the documentary requirements to legazpicpdo@gmail.com, or bring them to the CPDO.",
+            "agency": "Zoning Division staff acknowledge the application. If it is incomplete or has deficiencies, they email you a notice of deficiency and you resubmit for re-evaluation. If it is complete, they issue the zoning fee or order of payment and prepare the endorsement of the application for the City Mayor's review and signature.",
+            "feeText": "None",
+            "processingTime": "33 working days",
+            "personResponsible": "Zoning Inspector I / Zoning Officers I, II and III / Zoning Administrator / City Mayor"
+          },
+          {
+            "client": "Pay the filing fee at the City Treasurer's Office or through Legazpi City's online services.",
+            "agency": "The Revenue Collection Officer receives the payment.",
+            "feeText": "Filing fee under City Ordinance No. 13-2007 and City Zoning Ordinance No. 14-0011-2019",
+            "processingTime": null,
+            "personResponsible": "Revenue Collection Officer, City Treasurer's Office"
+          },
+          {
+            "client": "You are told the date of the committee hearing on your application by the Sangguniang Panlungsod committee in charge.",
+            "agency": "Once the signed endorsement is received, the application is forwarded to the Sangguniang Panlungsod.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Zoning Inspector I / Zoning Officers I, II and III / SP Committee on Urban Planning, Housing and Resettlement"
+          }
+        ],
+        "statedTotals": {
+          "feeText": null,
+          "processingTime": "Thirty Three (33) Working Days Maximun"
+        },
+        "notes": [
+          "The application ends at a Sangguniang Panlungsod committee hearing, so the outcome is a council decision rather than an office one."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter labels this service's third step \"3\" rather than CLAIM, and the applicant never claims a document; the process ends at the committee hearing. Recorded as printed.",
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "cpdo-palc",
+        "number": 8,
+        "charterNumber": 10,
+        "charterGroup": "Frontline Services",
+        "title": "Preliminary approval and locational clearance for a subdivision",
+        "description": "The approval a lot owner needs before developing or subdividing land in the city. It runs through the City Legal Office, the City Engineer's Office, an ocular inspection, the City Mayor and a Sangguniang Panlungsod hearing, and ends with an approved subdivision plan.",
+        "office": "City Planning and Development Office, Housing and Homesite Regulation Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Any lot owner within the City of Legazpi with the intention to develop the lot or land",
+        "requirements": [
+          {
+            "item": "Subdivision scheme or plan showing the proposed layout, vicinity map and survey plans of the lot as described in the TCT, 6 sets, signed and sealed by a licensed geodetic engineer",
+            "whereToSecure": "Licensed geodetic engineer"
+          },
+          {
+            "item": "Certified true copies of the title, 1 copy and 5 photocopies",
+            "whereToSecure": "Registry of Deeds"
+          },
+          {
+            "item": "Certified true copy of the tax declaration, 1 original and 5 photocopies",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Tax clearance, 1 original and 5 photocopies",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          {
+            "item": "Certification of non-tenancy, or an affidavit of waiver of tenant if the land is agricultural or pasture land planted to rice and corn, 1 original and 5 photocopies",
+            "whereToSecure": "Municipal Agrarian Reform Officer, or a notary public"
+          },
+          {
+            "item": "Sangguniang Panlungsod resolution on reclassification if the existing land use classification is agricultural, 1 original and 5 photocopies",
+            "whereToSecure": "Sangguniang Panlungsod"
+          },
+          {
+            "item": "Any document establishing ownership of the lot: deed of sale, deed of donation, deed of extrajudicial settlement, deed of self-adjudication, memorandum of agreement or subdivision agreement, 1 original and 5 photocopies",
+            "whereToSecure": "Client, through a notary public"
+          },
+          {
+            "item": "Right to use of road right of way agreement, or right to use RROW, where applicable, 1 original and 5 photocopies",
+            "whereToSecure": "Property owner"
+          },
+          {
+            "item": "Special Power of Attorney or corporate secretary's certificate, 1 original and 5 photocopies",
+            "whereToSecure": "Client, through a notary public"
+          },
+          {
+            "item": "Site zoning or land use classification certification, 1 original and 5 photocopies",
+            "whereToSecure": "City Planning and Development Office, Zoning Division"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the required documents to CPDO-HHRD.",
+            "agency": "If the application meets all the requirements it is officially received. If it is incomplete or has deficiencies, HHRD staff issue a notice of deficiency and re-evaluate what you resubmit. HHRD then endorses the application to the City Legal Office and the City Engineer's Office for comments and recommendations; if it comes back with findings, the deficiencies are sent to you for compliance. HHRD conducts an ocular inspection, prepares an inspection report, endorses findings to you if anything needs clarifying, then prepares an endorsement letter to the City Mayor's Office for endorsement to the Sangguniang Panlungsod. HHRD staff attend the SP committee hearing and recommend approval. On receiving the SP resolution approving the application, HHRD issues the order of payment and prepares the marking of the plan for the signature of the CPDC and the City Mayor. The City Mayor's Office endorses the approved PALC to CPDO and HHRD tells you it is ready to claim.",
+            "feeText": "None",
+            "processingTime": "33 days",
+            "personResponsible": "City Mayor / CPDC / HHRO V / HHRO II / Draftswoman I"
+          },
+          {
+            "client": "Pay the processing fee and the inspection fee at the City Treasurer's Office, then return to HHRD so the receipts can be validated and recorded.",
+            "agency": "The CTO Collector receives the payment and issues an official receipt, then tells you to go to CPDO-HHRD for validation.",
+            "feeText": "Processing fee Php 360.00 per hectare (PD 957), Php 90.00 per hectare (BP 220 socialized), Php 216.00 per hectare (BP 220 economic); inspection fee Php 1,500.00 per hectare",
+            "feeTiers": [
+              { "label": "Processing fee, per hectare, PD 957", "amount": 360, "currency": "PHP" },
+              {
+                "label": "Processing fee, per hectare, BP 220 socialized",
+                "amount": 90,
+                "currency": "PHP"
+              },
+              {
+                "label": "Processing fee, per hectare, BP 220 economic",
+                "amount": 216,
+                "currency": "PHP"
+              },
+              { "label": "Inspection fee, per hectare", "amount": 1500, "currency": "PHP" }
+            ],
+            "processingTime": null,
+            "personResponsible": "CTO Revenue Collection Officer"
+          },
+          {
+            "client": "Go to the CPDO and hand in the accomplished feedback form. You receive a copy of the certification approving the simple subdivision signed by the Mayor, and one set of the approved subdivision plan.",
+            "agency": "CPDO-HHRD releases the approved PALC plan with the City Mayor's certification approving it.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Draftswoman I / HHRO II"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "33 DAYS (MAXIMUM)" },
+        "notes": [
+          "The processing fee depends on which subdivision standard the project falls under, and both fees are charged per hectare, so the total depends on the size of the land."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's agency column runs 1.1 to 1.13 as a single step covering the whole review, including two other offices, an ocular inspection and an SP hearing. It is recorded as one step here because the charter gives one processing time and no per-action figures.",
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "cpdo-msla-free-patent",
+        "number": 9,
+        "charterNumber": 11,
+        "charterGroup": "Frontline Services",
+        "title": "Endorsement for a residential free patent or public land application",
+        "description": "The city's inspection and endorsement to CENRO for someone applying for a miscellaneous sales or lease application on public land, or a residential free patent.",
+        "office": "City Planning and Development Office, Housing and Homesite Regulation Division",
+        "classification": "Highly Technical Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Any person applying for a miscellaneous sales or lease application, in possession of public land, and wishing to apply for a residential free patent",
+        "requirements": [
+          {
+            "item": "Letter of request stating the nature or reason for availing the service, 1 original and 2 copies, submitted to the CPDO or emailed to legazpicpdo@gmail.com",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Reference documents from DENR-PENRO, attached to the letter of request",
+            "whereToSecure": "DENR Provincial Environment and Natural Resources Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of request with the DENR-PENRO reference documents to the CPDO, or email them to legazpicpdo@gmail.com.",
+            "agency": "The CPDC acknowledges the letter and refers it to HHRD. HHRD staff acknowledge it and refer it for site inspection. HHRD conducts an ocular inspection and on-site investigation, prepares an inspection report, and prepares the endorsement to CENRO for the CPDC's review and signature.",
+            "feeText": "None",
+            "processingTime": "15 days",
+            "personResponsible": "CPDC / HHRO V / Draftswoman I / Draftsman IV"
+          },
+          {
+            "client": "Pay the certification fee and the inspection fee at the City Treasurer's Office, then return to HHRD so the receipts can be validated and recorded.",
+            "agency": "The CTO Collector receives the payment and issues an official receipt, then tells you to go to CPDO-HHRD for validation.",
+            "feeText": "Certification fee Php 216.00; inspection fee Php 1,500.00",
+            "feeTiers": [
+              { "label": "Certification fee", "amount": 216, "currency": "PHP" },
+              { "label": "Inspection fee", "amount": 1500, "currency": "PHP" }
+            ],
+            "processingTime": null,
+            "personResponsible": "CTO Revenue Collection Officer"
+          },
+          {
+            "client": "Go to the CPDO and hand in the accomplished feedback form.",
+            "agency": "CPDO-HHRD releases the endorsement or certification as part of the requirements for your application.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Draftswoman I / HHRO II"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "15 DAYS (MAXIMUM)" },
+        "notes": [
+          "The city's part is the inspection and the endorsement. The patent or lease itself is issued by the DENR."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's CLAIM column for this service describes receiving a certification approving a simple subdivision and a set of the approved subdivision plan, which is the text from the PALC page and does not match this service's own agency action. The agency action, releasing the endorsement or certification, is what is recorded as the outcome. Check the PDF.",
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "cpdo-4ph-housing",
+        "number": 10,
+        "charterNumber": 12,
+        "charterGroup": "Frontline Services",
+        "title": "Applying to the 4PH national housing programme",
+        "description": "The city receives and endorses applications to the Pambansang Pabahay para sa Pilipino housing programme. The city's part is free and takes a day; Pag-IBIG Fund then assesses the application.",
+        "office": "City Planning and Development Office, Housing and Homesite Regulation Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Residents of Legazpi City who are Pag-IBIG members",
+        "requirements": [
+          {
+            "item": "Duly filled-out 4PH housing loan application form, 2 sets",
+            "whereToSecure": "City Planning and Development Office, HHRD"
+          },
+          {
+            "item": "Proof of income, 1 copy",
+            "whereToSecure": "Employer, or the Bureau of Internal Revenue"
+          },
+          {
+            "item": "Philippine government ID with 3 specimen signatures, 1 photocopy",
+            "whereToSecure": "Government or private sector"
+          },
+          {
+            "item": "PSA birth certificate, 1 original and 1 photocopy",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          {
+            "item": "Notarized omnibus sworn statement or affidavit as a first-time homeowner, 1 original copy",
+            "whereToSecure": "Notary public"
+          },
+          {
+            "item": "Barangay certificate, 1 original copy",
+            "whereToSecure": "Office of the Punong Barangay"
+          },
+          {
+            "item": "Certification from the Urban Poor Affairs Office, 1 original copy",
+            "whereToSecure": "Urban Poor Affairs Office"
+          },
+          {
+            "item": "Certification from the City Assessor's Office, 1 original copy",
+            "whereToSecure": "City Assessor's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements to CPDO-HHRD.",
+            "agency": "If the application meets all the requirements it is officially received. If it is incomplete or has deficiencies, HHRD staff issue a notice of deficiency and re-evaluate what you resubmit. HHRD staff then record the application and endorse it to the developer for evaluation.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "HHRO V / HHRO II / Draftswoman I"
+          },
+          {
+            "client": "No payment is required.",
+            "agency": "Not applicable.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Housing and Homesite Regulation Division"
+          },
+          {
+            "client": "Your application is endorsed to Pag-IBIG Fund for assessment and evaluation.",
+            "agency": "CPDO-HHRD facilitates the processing of the document.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Draftswoman I / HHRO II"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "1 DAY (MAXIMUM)" },
+        "notes": [
+          "There is no fee. The one day is the city's part; the assessment by Pag-IBIG Fund comes after and the charter puts no time on it."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter labels the third step ASSESSMENT rather than CLAIM, because nothing is claimed: the application moves on to Pag-IBIG. Recorded as printed.",
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The charter names two further responsible people on the last step, Mr. Rick Ante and Ms. Catherine Castuera, without positions. They are not listed in Office Personnel for that reason."
+        ]
+      },
+      {
+        "id": "cpdo-barangay-development-planning",
+        "number": 11,
+        "charterNumber": 13,
+        "charterGroup": "Frontline Services",
+        "title": "Barangay development plan and investment programme review",
+        "description": "The office checks a barangay's development plan, investment programme and supporting resolutions for completeness and compliance, and certifies them.",
+        "office": "City Planning and Development Office, Plans and Programs Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Any of the seventy barangays of Legazpi City",
+        "requirements": [
+          {
+            "item": "Certification of the barangay IRA for the current year, 2 copies",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Barangay Development Investment Program for three succeeding rolling years, 2 copies",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Barangay Annual Investment Program for the succeeding year, 2 copies",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Barangay Development Council resolution adopting the BDIP and AIP, 2 copies",
+            "whereToSecure": "Barangay Development Council"
+          },
+          {
+            "item": "Sangguniang Barangay resolution approving the BDIP and AIP, 2 copies",
+            "whereToSecure": "Sangguniang Barangay"
+          },
+          {
+            "item": "Barangay Development Council resolution allocating the 20% development fund, 2 copies",
+            "whereToSecure": "Barangay Development Council"
+          },
+          {
+            "item": "Sangguniang Barangay resolution concurring with the BDC resolution allocating the 20% development fund, 2 copies",
+            "whereToSecure": "Sangguniang Barangay"
+          },
+          {
+            "item": "20% AIP for the current year, 2 copies",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Gender and Development plan and budget for the succeeding year, and the accomplishment report for the preceding year, 2 copies",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Projects implemented in the previous year, 2 copies",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Barangay Development Plan for three years, 2 copies",
+            "whereToSecure": "Requesting barangay"
+          },
+          {
+            "item": "Barangay Development Council resolution adopting the BDP, 2 copies",
+            "whereToSecure": "Barangay Development Council"
+          },
+          {
+            "item": "Sangguniang Barangay resolution approving the BDP, 2 copies",
+            "whereToSecure": "Sangguniang Barangay"
+          },
+          {
+            "item": "Barangay Development Council resolution amending the present BDIP and AIP, 2 copies, optional",
+            "whereToSecure": "Barangay Development Council"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the required documents.",
+            "agency": "The receiving personnel refer you and the documents to the technical staff in charge, who acknowledge them and evaluate their completeness, correctness and compliance. If anything is incomplete or deficient, the technical personnel instruct you and return the documents. If everything is complete and compliant, the technical personnel and the head sign the checklist and certification forms.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Plans and Programs Division staff and the concerned technical staff in charge"
+          },
+          {
+            "client": "No fees are required.",
+            "agency": "Not applicable.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Plans and Programs Division"
+          },
+          {
+            "client": "Hand in the accomplished Client Feedback Form and receive the approved documents signed by the Chief and the technical staff in charge.",
+            "agency": "CPDO-PPD releases the approved and certified documents on submission of the accomplished Client Feedback Form.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Plans and Programs Division staff and the concerned technical staff in charge"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "One (1) Day" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "cpdo-ppd-data-request",
+        "number": 12,
+        "charterNumber": 14,
+        "charterGroup": "Frontline Services",
+        "title": "Requesting planning data or research assistance",
+        "description": "Free help for researchers who need files, data or information the Plans and Programs Division holds. Walk in or ask by email.",
+        "office": "City Planning and Development Office, Plans and Programs Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Any walk-in or online researcher with a files, data or information request",
+        "requirements": [
+          {
+            "item": "Letter of intent or request. For a walk-in, 1 original and 2 duplicate copies; online, emailed to legazpicpdo@gmail.com",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of intent or request, or email it to legazpicpdo@gmail.com.",
+            "agency": "The letter is received and the office head refers it to the PPD staff in charge, who acknowledge it and evaluate whether the requested data is available. They coordinate an appointment with you, retrieve, collect, consolidate and prepare the documents, discuss them with you and present them if you are a walk-in, refer or endorse you to another division if part of the request belongs there, then draft and finalise the reply or transmittal letter with attachments for the office head's signature.",
+            "feeText": "None",
+            "processingTime": "1 day",
+            "personResponsible": "Planning Officers IV, III and I"
+          },
+          {
+            "client": "No fees are required.",
+            "agency": "Not applicable.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Plans and Programs Division"
+          },
+          {
+            "client": "Hand in the accomplished Client Feedback Form and receive the requested documents, if you are a walk-in or nearby researcher. Online requesters acknowledge receipt of the emailed documents.",
+            "agency": "CPDO-PPD releases the documents to a walk-in researcher on submission of the accomplished Client Feedback Form, dispatches them for delivery, or sends them by email for an online request.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Planning Officers IV, III and I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "One (1) Day" },
+        "notes": ["This service is free."],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's requirements heading reads \"AT LEAST ONE (2) SETS\", which is internally inconsistent. Recorded as one original and two duplicate copies, which is what the body of the cell says.",
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "cpdo-spd-technical-assistance",
+        "number": 13,
+        "charterNumber": 15,
+        "charterGroup": "Frontline Services",
+        "title": "Technical assistance and copies of studies or maps",
+        "description": "Help from the Special Projects Division for students, agencies, civil society groups and other stakeholders, including interviews and copies of studies, documents and maps. Copies are charged per page or per map.",
+        "office": "City Planning and Development Office, Special Projects Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Students, employees of local and national agencies, CSOs, NGOs, POs and local stakeholders",
+        "requirements": [
+          {
+            "item": "Letter of request stating the nature or reason for availing the service, 1 original and 2 copies, submitted to the CPDO or emailed to legazpicpdo@gmail.com",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "A USB or portable hard drive, if you want electronic copies",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the letter of request, or email it to legazpicpdo@gmail.com.",
+            "agency": "The CPDC acknowledges the letter and refers it to the Special Projects Division. The Division Chief assigns the task to technical staff. If the request calls for an interview, SPD schedules a date by letter and sends it back to you to confirm. If you want copies of documents, studies or maps, or electronic files on a USB or portable hard drive, SPD issues an order of payment and tells you to settle it at the City Treasurer's Office. SPD staff then prepare the documents or transfer the electronic copies, tell you the transaction has ended, and ask you to fill up the Client Satisfaction Measurement Report Form at the CPDO Public Assistance and Complaint Desk.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "HHRO III / Project Dev't. Officer II / Project Dev't. Officer IV, Chief SPD"
+          },
+          {
+            "client": "Pay the processing fee at the City Treasurer's Office.",
+            "agency": "The CTO Collector receives the payment and issues an official receipt, then tells you to go to CPDO-SPD for validation.",
+            "feeText": "Certified copy of a record P50.00 per page; photocopy of documents P5.00 per page; certification or annotation P50.00. Computer-generated maps: black and white bond size P50.00, coloured bond size P100.00, black and white A3 P150.00, thematic maps bond size P200.00, vicinity maps bond size P150.00",
+            "feeTiers": [
+              { "label": "Certified copy of record, per page", "amount": 50, "currency": "PHP" },
+              { "label": "Photocopy of documents, per page", "amount": 5, "currency": "PHP" },
+              { "label": "Certification or annotation", "amount": 50, "currency": "PHP" },
+              { "label": "Map, black and white, bond size", "amount": 50, "currency": "PHP" },
+              { "label": "Map, coloured, bond size", "amount": 100, "currency": "PHP" },
+              { "label": "Map, black and white, A3", "amount": 150, "currency": "PHP" },
+              { "label": "Thematic map, bond size", "amount": 200, "currency": "PHP" },
+              { "label": "Vicinity map, bond size", "amount": 150, "currency": "PHP" }
+            ],
+            "processingTime": null,
+            "personResponsible": "CTO Revenue Collection Officer"
+          },
+          {
+            "client": "Go to the CPDO Public Assistance and Complaint Desk and ask for the Client Satisfaction Measurement Report Form. You receive the document, or the USB or portable hard drive loaded with the requested files.",
+            "agency": "CPDO-SPD releases the requested documents on submission of the accomplished CSM report.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "HHRO III / Project Dev't. Officer II"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 DAYS (MAXIMUM)" },
+        "notes": [
+          "There is no charge for the assistance itself. You pay only for copies, and only for what you take away."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "This division's map prices differ from the Research and Statistics Division's list for what appear to be the same items. Both are recorded as printed on their own pages."
+        ]
+      },
+      {
+        "id": "cpdo-resd-birth-location-certification",
+        "number": 14,
+        "charterNumber": 16,
+        "charterGroup": "Frontline Services",
+        "title": "Certification of the location named on a birth or marriage certificate",
+        "description": "A certification used to correct the place recorded on a birth or marriage certificate, confirming what the location is called in the city's records.",
+        "office": "City Planning and Development Office, Research and Statistics Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Backline Service"],
+        "whoMayAvail": "Anyone who seeks correction of the location on their birth certificate",
+        "requirements": [
+          {
+            "item": "Letter request, 1 original copy and 2 duplicate copies",
+            "whereToSecure": "Client"
+          },
+          {
+            "item": "Birth or marriage certificate, 1 photocopy",
+            "whereToSecure": "Office of the City Civil Registrar, or the Philippine Statistics Authority"
+          },
+          { "item": "Other pertinent documents that may be required", "whereToSecure": "Various" }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request letter with a photocopy of the birth or marriage certificate to CPDO-RESD, in person or electronically.",
+            "agency": "RESD staff acknowledge receipt and evaluate the request and the certificate, then issue an order of payment. After you pay they record the official receipt, prepare and process the certification for the review and signature of the Assistant City Planning and Development Coordinator and the CPDC, and you receive it at the office or by email.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "PEO IV / PEO III / Stat I"
+          },
+          {
+            "client": "Pay the processing fee at the City Treasurer's Office, then return to CPDO-RESD so the receipt can be validated and recorded.",
+            "agency": "The CTO Collector receives the payment and issues an official receipt, then tells you to go to CPDO-RESD for validation.",
+            "feeText": "Certification fee Php 50.00",
+            "feeTiers": [{ "label": "Certification fee", "amount": 50, "currency": "PHP" }],
+            "processingTime": null,
+            "personResponsible": "CTO Revenue Collection Officer"
+          },
+          {
+            "client": "Go to CPDO-RESD and hand in the accomplished feedback form. You receive a copy of the certification approved and signed by the CPDC.",
+            "agency": "CPDO-RESD releases the approved and signed certification on submission of the accomplished feedback form.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "PEO IV / PEO III / Stat I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 DAYS (MAXIMUM)" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter classifies this as a BACKLINE SERVICE rather than Government to Client, although the person availing it is a member of the public. Recorded as printed.",
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "cpdo-resd-data-request",
+        "number": 15,
+        "charterNumber": 17,
+        "charterGroup": "Frontline Services",
+        "title": "Requesting city data, maps or the socio-economic profile",
+        "description": "Data and documents from the Research and Statistics Division: the socio-economic profile, planning documents, map reproduction and other records, for research, study or reference. Maps and copies are priced individually.",
+        "office": "City Planning and Development Office, Research and Statistics Division",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Backline Service"],
+        "whoMayAvail": "Anyone who seeks data or information about the city for research, study or reference",
+        "requirements": [
+          {
+            "item": "Letter of request stating the nature or reason for availing the service, 1 original copy and 2 duplicate copies, or emailed to the office",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the request letter to CPDO-RESD, in person or electronically.",
+            "agency": "RESD staff acknowledge receipt and evaluate the request, then issue an order of payment. After you pay they record the official receipt, prepare or retrieve the requested data or documents, and you receive them at the office or by email.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "PEO IV / PEO III / Stat I"
+          },
+          {
+            "client": "Pay the processing fee at the City Treasurer's Office, then return to CPDO-RESD so the receipt can be validated and recorded.",
+            "agency": "The CTO Collector receives the payment and issues an official receipt, then tells you to go to CPDO-RESD for validation.",
+            "feeText": "Computer-generated maps: black and white bond paper Php 50.00; coloured bond paper Php 100.00; black and white A3 Php 100.00; coloured A3 Php 200.00; land use or thematic maps bond size Php 150.00; land use or thematic maps A3 Php 200.00; tax index maps bond paper Php 200.00; tax index maps A3 Php 300.00; vicinity or location maps black and white bond Php 150.00; vicinity or location maps coloured bond Php 200.00; vicinity or location maps black and white A3 Php 200.00; vicinity or location maps coloured A3 Php 200.00; two-colour plotter prints from Php 2,000.00; full-colour plotter prints from Php 3,000.00. Computer-generated land information: name of owner, title number, lot number, land area and other information Php 20.00; computer print of land information on bond paper Php 125.00. Other fees: certified true copy of records Php 50.00 per page; photocopy of any other copy Php 35.00 per page",
+            "feeTiers": [
+              { "label": "Map, black and white, bond paper", "amount": 50, "currency": "PHP" },
+              { "label": "Map, coloured, bond paper", "amount": 100, "currency": "PHP" },
+              { "label": "Map, black and white, A3", "amount": 100, "currency": "PHP" },
+              { "label": "Map, coloured, A3", "amount": 200, "currency": "PHP" },
+              { "label": "Land use or thematic map, bond size", "amount": 150, "currency": "PHP" },
+              { "label": "Land use or thematic map, A3", "amount": 200, "currency": "PHP" },
+              { "label": "Tax index map, bond paper", "amount": 200, "currency": "PHP" },
+              { "label": "Tax index map, A3", "amount": 300, "currency": "PHP" },
+              {
+                "label": "Vicinity or location map, black and white, bond",
+                "amount": 150,
+                "currency": "PHP"
+              },
+              {
+                "label": "Vicinity or location map, coloured, bond",
+                "amount": 200,
+                "currency": "PHP"
+              },
+              { "label": "Two-colour plotter print, minimum", "amount": 2000, "currency": "PHP" },
+              { "label": "Full-colour plotter print, minimum", "amount": 3000, "currency": "PHP" },
+              { "label": "Land information lookup", "amount": 20, "currency": "PHP" },
+              {
+                "label": "Computer print of land information, bond paper",
+                "amount": 125,
+                "currency": "PHP"
+              },
+              {
+                "label": "Certified true copy of records, per page",
+                "amount": 50,
+                "currency": "PHP"
+              },
+              { "label": "Photocopy of any other copy, per page", "amount": 35, "currency": "PHP" }
+            ],
+            "processingTime": null,
+            "personResponsible": "CTO Revenue Collection Officer"
+          },
+          {
+            "client": "Go to CPDO-RESD and hand in the accomplished feedback form.",
+            "agency": "CPDO-RESD releases the requested data or documents on submission of the accomplished feedback form.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "PEO IV / PEO III / Stat I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 DAYS (MAXIMUM)" },
+        "notes": [
+          "You pay only for what you take away, and the price depends on the size and colour of the map or the number of pages."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's fee list on this page contains several typographic errors: two sections are both lettered A, one plotter size reads \"(2's4\\\")\", and \"Supplying of oeme of owner, ttile number\" is garbled. Amounts are recorded as printed and the labels are cleaned up; check the PDF before verifying.",
+          "The charter's CLAIM column describes receiving a certification signed by the CPDC, which is the text from the preceding page rather than this service's own outcome. The agency action, releasing the requested data, is what is recorded.",
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The vicinity and location map prices repeat Php 200.00 for three different variants. Recorded as printed."
+        ]
+      },
+      {
+        "id": "cpdo-incoming-communications",
+        "number": 16,
+        "charterNumber": 1,
+        "charterGroup": "Internal Services",
+        "title": "Sending a letter or document to the office",
+        "description": "How a letter, transmittal, memo or document sent to the CPDO is received, logged and acted on. The charter publishes this as an internal backline service.",
+        "office": "City Planning and Development Office, Administrative Section",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Backline Service"],
+        "whoMayAvail": "Clients, other offices and agencies",
+        "requirements": [
+          {
+            "item": "Letters, transmittals, memos and similar communications",
+            "whereToSecure": "Client"
+          },
+          { "item": "Documents and attachments", "whereToSecure": "Client" }
+        ],
+        "steps": [
+          {
+            "client": "Submit the communication in person or electronically to the CPDO Administrative Section, the CPDO email address, or the office Facebook page.",
+            "agency": "Staff acknowledge receipt and record the communication in the logbook, then forward it to the office head, assistant or officer-in-charge for appropriate action, who acts on it or refers it to the concerned personnel. The concerned personnel then act on it.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Administrative Assistant I / Administrative Aide IV / Administrative Aide I"
+          },
+          {
+            "client": "Payment for this service is not applicable.",
+            "agency": "Not applicable.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Administrative Section"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 DAYS (MAXIMUM)" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's CLAIM step reads \"Not applicable\" for both columns, so it is omitted here rather than recorded as an empty step.",
+          "The charter's agency action names RESD staff as the ones who log incoming communications, while the responsible persons are all Administrative Section staff. Recorded as printed; check the PDF.",
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "cpdo-outgoing-communications",
+        "number": 17,
+        "charterNumber": 2,
+        "charterGroup": "Internal Services",
+        "title": "How the office sends out its own correspondence",
+        "description": "How a letter, transmittal or memo leaving the CPDO is logged, dispatched and acknowledged. The charter publishes this as an internal backline service.",
+        "office": "City Planning and Development Office, Administrative Section",
+        "classification": "Simple Transaction",
+        "transactionTypes": ["Backline Service"],
+        "whoMayAvail": "Clients, other offices and agencies",
+        "requirements": [
+          {
+            "item": "Letters, transmittals, memos and similar communications",
+            "whereToSecure": "City Planning and Development Office"
+          },
+          {
+            "item": "Documents and attachments",
+            "whereToSecure": "City Planning and Development Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Await the communication.",
+            "agency": "Administrative staff receive the outgoing communication and record it in the logbook, then forward it to the driver or concerned personnel for immediate dispatch, or send it to the addressee's email address.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Administrative Officer IV / Administrative Assistant I / Administrative Aides IV and I"
+          },
+          {
+            "client": "Payment for this service is not applicable.",
+            "agency": "Not applicable.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Administrative Section"
+          },
+          {
+            "client": "Acknowledge receipt of the communication from the driver, the concerned personnel, or by email.",
+            "agency": "Administrative staff dispatch the communication or send it to the addressee's email address.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Administrative Section"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 DAYS (MAXIMUM)" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter's client column for this service is empty at step 1, since the office originates the communication. \"Await the communication\" is supplied here to keep the column readable; check the PDF for the intended wording.",
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-map",
+    "categories": [
+      {
+        "id": "locational-clearances",
+        "title": "Locational clearances",
+        "icon": "bi-geo-alt",
+        "services": ["cpdo-lc-new-business", "cpdo-lc-business-renewal", "cpdo-lc-building-permit"]
+      },
+      {
+        "id": "zoning-certifications",
+        "title": "Zoning certifications and endorsements",
+        "icon": "bi-patch-check",
+        "services": [
+          "cpdo-site-zoning-certification",
+          "cpdo-lgu-endorsements",
+          "cpdo-da-certification",
+          "cpdo-land-use-reclassification"
+        ]
+      },
+      {
+        "id": "land-development-and-housing",
+        "title": "Land development and housing",
+        "icon": "bi-houses",
+        "services": ["cpdo-palc", "cpdo-msla-free-patent", "cpdo-4ph-housing"]
+      },
+      {
+        "id": "data-maps-and-research",
+        "title": "Data, maps and research",
+        "icon": "bi-bar-chart",
+        "services": [
+          "cpdo-resd-data-request",
+          "cpdo-spd-technical-assistance",
+          "cpdo-ppd-data-request",
+          "cpdo-resd-birth-location-certification"
+        ]
+      },
+      {
+        "id": "barangay-and-office-services",
+        "title": "Barangay and office services",
+        "icon": "bi-buildings",
+        "services": [
+          "cpdo-barangay-development-planning",
+          "cpdo-incoming-communications",
+          "cpdo-outgoing-communications"
+        ]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "opening-or-renewing-a-business",
+        "title": "You are opening or renewing a business",
+        "presentation": "rail",
+        "icon": "bi-shop",
+        "services": ["cpdo-lc-new-business", "cpdo-lc-business-renewal"]
+      },
+      {
+        "id": "building-something",
+        "title": "You are building something",
+        "presentation": "rail",
+        "icon": "bi-building-gear",
+        "services": ["cpdo-lc-building-permit", "cpdo-site-zoning-certification"]
+      },
+      {
+        "id": "developing-land",
+        "title": "You are developing or subdividing land",
+        "presentation": "rail",
+        "icon": "bi-bounding-box",
+        "services": ["cpdo-palc", "cpdo-land-use-reclassification", "cpdo-da-certification"]
+      },
+      {
+        "id": "looking-for-a-home",
+        "title": "You are looking for a home",
+        "presentation": "rail",
+        "icon": "bi-house-heart",
+        "services": ["cpdo-4ph-housing", "cpdo-msla-free-patent"]
+      },
+      {
+        "id": "doing-research",
+        "title": "You need city data or a map",
+        "presentation": "rail",
+        "icon": "bi-bar-chart",
+        "services": [
+          "cpdo-resd-data-request",
+          "cpdo-spd-technical-assistance",
+          "cpdo-ppd-data-request"
+        ]
+      },
+      {
+        "id": "wrong-place-on-a-certificate",
+        "title": "The place on your birth certificate is wrong",
+        "presentation": "rail",
+        "icon": "bi-pencil-square",
+        "services": ["cpdo-resd-birth-location-certification"]
+      },
+      {
+        "id": "barangay-official",
+        "title": "You are a barangay official",
+        "presentation": "rail",
+        "icon": "bi-buildings",
+        "services": ["cpdo-barangay-development-planning"]
+      }
+    ],
+    "searchAliases": {
+      "cpdo-lc-new-business": [
+        "locational clearance",
+        "zoning",
+        "new business",
+        "business permit",
+        "lc"
+      ],
+      "cpdo-lc-business-renewal": ["locational clearance", "renewal", "zoning", "business permit"],
+      "cpdo-lc-building-permit": [
+        "locational clearance",
+        "building permit",
+        "zoning",
+        "obo",
+        "construction"
+      ],
+      "cpdo-site-zoning-certification": [
+        "zoning certification",
+        "land use",
+        "site zoning",
+        "ecc",
+        "cnc",
+        "classification"
+      ],
+      "cpdo-lgu-endorsements": ["endorsement", "certification", "quarry permit", "lgu endorsement"],
+      "cpdo-da-certification": [
+        "department of agriculture",
+        "da certification",
+        "reclassification",
+        "agricultural"
+      ],
+      "cpdo-land-use-reclassification": [
+        "reclassification",
+        "rezoning",
+        "land use",
+        "agricultural to residential",
+        "sangguniang panlungsod"
+      ],
+      "cpdo-palc": [
+        "palc",
+        "subdivision",
+        "preliminary approval",
+        "locational clearance",
+        "develop land",
+        "hati"
+      ],
+      "cpdo-msla-free-patent": [
+        "free patent",
+        "residential free patent",
+        "msa",
+        "mla",
+        "public land",
+        "denr",
+        "titulo"
+      ],
+      "cpdo-4ph-housing": [
+        "4ph",
+        "pambansang pabahay",
+        "housing",
+        "pabahay",
+        "pag-ibig",
+        "bahay",
+        "housing loan"
+      ],
+      "cpdo-barangay-development-planning": [
+        "barangay development plan",
+        "bdp",
+        "bdip",
+        "aip",
+        "20% development fund",
+        "barangay"
+      ],
+      "cpdo-ppd-data-request": ["data request", "research", "planning data", "thesis", "students"],
+      "cpdo-spd-technical-assistance": [
+        "technical assistance",
+        "maps",
+        "studies",
+        "research",
+        "usb",
+        "special projects"
+      ],
+      "cpdo-resd-birth-location-certification": [
+        "birth certificate",
+        "location",
+        "correction",
+        "marriage certificate",
+        "mali ang lugar"
+      ],
+      "cpdo-resd-data-request": [
+        "data request",
+        "maps",
+        "socio-economic profile",
+        "statistics",
+        "map reproduction",
+        "tax index map"
+      ],
+      "cpdo-incoming-communications": [
+        "letter",
+        "communication",
+        "memo",
+        "transmittal",
+        "submit letter"
+      ],
+      "cpdo-outgoing-communications": ["letter", "communication", "memo", "transmittal", "dispatch"]
+    },
+    "contact": null
+  }
+}
