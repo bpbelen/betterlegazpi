@@ -1,0 +1,961 @@
+{
+  "slug": "bplo",
+  "route": "service-details/business-permits-licensing.html",
+  "charter": {
+    "office": "Business Permits and Licensing Office",
+    "abbreviation": "BPLO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/BUSINESS-PERMITS-AND-LICENSING-OFFICE-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/bplo.md",
+    "personnel": [
+      {
+        "name": "Asuncion C. Viñas, REA, REB",
+        "position": "CGDH I, Business Permits and Licensing Officer",
+        "unit": "Business Permits and Licensing Office",
+        "isHead": true
+      },
+      {
+        "name": "Kristine M. Torres",
+        "position": "Supervising Administrative Officer",
+        "unit": "Lane 6, Express Lane"
+      },
+      {
+        "name": "Carlos A. Banton",
+        "position": "Admin. Aide VI",
+        "unit": "Lane 1, Priority Lane"
+      },
+      {
+        "name": "Amelia A. Arevalo",
+        "position": "Admin. Assistant I",
+        "unit": "Lane 3, Bulk Lane"
+      },
+      {
+        "name": "Joanelli E. Alejo",
+        "position": "Admin. Assistant V",
+        "unit": "Lane 4, Express Lane"
+      },
+      {
+        "name": "Josefina B. Moratin",
+        "position": "Admin. Assistant VI",
+        "unit": "Lane 7, Bulk Lane"
+      },
+      {
+        "name": "Jose J. Kallos, Jr.",
+        "position": "Admin. Aide III",
+        "unit": "Lane 2, New Business Permits"
+      },
+      {
+        "name": "Ma. Mae A. Codorniz",
+        "position": "Community Affairs Assistant II",
+        "unit": "Lane 8, Mayor's Clearance"
+      },
+      {
+        "name": "Mark L. Rañola",
+        "position": "Licensing Inspector I",
+        "unit": "Online Applications"
+      },
+      {
+        "name": "Rolando A. Abion, Jr.",
+        "position": "Admin. Officer I",
+        "unit": "Online Applications"
+      },
+      {
+        "name": "Rebecca S. Añonuevo",
+        "position": "Administrative Aide II",
+        "unit": "Lane 9, Releasing"
+      },
+      {
+        "name": "Enrique C. Magtira",
+        "position": "Officer of the Day, Admin. Aide II",
+        "unit": "Business Permits and Licensing Office"
+      },
+      {
+        "name": "Marilou V. Maravilla",
+        "position": "Admin. Assistant I",
+        "unit": "Business Permits and Licensing Office"
+      },
+      {
+        "name": "Virginia R. Ursua",
+        "position": "Administrative Aide III",
+        "unit": "Business Records"
+      },
+      {
+        "name": "Georgina F. Dela Cruz",
+        "position": "Administrative Aide II",
+        "unit": "Lane 10-11, Tricycle Operators' Permit"
+      },
+      {
+        "name": "Roviean Q. Monreal",
+        "position": "Administrative Aide I",
+        "unit": "Lane 10-11, Tricycle Operators' Permit"
+      }
+    ],
+    "personnelNotes": [
+      "This charter names the officer manning each lane, so its process tables carry lane numbers as well as positions. The office head is named only in the complaints section.",
+      "The charter spells one surname both Ranola and Rañola on different pages. Rañola is used here."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Call or text 0915-872-7722, email legpermit2@gmail.com, or fill up the Feedback Form. Clients are given a form for each service they use.",
+      "howFeedbackIsProcessed": "The assigned officer collects the forms at the end of each transaction day and submits them to the Administrative Officer for recording. They are collated quarterly and averaged into the rating clients gave for each service, presented as the Client Satisfaction Measurement Report, then submitted to the City Human Resource Management Office for the Harmonized CSM Report that goes to the Anti-Red Tape Authority. Complaints may be filed in writing or in person: write to the head of office, email legbplo@gmail.com, or call or text 0915-872-7722. The head of office asks the officer concerned to verify the complaint, then acts on it as a light or grave offence depending on what was done, with the City Human Resource Management Office applying sanctions where it is called on to assist. A client who asks for the action in writing is given it.",
+      "contacts": ["legpermit2@gmail.com", "legbplo@gmail.com"]
+    },
+    "services": [
+      {
+        "id": "bplo-renew-face-to-face",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Renewing a business permit at the office",
+        "description": "Renewing an existing business permit in person at the Business Center. Any of lanes 1 and 3 to 7 will take the application.",
+        "office": "Business Permits and Licensing Office, Lanes 1 and 3 to 7",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Applicant for renewal of business permit",
+        "requirements": [
+          {
+            "item": "Proof of income, 1 original and 1 photocopy. The latest income statement from the Bureau of Internal Revenue, or an audited financial statement",
+            "whereToSecure": "Bureau of Internal Revenue, or the applicant's accountant"
+          },
+          {
+            "item": "Market clearance for market stall holders, 1 original. It is returned to you when the business permit is released",
+            "whereToSecure": "City Market Office"
+          },
+          {
+            "item": "Certificate of authority, or a valid provisional certificate of authority, for the head office of a pawnshop or money service business under JMC No. 1 Series of 2019, 1 original and 1 photocopy",
+            "whereToSecure": "Bangko Sentral ng Pilipinas"
+          },
+          {
+            "item": "BSP letter on the issuance of a code for pawnshop offices and money service businesses other than the head office, 1 original and 1 photocopy",
+            "whereToSecure": "Bangko Sentral ng Pilipinas"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the required documents to any of the designated lanes from 1, 3 to 7. Your original documents are returned once they have been verified.",
+            "agency": "If the application is eligible, the Action Officer encodes the data, submits it electronically to the BPLO for approval, the CTO Assessor assesses the taxes and fees electronically, and BPLO staff print the final application form and Tax Order of Payment and release them with the feedback form. If the application is not eligible, the findings are documented and given to the applicant.",
+            "feeText": "None",
+            "processingTime": "2 hours",
+            "personResponsible": "Lane 1 Priority, Lane 3 Bulk, Lane 4 Express, Lane 6 Express, Lane 7 Bulk"
+          },
+          {
+            "client": "Pay the computed taxes and fees at the City Treasurer's Office against the Tax Order of Payment, which comes as hard copy, text or email. You can also pay by GCash, Paymaya, Mastercard, Visa, Development Bank of the Philippines or Land Bank of the Philippines.",
+            "agency": "The CTO Collector receives the payment, prepares and issues the official receipt, then tells you to go to Business Center Lane 9 to claim the permit.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "CTO Collector, Land Bank or DBP staff, GCash or Paymaya"
+          },
+          {
+            "client": "Go to the BPLO releasing area at Lane 9 and hand in the accomplished feedback form.",
+            "agency": "The BPLO Releasing Officer releases the business permit with the business plate or sticker and the other clearances.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Lane 9 Releasing"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "2 hours (maximum)" },
+        "notes": [
+          "The charter publishes no fee amounts. What you pay is set by the Tax Order of Payment the City Treasurer's Office issues under City Ordinance No. 13-2007. The table of tax rates is posted in every lane."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "This charter is a set of infographics, one service per page, and gives one processing time for the whole service rather than a figure per step. The two hours are recorded against the step where the office does the work, so the derived total matches the charter.",
+          "The charter states its processing time as a maximum. The derived total is that same figure and should be read the same way.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences and must be checked."
+        ]
+      },
+      {
+        "id": "bplo-new-face-to-face",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "Frontline Services",
+        "title": "Applying for a new business permit at the office",
+        "description": "Applying in person for a first business permit at Lane 2. You walk out with the locational clearance and the Mayor's Permit to operate.",
+        "office": "Business Permits and Licensing Office, Lane 2",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Applicant for new business permit",
+        "requirements": [
+          {
+            "item": "Duly filled-out application form, 1 original",
+            "whereToSecure": "legazpi.gov.ph/downloadable-forms/"
+          },
+          { "item": "Sketch of the business location, 1 original copy", "whereToSecure": "Client" },
+          {
+            "item": "Certificate of occupancy of the new space or building where the business is located, 1 original and 1 photocopy. The original is returned after verification",
+            "whereToSecure": "City Engineer's Office"
+          },
+          {
+            "item": "DTI, SEC or CDA certificate, 1 original and 1 photocopy. The original is returned after verification",
+            "whereToSecure": "Department of Trade and Industry, Securities and Exchange Commission, or Cooperative Development Authority"
+          },
+          {
+            "item": "Notarized lease contract if leasing, or a letter of authorization or consent from the owner, 1 original copy",
+            "whereToSecure": "Property owner, or a notary public"
+          },
+          {
+            "item": "Market clearance for market stall holders, 1 original and 1 photocopy, if applicable. The original is returned after verification",
+            "whereToSecure": "City Market Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the required documents to Lane 2.",
+            "agency": "If the application is eligible, the Action Officer encodes the data, submits it electronically to the BPLO for approval, the CTO Assessor assesses the taxes and fees electronically, and BPLO staff print the final application form and Tax Order of Payment and release them with the feedback form. If it is not eligible, you are given a notice of deficiency for compliance.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Lane 2, Admin. Aide III and Community Affairs Assistant II"
+          },
+          {
+            "client": "Pay the computed taxes and fees at the City Treasurer's Office against the Tax Order of Payment. You can also pay by GCash, Paymaya, Mastercard, Visa, Development Bank of the Philippines or Land Bank of the Philippines.",
+            "agency": "The CTO Collector receives the payment, prepares and issues the official receipt, then tells you to go to the Business Center releasing area at Lane 9.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "CTO Collector"
+          },
+          {
+            "client": "Go to the BPLO releasing area at Lane 9 and hand in the accomplished feedback form. You receive the locational clearance for the business and the Mayor's Permit to operate it.",
+            "agency": "The BPLO Releasing Officer releases the business permit with the business plate or sticker and the other clearances.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Lane 9 Releasing"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 days (maximum)" },
+        "notes": [
+          "The charter publishes no fee amounts. What you pay is set by the Tax Order of Payment the City Treasurer's Office issues under City Ordinance No. 13-2007."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work. See the note on renewing a business permit at the office.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "bplo-new-online",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Applying for a new business permit online",
+        "description": "The same new business permit applied for through legazpi.gov.ph. The requirements are identical to the face-to-face route; you can pay online and have the permit emailed, or collect the hard copy at Lane 9.",
+        "office": "Business Permits and Licensing Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Online applicant for new business permit",
+        "requirements": [
+          {
+            "item": "The same documents as the face-to-face application for a new business permit, attached as PDF or image files. See that service for the full list",
+            "whereToSecure": "Various"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Log in to legazpi.gov.ph, go to Online Services then Services, click \"new business application\", specify the required information, fill out the Unified Application Form, attach the required documents as PDF or image files, and review the information before submitting. When the application is approved a notification about the Tax Order of Payment reaches you by email or text.",
+            "agency": "On receiving the complete requirements the Action Officer processes the application and sends the Tax Order of Payment or Assessment Record by email or text. If the application is not eligible you are given a notice of deficiency for compliance. The Action Officer emails a Feedback Form to be submitted when you claim the permit, and advises you to pay through Land Bank, DBP, GCash or Paymaya following the instructions on the city website, or at the City Treasurer's Office payment area.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Licensing Inspector I / Admin. Officer I"
+          },
+          {
+            "client": "To pay online, type the application number found on the Tax Order of Payment into the required space, fill in the payment details and click \"Pay Now\" to choose a payment type. To pay in person, bring the Tax Order of Payment to the City Treasurer's Office.",
+            "agency": "If you paid online, Land Bank, DBP staff, GCash and Paymaya process the payment. If you paid at the City Treasurer's Office, the Revenue Collection Officer processes it and issues the official receipt.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "Land Bank or DBP staff, GCash or Paymaya, Revenue Collection Officers of the CTO"
+          },
+          {
+            "client": "Send the e-copy of the feedback form to legpermit2@gmail.com, or hand the accomplished form to the Lane 9 Releasing Officer if you would rather claim the permit at the BPLO. If a representative will claim it, they must bring an authorization letter.",
+            "agency": "Once the City Mayor's Office approves, the Action Officer emails an electronic copy of the business permit after receiving the accomplished feedback form, or tells you to claim it at BPLO Lane 9. The Lane 9 Action Officer releases the permit on submission of the accomplished customer's feedback form and, where a representative is claiming, an authorization letter.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Licensing Inspector I / Admin. Officer I / Lane 9 Releasing"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 days (maximum)" },
+        "notes": [
+          "The charter publishes no fee amounts. What you pay is set by the Tax Order of Payment the City Treasurer's Office issues under City Ordinance No. 13-2007."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter brackets SUBMIT, PAY and CLAIM together as a single step on the online pages. They are recorded as three steps here so the client's own actions stay legible; the charter's numbering (1.1 to 1.4) is preserved in the transcript.",
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "bplo-renew-online",
+        "number": 4,
+        "charterNumber": 4,
+        "charterGroup": "Frontline Services",
+        "title": "Renewing a business permit online",
+        "description": "Renewing through legazpi.gov.ph using the Business Identification Number from your previous permit. This is the fastest route the charter publishes.",
+        "office": "Business Permits and Licensing Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Online applicant for renewal of business permit",
+        "requirements": [
+          {
+            "item": "The same documents as the face-to-face application for renewal, attached as PDF or image files. See that service for the full list",
+            "whereToSecure": "Various"
+          },
+          {
+            "item": "Business Identification Number, found on the barcode of your previous business permit",
+            "whereToSecure": "Your previous business permit"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Log in to legazpi.gov.ph, go to Online Services then Services, click \"renew business application\", input the Business Identification Number from the barcode of your previous permit, specify the required information, attach the required documents as PDF or image files, and review before submitting. When the application is approved a notification about the Tax Order of Payment reaches you by email or text.",
+            "agency": "On receiving the complete requirements the Action Officer processes the application and sends the Tax Order of Payment or Assessment Record by email or text. If the application is not eligible the findings are documented and given to you. The Action Officer emails a Feedback Form to be submitted when you claim the permit, and advises you to pay through Land Bank, DBP, GCash or Paymaya, or at the City Treasurer's Office payment area.",
+            "feeText": "None",
+            "processingTime": "1 hr. and 30 mins.",
+            "personResponsible": "Licensing Inspector I / Admin. Officer I"
+          },
+          {
+            "client": "Pay online through Land Bank, DBP, GCash or Paymaya, or go to the Cash Receipts Division at the City Treasurer's Office and pay against the issued Tax Order of Payment.",
+            "agency": "If you paid online, Land Bank, DBP staff, GCash and Paymaya process the payment. If you paid at the City Treasurer's Office, the Revenue Collection Officer processes it and issues the official receipt.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "Land Bank or DBP staff, GCash or Paymaya, Revenue Collection Officers of the CTO"
+          },
+          {
+            "client": "Send the e-copy of the feedback form to legpermit2@gmail.com, or hand the accomplished form to the Lane 9 Releasing Officer if you would rather claim the hard copy at the BPLO. If a representative will claim it, they must bring an authorization letter.",
+            "agency": "Once the City Mayor's Office approves, the Action Officer emails an electronic copy of the permit after receiving the accomplished feedback form, or tells you to claim the hard copy at BPLO Lane 9. The Lane 9 Action Officer releases the business permit with the sticker or plate and the other clearances.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Licensing Inspector I / Admin. Officer I / Lane 9 Releasing"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "1 hr. and 30 mins. (maximum)" },
+        "notes": [
+          "At an hour and a half this is the quickest of the four business permit routes the charter publishes. Renewing in person is two hours; either new application is three days."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter brackets SUBMIT, PAY and CLAIM as a single step on the online pages; recorded as three steps here.",
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "bplo-additional-line-face-to-face",
+        "number": 5,
+        "charterNumber": 5,
+        "charterGroup": "Frontline Services",
+        "title": "Adding a line of business at the office",
+        "description": "Adding another line of business at the same location or area, applied for in person at Lane 5.",
+        "office": "Business Permits and Licensing Office, Lane 5",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Applicant for additional line of business",
+        "requirements": [
+          {
+            "item": "Duly filled-out application form, 1 copy",
+            "whereToSecure": "Business Permits and Licensing Office"
+          },
+          { "item": "Sketch of the business location, 1 copy", "whereToSecure": "Client" },
+          {
+            "item": "DTI, SEC or CDA certificate, 1 photocopy",
+            "whereToSecure": "Department of Trade and Industry, Securities and Exchange Commission, or Cooperative Development Authority"
+          },
+          {
+            "item": "Market clearance and contract of lease for market stall holders, 1 original copy, if applicable",
+            "whereToSecure": "City Market Office"
+          },
+          {
+            "item": "Valid lease contract, authority, certification or notice of award from the property owner, 1 original copy, if the business location is not owned. The building or space owner must have a valid business permit as lessor or for real estate rental",
+            "whereToSecure": "Property owner"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the required documents to Lane 5. Your original copy is returned when the business permit is released.",
+            "agency": "If the application is eligible, the Action Officer encodes the data, submits it electronically to the BPLO for approval, the CTO Assessor assesses the taxes and fees, and BPLO staff print the final application form and Tax Order of Payment and release them with the feedback form. If it is not eligible, you are given a notice of deficiency for compliance.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Licensing Inspector I / Admin. Officer I"
+          },
+          {
+            "client": "Pay the computed taxes and fees at the City Treasurer's Office against the Tax Order of Payment. You can also pay by GCash, Paymaya, Mastercard, Visa, Development Bank of the Philippines or Land Bank of the Philippines.",
+            "agency": "The CTO Collector receives the payment, prepares and issues the official receipt, then tells you to go to Business Center Lane 9.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "CTO Collector"
+          },
+          {
+            "client": "Go to the BPLO Lane 9 releasing area and hand in the accomplished feedback form.",
+            "agency": "The Action Officer releases the business permit on receiving the accomplished feedback form.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Lane 9 Releasing"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 days (maximum)" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "bplo-additional-line-online",
+        "number": 6,
+        "charterNumber": 6,
+        "charterGroup": "Frontline Services",
+        "title": "Adding a line of business online",
+        "description": "The same additional line of business applied for by email, using the form downloaded from legazpi.gov.ph.",
+        "office": "Business Permits and Licensing Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Online applicant for additional line of business",
+        "requirements": [
+          {
+            "item": "The same documents as the face-to-face application for an additional line of business. See that service for the full list",
+            "whereToSecure": "Various"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Log in to legazpi.gov.ph to download the electronic copy of the application form, fill it out and send it to legpermit2@gmail.com. If the requirements are complete, wait for the confirmation message from the Action Officer and for further instructions.",
+            "agency": "On receiving the complete requirements the Action Officer processes the application and sends the Tax Order of Payment or Assessment Record by email or text. If the application is not eligible you are given a notice of deficiency for compliance. The Action Officer emails a Feedback Form to be submitted when you claim the permit, and advises you how to pay.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Licensing Inspector I / Admin. Officer I"
+          },
+          {
+            "client": "To pay online, type the application number found on the Tax Order of Payment into the required space, fill in the payment details and click \"Pay Now\". To pay in person, bring the Tax Order of Payment to the City Treasurer's Office.",
+            "agency": "If you paid online, Land Bank, DBP staff, GCash and Paymaya process the payment. If you paid at the City Treasurer's Office, the Revenue Collection Officer processes it and issues the official receipt.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "Land Bank or DBP staff, GCash or Paymaya, Revenue Collection Officers of the CTO"
+          },
+          {
+            "client": "Send the e-copy of the accomplished feedback form to legpermit2@gmail.com, or hand it to the BPLO Lane 9 Releasing Officer if you would rather claim the permit at the office. If a representative will claim it, they must bring an authorization letter.",
+            "agency": "Once the City Mayor's Office approves, the Action Officer emails an electronic copy of the permit after receiving the accomplished feedback form, or tells you to claim the hard copy at BPLO Lane 9.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Licensing Inspector I / Admin. Officer I / Lane 9 Releasing"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 days (maximum)" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter brackets SUBMIT, PAY and CLAIM as a single step on the online pages; recorded as three steps here.",
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "bplo-transfer-location",
+        "number": 7,
+        "charterNumber": 7,
+        "charterGroup": "Frontline Services",
+        "title": "Moving a business to a new location",
+        "description": "Transferring an existing business permit to a new address, applied for at Lane 5. This route needs the fire safety inspection certificate for the new space.",
+        "office": "Business Permits and Licensing Office, Lane 5",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Applicant for transfer of business location",
+        "requirements": [
+          {
+            "item": "Duly filled-out application form, 1 copy",
+            "whereToSecure": "Business Permits and Licensing Office"
+          },
+          { "item": "Sketch of the business location, 1 copy", "whereToSecure": "Client" },
+          {
+            "item": "Certificate of occupancy of the new space or building where the business is located, 1 original copy",
+            "whereToSecure": "City Engineer's Office"
+          },
+          {
+            "item": "DTI, SEC or CDA certificate, 1 photocopy",
+            "whereToSecure": "Department of Trade and Industry, Securities and Exchange Commission, or Cooperative Development Authority"
+          },
+          {
+            "item": "Fire Safety Inspection Certificate for occupancy, 1 original copy. Also submit a copy of the fire insurance policy if available",
+            "whereToSecure": "Bureau of Fire Protection"
+          },
+          {
+            "item": "Market clearance and contract of lease for market stall holders, 1 original copy, if applicable",
+            "whereToSecure": "City Market Office"
+          },
+          {
+            "item": "Valid lease contract, authority, certification or notice of award from the property owner, 1 original copy, if the business location is not owned. The building or space owner must have a valid business permit as lessor or for real estate rental",
+            "whereToSecure": "Property owner"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit the required documents to Lane 5. Your original copy is returned when the business permit is released.",
+            "agency": "If the application is eligible, the Action Officer encodes the data, submits it electronically to the BPLO for approval, the CTO Assessor assesses the taxes and fees, and BPLO staff print the final application form and Tax Order of Payment and release them with the feedback form. If it is not eligible, you are given a notice of deficiency for compliance.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Licensing Inspector I / Admin. Officer I"
+          },
+          {
+            "client": "Pay the computed taxes and fees at the City Treasurer's Office against the Tax Order of Payment. You can also pay by GCash, Paymaya, Mastercard, Visa, Development Bank of the Philippines or Land Bank of the Philippines.",
+            "agency": "The CTO Collector receives the payment, prepares and issues the official receipt, then tells you to go to Business Center Lane 9.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "CTO Collector"
+          },
+          {
+            "client": "Go to the BPLO releasing area and hand in the accomplished feedback form to claim the business permit.",
+            "agency": "The Action Officer releases the business permit with the business plate or sticker.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Lane 9 Releasing"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "3 days (maximum)" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences."
+        ]
+      },
+      {
+        "id": "bplo-non-revenue-permit",
+        "number": 8,
+        "charterNumber": 8,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a non-revenue miscellaneous permit",
+        "description": "A miscellaneous permit issued on the strength of an endorsement from the City Engineer's Office.",
+        "office": "Business Permits and Licensing Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Applicant for non revenue miscellaneous permit",
+        "requirements": [
+          {
+            "item": "Letter request and endorsement from the City Engineer's Office, 1 original",
+            "whereToSecure": "City Engineer's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the endorsement from City Engineering to the Officer of the Day.",
+            "agency": "The Officer of the Day receives the endorsement, gives you a feedback form to submit when you claim the document, and forwards the document to the Action Officer, who checks the endorsement, prepares the document in two copies, and tells you to pay the corresponding fees at the City Treasurer's Office.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Officer of the Day (Admin. Aide II) / Admin. Assistant I"
+          },
+          {
+            "client": "Pay the corresponding fees at the City Treasurer's Office.",
+            "agency": "The CTO Collector receives the payment, prepares and issues the official receipt.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "Revenue Collection Officer, CTO"
+          },
+          {
+            "client": "Return to the BPLO, present the official receipt to the Action Officer and receive the original copy of the document.",
+            "agency": "The Action Officer forwards the document with the official receipt to the head of office for signature, releases the original copy to you, asks you to sign the duplicate for filing, and files the duplicate.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Admin. Assistant I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "30 mins. (maximum)" },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "bplo-certified-true-copy",
+        "number": 9,
+        "charterNumber": 9,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a certified true copy of a business permit",
+        "description": "An authenticated copy of a business permit, signed by the head of office. At ten minutes this is the quickest service the office publishes.",
+        "office": "Business Permits and Licensing Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Applicant for certified true copy of business permit",
+        "requirements": [
+          {
+            "item": "The document to be authenticated, 1 original and 1 photocopy",
+            "whereToSecure": "Client"
+          },
+          { "item": "Request form", "whereToSecure": "Business Permits and Licensing Office" }
+        ],
+        "steps": [
+          {
+            "client": "Submit the requirements to the receiving officer and fill out the request form.",
+            "agency": "The Action Officer gives you a request form to fill out and a feedback form to submit when you claim the document, checks the requirements, and tells you to pay the required fees at the CTO, bringing the request form with you.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Officer of the Day (Admin. Aide II) / Admin. Assistant I"
+          },
+          {
+            "client": "Go to the City Treasurer's Office, present the request form and pay the required fees.",
+            "agency": "The CTO Collector receives the payment, prepares and issues the official receipt, then tells you to return to the BPLO to claim the document.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "Revenue Collection Officer, CTO"
+          },
+          {
+            "client": "Return to the BPLO and submit the official receipt and the accomplished feedback form to the Action Officer.",
+            "agency": "The Action Officer forwards the document to the head of office for signature, then releases the authenticated copy of the business permit to you together with the official receipt.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Lane 9 Releasing"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "10 mins. (maximum)" },
+        "notes": [
+          "The charter points to page 12 of the table of tax rates for this fee, rather than pages 1 to 11."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "bplo-certification-business-record",
+        "number": 10,
+        "charterNumber": 10,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a certification of a business record",
+        "description": "A certification of what the office holds on record for a business.",
+        "office": "Business Permits and Licensing Office",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Applicant for certification of business record",
+        "requirements": [
+          { "item": "Request form", "whereToSecure": "Business Permits and Licensing Office" }
+        ],
+        "steps": [
+          {
+            "client": "Fill out the request form and submit it.",
+            "agency": "The Action Officer checks the request form, gives you a feedback form to submit when you claim the document, and advises you to go to the Treasurer's Office to pay.",
+            "feeText": "None",
+            "processingTime": "30 minutes",
+            "personResponsible": "Administrative Aide III"
+          },
+          {
+            "client": "Go to the City Treasurer's Office, present the request form and pay the required fees.",
+            "agency": "The CTO Collector receives the payment, prepares and issues the official receipt, then tells you to return to the BPLO to claim the copy.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "Revenue Collection Officer, City Treasurer's Office"
+          },
+          {
+            "client": "Return to the BPLO, present the official receipt and submit the accomplished feedback form to claim the requested copy.",
+            "agency": "The Action Officer releases the certification of business record on presentation of the official receipt and the accomplished feedback form.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Administrative Aide III"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "30 mins. (maximum)" },
+        "notes": [
+          "The charter points to page 12 of the table of tax rates for this fee, rather than pages 1 to 11."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work."
+        ]
+      },
+      {
+        "id": "bplo-tricycle-operators-permit",
+        "number": 11,
+        "charterNumber": 11,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a Mayor's tricycle operators' permit",
+        "description": "The Mayor's Permit for a tricycle operator, which includes a roadworthiness inspection of the unit. Applied for at Lane 11 and released at Lane 10.",
+        "office": "Business Permits and Licensing Office, Lane 11",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Applicant for Mayor's tricycle operators' permit",
+        "requirements": [
+          {
+            "item": "Duly filled-out application form, 1 copy",
+            "whereToSecure": "Business Permits and Licensing Office"
+          },
+          { "item": "Cedula, 1 original copy", "whereToSecure": "City Treasurer's Office" },
+          {
+            "item": "Dropping and substitution, 1 original copy, if the motor was changed",
+            "whereToSecure": "Sangguniang Panlungsod"
+          },
+          {
+            "item": "Franchise certificate, 1 original copy, if renewed, changed name or transferred",
+            "whereToSecure": "Sangguniang Panlungsod"
+          },
+          {
+            "item": "Marriage contract or birth certificate, 1 original copy, if the application is filed by an immediate family member",
+            "whereToSecure": "Office of the City Civil Registrar, or the Philippine Statistics Authority"
+          },
+          {
+            "item": "Death certificate, 1 original copy, if the franchise holder has died",
+            "whereToSecure": "Office of the City Civil Registrar, or the Philippine Statistics Authority"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Present the requirements for verification, proceed to the defined inspection area, then return to the BPLO and submit the vehicle inspection report to the receiving officer. Your original documents are returned after verification.",
+            "agency": "The Action Officer verifies the requirements and gives you a vehicle inspection report form and directions to the inspection area. PSO or designated tricycle operators inspect the unit for roadworthiness. The Action Officer then verifies the inspection report and gives you the assessment or order of payment with a feedback form to submit when you claim the permit, and advises you to pay at the CTO.",
+            "feeText": "None",
+            "processingTime": "1 hour",
+            "personResponsible": "Administrative Aide I / Administrative Aide II / PSO or designated tricycle inspectors"
+          },
+          {
+            "client": "Go to the City Treasurer's Office to pay the fees.",
+            "agency": "The CTO Collector receives the payment, prepares and issues the official receipt, then tells you to go to the Business Center to claim the permit.",
+            "feeText": "Based on the list of fees posted in the Tricycle Operators' Permit lane, under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "CTO Collector"
+          },
+          {
+            "client": "Return to the BPLO, submit the official receipt from the City Treasurer's Office and the accomplished feedback form, and sign the logbook.",
+            "agency": "The Action Officer checks the official receipt, encodes and prints the Mayor's Permit in two copies, forwards the documents to the BPLO and the local chief executive for signature, then releases the permit with the sticker and other documents.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Lane 10 Releasing MTOP"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "1 hour (maximum)" },
+        "notes": [
+          "Fees for this permit are posted in the Tricycle Operators' Permit lane rather than in the general table of tax rates."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The WHERE TO SECURE column does not exist on these pages; the sources recorded against each requirement are inferences and matter here, since several are issued by other offices."
+        ]
+      },
+      {
+        "id": "bplo-mayors-clearance",
+        "number": 12,
+        "charterNumber": 12,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a Mayor's clearance",
+        "description": "The Mayor's clearance, issued once you have gathered police, barangay, city court and city prosecutor clearances. The last step is the City Mayor's Office, not the BPLO.",
+        "office": "Business Permits and Licensing Office, Lane 8",
+        "classification": "Simple",
+        "transactionTypes": ["Government to Client (G2C)"],
+        "whoMayAvail": "Applicant for Mayor's clearance",
+        "requirements": [
+          {
+            "item": "Police clearance, 1 original copy",
+            "whereToSecure": "Philippine National Police"
+          },
+          {
+            "item": "Barangay clearance, 1 original copy",
+            "whereToSecure": "Office of the Punong Barangay"
+          },
+          { "item": "City court clearance, 1 original copy", "whereToSecure": "City Court" },
+          {
+            "item": "City prosecutor's clearance, 1 original copy",
+            "whereToSecure": "City Prosecutor's Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Once you have all the requirements, submit them to the receiving officer. They are returned to you together with the mayor's clearance when it is issued.",
+            "agency": "The Action Officer asks you to sign the logbook and gives you a feedback form to submit when you claim the clearance, then checks that the documents are complete. If they are accurate and complete the clearance is encoded and printed in two copies, and you are advised to pay at the CTO.",
+            "feeText": "None",
+            "processingTime": "20 minutes",
+            "personResponsible": "Community Affairs Assistant II"
+          },
+          {
+            "client": "Go to the CTO to pay the clearance fee.",
+            "agency": "The CTO Collector receives the payment, prepares and issues the official receipt, then tells you to go to Business Center Lane 8 to claim the clearance.",
+            "feeText": "Based on the Tax Order of Payment issued by the CTO under City Ordinance No. 13-2007",
+            "processingTime": null,
+            "personResponsible": "CTO Collector"
+          },
+          {
+            "client": "Return to the BPLO and submit the accomplished feedback form and the official receipt.",
+            "agency": "The Action Officer asks you to sign and thumbmark the clearance, forwards it to the BPLO for initialling, then releases it with your submitted requirements and tells you to go to the City Mayor's Office for the local chief executive's signature.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Community Affairs Assistant II"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": "20 mins. (maximum)" },
+        "notes": [
+          "The twenty minutes covers the BPLO's part only. The clearance is not finished until the City Mayor's Office signs it, and the charter puts no time on that."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "One processing time for the whole service; recorded against the step where the office does the work.",
+          "The charter's own process ends by sending the client to another office for signature without stating how long that takes. The note says so rather than implying the clearance is finished in twenty minutes."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-shop",
+    "categories": [
+      {
+        "id": "business-permits",
+        "title": "Business permits",
+        "icon": "bi-file-earmark-text",
+        "services": [
+          "bplo-new-face-to-face",
+          "bplo-new-online",
+          "bplo-renew-face-to-face",
+          "bplo-renew-online"
+        ]
+      },
+      {
+        "id": "changing-a-business",
+        "title": "Changing an existing business",
+        "icon": "bi-pencil-square",
+        "services": [
+          "bplo-additional-line-face-to-face",
+          "bplo-additional-line-online",
+          "bplo-transfer-location"
+        ]
+      },
+      {
+        "id": "clearances-and-other-permits",
+        "title": "Clearances and other permits",
+        "icon": "bi-patch-check",
+        "services": [
+          "bplo-mayors-clearance",
+          "bplo-tricycle-operators-permit",
+          "bplo-non-revenue-permit"
+        ]
+      },
+      {
+        "id": "copies-and-records",
+        "title": "Copies and records",
+        "icon": "bi-files",
+        "services": ["bplo-certified-true-copy", "bplo-certification-business-record"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "opening-a-business",
+        "title": "You are opening a business",
+        "presentation": "rail",
+        "icon": "bi-shop-window",
+        "services": ["bplo-new-online", "bplo-new-face-to-face"]
+      },
+      {
+        "id": "renewing-a-permit",
+        "title": "It is renewal season",
+        "presentation": "rail",
+        "icon": "bi-arrow-repeat",
+        "services": ["bplo-renew-online", "bplo-renew-face-to-face"]
+      },
+      {
+        "id": "business-is-changing",
+        "title": "Your business is moving or growing",
+        "presentation": "rail",
+        "icon": "bi-signpost-split",
+        "services": [
+          "bplo-transfer-location",
+          "bplo-additional-line-online",
+          "bplo-additional-line-face-to-face"
+        ]
+      },
+      {
+        "id": "driving-a-tricycle",
+        "title": "You drive a tricycle",
+        "presentation": "rail",
+        "icon": "bi-bicycle",
+        "services": ["bplo-tricycle-operators-permit"]
+      },
+      {
+        "id": "asked-for-a-clearance",
+        "title": "Someone asked you for a clearance",
+        "presentation": "rail",
+        "icon": "bi-patch-check",
+        "services": ["bplo-mayors-clearance", "bplo-certified-true-copy"]
+      },
+      {
+        "id": "need-proof-of-record",
+        "title": "You need proof of your business record",
+        "presentation": "rail",
+        "icon": "bi-files",
+        "services": ["bplo-certification-business-record", "bplo-certified-true-copy"]
+      }
+    ],
+    "searchAliases": {
+      "bplo-renew-face-to-face": [
+        "renew",
+        "renewal",
+        "business permit",
+        "mayor's permit",
+        "walk in",
+        "lane 1",
+        "pa-renew"
+      ],
+      "bplo-new-face-to-face": [
+        "new business",
+        "business permit",
+        "bagong negosyo",
+        "lane 2",
+        "start a business",
+        "mayor's permit"
+      ],
+      "bplo-new-online": [
+        "online",
+        "new business",
+        "unified application form",
+        "uaf",
+        "legazpi.gov.ph",
+        "internet"
+      ],
+      "bplo-renew-online": [
+        "online renewal",
+        "renew online",
+        "bin",
+        "business identification number",
+        "fastest"
+      ],
+      "bplo-additional-line-face-to-face": [
+        "additional line",
+        "add business",
+        "extra line",
+        "dagdag",
+        "lane 5"
+      ],
+      "bplo-additional-line-online": ["additional line online", "add business online", "dagdag"],
+      "bplo-non-revenue-permit": [
+        "miscellaneous permit",
+        "non revenue",
+        "endorsement",
+        "city engineering"
+      ],
+      "bplo-transfer-location": [
+        "transfer",
+        "move business",
+        "lipat",
+        "new location",
+        "relocate",
+        "fsic"
+      ],
+      "bplo-certified-true-copy": [
+        "certified true copy",
+        "ctc",
+        "authenticated",
+        "copy of permit",
+        "kopya"
+      ],
+      "bplo-certification-business-record": [
+        "certification",
+        "business record",
+        "proof of business",
+        "katunayan"
+      ],
+      "bplo-tricycle-operators-permit": [
+        "tricycle",
+        "mtop",
+        "traysikel",
+        "operator permit",
+        "franchise",
+        "toda"
+      ],
+      "bplo-mayors-clearance": [
+        "mayor's clearance",
+        "clearance",
+        "police clearance",
+        "barangay clearance",
+        "prosecutor"
+      ]
+    },
+    "contact": null
+  }
+}
