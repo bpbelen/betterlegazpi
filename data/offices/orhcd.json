@@ -1,0 +1,759 @@
+{
+  "slug": "orhcd",
+  "route": "service-details/orhcd-services.html",
+  "charter": {
+    "office": "Office of Resettlement, Housing and Community Development",
+    "abbreviation": "ORHCD",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/08/OFFICE-OF-RESETTLEMENT-HOUSING-AND-COMMUNITY-DEVELOPMENT-CITIZENS-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/orhcd.md",
+    "personnel": [
+      {
+        "name": "Atty. Raphaela G. Albor",
+        "position": "Acting CGDH I",
+        "unit": "Office of Resettlement, Housing and Community Development",
+        "isHead": true
+      },
+      {
+        "name": "Maricris L. Mendina",
+        "position": "Administrative Aide VI",
+        "unit": "Office of Resettlement, Housing and Community Development"
+      },
+      {
+        "name": "Shienna Mae T. Baccay",
+        "position": "Administrative Aide IV",
+        "unit": "Office of Resettlement, Housing and Community Development"
+      },
+      {
+        "name": "Analyn B. Sta. Ana",
+        "position": "Administrative Aide I",
+        "unit": "Office of Resettlement, Housing and Community Development"
+      },
+      {
+        "name": "Erwin L. Briones",
+        "position": "Administrative Aide I",
+        "unit": "Office of Resettlement, Housing and Community Development"
+      },
+      {
+        "name": "Diana E. Arevalo",
+        "position": "Administrative Aide I",
+        "unit": "Office of Resettlement, Housing and Community Development"
+      }
+    ],
+    "personnelNotes": [
+      "The charter also names eight job order staff against individual steps: Pamela M. Bonagua, Eleanor M. Ferreras, Teresa C. Casaol, Glecy D. Villanueva, Rowena L. Valenzuela, Judilyn B. Villanueva, Lorna M. Viernesto and Maribel A. Baldano. They are recorded here rather than in the roster above because the charter gives them no plantilla position. The last surname is printed as both Baldano and Baldon."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Feedback is sent through the client's form.",
+      "howFeedbackIsProcessed": "Feedback is processed through the client's form. A complaint is filed by submitting a letter of complaint.",
+      "contacts": []
+    },
+    "services": [
+      {
+        "id": "orhcd-relocation-site",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Applying for a slot in a relocation site",
+        "description": "A slot in a city relocation or resettlement site, for informal settlers, people displaced by development, and those living in danger zones. You report to the office daily while your application is pending, and the office inspects the sites monthly once you are awarded a lot.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [
+          {
+            "item": "Application form, 1 original",
+            "whereToSecure": "Office of Resettlement, Housing and Community Development"
+          },
+          { "item": "Barangay certificate of residency", "whereToSecure": "Barangay" },
+          {
+            "item": "Community tax certificate (cedula) for the current year",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          { "item": "Copy of the voter's affidavit or voter's ID", "whereToSecure": "COMELEC" },
+          {
+            "item": "Latest income tax return, or in its absence an affidavit of income",
+            "whereToSecure": "Bureau of Internal Revenue"
+          },
+          {
+            "item": "Affidavit that you do not own any real property in the Philippines, or a certification of non-ownership of land",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Photocopy of the marriage contract if married, or the birth certificate if single",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          { "item": "Four 2x2 pictures", "whereToSecure": "Client" },
+          { "item": "One folder and fastener", "whereToSecure": "Client" }
+        ],
+        "steps": [
+          {
+            "client": "Write a letter to the City Mayor asking for a slot in the relocation or resettlement site.",
+            "agency": "Helps you write the letter to the City Mayor and submits it to the City Mayor's Office.",
+            "feeText": "None",
+            "processingTime": "15 to 20 minutes",
+            "personResponsible": "Administrative Aide I and job order staff"
+          },
+          {
+            "client": "Sit the interview and receive your batch number.",
+            "agency": "Interviews you, assigns a batch number, and requires you to follow up daily by reporting to the office in person and signing the attendance sheet.",
+            "feeText": "None",
+            "processingTime": "15 minutes",
+            "personResponsible": "Job order staff"
+          },
+          {
+            "client": "Submit the required documents and receive the award of your lot.",
+            "agency": "Awards the lot to qualified beneficiaries once the required documents are in.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Acting CGDH I"
+          },
+          {
+            "client": null,
+            "agency": "Conducts monthly monitoring and site inspection of the actual occupants in the relocation and resettlement sites.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Acting CGDH I"
+          },
+          {
+            "client": null,
+            "agency": "Confiscates the slot from beneficiaries found to have violated the terms and conditions of occupancy.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Administrative Aides I and IV"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "You have to report to the office in person every day while your application is pending and sign the attendance sheet.",
+          "A slot can be taken back if the terms and conditions of occupancy are broken."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "This charter prints no TOTAL row for any of its services, so every total shown is summed from the steps alone.",
+          "The extraction interleaves this service's columns badly: the requirements, their sources and the person-responsible column all run together, and the agency actions are numbered 1.1, 2.1, 3.1, 3.2 and then 3.4 with no 3.3. The pairing recorded here is an inference and must be checked against the PDF.",
+          "The WHERE TO SECURE column lists nine sources against nine requirements but not in an order that can be matched by position. The pairing here is read from what each document is."
+        ]
+      },
+      {
+        "id": "orhcd-city-property",
+        "number": 2,
+        "charterNumber": 2,
+        "charterGroup": "Frontline Services",
+        "title": "Buying a city-owned lot through socialized housing",
+        "description": "Acquisition, appraisal and disposition of land the city owns or has acquired. Lots offered through socialized housing are paid on an instalment scheme against a value set by the Appraisal Committee, and you get a certification of full payment at the end.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [
+          {
+            "item": "Application form, 1 original",
+            "whereToSecure": "Office of Resettlement, Housing and Community Development"
+          },
+          { "item": "Barangay certificate of residency", "whereToSecure": "Barangay" },
+          {
+            "item": "Community tax certificate (cedula) for the current year",
+            "whereToSecure": "City Treasurer's Office"
+          },
+          { "item": "Copy of the voter's affidavit or voter's ID", "whereToSecure": "COMELEC" },
+          {
+            "item": "Latest income tax return, or in its absence an affidavit of income",
+            "whereToSecure": "Bureau of Internal Revenue"
+          },
+          {
+            "item": "Affidavit that you do not own any real property in the Philippines, or a certification of non-ownership of land",
+            "whereToSecure": "City Assessor's Office"
+          },
+          {
+            "item": "Photocopy of the marriage contract if married, or the birth certificate if single",
+            "whereToSecure": "Philippine Statistics Authority"
+          },
+          { "item": "Four 2x2 pictures", "whereToSecure": "Client" },
+          { "item": "One folder and fastener", "whereToSecure": "Client" }
+        ],
+        "steps": [
+          {
+            "client": "File your application for verification and assessment.",
+            "agency": "Processes the documentary requirements of applicants for the city-owned or acquired properties.",
+            "feeText": "None",
+            "processingTime": "45 days",
+            "personResponsible": "Acting CGDH I / Administrative Aide IV"
+          },
+          {
+            "client": "Pay against the schedule of payments.",
+            "agency": "Prepares the schedule of payments of the appraised value set by the Appraisal Committee for lots offered for sale through socialized housing on an instalment scheme, and the corresponding penalties for anything past due. Payment is collected by the City Treasurer's Office.",
+            "feeText": "The appraised value set by the Appraisal Committee, on an instalment scheme, plus penalties for past due amounts",
+            "processingTime": "7 days",
+            "personResponsible": "Administrative Aide I / Administrative Aide VI"
+          },
+          {
+            "client": "Receive the certification of full payment.",
+            "agency": "Prepares, issues and countersigns the certification of full payment for the city-owned or acquired property, to be signed by the City Treasurer and the City Mayor.",
+            "feeText": "None",
+            "processingTime": "7 days",
+            "personResponsible": "Acting CGDH I / Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "What you pay is the appraised value the Appraisal Committee sets for the lot, not a fixed fee, and it is paid in instalments."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The charter's header block for this service is transposed: the classification, transaction type and who-may-avail values sit one row below their labels. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "orhcd-technical-assistance",
+        "number": 3,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a subdivision plan or scheme prepared",
+        "description": "Technical assistance from the office, preparing subdivision plans and schemes once your documents are in.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [
+          {
+            "item": "The documents the office asks for at filing, verification and assessment",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "File your request for verification and assessment.",
+            "agency": "Prepares the subdivision plans and schemes on receipt of the documents.",
+            "feeText": "None",
+            "processingTime": "20 days",
+            "personResponsible": "Acting CGDH I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter bundles six different errands under one heading, Assistance to Clients, each with its own sub-heading, agency actions and durations: technical assistance, formation of a homeowners' association, ALECO and LCWD certifications, other certifications, queries, and implementation of R.A. 7279. They are split here into six services sharing charter number 3, because they are separate things a citizen would come in for rather than stages of one process.",
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The charter shows two 20-day durations against this sub-heading and the next. One is read as belonging to each; check the PDF."
+        ]
+      },
+      {
+        "id": "orhcd-homeowners-association",
+        "number": 4,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Forming a homeowners' association",
+        "description": "Help forming a homeowners' association, and the office's dialogue with landowners and informal settlers about land banking.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [{ "item": "A request to schedule dialogues", "whereToSecure": "Client" }],
+        "steps": [
+          {
+            "client": "Ask the office to schedule dialogues.",
+            "agency": "Assists in the formation of the homeowners' association.",
+            "feeText": "None",
+            "processingTime": "20 days",
+            "personResponsible": "Acting CGDH I / Administrative Aide IV"
+          },
+          {
+            "client": null,
+            "agency": "Initiates dialogue and negotiation with the landowners and informal settlers about implementing land banking.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Acting CGDH I / Administrative Aide VI"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined Assistance to Clients block; see the note on the subdivision plan service.",
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "orhcd-aleco-lcwd-certification",
+        "number": 5,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Certification for an ALECO or LCWD connection",
+        "description": "The certification a resettlement beneficiary needs to get electricity from ALECO or water from the Legazpi City Water District connected. The office checks you are on the list of beneficiaries for that site.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [
+          {
+            "item": "Application for an ALECO or LCWD service connection",
+            "whereToSecure": "ALECO, or the Legazpi City Water District"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Submit your application for an ALECO or LCWD service connection.",
+            "agency": "Validates the application and checks whether you are on the list of beneficiaries for that particular site.",
+            "feeText": "None",
+            "processingTime": "10-15 minutes",
+            "personResponsible": "Administrative Aide I and job order staff"
+          },
+          {
+            "client": "Receive the certification.",
+            "agency": "Prepares, issues and signs the requested certification for qualified applicants for an ALECO or LCWD service connection.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Acting CGDH I / Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined Assistance to Clients block; see the note on the subdivision plan service.",
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "orhcd-other-certifications",
+        "number": 6,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Requesting any other certification",
+        "description": "Certifications the office issues for whatever purpose they are needed for, beyond the ALECO and LCWD connections.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [{ "item": "Request for a certification", "whereToSecure": "Client" }],
+        "steps": [
+          {
+            "client": "Request the certification.",
+            "agency": "Prepares, issues and signs certifications for whatever purpose they may serve.",
+            "feeText": "None",
+            "processingTime": "10 minutes",
+            "personResponsible": "Acting CGDH I / Administrative Aide IV"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined Assistance to Clients block; see the note on the subdivision plan service.",
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "orhcd-queries",
+        "number": 7,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Asking the office a question",
+        "description": "Fill out a request form and the office answers your query.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [
+          {
+            "item": "Request form",
+            "whereToSecure": "Office of Resettlement, Housing and Community Development"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Fill out the request form and submit it.",
+            "agency": "Attends to and answers the client's queries.",
+            "feeText": "None",
+            "processingTime": "5-20 minutes",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined Assistance to Clients block; see the note on the subdivision plan service.",
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "orhcd-udha",
+        "number": 8,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Implementation of the Urban Development and Housing Act",
+        "description": "The office's work implementing Republic Act 7279, the Urban Development and Housing Act.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Complex",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [
+          {
+            "item": "The documents the office asks for in the particular case",
+            "whereToSecure": "Client"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Raise the matter with the office.",
+            "agency": "Initiates the implementation of R.A. 7279, the Urban Development and Housing Act.",
+            "feeText": "None",
+            "processingTime": "45 days",
+            "personResponsible": "Acting CGDH I / Administrative Aides I, IV and VI"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined Assistance to Clients block; see the note on the subdivision plan service.",
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The charter gives no requirements for this sub-service and no client step of its own. Both are supplied here so the entry reads; check the PDF."
+        ]
+      },
+      {
+        "id": "orhcd-financial-assistance",
+        "number": 9,
+        "charterNumber": 4,
+        "charterGroup": "Frontline Services",
+        "title": "Support with financial assistance after eviction",
+        "description": "Help preparing the paperwork for relocation or financial assistance if you have been evicted or displaced by a development project, and the office's preparation of the payroll, vouchers and obligation requests behind it.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [
+          {
+            "item": "Request form",
+            "whereToSecure": "Office of Resettlement, Housing and Community Development"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Fill out the request form and submit it.",
+            "agency": "Assists in preparing the documentary requirements for relocation or financial assistance to evictees and those displaced by development.",
+            "feeText": "None",
+            "processingTime": "2-3 days",
+            "personResponsible": "Acting CGDH I / Administrative Aides I, IV and VI"
+          },
+          {
+            "client": "Submit the documents to the offices concerned.",
+            "agency": "Prepares and signs the financial documents such as the payroll, vouchers and obligation requests with complete attachments.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Acting CGDH I / Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Submits the financial documents with complete attachments.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Acting CGDH I / Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The charter's header block for this service is transposed, with the classification, transaction type and who-may-avail values a row below their labels. Recorded the right way round."
+        ]
+      },
+      {
+        "id": "orhcd-incoming-communications",
+        "number": 10,
+        "charterNumber": 5,
+        "charterGroup": "Internal Services",
+        "title": "Submitting a letter or document to the office",
+        "description": "How a letter or document handed in at the receiving desk is logged and passed to the right person.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [
+          { "item": "The letter, communication or document", "whereToSecure": "Client" }
+        ],
+        "steps": [
+          {
+            "client": "Submit the documents to the receiving officer.",
+            "agency": "Attends to and answers the client's queries and records them in the logbook, then endorses the letter or communication to the personnel concerned.",
+            "feeText": "None",
+            "processingTime": "5 to 10 minutes",
+            "personResponsible": "Job order staff"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter publishes incoming and outgoing communications as one block with two sub-headings. They are split here into two services sharing charter number 5, as CPDO's are.",
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "orhcd-outgoing-communications",
+        "number": 11,
+        "charterNumber": 5,
+        "charterGroup": "Internal Services",
+        "title": "How the office releases its own correspondence",
+        "description": "How a letter, request or query the office has acted on is recorded, released and filed once the personnel and signatories concerned have approved it.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [
+          {
+            "item": "The letter, request or query already acted on",
+            "whereToSecure": "Office of Resettlement, Housing and Community Development"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Receive the released communication.",
+            "agency": "Records, releases and files the duly acted upon letters, communications, requests and queries once the personnel concerned and the other signatories have approved them.",
+            "feeText": "None",
+            "processingTime": "5 to 10 minutes",
+            "personResponsible": "Administrative Aide I and job order staff"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined communications block; see the note on incoming communications.",
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "orhcd-agency-meetings",
+        "number": 12,
+        "charterNumber": 6,
+        "charterGroup": "Internal Services",
+        "title": "Requesting a meeting with a national agency",
+        "description": "The office convenes and coordinates meetings with national agencies, chiefly the National Housing Authority over land needed for socialized housing, and issues the minutes afterwards.",
+        "office": "Office of Resettlement, Housing and Community Development",
+        "classification": "Simple",
+        "transactionTypes": [
+          "Government to Client (G2C)",
+          "Government to Government (G2G)",
+          "Government to Business (G2B)"
+        ],
+        "whoMayAvail": "Underprivileged and homeless citizens and informal settlers",
+        "requirements": [{ "item": "Request for a meeting", "whereToSecure": "Client" }],
+        "steps": [
+          {
+            "client": "Submit the request for a meeting.",
+            "agency": "Initiates the meeting or coordination with the National Housing Authority for lands required for socialized housing.",
+            "feeText": "None",
+            "processingTime": "7 days",
+            "personResponsible": "Acting CGDH I / Administrative Aides I and IV"
+          },
+          {
+            "client": null,
+            "agency": "Prepares and distributes the notice of meetings.",
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Acting CGDH I / Administrative Aides I, IV and VI"
+          },
+          {
+            "client": "Request the minutes of the meeting.",
+            "agency": "Submits the minutes or resolutions of the meeting undertaken.",
+            "feeText": "None",
+            "processingTime": "7 days",
+            "personResponsible": "Administrative Aide I / Acting CGDH I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The charter's header block for this service is transposed, with the classification, transaction type and who-may-avail values a row below their labels. Recorded the right way round."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-houses-fill",
+    "categories": [
+      {
+        "id": "relocation-and-lots",
+        "title": "Relocation and lots",
+        "icon": "bi-house-add",
+        "services": ["orhcd-relocation-site", "orhcd-city-property", "orhcd-udha"]
+      },
+      {
+        "id": "certifications-orhcd",
+        "title": "Certifications",
+        "icon": "bi-patch-check",
+        "services": ["orhcd-aleco-lcwd-certification", "orhcd-other-certifications"]
+      },
+      {
+        "id": "community-support",
+        "title": "Community and financial support",
+        "icon": "bi-people",
+        "services": [
+          "orhcd-homeowners-association",
+          "orhcd-financial-assistance",
+          "orhcd-technical-assistance"
+        ]
+      },
+      {
+        "id": "office-services-orhcd",
+        "title": "Office services",
+        "icon": "bi-envelope",
+        "services": [
+          "orhcd-queries",
+          "orhcd-incoming-communications",
+          "orhcd-outgoing-communications",
+          "orhcd-agency-meetings"
+        ]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "need-somewhere-to-live",
+        "title": "You need somewhere to live",
+        "presentation": "rail",
+        "icon": "bi-house-add",
+        "services": ["orhcd-relocation-site", "orhcd-city-property"]
+      },
+      {
+        "id": "being-evicted",
+        "title": "You are being evicted or displaced",
+        "presentation": "rail",
+        "icon": "bi-exclamation-triangle",
+        "services": ["orhcd-financial-assistance", "orhcd-udha"]
+      },
+      {
+        "id": "connecting-utilities",
+        "title": "You need power or water connected",
+        "presentation": "rail",
+        "icon": "bi-lightning-charge",
+        "services": ["orhcd-aleco-lcwd-certification"]
+      },
+      {
+        "id": "organising-neighbours",
+        "title": "Your neighbourhood wants to organise",
+        "presentation": "rail",
+        "icon": "bi-people",
+        "services": ["orhcd-homeowners-association", "orhcd-technical-assistance"]
+      }
+    ],
+    "searchAliases": {
+      "orhcd-relocation-site": [
+        "relocation",
+        "resettlement",
+        "informal settler",
+        "danger zone",
+        "lipat",
+        "housing slot",
+        "squatter"
+      ],
+      "orhcd-city-property": [
+        "city lot",
+        "socialized housing",
+        "installment",
+        "appraisal",
+        "buy lot",
+        "lupa"
+      ],
+      "orhcd-technical-assistance": [
+        "subdivision plan",
+        "technical assistance",
+        "scheme",
+        "housing plan"
+      ],
+      "orhcd-homeowners-association": [
+        "homeowners association",
+        "hoa",
+        "land banking",
+        "dialogue",
+        "samahan"
+      ],
+      "orhcd-aleco-lcwd-certification": [
+        "aleco",
+        "lcwd",
+        "electricity",
+        "water connection",
+        "kuryente",
+        "tubig",
+        "certification"
+      ],
+      "orhcd-other-certifications": ["certification", "katunayan", "orhcd certification"],
+      "orhcd-queries": ["query", "question", "request form", "tanong"],
+      "orhcd-udha": [
+        "ra 7279",
+        "udha",
+        "urban development and housing act",
+        "eviction",
+        "demolition"
+      ],
+      "orhcd-financial-assistance": [
+        "financial assistance",
+        "ayuda",
+        "evictee",
+        "displaced",
+        "relocation assistance"
+      ],
+      "orhcd-incoming-communications": ["letter", "submit document", "communication", "receiving"],
+      "orhcd-outgoing-communications": ["release", "outgoing", "communication", "letter"],
+      "orhcd-agency-meetings": [
+        "nha",
+        "national housing authority",
+        "meeting",
+        "minutes",
+        "coordination"
+      ]
+    },
+    "contact": null
+  }
+}

@@ -1,0 +1,731 @@
+{
+  "slug": "cvo",
+  "route": "service-details/cvo-services.html",
+  "charter": {
+    "office": "City Veterinary Office",
+    "abbreviation": "CVO",
+    "edition": "2026 First Edition",
+    "sourceUrl": "https://legazpi.gov.ph/wp-content/uploads/2026/07/CITY-VETERINARY-OFFICE-CITIZEN_S-CHARTER-2026.pdf",
+    "transcript": "docs/sources/citizens-charter/cvo.md",
+    "personnel": [
+      {
+        "name": "Dr. Emmanuel V. Estipona",
+        "position": "City Veterinarian",
+        "unit": "City Veterinary Office",
+        "isHead": true
+      },
+      {
+        "name": "Mercy Antonia Ajero",
+        "position": "Senior Administrative Assistant II",
+        "unit": "City Veterinary Office"
+      },
+      {
+        "name": "Anthony Dagta",
+        "position": "Administrative Aide IV",
+        "unit": "City Veterinary Office"
+      },
+      {
+        "name": "Rosalee Obido",
+        "position": "Administrative Aide II",
+        "unit": "City Veterinary Office"
+      },
+      {
+        "name": "Maria Francia Celedonio",
+        "position": "Administrative Aide I",
+        "unit": "City Veterinary Office"
+      },
+      {
+        "name": "Luis De Lumen",
+        "position": "Administrative Aide I",
+        "unit": "City Veterinary Office"
+      },
+      {
+        "name": "Nicole Marie Ysabelle Bigay",
+        "position": "Administrative Aide I",
+        "unit": "City Veterinary Office"
+      },
+      {
+        "name": "Ferdinand Samar",
+        "position": "Administrative Aide I",
+        "unit": "City Veterinary Office"
+      },
+      {
+        "name": "Adrian Abrera",
+        "position": "Livestock Technician",
+        "unit": "City Veterinary Office"
+      },
+      {
+        "name": "Ace Rubios",
+        "position": "Livestock Technician",
+        "unit": "City Veterinary Office"
+      }
+    ],
+    "personnelNotes": [
+      "One surname is printed three ways across the charter: Maria Francia Celedonio, Ma. Francia Celedonio and Maria Francia Celdonio. The fullest spelling is used here.",
+      "The charter also credits unnamed job order workers on the vaccination and dog catching services."
+    ],
+    "feedbackMechanism": {
+      "howToSendFeedback": "Raise feedback or a complaint with the City Veterinary Office.",
+      "contacts": []
+    },
+    "services": [
+      {
+        "id": "cvo-treatment-in-patient",
+        "number": 1,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Bringing an animal in for treatment",
+        "description": "Treatment for a sick animal brought to the City Veterinary Office. The vet assesses the animal, gives the treatment or medication, signs the health card and issues a prescription if one is needed.",
+        "office": "City Veterinary Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Walk-in clients and pet owners",
+        "requirements": [
+          {
+            "item": "Animal health card, original copy",
+            "whereToSecure": "City Veterinary Office"
+          },
+          {
+            "item": "Certificate of registration, 1 original copy",
+            "whereToSecure": "City Veterinary Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Bring the animal in for treatment.",
+            "agency": "Records the client and patient information.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "State your concern and give the necessary information about the animal.",
+            "agency": "Prepares the animal health card or certificate of registration.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Assesses the animal's condition, recommends treatment or medication, and administers the procedure.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "City Veterinarian"
+          },
+          {
+            "client": null,
+            "agency": "Signs the animal health card or certificate of registration and issues a prescription if needed.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "City Veterinarian"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "This charter prints no TOTAL row for any of its services, so every total shown is summed from the steps alone.",
+          "The charter runs in-patient and out-patient treatment under one heading, Veterinary Therapeutic Services, with the client steps restarting at 1 for the out-patient case. They are split here into two services sharing charter number 1, because you know before you come whether you are bringing the animal in or asking for a visit.",
+          "Every duration in this charter is a range. The arithmetic reads the upper figure of a range, so the derived totals are the longer end."
+        ]
+      },
+      {
+        "id": "cvo-treatment-out-patient",
+        "number": 2,
+        "charterNumber": 1,
+        "charterGroup": "Frontline Services",
+        "title": "Asking for a farm or home visit",
+        "description": "A visit from the office to diagnose and treat an animal where it is, with follow-up visits if they are needed. The times the charter gives exclude travel.",
+        "office": "City Veterinary Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Walk-in clients and pet owners",
+        "requirements": [
+          {
+            "item": "Request form containing the animal information and the owner's profile",
+            "whereToSecure": "City Veterinary Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Fill up the request form with the animal information and your profile.",
+            "agency": "Interviews you and refers you to the livestock inspector or technician in charge.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "State your concern so possible treatment can be assessed.",
+            "agency": "Visits and diagnoses the patient, and gives the necessary medication.",
+            "feeText": "None",
+            "processingTime": "5-10 minutes (travel time excluded)",
+            "personResponsible": "City Veterinarian"
+          },
+          {
+            "client": null,
+            "agency": "Visits the patient again for follow-up treatment or medication, if needed.",
+            "feeText": "None",
+            "processingTime": "5-10 minutes (travel time excluded)",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "The charter's times exclude travel, so the visit itself takes longer than the figure shown."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "Split from the charter's combined therapeutic services block; see the note on bringing an animal in.",
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone. It also excludes travel time explicitly, so the derived total is not the time you should plan for."
+        ]
+      },
+      {
+        "id": "cvo-health-certificate",
+        "number": 3,
+        "charterNumber": 2,
+        "charterGroup": "Frontline Services",
+        "title": "Getting a veterinary health certificate to travel with a pet",
+        "description": "The health certificate and shipping permit needed to transport an animal, as required by the Bureau of Animal Industry. If the animal's vaccination is not up to date the office vaccinates it first.",
+        "office": "City Veterinary Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Pet owners",
+        "requirements": [
+          {
+            "item": "Animal health card, original copy",
+            "whereToSecure": "City Veterinary Office"
+          },
+          {
+            "item": "Veterinary certificate request form",
+            "whereToSecure": "City Veterinary Office"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Fill up the veterinary certificate request form.",
+            "agency": "Interviews you about the date and destination of the animal to be transported.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Senior Administrative Assistant II"
+          },
+          {
+            "client": null,
+            "agency": "Verifies the vaccination records against the animal health card or vaccination certificate.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Clinic Attendant"
+          },
+          {
+            "client": "Present the pet or animal for examination.",
+            "agency": "Conducts a physical examination of the animal.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "City Veterinarian"
+          },
+          {
+            "client": "Go to the City Treasurer's Office to pay.",
+            "agency": "If approved, issues the referral slip for payment at the City Treasurer's Office. If not approved, carries out the applicable vaccination first.",
+            "feeText": "P100.00 per head",
+            "feeTiers": [
+              {
+                "label": "Veterinary health certificate, per head",
+                "amount": 100,
+                "currency": "PHP"
+              }
+            ],
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I / City Veterinarian"
+          },
+          {
+            "client": "Present proof of payment to the clinic attendant.",
+            "agency": "Records the proof of payment issued by the City Treasurer's Office and gathers the client and animal information.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I / Clinic Attendant"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the shipping permit.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Senior Administrative Assistant II"
+          },
+          {
+            "client": null,
+            "agency": "Reviews and signs the shipping permit.",
+            "feeText": "None",
+            "processingTime": "1-3 minutes",
+            "personResponsible": "City Veterinarian"
+          },
+          {
+            "client": "Sign the receiving logbook or file copy, and receive the veterinary health certificate.",
+            "agency": "Releases the shipping permit, to be received by the requesting party on signing the logbook or file copy.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "If the animal's vaccinations are not current, the office vaccinates it before approving the certificate."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "Every duration is a range and the arithmetic reads the upper figure, so the derived total is the longer end."
+        ]
+      },
+      {
+        "id": "cvo-animal-propagation",
+        "number": 4,
+        "charterNumber": 3,
+        "charterGroup": "Frontline Services",
+        "title": "Breeding, artificial insemination and livestock advice",
+        "description": "Help with animal propagation: breeding, artificial insemination, and technical advice. A livestock technician evaluates the animal's breed and suitability first.",
+        "office": "City Veterinary Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Walk-in clients",
+        "requirements": [{ "item": "Request form", "whereToSecure": "City Veterinary Office" }],
+        "steps": [
+          {
+            "client": "Fill up the request slip for animal propagation assistance, whether breeding, artificial insemination, or technical advice.",
+            "agency": "Collects the data on the client and the animal concerned.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Assesses the client and refers them to the City Veterinarian.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Evaluates the animal based on the information provided.",
+            "feeText": "None",
+            "processingTime": "5-8 minutes",
+            "personResponsible": "City Veterinarian"
+          },
+          {
+            "client": null,
+            "agency": "Assigns a livestock inspector or technician to evaluate the animal's breed and suitability.",
+            "feeText": "None",
+            "processingTime": "5-10 minutes",
+            "personResponsible": "Livestock Technicians"
+          },
+          {
+            "client": "Have the service carried out.",
+            "agency": "Where applicable, facilitates the artificial insemination or breeding service.",
+            "feeText": "Varies, according to the price of the semen",
+            "processingTime": "10-20 minutes",
+            "personResponsible": "Livestock Technicians"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "The only charge is for the semen itself, and the charter does not publish a figure because it varies."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone."
+        ]
+      },
+      {
+        "id": "cvo-pet-pre-registration",
+        "number": 5,
+        "charterNumber": 4,
+        "charterGroup": "External Services",
+        "title": "Barangay pre-registration of dogs and cats",
+        "description": "How a barangay submits its survey of the dog and cat population so a rabies mass vaccination can be scheduled for it. This is a barangay-side service, not one an individual pet owner files.",
+        "office": "City Veterinary Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Barangay Responsible Owners of Dog Enforcement Team (BRODET)",
+        "requirements": [
+          {
+            "item": "Canine and feline pre-registration form, 1 original copy",
+            "whereToSecure": "City Veterinary Office"
+          },
+          {
+            "item": "Canine and feline registration form, 1 original copy",
+            "whereToSecure": "City Veterinary Office"
+          },
+          {
+            "item": "Receipt summary issued by the barangay, 1 original copy",
+            "whereToSecure": "Barangay"
+          },
+          {
+            "item": "Official receipt of the barangay remittance on pet registration, 1 photocopy",
+            "whereToSecure": "Barangay"
+          }
+        ],
+        "steps": [
+          {
+            "client": "The barangay submits the pre-registration survey of its dog and cat population for vaccination.",
+            "agency": "Receives and reviews the documents submitted and determines the total number of dogs and cats surveyed and registered.",
+            "feeText": "None",
+            "processingTime": "5-8 minutes (varies with the volume of documents submitted)",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Schedules the rabies mass vaccination.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Prepares the letter to the Barangay Captain giving the schedule of the mass vaccination.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Reviews and signs the communication letter.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "City Veterinarian"
+          },
+          {
+            "client": "The barangay receives the letter.",
+            "agency": "Delivers the letter to the barangay concerned.",
+            "feeText": "None",
+            "processingTime": "10-20 minutes",
+            "personResponsible": "Administrative Aide IV"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The first step's duration is explicitly said to vary with how many documents the barangay submits, so the figure shown is for a typical batch."
+        ]
+      },
+      {
+        "id": "cvo-rabies-vaccination",
+        "number": 6,
+        "charterNumber": 5,
+        "charterGroup": "External Services",
+        "title": "Rabies mass vaccination",
+        "description": "The free house-to-house rabies vaccination run in each barangay once its pre-registration is in. Your pet is interviewed for, vaccinated, and the vaccination card filled up on the spot.",
+        "office": "City Veterinary Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Pet owners",
+        "requirements": [
+          {
+            "item": "Canine and feline registration form submitted by the barangay",
+            "whereToSecure": "Barangay"
+          },
+          { "item": "Receipt issued by the barangay, 1 photocopy", "whereToSecure": "Barangay" },
+          { "item": "Vaccination card", "whereToSecure": "City Veterinary Office" }
+        ],
+        "steps": [
+          {
+            "client": "Prepare your animals for vaccination.",
+            "agency": "Orients the barangay officials, barangay nutrition scholars and barangay tanod on the assistance needed for the mass vaccination.",
+            "feeText": "None",
+            "processingTime": "10-15 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Conducts the house-to-house vaccination.",
+            "feeText": "None",
+            "processingTime": "Depends upon the distance between pet owners",
+            "personResponsible": "Administrative Aide IV"
+          },
+          {
+            "client": "Present the vaccination card.",
+            "agency": "Interviews the owner or handler about the animal's current medical condition before vaccinating.",
+            "feeText": "None",
+            "processingTime": "5-7 minutes per pet",
+            "personResponsible": "Administrative Aide II / Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Vaccinates the animals.",
+            "feeText": "None",
+            "processingTime": "2-4 minutes per pet",
+            "personResponsible": "Job order workers"
+          },
+          {
+            "client": null,
+            "agency": "Fills up the vaccination cards.",
+            "feeText": "None",
+            "processingTime": "2-4 minutes per pet",
+            "personResponsible": "Job order workers"
+          },
+          {
+            "client": null,
+            "agency": "Prepares and records the vaccination report.",
+            "feeText": "None",
+            "processingTime": "3-4 minutes per dog",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Reviews and signs the pet registration of the vaccinated dogs and cats.",
+            "feeText": "None",
+            "processingTime": "10-15 minutes",
+            "personResponsible": "City Veterinarian"
+          },
+          {
+            "client": "The barangay receives its file copy.",
+            "agency": "Issues the vaccination summary and the certificate of registration, signed by the veterinarian and the vaccinator, as the barangay's file copy.",
+            "feeText": "None",
+            "processingTime": "5-10 minutes",
+            "personResponsible": "Administrative Aide I"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "The vaccination is free and comes to you: the team goes house to house once your barangay is scheduled."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "Several durations are per pet or per dog rather than per visit, and the house-to-house step has no figure at all because it depends on distance. The derived total is therefore not the time one owner waits; it is closer to the office's own per-animal effort."
+        ]
+      },
+      {
+        "id": "cvo-stray-animals",
+        "number": 7,
+        "charterNumber": 6,
+        "charterGroup": "External Services",
+        "title": "Reporting stray dogs and cats",
+        "description": "How a barangay asks for help catching stray dogs and cats, what happens to the animals afterwards, and how an owner claims one back. Impounded animals are held at the barangay for three days, then moved to the city facility at Banquerohan.",
+        "office": "City Veterinary Office",
+        "classification": "Simple",
+        "transactionTypes": ["Frontline Service"],
+        "whoMayAvail": "Barangay Rabies and Control Committee",
+        "requirements": [
+          { "item": "Request slip", "whereToSecure": "City Veterinary Office" },
+          {
+            "item": "Written request from the barangay to assist with dog catching activities, 1 original copy",
+            "whereToSecure": "Barangay"
+          }
+        ],
+        "steps": [
+          {
+            "client": "Report stray dogs to the barangay officials or the City Veterinary Office.",
+            "agency": "Receives the letter submitted by the requesting barangay.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "The barangay submits a written request for a dog catching activity.",
+            "agency": "Records the request.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "The barangay officials fill up the request form at the information desk.",
+            "agency": "Issues the request form or slip.",
+            "feeText": "None",
+            "processingTime": "3-5 minutes",
+            "personResponsible": "Administrative Aide I"
+          },
+          {
+            "client": "The stray animal activity is carried out.",
+            "agency": "Coordinates with the barangay concerned to provide assistance on their dog catching activity.",
+            "feeText": "None",
+            "processingTime": "10-15 minutes",
+            "personResponsible": "Administrative Aide IV and job order workers"
+          },
+          {
+            "client": "Impounded animals are temporarily housed at the barangay impounding facility for three days.",
+            "agency": null,
+            "feeText": "None",
+            "processingTime": "3 days",
+            "personResponsible": "Barangay officials"
+          },
+          {
+            "client": "Citation tickets are issued to the identified owners.",
+            "agency": null,
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "Barangay officials"
+          },
+          {
+            "client": "To claim an impounded animal, settle the payment at the City Treasurer's Office.",
+            "agency": "Picks up the unclaimed impounded animals to be transferred to the temporary impounding facility in Banquerohan, Legazpi City, and shelters them.",
+            "feeText": "Settled at the City Treasurer's Office; the charter publishes no amount",
+            "processingTime": "3 days",
+            "personResponsible": "Administrative Aide IV and job order personnel"
+          },
+          {
+            "client": null,
+            "agency": "Unclaimed dogs are rehabilitated with the necessary medication, deworming and vaccination, and put up for adoption.",
+            "feeText": "None",
+            "processingTime": "5-10 minutes",
+            "personResponsible": "City Veterinarian / Administrative Aide IV"
+          },
+          {
+            "client": "Prospective owners attend an orientation and sign the adoption contract.",
+            "agency": "Runs the orientation and takes the signed adoption contract.",
+            "feeText": "None",
+            "processingTime": "15-30 minutes",
+            "personResponsible": "City Veterinarian / Administrative Aide I"
+          },
+          {
+            "client": null,
+            "agency": "Dogs with infectious diseases, or in a condition deemed not rehabilitatable, are humanely euthanized.",
+            "feeText": "None",
+            "processingTime": null,
+            "personResponsible": "City Veterinarian"
+          }
+        ],
+        "statedTotals": { "feeText": null, "processingTime": null },
+        "notes": [
+          "If your pet has been impounded, you have three days at the barangay facility before it is moved to Banquerohan. Claiming it means paying at the City Treasurer's Office.",
+          "Unclaimed animals are rehabilitated and offered for adoption where they can be; those too sick to recover are humanely euthanized."
+        ],
+        "verified": false,
+        "verifyNotes": [
+          "The charter prints no TOTAL row, so the total shown is summed from the steps alone.",
+          "The charter numbers the first agency action of this service 2.1 rather than 1.1, and the citation ticket row reads only \"days from the impounding day\" with no number. That step is recorded without a duration.",
+          "The charter does not publish the amount an owner pays to reclaim an impounded animal. The step says where it is paid, not how much."
+        ]
+      }
+    ]
+  },
+  "local": {
+    "icon": "bi-heart-pulse-fill",
+    "categories": [
+      {
+        "id": "pet-health",
+        "title": "Pet and animal health",
+        "icon": "bi-heart-pulse",
+        "services": [
+          "cvo-treatment-in-patient",
+          "cvo-treatment-out-patient",
+          "cvo-rabies-vaccination"
+        ]
+      },
+      {
+        "id": "permits-and-certificates",
+        "title": "Permits and certificates",
+        "icon": "bi-file-earmark-medical",
+        "services": ["cvo-health-certificate"]
+      },
+      {
+        "id": "livestock",
+        "title": "Livestock and breeding",
+        "icon": "bi-egg-fried",
+        "services": ["cvo-animal-propagation"]
+      },
+      {
+        "id": "barangay-animal-services",
+        "title": "Barangay animal services",
+        "icon": "bi-buildings",
+        "services": ["cvo-pet-pre-registration", "cvo-stray-animals"]
+      }
+    ],
+    "entryPoints": [
+      {
+        "id": "pet-is-sick",
+        "title": "Your pet is sick",
+        "presentation": "rail",
+        "icon": "bi-heart-pulse",
+        "services": ["cvo-treatment-in-patient", "cvo-treatment-out-patient"]
+      },
+      {
+        "id": "travelling-with-a-pet",
+        "title": "You are travelling with a pet",
+        "presentation": "rail",
+        "icon": "bi-airplane",
+        "services": ["cvo-health-certificate"]
+      },
+      {
+        "id": "rabies-shot",
+        "title": "Your pet needs its rabies shot",
+        "presentation": "rail",
+        "icon": "bi-shield-check",
+        "services": ["cvo-rabies-vaccination", "cvo-pet-pre-registration"]
+      },
+      {
+        "id": "strays-in-the-street",
+        "title": "There are strays in your street",
+        "presentation": "rail",
+        "icon": "bi-exclamation-triangle",
+        "services": ["cvo-stray-animals"]
+      },
+      {
+        "id": "raising-livestock",
+        "title": "You are raising livestock",
+        "presentation": "rail",
+        "icon": "bi-egg-fried",
+        "services": ["cvo-animal-propagation", "cvo-treatment-out-patient"]
+      }
+    ],
+    "searchAliases": {
+      "cvo-treatment-in-patient": [
+        "vet",
+        "veterinary",
+        "sick pet",
+        "treatment",
+        "aso",
+        "pusa",
+        "clinic",
+        "hayop"
+      ],
+      "cvo-treatment-out-patient": [
+        "home visit",
+        "farm visit",
+        "veterinarian",
+        "livestock",
+        "field visit"
+      ],
+      "cvo-health-certificate": [
+        "health certificate",
+        "shipping permit",
+        "travel with pet",
+        "bureau of animal industry",
+        "transport animal"
+      ],
+      "cvo-animal-propagation": [
+        "breeding",
+        "artificial insemination",
+        "ai",
+        "livestock",
+        "baka",
+        "kambing",
+        "technical advice"
+      ],
+      "cvo-pet-pre-registration": [
+        "pet registration",
+        "pre-registration",
+        "brodet",
+        "barangay survey",
+        "dog registration"
+      ],
+      "cvo-rabies-vaccination": [
+        "rabies",
+        "vaccination",
+        "bakuna",
+        "free vaccination",
+        "mass vaccination",
+        "aso",
+        "pusa"
+      ],
+      "cvo-stray-animals": [
+        "stray dogs",
+        "askal",
+        "dog catching",
+        "impounded",
+        "adoption",
+        "gala na aso"
+      ]
+    },
+    "contact": null
+  }
+}
