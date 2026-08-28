@@ -9681,7 +9681,7 @@ a.a11y-contact-item:hover i {
 
 .edu-category {
   margin-bottom: 8px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -9754,7 +9754,7 @@ a.a11y-contact-item:hover i {
 }
 
 .edu-school-item:hover {
-  background: #eef2ff;
+  background: var(--color-bg-muted);
   border-left-color: var(--color-primary-dark);
 }
 
@@ -9789,7 +9789,7 @@ a.a11y-contact-item:hover i {
 }
 
 .edu-school-item.is-expandable:hover {
-  background: #eef2ff;
+  background: var(--color-bg-muted);
   border-left-color: var(--color-primary-dark);
 }
 
@@ -9799,7 +9799,7 @@ a.a11y-contact-item:hover i {
 }
 
 .edu-school-item.is-expandable[aria-expanded='true'] {
-  background: #f8fafc;
+  background: var(--color-bg-alt);
   border-left-color: var(--color-primary);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   padding: 8px 12px;
@@ -9813,7 +9813,7 @@ a.a11y-contact-item:hover i {
 .edu-school-details {
   margin-top: 6px;
   padding-top: 6px;
-  border-top: 1px dashed #cbd5e1;
+  border-top: 1px dashed var(--color-border);
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -9834,7 +9834,7 @@ a.a11y-contact-item:hover i {
 
 .edu-detail-label {
   font-weight: 500;
-  color: #64748b;
+  color: var(--color-text-light);
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -9844,12 +9844,12 @@ a.a11y-contact-item:hover i {
 }
 
 .edu-detail-label i {
-  color: #94a3b8;
+  color: var(--color-text-light);
   font-size: 0.6875rem;
 }
 
 .edu-detail-value {
-  color: #475569;
+  color: var(--color-text);
   word-break: break-word;
   flex: 1;
 }
@@ -9860,16 +9860,16 @@ a.a11y-contact-item:hover i {
   font-weight: 600;
   padding: 0px 6px;
   border-radius: 10px;
-  background: #f1f5f9;
-  color: #475569;
-  border: 1px solid #cbd5e1;
+  background: var(--color-bg-muted);
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
   text-transform: uppercase;
 }
 
 .edu-detail-link {
-  color: #475569;
+  color: var(--color-primary);
   text-decoration: underline;
-  text-decoration-color: #cbd5e1;
+  text-decoration-color: var(--color-border);
   word-break: break-all;
 }
 
@@ -11281,10 +11281,10 @@ a.a11y-contact-item:hover i {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  background: #ffffff;
+  background: var(--color-white);
   padding: 12px 16px;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--color-border);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
@@ -11318,7 +11318,7 @@ a.a11y-contact-item:hover i {
 
 .edu-search-input:focus {
   outline: none;
-  background: #ffffff;
+  background: var(--color-white);
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
 }
@@ -11365,7 +11365,7 @@ a.a11y-contact-item:hover i {
 }
 
 .edu-filter-pill:hover {
-  background: #e2e8f0;
+  background: var(--color-bg-muted);
   color: #334155;
 }
 
