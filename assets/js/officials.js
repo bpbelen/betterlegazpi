@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Center-Aligned & Enlarged Simple Source Credit Line
     html += `
       <div class="source-credit-simple text-center" style="font-size: 0.98rem; color: #475569; margin-top: 32px; display: flex; align-items: center; justify-content: center; gap: 6px; text-align: center;">
-        <i class="bi bi-info-circle"></i> Source: <a href="https://legazpi.gov.ph/executive/" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline;">City Government of Legazpi - Directory</a> &bull; <a href="https://legazpi.gov.ph/about-us/legislative/" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline;">City Government of Legazpi - Legislative</a>
+        <i class="bi bi-info-circle"></i> Sources: <a href="https://legazpi.gov.ph/executive/" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline;">City Government of Legazpi - Executive</a> &bull; <a href="https://legazpi.gov.ph/directory/" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline;">City Government of Legazpi - Directory</a> &bull; <a href="https://legazpi.gov.ph/about-us/legislative/" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline;">City Government of Legazpi - Legislative</a>
       </div>
     `;
 
