@@ -291,10 +291,13 @@
         <div class="container">
           <div class="page-header-content">
             <span class="page-header-badge"
-              ><i class="bi bi-universal-access"></i> <span>Accessibility</span></span
+              ><i class="bi bi-universal-access"></i>
+              <span data-i18n="a11y_badge">Accessibility</span></span
             >
-            <h1>Accessibility Statement</h1>
-            <p class="page-header-desc">Our commitment to digital accessibility for all citizens</p>
+            <h1 data-i18n="a11y_title">Accessibility Statement</h1>
+            <p class="page-header-desc" data-i18n="a11y_tagline">
+              Our commitment to digital accessibility for all citizens
+            </p>
           </div>
         </div>
       </section>
@@ -308,15 +311,17 @@
                 <i class="bi bi-check-circle-fill"></i>
                 <div>
                   <span class="a11y-badge-label">WCAG 2.1 Level AA</span>
-                  <span class="a11y-badge-text">Partially conformant</span>
+                  <span class="a11y-badge-text" data-i18n="a11y_conformance"
+                    >Partially conformant</span
+                  >
                 </div>
               </div>
             </div>
 
             <!-- Commitment Section -->
             <div class="a11y-section">
-              <h2>Our Commitment</h2>
-              <p>
+              <h2 data-i18n="a11y_commitment_title">Our Commitment</h2>
+              <p data-i18n="a11y_commitment_text">
                 BetterLegazpi is committed to ensuring digital accessibility for people with
                 disabilities. We aim for WCAG 2.1 Level AA across the whole site and test every page
                 against it automatically, in both themes and at phone and desktop widths. We
@@ -328,47 +333,49 @@
 
             <!-- Features Grid -->
             <div class="a11y-section">
-              <h2>Accessibility Features</h2>
+              <h2 data-i18n="a11y_features_title">Accessibility Features</h2>
               <div class="a11y-features-grid">
                 <div class="a11y-feature">
                   <i class="bi bi-keyboard"></i>
-                  <h3>Keyboard Navigation</h3>
-                  <p>All functionality available using only a keyboard.</p>
+                  <h3 data-i18n="a11y_feat1_title">Keyboard Navigation</h3>
+                  <p data-i18n="a11y_feat1_desc">
+                    All functionality available using only a keyboard.
+                  </p>
                 </div>
                 <div class="a11y-feature">
                   <i class="bi bi-eye"></i>
-                  <h3>Screen Reader Support</h3>
-                  <p>Compatible with JAWS, NVDA, and VoiceOver.</p>
+                  <h3 data-i18n="a11y_feat2_title">Screen Reader Support</h3>
+                  <p data-i18n="a11y_feat2_desc">Compatible with JAWS, NVDA, and VoiceOver.</p>
                 </div>
                 <div class="a11y-feature">
                   <i class="bi bi-type"></i>
-                  <h3>Text Alternatives</h3>
-                  <p>All images have descriptive alt text.</p>
+                  <h3 data-i18n="a11y_feat3_title">Text Alternatives</h3>
+                  <p data-i18n="a11y_feat3_desc">All images have descriptive alt text.</p>
                 </div>
                 <div class="a11y-feature">
                   <i class="bi bi-palette"></i>
-                  <h3>Color Contrast</h3>
-                  <p>
+                  <h3 data-i18n="a11y_feat4_title">Color Contrast</h3>
+                  <p data-i18n="a11y_feat4_desc">
                     Text meets WCAG AA contrast on all but the pages named under Known Limitations.
                   </p>
                 </div>
                 <div class="a11y-feature">
                   <i class="bi bi-phone"></i>
-                  <h3>Responsive Design</h3>
-                  <p>Works on all devices and screen sizes.</p>
+                  <h3 data-i18n="a11y_feat5_title">Responsive Design</h3>
+                  <p data-i18n="a11y_feat5_desc">Works on all devices and screen sizes.</p>
                 </div>
                 <div class="a11y-feature">
                   <i class="bi bi-hourglass-split"></i>
-                  <h3>No Time Limits</h3>
-                  <p>No time limits on reading or interacting.</p>
+                  <h3 data-i18n="a11y_feat6_title">No Time Limits</h3>
+                  <p data-i18n="a11y_feat6_desc">No time limits on reading or interacting.</p>
                 </div>
               </div>
             </div>
 
             <!-- Known Limitations -->
             <div class="a11y-section">
-              <h2>Known Limitations</h2>
-              <p>
+              <h2 data-i18n="a11y_limitations_title">Known Limitations</h2>
+              <p data-i18n="a11y_limitations_intro">
                 We test every page of this site automatically against WCAG 2.1 Level A and AA, in
                 both light and dark themes and at both phone and desktop widths. These are the pages
                 that do not pass yet, as of August 29, 2026:
@@ -397,20 +404,20 @@
                 </li>
                 <li>
                   <i class="bi bi-exclamation-circle"></i>
-                  <span>
+                  <span data-i18n="a11y_limit_pdfs">
                     Documents we link to that are published by other offices, mainly PDFs, are
                     outside our control and are often not readable by screen readers.
                   </span>
                 </li>
                 <li>
                   <i class="bi bi-exclamation-circle"></i>
-                  <span>
+                  <span data-i18n="a11y_limit_embeds">
                     Content embedded from other sites, such as posts from the city's Facebook page,
                     follows that site's accessibility, not ours.
                   </span>
                 </li>
               </ul>
-              <p>
+              <p data-i18n="a11y_limitations_outro">
                 Everything else we test passes. If you find a problem that is not listed here,
                 please tell us using the contact details below: an unlisted problem is one we do not
                 know about.
@@ -419,8 +426,10 @@
 
             <!-- Alternative Access -->
             <div class="a11y-section">
-              <h2>Alternative Access</h2>
-              <p>If you encounter difficulty accessing any information, contact us:</p>
+              <h2 data-i18n="a11y_alt_title">Alternative Access</h2>
+              <p data-i18n="a11y_alt_text">
+                If you encounter difficulty accessing any information, contact us:
+              </p>
               <div class="a11y-contact-grid">
                 <a href="mailto:volunteer@betterlegazpi.org" class="a11y-contact-item"
                   ><i class="bi bi-envelope-fill"></i> <span>volunteer@betterlegazpi.org</span></a
@@ -430,7 +439,7 @@
 
             <!-- Technical Info -->
             <div class="a11y-section">
-              <h2>Technical Specifications</h2>
+              <h2 data-i18n="a11y_tech_title">Technical Specifications</h2>
               <div class="a11y-tech-tags">
                 <span class="a11y-tag">HTML5</span>
                 <span class="a11y-tag">CSS3</span>
@@ -445,8 +454,8 @@
             <div class="a11y-promise">
               <i class="bi bi-heart-fill"></i>
               <div>
-                <h3>Our Promise</h3>
-                <p>
+                <h3 data-i18n="a11y_promise_title">Our Promise</h3>
+                <p data-i18n="a11y_promise_text">
                   BetterLegazpi is committed to ensuring that our digital services are accessible to
                   all citizens, regardless of ability. We view accessibility not as a feature, but
                   as a fundamental right.
