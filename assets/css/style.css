@@ -2127,36 +2127,6 @@ body.mobile-menu-open {
   text-decoration: none;
 }
 
-/* Life Event Cards */
-.life-event-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--color-white);
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: var(--spacing-sm) var(--spacing-md);
-  text-decoration: none;
-  color: var(--color-text);
-  transition: all var(--duration-base) ease;
-}
-
-.life-event-card:hover {
-  border-color: var(--color-primary);
-  box-shadow: 0 2px 8px rgba(0, 50, 160, 0.08);
-  text-decoration: none;
-}
-
-.life-event-card i {
-  font-size: 1.25rem;
-  color: var(--color-primary);
-}
-
-.life-event-card span {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
 /* Service Item Cards - Detail & Service Hub Pages */
 .service-item-card,
 .service-item-card:hover,
