@@ -1,0 +1,677 @@
+/* ==========================================================================
+   BetterLegazpi - First-Time Jobseekers (R.A. 11261) Service Stylesheet
+   Reading layout for service-details/first-time-jobseekers.html
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Section shell and centred headings
+
+   .section-header-center is defined here as well as in philhealth-yakap.css.
+   The two pages never load both sheets, and lifting it into style.css would
+   change the eleven-odd pages that already style their own headings.
+   -------------------------------------------------------------------------- */
+.ftj-section {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-bg);
+}
+
+.ftj-section-alt {
+  background: var(--color-bg-alt);
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: var(--measure);
+  margin: 0 auto var(--spacing-lg);
+}
+
+.section-header-center .section-title {
+  /* The sitewide .section-title rule (style.css) is `display: flex` for
+     icon+label headings elsewhere on the site. These headings carry no icon,
+     so justify-content, not text-align, is what actually centres them. */
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.section-header-center .section-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   2. The three headline facts
+   -------------------------------------------------------------------------- */
+.ftj-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.ftj-fact {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.ftj-section-alt .ftj-fact {
+  background: var(--color-bg);
+}
+
+.ftj-fact-icon {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+}
+
+.ftj-fact h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin: 10px 0 6px;
+  color: var(--color-text);
+}
+
+.ftj-fact p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   3. Eligibility panel
+   -------------------------------------------------------------------------- */
+.ftj-eligibility {
+  max-width: var(--measure);
+  margin: 0 auto;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary-solid);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.ftj-section-alt .ftj-eligibility {
+  background: var(--color-bg);
+}
+
+.ftj-eligibility-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 10px;
+}
+
+.ftj-eligibility p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+
+.ftj-eligibility p:last-child {
+  margin-bottom: 0;
+}
+
+.ftj-eligibility-note {
+  color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   4. Covered / not covered
+   -------------------------------------------------------------------------- */
+.ftj-lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  align-items: start;
+}
+
+.ftj-list {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.ftj-list-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.ftj-list-yes {
+  border-top: 4px solid var(--color-success-solid);
+}
+
+.ftj-list-yes .ftj-list-title {
+  color: var(--color-success-solid);
+}
+
+.ftj-list-no {
+  border-top: 4px solid var(--color-danger);
+}
+
+.ftj-list-no .ftj-list-title {
+  color: var(--color-danger);
+}
+
+.ftj-list ul {
+  margin: 0 0 12px;
+  padding-left: 1.25rem;
+}
+
+.ftj-list li {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.ftj-list-note {
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   5. The three steps
+   -------------------------------------------------------------------------- */
+.ftj-steps {
+  list-style: none;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0;
+  counter-reset: none;
+}
+
+.ftj-step {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ftj-step:last-child {
+  border-bottom: 0;
+}
+
+.ftj-step-number {
+  flex: 0 0 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-primary-solid);
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.ftj-step-body h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--color-text);
+}
+
+.ftj-step-body p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin: 0 0 8px;
+}
+
+.ftj-step-link {
+  margin: 0;
+}
+
+.ftj-step-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   6. Barangay / city / national tiers
+   -------------------------------------------------------------------------- */
+.ftj-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  align-items: start;
+}
+
+.ftj-tier {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.ftj-tier-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border: 1px solid transparent;
+}
+
+/* Tinted from the same tokens the rest of the site uses. Kept as low-alpha
+   fills so the three badges stay distinguishable in dark mode too. */
+.ftj-tier-badge-barangay {
+  background: rgba(0, 50, 160, 0.1);
+  border-color: var(--color-primary-solid);
+  color: var(--color-primary);
+}
+
+.ftj-tier-badge-city {
+  background: rgba(6, 122, 94, 0.12);
+  border-color: var(--color-success-solid);
+  color: var(--color-success-solid);
+}
+
+.ftj-tier-badge-national {
+  background: rgba(214, 40, 40, 0.1);
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.ftj-tier-list {
+  margin: 0 0 12px;
+  padding-left: 1.25rem;
+}
+
+.ftj-tier-list li {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.ftj-tier-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ftj-tier-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.ftj-tier-note {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   7. PESO card
+   -------------------------------------------------------------------------- */
+.ftj-peso-card {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.ftj-section-alt .ftj-peso-card {
+  background: var(--color-bg);
+}
+
+.ftj-peso-main h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--color-primary);
+}
+
+.ftj-peso-main p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin: 0 0 var(--spacing-md);
+}
+
+.ftj-peso-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ftj-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color var(--duration-base) var(--ease-out),
+    color var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-out);
+}
+
+.ftj-btn-primary {
+  background: var(--color-primary-solid);
+  border: 1px solid var(--color-primary-solid);
+  /* !important: the sitewide [data-theme='dark'] a:not(.btn) rule otherwise
+     wins on specificity, since this button's class isn't literally .btn. */
+  color: #ffffff !important;
+}
+
+.ftj-btn-primary:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.ftj-btn-secondary {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.ftj-btn-secondary:hover {
+  border-color: var(--color-primary-solid);
+  color: var(--color-primary-solid);
+  text-decoration: none;
+}
+
+.ftj-peso-contacts {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ftj-peso-contact dt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-light);
+}
+
+.ftj-peso-contact dd {
+  margin: 2px 0 0;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+}
+
+/* --------------------------------------------------------------------------
+   8. FAQ
+   -------------------------------------------------------------------------- */
+.ftj-faq {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.ftj-faq-item {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 10px;
+}
+
+.ftj-faq-item summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 14px var(--spacing-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  list-style: none;
+}
+
+.ftj-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.ftj-faq-item summary::after {
+  content: '\F282'; /* bootstrap-icons chevron-down */
+  font-family: 'bootstrap-icons';
+  margin-left: auto;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.ftj-faq-item[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.ftj-faq-body {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.ftj-faq-body p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   9. Sources
+   -------------------------------------------------------------------------- */
+.ftj-sources {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.ftj-sources-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 6px;
+}
+
+.ftj-sources-intro {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin: 0 0 var(--spacing-md);
+}
+
+.ftj-sources-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.ftj-source {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.ftj-source-code {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.ftj-source-title {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.ftj-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.ftj-sources-note {
+  display: flex;
+  gap: 8px;
+  margin: var(--spacing-md) 0 0;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   10. Employment category spotlight (rendered on services/employment.html,
+   which loads this sheet the same way health.html loads the YAKAP one)
+   -------------------------------------------------------------------------- */
+.ftj-spotlight-card {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary-solid);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.ftj-spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(0, 50, 160, 0.1);
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.ftj-spotlight-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 10px 0 8px;
+}
+
+.ftj-spotlight-desc {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin: 0 0 var(--spacing-md);
+}
+
+.ftj-spotlight-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ftj-spotlight-points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ftj-spotlight-point {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+
+.ftj-spotlight-point i {
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   11. Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .ftj-facts,
+  .ftj-tiers,
+  .ftj-sources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ftj-peso-card,
+  .ftj-spotlight-card {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .ftj-lists {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ftj-facts,
+  .ftj-tiers,
+  .ftj-sources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header-center .section-title {
+    font-size: 1.5rem;
+  }
+
+  .ftj-step {
+    gap: var(--spacing-sm);
+  }
+
+  .ftj-peso-actions,
+  .ftj-spotlight-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

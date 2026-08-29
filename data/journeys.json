@@ -281,7 +281,7 @@
         {
           "service": "peso-jobstart",
           "label": "Join JobStart, if you're a first-time jobseeker",
-          "note": "Life skills and technical training with a paid internship.",
+          "note": "Life skills and technical training with a paid internship. If this is your first job, R.A. 11261 also waives the government fee on most of your pre-employment documents - see the First-Time Jobseekers page.",
           "conditional": true
         },
         {

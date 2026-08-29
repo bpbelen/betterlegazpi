@@ -47,6 +47,7 @@ const CI_ROUTES = [
   '/history/index.html', // history.css
   '/services/utilities.html', // utilities.css, and the only JSON-rendered services page
   '/service-details/philhealth-yakap.html', // philhealth-yakap.css: inverted spotlight panel, tabs, accordions
+  '/service-details/first-time-jobseekers.html', // first-time-jobseekers.css: tier cards, step list, details accordions
   '/travel/index.html', // tourism.css: photo page-header, bento, scroll-snap strip
   '/travel/ibalong.html', // tourism.css reading layout: switched concise/full views
   '/travel/transportation.html', // transport.css, and the only page mounting Leaflet from JSON
