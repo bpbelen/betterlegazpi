@@ -80,12 +80,19 @@ for (const route of ROUTES) {
         /^mailto:volunteer@betterlegazpi\.org\?subject=/
       );
       // Switching back to English restores the chrome and drops the notice.
+      // Restoration is a full reload (main.js's click handler special-cases
+      // "back to English from a translated page" that way — see the comment
+      // there), so wait for navigation rather than an in-page DOM update.
       await page.locator('.lang-toggle-btn').click();
-      await page.locator('.lang-option[data-lang="en"]').click();
+      await Promise.all([
+        page.waitForNavigation(),
+        page.locator('.lang-option[data-lang="en"]').click(),
+      ]);
       await expect(page.locator('[data-i18n="skip_to_content"]')).toHaveText(
         'Skip to main content'
       );
       await expect(page.locator('#i18n-notice')).toHaveCount(0);
+      await expect(page.locator('html')).toHaveAttribute('lang', 'en');
     });
 
     test('the notice can be dismissed and does not reappear until the page reloads', async ({

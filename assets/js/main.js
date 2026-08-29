@@ -868,38 +868,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return segments.length ? '../'.repeat(segments.length) : '';
     }
 
-    // Mirrors data/locales/en.json's "strings" object. Seeded locally rather
-    // than fetched: the markup already renders this English text by default,
-    // so a network round-trip on every page load would buy nothing — but the
-    // cache still needs an 'en' entry so switching back to English after
-    // another locale restores it, instead of leaving stale foreign text in
-    // place because "it's already the fallback" short-circuited nothing.
+    // English is never fetched or DOM-patched — the markup itself is the
+    // English source of truth, so metaCache just needs a static entry to tell
+    // updateLocaleNotice() it's always "reviewed" (no notice for English).
+    // stringsCache only ever holds fetched non-English locales.
     const metaCache = { en: { lang: 'en', label: 'English', reviewed: true } };
-
-    const stringsCache = {
-      en: {
-        skip_to_content: 'Skip to main content',
-        footer_volunteer_cta: 'Volunteer with us',
-        footer_contribute_code_cta: 'Contribute code with us',
-        theme_toggle_to_dark: 'Switch to dark mode',
-        theme_toggle_to_light: 'Switch to light mode',
-        // Homepage hero only; harmless no-ops on pages without these elements.
-        hero_title: 'Welcome to BetterLegazpi.org',
-        hero_subtitle:
-          'Access municipal services, government updates, transparency reports, and public resources for the people of Legazpi City, Albay.',
-        hero_search_placeholder:
-          'Search services (e.g., birth certificate, business permit, tax)...',
-        hero_search_aria_label: 'Search services',
-        hero_quick_access_label: 'Popular Quick Access:',
-        hero_pill_birth_cert: 'Birth Certificate',
-        hero_pill_business_permit: 'Business Permit',
-        hero_pill_property_tax: 'Real Property Tax',
-        hero_pill_health: 'Health Facilities',
-        hero_pill_travel: 'Fun & Adventure',
-        hero_cta_browse_services: 'Browse All Services',
-        hero_cta_contact: 'Contact Us',
-      },
-    };
+    const stringsCache = {};
 
     function fetchLocaleStrings(lang) {
       if (stringsCache[lang]) return Promise.resolve(stringsCache[lang]);
@@ -1043,9 +1017,15 @@ document.addEventListener('DOMContentLoaded', () => {
       currentLang = lang;
       storeLang(lang);
       document.documentElement.setAttribute('lang', lang);
-      fetchLocaleStrings(lang).then(function (strings) {
-        applyStrings(strings, lang, metaCache[lang]);
-      });
+      if (lang === 'en') {
+        // No fetch, no DOM patching: the markup already renders this text.
+        // Just make sure any notice from a previous locale is gone.
+        updateLocaleNotice('en', metaCache.en);
+      } else {
+        fetchLocaleStrings(lang).then(function (strings) {
+          applyStrings(strings, lang, metaCache[lang]);
+        });
+      }
       switchers.forEach(function (sw) {
         const btn = sw.querySelector('.lang-toggle-btn');
         const codeEl = sw.querySelector('.lang-toggle-code');
@@ -1092,11 +1072,18 @@ document.addEventListener('DOMContentLoaded', () => {
           // focusable, so a screen reader can reach it and announce that the
           // language is coming rather than skipping past it silently.
           if (opt.getAttribute('aria-disabled') === 'true') return;
-          applyLang(
-            opt.getAttribute('data-lang'),
-            opt.getAttribute('data-lang-label'),
-            opt.getAttribute('data-lang-code')
-          );
+          const lang = opt.getAttribute('data-lang');
+          if (lang === 'en' && currentLang !== 'en') {
+            // Restoring English DOM state from a translated page means
+            // re-rendering the original markup, not patching every
+            // translated node back by hand from a second copy of the text —
+            // the page itself is the English source of truth, and a reload
+            // can't drift out of sync as more pages pick up data-i18n tags.
+            storeLang('en');
+            window.location.reload();
+            return;
+          }
+          applyLang(lang, opt.getAttribute('data-lang-label'), opt.getAttribute('data-lang-code'));
           closeMenu(sw);
           btn.focus();
         });
