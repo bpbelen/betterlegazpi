@@ -1,23 +1,97 @@
 {
-  "_schema_version": "1.0",
+  "_schema_version": "2.0.0",
   "_sources": [
-    "Department of Health (DOH) National Health Facility Registry (NHFR) 2026",
-    "PhilHealth List of Accredited YAKAP Clinics with Available GAMOT Prescription for CY 2026 (Updated July 31, 2026)",
-    "Legazpi City Health Office (CHO) Barangay Health Network & PSA 2024 Population Registry"
+    {
+      "publisher": "Department of Health",
+      "title": "National Health Facility Registry (NHFR)",
+      "as_of": "2026",
+      "url": "https://nhfr.doh.gov.ph/"
+    },
+    {
+      "publisher": "PhilHealth",
+      "title": "List of Accredited YAKAP Clinics with Available GAMOT Prescription for CY 2026",
+      "as_of": "2026-07-31",
+      "url": "https://www.philhealth.gov.ph/"
+    },
+    {
+      "publisher": "Legazpi City Health Office",
+      "title": "Barangay Health Network directory, with PSA 2024 population registry",
+      "as_of": "2024",
+      "url": "https://legazpi.gov.ph/"
+    },
+    {
+      "publisher": "Department of Health – Bicol Center for Health Development",
+      "title": "Certified Animal Bite Treatment Centers",
+      "as_of": "2026-08-29",
+      "url": "https://bicol.doh.gov.ph/certified-animal-bite-treatment-centers/"
+    },
+    {
+      "publisher": "Department of Health – Health Facilities and Services Regulatory Bureau",
+      "title": "ist of Licensed Ambulatory Surgical Clinics (as of June 30, 2026)",
+      "as_of": "2026-06-30",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQmUU2oMSgAYZojzn5040H3Om5vckQiWCKCMNsD7AoxQCbxDPuDoimifznf8ZZuNkyXxexaAjwLhvpo/pubhtml"
+    },
+    {
+      "publisher": "Department of Health – Health Facilities and Services Regulatory Bureau",
+      "title": "List of Licensed Birthing Home Facilities (as of March 31, 2026)",
+      "as_of": "2026-03-31",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwHeUBQvFrhdcIyes8vWGB3Mt_v8Fl_sj4iEilHbh5FJIqEs6CxY77JqirYuLSaKwM0NqqtEiTZnTi/pubhtml"
+    },
+    {
+      "publisher": "Department of Health – Health Facilities and Services Regulatory Bureau",
+      "title": "List of Licensed Free-Standing Blood Service Facilities (as of June 30, 2025)",
+      "as_of": "2025-06-30",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRdH6frusJM0WBHrG8FXCVBlEg_72kni5ACecslSJBHn1QqVkas5WxY6b0ehZDNhHJ0uRBnJ0R_JX_s/pubhtml"
+    },
+    {
+      "publisher": "Department of Health – Health Facilities and Services Regulatory Bureau",
+      "title": "List of Licensed Cancer Treatment Facility ( as of June 30, 2026)",
+      "as_of": "2026-06-30",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vT-TyFkys15FYNRCuWzbL8cjOV4Z6CITnuiH1Y_a8njw9c6QtsbDOsGCR4uLfkqinikbfZmt2_1sIsf/pubhtml"
+    },
+    {
+      "publisher": "Department of Health – Health Facilities and Services Regulatory Bureau",
+      "title": "List of Licensed Clinical Laboratories ( as of March 31, 2026)",
+      "as_of": "2026-03-31",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgHqO86ff92RfVCSUH1wFXLBYqm9uQLB64EelB1U6fizGWb0LufoFDSN41JvweCHRAJx3B0KLo2Y7I/pubhtml"
+    },
+    {
+      "publisher": "Department of Health – Health Facilities and Services Regulatory Bureau",
+      "title": "List of Licensed Free-Standing Dialysis Clinics (as of June 30, 2026)",
+      "as_of": "2026-06-30",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vR0T_5LKHV8soNilfnxsjd5ImQ_CzB9MFYJPH2jHOyoxIVT7Kz2guLYeKiAliOCezKj-7su307sB4an/pubhtml"
+    },
+    {
+      "publisher": "Department of Health – Health Facilities and Services Regulatory Bureau",
+      "title": "List of Accredited Drug Testing Laboratories (as of March 31, 2026)",
+      "as_of": "2026-03-31",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTnhRA0Tgo50k6ecFeKQNiOT8GMoDSkA4BVjOVNx9fUC9gMjcXsZF1dzCNXHZcJy74Ry6Zdr5SRw6os/pubhtml"
+    },
+    {
+      "publisher": "Department of Health – Health Facilities and Services Regulatory Bureau",
+      "title": "List of Licensed Government and Private Hospitals (as of June 30, 2026)",
+      "as_of": "2026-06-30",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSzVqrbHHGuOuouvS9WR2un2Q_AZ4SEw5x5F9npaW9xFtV0OV0T70_-NybWKJUTpRS2wiCk9VH5cxMV/pubhtml"
+    }
   ],
   "city": "City of Legazpi",
   "province": "Albay",
   "region": "Region V - Bicol Region",
   "summary_counts": {
-    "total": 88,
+    "total": 120,
     "hospitals": 8,
     "yakap_accredited": 13,
     "super_health_centers": 1,
-    "birthing_homes": 3,
-    "laboratories": 2,
+    "birthing_homes": 13,
+    "laboratories": 15,
+    "dialysis_centers": 3,
+    "drug_testing_laboratories": 3,
+    "ambulatory_surgical_clinics": 1,
+    "blood_service_facilities": 1,
+    "animal_bite_centers": 3,
     "barangay_health_stations": 70,
-    "government_owned": 80,
-    "private_owned": 8
+    "government_owned": 81,
+    "private_owned": 39
   },
   "facilities": [
     {
@@ -45,7 +119,9 @@
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": true,
         "yakap_validity": "2026-12-31",
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "is_abtc_certified": true,
+        "abtc_validity": "2027-01-21"
       },
       "services": [
         "24/7 Emergency",
@@ -55,7 +131,8 @@
         "Pediatrics & OB-GYN",
         "Oncology",
         "Comprehensive Laboratory & Radiology",
-        "Pharmacy"
+        "Pharmacy",
+        "Animal Bite Treatment"
       ],
       "emergency_24_7": true,
       "coordinates": {
@@ -88,7 +165,8 @@
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": false,
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "hfsrb_as_of": "2026-06-30"
       },
       "services": [
         "24/7 Emergency",
@@ -112,7 +190,7 @@
       "category": "Hospital",
       "type": "Level 2 General Hospital",
       "ownership": "Private",
-      "doh_code": "2071",
+      "doh_code": "374",
       "address": {
         "street": "Peñaranda Street",
         "building": "",
@@ -131,7 +209,8 @@
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": true,
         "yakap_validity": "2026-12-31",
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "hfsrb_as_of": "2026-06-30"
       },
       "services": [
         "24/7 Emergency",
@@ -140,7 +219,8 @@
         "Maternity & Child Care",
         "Surgical Services",
         "Clinical Laboratory",
-        "Pharmacy"
+        "Pharmacy",
+        "Drug Testing"
       ],
       "emergency_24_7": true,
       "coordinates": {
@@ -155,7 +235,7 @@
       "category": "Hospital",
       "type": "Level 2 General Hospital",
       "ownership": "Private",
-      "doh_code": "2105",
+      "doh_code": "390",
       "address": {
         "street": "Imperial Court Subdivision, Rizal Street",
         "building": "",
@@ -174,7 +254,8 @@
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": true,
         "yakap_validity": "2026-12-31",
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "hfsrb_as_of": "2026-06-30"
       },
       "services": [
         "24/7 Emergency",
@@ -183,7 +264,8 @@
         "General Surgery & OB-GYN",
         "Pediatrics",
         "Diagnostic Ultrasound & X-Ray",
-        "Pharmacy"
+        "Pharmacy",
+        "Cancer Treatment"
       ],
       "emergency_24_7": true,
       "coordinates": {
@@ -217,7 +299,8 @@
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": true,
         "yakap_validity": "2026-12-31",
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "hfsrb_as_of": "2026-06-30"
       },
       "services": [
         "24/7 Emergency",
@@ -258,7 +341,10 @@
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": false,
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "hfsrb_as_of": "2026-06-30",
+        "is_abtc_certified": true,
+        "abtc_validity": "2026-04-11"
       },
       "services": [
         "24/7 Emergency",
@@ -267,13 +353,15 @@
         "Laboratory Services",
         "Physical Therapy & Rehab",
         "Outpatient Specialties",
-        "Pharmacy"
+        "Pharmacy",
+        "Animal Bite Treatment"
       ],
       "emergency_24_7": true,
       "coordinates": {
         "lat": 13.1418,
         "lng": 123.7412
-      }
+      },
+      "doh_code": "4999"
     },
     {
       "id": "fac-hosp-007",
@@ -299,7 +387,8 @@
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": false,
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "hfsrb_as_of": "2026-06-30"
       },
       "services": [
         "Emergency Care",
@@ -312,7 +401,8 @@
       "coordinates": {
         "lat": 13.1388,
         "lng": 123.7365
-      }
+      },
+      "doh_code": "402"
     },
     {
       "id": "fac-hosp-008",
@@ -338,7 +428,8 @@
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": false,
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "hfsrb_as_of": "2026-06-30"
       },
       "services": [
         "Emergency Care",
@@ -351,7 +442,8 @@
       "coordinates": {
         "lat": 13.1432,
         "lng": 123.751
-      }
+      },
+      "doh_code": "4308"
     },
     {
       "id": "fac-yakap-001",
@@ -423,20 +515,23 @@
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": true,
         "yakap_validity": "2026-12-31",
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "hfsrb_as_of": "2026-03-31"
       },
       "services": [
         "PhilHealth YAKAP Konsulta Package",
         "GAMOT Prescription Dispensing",
         "General Medical Consultation",
         "Diagnostic Laboratory",
-        "Preventive Health Checkups"
+        "Preventive Health Checkups",
+        "Clinical Laboratory"
       ],
       "emergency_24_7": false,
       "coordinates": {
         "lat": 13.1425,
         "lng": 123.746
-      }
+      },
+      "doh_code": "54937"
     },
     {
       "id": "fac-yakap-003",
@@ -504,19 +599,23 @@
         "doh_license_validity": "2026-12-31",
         "is_yakap_accredited": true,
         "yakap_validity": "2026-12-31",
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "hfsrb_as_of": "2026-03-31"
       },
       "services": [
         "PhilHealth YAKAP Konsulta Provider",
         "Occupational Health & Pre-Employment Exams",
         "Diagnostic Laboratory Tests",
-        "Executive Health Checkups"
+        "Executive Health Checkups",
+        "Clinical Laboratory",
+        "Drug Testing"
       ],
       "emergency_24_7": false,
       "coordinates": {
         "lat": 13.1402,
         "lng": 123.7525
-      }
+      },
+      "doh_code": "8924"
     },
     {
       "id": "fac-shc-001",
@@ -3555,6 +3654,1034 @@
         "Barangay Health Worker (BHW) Outreach"
       ],
       "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-003",
+      "name": "Albay Diagnostic Laboratory,inc.",
+      "short_name": "Albay Diagnostic Laboratory,inc.",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "39640",
+      "address": {
+        "street": "Costa Verde Bldg., EMs Bo. East, Rizal St., Legazpi City",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9198330720, 7327418; '09152780255",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-004",
+      "name": "Bicol Region General Hospital and Geriatric Medical Center (bicol Skin Clinic)",
+      "short_name": "Bicol Region General Hospital and Geriatric Medical Center (bicol Skin Clinic)",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "55011",
+      "address": {
+        "street": "Rizal Street, Brgy. 1, Em’s Barrio, Legazpi City",
+        "building": "",
+        "barangay": "Brgy. 1",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9983327466",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-005",
+      "name": "BMSC Medical Imaging Center",
+      "short_name": "BMSC Medical Imaging Center",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "39646",
+      "address": {
+        "street": "O&E Bldg., Vinzon St., Old Albay, Legazpi City",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "0908 9496334; '09488727562",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-006",
+      "name": "Healthub Diagnostic Laboratory",
+      "short_name": "Healthub Diagnostic Laboratory",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "39676",
+      "address": {
+        "street": "Lakandula Drive, Brgy. 40, Cruzada, Legazpi City",
+        "building": "",
+        "barangay": "Brgy. 40",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "09171260361/09193453458",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-007",
+      "name": "Ibalong Medical Center",
+      "short_name": "Ibalong Medical Center",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "39658",
+      "address": {
+        "street": "Rizal St., Brgy. 15, Legazpi City, Albay",
+        "building": "",
+        "barangay": "Brgy. 15",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9175702551",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-008",
+      "name": "Medical Mission Group Multipurpose Cooperative-Albay (MMG-Albay)",
+      "short_name": "Medical Mission Group Multipurpose Cooperative-Albay (MMG-Albay)",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "39675",
+      "address": {
+        "street": "Lot-4-B, bLK. 3, Kapantawan. Legazpi City",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9175176568",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory", "Drug Testing"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-009",
+      "name": "Rapid Global Medical Diagnostic, Inc.",
+      "short_name": "Rapid Global Medical Diagnostic, Inc.",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "37861",
+      "address": {
+        "street": "2/F, Long Se Bldg., Rizal St., Barangay 24, Legazpi City",
+        "building": "",
+        "barangay": "Barangay 24",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9988626985",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory", "Drug Testing"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-010",
+      "name": "Sacred Heart Clinic Legazpi City, Inc.",
+      "short_name": "Sacred Heart Clinic Legazpi City, Inc.",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "39678",
+      "address": {
+        "street": "114 Peñaranda St., Oro Site, Legazpi City",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9175968127",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory", "Drug Testing"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-011",
+      "name": "San Antonio Diagnostic Laboratory, Inc.",
+      "short_name": "San Antonio Diagnostic Laboratory, Inc.",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "39657",
+      "address": {
+        "street": "G/F AMWSLAI Bldg (INFRONT OF AGO HOSPITAL) Rizal Street, Old Albay, Legazpi City, Albay",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "09519263960/( 054) 8306735",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-012",
+      "name": "St Martin Anti-Rabies Vaccine Medical and Diagnostic Clinic",
+      "short_name": "St Martin Anti-Rabies Vaccine Medical and Diagnostic Clinic",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "54939",
+      "address": {
+        "street": "Ground Floor Skd Building, Imelda Roces Avenue, Brgy. 37 – Bitano, Legazpi City",
+        "building": "",
+        "barangay": "Brgy. 37 – Bitano",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9369726782",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-013",
+      "name": "Vizconn Diagnostic Laboratory",
+      "short_name": "Vizconn Diagnostic Laboratory",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "37873",
+      "address": {
+        "street": "R. Serrano St., Barangay 7 Baño, Legazpi City",
+        "building": "",
+        "barangay": "Barangay 7 Baño",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9177106520",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-014",
+      "name": "Washington Medical Clinic and Diagnostic Laboratory",
+      "short_name": "Washington Medical Clinic and Diagnostic Laboratory",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Private",
+      "doh_code": "39815",
+      "address": {
+        "street": "G/F AME BUILDING, RIZAL STREET, BRGY. 10 CABUGAO",
+        "building": "",
+        "barangay": "BRGY. 10 CABUGAO",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "09993751422 / 09173286690",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory", "Drug Testing"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-lab-015",
+      "name": "Bicol-South Luzon Sub National Reference Laboratory",
+      "short_name": "Bicol-South Luzon Sub National Reference Laboratory",
+      "category": "Diagnostic Laboratory",
+      "type": "DOH-licensed Clinical Laboratory",
+      "ownership": "Government",
+      "doh_code": "38980",
+      "address": {
+        "street": "DOH-CHD V Compound, Bagtang Road, Legazpi City, Albay",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 8201731 loc. 5561",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Clinical Laboratory"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-004",
+      "name": "Abion Birthing Center",
+      "short_name": "Abion Birthing Center",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": null,
+      "address": {
+        "street": "Purok 4, Arimbay, Legazpi City",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9271917821",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-005",
+      "name": "AMEC Birthing Center",
+      "short_name": "AMEC Birthing Center",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": "39817",
+      "address": {
+        "street": "Rizal St., Pinaric, Legazpi City",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 820-5877",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-006",
+      "name": "Che Birthing Home",
+      "short_name": "Che Birthing Home",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": "37854",
+      "address": {
+        "street": "Zone 3 Bitano, Legazpi City",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9205551411",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-007",
+      "name": "GDB Birthing Home",
+      "short_name": "GDB Birthing Home",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": "32472",
+      "address": {
+        "street": "Purok 6, bigaa",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9478791984",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-008",
+      "name": "House of Maternity and Family Planning Clinic",
+      "short_name": "House of Maternity and Family Planning Clinic",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": "38010",
+      "address": {
+        "street": "Lot 29 Blk 5, Sol's Subdivision Bitano, Legazpi City",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "8742-13-75",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-009",
+      "name": "Lana's Birthing Home",
+      "short_name": "Lana's Birthing Home",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": "32474",
+      "address": {
+        "street": "P-2 Brgy.Homapon, Legazpi City",
+        "building": "",
+        "barangay": "Brgy.Homapon",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "09068425313,",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-010",
+      "name": "Mary's Angel Birthing Home",
+      "short_name": "Mary's Angel Birthing Home",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": "32479",
+      "address": {
+        "street": "Block 14, Lot 14, Ibalong Village, Brgy. 56, Taysan, Legazpi City",
+        "building": "",
+        "barangay": "Brgy. 56",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9272866246",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-011",
+      "name": "Tanchuling College, Inc. Birthing and Wellness Center",
+      "short_name": "Tanchuling College, Inc. Birthing and Wellness Center",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": "38011",
+      "address": {
+        "street": "Rizal St., Brgy. 24, Legazpi City",
+        "building": "",
+        "barangay": "Brgy. 24",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9564267591",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-012",
+      "name": "Zion Albay Birthing Home",
+      "short_name": "Zion Albay Birthing Home",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": "43272",
+      "address": {
+        "street": "F. Aquende Drive, Brgy. 7, Bańo, Legazpi City",
+        "building": "",
+        "barangay": "Brgy. 7",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "968246459",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-birth-013",
+      "name": "Zion-Rawis Birthing Home",
+      "short_name": "Zion-Rawis Birthing Home",
+      "category": "Birthing & Lying-in Clinic",
+      "type": "DOH-licensed Birthing Home Facility",
+      "ownership": "Private",
+      "doh_code": null,
+      "address": {
+        "street": "Purok 4, Brgy. 42, Rawis, Legazpi City",
+        "building": "",
+        "barangay": "Brgy. 42",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "9175009428",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Birthing & Maternity Care"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-dialysis-001",
+      "name": "Bicol Hemodialysis Center, Corp.",
+      "short_name": "Bicol Hemodialysis Center, Corp.",
+      "category": "Dialysis Center",
+      "type": "DOH-licensed Dialysis Clinic",
+      "ownership": "Private",
+      "doh_code": "42507",
+      "address": {
+        "street": "2/F Medical Arts Bldg., Emhi, Don Juan Estevez St.., Guevarra Subd. Legazpi City",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-06-30",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Hemodialysis"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-dialysis-002",
+      "name": "Nephrology Center of Bicol",
+      "short_name": "Nephrology Center of Bicol",
+      "category": "Dialysis Center",
+      "type": "DOH-licensed Dialysis Clinic",
+      "ownership": "Private",
+      "doh_code": "42505",
+      "address": {
+        "street": "Miranda Plaza Bldg., Rizal St. Sagpon, Legazpi, Albay",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-06-30",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Hemodialysis"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-dialysis-003",
+      "name": "Saint Mary Kidney Care, Inc.",
+      "short_name": "Saint Mary Kidney Care, Inc.",
+      "category": "Dialysis Center",
+      "type": "DOH-licensed Dialysis Clinic",
+      "ownership": "Private",
+      "doh_code": "DOH042504",
+      "address": {
+        "street": "Purok 2, Penaranda St., Brgy.33",
+        "building": "",
+        "barangay": "Brgy.33",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-06-30",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Hemodialysis"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-asc-001",
+      "name": "Leceyemed, Inc.",
+      "short_name": "Leceyemed, Inc.",
+      "category": "Ambulatory Surgical Clinic",
+      "type": "DOH-licensed Ambulatory Surgical Clinic (ASC)",
+      "ownership": "Private",
+      "doh_code": "44374",
+      "address": {
+        "street": "Landco Business Park, Capantawan, Legazpi City, Albay",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "0908-8981200",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-06-30",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Ambulatory Surgery", "Ophthalmologic"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-blood-001",
+      "name": "Philippine Red Cross Albay - Legazpi City Chapter",
+      "short_name": "Philippine Red Cross Albay - Legazpi City Chapter",
+      "category": "Blood Service Facility",
+      "type": "DOH-licensed Blood Service Facility (BSF)",
+      "ownership": "Private",
+      "doh_code": "47273",
+      "address": {
+        "street": "Gov. Locsin Corner Fr. Jl Bates St., Brgy. 16, Legazpi City",
+        "building": "",
+        "barangay": "Brgy. 16",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "63 52 742 2199",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2025-06-30",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Blood Services"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-dtl-001",
+      "name": "Bicol Drug Testing & Neuro Psychiatric Laboratory",
+      "short_name": "Bicol Drug Testing & Neuro Psychiatric Laboratory",
+      "category": "Drug Testing Laboratory",
+      "type": "DOH-licensed Drug Testing Laboratories (DTL)",
+      "ownership": "Private",
+      "doh_code": null,
+      "address": {
+        "street": "31 Capt. F. Aquende Drive, Old Albay,, Brgy. 7, Legazpi City, Albay",
+        "building": "",
+        "barangay": "Brgy. 7",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "052010593",
+        "mobile": "09162827909",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Drug Testing"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-dtl-002",
+      "name": "Jhunrose Drug Testing and Medical Services",
+      "short_name": "Jhunrose Drug Testing and Medical Services",
+      "category": "Drug Testing Laboratory",
+      "type": "DOH-licensed Drug Testing Laboratories (DTL)",
+      "ownership": "Private",
+      "doh_code": null,
+      "address": {
+        "street": "Balintawak Street, Washington, Albay District, BGY. 16 - KAWIT-EAST WASHINGTON DRIVE (POB.), LEGAZPI CITY (Capital), ALBAY 4500",
+        "building": "",
+        "barangay": "BGY. 16 - KAWIT-EAST WASHINGTON DRIVE (POB.)",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "{052}7420291",
+        "mobile": "09258971012",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Drug Testing"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-dtl-003",
+      "name": "MRR Supreme Bio-Lab",
+      "short_name": "MRR Supreme Bio-Lab",
+      "category": "Drug Testing Laboratory",
+      "type": "DOH-licensed Drug Testing Laboratories (DTL)",
+      "ownership": "Private",
+      "doh_code": null,
+      "address": {
+        "street": "14 Balintawak St., Albay District, BGY. 16 - KAWIT-EAST WASHINGTON DRIVE (POB.), LEGAZPI CITY (Capital), ALBAY 4500",
+        "building": "",
+        "barangay": "BGY. 16 - KAWIT-EAST WASHINGTON DRIVE (POB.)",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "7423747",
+        "mobile": "09202865313",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Drug Testing"],
+      "emergency_24_7": false
+    },
+    {
+      "id": "fac-abtc-001",
+      "name": "Rabvaxx Anti-Rabies Center",
+      "short_name": "Rabvaxx Anti-Rabies Center",
+      "category": "Animal Bite Treatment Center",
+      "type": "DOH-certified Animal Bite Treatment Center",
+      "ownership": "Private",
+      "doh_code": null,
+      "address": {
+        "street": "N/A",
+        "building": "",
+        "barangay": "",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "N/A",
+        "mobile": "N/A",
+        "email": "N/A"
+      },
+      "accreditations": {
+        "is_doh_licensed": true,
+        "is_abtc_certified": true,
+        "abtc_validity": "2027-03-25",
+        "is_yakap_accredited": false,
+        "philhealth_accredited": false
+      },
+      "services": ["Animal Bite Treatment", "Anti-Rabies Vaccination"],
+      "emergency_24_7": false
+    }
+  ],
+  "_data_notes": [
+    {
+      "facility_id": "fac-hosp-003",
+      "type": "code-conflict",
+      "note": "DOH registry code recorded locally as 2071; DOH HFSRB Hospital list (as of 2026-06-30) publishes NHFR code 374. The registry value takes precedence and is shown."
+    },
+    {
+      "facility_id": "fac-hosp-004",
+      "type": "code-conflict",
+      "note": "DOH registry code recorded locally as 2105; DOH HFSRB Hospital list (as of 2026-06-30) publishes NHFR code 390. The registry value takes precedence and is shown."
+    },
+    {
+      "facility_id": "fac-birth-004",
+      "type": "missing-code",
+      "note": "The DOH HFSRB Birthing Home Facility list (as of 2026-03-31) publishes no NHFR code for this facility."
+    },
+    {
+      "facility_id": "fac-birth-013",
+      "type": "missing-code",
+      "note": "The DOH HFSRB Birthing Home Facility list (as of 2026-03-31) publishes no NHFR code for this facility."
+    },
+    {
+      "facility_id": "fac-dialysis-001",
+      "type": "contact-unlisted",
+      "note": "DOH does not publish contact details for this facility."
+    },
+    {
+      "facility_id": "fac-dialysis-002",
+      "type": "contact-unlisted",
+      "note": "DOH does not publish contact details for this facility."
+    },
+    {
+      "facility_id": "fac-dialysis-003",
+      "type": "contact-unlisted",
+      "note": "DOH does not publish contact details for this facility."
+    },
+    {
+      "facility_id": "fac-dtl-001",
+      "type": "missing-code",
+      "note": "The DOH HFSRB Drug Testing Laboratories (DTL) list (as of 2026-03-31) publishes no NHFR code for this facility."
+    },
+    {
+      "facility_id": "fac-dtl-002",
+      "type": "missing-code",
+      "note": "The DOH HFSRB Drug Testing Laboratories (DTL) list (as of 2026-03-31) publishes no NHFR code for this facility."
+    },
+    {
+      "facility_id": "fac-dtl-003",
+      "type": "missing-code",
+      "note": "The DOH HFSRB Drug Testing Laboratories (DTL) list (as of 2026-03-31) publishes no NHFR code for this facility."
+    },
+    {
+      "facility_id": "fac-abtc-001",
+      "type": "contact-unlisted",
+      "note": "DOH does not publish contact details for this facility."
+    },
+    {
+      "facility_id": "fac-hosp-006",
+      "type": "lapsed-certification",
+      "note": "DOH Bicol CHD lists this animal-bite treatment centre certification as expiring April 11, 2026, which has passed. Confirm with the facility before relying on it."
+    },
+    {
+      "facility_id": "fac-hosp-001",
+      "type": "jurisdiction-conflict",
+      "note": "DOH registers this facility under Daraga, Albay (both the HFSRB hospital list and the DOH Bicol CHD animal-bite centre list). It is retained here because it operates on Rizal Street and serves Legazpi City."
     }
   ]
 }

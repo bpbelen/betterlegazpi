@@ -1,0 +1,39 @@
+{
+  "generated": "2026-08-29",
+  "note": "Name-similar pairs that were NOT merged automatically. Confirm each is a distinct facility, or merge by hand.",
+  "pairs": [
+    {
+      "hfsrb_name": "HEALTHUB DIAGNOSTIC LABORATORY",
+      "hfsrb_type": "Clinical Laboratory",
+      "hfsrb_code": "39676",
+      "existing_name": "Albay Diagnostic Laboratory,inc.",
+      "existing_id": "fac-lab-003",
+      "similarity": 0.877,
+      "hfsrb_address": "Lakandula Drive, Brgy. 40, Cruzada, Legazpi City",
+      "existing_address": "Costa Verde Bldg., EMs Bo. East, Rizal St., Legazpi City",
+      "action_taken": "added as a new record; confirm this is not a duplicate"
+    },
+    {
+      "hfsrb_name": "ZION-RAWIS BIRTHING HOME",
+      "hfsrb_type": "Birthing Home Facility",
+      "hfsrb_code": "",
+      "existing_name": "Zion Albay Birthing Home",
+      "existing_id": "fac-birth-012",
+      "similarity": 0.833,
+      "hfsrb_address": "Purok 4, Brgy. 42, Rawis, Legazpi City",
+      "existing_address": "F. Aquende Drive, Brgy. 7, Bańo, Legazpi City",
+      "action_taken": "added as a new record; confirm this is not a duplicate"
+    },
+    {
+      "hfsrb_name": "PHILIPPINE RED CROSS ALBAY - LEGAZPI CITY CHAPTER",
+      "hfsrb_type": "Blood Service Facility (BSF)",
+      "hfsrb_code": "47273",
+      "existing_name": "Philippine Red Cross - Albay Chapter Blood Service Facility",
+      "existing_id": "fac-lab-002",
+      "similarity": 0.654,
+      "hfsrb_address": "Gov. Locsin Corner Fr. Jl Bates St., Brgy. 16, Legazpi City",
+      "existing_address": "Landco Business Park",
+      "action_taken": "added as a new record; confirm this is not a duplicate"
+    }
+  ]
+}
