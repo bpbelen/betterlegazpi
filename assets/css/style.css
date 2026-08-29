@@ -10287,7 +10287,11 @@ a.a11y-contact-item:hover i {
 }
 
 .facility-card-body {
-  flex: 1;
+  /* The body must not absorb the slack in an equal-height grid row, or the
+     details disclosure gets pushed away from the services it belongs to.
+     .facility-card-footer takes it instead via margin-top: auto, so the
+     disclosure stays under the content and the actions stay at the bottom. */
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: 12px;

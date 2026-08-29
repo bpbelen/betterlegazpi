@@ -6,7 +6,12 @@
 (function () {
   'use strict';
 
-  const PAGE_SIZE = 12;
+  // Three cards on arrival, matching the councilor directory on the government
+  // page, so the whole control strip and the sources section stay in reach
+  // without scrolling past a wall of results. Each "show more" reveals a
+  // larger batch, because stepping 120 facilities three at a time would not.
+  const INITIAL_VISIBLE = 3;
+  const LOAD_MORE_STEP = 12;
   let allFacilities = [];
   let filteredFacilities = [];
   let summaryCounts = {};
@@ -347,7 +352,10 @@
 
     if (DOM.emptyState) DOM.emptyState.style.display = 'none';
 
-    const visibleItems = filteredFacilities.slice(0, currentPage * PAGE_SIZE);
+    const visibleItems = filteredFacilities.slice(
+      0,
+      INITIAL_VISIBLE + (currentPage - 1) * LOAD_MORE_STEP
+    );
 
     let html = '';
     visibleItems.forEach((fac) => {
