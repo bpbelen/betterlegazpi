@@ -649,7 +649,9 @@
         total = allFacilities.filter((f) => f.category === category).length;
       }
 
-      label.textContent = total;
+      // The parentheses are written here rather than in the markup, where the
+      // formatter would wrap them onto their own lines and render as "( 8 )".
+      label.textContent = `(${total})`;
       if (total === 0 && category !== 'all') {
         pill.hidden = true;
       }
@@ -683,7 +685,10 @@
     if (DOM.referencesList) {
       DOM.referencesList.innerHTML = dataSources
         .map((source) => {
-          const asOf = source.as_of ? ` (${escapeHtml(source.as_of)})` : '';
+          // HFSRB titles already end in "(as of <date>)", so repeating the
+          // date would read twice in the same citation.
+          const asOf =
+            source.as_of && !/as of/i.test(source.title) ? ` (${escapeHtml(source.as_of)})` : '';
           const link = source.url
             ? ` <a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.url)}</a>`
             : '';

@@ -10476,6 +10476,15 @@ button.service-pill-more:hover {
   transform: rotate(180deg);
 }
 
+/* An author `display` value outranks the UA stylesheet's [hidden] rule, so
+   every element that ships hidden and sets its own display needs this --
+   without it the details panel renders open on load. */
+.facility-details[hidden],
+.health-cat-pill[hidden],
+.health-references-panel[hidden] {
+  display: none;
+}
+
 .facility-details {
   display: flex;
   flex-direction: column;
