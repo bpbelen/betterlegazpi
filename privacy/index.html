@@ -97,7 +97,9 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link"
+      ><span data-i18n="skip_to_content">Skip to main content</span></a
+    >
 
     <!-- Hotline Bar -->
     <div class="hotline-bar">
@@ -173,6 +175,68 @@
           </ul>
         </nav>
         <div class="header-actions">
+          <div class="lang-switcher">
+            <button
+              id="lang-toggle"
+              class="lang-toggle-btn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="lang-menu"
+              aria-label="Change language. Current language: English"
+              title="Change language"
+            >
+              <i class="bi bi-translate" aria-hidden="true"></i>
+              <span class="lang-toggle-code">EN</span>
+              <i class="bi bi-chevron-down lang-toggle-caret" aria-hidden="true"></i>
+            </button>
+            <ul class="lang-menu" id="lang-menu" role="menu" hidden>
+              <li role="none">
+                <button
+                  class="lang-option is-active"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="true"
+                  data-lang="en"
+                  data-lang-code="EN"
+                  data-lang-label="English"
+                >
+                  <span class="lang-option-name">English</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="fil"
+                  data-lang-code="FIL"
+                  data-lang-label="Filipino"
+                >
+                  <span class="lang-option-name">Filipino</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  aria-disabled="true"
+                  data-lang="bcl"
+                  data-lang-code="BIK"
+                  data-lang-label="Bikol"
+                >
+                  <span class="lang-option-name">Bikol</span>
+                  <span class="lang-option-soon">Coming soon</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
           <button
             id="theme-toggle"
             class="theme-toggle-btn"
@@ -227,10 +291,13 @@
         <div class="container">
           <div class="page-header-content">
             <span class="page-header-badge"
-              ><i class="bi bi-shield-lock"></i> <span>Privacy</span></span
+              ><i class="bi bi-shield-lock"></i>
+              <span data-i18n="privacy_badge">Privacy</span></span
             >
-            <h1>Privacy Policy</h1>
-            <p class="page-header-desc">How we collect, use, and protect your information</p>
+            <h1 data-i18n="privacy_title">Privacy Policy</h1>
+            <p class="page-header-desc" data-i18n="privacy_tagline">
+              How we collect, use, and protect your information
+            </p>
           </div>
         </div>
       </section>
@@ -262,7 +329,7 @@
             <!-- Main Content -->
             <article class="legal-article">
               <section id="introduction" class="legal-section">
-                <h2>Introduction</h2>
+                <h2 data-i18n="privacy_h1">Introduction</h2>
                 <p>
                   BetterLegazpi.org ("we," "us," or "our") is committed to protecting your privacy
                   and ensuring the security of your personal information. This Privacy Policy
@@ -284,7 +351,7 @@
               </section>
 
               <section id="legal-basis" class="legal-section">
-                <h2>Legal Basis for Processing</h2>
+                <h2 data-i18n="privacy_h2">Legal Basis for Processing</h2>
                 <p>
                   Under the Data Privacy Act of 2012, we process personal information based on the
                   following lawful criteria:
@@ -311,7 +378,7 @@
               </section>
 
               <section id="information-collected" class="legal-section">
-                <h2>Information We Collect</h2>
+                <h2 data-i18n="privacy_h3">Information We Collect</h2>
                 <p>
                   We collect minimal information necessary to operate this civic platform
                   effectively:
@@ -345,7 +412,7 @@
               </section>
 
               <section id="how-we-use" class="legal-section">
-                <h2>How We Use Your Information</h2>
+                <h2 data-i18n="privacy_h4">How We Use Your Information</h2>
                 <p>We use the information we collect for the following purposes:</p>
                 <ul class="legal-list">
                   <li>To respond to your inquiries and feedback</li>
@@ -358,7 +425,7 @@
               </section>
 
               <section id="cookies" class="legal-section">
-                <h2>Cookies and Analytics</h2>
+                <h2 data-i18n="privacy_h5">Cookies and Analytics</h2>
                 <p>We use cookies and similar technologies to enhance your browsing experience:</p>
 
                 <h3>What This Site Stores</h3>
@@ -437,7 +504,7 @@
               </section>
 
               <section id="data-sharing" class="legal-section">
-                <h2>Data Sharing and Disclosure</h2>
+                <h2 data-i18n="privacy_h6">Data Sharing and Disclosure</h2>
                 <p>
                   We do not sell, trade, or rent your personal information to third parties. We may
                   share information only in the following circumstances:
@@ -464,7 +531,7 @@
               </section>
 
               <section id="data-security" class="legal-section">
-                <h2>Data Security</h2>
+                <h2 data-i18n="privacy_h7">Data Security</h2>
                 <p>
                   We implement appropriate technical and organizational measures to protect your
                   personal information, including:
@@ -484,7 +551,7 @@
               </section>
 
               <section id="data-retention" class="legal-section">
-                <h2>Data Retention</h2>
+                <h2 data-i18n="privacy_h8">Data Retention</h2>
                 <p>
                   We retain personal information only for as long as necessary to fulfill the
                   purposes outlined in this policy:
@@ -504,7 +571,7 @@
               </section>
 
               <section id="your-rights" class="legal-section">
-                <h2>Your Rights Under the Data Privacy Act</h2>
+                <h2 data-i18n="privacy_h9">Your Rights Under the Data Privacy Act</h2>
                 <p>
                   Under the Data Privacy Act of 2012, you have the following rights regarding your
                   personal information:
@@ -552,14 +619,14 @@
                   </h4>
                   <p>
                     To exercise any of these rights, please contact us at
-                    <a href="mailto:belenbrianmatthew@gmail.com">volunteer@betterlegazpi.org</a>. We
+                    <a href="mailto:volunteer@betterlegazpi.org">volunteer@betterlegazpi.org</a>. We
                     will respond to your request within 30 days as required by law.
                   </p>
                 </div>
               </section>
 
               <section id="childrens-privacy" class="legal-section">
-                <h2>Children's Privacy</h2>
+                <h2 data-i18n="privacy_h10">Children's Privacy</h2>
                 <p>
                   BetterLegazpi.org is a general audience website providing civic information. We do
                   not knowingly collect personal information from children under 18 years of age
@@ -568,13 +635,13 @@
                 <p>
                   If you are a parent or guardian and believe your child has provided us with
                   personal information, please contact us immediately at
-                  <a href="mailto:belenbrianmatthew@gmail.com">volunteer@betterlegazpi.org</a>, and
+                  <a href="mailto:volunteer@betterlegazpi.org">volunteer@betterlegazpi.org</a>, and
                   we will take steps to delete such information.
                 </p>
               </section>
 
               <section id="third-party" class="legal-section">
-                <h2>Third-Party Links</h2>
+                <h2 data-i18n="privacy_h11">Third-Party Links</h2>
                 <p>
                   Our website may contain links to external websites, including official government
                   portals and other resources. We are not responsible for the privacy practices or
@@ -587,7 +654,7 @@
               </section>
 
               <section id="changes" class="legal-section">
-                <h2>Changes to This Privacy Policy</h2>
+                <h2 data-i18n="privacy_h12">Changes to This Privacy Policy</h2>
                 <p>
                   We may update this Privacy Policy from time to time to reflect changes in our
                   practices, legal requirements, or for other operational reasons. When we make
@@ -604,14 +671,14 @@
               </section>
 
               <section id="contact" class="legal-section">
-                <h2>Contact Us</h2>
+                <h2 data-i18n="privacy_h13">Contact Us</h2>
                 <p>
                   If you have questions about this Privacy Policy, wish to exercise your data
                   privacy rights, or have concerns about how your information is handled, please
                   contact us:
                 </p>
                 <div class="legal-contact">
-                  <a href="mailto:belenbrianmatthew@gmail.com" class="contact-link"
+                  <a href="mailto:volunteer@betterlegazpi.org" class="contact-link"
                     ><i class="bi bi-envelope-fill"></i> <span>volunteer@betterlegazpi.org</span></a
                   >
                 </div>
@@ -730,8 +797,9 @@
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
             <div class="footer-actions">
-              <a href="mailto:belenbrianmatthew@gmail.com" class="footer-contribute">
-                <i class="bi bi-envelope-heart" aria-hidden="true"></i> Volunteer with us
+              <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+                <i class="bi bi-envelope-heart" aria-hidden="true"></i>
+                <span data-i18n="footer_volunteer_cta">Volunteer with us</span>
               </a>
               <a
                 href="https://github.com/bpbelen/betterlegazpi"
@@ -739,7 +807,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="bi bi-github" aria-hidden="true"></i> Contribute code with us
+                <i class="bi bi-github" aria-hidden="true"></i>
+                <span data-i18n="footer_contribute_code_cta">Contribute code with us</span>
               </a>
             </div>
             <div class="footer-partners">

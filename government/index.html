@@ -561,7 +561,9 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link"
+      ><span data-i18n="skip_to_content">Skip to main content</span></a
+    >
 
     <!-- Hotline Bar -->
     <div class="hotline-bar">
@@ -637,6 +639,68 @@
           </ul>
         </nav>
         <div class="header-actions">
+          <div class="lang-switcher">
+            <button
+              id="lang-toggle"
+              class="lang-toggle-btn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="lang-menu"
+              aria-label="Change language. Current language: English"
+              title="Change language"
+            >
+              <i class="bi bi-translate" aria-hidden="true"></i>
+              <span class="lang-toggle-code">EN</span>
+              <i class="bi bi-chevron-down lang-toggle-caret" aria-hidden="true"></i>
+            </button>
+            <ul class="lang-menu" id="lang-menu" role="menu" hidden>
+              <li role="none">
+                <button
+                  class="lang-option is-active"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="true"
+                  data-lang="en"
+                  data-lang-code="EN"
+                  data-lang-label="English"
+                >
+                  <span class="lang-option-name">English</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="fil"
+                  data-lang-code="FIL"
+                  data-lang-label="Filipino"
+                >
+                  <span class="lang-option-name">Filipino</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  aria-disabled="true"
+                  data-lang="bcl"
+                  data-lang-code="BIK"
+                  data-lang-label="Bikol"
+                >
+                  <span class="lang-option-name">Bikol</span>
+                  <span class="lang-option-soon">Coming soon</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
           <button
             id="theme-toggle"
             class="theme-toggle-btn"
@@ -691,10 +755,11 @@
         <div class="container">
           <div class="page-header-content">
             <span class="page-header-badge"
-              ><i class="bi bi-building-fill"></i> <span>Government</span></span
+              ><i class="bi bi-building-fill"></i>
+              <span data-i18n="gov_badge">Government</span></span
             >
-            <h1>Government Structure & Officials</h1>
-            <p class="page-header-desc">
+            <h1 data-i18n="gov_title">Government Structure & Officials</h1>
+            <p class="page-header-desc" data-i18n="gov_tagline">
               Meet the leadership, executive offices, and 70 barangays serving Legazpi City, Albay
             </p>
           </div>
@@ -707,12 +772,16 @@
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
             <span class="gov-section-badge"
-              ><i class="bi bi-star-fill"></i> <span>City Leadership</span></span
+              ><i class="bi bi-star-fill"></i>
+              <span data-i18n="gov_leadership_badge">City Leadership</span></span
             >
-            <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">
+            <h3
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+              data-i18n="gov_leadership_title"
+            >
               Executive Officials
             </h3>
-            <p style="color: var(--color-text-light)">
+            <p style="color: var(--color-text-light)" data-i18n="gov_leadership_lead">
               The executive officials leading Legazpi City's governance
             </p>
           </div>
@@ -783,12 +852,13 @@
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
             <span class="gov-section-badge"
-              ><i class="bi bi-people-fill"></i> <span>Legislative Branch</span></span
+              ><i class="bi bi-people-fill"></i>
+              <span data-i18n="gov_legislative_badge">Legislative Branch</span></span
             >
             <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">
               Sangguniang Panlungsod Members
             </h3>
-            <p style="color: var(--color-text-light)">
+            <p style="color: var(--color-text-light)" data-i18n="gov_legislative_lead">
               City Councilors crafting legislation, policies, and ordinances for Legazpi City
             </p>
           </div>
@@ -1001,10 +1071,16 @@
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
             <span class="gov-section-badge"
-              ><i class="bi bi-building-fill"></i> <span>Executive Branch</span></span
+              ><i class="bi bi-building-fill"></i>
+              <span data-i18n="gov_offices_badge">Executive Branch</span></span
             >
-            <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">Executive Offices</h3>
-            <p style="color: var(--color-text-light)">
+            <h3
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+              data-i18n="gov_offices_title"
+            >
+              Executive Offices
+            </h3>
+            <p style="color: var(--color-text-light)" data-i18n="gov_offices_lead">
               Directory and official contact details of Legazpi City government departments
             </p>
           </div>
@@ -1019,7 +1095,9 @@
               <div class="dept-card-icon"><i class="bi bi-shop"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Business Permits & Licensing (BPLO)</h4>
-                <p class="dept-card-desc">For business permits</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_business_permits">
+                  For business permits
+                </p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Asuncion C. Viñas (BPLO Head)</span
                 >
@@ -1036,7 +1114,9 @@
               <div class="dept-card-icon"><i class="bi bi-calculator-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Accounting Office (CAccO)</h4>
-                <p class="dept-card-desc">For city accounting & audit</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_accounting">
+                  For city accounting & audit
+                </p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Gloria E. Aringo, CPA (City Accountant)</span
                 >
@@ -1053,7 +1133,7 @@
               <div class="dept-card-icon"><i class="bi bi-briefcase-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Administrator's Office (CAO)</h4>
-                <p class="dept-card-desc">For city administration</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_admin">For city administration</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Grace R. Bachiller (City Administrator)</span
                 >
@@ -1070,7 +1150,9 @@
               <div class="dept-card-icon"><i class="bi bi-tree-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Agriculture Office (CAO)</h4>
-                <p class="dept-card-desc">For agriculture & fisheries</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_agriculture">
+                  For agriculture & fisheries
+                </p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Sheila R. Nas (City Agriculturist)</span
                 >
@@ -1087,7 +1169,7 @@
               <div class="dept-card-icon"><i class="bi bi-shield-shaded"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Anti-Drug Abuse Council (CADAC)</h4>
-                <p class="dept-card-desc">For anti-drug programs</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_antidrug">For anti-drug programs</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Debbie A. Baltasar (OIC)</span
                 >
@@ -1104,7 +1186,9 @@
               <div class="dept-card-icon"><i class="bi bi-house-door-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Assessor's Office (CAssO)</h4>
-                <p class="dept-card-desc">For property assessments</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_assessment">
+                  For property assessments
+                </p>
                 <span class="dept-card-head" style="opacity: 0.6"
                   ><i class="bi bi-person-fill"></i> Unlisted</span
                 >
@@ -1124,7 +1208,9 @@
               <div class="dept-card-icon"><i class="bi bi-file-earmark-person-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Civil Registrar's Office (CCRO)</h4>
-                <p class="dept-card-desc">For civil certificates</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_civil_registrar">
+                  For civil certificates
+                </p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Priscilla L. Galicia (City Civil
                   Registrar)</span
@@ -1142,7 +1228,7 @@
               <div class="dept-card-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Disaster Risk Reduction & Mgmt. (CDRRMO)</h4>
-                <p class="dept-card-desc">For disaster response</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_disaster">For disaster response</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Engr. Miladee N. Azur (CDRRMO Head)</span
                 >
@@ -1159,7 +1245,9 @@
               <div class="dept-card-icon"><i class="bi bi-building-fill-gear"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Engineering Office (CEO)</h4>
-                <p class="dept-card-desc">For building permits</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_building_permits">
+                  For building permits
+                </p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Engr. Clemente A. Ibo (City Engineer)</span
                 >
@@ -1176,7 +1264,9 @@
               <div class="dept-card-icon"><i class="bi bi-flower1"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Environment & Natural Resources (OCENR)</h4>
-                <p class="dept-card-desc">For environment & sanitation</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_environment">
+                  For environment & sanitation
+                </p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Engr. Linno Benju Q. Calleja (OIC)</span
                 >
@@ -1193,7 +1283,7 @@
               <div class="dept-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Health Office (CHO)</h4>
-                <p class="dept-card-desc">For public health services</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_health">For public health services</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Dr. Francis Gerald A. Gomez (OIC)</span
                 >
@@ -1213,7 +1303,7 @@
               <div class="dept-card-icon"><i class="bi bi-person-badge-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Human Resource Management (CHRMO)</h4>
-                <p class="dept-card-desc">For human resources</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_hr">For human resources</p>
                 <span class="dept-card-head" style="opacity: 0.6"
                   ><i class="bi bi-person-fill"></i> Unlisted</span
                 >
@@ -1230,7 +1320,7 @@
               <div class="dept-card-icon"><i class="bi bi-bank2"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Legal Office (CLO)</h4>
-                <p class="dept-card-desc">For legal services</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_legal">For legal services</p>
                 <span class="dept-card-head" style="opacity: 0.6"
                   ><i class="bi bi-person-fill"></i> Unlisted</span
                 >
@@ -1247,7 +1337,9 @@
               <div class="dept-card-icon"><i class="bi bi-clipboard-data-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Planning & Dev. Office (CPDO)</h4>
-                <p class="dept-card-desc">For urban planning & zoning</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_planning">
+                  For urban planning & zoning
+                </p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Arch. Joseph B. Esplana (CPDO
                   Coordinator)</span
@@ -1265,7 +1357,9 @@
               <div class="dept-card-icon"><i class="bi bi-people-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Social Welfare & Dev. (CSWDO)</h4>
-                <p class="dept-card-desc">For social welfare & aid</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_social_welfare">
+                  For social welfare & aid
+                </p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Cecilia E. Arcilla, RSW (CSWDO Head)</span
                 >
@@ -1282,7 +1376,7 @@
               <div class="dept-card-icon"><i class="bi bi-camera-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Tourism Services Division (CTSD)</h4>
-                <p class="dept-card-desc">For tourism promotion</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_tourism">For tourism promotion</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Ricky A. Loterte (OIC)</span
                 >
@@ -1299,7 +1393,7 @@
               <div class="dept-card-icon"><i class="bi bi-cash-coin"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Treasurer's Office (CTO)</h4>
-                <p class="dept-card-desc">For taxes & revenue</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_treasury">For taxes & revenue</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Constance S. Oliveros (City Treasurer)</span
                 >
@@ -1316,7 +1410,7 @@
               <div class="dept-card-icon"><i class="bi bi-gender-ambiguous"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Gender & Development Division (GAD)</h4>
-                <p class="dept-card-desc">For women & gender affairs</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_gad">For women & gender affairs</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Dr. Marites T. Pasa (OIC)</span
                 >
@@ -1333,7 +1427,7 @@
               <div class="dept-card-icon"><i class="bi bi-hospital-fill"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Legazpi City Hospital (LCH)</h4>
-                <p class="dept-card-desc">For clinical care</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_clinical">For clinical care</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Dr. Lady Ann T. Serrano (OIC)</span
                 >
@@ -1350,7 +1444,9 @@
               <div class="dept-card-icon"><i class="bi bi-shield-plus"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">City Veterinary Office (CVO)</h4>
-                <p class="dept-card-desc">For veterinary & pet care</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_veterinary">
+                  For veterinary & pet care
+                </p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Dr. Francis Gerald A. Gomez (City
                   Veterinarian)</span
@@ -1368,7 +1464,7 @@
               <div class="dept-card-icon"><i class="bi bi-person-arms-up"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Persons with Disability Affairs (PDAO)</h4>
-                <p class="dept-card-desc">For PWD affairs & benefits</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_pwd">For PWD affairs & benefits</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Catalina Z. Maraña (OIC)</span
                 >
@@ -1385,7 +1481,7 @@
               <div class="dept-card-icon"><i class="bi bi-person-workspace"></i></div>
               <div class="dept-card-content">
                 <h4 class="dept-card-title">Public Employment Service Office (PESO)</h4>
-                <p class="dept-card-desc">For jobs & employment</p>
+                <p class="dept-card-desc" data-i18n="gov_dept_employment">For jobs & employment</p>
                 <span class="dept-card-head"
                   ><i class="bi bi-person-fill"></i> Diosdado R. Rañeses (PESO Head)</span
                 >
@@ -1434,15 +1530,16 @@
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
             <span class="gov-section-badge"
-              ><i class="bi bi-map-fill"></i> <span>City Map</span></span
+              ><i class="bi bi-map-fill"></i> <span data-i18n="gov_map_badge">City Map</span></span
             >
             <h3
               id="barangay-map-heading"
               style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+              data-i18n="gov_map_title"
             >
               Legazpi City LGU Interactive Map
             </h3>
-            <p style="color: var(--color-text-light)">
+            <p style="color: var(--color-text-light)" data-i18n="gov_map_lead">
               Public officials and locations of the Legazpi City Hall and the 70 Barangays of
               Legazpi
             </p>
@@ -1455,14 +1552,17 @@
           <div class="map-embed" id="barangay-map-embed">
             <div class="map-facade" id="barangay-map-facade">
               <i class="bi bi-geo-alt-fill map-facade-icon" aria-hidden="true"></i>
-              <p class="map-facade-title">Interactive map of Legazpi City</p>
-              <p class="map-facade-note">
+              <p class="map-facade-title" data-i18n="gov_map_facade_title">
+                Interactive map of Legazpi City
+              </p>
+              <p class="map-facade-note" data-i18n="gov_map_facade_note">
                 Loading the map contacts Google and may set cookies. It stays off until you ask for
                 it.
               </p>
               <div class="map-facade-actions">
                 <button type="button" class="map-facade-btn" id="barangay-map-load" hidden>
-                  <i class="bi bi-play-circle" aria-hidden="true"></i> Load interactive map
+                  <i class="bi bi-play-circle" aria-hidden="true"></i>
+                  <span data-i18n="gov_map_load_btn">Load interactive map</span>
                 </button>
                 <a
                   class="map-facade-link"
@@ -1470,7 +1570,8 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Open in Google Maps
+                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                  <span data-i18n="gov_map_open_link">Open in Google Maps</span>
                 </a>
               </div>
             </div>
@@ -1493,12 +1594,16 @@
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
             <span class="gov-section-badge"
-              ><i class="bi bi-geo-alt-fill"></i> <span>Barangay Units</span></span
+              ><i class="bi bi-geo-alt-fill"></i>
+              <span data-i18n="gov_barangay_badge">Barangay Units</span></span
             >
-            <h3 style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)">
+            <h3
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+              data-i18n="gov_barangay_title"
+            >
               Barangays of Legazpi
             </h3>
-            <p style="color: var(--color-text-light)">
+            <p style="color: var(--color-text-light)" data-i18n="gov_barangay_lead">
               Directory of all 70 Barangays in Legazpi City with Punong Barangays and SK
               Chairpersons (Term 2023-2026)
             </p>
@@ -3878,8 +3983,9 @@
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
             <div class="footer-actions">
-              <a href="mailto:belenbrianmatthew@gmail.com" class="footer-contribute">
-                <i class="bi bi-envelope-heart" aria-hidden="true"></i> Volunteer with us
+              <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+                <i class="bi bi-envelope-heart" aria-hidden="true"></i>
+                <span data-i18n="footer_volunteer_cta">Volunteer with us</span>
               </a>
               <a
                 href="https://github.com/bpbelen/betterlegazpi"
@@ -3887,7 +3993,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="bi bi-github" aria-hidden="true"></i> Contribute code with us
+                <i class="bi bi-github" aria-hidden="true"></i>
+                <span data-i18n="footer_contribute_code_cta">Contribute code with us</span>
               </a>
             </div>
             <div class="footer-partners">

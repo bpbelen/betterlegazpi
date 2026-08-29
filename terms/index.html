@@ -97,7 +97,9 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link"
+      ><span data-i18n="skip_to_content">Skip to main content</span></a
+    >
 
     <!-- Hotline Bar -->
     <div class="hotline-bar">
@@ -173,6 +175,68 @@
           </ul>
         </nav>
         <div class="header-actions">
+          <div class="lang-switcher">
+            <button
+              id="lang-toggle"
+              class="lang-toggle-btn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="lang-menu"
+              aria-label="Change language. Current language: English"
+              title="Change language"
+            >
+              <i class="bi bi-translate" aria-hidden="true"></i>
+              <span class="lang-toggle-code">EN</span>
+              <i class="bi bi-chevron-down lang-toggle-caret" aria-hidden="true"></i>
+            </button>
+            <ul class="lang-menu" id="lang-menu" role="menu" hidden>
+              <li role="none">
+                <button
+                  class="lang-option is-active"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="true"
+                  data-lang="en"
+                  data-lang-code="EN"
+                  data-lang-label="English"
+                >
+                  <span class="lang-option-name">English</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="fil"
+                  data-lang-code="FIL"
+                  data-lang-label="Filipino"
+                >
+                  <span class="lang-option-name">Filipino</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  aria-disabled="true"
+                  data-lang="bcl"
+                  data-lang-code="BIK"
+                  data-lang-label="Bikol"
+                >
+                  <span class="lang-option-name">Bikol</span>
+                  <span class="lang-option-soon">Coming soon</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
           <button
             id="theme-toggle"
             class="theme-toggle-btn"
@@ -227,10 +291,13 @@
         <div class="container">
           <div class="page-header-content">
             <span class="page-header-badge"
-              ><i class="bi bi-file-earmark-text"></i> <span>Legal</span></span
+              ><i class="bi bi-file-earmark-text"></i>
+              <span data-i18n="terms_badge">Legal</span></span
             >
-            <h1>Terms of Use</h1>
-            <p class="page-header-desc">Guidelines for using BetterLegazpi.org</p>
+            <h1 data-i18n="terms_title">Terms of Use</h1>
+            <p class="page-header-desc" data-i18n="terms_tagline">
+              Guidelines for using BetterLegazpi.org
+            </p>
           </div>
         </div>
       </section>
@@ -264,7 +331,7 @@
             <!-- Main Content -->
             <article class="legal-article">
               <section id="introduction" class="legal-section">
-                <h2>Introduction</h2>
+                <h2 data-i18n="terms_h1">Introduction</h2>
                 <p>
                   BetterLegazpi.org is a civic platform dedicated to empowering the people of
                   Legazpi City by providing transparent access to the services, programs, and public
@@ -285,7 +352,7 @@
               </section>
 
               <section id="acceptance" class="legal-section">
-                <h2>Acceptance of Terms</h2>
+                <h2 data-i18n="terms_h2">Acceptance of Terms</h2>
                 <p>
                   By accessing and using this website, you acknowledge and agree to be bound by
                   these terms and conditions. Your continued use of the site signifies your ongoing
@@ -294,7 +361,7 @@
               </section>
 
               <section id="public-domain" class="legal-section">
-                <h2>Public Domain Content and Volunteer Operation</h2>
+                <h2 data-i18n="terms_h3">Public Domain Content and Volunteer Operation</h2>
                 <p>
                   This website and its content are provided as a public domain resource and are
                   operated entirely by volunteers. All information, data, documents, and materials
@@ -324,7 +391,7 @@
               </section>
 
               <section id="disclaimer" class="legal-section">
-                <h2>"As Is" Disclaimer</h2>
+                <h2 data-i18n="terms_h4">"As Is" Disclaimer</h2>
                 <p>
                   All information on this website is provided "AS IS" without warranty of any kind,
                   whether express or implied. This includes, but is not limited to:
@@ -343,7 +410,7 @@
               </section>
 
               <section id="limitation" class="legal-section">
-                <h2>Limitation of Liability</h2>
+                <h2 data-i18n="terms_h5">Limitation of Liability</h2>
                 <p>
                   To the fullest extent permitted by law, the website operators, volunteers,
                   contributors, and any affiliated civic partners shall not be liable for any
@@ -366,7 +433,7 @@
               </section>
 
               <section id="responsibilities" class="legal-section">
-                <h2>User Responsibilities and Research Guidelines</h2>
+                <h2 data-i18n="terms_h6">User Responsibilities and Research Guidelines</h2>
                 <p>
                   Users share responsibility for promoting informed and responsible civic
                   engagement. By using this website, you are solely responsible for:
@@ -408,7 +475,7 @@
               </section>
 
               <section id="no-advice" class="legal-section">
-                <h2>No Professional Advice</h2>
+                <h2 data-i18n="terms_h7">No Professional Advice</h2>
                 <p>
                   The information on this website is provided for educational, informational, and
                   civic transparency purposes only. It does not constitute legal, medical,
@@ -421,7 +488,7 @@
               </section>
 
               <section id="external-links" class="legal-section">
-                <h2>Source Links and External References</h2>
+                <h2 data-i18n="terms_h8">Source Links and External References</h2>
                 <p>
                   This website may provide links to official sources, government documents, and
                   other authoritative materials to support civic awareness and transparency. Users
@@ -441,7 +508,7 @@
               </section>
 
               <section id="availability" class="legal-section">
-                <h2>Website Availability</h2>
+                <h2 data-i18n="terms_h9">Website Availability</h2>
                 <p>
                   Although volunteers aim to keep the website accessible and functional,
                   BetterLegazpi.org cannot guarantee that the website will be:
@@ -459,7 +526,7 @@
               </section>
 
               <section id="indemnification" class="legal-section">
-                <h2>Indemnification</h2>
+                <h2 data-i18n="terms_h10">Indemnification</h2>
                 <p>
                   By using this website, you agree to indemnify and hold harmless the website
                   operators, volunteers, contributors, and affiliated civic partners from any
@@ -469,7 +536,7 @@
               </section>
 
               <section id="modifications" class="legal-section">
-                <h2>Modifications</h2>
+                <h2 data-i18n="terms_h11">Modifications</h2>
                 <p>
                   These terms may be updated or modified from time to time to reflect legal
                   requirements, policy changes, or improvements to civic services. Changes may be
@@ -479,7 +546,7 @@
               </section>
 
               <section id="governing-law" class="legal-section">
-                <h2>Governing Law</h2>
+                <h2 data-i18n="terms_h12">Governing Law</h2>
                 <p>
                   These terms are governed by and construed in accordance with the laws of the
                   Republic of the Philippines, without regard to any conflict of law principles. Any
@@ -489,7 +556,7 @@
               </section>
 
               <section id="severability" class="legal-section">
-                <h2>Severability</h2>
+                <h2 data-i18n="terms_h13">Severability</h2>
                 <p>
                   If any provision of these terms is found to be invalid, unlawful, or
                   unenforceable, that provision shall be applied to the greatest extent permitted by
@@ -498,7 +565,7 @@
               </section>
 
               <section id="takedown" class="legal-section">
-                <h2>Content Concerns and Takedown Requests</h2>
+                <h2 data-i18n="terms_h14">Content Concerns and Takedown Requests</h2>
                 <p>
                   BetterLegazpi.org values accuracy, public safety, and respect for rights. Despite
                   good-faith efforts, some content may become outdated, incomplete, or raise
@@ -514,7 +581,7 @@
                 </ul>
                 <p>
                   Please contact us at:
-                  <a href="mailto:belenbrianmatthew@gmail.com">volunteer@betterlegazpi.org</a>
+                  <a href="mailto:volunteer@betterlegazpi.org">volunteer@betterlegazpi.org</a>
                 </p>
 
                 <div class="legal-callout">
@@ -550,13 +617,13 @@
               </section>
 
               <section id="contact" class="legal-section">
-                <h2>Contact Information</h2>
+                <h2 data-i18n="terms_h15">Contact Information</h2>
                 <p>
                   For questions about these terms, feedback on civic information, or content-related
                   concerns, please contact:
                 </p>
                 <div class="legal-contact">
-                  <a href="mailto:belenbrianmatthew@gmail.com" class="contact-link"
+                  <a href="mailto:volunteer@betterlegazpi.org" class="contact-link"
                     ><i class="bi bi-envelope-fill"></i> <span>volunteer@betterlegazpi.org</span></a
                   >
                 </div>
@@ -660,8 +727,9 @@
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
             <div class="footer-actions">
-              <a href="mailto:belenbrianmatthew@gmail.com" class="footer-contribute">
-                <i class="bi bi-envelope-heart" aria-hidden="true"></i> Volunteer with us
+              <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+                <i class="bi bi-envelope-heart" aria-hidden="true"></i>
+                <span data-i18n="footer_volunteer_cta">Volunteer with us</span>
               </a>
               <a
                 href="https://github.com/bpbelen/betterlegazpi"
@@ -669,7 +737,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="bi bi-github" aria-hidden="true"></i> Contribute code with us
+                <i class="bi bi-github" aria-hidden="true"></i>
+                <span data-i18n="footer_contribute_code_cta">Contribute code with us</span>
               </a>
             </div>
             <div class="footer-partners">

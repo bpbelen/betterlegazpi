@@ -64,7 +64,9 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link"
+      ><span data-i18n="skip_to_content">Skip to main content</span></a
+    >
 
     <!-- Hotline Bar -->
     <div class="hotline-bar">
@@ -147,6 +149,68 @@
           </ul>
         </nav>
         <div class="header-actions">
+          <div class="lang-switcher">
+            <button
+              id="lang-toggle"
+              class="lang-toggle-btn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="lang-menu"
+              aria-label="Change language. Current language: English"
+              title="Change language"
+            >
+              <i class="bi bi-translate" aria-hidden="true"></i>
+              <span class="lang-toggle-code">EN</span>
+              <i class="bi bi-chevron-down lang-toggle-caret" aria-hidden="true"></i>
+            </button>
+            <ul class="lang-menu" id="lang-menu" role="menu" hidden>
+              <li role="none">
+                <button
+                  class="lang-option is-active"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="true"
+                  data-lang="en"
+                  data-lang-code="EN"
+                  data-lang-label="English"
+                >
+                  <span class="lang-option-name">English</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  data-lang="fil"
+                  data-lang-code="FIL"
+                  data-lang-label="Filipino"
+                >
+                  <span class="lang-option-name">Filipino</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  aria-disabled="true"
+                  data-lang="bcl"
+                  data-lang-code="BIK"
+                  data-lang-label="Bikol"
+                >
+                  <span class="lang-option-name">Bikol</span>
+                  <span class="lang-option-soon">Coming soon</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
           <button
             id="theme-toggle"
             class="theme-toggle-btn"
@@ -4456,8 +4520,9 @@
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
             <div class="footer-actions">
-              <a href="mailto:belenbrianmatthew@gmail.com" class="footer-contribute">
-                <i class="bi bi-envelope-heart" aria-hidden="true"></i> Volunteer with us
+              <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
+                <i class="bi bi-envelope-heart" aria-hidden="true"></i>
+                <span data-i18n="footer_volunteer_cta">Volunteer with us</span>
               </a>
               <a
                 href="https://github.com/bpbelen/betterlegazpi"
@@ -4465,7 +4530,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="bi bi-github" aria-hidden="true"></i> Contribute code with us
+                <i class="bi bi-github" aria-hidden="true"></i>
+                <span data-i18n="footer_contribute_code_cta">Contribute code with us</span>
               </a>
             </div>
             <div class="footer-partners">
