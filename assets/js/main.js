@@ -823,4 +823,163 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initThemeToggle();
+
+  // ─── Language Switcher (English / Filipino / Bikol) ──────────────────────
+  // The site ships English-only today. Filipino and Bikol sit in the menu as
+  // "coming soon" and are not selectable: the control exists now so the
+  // per-locale files planned at the top of this file can be wired in later
+  // without editing all 64 pages again. Adding a locale to AVAILABLE (once its
+  // strings actually exist) is what makes its menu entry live.
+  function initLangSwitcher() {
+    const switchers = document.querySelectorAll('.lang-switcher');
+    if (!switchers || switchers.length === 0) return;
+
+    const AVAILABLE = ['en'];
+    const FALLBACK = 'en';
+
+    // Storage can throw outright (Safari private browsing, cookies blocked), so
+    // every access is guarded, exactly as the theme toggle above does.
+    function readStoredLang() {
+      try {
+        return localStorage.getItem('lang');
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function storeLang(lang) {
+      try {
+        localStorage.setItem('lang', lang);
+      } catch (e) {
+        /* not remembered across visits; the page still renders correctly */
+      }
+    }
+
+    // A stored locale may have been removed since, or may never have shipped,
+    // so anything unrecognised falls back to English rather than blanking out.
+    let currentLang = readStoredLang();
+    if (AVAILABLE.indexOf(currentLang) === -1) currentLang = FALLBACK;
+
+    function closeMenu(sw) {
+      const btn = sw.querySelector('.lang-toggle-btn');
+      const menu = sw.querySelector('.lang-menu');
+      if (!btn || !menu) return;
+      menu.hidden = true;
+      sw.classList.remove('lang-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu(sw) {
+      const btn = sw.querySelector('.lang-toggle-btn');
+      const menu = sw.querySelector('.lang-menu');
+      if (!btn || !menu) return;
+      switchers.forEach(function (other) {
+        if (other !== sw) closeMenu(other);
+      });
+      menu.hidden = false;
+      sw.classList.add('lang-open');
+      btn.setAttribute('aria-expanded', 'true');
+      const active =
+        menu.querySelector('.lang-option.is-active') || menu.querySelector('.lang-option');
+      if (active) active.focus();
+    }
+
+    function applyLang(lang, label, code) {
+      currentLang = lang;
+      storeLang(lang);
+      document.documentElement.setAttribute('lang', lang);
+      switchers.forEach(function (sw) {
+        const btn = sw.querySelector('.lang-toggle-btn');
+        const codeEl = sw.querySelector('.lang-toggle-code');
+        if (codeEl) codeEl.textContent = code;
+        if (btn) {
+          btn.setAttribute('aria-label', 'Change language. Current language: ' + label);
+        }
+        sw.querySelectorAll('.lang-option').forEach(function (opt) {
+          const isActive = opt.getAttribute('data-lang') === lang;
+          opt.classList.toggle('is-active', isActive);
+          opt.setAttribute('aria-checked', isActive ? 'true' : 'false');
+        });
+      });
+      document.dispatchEvent(new CustomEvent('languagechange', { detail: { lang: lang } }));
+    }
+
+    switchers.forEach(function (sw) {
+      const btn = sw.querySelector('.lang-toggle-btn');
+      const menu = sw.querySelector('.lang-menu');
+      if (!btn || !menu) return;
+      const options = Array.prototype.slice.call(menu.querySelectorAll('.lang-option'));
+
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (menu.hidden) {
+          openMenu(sw);
+        } else {
+          closeMenu(sw);
+        }
+      });
+
+      btn.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          openMenu(sw);
+        }
+      });
+
+      options.forEach(function (opt, i) {
+        opt.addEventListener('click', function (e) {
+          e.preventDefault();
+          // aria-disabled rather than the disabled attribute: the entry stays
+          // focusable, so a screen reader can reach it and announce that the
+          // language is coming rather than skipping past it silently.
+          if (opt.getAttribute('aria-disabled') === 'true') return;
+          applyLang(
+            opt.getAttribute('data-lang'),
+            opt.getAttribute('data-lang-label'),
+            opt.getAttribute('data-lang-code')
+          );
+          closeMenu(sw);
+          btn.focus();
+        });
+
+        opt.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            const dir = e.key === 'ArrowDown' ? 1 : -1;
+            options[(i + dir + options.length) % options.length].focus();
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            options[0].focus();
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            options[options.length - 1].focus();
+          } else if (e.key === 'Escape') {
+            e.preventDefault();
+            closeMenu(sw);
+            btn.focus();
+          }
+        });
+      });
+    });
+
+    // Clicking anywhere else closes the menu, matching the nav dropdowns above.
+    document.addEventListener('click', function (e) {
+      switchers.forEach(function (sw) {
+        if (!sw.contains(e.target)) closeMenu(sw);
+      });
+    });
+
+    // Reflect the stored choice on load.
+    const initial = document.querySelector('.lang-option[data-lang="' + currentLang + '"]');
+    if (initial) {
+      applyLang(
+        currentLang,
+        initial.getAttribute('data-lang-label'),
+        initial.getAttribute('data-lang-code')
+      );
+    }
+  }
+
+  initLangSwitcher();
 });

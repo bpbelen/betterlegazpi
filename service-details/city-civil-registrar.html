@@ -145,6 +145,68 @@
           </ul>
         </nav>
         <div class="header-actions">
+          <div class="lang-switcher">
+            <button
+              id="lang-toggle"
+              class="lang-toggle-btn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="lang-menu"
+              aria-label="Change language. Current language: English"
+              title="Change language"
+            >
+              <i class="bi bi-translate" aria-hidden="true"></i>
+              <span class="lang-toggle-code">EN</span>
+              <i class="bi bi-chevron-down lang-toggle-caret" aria-hidden="true"></i>
+            </button>
+            <ul class="lang-menu" id="lang-menu" role="menu" hidden>
+              <li role="none">
+                <button
+                  class="lang-option is-active"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="true"
+                  data-lang="en"
+                  data-lang-code="EN"
+                  data-lang-label="English"
+                >
+                  <span class="lang-option-name">English</span>
+                  <i class="bi bi-check2 lang-option-check" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  aria-disabled="true"
+                  data-lang="fil"
+                  data-lang-code="FIL"
+                  data-lang-label="Filipino"
+                >
+                  <span class="lang-option-name">Filipino</span>
+                  <span class="lang-option-soon">Coming soon</span>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked="false"
+                  aria-disabled="true"
+                  data-lang="bcl"
+                  data-lang-code="BIK"
+                  data-lang-label="Bikol"
+                >
+                  <span class="lang-option-name">Bikol</span>
+                  <span class="lang-option-soon">Coming soon</span>
+                </button>
+              </li>
+            </ul>
+          </div>
           <button
             id="theme-toggle"
             class="theme-toggle-btn"
