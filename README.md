@@ -299,4 +299,4 @@ Made for the people of Legazpi City, Albay
 
 ## Maintainer
 
-This fork is maintained by [Rye](https://github.com/bpbelen).
+[Rye Belen](https://www.linkedin.com/in/bmpbelen/) is a Bicolano public health professional-turned-management consulting analyst who lives at the intersection of technology, public health, and civic innovation. Having led digital initiatives across provincial youth networks, national government authorities, and global consulting firms, Rye joined as a volunteer for BetterGov.ph to bring modern, transparent, and citizen-first digital infrastructure to his home province. When he’s not analyzing business cases, he maintains BetterLegazpi.org as a free, open-source public service for the community.
