@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "lang": "fil",
+    "label": "Filipino",
+    "reviewed": false,
+    "note": "Machine-translated, not yet checked by a native Filipino speaker. Limited to short interface labels (nav/buttons), not service instructions, fees, or requirements — see CLAUDE.md for the reasoning."
+  },
+  "strings": {
+    "skip_to_content": "Lumaktaw papunta sa pangunahing nilalaman",
+    "footer_volunteer_cta": "Maging boluntaryo",
+    "footer_contribute_code_cta": "Mag-ambag ng code",
+    "theme_toggle_to_dark": "Lumipat sa dark mode",
+    "theme_toggle_to_light": "Lumipat sa light mode",
+    "lang_toggle_label": "Palitan ang wika. Kasalukuyang wika: {language}",
+    "lang_option_english": "Ingles",
+    "lang_option_filipino": "Filipino",
+    "lang_option_bikol": "Bikol",
+    "lang_coming_soon": "Malapit na"
+  }
+}

@@ -744,6 +744,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleBtns = document.querySelectorAll('#theme-toggle, .theme-toggle-btn');
     if (!toggleBtns || toggleBtns.length === 0) return;
 
+    // Overwritten by the language switcher's 'localestrings' event once a
+    // non-English locale is actually selectable; until then this is the
+    // English text the markup has always shipped.
+    let toggleLabels = {
+      toDark: 'Switch to dark mode',
+      toLight: 'Switch to light mode',
+    };
+
     function updateToggleIcons() {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
       toggleBtns.forEach((btn) => {
@@ -751,16 +759,25 @@ document.addEventListener('DOMContentLoaded', () => {
         if (icon) {
           if (isDark) {
             icon.className = 'bi bi-sun-fill';
-            btn.setAttribute('aria-label', 'Switch to light mode');
-            btn.setAttribute('title', 'Switch to light mode');
+            btn.setAttribute('aria-label', toggleLabels.toLight);
+            btn.setAttribute('title', toggleLabels.toLight);
           } else {
             icon.className = 'bi bi-moon-stars-fill';
-            btn.setAttribute('aria-label', 'Switch to dark mode');
-            btn.setAttribute('title', 'Switch to dark mode');
+            btn.setAttribute('aria-label', toggleLabels.toDark);
+            btn.setAttribute('title', toggleLabels.toDark);
           }
         }
       });
     }
+
+    document.addEventListener('localestrings', function (e) {
+      const strings = e.detail || {};
+      toggleLabels = {
+        toDark: strings.theme_toggle_to_dark || toggleLabels.toDark,
+        toLight: strings.theme_toggle_to_light || toggleLabels.toLight,
+      };
+      updateToggleIcons();
+    });
 
     updateToggleIcons();
 
@@ -825,17 +842,74 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
 
   // ─── Language Switcher (English / Filipino / Bikol) ──────────────────────
-  // The site ships English-only today. Filipino and Bikol sit in the menu as
-  // "coming soon" and are not selectable: the control exists now so the
-  // per-locale files planned at the top of this file can be wired in later
-  // without editing all 64 pages again. Adding a locale to AVAILABLE (once its
-  // strings actually exist) is what makes its menu entry live.
+  // AVAILABLE stays ['en'] even though data/locales/fil.json now exists with
+  // real (machine-translated, unreviewed) strings: only the interface chrome
+  // tagged with data-i18n below is wired up — nav links, service instructions,
+  // fees, and every other word of page content is still English-only, so
+  // making Filipino selectable now would just be a mostly-broken switch. Flip
+  // AVAILABLE once a full page's worth of content, not just the chrome,
+  // actually translates when selected.
   function initLangSwitcher() {
     const switchers = document.querySelectorAll('.lang-switcher');
     if (!switchers || switchers.length === 0) return;
 
     const AVAILABLE = ['en'];
     const FALLBACK = 'en';
+
+    // Same directory-climbing logic assets/js/search.js uses to fetch data/*
+    // from a page nested under a clean-URL directory (e.g. /services/health).
+    function getBasePath() {
+      const segments = window.location.pathname.split('/').filter(Boolean);
+      if (segments.length && segments[segments.length - 1].indexOf('.') !== -1) segments.pop();
+      return segments.length ? '../'.repeat(segments.length) : '';
+    }
+
+    // Mirrors data/locales/en.json's "strings" object. Seeded locally rather
+    // than fetched: the markup already renders this English text by default,
+    // so a network round-trip on every page load would buy nothing — but the
+    // cache still needs an 'en' entry so switching back to English after
+    // another locale restores it, instead of leaving stale foreign text in
+    // place because "it's already the fallback" short-circuited nothing.
+    const stringsCache = {
+      en: {
+        skip_to_content: 'Skip to main content',
+        footer_volunteer_cta: 'Volunteer with us',
+        footer_contribute_code_cta: 'Contribute code with us',
+        theme_toggle_to_dark: 'Switch to dark mode',
+        theme_toggle_to_light: 'Switch to light mode',
+      },
+    };
+
+    function fetchLocaleStrings(lang) {
+      if (stringsCache[lang]) return Promise.resolve(stringsCache[lang]);
+      return fetch(getBasePath() + 'data/locales/' + lang + '.json')
+        .then(function (res) {
+          if (!res.ok) throw new Error('locale file missing: ' + lang);
+          return res.json();
+        })
+        .then(function (data) {
+          stringsCache[lang] = (data && data.strings) || {};
+          return stringsCache[lang];
+        })
+        .catch(function () {
+          // A missing or malformed locale file leaves the page in whatever
+          // language it already rendered in — never a blank or broken string.
+          return null;
+        });
+    }
+
+    function applyStrings(strings) {
+      if (!strings) return;
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        const key = el.getAttribute('data-i18n');
+        if (Object.prototype.hasOwnProperty.call(strings, key)) {
+          el.textContent = strings[key];
+        }
+      });
+      // Lets other chrome components (the theme toggle) that render their own
+      // labels in JS, rather than static markup, pick up the same locale.
+      document.dispatchEvent(new CustomEvent('localestrings', { detail: strings }));
+    }
 
     // Storage can throw outright (Safari private browsing, cookies blocked), so
     // every access is guarded, exactly as the theme toggle above does.
@@ -888,6 +962,7 @@ document.addEventListener('DOMContentLoaded', () => {
       currentLang = lang;
       storeLang(lang);
       document.documentElement.setAttribute('lang', lang);
+      fetchLocaleStrings(lang).then(applyStrings);
       switchers.forEach(function (sw) {
         const btn = sw.querySelector('.lang-toggle-btn');
         const codeEl = sw.querySelector('.lang-toggle-code');
