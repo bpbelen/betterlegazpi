@@ -14,6 +14,20 @@
     "lang_option_english": "English",
     "lang_option_filipino": "Filipino",
     "lang_option_bikol": "Bikol",
-    "lang_coming_soon": "Coming soon"
+    "lang_coming_soon": "Coming soon",
+    "hero_title": "Welcome to BetterLegazpi.org",
+    "hero_subtitle": "Access municipal services, government updates, transparency reports, and public resources for the people of Legazpi City, Albay.",
+    "hero_search_placeholder": "Search services (e.g., birth certificate, business permit, tax)...",
+    "hero_search_aria_label": "Search services",
+    "hero_quick_access_label": "Popular Quick Access:",
+    "hero_pill_birth_cert": "Birth Certificate",
+    "hero_pill_business_permit": "Business Permit",
+    "hero_pill_property_tax": "Real Property Tax",
+    "hero_pill_health": "Health Facilities",
+    "hero_pill_travel": "Fun & Adventure",
+    "hero_cta_browse_services": "Browse All Services",
+    "hero_cta_contact": "Contact Us",
+    "locale_notice_text": "This translation is machine-generated and has not been reviewed yet.",
+    "locale_notice_report_link": "Report a translation problem"
   }
 }

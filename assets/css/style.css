@@ -12299,9 +12299,9 @@ button.service-pill-more:hover {
 
 /* ==========================================================================
    LANGUAGE SWITCHER
-   Sits beside the theme toggle. English only for now; Filipino and Bikol are
-   shown as "coming soon" so the menu communicates the plan without pretending
-   the translations exist.
+   Sits beside the theme toggle. Filipino is live (machine-translated, header/
+   footer chrome plus the homepage hero only). Bikol still shows "coming soon"
+   — no reliable machine translation exists for it yet.
    ========================================================================== */
 .lang-switcher {
   position: relative;
@@ -12466,6 +12466,72 @@ button.service-pill-more:hover {
   .lang-toggle-caret {
     display: none;
   }
+}
+
+/* ==========================================================================
+   MACHINE-TRANSLATION NOTICE
+   Injected by main.js (updateLocaleNotice) whenever the active locale's
+   meta.reviewed is false — currently just Filipino. Not present in any
+   page's static markup, so no per-page HTML change is needed to add or
+   remove a locale from this.
+   ========================================================================== */
+.i18n-notice {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.65rem 1.25rem;
+  background: #fff7e6;
+  border-bottom: 1px solid #f0c674;
+  color: #6b4c00;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.i18n-notice-text {
+  flex: 1 1 auto;
+  min-width: 200px;
+}
+
+.i18n-notice-report {
+  flex-shrink: 0;
+  color: #6b4c00;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.i18n-notice-dismiss {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.i18n-notice-dismiss:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .i18n-notice {
+  background: #3a2e0a;
+  border-bottom-color: #7a5a00;
+  color: #ecd28a;
+}
+
+[data-theme='dark'] .i18n-notice-report {
+  color: #ecd28a;
+}
+
+[data-theme='dark'] .i18n-notice-dismiss:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* ==========================================================================

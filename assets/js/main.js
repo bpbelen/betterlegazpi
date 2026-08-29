@@ -842,18 +842,22 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
 
   // ─── Language Switcher (English / Filipino / Bikol) ──────────────────────
-  // AVAILABLE stays ['en'] even though data/locales/fil.json now exists with
-  // real (machine-translated, unreviewed) strings: only the interface chrome
-  // tagged with data-i18n below is wired up — nav links, service instructions,
-  // fees, and every other word of page content is still English-only, so
-  // making Filipino selectable now would just be a mostly-broken switch. Flip
-  // AVAILABLE once a full page's worth of content, not just the chrome,
-  // actually translates when selected.
+  // Filipino is live: the header/footer chrome plus the homepage hero are
+  // tagged and translated (data/locales/fil.json). Everything else on the
+  // site — every other page, and most of the homepage below the hero — still
+  // renders in English when Filipino is selected. The translation itself is
+  // machine-generated and unreviewed by a native speaker (meta.reviewed is
+  // false), so a dismissible notice with a report link shows wherever it's
+  // active — see updateLocaleNotice() below.
+  //
+  // Bikol stays out of AVAILABLE and shows "Coming soon" in the menu: there
+  // is no reliable machine translation for it, so nothing ships until a
+  // human translation exists.
   function initLangSwitcher() {
     const switchers = document.querySelectorAll('.lang-switcher');
     if (!switchers || switchers.length === 0) return;
 
-    const AVAILABLE = ['en'];
+    const AVAILABLE = ['en', 'fil'];
     const FALLBACK = 'en';
 
     // Same directory-climbing logic assets/js/search.js uses to fetch data/*
@@ -870,6 +874,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // cache still needs an 'en' entry so switching back to English after
     // another locale restores it, instead of leaving stale foreign text in
     // place because "it's already the fallback" short-circuited nothing.
+    const metaCache = { en: { lang: 'en', label: 'English', reviewed: true } };
+
     const stringsCache = {
       en: {
         skip_to_content: 'Skip to main content',
@@ -877,6 +883,21 @@ document.addEventListener('DOMContentLoaded', () => {
         footer_contribute_code_cta: 'Contribute code with us',
         theme_toggle_to_dark: 'Switch to dark mode',
         theme_toggle_to_light: 'Switch to light mode',
+        // Homepage hero only; harmless no-ops on pages without these elements.
+        hero_title: 'Welcome to BetterLegazpi.org',
+        hero_subtitle:
+          'Access municipal services, government updates, transparency reports, and public resources for the people of Legazpi City, Albay.',
+        hero_search_placeholder:
+          'Search services (e.g., birth certificate, business permit, tax)...',
+        hero_search_aria_label: 'Search services',
+        hero_quick_access_label: 'Popular Quick Access:',
+        hero_pill_birth_cert: 'Birth Certificate',
+        hero_pill_business_permit: 'Business Permit',
+        hero_pill_property_tax: 'Real Property Tax',
+        hero_pill_health: 'Health Facilities',
+        hero_pill_travel: 'Fun & Adventure',
+        hero_cta_browse_services: 'Browse All Services',
+        hero_cta_contact: 'Contact Us',
       },
     };
 
@@ -889,6 +910,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(function (data) {
           stringsCache[lang] = (data && data.strings) || {};
+          metaCache[lang] = (data && data.meta) || {};
           return stringsCache[lang];
         })
         .catch(function () {
@@ -898,7 +920,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function applyStrings(strings) {
+    // Attributes translate via data-i18n-<attr>="key" (placeholder, aria-label,
+    // title, ...) since their value isn't a text node data-i18n can target.
+    const ATTR_PREFIX = 'data-i18n-';
+
+    function applyStrings(strings, lang, meta) {
       if (!strings) return;
       document.querySelectorAll('[data-i18n]').forEach(function (el) {
         const key = el.getAttribute('data-i18n');
@@ -906,9 +932,64 @@ document.addEventListener('DOMContentLoaded', () => {
           el.textContent = strings[key];
         }
       });
+      document.querySelectorAll('*').forEach(function (el) {
+        for (let i = 0; i < el.attributes.length; i++) {
+          const attr = el.attributes[i];
+          if (attr.name.indexOf(ATTR_PREFIX) !== 0) continue;
+          const targetAttr = attr.name.slice(ATTR_PREFIX.length);
+          const key = attr.value;
+          if (Object.prototype.hasOwnProperty.call(strings, key)) {
+            el.setAttribute(targetAttr, strings[key]);
+          }
+        }
+      });
+      updateLocaleNotice(lang, meta);
       // Lets other chrome components (the theme toggle) that render their own
       // labels in JS, rather than static markup, pick up the same locale.
       document.dispatchEvent(new CustomEvent('localestrings', { detail: strings }));
+    }
+
+    // A machine-translated, unreviewed locale gets a dismissible notice with a
+    // link to report bad translations — the audience-review step this whole
+    // rollout leans on, made real instead of assumed. English and any locale
+    // explicitly marked reviewed show nothing.
+    function updateLocaleNotice(lang, meta) {
+      const existing = document.getElementById('i18n-notice');
+      if (lang === 'en' || !meta || meta.reviewed) {
+        if (existing) existing.remove();
+        return;
+      }
+      if (existing) return; // already showing for this locale
+      const bar = document.createElement('div');
+      bar.id = 'i18n-notice';
+      bar.className = 'i18n-notice';
+      bar.setAttribute('role', 'note');
+      bar.innerHTML =
+        '<span class="i18n-notice-text"></span>' +
+        '<a class="i18n-notice-report" target="_blank" rel="noopener"></a>' +
+        '<button type="button" class="i18n-notice-dismiss" aria-label="Dismiss">&times;</button>';
+      const main = document.getElementById('main-content');
+      (main && main.parentNode ? main.parentNode : document.body).insertBefore(
+        bar,
+        main || document.body.firstChild
+      );
+      bar.querySelector('.i18n-notice-dismiss').addEventListener('click', function () {
+        bar.remove();
+      });
+      fillLocaleNoticeText(bar, lang);
+    }
+
+    function fillLocaleNoticeText(bar, lang) {
+      const strings = stringsCache[lang] || {};
+      const textEl = bar.querySelector('.i18n-notice-text');
+      const linkEl = bar.querySelector('.i18n-notice-report');
+      textEl.textContent =
+        strings.locale_notice_text ||
+        'This translation is machine-generated and has not been reviewed yet.';
+      linkEl.textContent = strings.locale_notice_report_link || 'Report a translation problem';
+      linkEl.href =
+        'mailto:volunteer@betterlegazpi.org?subject=' +
+        encodeURIComponent('Translation issue (' + lang + ') — ' + window.location.pathname);
     }
 
     // Storage can throw outright (Safari private browsing, cookies blocked), so
@@ -962,7 +1043,9 @@ document.addEventListener('DOMContentLoaded', () => {
       currentLang = lang;
       storeLang(lang);
       document.documentElement.setAttribute('lang', lang);
-      fetchLocaleStrings(lang).then(applyStrings);
+      fetchLocaleStrings(lang).then(function (strings) {
+        applyStrings(strings, lang, metaCache[lang]);
+      });
       switchers.forEach(function (sw) {
         const btn = sw.querySelector('.lang-toggle-btn');
         const codeEl = sw.querySelector('.lang-toggle-code');

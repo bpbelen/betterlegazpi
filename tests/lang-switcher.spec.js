@@ -42,23 +42,62 @@ for (const route of ROUTES) {
       await expect(page.locator('.lang-menu')).toBeHidden();
     });
 
-    test('Filipino and Bikol are shown but cannot be selected', async ({ page }) => {
+    test('Bikol is shown but cannot be selected', async ({ page }) => {
       await gotoPage(page, route);
       await page.locator('.lang-toggle-btn').click();
-      for (const code of ['fil', 'bcl']) {
-        const opt = page.locator(`.lang-option[data-lang="${code}"]`);
-        await expect(opt).toBeVisible();
-        await expect(opt).toHaveAttribute('aria-disabled', 'true');
-        await expect(opt.locator('.lang-option-soon')).toHaveText(/coming soon/i);
-        // force: Playwright refuses to click an aria-disabled control, which is
-        // the point — this bypasses that guard to prove the handler ALSO
-        // refuses, so a stray programmatic click can't switch to a locale that
-        // has no strings yet.
-        await opt.click({ force: true });
-        await expect(page.locator('.lang-toggle-code')).toHaveText('EN');
-        await expect(opt).toHaveAttribute('aria-checked', 'false');
-      }
+      const opt = page.locator('.lang-option[data-lang="bcl"]');
+      await expect(opt).toBeVisible();
+      await expect(opt).toHaveAttribute('aria-disabled', 'true');
+      await expect(opt.locator('.lang-option-soon')).toHaveText(/coming soon/i);
+      // force: Playwright refuses to click an aria-disabled control, which is
+      // the point — this bypasses that guard to prove the handler ALSO
+      // refuses, so a stray programmatic click can't switch to a locale that
+      // has no strings yet.
+      await opt.click({ force: true });
+      await expect(page.locator('.lang-toggle-code')).toHaveText('EN');
+      await expect(opt).toHaveAttribute('aria-checked', 'false');
       await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+    });
+
+    test('Filipino is selectable, swaps chrome text, and shows the MT notice', async ({ page }) => {
+      await gotoPage(page, route);
+      await page.locator('.lang-toggle-btn').click();
+      const opt = page.locator('.lang-option[data-lang="fil"]');
+      await expect(opt).not.toHaveAttribute('aria-disabled', 'true');
+      await expect(opt.locator('.lang-option-soon')).toHaveCount(0);
+      await opt.click();
+      await expect(page.locator('.lang-toggle-code')).toHaveText('FIL');
+      await expect(page.locator('html')).toHaveAttribute('lang', 'fil');
+      await expect(page.locator('[data-i18n="skip_to_content"]')).toHaveText(
+        'Lumaktaw papunta sa pangunahing nilalaman'
+      );
+      // Unreviewed machine translation (data/locales/fil.json meta.reviewed is
+      // false), so the notice + report link must be showing.
+      const notice = page.locator('#i18n-notice');
+      await expect(notice).toBeVisible();
+      await expect(page.locator('.i18n-notice-report')).toHaveAttribute(
+        'href',
+        /^mailto:volunteer@betterlegazpi\.org\?subject=/
+      );
+      // Switching back to English restores the chrome and drops the notice.
+      await page.locator('.lang-toggle-btn').click();
+      await page.locator('.lang-option[data-lang="en"]').click();
+      await expect(page.locator('[data-i18n="skip_to_content"]')).toHaveText(
+        'Skip to main content'
+      );
+      await expect(page.locator('#i18n-notice')).toHaveCount(0);
+    });
+
+    test('the notice can be dismissed and does not reappear until the page reloads', async ({
+      page,
+    }) => {
+      await gotoPage(page, route);
+      await page.locator('.lang-toggle-btn').click();
+      await page.locator('.lang-option[data-lang="fil"]').click();
+      const notice = page.locator('#i18n-notice');
+      await expect(notice).toBeVisible();
+      await page.locator('.i18n-notice-dismiss').click();
+      await expect(notice).toHaveCount(0);
     });
 
     test('English is the checked option', async ({ page }) => {
@@ -105,3 +144,40 @@ for (const route of ROUTES) {
     });
   });
 }
+
+// The homepage hero is the only content translated beyond the shared chrome
+// (data-i18n tags on the hero_* keys live only in index.html), so this is
+// verified separately rather than in the route loop above.
+test.describe('/index.html hero (Filipino)', () => {
+  test('hero title, subtitle, search box, pills, and CTAs all translate', async ({ page }) => {
+    await gotoPage(page, '/index.html');
+    await page.locator('.lang-toggle-btn').click();
+    await page.locator('.lang-option[data-lang="fil"]').click();
+
+    await expect(page.locator('[data-i18n="hero_title"]')).toHaveText(
+      'Maligayang pagdating sa BetterLegazpi.org'
+    );
+    await expect(page.locator('#hero-search')).toHaveAttribute(
+      'placeholder',
+      'Maghanap ng serbisyo (hal., birth certificate, business permit, buwis)...'
+    );
+    await expect(page.locator('#hero-search')).toHaveAttribute(
+      'aria-label',
+      'Maghanap ng mga serbisyo'
+    );
+    // Official document names keep the English term alongside the Filipino
+    // one on purpose (data/locales/fil.json's meta.note explains why) — a
+    // reader matching this against a physical requirement list should still
+    // recognize it.
+    await expect(page.locator('[data-i18n="hero_pill_birth_cert"]')).toContainText(
+      'Birth Certificate'
+    );
+    await expect(page.locator('[data-i18n="hero_cta_browse_services"]')).toHaveText(
+      'Tingnan ang Lahat ng Serbisyo'
+    );
+
+    // Nav is NOT translated yet (its markup isn't uniform across pages, see
+    // the comment above AVAILABLE in main.js) — this should stay English.
+    await expect(page.locator('.main-nav a[href="/government/"]')).toHaveText('Government');
+  });
+});

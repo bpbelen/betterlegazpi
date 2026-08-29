@@ -3,7 +3,7 @@
     "lang": "fil",
     "label": "Filipino",
     "reviewed": false,
-    "note": "Machine-translated, not yet checked by a native Filipino speaker. Limited to short interface labels (nav/buttons), not service instructions, fees, or requirements — see CLAUDE.md for the reasoning."
+    "note": "Machine-translated by Claude, not a dedicated MT engine, and not yet checked by a native Filipino speaker. Official document names (birth certificate, business permit, real property tax) keep the English term alongside the translation on purpose, so a reader matching this against a physical form or requirement list still recognizes it. A report link is shown on every page using this file until meta.reviewed is true."
   },
   "strings": {
     "skip_to_content": "Lumaktaw papunta sa pangunahing nilalaman",
@@ -15,6 +15,20 @@
     "lang_option_english": "Ingles",
     "lang_option_filipino": "Filipino",
     "lang_option_bikol": "Bikol",
-    "lang_coming_soon": "Malapit na"
+    "lang_coming_soon": "Malapit na",
+    "hero_title": "Maligayang pagdating sa BetterLegazpi.org",
+    "hero_subtitle": "Ma-access ang mga serbisyo ng lungsod, mga update ng pamahalaan, mga ulat sa transparency, at mga pampublikong yaman para sa mamamayan ng Lungsod ng Legazpi, Albay.",
+    "hero_search_placeholder": "Maghanap ng serbisyo (hal., birth certificate, business permit, buwis)...",
+    "hero_search_aria_label": "Maghanap ng mga serbisyo",
+    "hero_quick_access_label": "Mga Sikat na Mabilisang Access:",
+    "hero_pill_birth_cert": "Sertipiko ng Kapanganakan (Birth Certificate)",
+    "hero_pill_business_permit": "Permiso sa Negosyo (Business Permit)",
+    "hero_pill_property_tax": "Buwis sa Real Property (Real Property Tax)",
+    "hero_pill_health": "Mga Pasilidad ng Kalusugan",
+    "hero_pill_travel": "Saya at Adbentura",
+    "hero_cta_browse_services": "Tingnan ang Lahat ng Serbisyo",
+    "hero_cta_contact": "Makipag-ugnayan sa Amin",
+    "locale_notice_text": "Awtomatikong isinalin ang tekstong ito (machine translation) at hindi pa ito nasusuri ng tao.",
+    "locale_notice_report_link": "I-report ang isyu sa pagsasalin"
   }
 }

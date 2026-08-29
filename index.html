@@ -180,7 +180,9 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link"><span data-i18n="skip_to_content">Skip to main content</span></a>
+    <a href="#main-content" class="skip-link"
+      ><span data-i18n="skip_to_content">Skip to main content</span></a
+    >
 
     <!-- Hotline Bar -->
     <div class="hotline-bar">
@@ -292,13 +294,11 @@
                   type="button"
                   role="menuitemradio"
                   aria-checked="false"
-                  aria-disabled="true"
                   data-lang="fil"
                   data-lang-code="FIL"
                   data-lang-label="Filipino"
                 >
                   <span class="lang-option-name">Filipino</span>
-                  <span class="lang-option-soon">Coming soon</span>
                 </button>
               </li>
               <li role="none">
@@ -363,8 +363,11 @@
         <div class="container">
           <div class="hero-glass-container">
             <div class="home-hero-v3-text">
-              <h1 class="hero-title-v3">Welcome to BetterLegazpi.org</h1>
-              <p style="font-size: 1.15rem; opacity: 0.9; max-width: 65ch; line-height: 1.6">
+              <h1 class="hero-title-v3" data-i18n="hero_title">Welcome to BetterLegazpi.org</h1>
+              <p
+                style="font-size: 1.15rem; opacity: 0.9; max-width: 65ch; line-height: 1.6"
+                data-i18n="hero_subtitle"
+              >
                 Access municipal services, government updates, transparency reports, and public
                 resources for the people of Legazpi City, Albay.
               </p>
@@ -379,6 +382,8 @@
                     placeholder="Search services (e.g., birth certificate, business permit, tax)..."
                     aria-label="Search services"
                     autocomplete="off"
+                    data-i18n-placeholder="hero_search_placeholder"
+                    data-i18n-aria-label="hero_search_aria_label"
                   />
                   <button type="submit" class="hero-search-btn-glass" aria-label="Submit search">
                     <i class="bi bi-search" style="font-size: 1.1rem"></i>
@@ -387,27 +392,34 @@
               </div>
 
               <div class="hero-quick-access">
-                <span class="hero-quick-access-label">Popular Quick Access:</span>
+                <span class="hero-quick-access-label" data-i18n="hero_quick_access_label"
+                  >Popular Quick Access:</span
+                >
                 <a
                   href="service-details/city-civil-registrar.html#on-time-birth"
                   class="glass-pill"
                 >
-                  <i class="bi bi-file-earmark-person"></i> Birth Certificate
+                  <i class="bi bi-file-earmark-person"></i>
+                  <span data-i18n="hero_pill_birth_cert">Birth Certificate</span>
                 </a>
                 <a
                   href="service-details/business-permits-licensing.html#new-business"
                   class="glass-pill"
                 >
-                  <i class="bi bi-briefcase"></i> Business Permit
+                  <i class="bi bi-briefcase"></i>
+                  <span data-i18n="hero_pill_business_permit">Business Permit</span>
                 </a>
                 <a href="service-details/cto-services.html#service-7" class="glass-pill">
-                  <i class="bi bi-receipt"></i> Real Property Tax
+                  <i class="bi bi-receipt"></i>
+                  <span data-i18n="hero_pill_property_tax">Real Property Tax</span>
                 </a>
                 <a href="services/health" class="glass-pill">
-                  <i class="bi bi-heart-pulse"></i> Health Facilities
+                  <i class="bi bi-heart-pulse"></i>
+                  <span data-i18n="hero_pill_health">Health Facilities</span>
                 </a>
                 <a href="travel/" class="glass-pill">
-                  <i class="bi bi-compass-fill"></i> Fun &amp; Adventure
+                  <i class="bi bi-compass-fill"></i>
+                  <span data-i18n="hero_pill_travel">Fun &amp; Adventure</span>
                 </a>
               </div>
 
@@ -417,14 +429,16 @@
                   class="btn btn-primary"
                   style="border-radius: var(--pill-radius); padding: 12px 28px; font-weight: 600"
                 >
-                  <i class="bi bi-grid-fill" style="margin-right: 6px"></i> Browse All Services
+                  <i class="bi bi-grid-fill" style="margin-right: 6px"></i>
+                  <span data-i18n="hero_cta_browse_services">Browse All Services</span>
                 </a>
                 <a
                   href="contact/"
                   class="btn btn-outline"
                   style="border-radius: var(--pill-radius); padding: 12px 28px; font-weight: 600"
                 >
-                  <i class="bi bi-telephone-outbound" style="margin-right: 6px"></i> Contact Us
+                  <i class="bi bi-telephone-outbound" style="margin-right: 6px"></i>
+                  <span data-i18n="hero_cta_contact">Contact Us</span>
                 </a>
               </div>
             </div>
@@ -1092,7 +1106,8 @@
             </div>
             <div class="footer-actions">
               <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
-                <i class="bi bi-envelope-heart" aria-hidden="true"></i> <span data-i18n="footer_volunteer_cta">Volunteer with us</span>
+                <i class="bi bi-envelope-heart" aria-hidden="true"></i>
+                <span data-i18n="footer_volunteer_cta">Volunteer with us</span>
               </a>
               <a
                 href="https://github.com/bpbelen/betterlegazpi"
@@ -1100,7 +1115,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="bi bi-github" aria-hidden="true"></i> <span data-i18n="footer_contribute_code_cta">Contribute code with us</span>
+                <i class="bi bi-github" aria-hidden="true"></i>
+                <span data-i18n="footer_contribute_code_cta">Contribute code with us</span>
               </a>
             </div>
             <div class="footer-partners">
