@@ -388,6 +388,51 @@
         border-color: var(--color-primary-solid);
       }
 
+      /* Expand/collapse control shared by the Executive Offices and Barangays
+         directories. Both ship fully rendered; the script collapses them on
+         load and reveals the button, so no-JS readers keep the whole list. */
+      .directory-toggle-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: var(--spacing-md);
+      }
+      .directory-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 44px;
+        padding: 10px var(--spacing-md);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        background: var(--color-white);
+        color: var(--color-text);
+        font-size: 0.9375rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition:
+          background-color var(--duration-base) var(--ease-out),
+          color var(--duration-base) var(--ease-out),
+          border-color var(--duration-base) var(--ease-out);
+      }
+      .directory-toggle:hover {
+        border-color: var(--color-primary-solid);
+        color: var(--color-primary-solid);
+      }
+      /* An author `display` value outranks the UA stylesheet's [hidden] rule,
+         so every element that ships hidden and sets its own display needs this. */
+      .directory-toggle[hidden],
+      .dept-card[hidden],
+      .map-facade-btn[hidden] {
+        display: none;
+      }
+      .directory-toggle-icon {
+        font-size: 0.875rem;
+        transition: transform var(--duration-base) var(--ease-out);
+      }
+      .directory-toggle[aria-expanded='true'] .directory-toggle-icon {
+        transform: rotate(180deg);
+      }
+
       /* Interactive Barangay Map - click-to-load facade */
       .map-embed {
         position: relative;
@@ -937,7 +982,7 @@
           </div>
 
           <!-- Departments Grid (22 Executive Offices Alphabetically Arranged) -->
-          <div class="grid grid-3" style="gap: var(--spacing-md)">
+          <div class="grid grid-3" id="deptGrid" style="gap: var(--spacing-md)">
             <!-- 1. Business Permits & Licensing (BPLO) -->
             <a
               href="../service-details/business-permits-licensing.html"
@@ -1325,6 +1370,22 @@
             </a>
           </div>
 
+          <!-- Ships hidden and is revealed by script, so readers without JavaScript
+               keep the full list rather than a control that cannot open it. -->
+          <div class="directory-toggle-wrap">
+            <button
+              type="button"
+              class="directory-toggle"
+              id="deptToggle"
+              aria-controls="deptGrid"
+              aria-expanded="true"
+              hidden
+            >
+              <span class="directory-toggle-label">Show all 22 offices</span>
+              <i class="bi bi-chevron-down directory-toggle-icon" aria-hidden="true"></i>
+            </button>
+          </div>
+
           <!-- Simple Departments Source Line (Centered & Enlarged) -->
           <div class="source-credit-simple">
             <i class="bi bi-info-circle"></i> Sources:
@@ -1339,8 +1400,69 @@
         </div>
       </section>
 
+      <!-- Interactive Barangay Map (click-to-load embed) -->
+      <section class="section" id="barangay-map" aria-labelledby="barangay-map-heading">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="text-center" style="margin-bottom: var(--spacing-xl)">
+            <span class="gov-section-badge"
+              ><i class="bi bi-map-fill"></i> <span>City Map</span></span
+            >
+            <h3
+              id="barangay-map-heading"
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+            >
+              Legazpi City LGU Interactive Map
+            </h3>
+            <p style="color: var(--color-text-light)">
+              Public officials and locations of the Legazpi City Hall and the 70 Barangays of
+              Legazpi
+            </p>
+          </div>
+
+          <!-- The embed is not loaded until asked for: the Google My Maps viewer pulls
+               several hundred kilobytes of third-party script and sets cookies, which is a
+               poor default on a mobile connection and worse for readers who never open the
+               map. The link below works with or without JavaScript. -->
+          <div class="map-embed" id="barangay-map-embed">
+            <div class="map-facade" id="barangay-map-facade">
+              <i class="bi bi-geo-alt-fill map-facade-icon" aria-hidden="true"></i>
+              <p class="map-facade-title">Interactive map of Legazpi City</p>
+              <p class="map-facade-note">
+                Loading the map contacts Google and may set cookies. It stays off until you ask for
+                it.
+              </p>
+              <div class="map-facade-actions">
+                <button type="button" class="map-facade-btn" id="barangay-map-load" hidden>
+                  <i class="bi bi-play-circle" aria-hidden="true"></i> Load interactive map
+                </button>
+                <a
+                  class="map-facade-link"
+                  href="https://www.google.com/maps/d/u/0/viewer?mid=1n2gCyTSCy8RXYFgK5-1_2T49yT2hALQ&amp;femb=1&amp;ll=13.141476756485549%2C123.73598336763477&amp;z=14"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="source-credit-simple">
+            <i class="bi bi-info-circle"></i>
+            <span
+              >Map published by the City Government of Legazpi on
+              <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                >legazpi.gov.ph</a
+              >, hosted on Google My Maps. Its contents are maintained by the LGU and may not
+              reflect recent changes.</span
+            >
+          </div>
+        </div>
+      </section>
+
       <!-- Barangays Section (Option A: Interactive 70 Barangays) -->
-      <section class="section" id="barangay-directory">
+      <section class="section" id="barangay-directory" style="background: var(--color-bg-alt)">
         <div class="container">
           <!-- Section Header -->
           <div class="text-center" style="margin-bottom: var(--spacing-xl)">
@@ -3606,6 +3728,20 @@
             </div>
           </div>
 
+          <div class="directory-toggle-wrap">
+            <button
+              type="button"
+              class="directory-toggle"
+              id="bgyToggle"
+              aria-controls="barangayGrid"
+              aria-expanded="true"
+              hidden
+            >
+              <span class="directory-toggle-label">Show all 70 barangays</span>
+              <i class="bi bi-chevron-down directory-toggle-icon" aria-hidden="true"></i>
+            </button>
+          </div>
+
           <!-- Simple Barangay Source Line (Centered & Enlarged) -->
           <div class="source-credit-simple">
             <i class="bi bi-info-circle"></i> Sources:
@@ -3622,68 +3758,6 @@
               rel="noopener noreferrer"
               >PSA Census of Population (2024)</a
             >
-          </div>
-        </div>
-      </section>
-
-      <!-- Interactive Barangay Map (click-to-load embed) -->
-      <section
-        class="section"
-        id="barangay-map"
-        style="background: var(--color-bg-alt)"
-        aria-labelledby="barangay-map-heading"
-      >
-        <div class="container">
-          <!-- Section Header -->
-          <div class="text-center" style="margin-bottom: var(--spacing-xl)">
-            <span class="gov-section-badge"
-              ><i class="bi bi-map-fill"></i> <span>City Map</span></span
-            >
-            <h3
-              id="barangay-map-heading"
-              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
-            >
-              Legazpi City Interactive Map
-            </h3>
-            <p style="color: var(--color-text-light)">
-              Locations of the 70 Barangay Halls and their officials, plus Legazpi City Hall
-            </p>
-          </div>
-
-          <!-- The embed is not loaded until asked for: the Google My Maps viewer pulls
-               several hundred kilobytes of third-party script and sets cookies, which is a
-               poor default on a mobile connection and worse for readers who never open the
-               map. The link below works with or without JavaScript. -->
-          <div class="map-embed" id="barangay-map-embed">
-            <div class="map-facade" id="barangay-map-facade">
-              <i class="bi bi-geo-alt-fill map-facade-icon" aria-hidden="true"></i>
-              <p class="map-facade-title">Interactive map of Legazpi City</p>
-              <p class="map-facade-note">
-                Loading the map contacts Google and may set cookies. It stays off until you ask for
-                it.
-              </p>
-              <div class="map-facade-actions">
-                <button type="button" class="map-facade-btn" id="barangay-map-load" hidden>
-                  <i class="bi bi-play-circle" aria-hidden="true"></i> Load interactive map
-                </button>
-                <a
-                  class="map-facade-link"
-                  href="https://www.google.com/maps/d/u/0/viewer?mid=1n2gCyTSCy8RXYFgK5-1_2T49yT2hALQ&amp;femb=1&amp;ll=13.141476756485549%2C123.73598336763477&amp;z=14"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Open in Google Maps
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="source-credit-simple">
-            <i class="bi bi-info-circle"></i> Map published by the City Government of Legazpi on
-            <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
-              >legazpi.gov.ph</a
-            >, hosted on Google My Maps. Its contents are maintained by the LGU and may not reflect
-            recent changes.
           </div>
         </div>
       </section>
@@ -3877,6 +3951,43 @@
       });
     </script>
 
+    <!-- Executive Offices: collapsed to three cards until asked to expand -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const grid = document.getElementById('deptGrid');
+        const toggle = document.getElementById('deptToggle');
+        if (!grid || !toggle) return;
+
+        const cards = Array.from(grid.children);
+        const label = toggle.querySelector('.directory-toggle-label');
+        const VISIBLE_WHEN_COLLAPSED = 3;
+        let collapsed = true;
+
+        function render() {
+          cards.forEach((card, i) => {
+            card.hidden = collapsed && i >= VISIBLE_WHEN_COLLAPSED;
+          });
+          toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+          if (label) {
+            label.textContent = collapsed
+              ? 'Show all ' + cards.length + ' offices'
+              : 'Show fewer offices';
+          }
+        }
+
+        // The grid ships complete: collapsing here rather than in the markup is
+        // what keeps the full directory readable with JavaScript off.
+        toggle.hidden = false;
+        render();
+
+        toggle.addEventListener('click', () => {
+          collapsed = !collapsed;
+          render();
+          if (collapsed) toggle.scrollIntoView({ block: 'center' });
+        });
+      });
+    </script>
+
     <!-- Interactive Barangay Filter & Search Script -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -3884,12 +3995,16 @@
         const filterBtns = document.querySelectorAll('.bgy-filter-btn');
         const cards = document.querySelectorAll('#barangayGrid .barangay-card');
         const emptyNotice = document.getElementById('bgyEmptyNotice');
+        const toggle = document.getElementById('bgyToggle');
+        const toggleLabel = toggle ? toggle.querySelector('.directory-toggle-label') : null;
 
+        const VISIBLE_WHEN_COLLAPSED = 3;
         let currentFilter = 'all';
         let currentQuery = '';
+        let collapsed = true;
 
         function applyFilter() {
-          let visibleCount = 0;
+          let matchCount = 0;
           cards.forEach((card) => {
             const cardName = card.getAttribute('data-name') || '';
             const cardPb = card.getAttribute('data-pb') || '';
@@ -3907,21 +4022,37 @@
             const matchesType = currentFilter === 'all' || cardType === currentFilter;
 
             if (matchesSearch && matchesType) {
-              card.style.display = 'flex';
-              visibleCount++;
+              matchCount++;
+              // Collapsing counts matches, not positions, so the three cards on
+              // show are always the first three that actually match.
+              card.style.display =
+                collapsed && matchCount > VISIBLE_WHEN_COLLAPSED ? 'none' : 'flex';
             } else {
               card.style.display = 'none';
             }
           });
 
           if (emptyNotice) {
-            emptyNotice.style.display = visibleCount === 0 ? 'block' : 'none';
+            emptyNotice.style.display = matchCount === 0 ? 'block' : 'none';
+          }
+
+          if (toggle) {
+            toggle.hidden = matchCount <= VISIBLE_WHEN_COLLAPSED;
+            toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+            if (toggleLabel) {
+              toggleLabel.textContent = collapsed
+                ? 'Show all ' + matchCount + (matchCount === 1 ? ' barangay' : ' barangays')
+                : 'Show fewer barangays';
+            }
           }
         }
 
         if (searchInput) {
           searchInput.addEventListener('input', (e) => {
             currentQuery = e.target.value.trim().toLowerCase();
+            // A search that returned nine matches but showed three would read as
+            // a broken search, so searching opens the list.
+            if (currentQuery) collapsed = false;
             applyFilter();
           });
         }
@@ -3934,6 +4065,16 @@
             applyFilter();
           });
         });
+
+        if (toggle) {
+          toggle.addEventListener('click', () => {
+            collapsed = !collapsed;
+            applyFilter();
+            if (collapsed) toggle.scrollIntoView({ block: 'center' });
+          });
+        }
+
+        applyFilter();
       });
     </script>
     <script defer src="../assets/js/info-bar.js"></script>

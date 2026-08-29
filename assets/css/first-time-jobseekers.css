@@ -280,16 +280,18 @@
   color: var(--color-primary);
 }
 
+/* Not var(--color-success-solid)/-danger: at 13px on these low-alpha tints axe
+   measured 4.49:1 and 4.3:1, just under AA. These two darker inks clear it. */
 .ftj-tier-badge-city {
   background: rgba(6, 122, 94, 0.12);
   border-color: var(--color-success-solid);
-  color: var(--color-success-solid);
+  color: #045c46;
 }
 
 .ftj-tier-badge-national {
   background: rgba(214, 40, 40, 0.1);
   border-color: var(--color-danger);
-  color: var(--color-danger);
+  color: #b31c1c;
 }
 
 .ftj-tier-list {
@@ -563,72 +565,191 @@
 
 /* --------------------------------------------------------------------------
    10. Employment category spotlight (rendered on services/employment.html,
-   which loads this sheet the same way health.html loads the YAKAP one)
+   which loads this sheet the same way health.html loads the YAKAP one).
+
+   An inverted navy panel, matching the YAKAP spotlight on the Health page so
+   the two programme highlights read as one pattern.
+
+   The navy is the literal brand hex, not var(--color-primary-solid):
+   [data-theme='dark'] redefines that token to #1d4ed8, which would slide the
+   panel to a different blue in dark mode. The panel is its own inverted
+   surface in both themes, so it holds one colour - and white is literal here
+   for the same reason, since --color-white is a surface token that dark mode
+   sets to #1e293b.
    -------------------------------------------------------------------------- */
 .ftj-spotlight-card {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: var(--spacing-lg);
-  align-items: center;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-primary-solid);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #0032a0;
   border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* Depth without a gradient wash: one soft highlight anchored off the top-right
+   corner, plus a hairline inner edge so the panel reads as a raised surface. */
+.ftj-spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    120% 140% at 88% 0%,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0) 62%
+  );
+  pointer-events: none;
+}
+
+.ftj-spotlight-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  pointer-events: none;
+}
+
+.ftj-spotlight-main {
+  position: relative;
+  min-width: 0;
 }
 
 .ftj-spotlight-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: rgba(0, 50, 160, 0.1);
-  color: var(--color-primary);
-  font-size: 0.8125rem;
-  font-weight: 600;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 14px;
 }
 
 .ftj-spotlight-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2.2vw + 0.85rem, 2.1rem);
   font-weight: 800;
-  color: var(--color-primary);
-  margin: 10px 0 8px;
+  color: #ffffff;
+  margin: 0 0 10px;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 
 .ftj-spotlight-desc {
-  font-size: 0.9375rem;
-  line-height: 1.7;
+  font-size: var(--fs-md);
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.6;
   margin: 0 0 var(--spacing-md);
+  max-width: 46ch;
 }
 
 .ftj-spotlight-ctas {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
-.ftj-spotlight-points {
+.ftj-spotlight-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 20px;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color var(--duration-base) ease,
+    border-color var(--duration-base) ease,
+    transform var(--duration-fast) ease;
+}
+
+/* White fill on navy: ~13:1 against the panel, the highest-contrast pairing
+   available here, so the primary action is unmistakable. The extra ancestor
+   selectors beat the sitewide [data-theme='dark'] a:not(.btn) colour rule. */
+.ftj-spotlight-card .ftj-spotlight-ctas .ftj-spotlight-btn-primary {
+  background: #ffffff;
+  color: #0032a0;
+  border: 1px solid #ffffff;
+}
+
+.ftj-spotlight-card .ftj-spotlight-ctas .ftj-spotlight-btn-primary:hover,
+.ftj-spotlight-card .ftj-spotlight-ctas .ftj-spotlight-btn-primary:focus-visible {
+  background: #f1f5f9;
+  color: #002170;
+  transform: translateY(-1px);
+}
+
+.ftj-spotlight-card .ftj-spotlight-ctas .ftj-spotlight-btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.ftj-spotlight-card .ftj-spotlight-ctas .ftj-spotlight-btn-secondary:hover,
+.ftj-spotlight-card .ftj-spotlight-ctas .ftj-spotlight-btn-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.75);
+  transform: translateY(-1px);
+}
+
+.ftj-spotlight-btn:active {
+  transform: translateY(0);
+}
+
+.ftj-spotlight-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Figures. Label above the number so the eye lands on the plain-language line
+   first and the number reads as its answer. */
+.ftj-spotlight-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
   margin: 0;
-  padding: 0;
-  list-style: none;
+}
+
+.ftj-spotlight-metric-pill {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
 }
 
-.ftj-spotlight-point {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  font-size: 0.9375rem;
-  line-height: 1.5;
-  color: var(--color-text-light);
+.ftj-spotlight-metric-label {
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: var(--fw-medium);
+  line-height: 1.3;
 }
 
-.ftj-spotlight-point i {
-  color: var(--color-primary);
-  margin-top: 2px;
+.ftj-spotlight-metric-num {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -641,10 +762,20 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .ftj-peso-card,
-  .ftj-spotlight-card {
+  .ftj-peso-card {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
+  }
+
+  .ftj-spotlight-card {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+    border-radius: var(--radius-md);
+  }
+
+  .ftj-spotlight-desc {
+    max-width: none;
   }
 }
 
@@ -673,5 +804,13 @@
   .ftj-spotlight-ctas {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .ftj-spotlight-card {
+    padding: 20px 18px;
+  }
+
+  .ftj-spotlight-metrics {
+    grid-template-columns: 1fr;
   }
 }
