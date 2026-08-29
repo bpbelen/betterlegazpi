@@ -30,6 +30,10 @@ const EXCLUDED = new Set([
   'test-results',
   'playwright-report',
   'scratch',
+  // Source material for data/*.json - routing-plan slides, scanned documents. Kept
+  // in the repo as provenance, never published: several carry third-party basemaps
+  // and none of it is content we have the right to redistribute.
+  'references',
   'playwright.config.js',
   '.prettierrc',
   '.prettierignore',

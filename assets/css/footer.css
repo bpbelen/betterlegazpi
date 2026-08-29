@@ -39,6 +39,7 @@
 
 .footer-social-new {
   display: flex;
+  align-items: center;
   gap: 12px;
 }
 
@@ -118,9 +119,10 @@ ter Columns */
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
+  height: 40px;
+  padding: 0 14px;
   background: rgba(6, 167, 125, 0.08);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.8);
   white-space: nowrap;
@@ -196,30 +198,26 @@ ter Columns */
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.8125rem;
+  height: 44px;
+  padding: 0 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
   color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
+  font-size: 0.8125rem;
   text-decoration: none;
   transition: all var(--duration-base) ease;
-  margin-top: 12px;
 }
 
 .footer-contribute:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-primary-solid);
   color: white;
+  transform: translateY(-2px);
   text-decoration: none;
 }
 
 .footer-contribute i {
-  color: var(--color-accent);
-}
-
-/* Icon colors for contribute buttons */
-.footer-contribute i.bi-envelope-heart,
-.footer-contribute i.bi-github {
-  color: #ffffff;
+  color: inherit;
+  font-size: 1.125rem;
 }
 
 /* Partner Logos */

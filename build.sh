@@ -75,6 +75,7 @@ if command -v rsync &>/dev/null; then
         --exclude='test-results' \
         --exclude='playwright-report' \
         --exclude='scratch' \
+        --exclude='references' \
         --exclude='playwright.config.js' \
         --exclude='.prettierrc' \
         --exclude='.prettierignore' \

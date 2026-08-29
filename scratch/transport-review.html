@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transport geometry review (throwaway)</title>
+    <style>
+      :root {
+        --bg: #f4f5f7;
+        --card: #fff;
+        --ink: #16181d;
+        --muted: #666c78;
+        --line: #dcdfe5;
+        --ok: #1a7f45;
+        --fix: #b3261e;
+        --accent: #0032a0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font:
+          15px/1.5 system-ui,
+          -apple-system,
+          Segoe UI,
+          sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--card);
+        border-bottom: 1px solid var(--line);
+        padding: 12px 20px;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      header h1 {
+        font-size: 16px;
+        margin: 0;
+        flex: 1;
+      }
+      header .count {
+        font-variant-numeric: tabular-nums;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      button {
+        font: inherit;
+        padding: 6px 12px;
+        border: 1px solid var(--line);
+        background: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button.primary {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      main {
+        padding: 20px;
+        display: grid;
+        gap: 20px;
+        max-width: 1600px;
+        margin: 0 auto;
+      }
+      .route {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .route.is-ok {
+        border-color: var(--ok);
+      }
+      .route.is-fix {
+        border-color: var(--fix);
+      }
+      .route > .head {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        gap: 12px;
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+      .route > .head h2 {
+        margin: 0;
+        font-size: 17px;
+      }
+      .tag {
+        font-size: 12px;
+        padding: 2px 8px;
+        border-radius: 99px;
+        background: #eceff4;
+        color: var(--muted);
+      }
+      .body {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        gap: 0;
+      }
+      @media (max-width: 1000px) {
+        .body {
+          grid-template-columns: 1fr;
+        }
+      }
+      .slide {
+        padding: 14px;
+        border-right: 1px solid var(--line);
+        background: #fafbfc;
+      }
+      .slide img {
+        width: 100%;
+        display: block;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        cursor: zoom-in;
+      }
+      .slide img.zoomed {
+        cursor: zoom-out;
+        position: fixed;
+        inset: 2vh 2vw;
+        width: 96vw;
+        height: 96vh;
+        object-fit: contain;
+        background: #000c;
+        z-index: 100;
+        border-radius: 0;
+      }
+      .parsed {
+        padding: 14px 16px;
+      }
+      .dir {
+        margin-bottom: 14px;
+      }
+      .dir h3 {
+        font-size: 13px;
+        margin: 0 0 6px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .swatch {
+        width: 22px;
+        height: 4px;
+        border-radius: 2px;
+        display: inline-block;
+      }
+      ol.stops {
+        margin: 0;
+        padding-left: 22px;
+        font-size: 13.5px;
+      }
+      ol.stops li {
+        padding: 1px 0;
+      }
+      .meta {
+        font-size: 12.5px;
+        color: var(--muted);
+        border-top: 1px dashed var(--line);
+        margin-top: 10px;
+        padding-top: 8px;
+      }
+      .verdict {
+        padding: 10px 16px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #fafbfc;
+      }
+      .verdict button[aria-pressed='true'] {
+        color: #fff;
+      }
+      .verdict button.ok[aria-pressed='true'] {
+        background: var(--ok);
+        border-color: var(--ok);
+      }
+      .verdict button.fix[aria-pressed='true'] {
+        background: var(--fix);
+        border-color: var(--fix);
+      }
+      .verdict input {
+        flex: 1;
+        min-width: 240px;
+        font: inherit;
+        padding: 6px 10px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+      }
+      .minimap {
+        width: 100%;
+        height: 300px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        margin-top: 10px;
+        background: #e8eef2;
+      }
+      .draft {
+        margin: 8px 0 0;
+        font-size: 12.5px;
+        color: #8a5b00;
+        background: #fff8e6;
+        border: 1px solid #f0d68a;
+        border-radius: 6px;
+        padding: 8px 10px;
+      }
+      #out {
+        white-space: pre-wrap;
+        font-family: ui-monospace, Menlo, Consolas, monospace;
+        font-size: 12.5px;
+        background: #12141a;
+        color: #d8dee9;
+        padding: 16px;
+        border-radius: 10px;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css" />
+    <script defer src="../assets/vendor/leaflet/leaflet.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Transport transcription review — slide vs. parsed data and generated line</h1>
+      <span class="count" id="count"></span>
+      <button id="export" class="primary">Copy findings</button>
+    </header>
+    <main id="app">Loading…</main>
+    <script>
+      const IMG = (n) => `../references/legazpi-transportation-jeep-${n}.jpg`;
+      const state = JSON.parse(localStorage.getItem('transport-review') || '{}');
+      const save = () => localStorage.setItem('transport-review', JSON.stringify(state));
+
+      function esc(s) {
+        return String(s).replace(
+          /[&<>"]/g,
+          (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]
+        );
+      }
+
+      function franchiseLine(f, key) {
+        if (!f) return 'No franchise data on this slide.';
+        const ops = Object.entries(f.operators || {})
+          .map(([k, v]) => `${k}: ${v}`)
+          .join(' · ');
+        const alloc = f.allocatedFrom ? ` (of ${f.allocatedFrom})` : '';
+        const orig = f.originalList ? ` · original list ${f.originalList}` : '';
+        return `VFU ${f.validFranchisedUnits}${alloc}${orig} — ${ops} — as of ${f.asOf}`;
+      }
+
+      function draftNote(features) {
+        const skipped = [
+          ...new Set(features.flatMap((f) => f.properties.waypointsSkipped || [])),
+        ].filter((s) => s !== 'AH 26' && s !== 'U-turn');
+        if (!skipped.length) return '';
+        return (
+          '<p class="draft"><b>Line is a draft.</b> These places could not be located on ' +
+          'OpenStreetMap, so the route through them was guessed by the routing engine: ' +
+          esc(skipped.join(', ')) +
+          '</p>'
+        );
+      }
+
+      // Mount each map only when its card scrolls into view. Building all twelve
+      // up front left them blank (Leaflet sizes itself at construction, before
+      // the grid has settled) and fired twelve simultaneous tile requests at
+      // OSM's free servers.
+      const mapObserver = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            obs.unobserve(entry.target);
+            const fn = entry.target._mount;
+            if (fn) fn();
+          });
+        },
+        { rootMargin: '200px' }
+      );
+
+      function mountMap(route, features) {
+        if (!features.length) return;
+        const el = document.getElementById('map-' + route.id);
+        if (!el) return;
+        el._mount = () => realMountMap(el, features);
+        mapObserver.observe(el);
+      }
+
+      function realMountMap(el, features, retried) {
+        // This script is inline, so it runs while the document is still
+        // parsing — before the deferred leaflet.js has executed. On a warm
+        // cache the route JSON resolves fast enough that a card already in the
+        // viewport tries to mount first, and window.L is not there yet. Wait
+        // for load (deferred scripts have all run by then) and try once more.
+        if (!window.L) {
+          if (!retried) {
+            window.addEventListener(
+              'load',
+              function () {
+                realMountMap(el, features, true);
+              },
+              { once: true }
+            );
+            return;
+          }
+          el.textContent = 'Leaflet did not load — cannot draw the generated line.';
+          return;
+        }
+        const map = L.map(el, { scrollWheelZoom: false });
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          attribution: '&copy; OpenStreetMap',
+        }).addTo(map);
+        const all = [];
+        features.forEach((f) => {
+          const pts = f.geometry.coordinates.map((c) => [c[1], c[0]]);
+          L.polyline(pts, {
+            color: f.properties.color,
+            weight: 4,
+            opacity: 0.9,
+          })
+            .bindPopup(f.properties.label)
+            .addTo(map);
+          all.push(...pts);
+          // Start and end markers make direction legible against the slide.
+          L.circleMarker(pts[0], { radius: 6, color: '#1a7f45', fillOpacity: 1 })
+            .bindPopup('Start: ' + f.properties.label)
+            .addTo(map);
+          L.circleMarker(pts[pts.length - 1], { radius: 6, color: '#b3261e', fillOpacity: 1 })
+            .bindPopup('End: ' + f.properties.label)
+            .addTo(map);
+        });
+        if (all.length) map.fitBounds(all, { padding: [15, 15] });
+        // The container may still be settling; recompute once it has.
+        setTimeout(() => {
+          map.invalidateSize();
+          if (all.length) map.fitBounds(all, { padding: [15, 15] });
+        }, 120);
+      }
+
+      Promise.all([
+        fetch('../data/transport-routes.json').then((r) => r.json()),
+        fetch('../data/transport-routes.geojson')
+          .then((r) => (r.ok ? r.json() : { features: [] }))
+          .catch(() => ({ features: [] })),
+      ])
+        .then(([data, geo]) => {
+          const geoByRoute = {};
+          (geo.features || []).forEach((f) => {
+            const id = f.properties.routeId;
+            (geoByRoute[id] = geoByRoute[id] || []).push(f);
+          });
+          const app = document.getElementById('app');
+          app.innerHTML = '';
+          data.routes.forEach((route) => {
+            const el = document.createElement('section');
+            el.className = 'route';
+            el.id = route.id;
+            const v = state[route.id] || {};
+            if (v.verdict) el.classList.add(v.verdict === 'ok' ? 'is-ok' : 'is-fix');
+
+            el.innerHTML = `
+              <div class="head">
+                <h2>${esc(route.name)}</h2>
+                <span class="tag">slide ${route.sourceSlide}</span>
+                <span class="tag">${esc(route.plan)}</span>
+                <span class="tag">${route.directions.length} direction(s)</span>
+                <code style="margin-left:auto;color:var(--muted);font-size:12px">${esc(route.id)}</code>
+              </div>
+              <div class="body">
+                <div class="slide"><img src="${IMG(route.sourceSlide)}" alt="Source slide ${route.sourceSlide}" loading="lazy" /></div>
+                <div class="parsed">
+                  ${route.directions
+                    .map(
+                      (d) => `
+                    <div class="dir">
+                      <h3><span class="swatch" style="background:${esc(d.color)}"></span>${esc(d.label)} <span class="tag">${esc(d.id)}</span></h3>
+                      <ol class="stops">${d.stops.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
+                    </div>`
+                    )
+                    .join('')}
+                  <div class="meta">${esc(franchiseLine(route.franchise))}</div>
+                  ${draftNote(geoByRoute[route.id] || [])}
+                  <div class="minimap" id="map-${esc(route.id)}"></div>
+                </div>
+              </div>
+              <div class="verdict">
+                <button class="ok" data-v="ok" aria-pressed="${v.verdict === 'ok'}">✓ Matches slide</button>
+                <button class="fix" data-v="fix" aria-pressed="${v.verdict === 'fix'}">✗ Needs fixing</button>
+                <input placeholder="What is wrong? (e.g. stop 4 should be Lakandula St., not Dr.)" value="${esc(v.note || '')}" />
+              </div>`;
+
+            el.querySelectorAll('.verdict button').forEach((btn) => {
+              btn.addEventListener('click', () => {
+                const verdict = btn.dataset.v;
+                state[route.id] = { ...(state[route.id] || {}), verdict };
+                save();
+                el.classList.toggle('is-ok', verdict === 'ok');
+                el.classList.toggle('is-fix', verdict === 'fix');
+                el.querySelectorAll('.verdict button').forEach((b) =>
+                  b.setAttribute('aria-pressed', b === btn)
+                );
+                tally();
+              });
+            });
+            el.querySelector('.verdict input').addEventListener('input', (e) => {
+              state[route.id] = { ...(state[route.id] || {}), note: e.target.value };
+              save();
+            });
+            el.querySelector('.slide img').addEventListener('click', (e) =>
+              e.target.classList.toggle('zoomed')
+            );
+
+            app.appendChild(el);
+            mountMap(route, geoByRoute[route.id] || []);
+          });
+
+          function tally() {
+            const total = data.routes.length;
+            const done = data.routes.filter((r) => state[r.id]?.verdict).length;
+            const bad = data.routes.filter((r) => state[r.id]?.verdict === 'fix').length;
+            document.getElementById('count').textContent =
+              `${done}/${total} reviewed · ${bad} need fixing`;
+          }
+          tally();
+
+          document.getElementById('export').addEventListener('click', () => {
+            const lines = data.routes.map((r) => {
+              const v = state[r.id] || {};
+              const mark = v.verdict === 'ok' ? 'OK  ' : v.verdict === 'fix' ? 'FIX ' : '??  ';
+              return `${mark} ${r.id} (slide ${r.sourceSlide})${v.note ? ' — ' + v.note : ''}`;
+            });
+            const text = lines.join('\n');
+            navigator.clipboard.writeText(text).then(
+              () => alert('Copied. Paste it back to Claude.'),
+              () => {
+                const pre = document.createElement('pre');
+                pre.id = 'out';
+                pre.textContent = text;
+                document.getElementById('app').prepend(pre);
+              }
+            );
+          });
+        })
+        .catch((e) => {
+          document.getElementById('app').textContent =
+            'Failed to load data/transport-routes.json — serve the repo root (npm run dev) rather than opening this file directly. ' +
+            e;
+        });
+    </script>
+  </body>
+</html>

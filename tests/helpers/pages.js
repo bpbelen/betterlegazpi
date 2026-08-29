@@ -46,6 +46,7 @@ const CI_ROUTES = [
   '/service-details/philhealth-yakap.html', // philhealth-yakap.css: inverted spotlight panel, tabs, accordions
   '/tourism/index.html', // tourism.css: photo page-header, bento, scroll-snap strip
   '/tourism/ibalong.html', // tourism.css reading layout: switched concise/full views
+  '/tourism/transportation.html', // transport.css, and the only page mounting Leaflet from JSON
   '/terms/index.html', // legal.css
   '/404.html', // error page, omits version.js
 ];

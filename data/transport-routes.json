@@ -1,0 +1,1251 @@
+{
+  "note": "Public Utility Jeepney (PUJ) routes serving Legazpi City. Transcribed from the routing-plan infographics released by the Office of the Mayor (see sources). Street sequences are reproduced in the order printed on each slide. Geometry is NOT stored here - map lines live in data/transport-routes.geojson, keyed by '<routeId>:<directionId>'. No slide carries a fare - fares are set by LTFRB and by city ordinance, not by this routing plan - so all fare rules live in data/transport-fares.json. Each direction carries a distanceKm derived from its geometry, which is what lets the page quote the correct fare for that leg.",
+  "lastVerified": "2026-07",
+  "planStatus": {
+    "label": "Pending national approval",
+    "detail": "The Local Public Transport Route Plan 2023-2028 of Albay Province is marked 'revised and for DOTr approval' in the source material. Routes drawn from it may change before it takes effect."
+  },
+  "sources": [
+    {
+      "id": "mayor-post",
+      "title": "Updated Routing Plan for Passenger Jeepneys",
+      "publisher": "Office of the City Mayor, Legazpi City",
+      "url": "https://www.facebook.com/share/p/1DsynEhxV2/",
+      "note": "Route infographics released via the Mayor's official Facebook page."
+    },
+    {
+      "id": "ord-0001-2006",
+      "title": "An Ordinance Prescribing the Traffic Routes of Public Utility Jeepneys Particularly to Daraga A and B via the Alternate Road",
+      "ordinanceNo": "0001-2006",
+      "dateApproved": "2006-02-08"
+    },
+    {
+      "id": "ord-0024-2015",
+      "title": "An Ordinance Enacting the 2015 Revised Traffic Code of the City of Legazpi",
+      "ordinanceNo": "0024-2015",
+      "dateApproved": "2015"
+    },
+    {
+      "id": "ord-14-0001-2019",
+      "title": "An Ordinance amending sections 58, 68, 69, 71 and 73 of Ordinance No. 0024-2015",
+      "ordinanceNo": "14-0001-2019",
+      "dateApproved": "2019-01-28"
+    },
+    {
+      "id": "lptrp-2023-2028",
+      "title": "Local Public Transport Route Plan 2023-2028 of Albay Province",
+      "status": "Revised and for DOTr approval"
+    }
+  ],
+  "operatorKey": {
+    "BITCOOP": "Bicol Integrated Transport Cooperative",
+    "LDCGLOP": "LDCGLOP transport cooperative",
+    "GOLDEN": "Golden Motors OPC",
+    "DIGIBINE": "Digibine Corporation",
+    "UNCONSO": "Unconsolidated (individual operators not yet under a cooperative or corporation)"
+  },
+  "routes": [
+    {
+      "id": "daraga-legazpi-loop-1",
+      "name": "Daraga - Legazpi City Loop Service 1",
+      "shortName": "Loop Service 1",
+      "qualifier": "Counter-clockwise",
+      "corridor": "daraga-legazpi",
+      "plan": "LPTRP 2023-2028",
+      "sourceRefs": ["mayor-post", "lptrp-2023-2028"],
+      "sourceSlide": 3,
+      "franchise": {
+        "validFranchisedUnits": 32,
+        "asOf": "2026-07",
+        "operators": {
+          "BITCOOP": 27,
+          "LDCGLOP": 4,
+          "UNCONSO": 1
+        }
+      },
+      "directions": [
+        {
+          "id": "loop",
+          "label": "From Daraga to Legazpi City (counter-clockwise)",
+          "color": "#111111",
+          "stops": [
+            "Shell Daraga",
+            "Rizal Ave.",
+            "Lapu-Lapu St.",
+            "Quezon Ave.",
+            "Peñaranda St.",
+            "Legazpi City - Tiwi Coastal Rd.",
+            "Daraga - Legazpi Diversion Rd.",
+            "Binitayan Rd.",
+            "AH 26",
+            "Shell Daraga"
+          ],
+          "landmarks": [
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "LCC Mall Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "Ayala Malls Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "Jeepney Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Aquinas Univeristy Professional Schools",
+              "kind": "University"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "Ago General Hospital",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Estevez Memorial Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 14
+        }
+      ]
+    },
+    {
+      "id": "daraga-legazpi-loop-2",
+      "name": "Daraga - Legazpi City Loop Service 2",
+      "shortName": "Loop Service 2",
+      "qualifier": "Clockwise",
+      "corridor": "daraga-legazpi",
+      "plan": "LPTRP 2023-2028",
+      "sourceRefs": ["mayor-post", "lptrp-2023-2028"],
+      "sourceSlide": 3,
+      "franchise": {
+        "validFranchisedUnits": 32,
+        "asOf": "2026-07",
+        "operators": {
+          "BITCOOP": 21,
+          "LDCGLOP": 10,
+          "UNCONSO": 1
+        }
+      },
+      "directions": [
+        {
+          "id": "loop",
+          "label": "From Daraga to Legazpi City (clockwise)",
+          "color": "#e8632a",
+          "stops": [
+            "Daraga Municipal Hall",
+            "AH 26",
+            "Binitayan Rd.",
+            "Daraga - Legazpi Diversion Rd.",
+            "Legazpi City - Tiwi Coastal Rd.",
+            "Ramon Santos St.",
+            "Quezon Ave.",
+            "Bicol 630",
+            "Gen. Luna"
+          ],
+          "landmarks": [
+            {
+              "name": "LCC Mall Daraga",
+              "kind": "Mall"
+            },
+            {
+              "name": "Ayala Malls Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "JY Brothers Marketing",
+              "kind": "Mall"
+            },
+            {
+              "name": "Jeepney Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Aquinas Univeristy Professional Schools",
+              "kind": "University"
+            },
+            {
+              "name": "Mariners' Polytechnic Colleges Foundation, Inc.",
+              "kind": "University"
+            },
+            {
+              "name": "Immaculate Concepcion College",
+              "kind": "University"
+            },
+            {
+              "name": "Daraga Doctors' Hospital, Inc.",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Albay Doctors Hospital, Inc.",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 18.6
+        }
+      ]
+    },
+    {
+      "id": "daraga-arimbay-via-tahao",
+      "name": "Daraga - Arimbay (Legazpi City)",
+      "shortName": "Daraga - Arimbay",
+      "qualifier": "via Tahao Road",
+      "corridor": "daraga-arimbay",
+      "plan": "LPTRP 2023-2028",
+      "sourceRefs": ["mayor-post", "lptrp-2023-2028"],
+      "sourceSlide": 4,
+      "franchise": {
+        "validFranchisedUnits": 103,
+        "asOf": "2026-07",
+        "operators": {
+          "BITCOOP": 70,
+          "LDCGLOP": 29,
+          "DIGIBINE": 3,
+          "UNCONSO": 1
+        }
+      },
+      "directions": [
+        {
+          "id": "both",
+          "label": "To and from Daraga to Arimbay",
+          "color": "#111111",
+          "stops": [
+            "Shell Daraga",
+            "Rizal Ave.",
+            "Imelda Roces Ave.",
+            "Terminal Rd. 2",
+            "SM City Legazpi",
+            "Legazpi City Grand Terminal",
+            "Terminal Rd. 1",
+            "F. Imperial St.",
+            "Circumferential Rd.",
+            "Rosal St.",
+            "Imperial Court Subd. 2",
+            "Lapu-Lapu St.",
+            "Quezon Ave.",
+            "Peñaranda St.",
+            "Legazpi City - Tiwi Coastal Rd.",
+            "Arimbay Chapel"
+          ],
+          "landmarks": [
+            {
+              "name": "LCC Mall Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "101 Shopping Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Yashano Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Jeepney Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi Grand Central Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi UV Express Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "BU - College of Business Economics & Management",
+              "kind": "University"
+            },
+            {
+              "name": "BU College of Social Science and Philosophy",
+              "kind": "University"
+            },
+            {
+              "name": "Children of Abraham Puericulture Center",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 9.2
+        }
+      ]
+    },
+    {
+      "id": "daraga-rawis-a",
+      "name": "Daraga - Rawis \"A\"",
+      "shortName": "Daraga - Rawis A",
+      "qualifier": "LTFRB original structure",
+      "corridor": "daraga-rawis",
+      "plan": "LTFRB original structure",
+      "sourceRefs": ["mayor-post"],
+      "sourceSlide": 5,
+      "franchise": {
+        "validFranchisedUnits": 55,
+        "asOf": "2026-07",
+        "operators": {
+          "BITCOOP": 42,
+          "LDCGLOP": 11,
+          "UNCONSO": 2
+        }
+      },
+      "directions": [
+        {
+          "id": "outbound",
+          "label": "From Daraga to Rawis",
+          "color": "#111111",
+          "stops": [
+            "Shell Daraga",
+            "Rizal Ave.",
+            "Albay Provincial Capitol",
+            "F. Aquende Dr.",
+            "Lakandula Dr.",
+            "Bariada Rd.",
+            "F. Imperial St.",
+            "Circumferential Rd.",
+            "Rosal St.",
+            "Lapu-Lapu St.",
+            "Quezon Ave.",
+            "Legazpi Blvd.",
+            "Embarcadero de Legazpi",
+            "Gov. Forbes St.",
+            "Ramon Santos St.",
+            "Bicol 630 Rd."
+          ],
+          "landmarks": [
+            {
+              "name": "101 Shopping Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "LCC Mall Daraga",
+              "kind": "Mall"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "BU - College of Business Economics & Management",
+              "kind": "University"
+            },
+            {
+              "name": "Divine Word College of Legazpi",
+              "kind": "University"
+            },
+            {
+              "name": "Ago General Hospital",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Albay Doctors Hospital, Inc.",
+              "kind": "Hospital"
+            },
+            {
+              "name": "University of Santo Tomas - Legazpi Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 15.4
+        },
+        {
+          "id": "inbound",
+          "label": "From Rawis to Daraga",
+          "color": "#f0b429",
+          "stops": [
+            "Bicol 630 Rd.",
+            "Ramon Santos St.",
+            "Quezon Ave. (going to Ayala Mall)",
+            "Rizal Ave. (going to Daraga)",
+            "Petron Daraga",
+            "Gen. Luna St.",
+            "AH 26",
+            "Shell Daraga"
+          ],
+          "landmarks": [
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "JY Brothers Marketing",
+              "kind": "Mall"
+            },
+            {
+              "name": "LCC Mall Daraga",
+              "kind": "Mall"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi Grand Central Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "BU - College of Business Economics & Management",
+              "kind": "University"
+            },
+            {
+              "name": "Ago General Hospital",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Tanchuling General Hospital, Inc.",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 12.1
+        }
+      ]
+    },
+    {
+      "id": "daraga-rawis-b",
+      "name": "Daraga - Rawis \"B\"",
+      "shortName": "Daraga - Rawis B",
+      "qualifier": "LTFRB original structure",
+      "corridor": "daraga-rawis",
+      "plan": "LTFRB original structure",
+      "sourceRefs": ["mayor-post"],
+      "sourceSlide": 6,
+      "franchise": {
+        "validFranchisedUnits": 84,
+        "asOf": "2026-07",
+        "operators": {
+          "BITCOOP": 56,
+          "LDCGLOP": 20,
+          "DIGIBINE": 6,
+          "UNCONSO": 2
+        }
+      },
+      "directions": [
+        {
+          "id": "outbound",
+          "label": "From Daraga to Rawis",
+          "color": "#111111",
+          "stops": [
+            "Shell Daraga",
+            "Rizal Ave.",
+            "Lapu-Lapu St.",
+            "Quezon Ave.",
+            "Legazpi Blvd.",
+            "Embarcadero de Legazpi",
+            "Gov. Forbes St.",
+            "Ramon Santos St.",
+            "Bicol 630 Rd."
+          ],
+          "landmarks": [
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "LCC Mall Daraga",
+              "kind": "Mall"
+            },
+            {
+              "name": "Ayala Malls Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "BU - College of Business Economics & Management",
+              "kind": "University"
+            },
+            {
+              "name": "Ago General Hospital",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Albay Doctors Hospital, Inc.",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Estevez Memorial Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 11.1
+        },
+        {
+          "id": "inbound",
+          "label": "From Rawis to Daraga",
+          "color": "#1a9e5c",
+          "stops": [
+            "Bicol 630 Rd.",
+            "Ramon Santos St.",
+            "Quezon Ave. (going to Ayala Mall)",
+            "Circumferential Rd.",
+            "L. Los Baños Ave.",
+            "F. Imperial St.",
+            "Bariada Rd.",
+            "Lakandula Dr.",
+            "F. Aquende Dr.",
+            "R. Rosario St.",
+            "Rizal Ave.",
+            "Petron Daraga",
+            "Gen. Luna St.",
+            "AH 26",
+            "Shell Daraga"
+          ],
+          "landmarks": [
+            {
+              "name": "101 Shopping Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "JY Brothers Marketing",
+              "kind": "Mall"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "Jesse M. Robredo Institute of Governance and Development",
+              "kind": "University"
+            },
+            {
+              "name": "BU - College of Business Economics & Management",
+              "kind": "University"
+            },
+            {
+              "name": "Albay Doctors Hospital, Inc.",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Children of Abraham Puericulture Center",
+              "kind": "Hospital"
+            },
+            {
+              "name": "University of Santo Tomas - Legazpi Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 15.3
+        }
+      ]
+    },
+    {
+      "id": "daraga-legazpi-ltfrb",
+      "name": "Daraga - Legazpi City",
+      "shortName": "Daraga - Legazpi City",
+      "qualifier": "LTFRB original structure",
+      "corridor": "daraga-legazpi",
+      "plan": "LTFRB original structure",
+      "sourceRefs": ["mayor-post"],
+      "sourceSlide": 8,
+      "franchise": {
+        "validFranchisedUnits": 246,
+        "asOf": "2026-07",
+        "operators": {
+          "BITCOOP": 146,
+          "LDCGLOP": 51,
+          "GOLDEN": 35,
+          "DIGIBINE": 9,
+          "UNCONSO": 5
+        }
+      },
+      "directions": [
+        {
+          "id": "loop",
+          "label": "From Daraga",
+          "color": "#111111",
+          "stops": [
+            "Shell Daraga",
+            "Rizal Ave.",
+            "Lapu-Lapu St.",
+            "Quezon Ave.",
+            "Peñaranda St.",
+            "Ramon Santos St.",
+            "Old Legazpi Public Market (Ayala Mall)",
+            "Bicol 630 Rd.",
+            "Rizal Ave.",
+            "R. Rosario St.",
+            "Rizal Ave.",
+            "Petron Daraga",
+            "Gen. Luna St.",
+            "AH 26",
+            "Shell Daraga"
+          ],
+          "landmarks": [
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "LCC Mall Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "101 Shopping Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi Grand Central Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Aquinas Univeristy Professional Schools",
+              "kind": "University"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Ago General Hospital",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Sta Teresita Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 22.5
+        }
+      ]
+    },
+    {
+      "id": "daraga-legazpi-a",
+      "name": "Daraga - Legazpi City \"A\"",
+      "shortName": "Daraga - Legazpi A",
+      "qualifier": "LPTRP based",
+      "corridor": "daraga-legazpi",
+      "plan": "LPTRP 2023-2028",
+      "sourceRefs": ["mayor-post", "lptrp-2023-2028"],
+      "sourceSlide": 9,
+      "franchise": {
+        "validFranchisedUnits": 115,
+        "allocatedFrom": 246,
+        "originalList": 125,
+        "asOf": "2026-07",
+        "operators": {
+          "BITCOOP": 70,
+          "LDCGLOP": 24,
+          "GOLDEN": 16,
+          "DIGIBINE": 2,
+          "UNCONSO": 3
+        },
+        "note": "Unit allocation attributed on the source slide to former City Councilor Jesus Chito Baldo. The original list totalled 241 units, of which 30 were not valid franchised units."
+      },
+      "directions": [
+        {
+          "id": "loop",
+          "label": "Daraga to Legazpi City and back",
+          "color": "#111111",
+          "stops": [
+            "Shell Daraga",
+            "Rizal Ave.",
+            "Lapu-Lapu St.",
+            "Quezon Ave.",
+            "Peñaranda St.",
+            "Ramon Santos St.",
+            "Quezon Ave.",
+            "Bicol 630 Rd.",
+            "F. Imperial St.",
+            "Alternative Rd.",
+            "F. Aquende Dr.",
+            "R. Rosario St.",
+            "Rizal Ave.",
+            "Bicol 630",
+            "Gen. Luna St.",
+            "Shell Daraga"
+          ],
+          "landmarks": [
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "LCC Mall Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "Yashano Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Jeepney Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "Mariners' Polytechnic Colleges Foundation, Inc.",
+              "kind": "University"
+            },
+            {
+              "name": "University of Santo Tomas - Legazpi Hospital",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Ago General Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 31.3
+        }
+      ]
+    },
+    {
+      "id": "daraga-legazpi-b",
+      "name": "Daraga - Legazpi City \"B\"",
+      "shortName": "Daraga - Legazpi B",
+      "qualifier": "LPTRP based",
+      "corridor": "daraga-legazpi",
+      "plan": "LPTRP 2023-2028",
+      "sourceRefs": ["mayor-post", "lptrp-2023-2028"],
+      "sourceSlide": 10,
+      "franchise": {
+        "validFranchisedUnits": 101,
+        "allocatedFrom": 246,
+        "originalList": 116,
+        "asOf": "2026-07",
+        "operators": {
+          "BITCOOP": 56,
+          "LDCGLOP": 22,
+          "GOLDEN": 16,
+          "DIGIBINE": 6,
+          "UNCONSO": 1
+        },
+        "note": "Unit allocation attributed on the source slide to former City Councilor Jesus Chito Baldo."
+      },
+      "directions": [
+        {
+          "id": "loop",
+          "label": "From Daraga",
+          "color": "#e8632a",
+          "stops": [
+            "Shell Daraga",
+            "Rizal Ave.",
+            "Albay Capitol",
+            "F. Aquende Dr.",
+            "Lakandula Dr.",
+            "Bariada Rd.",
+            "F. Imperial St.",
+            "Circumferential Rd.",
+            "Rosal St.",
+            "Imperial Court Subd. 2",
+            "Lapu-Lapu St.",
+            "Quezon Ave.",
+            "Legazpi Blvd.",
+            "Embarcadero de Legazpi",
+            "Gov. Forbes St.",
+            "Ramon Santos St.",
+            "Bicol 630 Rd.",
+            "Rizal Ave.",
+            "R. Rosario St.",
+            "Rizal Ave.",
+            "Petron Daraga",
+            "Gen. Luna St.",
+            "AH 26",
+            "Shell Daraga"
+          ],
+          "landmarks": [
+            {
+              "name": "101 Shopping Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "LCC Mall Daraga",
+              "kind": "Mall"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi Grand Central Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Mariners' Polytechnic Colleges Foundation, Inc.",
+              "kind": "University"
+            },
+            {
+              "name": "Ago General Hospital",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Sta Teresita Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 27.2
+        }
+      ]
+    },
+    {
+      "id": "puj-first-district",
+      "name": "PUJs from the First District of Albay",
+      "shortName": "First District PUJs",
+      "qualifier": "Ordinance 14-0001-2019, Section 68",
+      "corridor": "province",
+      "plan": "Ordinance 14-0001-2019",
+      "sourceRefs": ["mayor-post", "ord-14-0001-2019"],
+      "sourceSlide": 13,
+      "franchise": null,
+      "directions": [
+        {
+          "id": "entering",
+          "label": "Entering Legazpi City",
+          "color": "#2b9ed4",
+          "stops": [
+            "Peñaranda St.",
+            "Ramon A. Santos St.",
+            "Quezon Ave.",
+            "L. Los Baños Ave.",
+            "Circumferential Rd. (Ravalo Machine Shop & Auto Supply)",
+            "F. Imperial St. (cross)",
+            "Landco Rd.",
+            "Landco Access Rd.",
+            "Legazpi City Grand Terminal",
+            "Terminal Rd. 2",
+            "Imelda C. Roces Ave.",
+            "Lakandula Dr.",
+            "Peñaranda St."
+          ],
+          "landmarks": [
+            {
+              "name": "Pacific mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "101 Shopping Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "LCC Mall Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "Legazpi Grand Central Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi UV Express Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Jeepney Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Aquinas Univeristy Professional Schools",
+              "kind": "University"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Albay Doctors Hospital, Inc.",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Legazpi City Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 7.1
+        }
+      ]
+    },
+    {
+      "id": "puj-camalig",
+      "name": "PUJs from Camalig, Albay",
+      "shortName": "Camalig PUJs",
+      "qualifier": "Ordinance 14-0001-2019, Section 69 Paragraph 1",
+      "corridor": "province",
+      "plan": "Ordinance 14-0001-2019",
+      "sourceRefs": ["mayor-post", "ord-14-0001-2019"],
+      "sourceSlide": 14,
+      "franchise": null,
+      "directions": [
+        {
+          "id": "entering",
+          "label": "From Daraga into Legazpi City and out",
+          "color": "#e0483a",
+          "stops": [
+            "Rizal St. (from Daraga)",
+            "Lapu-Lapu St.",
+            "Quezon Ave. extension",
+            "Embarcadero de Legazpi",
+            "U-turn",
+            "Elizondo St.",
+            "Arquiga St.",
+            "Ramon Santos St.",
+            "Quezon Ave.",
+            "L. Los Baños Ave.",
+            "Capantawan Rd.",
+            "Legazpi City Market (back portion)",
+            "F. Imperial St. (cross)",
+            "LANDCO Business Park entrance",
+            "Terminal Access Rd.",
+            "Terminal Rd. 1",
+            "F. Imperial St.",
+            "Dunkin Donut",
+            "Rizal St."
+          ],
+          "landmarks": [
+            {
+              "name": "Pacific mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "101 Shopping Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Yashano Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Jeepney Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi Grand Central Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi UV Express Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Aquinas Univeristy Professional Schools",
+              "kind": "University"
+            },
+            {
+              "name": "Albay Doctors Hospital, Inc.",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Tanchuling General Hospital, Inc.",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 8.4
+        }
+      ]
+    },
+    {
+      "id": "puj-third-district",
+      "name": "PUJs from the Third District of Albay",
+      "shortName": "Third District PUJs",
+      "qualifier": "Ordinance 14-0001-2019, Section 69 Paragraph 2",
+      "corridor": "province",
+      "plan": "Ordinance 14-0001-2019",
+      "sourceRefs": ["mayor-post", "ord-14-0001-2019"],
+      "sourceSlide": 15,
+      "franchise": null,
+      "directions": [
+        {
+          "id": "entering",
+          "label": "Entering Legazpi City",
+          "color": "#a32b22",
+          "stops": [
+            "Rizal St.",
+            "Lapu-Lapu St.",
+            "L. Los Baños Ave.",
+            "Circumferential Rd. (Ravalo Machine Shop & Auto Supply)",
+            "F. Imperial St. (cross)",
+            "Landco Rd.",
+            "Landco Access Rd.",
+            "Legazpi City Grand Terminal",
+            "Terminal Rd. 2",
+            "Imelda C. Roces Ave.",
+            "Lakandula Dr.",
+            "Gogon-Bonot Bypass Rd.",
+            "Daraga - Legazpi Diversion Rd."
+          ],
+          "landmarks": [
+            {
+              "name": "Pacific mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "101 Shopping Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "LCC Mall Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "Legazpi Grand Central Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi UV Express Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Jeepney Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Aquinas Univeristy Professional Schools",
+              "kind": "University"
+            },
+            {
+              "name": "Tanchuling General Hospital, Inc.",
+              "kind": "Hospital"
+            },
+            {
+              "name": "Legazpi City Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 8.2
+        }
+      ]
+    },
+    {
+      "id": "puj-polangui",
+      "name": "PUJs from Polangui (Third District)",
+      "shortName": "Polangui PUJs",
+      "qualifier": "LPTRP 2023-2028",
+      "corridor": "province",
+      "plan": "LPTRP 2023-2028",
+      "sourceRefs": ["mayor-post", "lptrp-2023-2028"],
+      "sourceSlide": 16,
+      "franchise": null,
+      "directions": [
+        {
+          "id": "inbound",
+          "label": "From Polangui to Legazpi City",
+          "color": "#111111",
+          "stops": [
+            "Polangui Integrated Terminal",
+            "AH 26",
+            "Oas Proper (National Highway)",
+            "AH 26",
+            "Ligao City Proper (National Highway)",
+            "AH 26",
+            "Guinobatan Proper (National Highway)",
+            "AH 26",
+            "Rizal Ave.",
+            "Lapu-Lapu St.",
+            "Quezon Ave.",
+            "Embarcadero de Legazpi",
+            "Gov. Forbes St.",
+            "Ramon Santos St.",
+            "Quezon Ave.",
+            "L. Los Baños Ave.",
+            "F. Imperial St.",
+            "Terminal Rd. 1",
+            "SM City Legazpi"
+          ],
+          "landmarks": [
+            {
+              "name": "101 Shopping Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Yashano Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Legazpi Grand Central Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Daraga Bus Station",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi UV Express Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Bicol College",
+              "kind": "University"
+            },
+            {
+              "name": "Tanchuling College",
+              "kind": "University"
+            },
+            {
+              "name": "Jesse M. Robredo Institute of Governance and Development",
+              "kind": "University"
+            },
+            {
+              "name": "Ago General Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 44
+        },
+        {
+          "id": "outbound",
+          "label": "From SM City Legazpi to Polangui",
+          "color": "#e0483a",
+          "stops": [
+            "SM City Legazpi",
+            "Terminal Rd. 2",
+            "Imelda Roces Ave.",
+            "Rizal Ave.",
+            "Bagtang Rd.",
+            "Magayon Dr.",
+            "Daraga - Legazpi Diversion Rd.",
+            "Binitayan Rd.",
+            "AH 26",
+            "Guinobatan Proper (National Highway)",
+            "AH 26",
+            "Ligao City Proper (National Highway)",
+            "AH 26",
+            "Oas Proper (National Highway)",
+            "AH 26",
+            "Polangui Integrated Terminal"
+          ],
+          "landmarks": [
+            {
+              "name": "SM City Legazpi",
+              "kind": "Mall"
+            },
+            {
+              "name": "Yashano Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Gregorian Mall",
+              "kind": "Mall"
+            },
+            {
+              "name": "Jeepney Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi Grand Central Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Legazpi UV Express Terminal",
+              "kind": "Terminal"
+            },
+            {
+              "name": "Jesse M. Robredo Institute of Governance and Development",
+              "kind": "University"
+            },
+            {
+              "name": "College of Education",
+              "kind": "University"
+            },
+            {
+              "name": "Daraga Community College",
+              "kind": "University"
+            },
+            {
+              "name": "Ago General Hospital",
+              "kind": "Hospital"
+            }
+          ],
+          "distanceKm": 42.7
+        }
+      ]
+    }
+  ]
+}

@@ -113,6 +113,25 @@
   color: #ffffff;
 }
 
+/* The accent pill sets Transportation apart from the five leisure gateways:
+   it is the practical, resident-facing one. --color-accent-solid rather than
+   --color-accent so white text keeps its contrast in both themes. */
+.tourism-hero-gateway-pill.is-accent {
+  background: var(--color-accent-solid);
+  border-color: var(--color-accent-solid);
+  color: #ffffff !important;
+}
+
+.tourism-hero-gateway-pill.is-accent i,
+.tourism-hero-gateway-pill.is-accent:hover i {
+  color: #ffffff;
+}
+
+.tourism-hero-gateway-pill.is-accent:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
 /* --- Official City Seal Fallback Presentation --- */
 .tourism-seal-fallback-media,
 .tourism-featured-card__media--fallback,

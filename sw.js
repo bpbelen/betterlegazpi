@@ -3,7 +3,7 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v10';
+var CACHE_VERSION = 'v11';
 var STATIC_CACHE = 'betterlegazpi-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'betterlegazpi-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
@@ -19,6 +19,11 @@ var PRECACHE_URLS = [
   '/assets/css/service-hub.css',
   '/assets/css/service-category.css',
   '/assets/css/home.css',
+  '/assets/css/transport.css',
+  // Vendored so the jeepney route map works on an offline load; a CDN copy
+  // could not be precached here.
+  '/assets/vendor/leaflet/leaflet.css',
+  '/assets/vendor/leaflet/leaflet.js',
   '/assets/js/main.js',
   '/assets/js/info-bar.js',
   '/assets/images/logo/betterlegazpi-logo.png',

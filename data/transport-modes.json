@@ -1,0 +1,246 @@
+{
+  "note": "Non-jeepney transport in Legazpi City: tricycles, padyak, buses, UV Express, taxis and app-based ride-hailing. Jeepney routes live in transport-routes.json and every fare rule lives in transport-fares.json - this file holds what is specific to each mode: who regulates it, where its terminal is, and how to use it. Terminal coordinates come from OpenStreetMap and are drawn as markers on the same map as the jeepney routes.",
+  "lastVerified": "2026-08",
+  "modes": [
+    {
+      "id": "tricycle",
+      "name": "Tricycles & Taxicles",
+      "icon": "bi-bicycle",
+      "status": "published",
+      "summary": "Franchised by the city through the Sangguniang Panlungsod's Transportation Development and Regulation Division. Fares are fixed by the city, not negotiated - check the fare checker above before you pay.",
+      "fare": {
+        "title": "City-wide fare",
+        "source": "Tamang Singil Advocacy Program, City Government of Legazpi",
+        "columns": ["Regular", "Student / PWD / Senior"],
+        "rows": [
+          {
+            "label": "Base fare (first 2 km)",
+            "values": ["₱12.00", "₱10.00 (first 1 km)"]
+          },
+          {
+            "label": "Each succeeding km",
+            "values": ["₱3.00", "₱1.50"]
+          }
+        ],
+        "note": "Discounted fares apply to students, senior citizens and persons with disabilities, and start from the first kilometre rather than the second.",
+        "verifyNote": "Individual paradas can have their own matrix set by ordinance. Parada 2A & 3A, below, is set at ₱15.00 under City Ordinance No. 17-0019-2026, so read the matrix posted at the parada you are riding from.",
+        "url": "https://www.facebook.com/share/p/1HqXY1sy9d/"
+      },
+      "capacity": [
+        {
+          "label": "Tricycle",
+          "value": "3 passengers"
+        },
+        {
+          "label": "Taxicle",
+          "value": "4 passengers"
+        }
+      ],
+      "example": {
+        "title": "Example fare matrix — Parada 2A & 3A (Mandarin)",
+        "origin": "Albay Capitol / near Bigg's Diner",
+        "note": "Parada 2A & 3A has its own ordinance-set matrix, which is why its fares are ₱15.00 rather than the ₱12.00 city-wide base. Each parada has its own colour code and its own matrix; this is the only one we have so far.",
+        "columns": ["Regular", "Student / PWD / Senior"],
+        "rows": [
+          {
+            "label": "Washington Drive, Cruzada",
+            "values": ["₱15.00", "₱12.00"]
+          },
+          {
+            "label": "DPWH 2nd Albay District, DWCL",
+            "values": ["₱15.00", "₱12.00"]
+          },
+          {
+            "label": "Aeroville Subd., Sunrise Subd.",
+            "values": ["₱15.00", "₱12.00"]
+          },
+          {
+            "label": "UST-Legazpi Hospital",
+            "values": ["₱15.00", "₱12.00"]
+          },
+          {
+            "label": "Grand Central Terminal (one-way trip)",
+            "flat": "₱18.00"
+          }
+        ]
+      },
+      "links": [
+        {
+          "label": "Tricycle franchise services (SP Secretariat)",
+          "url": "../service-details/sangguniang-panlungsod-secretariat"
+        }
+      ]
+    },
+    {
+      "id": "padyak",
+      "name": "Padyak (Pedicab)",
+      "icon": "bi-bicycle",
+      "status": "published",
+      "summary": "The pedal-powered pedicab, used for short hops within a barangay. The Tamang Singil Advocacy Program covers tricycles, taxicles and padyak together, so a padyak is charged on the same schedule as a tricycle.",
+      "fare": {
+        "title": "City-wide fare",
+        "source": "Tamang Singil Advocacy Program, City Government of Legazpi",
+        "columns": ["Regular", "Student / PWD / Senior"],
+        "rows": [
+          {
+            "label": "Base fare (first 2 km)",
+            "values": ["₱12.00", "₱10.00 (first 1 km)"]
+          },
+          {
+            "label": "Each succeeding km",
+            "values": ["₱3.00", "₱1.50"]
+          }
+        ],
+        "note": "Discounted fares apply to students, senior citizens and persons with disabilities, and start from the first kilometre rather than the second.",
+        "verifyNote": "The Tamang Singil Advocacy Program sets one fare for tricycle, taxicle and pedicab together, so this matches the tricycle schedule exactly.",
+        "url": "https://www.facebook.com/share/p/1HqXY1sy9d/"
+      },
+      "capacity": [
+        {
+          "label": "Padyak",
+          "value": "2 passengers, typically"
+        }
+      ],
+      "note": "Padyak are not covered by the jeepney routing plan and have no fixed route - they work short trips around a barangay, a market or a terminal.",
+      "links": [
+        {
+          "label": "Tricycle and pedicab franchise services (SP Secretariat)",
+          "url": "../service-details/sangguniang-panlungsod-secretariat"
+        }
+      ]
+    },
+    {
+      "id": "bus",
+      "name": "Buses",
+      "icon": "bi-bus-front",
+      "status": "published",
+      "summary": "Provincial and Manila-bound buses use the Legazpi Grand Central Terminal. Operators set their own schedules and these change often, so we publish the terminals rather than timetables we cannot keep current.",
+      "terminals": [
+        {
+          "name": "Legazpi Grand Central Terminal",
+          "role": "Provincial and Manila-bound buses",
+          "lat": 13.1434331,
+          "lon": 123.7456441,
+          "mapUrl": "https://maps.app.goo.gl/W6M4Jkrzwt2VZ4kp6"
+        },
+        {
+          "name": "Daraga Bus Station",
+          "role": "Buses serving Daraga and points west",
+          "lat": 13.1478156,
+          "lon": 123.7114021
+        }
+      ],
+      "note": "Provincial bus fares depend on the class of bus - ordinary, aircon, super deluxe or luxury. The fare checker above covers all four. The Grand Central Terminal is also the destination on several jeepney and tricycle routes on this page."
+    },
+    {
+      "id": "uv-express",
+      "name": "UV Express",
+      "icon": "bi-truck-front",
+      "status": "published",
+      "summary": "UV Express vans connect Legazpi with nearby towns and with Naga. Their routes are authorised by LTFRB Region V rather than by the city, so the route list is not ours to publish — but the terminal is mapped.",
+      "terminals": [
+        {
+          "name": "Legazpi UV Express Terminal",
+          "role": "UV Express vans to nearby towns and Naga",
+          "lat": 13.1432534,
+          "lon": 123.7448442
+        }
+      ],
+      "note": "We have asked LTFRB Region V for the authorised UV Express route list. Until it arrives, this section names the terminal only.",
+      "fare": {
+        "title": "Fare per kilometre",
+        "source": "UV Express Fare Rate Per Kilometer, LTFRB",
+        "asOf": "LTFRB fare guide",
+        "columns": ["Per km"],
+        "rows": [
+          {
+            "label": "Traditional",
+            "values": ["₱2.40"]
+          },
+          {
+            "label": "Modern",
+            "values": ["₱2.50"]
+          }
+        ],
+        "note": "Students, senior citizens and persons with disabilities get a 20% discount.",
+        "verifyNote": "Use the fare checker above for a specific distance."
+      }
+    },
+    {
+      "id": "taxi",
+      "name": "Taxis",
+      "icon": "bi-taxi-front",
+      "status": "published",
+      "summary": "Metered taxis are regulated nationally by LTFRB. The meter should be running from the moment you board - a quoted flat price is not the published fare.",
+      "fare": {
+        "title": "Metered fare",
+        "source": "Taxi Fare Rates, LTFRB",
+        "asOf": "LTFRB fare guide",
+        "columns": ["Rate"],
+        "rows": [
+          {
+            "label": "Flag-down",
+            "values": ["₱50.00"]
+          },
+          {
+            "label": "Per kilometre",
+            "values": ["₱13.50"]
+          },
+          {
+            "label": "Per minute of travel time",
+            "values": ["₱2.00"]
+          }
+        ],
+        "note": "Students, senior citizens and persons with disabilities get a 20% discount.",
+        "verifyNote": "Use the fare checker above to work out what a given trip should cost."
+      },
+      "note": "Complaints about taxi overcharging go to the LTFRB 24/7 hotline 1342, not to the city."
+    },
+    {
+      "id": "ride-hailing",
+      "name": "Ride-hailing apps",
+      "icon": "bi-phone",
+      "status": "published",
+      "summary": "Grab and JoyRide operate here as TNVS. Their apps price dynamically, but LTFRB publishes the flag-down and per-kilometre rates they are required to work from.",
+      "apps": [
+        {
+          "name": "Grab",
+          "kind": "Car and delivery",
+          "url": "https://www.grab.com/ph/"
+        },
+        {
+          "name": "JoyRide Super App",
+          "kind": "Motorcycle taxi, car and delivery",
+          "url": "https://joyride.com.ph/"
+        }
+      ],
+      "note": "Availability depends on the operator, not on the city.",
+      "fare": {
+        "title": "TNVS rates by vehicle type",
+        "source": "TNVS Fare Rates, LTFRB",
+        "asOf": "LTFRB fare guide",
+        "columns": ["Flag-down", "Per km", "Per minute"],
+        "rows": [
+          {
+            "label": "Hatchback / sub-compact",
+            "values": ["₱35.00", "₱13.00", "₱2.00"]
+          },
+          {
+            "label": "Car sedan",
+            "values": ["₱45.00", "₱15.00", "₱2.00"]
+          },
+          {
+            "label": "AUV / SUV",
+            "values": ["₱55.00", "₱18.00", "₱2.00"]
+          },
+          {
+            "label": "Premium",
+            "values": ["₱145.00", "₱36.00", "₱4.00"]
+          }
+        ],
+        "note": "Students, senior citizens and persons with disabilities get a 20% discount.",
+        "verifyNote": "Surge pricing can push the in-app quote above these rates. The figures here are the base rates LTFRB has approved."
+      }
+    }
+  ]
+}

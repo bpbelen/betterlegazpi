@@ -1,0 +1,983 @@
+/* ==========================================================================
+   transport.css — jeepney route reference (tourism/transportation.html)
+
+   Layout is list-first by design: the route cards carry the authoritative
+   street sequence and are complete on their own. The map is an enhancement
+   that only mounts when Leaflet is present (see assets/js/transport.js), so
+   every rule here assumes the map may simply be absent.
+   ========================================================================== */
+
+/* ── Plan-status notice ─────────────────────────────────────────────────── */
+
+.transport-notice {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid #f0d68a;
+  border-left: 4px solid #e0a800;
+  border-radius: var(--radius-md);
+  background: #fffaf0;
+  color: #5c4813;
+  font-size: 0.925rem;
+  line-height: 1.55;
+}
+
+.transport-notice i {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: #b8860b;
+}
+
+.transport-notice strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* ── Filter bar ─────────────────────────────────────────────────────────── */
+
+.transport-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.transport-search {
+  flex: 1 1 260px;
+  position: relative;
+}
+
+.transport-search input {
+  width: 100%;
+  padding: 0.7rem 0.9rem 0.7rem 2.4rem;
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.transport-search input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.transport-search i {
+  position: absolute;
+  top: 50%;
+  left: 0.85rem;
+  transform: translateY(-50%);
+  color: var(--color-text-light);
+  pointer-events: none;
+}
+
+.transport-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.transport-filter {
+  padding: 0.5rem 0.9rem;
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  cursor: pointer;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  /* 44px minimum touch target — see tests/site-responsive.spec.js */
+  min-height: 44px;
+}
+
+/* --color-primary-solid, not --color-primary: primary lightens to #6f9dff in
+   dark mode, which drops white text to 2.64:1. -solid stays navy in both
+   themes precisely so white-on-fill keeps passing. */
+.transport-filter[aria-pressed='true'] {
+  color: #fff;
+  background: var(--color-primary-solid);
+  border-color: var(--color-primary-solid);
+}
+
+/* ── Map ────────────────────────────────────────────────────────────────── */
+
+/* Hidden until transport.js confirms Leaflet loaded. Without this the page
+   would reserve a large empty box on any device where the CDN-free vendor
+   bundle failed to parse. */
+.transport-map-wrap {
+  display: none;
+  margin-bottom: var(--spacing-lg);
+}
+
+.transport-map-wrap.is-active {
+  display: block;
+}
+
+.transport-map {
+  width: 100%;
+  height: 420px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #e8eef2;
+}
+
+@media (max-width: 768px) {
+  .transport-map {
+    height: 300px;
+  }
+}
+
+.transport-map-hint {
+  margin: var(--spacing-xs) 0 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+
+/* Leaflet's own attribution is required by the OSM licence — keep it legible
+   rather than restyling it away. */
+.transport-map .leaflet-container {
+  font-family: inherit;
+}
+
+/* ── Route cards ────────────────────────────────────────────────────────── */
+
+.transport-routes {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.transport-route {
+  overflow: hidden;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  scroll-margin-top: 90px;
+}
+
+.transport-route.is-selected {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* The whole header is the toggle, so it is a real <button>: keyboard users get
+   Enter/Space and the expanded state for free. Reset the UA button styling
+   rather than wrapping a button inside the header. */
+.transport-route-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.3rem 0.75rem;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-md);
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.transport-route-head:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -3px;
+}
+
+.transport-route-headline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  align-items: baseline;
+}
+
+.transport-route-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* The one line a reader sees before opening anything. */
+.transport-route-summary {
+  grid-column: 1 / -1;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+
+.transport-chevron {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 1rem;
+  color: var(--color-text-light);
+  transition: transform 0.18s ease;
+}
+
+.transport-route.is-open .transport-chevron {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transport-chevron {
+    transition: none;
+  }
+}
+
+.transport-route-body {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-sm);
+}
+
+.transport-route-qualifier {
+  margin: 0 var(--spacing-md) 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+.transport-tag {
+  padding: 0.15rem 0.6rem;
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  background: var(--color-bg-alt);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ── Directions ─────────────────────────────────────────────────────────── */
+
+.transport-direction {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.transport-direction + .transport-direction {
+  border-top: 1px dashed var(--color-border);
+  padding-top: var(--spacing-md);
+}
+
+.transport-direction-head {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.transport-swatch {
+  flex-shrink: 0;
+  width: 26px;
+  height: 5px;
+  border-radius: 3px;
+  /* Colour alone never carries meaning here — the label beside it names the
+     direction in words. */
+}
+
+.transport-direction-head h4 {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+/* The street sequence. Rendered as an ordered list because the order is the
+   information — this is the route, not a set of tags. */
+.transport-stops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.15rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.transport-stops li {
+  display: flex;
+  gap: 0.15rem;
+  align-items: center;
+}
+
+.transport-stops li::after {
+  content: '\2192'; /* → */
+  margin: 0 0.15rem;
+  color: var(--color-text-light);
+}
+
+.transport-stops li:last-child::after {
+  content: '';
+}
+
+.transport-stop {
+  padding: 0.15rem 0.5rem;
+  background: var(--color-bg-alt);
+  border-radius: 4px;
+}
+
+/* ── Sub-section labels ─────────────────────────────────────────────────── */
+
+/* "Passes near" and "Actual route" are peers inside a direction. Hierarchy
+   comes from weight and letter-spacing rather than size, so neither label
+   competes with the direction heading above them. */
+.transport-sublabel {
+  margin: 0 0 0.45rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-text-light);
+}
+
+/* ── Landmarks ──────────────────────────────────────────────────────────── */
+
+.transport-landmarks {
+  margin-top: 0.7rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.transport-landmarks ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.transport-landmarks li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem 0.3rem 0.55rem;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+.transport-landmarks li i {
+  font-size: 0.9rem;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.transport-landmark-name {
+  font-weight: 600;
+}
+
+/* The category reads as metadata on the chip, not as a second label competing
+   with the name. It stays in the DOM because it is what the search box matches
+   when someone types "hospital". */
+.transport-landmark-kind {
+  font-size: 0.6875rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text-light);
+}
+
+/* ── Street sequence block ──────────────────────────────────────────────── */
+
+.transport-route-streets {
+  padding-top: 0.1rem;
+}
+
+/* ── Fare checker ───────────────────────────────────────────────────────── */
+
+.transport-checker {
+  padding: var(--spacing-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.transport-checker-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+/* Collapsed by default: a one-time explainer, not something a returning
+   visitor needs open every time they check a fare. */
+.transport-howto {
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  /* Orange accent, not the site's blue primary: this is a call-out to notice
+     and click, not a link, and the accent is what "pops" against the blue
+     chrome everywhere else on the page. */
+  border-left: 3px solid var(--color-accent-solid);
+  border-radius: 0 6px 6px 0;
+}
+
+.transport-howto > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  /* --color-accent-text, not -solid: -solid is pinned to #c2410c for white-on-
+     fill contrast and stays that dark navy-orange in dark mode too, which
+     drops text-on-dark-background to 2.82:1. -text is the token tuned for
+     accent-coloured text and lightens to #fb923c in dark mode. */
+  color: var(--color-accent-text);
+}
+
+.transport-howto > summary i {
+  font-size: 1rem;
+}
+
+.transport-howto > summary:focus-visible {
+  outline: 2px solid var(--color-accent-text);
+  outline-offset: -2px;
+}
+
+.transport-howto-body {
+  padding: 0 0.9rem 0.9rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.transport-howto-body ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.transport-howto-body li + li {
+  margin-top: 0.5rem;
+}
+
+.transport-howto-body i {
+  font-style: italic;
+}
+
+.transport-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* A display rule beats the `hidden` attribute, so the travel-time field would
+   stay on screen for modes that are not metered. Restore what hidden means. */
+.transport-field[hidden] {
+  display: none;
+}
+
+.transport-field label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-light);
+}
+
+.transport-field select,
+.transport-field input {
+  /* 44px minimum touch target. */
+  min-height: 44px;
+  padding: 0.5rem 0.7rem;
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.transport-field select:focus-visible,
+.transport-field input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+/* The answer. It is the reason someone opened this page, so it is the largest
+   thing on it — hierarchy by weight and scale, not by decoration. */
+.transport-checker-result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm) var(--spacing-lg);
+  align-items: baseline;
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.transport-checker-figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.transport-checker-figure b {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.transport-checker-figure span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-light);
+}
+
+.transport-checker-figure--alt b {
+  font-size: 1.5rem;
+  color: var(--color-text-light);
+}
+
+.transport-checker-rule {
+  flex-basis: 100%;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+
+/* ── Report overcharging ────────────────────────────────────────────────── */
+
+.transport-report h2 {
+  margin-top: 0;
+}
+
+.transport-report-intro {
+  max-width: 70ch;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.transport-report-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.transport-report-group {
+  padding: var(--spacing-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent-solid);
+  border-radius: var(--radius-md);
+}
+
+.transport-report-group h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.transport-report-group p {
+  margin: 0 0 0.6rem;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--color-text-light);
+}
+
+/* ── Per-leg fare on a route card ───────────────────────────────────────── */
+
+.transport-legfare {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 0.7rem 0;
+  padding: 0.6rem 0.8rem;
+  background: var(--color-bg-alt);
+  border-left: 3px solid var(--color-accent-solid);
+  border-radius: 0 6px 6px 0;
+}
+
+.transport-legfare-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-light);
+}
+
+.transport-legfare-figures {
+  font-size: 0.9375rem;
+}
+
+.transport-legfare-figures b {
+  font-variant-numeric: tabular-nums;
+}
+
+.transport-legfare-note {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+/* ── Fares ──────────────────────────────────────────────────────────────── */
+
+.transport-fare {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.transport-fare h3 {
+  margin: 0 0 var(--spacing-sm);
+  font-size: 1.0625rem;
+}
+
+.transport-fare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.transport-fare-table th,
+.transport-fare-table td {
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.transport-fare-table thead th {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-light);
+}
+
+.transport-fare-table tbody th {
+  font-weight: 500;
+}
+
+/* Money is compared down a column, so it needs to line up. */
+.transport-fare-table td {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.transport-fare-table tr:last-child th,
+.transport-fare-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.transport-fare-flat {
+  text-align: center !important;
+}
+
+.transport-fare-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--color-text-light);
+}
+
+/* Anything the reader should weigh before acting on the number above it:
+   a disputed figure, an unverified source, republished contact details. */
+.transport-fare-caveat {
+  padding: 0.6rem 0.75rem;
+  border-left: 3px solid #e0a800;
+  border-radius: 0 4px 4px 0;
+  background: var(--color-bg-alt);
+}
+
+/* ── Mode blocks ────────────────────────────────────────────────────────── */
+
+.transport-mode-icon {
+  margin-right: 0.15rem;
+  font-size: 1.1rem;
+  color: var(--color-accent-text);
+}
+
+.transport-mode-block {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.transport-mode-block + .transport-mode-block {
+  border-top: 1px dashed var(--color-border);
+  padding-top: var(--spacing-md);
+}
+
+.transport-mode-block h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.transport-pairs,
+.transport-terminals,
+.transport-contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.transport-pairs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.transport-pairs li {
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8125rem;
+  background: var(--color-bg-alt);
+  border-radius: 6px;
+}
+
+.transport-pairs b {
+  display: block;
+  font-size: 0.9375rem;
+}
+
+.transport-pairs span {
+  color: var(--color-text-light);
+}
+
+/* Penalties read as label-then-consequence, so they stack full width rather
+   than sitting side by side as short stat chips. */
+.transport-pairs--stacked {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.transport-pairs--stacked li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.6rem;
+  align-items: baseline;
+}
+
+.transport-pairs--stacked b {
+  display: inline;
+  font-size: 0.8125rem;
+}
+
+.transport-terminals li,
+.transport-contacts li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.6rem;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.transport-terminals li:last-child,
+.transport-contacts li:last-child {
+  border-bottom: 0;
+}
+
+.transport-terminals span,
+.transport-contacts span {
+  color: var(--color-text-light);
+}
+
+.transport-contacts a {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.transport-mode-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ── Franchise disclosure ───────────────────────────────────────────────── */
+
+.transport-franchise {
+  margin: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.transport-franchise > summary {
+  display: flex;
+  align-items: center;
+  /* 44px minimum touch target — tests/site-responsive.spec.js enforces this. */
+  min-height: 44px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  color: var(--color-text-light);
+}
+
+.transport-franchise > summary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.transport-franchise-body {
+  padding: 0 0.9rem 0.9rem;
+  font-size: 0.875rem;
+}
+
+.transport-franchise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin: 0 0 0.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.transport-franchise-grid li {
+  padding: 0.4rem 0.6rem;
+  background: var(--color-bg-alt);
+  border-radius: 4px;
+}
+
+.transport-franchise-grid b {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.transport-franchise-note {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+/* ── Other modes ────────────────────────────────────────────────────────── */
+
+.transport-modes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.transport-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: var(--spacing-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.transport-mode i {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.transport-mode h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.transport-mode p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-text-light);
+}
+
+.transport-mode-status {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0b5c37;
+  background: #e3f5eb;
+  border-radius: 999px;
+}
+
+/* ── Sources ────────────────────────────────────────────────────────────── */
+
+.transport-sources {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+.transport-sources li + li {
+  margin-top: 0.35rem;
+}
+
+/* ── Empty / loading states ─────────────────────────────────────────────── */
+
+.transport-empty {
+  padding: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transport-route {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Dark theme ─────────────────────────────────────────────────────────────
+   Everything else runs on the sitewide custom properties, which flip on their
+   own. Only the three places that hardcode a colour pair need restating here:
+   the plan-status notice, the mode badges, and the map's pre-tile backdrop.
+   ------------------------------------------------------------------------- */
+
+[data-theme='dark'] .transport-notice {
+  background: #2e2410;
+  border-color: #5c4813;
+  border-left-color: #e0a800;
+  color: #f3e3b8;
+}
+
+[data-theme='dark'] .transport-notice i {
+  color: #e8be5a;
+}
+
+[data-theme='dark'] .transport-mode-status {
+  background: #10362a;
+  color: #7fe0b0;
+}
+
+/* The map is a deliberate exception to the theme: it stays light in dark mode.
+   OSM's tiles are light-background cartography, and every attempt to darken
+   them - a brightness filter, an inversion - wrecks legibility, because the
+   labels and the road casings are tuned for a light ground. A route you cannot
+   read is worse than a panel that does not match its surroundings. Leaflet's
+   own controls are pinned to light values here for the same reason: they sit
+   on top of light tiles. */
+/* !important matches the sitewide [data-theme='dark'] .leaflet-container rule,
+   which also uses it; without it the dark page background shows through
+   between tiles. */
+[data-theme='dark'] .transport-map,
+[data-theme='dark'] .transport-map .leaflet-container {
+  background: #e8eef2 !important;
+  color-scheme: light;
+  color: #16181d;
+}
+
+/* Cancels the sitewide dark-map inversion at assets/css/style.css:13387
+   (brightness/invert/hue-rotate), which the homepage weather map relies on.
+   That treatment renders a simple weather overlay acceptably, but on
+   street-level cartography it turns road casings and labels into noise, and
+   these route lines have to stay readable against them. Targeting
+   .leaflet-tile, not .leaflet-tile-pane — the filter is on the tile itself. */
+[data-theme='dark'] .transport-map .leaflet-tile {
+  filter: none;
+}
+
+[data-theme='dark'] .transport-map .leaflet-control-zoom a,
+[data-theme='dark'] .transport-map .leaflet-bar a {
+  background: #fff;
+  color: #16181d;
+  border-bottom-color: #ccc;
+}
+
+[data-theme='dark'] .transport-map .leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.8);
+  color: #16181d;
+}
+
+[data-theme='dark'] .transport-map .leaflet-control-attribution a {
+  color: #0032a0;
+}
+
+[data-theme='dark'] .transport-map .leaflet-popup-content-wrapper,
+[data-theme='dark'] .transport-map .leaflet-popup-tip {
+  background: #fff;
+  color: #16181d;
+}

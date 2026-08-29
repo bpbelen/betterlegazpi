@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Getting around Legazpi City — tricycles, jeepneys, buses, terminals, and travel tips. This section is being built and will publish soon."
+      content="Jeepney routes, tricycle fares, bus and UV Express terminals, and ride-hailing in Legazpi City - sourced from city ordinances and the LTFRB."
     />
 
     <!-- SEO Meta Tags -->
@@ -33,7 +33,7 @@
     <meta property="og:title" content="Transportation | BetterLegazpi.org" />
     <meta
       property="og:description"
-      content="Getting around Legazpi City — tricycles, jeepneys, buses, terminals, and travel tips. This section is being built and will publish soon."
+      content="Jeepney routes, tricycle fares, bus and UV Express terminals, and ride-hailing in Legazpi City - sourced from city ordinances and the LTFRB."
     />
     <meta
       property="og:image"
@@ -86,6 +86,10 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <!-- Leaflet is vendored rather than pulled from a CDN so the service worker
+         can precache it and the map survives an offline load. -->
+    <link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="../assets/css/transport.css" />
     <script>
       (function () {
         let savedTheme = null;
@@ -241,37 +245,113 @@
             >
             <h1>Transportation</h1>
             <p class="page-header-desc">
-              Getting around Legazpi City — tricycles, jeepneys, buses, terminals, and travel tips.
+              What every ride should cost, who to report overcharging to, and which jeepney goes
+              where.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Coming Soon -->
+      <!-- Magkano dapat? -->
       <section class="section">
         <div class="container">
-          <div
-            style="
-              max-width: 640px;
-              margin: 0 auto;
-              text-align: center;
-              padding: var(--spacing-xl) var(--spacing-md);
-            "
-          >
-            <i
-              class="bi bi-signpost-2-fill"
-              style="font-size: 2.5rem; color: var(--color-primary)"
-              aria-hidden="true"
-            ></i>
-            <h2 style="margin: var(--spacing-md) 0 var(--spacing-xs)">Coming Soon</h2>
-            <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg)">
-              We're putting together a practical guide to getting around Legazpi City — tricycle and
-              jeepney routes, terminal locations, fares, and tips for visitors and residents alike.
+          <h2>Magkano dapat ang pamasahe?</h2>
+          <p style="max-width: 70ch; color: var(--color-text-light)">
+            Pick how you are travelling and how far. The figures come straight from the LTFRB fare
+            guides and the city fare ordinance, and every one of those documents is linked below the
+            result so you can show it to a driver.
+          </p>
+          <div class="transport-fare" id="transport-fare"></div>
+        </div>
+      </section>
+
+      <!-- Kanino magsumbong? -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="transport-report" id="transport-report"></div>
+        </div>
+      </section>
+
+      <!-- Jeepney routes -->
+      <section class="section">
+        <div class="container">
+          <h2>Jeepney routes</h2>
+          <p style="max-width: 70ch; color: var(--color-text-light)">
+            These are the public utility jeepney (PUJ) routes serving Legazpi City under the city's
+            updated routing plan. Most of them begin in Daraga or in another Albay town rather than
+            inside Legazpi itself — that is how the routes are written in the plan, and how people
+            actually travel into the city. Routes within Legazpi proper are not yet published here.
+          </p>
+
+          <div class="transport-notice" id="transport-notice" role="note"></div>
+
+          <div class="transport-controls">
+            <div class="transport-search">
+              <i class="bi bi-search" aria-hidden="true"></i>
+              <label class="sr-only" for="transport-search">Search routes by street or place</label>
+              <input
+                type="search"
+                id="transport-search"
+                placeholder="Search a street or destination — Quezon Ave., Rawis, SM…"
+              />
+            </div>
+            <div
+              class="transport-filters"
+              id="transport-filters"
+              role="group"
+              aria-label="Filter routes by corridor"
+            ></div>
+          </div>
+
+          <!-- Revealed by transport.js only when Leaflet is present. -->
+          <div class="transport-map-wrap" id="transport-map-wrap">
+            <!-- role="region", not role="img": Leaflet injects focusable zoom
+                 controls and attribution links, and an image role may not
+                 contain focusable descendants. The route lists below are the
+                 text equivalent of everything drawn here. -->
+            <div
+              class="transport-map"
+              id="transport-map"
+              role="region"
+              aria-label="Map of jeepney routes in and around Legazpi City. Every route is also listed as text below."
+            ></div>
+            <p class="transport-map-hint">
+              Select a route below to zoom the map to it. The written street sequence on each route
+              card is the authoritative version.
             </p>
+          </div>
+
+          <div class="transport-routes" id="transport-routes">
+            <p class="transport-empty">Loading jeepney routes…</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Other ways of getting around -->
+      <section class="section section-alt">
+        <div class="container">
+          <h2>Other ways of getting around</h2>
+          <p style="max-width: 70ch; color: var(--color-text-light)">
+            Tricycles, buses, UV Express and ride-hailing apps. Fares and terminals are shown where
+            an official source publishes them; where one does not exist, we say so rather than
+            guess.
+          </p>
+          <div class="transport-routes" id="transport-modes">
+            <p class="transport-empty">Loading&hellip;</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sources -->
+      <section class="section">
+        <div class="container">
+          <h2>Where this comes from</h2>
+          <ul class="transport-sources" id="transport-sources"></ul>
+          <p style="margin-top: var(--spacing-md)">
             <a href="./" class="btn btn-primary">
               <i class="bi bi-compass-fill" aria-hidden="true"></i> Back to Travel
             </a>
-          </div>
+          </p>
         </div>
       </section>
     </main>
@@ -299,28 +379,23 @@
                 ><i class="bi bi-facebook"></i
               ></a>
               <a
-                href="https://www.linkedin.com/company/betterlegazpi/"
-                class="footer-social-btn"
+                href="https://github.com/bpbelen/betterlegazpi"
+                class="footer-contribute"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-              <a
-                href="https://discord.com/invite/betterlegazpi"
-                class="footer-social-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Discord"
-                ><i class="bi bi-discord"></i
-              ></a>
+              >
+                <i class="bi bi-github"></i> Contribute code with us
+              </a>
+              <a href="mailto:belenbrianmatthew@gmail.com" class="footer-contribute">
+                <i class="bi bi-envelope-heart"></i> Volunteer with us
+              </a>
             </div>
           </div>
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
-              <li><a href="../tourism/">Tourism &amp; Travel</a></li>
+              <li><a href="../tourism/">Fun &amp; Adventure</a></li>
               <li><a href="../history/">History</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
@@ -375,17 +450,6 @@
             >
               Cost to the People of Legazpi = <span class="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betterlegazpi.org" class="footer-contribute">
-              <i class="bi bi-envelope-heart"></i> Volunteer with us
-            </a>
-            <a
-              href="https://github.com/bpbelen/betterlegazpi"
-              class="footer-contribute"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="bi bi-github"></i> Contribute code with us
-            </a>
             <div class="footer-partners">
               <a
                 href="https://abakada.org"
@@ -444,5 +508,8 @@
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
+    <script defer src="../assets/vendor/leaflet/leaflet.js"></script>
+    <script defer src="../assets/js/fare-calc.js"></script>
+    <script defer src="../assets/js/transport.js"></script>
   </body>
 </html>

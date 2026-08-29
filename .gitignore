@@ -31,3 +31,7 @@ docs/sources/citizens-charter/pdf/
 ~$*
 *.xlsx
 
+
+# Scratch review screenshots (regenerable; the geo/*.json OSM caches ARE tracked
+# because scripts/data/build-transport-*.js read them)
+scratch/**/*.png

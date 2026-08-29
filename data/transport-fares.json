@@ -1,0 +1,402 @@
+{
+  "note": "Official fare rules for every mode a Legazpi commuter uses. Each entry is transcribed from the primary issuance named in `source`, and `source.url` points at that issuance on the publisher's own site so a reader checks the figure at the source rather than a copy of it. The `rule` object is what assets/js/fare-calc.js computes with; scripts/validate/fare-tables.test.js re-derives the published distance tables from it, so a typo here fails the tests rather than reaching a commuter.",
+  "lastVerified": "2026-08",
+  "rounding": "Fares are rounded to the nearest 25 centavos, as stated on the LTFRB fare guides.",
+  "discountNote": "Students, senior citizens and persons with disabilities are entitled to a 20% discount every day, including Saturdays, Sundays and holidays (LTFRB MC 2017-024).",
+  "groups": [
+    {
+      "id": "jeepney",
+      "label": "Jeepney",
+      "classes": [
+        {
+          "id": "puj-traditional",
+          "label": "Traditional jeepney",
+          "note": "The ordinary jeepney. This is the one nearly every route on this page runs.",
+          "rule": {
+            "type": "base-plus-km",
+            "baseKm": 4,
+            "baseFare": 13.0,
+            "perKm": 1.8,
+            "discountedBaseFare": 10.4,
+            "discountedPerKm": 1.44
+          },
+          "source": {
+            "title": "PUJ General Fare Guide",
+            "issuer": "LTFRB",
+            "effective": "2023-10-08",
+            "documentLabel": "Mega Manila",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2026/04/Fare-Guide_Traditional-PUJ-Provisional-Fare-Increase_08Oct2023.pdf"
+          }
+        },
+        {
+          "id": "puj-modern-nonaircon",
+          "label": "Modern jeepney (non-aircon)",
+          "rule": {
+            "type": "base-plus-km",
+            "baseKm": 4,
+            "baseFare": 15.0,
+            "perKm": 1.8,
+            "discountedBaseFare": 12.0,
+            "discountedPerKm": 1.44
+          },
+          "source": {
+            "title": "Non-Aircon Modern and Electric PUJ General Fare Guide",
+            "issuer": "LTFRB",
+            "effective": "2023-10-08",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2026/04/Fare-Guide_Modernized-Non-Aircon-Provisional-Fare-Increase_08Oct2023.pdf"
+          }
+        },
+        {
+          "id": "puj-modern-aircon",
+          "label": "Modern jeepney (aircon)",
+          "rule": {
+            "type": "base-plus-km",
+            "baseKm": 4,
+            "baseFare": 15.0,
+            "perKm": 2.2,
+            "discountedBaseFare": 12.0,
+            "discountedPerKm": 1.76
+          },
+          "source": {
+            "title": "Aircon Modern and Electric PUJ General Fare Guide",
+            "issuer": "LTFRB",
+            "effective": "2023-10-08",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2026/04/Fare-Guide_Modernized-Aircon-Provisional-Fare-Increase_08Oct2023.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tricycle",
+      "label": "Tricycle & Padyak",
+      "classes": [
+        {
+          "id": "tricycle",
+          "label": "Tricycle / Taxicle",
+          "rule": {
+            "type": "base-plus-km",
+            "baseKm": 2,
+            "baseFare": 12.0,
+            "perKm": 3.0,
+            "discountedBaseKm": 1,
+            "discountedBaseFare": 10.0,
+            "discountedPerKm": 1.5
+          },
+          "source": {
+            "title": "Tamang Singil Advocacy Program - Regular Tricycle / Taxicle / Pedicab Fare",
+            "issuer": "City Government of Legazpi",
+            "url": "https://www.facebook.com/share/p/1HqXY1sy9d/"
+          },
+          "note": "The city-wide fare. Individual paradas may have their own fare matrix set by ordinance - Parada 2A & 3A, for instance, is set at ₱15.00 - so check the matrix posted at the parada you are riding from."
+        },
+        {
+          "id": "padyak",
+          "label": "Padyak (pedicab)",
+          "note": "The Tamang Singil Advocacy Program sets one fare covering tricycles, taxicles and pedicabs, so a padyak is charged on the same schedule as a tricycle.",
+          "rule": {
+            "type": "base-plus-km",
+            "baseKm": 2,
+            "baseFare": 12.0,
+            "perKm": 3.0,
+            "discountedBaseKm": 1,
+            "discountedBaseFare": 10.0,
+            "discountedPerKm": 1.5
+          },
+          "source": {
+            "title": "Tamang Singil Advocacy Program - Regular Tricycle / Taxicle / Pedicab Fare",
+            "issuer": "City Government of Legazpi",
+            "url": "https://www.facebook.com/share/p/1HqXY1sy9d/"
+          }
+        }
+      ]
+    },
+    {
+      "id": "uv-express",
+      "label": "UV Express",
+      "classes": [
+        {
+          "id": "uv-traditional",
+          "label": "UV Express (traditional)",
+          "rule": {
+            "type": "per-km",
+            "perKm": 2.4,
+            "discountPercent": 20
+          },
+          "source": {
+            "title": "UV Express Fare Rate Per Kilometer",
+            "issuer": "LTFRB",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2024/11/UVE-Fare-Guide.pdf"
+          }
+        },
+        {
+          "id": "uv-modern",
+          "label": "UV Express (modern)",
+          "rule": {
+            "type": "per-km",
+            "perKm": 2.5,
+            "discountPercent": 20
+          },
+          "source": {
+            "title": "UV Express Fare Rate Per Kilometer",
+            "issuer": "LTFRB",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2024/11/UVE-Fare-Guide.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bus",
+      "label": "Bus",
+      "classes": [
+        {
+          "id": "pub-provincial-ordinary",
+          "label": "Provincial bus (ordinary)",
+          "rule": {
+            "type": "base-plus-km",
+            "baseKm": 5,
+            "baseFare": 11.0,
+            "perKm": 1.9,
+            "discountedBaseFare": 8.8,
+            "discountedPerKm": 1.52
+          },
+          "source": {
+            "title": "PUB (Ordinary) General Fare Guide — Provincial",
+            "issuer": "LTFRB",
+            "effective": "2022-10-03",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2026/04/PUB-Provincial-Ordinary.pdf"
+          }
+        },
+        {
+          "id": "pub-provincial-aircon",
+          "label": "Provincial bus (regular aircon)",
+          "rule": {
+            "type": "per-km",
+            "perKm": 2.1,
+            "discountedPerKm": 1.68
+          },
+          "source": {
+            "title": "PUB (Regular Aircon) General Fare Guide — Provincial",
+            "issuer": "LTFRB",
+            "effective": "2022-10-03",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2026/04/PUB-Provincial-Aircon.pdf"
+          }
+        },
+        {
+          "id": "pub-provincial-superdeluxe",
+          "label": "Provincial bus (super deluxe)",
+          "rule": {
+            "type": "per-km",
+            "perKm": 2.35,
+            "discountedPerKm": 1.88
+          },
+          "source": {
+            "title": "PUB (Super Deluxe) General Fare Guide — Provincial",
+            "issuer": "LTFRB",
+            "effective": "2022-10-03",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2026/04/PUB-Provincial-Super-Deluxe.pdf"
+          }
+        },
+        {
+          "id": "pub-provincial-luxury",
+          "label": "Provincial bus (luxury)",
+          "rule": {
+            "type": "per-km",
+            "perKm": 2.9,
+            "discountedPerKm": 2.32
+          },
+          "source": {
+            "title": "PUB (Luxury) General Fare Guide — Provincial",
+            "issuer": "LTFRB",
+            "effective": "2022-10-03",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2026/04/PUB-Provincial-Luxury.pdf"
+          }
+        },
+        {
+          "id": "pub-city-ordinary",
+          "label": "City bus (ordinary)",
+          "rule": {
+            "type": "base-plus-km",
+            "baseKm": 5,
+            "baseFare": 13.0,
+            "perKm": 2.25,
+            "discountedBaseFare": 10.4,
+            "discountedPerKm": 1.8
+          },
+          "source": {
+            "title": "PUB (Ordinary) General Fare Guide",
+            "issuer": "LTFRB",
+            "effective": "2022-10-03",
+            "documentLabel": "Metro Manila",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2026/04/PUB-City-Ordinary.pdf"
+          }
+        },
+        {
+          "id": "pub-city-aircon",
+          "label": "City bus (aircon)",
+          "rule": {
+            "type": "base-plus-km",
+            "baseKm": 5,
+            "baseFare": 15.0,
+            "perKm": 2.65,
+            "discountedBaseFare": 12.0,
+            "discountedPerKm": 2.12
+          },
+          "source": {
+            "title": "PUB (Aircon) General Fare Guide",
+            "issuer": "LTFRB",
+            "effective": "2022-10-03",
+            "documentLabel": "Metro Manila",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2026/04/PUB-City-Aircon.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "label": "Taxi",
+      "classes": [
+        {
+          "id": "taxi",
+          "label": "Taxi",
+          "rule": {
+            "type": "metered",
+            "flagDown": 50.0,
+            "perKm": 13.5,
+            "perMinute": 2.0,
+            "discountPercent": 20
+          },
+          "source": {
+            "title": "Taxi Fare Rates",
+            "issuer": "LTFRB",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2024/11/TAXI-Fare-Rates.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ride-hailing",
+      "label": "Ride-hailing (TNVS)",
+      "note": "Grab and JoyRide are TNVS operators, so these are the rates their apps are required to work from.",
+      "classes": [
+        {
+          "id": "tnvs-hatchback",
+          "label": "Hatchback / sub-compact",
+          "rule": {
+            "type": "metered",
+            "flagDown": 35.0,
+            "perKm": 13.0,
+            "perMinute": 2.0,
+            "discountPercent": 20
+          },
+          "source": {
+            "title": "TNVS Fare Rates",
+            "issuer": "LTFRB",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2024/11/TNVS-Fare-Rates.pdf"
+          }
+        },
+        {
+          "id": "tnvs-sedan",
+          "label": "Car sedan",
+          "rule": {
+            "type": "metered",
+            "flagDown": 45.0,
+            "perKm": 15.0,
+            "perMinute": 2.0,
+            "discountPercent": 20
+          },
+          "source": {
+            "title": "TNVS Fare Rates",
+            "issuer": "LTFRB",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2024/11/TNVS-Fare-Rates.pdf"
+          }
+        },
+        {
+          "id": "tnvs-auv",
+          "label": "AUV / SUV",
+          "rule": {
+            "type": "metered",
+            "flagDown": 55.0,
+            "perKm": 18.0,
+            "perMinute": 2.0,
+            "discountPercent": 20
+          },
+          "source": {
+            "title": "TNVS Fare Rates",
+            "issuer": "LTFRB",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2024/11/TNVS-Fare-Rates.pdf"
+          }
+        },
+        {
+          "id": "tnvs-premium",
+          "label": "Premium",
+          "rule": {
+            "type": "metered",
+            "flagDown": 145.0,
+            "perKm": 36.0,
+            "perMinute": 4.0,
+            "discountPercent": 20
+          },
+          "source": {
+            "title": "TNVS Fare Rates",
+            "issuer": "LTFRB",
+            "url": "https://ltfrb.gov.ph/wp-content/uploads/2024/11/TNVS-Fare-Rates.pdf"
+          }
+        }
+      ]
+    }
+  ],
+  "report": {
+    "title": "If you are overcharged",
+    "intro": "Fares above are what the published rules require. If a driver charges more, these are the offices that act on it.",
+    "disclaimer": "The contact numbers below are published by the City Government of Legazpi on the official tricycle fare matrix, and by LTFRB on its fare guides, so that passengers can report overcharging. They are reproduced here as public information for that purpose.",
+    "groups": [
+      {
+        "label": "Tricycle, taxicle and padyak — City of Legazpi",
+        "note": "The city regulates tricycle and padyak fares directly. Overcharging carries a ₱3,000 fine and impounding on the first offence, ₱5,000 on the second, and cancellation of the franchise on the third.",
+        "contacts": [
+          {
+            "label": "TDRD Hotline",
+            "numbers": ["0955-573-7500"]
+          },
+          {
+            "label": "PNP Legazpi",
+            "numbers": ["0988-598-5926", "0926-625-6247", "480-9919"]
+          },
+          {
+            "label": "PSO Officer Octavio Rivero",
+            "numbers": ["0936-925-0738"]
+          },
+          {
+            "label": "Coun. Butch Lucila",
+            "numbers": ["0954-245-5080", "0962-322-0440"]
+          },
+          {
+            "label": "Vice Mayor Luis Felipe L. Gutierrez",
+            "numbers": ["0945-807-7458"]
+          },
+          {
+            "label": "Mayor Hisham B. Ismail",
+            "numbers": ["0927-414-3768"]
+          }
+        ]
+      },
+      {
+        "label": "Jeepney, bus, UV Express, taxi and ride-hailing — LTFRB",
+        "note": "These fares are set nationally by LTFRB, not by the city, so complaints go to the Board.",
+        "contacts": [
+          {
+            "label": "LTFRB 24/7 Hotline",
+            "numbers": ["1342"]
+          }
+        ],
+        "links": [
+          {
+            "label": "LTFRB web portal",
+            "url": "https://ltfrb.gov.ph/"
+          }
+        ]
+      }
+    ]
+  },
+  "disclaimer": "These rates are published here for reference only. The official issuances of LTFRB and the City Government of Legazpi remain authoritative - if a figure here differs from the issuance it cites, the issuance governs."
+}
