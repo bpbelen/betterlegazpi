@@ -32,6 +32,9 @@ const EXCLUDED_DIRS = new Set([
 const CI_ROUTES = [
   '/index.html', // homepage — the only page loading all 8 scripts
   '/services/index.html', // services landing
+  // The largest hand-written page in the repo, and the only one carrying a
+  // click-to-load third-party embed, so its facade needs cross-browser cover.
+  '/government/index.html',
   // certificates.html used to sit here as the "old tier" page-header + office-card
   // example. It is now the standardized layout like the other eight, so it would be
   // duplicate coverage - infrastructure.html represents that generation instead.

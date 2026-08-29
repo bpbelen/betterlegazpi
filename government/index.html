@@ -387,6 +387,106 @@
         color: #ffffff;
         border-color: var(--color-primary-solid);
       }
+
+      /* Interactive Barangay Map - click-to-load facade */
+      .map-embed {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        min-height: 320px;
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        overflow: hidden;
+        background: var(--color-white);
+      }
+      .map-facade {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-xs);
+        height: 100%;
+        padding: var(--spacing-lg) var(--spacing-md);
+        text-align: center;
+      }
+      .map-facade-icon {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+      }
+      .map-facade-title {
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--color-text);
+      }
+      .map-facade-note {
+        margin: 0;
+        max-width: 46ch;
+        font-size: 0.875rem;
+        color: var(--color-text-light);
+      }
+      .map-facade-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-sm);
+      }
+      .map-facade-btn,
+      .map-facade-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 44px;
+        padding: 10px var(--spacing-md);
+        border-radius: 8px;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+          background-color var(--duration-base) var(--ease-out),
+          color var(--duration-base) var(--ease-out),
+          border-color var(--duration-base) var(--ease-out);
+      }
+      .map-facade-btn {
+        border: 1px solid var(--color-primary-solid);
+        background: var(--color-primary-solid);
+        color: #ffffff;
+      }
+      .map-facade-btn:hover {
+        background: var(--color-primary-dark);
+        border-color: var(--color-primary-dark);
+      }
+      .map-facade-link {
+        border: 1px solid var(--color-border);
+        background: var(--color-white);
+        color: var(--color-text);
+      }
+      .map-facade-link:hover {
+        border-color: var(--color-primary-solid);
+        color: var(--color-primary-solid);
+        text-decoration: none;
+      }
+      .map-embed iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      @media (max-width: 575.98px) {
+        .map-embed {
+          aspect-ratio: 4 / 5;
+        }
+        .map-facade-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .map-facade-btn,
+        .map-facade-link {
+          justify-content: center;
+        }
+      }
     </style>
     <script>
       (function () {
@@ -3525,6 +3625,68 @@
           </div>
         </div>
       </section>
+
+      <!-- Interactive Barangay Map (click-to-load embed) -->
+      <section
+        class="section"
+        id="barangay-map"
+        style="background: var(--color-bg-alt)"
+        aria-labelledby="barangay-map-heading"
+      >
+        <div class="container">
+          <!-- Section Header -->
+          <div class="text-center" style="margin-bottom: var(--spacing-xl)">
+            <span class="gov-section-badge"
+              ><i class="bi bi-map-fill"></i> <span>City Map</span></span
+            >
+            <h3
+              id="barangay-map-heading"
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+            >
+              Legazpi City Interactive Map
+            </h3>
+            <p style="color: var(--color-text-light)">
+              Locations of the 70 Barangay Halls and their officials, plus Legazpi City Hall
+            </p>
+          </div>
+
+          <!-- The embed is not loaded until asked for: the Google My Maps viewer pulls
+               several hundred kilobytes of third-party script and sets cookies, which is a
+               poor default on a mobile connection and worse for readers who never open the
+               map. The link below works with or without JavaScript. -->
+          <div class="map-embed" id="barangay-map-embed">
+            <div class="map-facade" id="barangay-map-facade">
+              <i class="bi bi-geo-alt-fill map-facade-icon" aria-hidden="true"></i>
+              <p class="map-facade-title">Interactive map of Legazpi City</p>
+              <p class="map-facade-note">
+                Loading the map contacts Google and may set cookies. It stays off until you ask for
+                it.
+              </p>
+              <div class="map-facade-actions">
+                <button type="button" class="map-facade-btn" id="barangay-map-load" hidden>
+                  <i class="bi bi-play-circle" aria-hidden="true"></i> Load interactive map
+                </button>
+                <a
+                  class="map-facade-link"
+                  href="https://www.google.com/maps/d/u/0/viewer?mid=1n2gCyTSCy8RXYFgK5-1_2T49yT2hALQ&amp;femb=1&amp;ll=13.141476756485549%2C123.73598336763477&amp;z=14"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="source-credit-simple">
+            <i class="bi bi-info-circle"></i> Map published by the City Government of Legazpi on
+            <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+              >legazpi.gov.ph</a
+            >, hosted on Google My Maps. Its contents are maintained by the LGU and may not reflect
+            recent changes.
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -3683,6 +3845,38 @@
         </div>
       </div>
     </footer>
+
+    <!-- Click-to-load handler for the Legazpi City interactive map -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('barangay-map-embed');
+        const facade = document.getElementById('barangay-map-facade');
+        const button = document.getElementById('barangay-map-load');
+        if (!container || !facade || !button) return;
+
+        // The button ships hidden and is revealed here, so readers without
+        // JavaScript are never shown a control that cannot work. The
+        // "Open in Google Maps" link beside it works for them instead.
+        button.hidden = false;
+
+        // Deliberately not remembered between visits. Persisting the choice
+        // would silently hand a returning reader a Google-tracked iframe they
+        // never clicked for, which is the thing this facade exists to avoid.
+        button.addEventListener('click', () => {
+          const frame = document.createElement('iframe');
+          frame.id = 'barangay-map-frame';
+          frame.title = 'Legazpi City interactive map of barangay halls and City Hall';
+          frame.src =
+            'https://www.google.com/maps/d/embed?mid=1n2gCyTSCy8RXYFgK5-1_2T49yT2hALQ&ll=13.141476756485549%2C123.73598336763477&z=14';
+          frame.loading = 'lazy';
+          frame.referrerPolicy = 'no-referrer-when-downgrade';
+          frame.setAttribute('allowfullscreen', '');
+          container.replaceChildren(frame);
+          frame.focus();
+        });
+      });
+    </script>
+
     <!-- Interactive Barangay Filter & Search Script -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
