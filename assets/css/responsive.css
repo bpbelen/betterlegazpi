@@ -409,10 +409,6 @@
     padding: var(--spacing-sm);
   }
 
-  .councilor-card i {
-    font-size: 2rem !important;
-  }
-
   /* Buttons */
   .btn {
     padding: 10px 20px;

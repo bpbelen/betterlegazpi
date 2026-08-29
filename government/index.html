@@ -432,6 +432,7 @@
          so every element that ships hidden and sets its own display needs this. */
       .directory-toggle[hidden],
       .dept-card[hidden],
+      .councilor-card[hidden],
       .map-facade-btn[hidden] {
         display: none;
       }
@@ -793,7 +794,7 @@
           </div>
 
           <!-- Councilors Grid (Restored Clean Layout with Icon Bulleted Committees) -->
-          <div class="grid grid-3" style="gap: var(--spacing-md)">
+          <div class="grid grid-3" id="councilorGrid" style="gap: var(--spacing-md)">
             <div class="councilor-card">
               <h4 class="councilor-name">Hon. Alan O. Rañola</h4>
               <span class="councilor-badge">SP Member</span>
@@ -962,6 +963,23 @@
               </ul>
               <span class="councilor-ex-officio-badge">EX-OFFICIO MEMBER</span>
             </div>
+          </div>
+
+          <!-- Mobile-only: the desktop 3-column grid already shows every member
+               at a glance, so this collapse never applies above the breakpoint
+               where the grid drops to one column. -->
+          <div class="directory-toggle-wrap">
+            <button
+              type="button"
+              class="directory-toggle"
+              id="councilorToggle"
+              aria-controls="councilorGrid"
+              aria-expanded="true"
+              hidden
+            >
+              <span class="directory-toggle-label">Show all 12 SP members</span>
+              <i class="bi bi-chevron-down directory-toggle-icon" aria-hidden="true"></i>
+            </button>
           </div>
 
           <!-- Simple Legislative Source Line (Centered & Enlarged) -->
@@ -3993,6 +4011,49 @@
           render();
           if (collapsed) toggle.scrollIntoView({ block: 'center' });
         });
+      });
+    </script>
+
+    <!-- SP Members: collapsed to three on mobile only. The desktop 3-column
+         grid already shows all ten members without scrolling, so this never
+         applies above the breakpoint (max-width: 767px) where .grid-3 in
+         responsive.css drops to a single column. -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const grid = document.getElementById('councilorGrid');
+        const toggle = document.getElementById('councilorToggle');
+        if (!grid || !toggle) return;
+
+        const cards = Array.from(grid.children);
+        const label = toggle.querySelector('.directory-toggle-label');
+        const VISIBLE_WHEN_COLLAPSED = 3;
+        const mobileQuery = window.matchMedia('(max-width: 767px)');
+        let collapsed = true;
+
+        function render() {
+          const isMobile = mobileQuery.matches;
+          toggle.hidden = !isMobile;
+          cards.forEach((card, i) => {
+            card.hidden = isMobile && collapsed && i >= VISIBLE_WHEN_COLLAPSED;
+          });
+          toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+          if (label) {
+            label.textContent = collapsed
+              ? 'Show all ' + cards.length + ' SP members'
+              : 'Show fewer SP members';
+          }
+        }
+
+        render();
+        toggle.addEventListener('click', () => {
+          collapsed = !collapsed;
+          render();
+          if (collapsed) toggle.scrollIntoView({ block: 'center' });
+        });
+
+        // Crossing the breakpoint (e.g. rotating a tablet) should not strand
+        // the grid mid-state - re-evaluate whenever it does.
+        mobileQuery.addEventListener('change', render);
       });
     </script>
 
