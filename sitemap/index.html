@@ -81,6 +81,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/sitemap.css" />
     <script>
       (function () {
         let savedTheme = null;
@@ -469,28 +470,51 @@
             </div>
           </div>
 
-          <!-- Online Services -->
+          <!-- Online Services
+               Mirrors the `portal` and `payment` entries in data/online-portals.json,
+               the same source the category pages render from. The two procedure-guide
+               PDFs in that file are deliberately not listed here: a PDF describing a
+               process you still complete in person is not an online service. They
+               appear on services/infrastructure.html, where the context makes that
+               clear. -->
           <div class="sitemap-section-new">
             <div class="sitemap-section-header">
               <span class="sitemap-section-icon"><i class="bi bi-globe2"></i></span>
               <h2>Online Services</h2>
-              <span class="sitemap-badge">via Filipizen Legazpi</span>
+              <span class="sitemap-badge">Leaves this site</span>
             </div>
             <div class="sitemap-links-grid">
+              <a
+                href="https://www.filipizen.com/partners/albay_legazpi/bpls/newbusiness"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="sitemap-link-item sitemap-link-item--external"
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                <span>New business application</span></a
+              >
+              <a
+                href="https://www.filipizen.com/partners/albay_legazpi/bpls/renewbusiness"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="sitemap-link-item sitemap-link-item--external"
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                <span>Business permit renewal</span></a
+              >
               <a
                 href="https://www.filipizen.com/partners/albay_legazpi/bpls/billing"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="sitemap-link-item sitemap-link-item--external"
-                ><i class="bi bi-box-arrow-up-right"></i>
-                <span>Business Billing &amp; Payment</span></a
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                <span>Business billing and payment</span></a
               >
               <a
                 href="https://www.filipizen.com/partners/albay_legazpi/rptis/billing"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="sitemap-link-item sitemap-link-item--external"
-                ><i class="bi bi-box-arrow-up-right"></i> <span>Real Property Tax Payment</span></a
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                <span>Real property tax billing and payment</span></a
               >
             </div>
           </div>

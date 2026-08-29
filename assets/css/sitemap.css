@@ -1,0 +1,243 @@
+/* ============================================================
+   Sitemap page
+
+   Moved out of assets/css/style.css, which 69 pages load: a redesign of a
+   single page should not be able to affect the other 68. Only
+   sitemap/index.html links this file.
+
+   Everything here is built on the site tokens defined in style.css, so light
+   and dark themes stay in step automatically. The previous rules hardcoded
+   #06a77d on #e6f4ea and #fafafa, which failed WCAG AA contrast in light mode
+   and had no dark-mode values at all - axe reported color-contrast violations
+   on all four theme/viewport combinations. Text now uses the tokens that
+   already carry the project's contrast reasoning.
+
+   Shape scale (one system, applied everywhere on this page):
+     link tiles and section cards  10px
+     the section badge             pill
+   ============================================================ */
+
+.sitemap-section-new {
+  margin-bottom: var(--spacing-xl, 2.5rem);
+}
+
+.sitemap-section-new:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Section header --------------------------------------- */
+
+.sitemap-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sitemap-section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--color-bg-muted);
+  color: var(--color-primary);
+}
+
+.sitemap-section-icon i {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.sitemap-section-header h2 {
+  margin: 0;
+  font-size: var(--fs-xl, 1.25rem);
+  font-weight: 650;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+/*
+ * The badge names where a group of links leads (for example an external
+ * payment partner). It sits on a solid fill rather than a tint: the tint
+ * version could not reach 4.5:1 with the brand green as text, which is what
+ * axe was reporting.
+ */
+.sitemap-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--color-success-solid);
+  color: #ffffff;
+  font-size: var(--fs-xs, 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* --- Link grid -------------------------------------------- */
+
+/*
+ * auto-fill with a min track replaces the old fixed 5-column grid and its
+ * four media queries: the columns now follow the container instead of a
+ * hardcoded ladder of breakpoints, and long link labels stop being clipped
+ * at the sizes between them.
+ */
+.sitemap-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  gap: 8px;
+}
+
+.sitemap-links-grid--4col {
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+}
+
+.sitemap-link-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* 44px min height keeps every link a comfortable touch target, which the
+     responsive spec checks at the narrow viewports. */
+  min-height: 44px;
+  padding: 11px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--fs-base, 0.875rem);
+  line-height: 1.35;
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.sitemap-link-item i {
+  flex: 0 0 auto;
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  transition: color 0.15s ease;
+}
+
+.sitemap-link-item span {
+  min-width: 0;
+  color: inherit;
+}
+
+/*
+ * style.css colours links in dark mode with `[data-theme='dark'] a:not(.btn)`.
+ * The `:not(.btn)` counts as a class, so that selector is (0,2,1) and beat both
+ * a bare `.sitemap-link-item` and `a.sitemap-link-item`, turning every tile's
+ * label link-blue in dark mode. The dark rule below matches that specificity
+ * and, being in a stylesheet linked after style.css, wins on source order.
+ *
+ * The label stays neutral in both themes so that the hover colour is what reads
+ * as the state change.
+ */
+a.sitemap-link-item {
+  color: var(--color-text);
+}
+
+[data-theme='dark'] a.sitemap-link-item {
+  color: var(--color-text);
+}
+
+a.sitemap-link-item:hover {
+  border-color: var(--color-primary);
+  background: var(--color-bg-muted);
+  color: var(--color-primary);
+}
+
+.sitemap-link-item:hover i {
+  color: var(--color-primary);
+}
+
+/*
+ * Focus is drawn with an outline offset from the tile rather than a border
+ * swap, so keyboard focus stays visible against both themes and does not
+ * shift the tile's size.
+ */
+.sitemap-link-item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Links that leave the site. The arrow glyph in the markup already signals
+   this; the muted fill groups them without relying on colour alone. */
+.sitemap-link-item--external {
+  background: var(--color-bg-alt);
+}
+
+a.sitemap-link-item--external:hover {
+  border-color: var(--color-success-solid);
+  background: var(--color-bg-muted);
+  color: var(--color-success-solid);
+}
+
+.sitemap-link-item--external:hover i {
+  color: var(--color-success-solid);
+}
+
+/*
+ * In dark mode --color-success-solid (#067a5e) is a deep green chosen for
+ * white text on a fill; as text on a dark surface it is too dark to read, so
+ * hover text uses the lighter --color-success there instead.
+ */
+[data-theme='dark'] a.sitemap-link-item--external:hover,
+[data-theme='dark'] a.sitemap-link-item--external:hover i {
+  color: var(--color-success);
+}
+
+[data-theme='dark'] a.sitemap-link-item--external:hover {
+  border-color: var(--color-success);
+}
+
+/* --- Narrow viewports ------------------------------------- */
+
+@media (max-width: 480px) {
+  .sitemap-links-grid,
+  .sitemap-links-grid--4col {
+    grid-template-columns: 1fr;
+  }
+
+  .sitemap-section-header h2 {
+    font-size: var(--fs-lg, 1.125rem);
+  }
+
+  .sitemap-section-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sitemap-section-icon i {
+    font-size: 0.875rem;
+  }
+
+  /* The badge would otherwise push the heading into a second line on the
+     narrowest phones. */
+  .sitemap-badge {
+    margin-left: 0;
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .sitemap-section-header {
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sitemap-link-item,
+  .sitemap-link-item i {
+    transition: none;
+  }
+}

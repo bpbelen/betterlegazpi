@@ -48,6 +48,7 @@ const CI_ROUTES = [
   '/tourism/ibalong.html', // tourism.css reading layout: switched concise/full views
   '/tourism/transportation.html', // transport.css, and the only page mounting Leaflet from JSON
   '/terms/index.html', // legal.css
+  '/sitemap/index.html', // sitemap.css
   '/404.html', // error page, omits version.js
 ];
 
