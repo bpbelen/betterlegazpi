@@ -1,0 +1,18 @@
+# The repo stores LF; .prettierrc sets "endOfLine": "lf". Without this file,
+# core.autocrlf=true writes CRLF to disk on Windows checkouts and every file
+# fails `prettier --check` on line endings alone, so a tree-wide format would
+# rewrite all of them and bury real changes in the churn.
+* text=auto eol=lf
+
+# Binary assets: never normalise.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary

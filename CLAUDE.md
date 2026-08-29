@@ -32,7 +32,7 @@ npx playwright test tests/site-a11y.spec.js -g "some test name"             # on
 
 There is no `build:patch` script — plain `npm run build` _is_ the patch bump. `npm run dev` invokes `python`, not `python3`; where only `python3` is on PATH, run `python3 serve.py -p 8000 -d .` directly.
 
-**Do not run `npm run format` (`prettier --write .`) on a Windows checkout.** `.prettierrc` sets `"endOfLine": "lf"`, `core.autocrlf` is `true`, and there is still no `.gitattributes` — so git writes CRLF to disk and _every_ file fails `prettier --check` on line endings alone. A tree-wide format would rewrite every file's line endings and bury real changes in the churn. Format only the files you touched (`npx prettier --write path/to/file`). Adding `.gitattributes` with `* text=auto eol=lf` would fix the underlying mismatch.
+**Be careful with `npm run format` (`prettier --write .`) on a Windows checkout.** `.prettierrc` sets `"endOfLine": "lf"` and `core.autocrlf` is `true`. `.gitattributes` now pins `* text=auto eol=lf`, which fixes the underlying mismatch for files git normalises — but a checkout made _before_ that file was added still has CRLF on disk until the files are re-checked-out, so a tree-wide format can still produce line-ending churn that buries real changes. Prefer formatting only the files you touched (`npx prettier --write path/to/file`).
 
 ## Testing
 
@@ -89,7 +89,7 @@ There is no templating layer, so header/nav/footer markup is **duplicated into e
 
 None of `scripts/` ships — it is excluded from both build paths — and none of the data or validate scripts is guaranteed to still run against live endpoints.
 
-`scratch/` is throwaway exploration kept only as a record: ad-hoc probes against the DOH NHFR and legazpi.gov.ph endpoints. Nothing in the repo references it, `tests/helpers/pages.js` excludes it, and it is safe to delete wholesale. Don't add to it — a script worth keeping goes under `scripts/`.
+`scratch/` is mostly throwaway exploration kept as a record: ad-hoc probes against the DOH NHFR and legazpi.gov.ph endpoints, plus review pages. `tests/helpers/pages.js` excludes it and it does not ship. **It is no longer safe to delete wholesale**, though: `scratch/geo/pois.json` and `scratch/geo/roads.json` are the OSM cache that `scripts/data/build-transport-geometry.js` and `build-transport-landmarks.js` read, so deleting them breaks those data scripts. Review screenshots under `scratch/**/*.png` are gitignored. Don't add to it — a script worth keeping goes under `scripts/`, and the geo cache arguably belongs there too.
 
 ## Agent skills
 
