@@ -796,10 +796,12 @@ a.home-leader-contact-item:hover {
 /* ==========================================================================
    Weather scenes
 
-   Four scenes (clear, cloudy, rain, storm) built from CSS and a couple of
-   spans, with a night palette applied over the same four rather than a
-   second set of eight. This is deliberately not Lottie: the runtime alone
-   would cost more than every image on this page put together, for
+   Four scenes (clear, cloudy, rain, storm) built from CSS, a couple of
+   spans, and pseudo-elements for the extra depth (a third cloud, a star
+   field, a second rain layer, a lightning bolt) that would otherwise need
+   more markup. A night palette applies over the same four scenes rather
+   than a second set of eight. This is deliberately not Lottie: the runtime
+   alone would cost more than every image on this page put together, for
    decoration. Motion is slow and collapses entirely under
    prefers-reduced-motion.
    ========================================================================== */
@@ -848,6 +850,25 @@ a.home-leader-contact-item:hover {
 [data-scene='storm'] .weather-scene {
   --sky-top: #6b7280;
   --sky-bottom: #9ca3af;
+}
+
+/* Higher specificity than the plain [data-scene] rules above, so night
+   actually stays dark for these three instead of falling back to the day
+   palette (equal-specificity, cascade-order bug fixed here rather than
+   relying on rule order). */
+[data-daypart='night'][data-scene='cloudy'] .weather-scene {
+  --sky-top: #334155;
+  --sky-bottom: #1e293b;
+}
+
+[data-daypart='night'][data-scene='rain'] .weather-scene {
+  --sky-top: #28323f;
+  --sky-bottom: #151f2b;
+}
+
+[data-daypart='night'][data-scene='storm'] .weather-scene {
+  --sky-top: #11161d;
+  --sky-bottom: #2b3542;
 }
 
 .weather-scene-orb {
@@ -915,6 +936,86 @@ a.home-leader-contact-item:hover {
   display: block;
 }
 
+/* A third, dimmer cloud puff (pseudo-element, so no extra markup) drifting
+   slower than the other two for a little parallax depth. */
+.weather-scene::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 150px;
+  width: 130px;
+  height: 32px;
+  border-radius: 999px;
+  /* A fixed mid-tone rather than var(--cloud): the light foreground clouds
+     are near-white, which nearly vanishes against the equally light
+     cloudy/rain day skies. This stays visible against both light and dark
+     skies without needing a day/night split of its own. */
+  background: #94a3b8;
+  filter: blur(9px);
+  opacity: 0;
+}
+
+[data-scene='cloudy'] .weather-scene::before,
+[data-scene='rain'] .weather-scene::before,
+[data-scene='storm'] .weather-scene::before {
+  opacity: 0.55;
+}
+
+/* Star field for clear/cloudy nights, hand-placed dots rather than an
+   image so it costs nothing to ship or repaint. */
+.weather-scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 24px, #fff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 68px 12px, #fff 100%, transparent),
+    radial-gradient(1px 1px at 112px 40px, #fff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 160px 20px, #fff 100%, transparent),
+    radial-gradient(1px 1px at 200px 52px, #fff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 240px 16px, #fff 100%, transparent),
+    radial-gradient(1px 1px at 30px 70px, #fff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 280px 44px, #fff 100%, transparent);
+}
+
+[data-daypart='night'][data-scene='clear'] .weather-scene::after {
+  opacity: 0.9;
+}
+
+[data-daypart='night'][data-scene='cloudy'] .weather-scene::after {
+  opacity: 0.35;
+}
+
+/* A second, faster raindrop layer for a little parallax depth to the rain. */
+.weather-scene-rain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    102deg,
+    rgba(255, 255, 255, 0.4) 0 1px,
+    transparent 1px 14px
+  );
+  background-size: auto 30px;
+  opacity: 0.4;
+}
+
+/* Storm gets an actual bolt shape flashing over the whole-sky dim/brighten,
+   instead of relying on that alone to read as lightning. */
+.weather-scene-rain::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 60%;
+  width: 22px;
+  height: 60px;
+  clip-path: polygon(60% 0, 0 55%, 40% 55%, 20% 100%, 100% 40%, 55% 40%);
+  background: #fef9c3;
+  opacity: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .weather-scene-cloud--a {
     animation: weather-drift 46s linear infinite;
@@ -924,13 +1025,34 @@ a.home-leader-contact-item:hover {
     animation: weather-drift 68s linear infinite reverse;
   }
 
+  .weather-scene::before {
+    animation: weather-drift 84s linear infinite;
+  }
+
+  [data-daypart='night'][data-scene='clear'] .weather-scene::after {
+    animation: weather-twinkle 5s ease-in-out infinite;
+  }
+
+  .weather-scene-orb {
+    animation: weather-orb-pulse 6s ease-in-out infinite;
+  }
+
   [data-scene='rain'] .weather-scene-rain,
   [data-scene='storm'] .weather-scene-rain {
     animation: weather-rainfall 0.7s linear infinite;
   }
 
+  [data-scene='rain'] .weather-scene-rain::before,
+  [data-scene='storm'] .weather-scene-rain::before {
+    animation: weather-rainfall 0.5s linear infinite;
+  }
+
   [data-scene='storm'] .weather-scene {
     animation: weather-flash 9s ease-in-out infinite;
+  }
+
+  [data-scene='storm'] .weather-scene-rain::after {
+    animation: weather-bolt 9s ease-in-out infinite;
   }
 }
 
@@ -964,6 +1086,46 @@ a.home-leader-contact-item:hover {
   }
   96% {
     opacity: 0.66;
+  }
+}
+
+@keyframes weather-twinkle {
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes weather-orb-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 32px 10px var(--orb-glow);
+  }
+  50% {
+    box-shadow: 0 0 44px 16px var(--orb-glow);
+  }
+}
+
+@keyframes weather-bolt {
+  0%,
+  91%,
+  100% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0.95;
+  }
+  93% {
+    opacity: 0.2;
+  }
+  94% {
+    opacity: 0.85;
+  }
+  96% {
+    opacity: 0;
   }
 }
 
@@ -1191,4 +1353,26 @@ button.weather-expand-indicator:hover {
 
 [data-theme='dark'] .weather-footer a:hover {
   background: rgba(255, 255, 255, 0.14);
+}
+
+/* Same root cause as the widget surface: the action cards, their icon
+   badges, and the hourly strip are white-tinted with no dark counterpart,
+   so light theme tokens (--color-text, --color-text-light) end up light
+   text on a light-tinted card instead of the near-black widget surface. */
+[data-theme='dark'] .weather-action-card {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='dark'] .action-icon {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .weather-hourly-container {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme='dark'] .weather-hour-card {
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: none;
 }
