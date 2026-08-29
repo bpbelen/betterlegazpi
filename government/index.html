@@ -126,6 +126,16 @@
       .source-credit-simple a:hover {
         color: var(--color-primary-dark);
       }
+      /* This one instance runs two lines at normal widths. Undoing the flex row
+         lets the icon sit inline with "Map", so it wraps with the sentence
+         instead of vertically centering against the whole multi-line block. */
+      .source-credit-wrap {
+        display: block;
+        text-align: center;
+      }
+      .source-credit-wrap i {
+        margin-right: 4px;
+      }
       .barangay-toolbar {
         display: flex;
         flex-wrap: wrap;
@@ -1448,15 +1458,13 @@
             </div>
           </div>
 
-          <div class="source-credit-simple">
-            <i class="bi bi-info-circle"></i>
-            <span
-              >Map published by the City Government of Legazpi on
-              <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
-                >legazpi.gov.ph</a
-              >, hosted on Google My Maps. Its contents are maintained by the LGU and may not
-              reflect recent changes.</span
-            >
+          <div class="source-credit-simple source-credit-wrap">
+            <i class="bi bi-info-circle" aria-hidden="true"></i> Map published by the City
+            Government of Legazpi on
+            <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+              >legazpi.gov.ph</a
+            >, hosted on Google My Maps. Its contents are maintained by the LGU and may not reflect
+            recent changes.
           </div>
         </div>
       </section>
