@@ -34,7 +34,7 @@ module.exports = {
   // a route card and NOT on #transport-map: the map is a progressive enhancement
   // that fetches OSM tiles, and gating the layout gate on a third-party network
   // call is how a blocking CI job starts flaking.
-  '/tourism/transportation.html': { waitForSelector: '#transport-routes .transport-route' },
+  '/travel/transportation.html': { waitForSelector: '#transport-routes .transport-route' },
 
   // Service category pages: every section below the page header is rendered by
   // assets/js/service-categories.js from four JSON files, so #service-category-app

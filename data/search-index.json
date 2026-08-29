@@ -6104,7 +6104,7 @@
     },
     {
       "type": "page",
-      "id": "tourism-index-html",
+      "id": "travel-index-html",
       "title": "Tourism",
       "description": "Visiting Legazpi City.",
       "keywords": [
@@ -6113,11 +6113,11 @@
         "visit",
         "turismo"
       ],
-      "url": "tourism/index.html"
+      "url": "travel/index.html"
     },
     {
       "type": "page",
-      "id": "tourism-attractions-html",
+      "id": "travel-attractions-html",
       "title": "Attractions",
       "description": "Things to see in and around Legazpi.",
       "keywords": [
@@ -6126,11 +6126,11 @@
         "sights",
         "spots"
       ],
-      "url": "tourism/attractions.html"
+      "url": "travel/attractions.html"
     },
     {
       "type": "page",
-      "id": "tourism-landmarks-html",
+      "id": "travel-landmarks-html",
       "title": "Landmarks",
       "description": "Landmarks and heritage sites.",
       "keywords": [
@@ -6139,11 +6139,11 @@
         "ruins",
         "heritage"
       ],
-      "url": "tourism/landmarks.html"
+      "url": "travel/landmarks.html"
     },
     {
       "type": "page",
-      "id": "tourism-food-html",
+      "id": "travel-food-html",
       "title": "Food",
       "description": "Where and what to eat.",
       "keywords": [
@@ -6153,11 +6153,11 @@
         "sili",
         "pancit"
       ],
-      "url": "tourism/food.html"
+      "url": "travel/food.html"
     },
     {
       "type": "page",
-      "id": "tourism-accommodations-html",
+      "id": "travel-accommodations-html",
       "title": "Accommodations",
       "description": "Places to stay.",
       "keywords": [
@@ -6166,11 +6166,11 @@
         "lodging",
         "stay"
       ],
-      "url": "tourism/accommodations.html"
+      "url": "travel/accommodations.html"
     },
     {
       "type": "page",
-      "id": "tourism-experience-html",
+      "id": "travel-experience-html",
       "title": "Experience",
       "description": "Activities and experiences.",
       "keywords": [
@@ -6178,11 +6178,11 @@
         "activities",
         "adventure"
       ],
-      "url": "tourism/experience.html"
+      "url": "travel/experience.html"
     },
     {
       "type": "page",
-      "id": "tourism-transportation-html",
+      "id": "travel-transportation-html",
       "title": "Transportation",
       "description": "Getting around Legazpi: routes and fares.",
       "keywords": [
@@ -6193,11 +6193,11 @@
         "route",
         "pamasahe"
       ],
-      "url": "tourism/transportation.html"
+      "url": "travel/transportation.html"
     },
     {
       "type": "page",
-      "id": "tourism-ibalong-html",
+      "id": "travel-ibalong-html",
       "title": "Ibalong",
       "description": "The Ibalong festival and epic.",
       "keywords": [
@@ -6205,7 +6205,7 @@
         "festival",
         "epic"
       ],
-      "url": "tourism/ibalong.html"
+      "url": "travel/ibalong.html"
     }
   ]
 }

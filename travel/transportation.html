@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8777S9SP9X"></script>
     <script>
@@ -11,56 +12,70 @@
       gtag('js', new Date());
       gtag('config', 'G-8777S9SP9X');
     </script>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="The Legazpi Experience: Mayon ATV Lava Trail Rides, volcanic lava wall climbing, Ligñon Hill zipline, skywalk adventure, snorkeling, and trekking with directions."
+      content="Jeepney routes, tricycle fares, bus and UV Express terminals, and ride-hailing in Legazpi City - sourced from city ordinances and the LTFRB."
     />
 
     <!-- SEO Meta Tags -->
-    <meta name="author" content="BetterLegazpi Team" />
+    <meta name="author" content="Better Legazpi" />
     <meta
       name="keywords"
-      content="Mayon ATV, ATV Lava Trail, zipline Legazpi, skywalk Embarcadero, lava wall climbing, trekking Mayon, snorkeling Albay Gulf, Legazpi activities, outdoor adventures"
+      content="Legazpi City transportation, tricycle, jeepney, bus terminal, Albay travel, getting around Legazpi"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://betterlegazpi.org/tourism/experience" />
+    <link rel="canonical" href="https://betterlegazpi.org/travel/transportation" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://betterlegazpi.org/tourism/experience" />
-    <meta
-      property="og:title"
-      content="The Legazpi Experience &amp; Adventures | BetterLegazpi.org"
-    />
+    <meta property="og:url" content="https://betterlegazpi.org/travel/transportation" />
+    <meta property="og:title" content="Transportation | BetterLegazpi.org" />
     <meta
       property="og:description"
-      content="Official directory of extreme adventures, eco-tours, and outdoor experiences in Legazpi City, Albay."
+      content="Jeepney routes, tricycle fares, bus and UV Express terminals, and ride-hailing in Legazpi City - sourced from city ordinances and the LTFRB."
     />
     <meta
       property="og:image"
-      content="https://legazpi.gov.ph/wp-content/uploads/2023/04/ATV-Experience-in-Legazpi-by-Your-Brother.jpg"
+      content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:image:secure_url"
+      content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
     <meta property="og:site_name" content="BetterLegazpi.org" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
+    />
 
     <!-- Theme Color -->
     <meta name="theme-color" content="#0032a0" />
 
-    <title>The Legazpi Experience &amp; Adventures | BetterLegazpi.org</title>
+    <title>Transportation | BetterLegazpi.org</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/images/logo/betterlegazpi-favicon.png" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="apple-touch-icon" href="../assets/images/logo/betterlegazpi-favicon.png" />
 
-    <!-- Preconnect & Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
@@ -71,9 +86,10 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="../assets/css/tourism.css" />
-
-    <!-- Theme State Initializer -->
+    <!-- Leaflet is vendored rather than pulled from a CDN so the service worker
+         can precache it and the map survives an offline load. -->
+    <link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="../assets/css/transport.css" />
     <script>
       (function () {
         let savedTheme = null;
@@ -90,7 +106,7 @@
     </script>
   </head>
 
-  <body data-tourism-category="experience">
+  <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Hotline Bar -->
@@ -127,7 +143,6 @@
       </div>
     </div>
 
-    <!-- Site Header -->
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -162,7 +177,7 @@
             <li><a href="../policies/">Policies</a></li>
             <li><a href="../history/">History</a></li>
             <li>
-              <a href="../tourism/" class="active" aria-current="page">Travel</a>
+              <a href="../travel/" class="active" aria-current="page">Travel</a>
             </li>
             <li><a href="../statistics/">Statistics</a></li>
             <li><a href="../transparency/">Transparency</a></li>
@@ -209,240 +224,138 @@
       </div>
     </div>
 
-    <!-- Breadcrumbs -->
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="../">Home</a><span>/</span> <a href="./">Travel</a><span>/</span>
-        <span aria-current="page">The Legazpi Experience &amp; Adventures</span>
-      </nav>
-    </div>
-
-    <!-- Subpage Header -->
-    <section class="page-header">
+    <main id="main-content">
+      <!-- Breadcrumbs -->
       <div class="container">
-        <div class="page-header-content">
-          <span class="page-header-badge"
-            ><i class="bi bi-compass-fill"></i> <span>The Experience</span></span
-          >
-          <h1>The Legazpi Experience &amp; Adventures</h1>
-          <p class="page-header-desc">
-            From extreme volcanic lava trail rides on all-terrain vehicles to skywalks, high-speed
-            ziplines, and pristine marine reef snorkeling.
-          </p>
-        </div>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../">Home</a>
+          <span>/</span>
+          <a href="./">Travel</a>
+          <span>/</span>
+          <span aria-current="page">Transportation</span>
+        </nav>
       </div>
-    </section>
 
-    <!-- Main Content Area -->
-    <main id="main-content" class="tourism-main-container" style="padding-top: 0">
-      <div class="container">
-        <!-- Interactive Toolbar -->
-        <section class="tourism-toolbar" aria-label="Adventures Search and Filter Controls">
-          <div class="tourism-filter-row">
-            <!-- Search Bar -->
-            <div class="tourism-search-box">
-              <i class="bi bi-search search-icon" aria-hidden="true"></i>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-content">
+            <span class="page-header-badge"
+              ><i class="bi bi-signpost-2-fill"></i> <span>Transportation</span></span
+            >
+            <h1>Transportation</h1>
+            <p class="page-header-desc">
+              What every ride should cost, who to report overcharging to, and which jeepney goes
+              where.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Magkano dapat? -->
+      <section class="section">
+        <div class="container">
+          <h2>Magkano dapat ang pamasahe?</h2>
+          <p style="max-width: 70ch; color: var(--color-text-light)">
+            Pick how you are travelling and how far. The figures come straight from the LTFRB fare
+            guides and the city fare ordinance, and every one of those documents is linked below the
+            result so you can show it to a driver.
+          </p>
+          <div class="transport-fare" id="transport-fare"></div>
+        </div>
+      </section>
+
+      <!-- Kanino magsumbong? -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="transport-report" id="transport-report"></div>
+        </div>
+      </section>
+
+      <!-- Jeepney routes -->
+      <section class="section">
+        <div class="container">
+          <h2>Jeepney routes</h2>
+          <p style="max-width: 70ch; color: var(--color-text-light)">
+            These are the public utility jeepney (PUJ) routes serving Legazpi City under the city's
+            updated routing plan. Most of them begin in Daraga or in another Albay town rather than
+            inside Legazpi itself — that is how the routes are written in the plan, and how people
+            actually travel into the city. Routes within Legazpi proper are not yet published here.
+          </p>
+
+          <div class="transport-notice" id="transport-notice" role="note"></div>
+
+          <div class="transport-controls">
+            <div class="transport-search">
+              <i class="bi bi-search" aria-hidden="true"></i>
+              <label class="sr-only" for="transport-search">Search routes by street or place</label>
               <input
-                type="text"
-                id="tourism-search"
-                placeholder="Search experiences (e.g. ATV, Zipline, Snorkeling)..."
-                aria-label="Search adventures"
+                type="search"
+                id="transport-search"
+                placeholder="Search a street or destination — Quezon Ave., Rawis, SM…"
               />
-              <button
-                type="button"
-                id="tourism-search-clear"
-                class="search-clear-btn"
-                aria-label="Clear search"
-              >
-                <i class="bi bi-x-circle-fill"></i>
-              </button>
             </div>
-
-            <!-- District Selector -->
-            <div class="tourism-select-box">
-              <i class="bi bi-geo select-icon" aria-hidden="true"></i>
-              <select id="tourism-district-select" aria-label="Filter by District">
-                <option value="all">All Districts</option>
-                <option value="port">Port District</option>
-                <option value="old_albay">Old Albay District</option>
-                <option value="northern">Northern Coastal</option>
-                <option value="southern">Southern Coastal</option>
-                <option value="upland">Upland &amp; Rural</option>
-              </select>
-              <i class="bi bi-chevron-down chevron-icon" aria-hidden="true"></i>
-            </div>
-
-            <!-- Barangay Selector -->
-            <div class="tourism-select-box">
-              <i class="bi bi-pin-map select-icon" aria-hidden="true"></i>
-              <select id="tourism-barangay-select" aria-label="Filter by Barangay">
-                <option value="all">All Barangays</option>
-              </select>
-              <i class="bi bi-chevron-down chevron-icon" aria-hidden="true"></i>
-            </div>
-
-            <!-- Sort Selector -->
-            <div class="tourism-select-box">
-              <i class="bi bi-sort-down select-icon" aria-hidden="true"></i>
-              <select id="tourism-sort-select" aria-label="Sort adventures">
-                <option value="featured_first">Featured First</option>
-                <option value="name_asc">Name (A to Z)</option>
-                <option value="name_desc">Name (Z to A)</option>
-                <option value="barangay_asc">By Barangay (A to Z)</option>
-              </select>
-              <i class="bi bi-chevron-down chevron-icon" aria-hidden="true"></i>
-            </div>
-
-            <!-- View Mode Switcher -->
-            <div class="tourism-view-toggle" role="group" aria-label="View Toggle">
-              <button
-                type="button"
-                id="tourism-view-grid"
-                class="tourism-view-btn active"
-                aria-pressed="true"
-                title="Card Grid View"
-              >
-                <i class="bi bi-grid-fill"></i>
-              </button>
-              <button
-                type="button"
-                id="tourism-view-table"
-                class="tourism-view-btn"
-                aria-pressed="false"
-                title="Table View"
-              >
-                <i class="bi bi-list-ul"></i>
-              </button>
-            </div>
+            <div
+              class="transport-filters"
+              id="transport-filters"
+              role="group"
+              aria-label="Filter routes by corridor"
+            ></div>
           </div>
 
-          <!-- Dynamic Category Chips -->
-          <div
-            class="tourism-subcategories"
-            id="tourism-subcategory-container"
-            style="display: none"
-          ></div>
-        </section>
-
-        <!-- Results Meta Bar -->
-        <div class="tourism-results-meta">
-          <div id="tourism-results-count" class="tourism-results-count" aria-live="polite">
-            Showing adventures...
+          <!-- Revealed by transport.js only when Leaflet is present. -->
+          <div class="transport-map-wrap" id="transport-map-wrap">
+            <!-- role="region", not role="img": Leaflet injects focusable zoom
+                 controls and attribution links, and an image role may not
+                 contain focusable descendants. The route lists below are the
+                 text equivalent of everything drawn here. -->
+            <div
+              class="transport-map"
+              id="transport-map"
+              role="region"
+              aria-label="Map of jeepney routes in and around Legazpi City. Every route is also listed as text below."
+            ></div>
+            <p class="transport-map-hint">
+              Select a route below to zoom the map to it. The written street sequence on each route
+              card is the authoritative version.
+            </p>
           </div>
-          <div id="tourism-active-filters" class="tourism-active-filters"></div>
-        </div>
 
-        <!-- Grid Container -->
-        <div
-          id="tourism-grid-container"
-          class="tourism-grid"
-          role="region"
-          aria-label="Adventures Card Grid"
-        ></div>
-
-        <!-- Table View Layout -->
-        <div id="tourism-table-wrapper" class="tourism-table-wrapper" style="display: none">
-          <div class="tourism-table-responsive">
-            <table class="tourism-table" aria-label="Adventures Directory Table">
-              <thead>
-                <tr>
-                  <th scope="col" style="min-width: 260px">Adventure &amp; Type</th>
-                  <th scope="col" style="min-width: 240px">Location &amp; Barangay (PSGC)</th>
-                  <th scope="col" style="min-width: 160px">Details</th>
-                  <th scope="col" style="min-width: 130px">Directions</th>
-                </tr>
-              </thead>
-              <tbody id="tourism-table-body"></tbody>
-            </table>
+          <div class="transport-routes" id="transport-routes">
+            <p class="transport-empty">Loading jeepney routes…</p>
           </div>
         </div>
+      </section>
 
-        <!-- Empty State -->
-        <div id="tourism-empty-state" class="tourism-empty-state" style="display: none">
-          <i class="bi bi-compass-fill"></i>
-          <h3>No matching adventures found</h3>
-          <p>Try searching with another keyword or resetting your filters.</p>
-          <button type="button" id="tourism-reset-filters" class="tourism-btn-reset">
-            <i class="bi bi-arrow-counterclockwise"></i> Reset Filters
-          </button>
-        </div>
-
-        <!-- Pagination -->
-        <div id="tourism-pagination" class="tourism-pagination" style="display: none">
-          <button type="button" id="tourism-prev-page" class="tourism-page-btn">
-            <i class="bi bi-chevron-left"></i> Previous
-          </button>
-          <span id="tourism-page-info" class="tourism-page-info">Page 1 of 1</span>
-          <button type="button" id="tourism-next-page" class="tourism-page-btn">
-            Next <i class="bi bi-chevron-right"></i>
-          </button>
-        </div>
-
-        <!-- Official Albay Gulf 16 Dive Sites Directory -->
-        <section
-          class="tourism-source-card"
-          style="margin-top: 48px; flex-direction: column; align-items: flex-start; gap: 16px"
-          aria-label="Albay Gulf Marine Sanctuaries"
-        >
-          <div style="display: flex; align-items: center; gap: 12px">
-            <i class="bi bi-water" style="font-size: 1.8rem; color: #0284c7"></i>
-            <div>
-              <h3
-                style="
-                  font-size: 1.15rem;
-                  font-weight: 700;
-                  color: var(--color-text);
-                  margin: 0 0 4px;
-                "
-              >
-                16 Official Albay Gulf Marine Dive Sites
-              </h3>
-              <p style="font-size: 0.88rem; color: var(--tourism-text-muted); margin: 0">
-                Rich marine ecosystems, rare tropical sea life, and colorful coral reefs mapped by
-                the City Tourism Services Unit.
-              </p>
-            </div>
-          </div>
-          <div class="tourism-dives-grid" style="width: 100%">
-            <div class="tourism-dive-pill">
-              <i class="bi bi-compass"></i> Bulang Buya (Denson Reef)
-            </div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Sadit na Itom na Buya</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Itom na Buya</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Barao Reef</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Bigaa Beach</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Pasig Out</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Pasig In</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Canal</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Sleeping Lion</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Dakula na Masolog</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Sadig na Masolog</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Malaya</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Sagoron</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Maslog Out</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Maslog In</div>
-            <div class="tourism-dive-pill"><i class="bi bi-compass"></i> Kabunturan</div>
-          </div>
-        </section>
-
-        <!-- Official Municipal Source Note -->
-        <aside class="tourism-source-card" style="margin-top: 24px" aria-label="Source Attribution">
-          <i class="bi bi-shield-check"></i>
-          <p>
-            <strong>Official Municipal Source:</strong> All adventure trails, lava coordinates, and
-            marine sanctuary data are curated directly from the City Government of Legazpi (<a
-              href="https://legazpi.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >legazpi.gov.ph</a
-            >) and the official <em>City of Fun and Adventure Travel Guide</em> (City Tourism
-            Services Unit).
+      <!-- Other ways of getting around -->
+      <section class="section section-alt">
+        <div class="container">
+          <h2>Other ways of getting around</h2>
+          <p style="max-width: 70ch; color: var(--color-text-light)">
+            Tricycles, buses, UV Express and ride-hailing apps. Fares and terminals are shown where
+            an official source publishes them; where one does not exist, we say so rather than
+            guess.
           </p>
-        </aside>
-      </div>
+          <div class="transport-routes" id="transport-modes">
+            <p class="transport-empty">Loading&hellip;</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sources -->
+      <section class="section">
+        <div class="container">
+          <h2>Where this comes from</h2>
+          <ul class="transport-sources" id="transport-sources"></ul>
+          <p style="margin-top: var(--spacing-md)">
+            <a href="./" class="btn btn-primary">
+              <i class="bi bi-compass-fill" aria-hidden="true"></i> Back to Travel
+            </a>
+          </p>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main-new">
@@ -471,7 +384,7 @@
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
-              <li><a href="../tourism/">Fun &amp; Adventure</a></li>
+              <li><a href="../travel/">Fun &amp; Adventure</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
@@ -593,15 +506,16 @@
             <span class="footer-copyright-disclaimer"
               >All public information sourced from official government portals.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.21</span>
           </div>
         </div>
       </div>
     </footer>
-    <!-- Scripts -->
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
-    <script defer src="../assets/js/tourism.js"></script>
+    <script defer src="../assets/vendor/leaflet/leaflet.js"></script>
+    <script defer src="../assets/js/fare-calc.js"></script>
+    <script defer src="../assets/js/transport.js"></script>
   </body>
 </html>

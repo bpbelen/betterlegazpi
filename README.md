@@ -40,14 +40,14 @@ Every folder answers one question. If you are looking for something, find the qu
 
 ### The website itself
 
-Each folder below is one section of the site, and its name is the web address. `tourism/` becomes `betterlegazpi.org/tourism`. Every page is a plain HTML file you can open in a browser — there is no framework or build step required to view one.
+Each folder below is one section of the site, and its name is the web address. `travel/` becomes `betterlegazpi.org/travel`. Every page is a plain HTML file you can open in a browser — there is no framework or build step required to view one.
 
 | Folder                                                                   | What it holds                                                                |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
 | `index.html`                                                             | The homepage                                                                 |
 | [services/](services/)                                                   | The 11 service categories — health, business, certificates, taxes, and so on |
 | [service-details/](service-details/)                                     | One page per city office or programme, with steps, fees, and requirements    |
-| [tourism/](tourism/)                                                     | Attractions, landmarks, food, accommodations, and things to do               |
+| [travel/](travel/)                                                       | Attractions, landmarks, food, accommodations, and things to do               |
 | [government/](government/)                                               | Elected officials and department heads                                       |
 | [legislative/](legislative/)                                             | Ordinances and resolutions                                                   |
 | [budget/](budget/)                                                       | Public funds — income, spending, and infrastructure projects                 |

@@ -15,28 +15,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Find where to stay in Legazpi City: 62 accredited hotels, resorts, hometels, and inns with direct contact details, PSGC barangay search, and Google Maps links."
+      content="Explore all official tourist attractions in Legazpi City, Albay: Mayon Volcano, Ligñon Hill Nature Park, Albay Cathedral, Kapuntukan Hill, and historical monuments with Google Maps directions."
     />
 
     <!-- SEO Meta Tags -->
     <meta name="author" content="BetterLegazpi Team" />
     <meta
       name="keywords"
-      content="Legazpi hotels, accommodations, resorts Legazpi, inns, hometels, accredited hotels Albay, where to stay Mayon, lodging Legazpi"
+      content="Legazpi attractions, Mayon Volcano, Lignon Hill, Albay Cathedral, Sleeping Lion, Kapuntukan, Legazpi monuments, Albay Gulf dive sites, Legazpi tourist spots"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://betterlegazpi.org/tourism/accommodations" />
+    <link rel="canonical" href="https://betterlegazpi.org/travel/attractions" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://betterlegazpi.org/tourism/accommodations" />
-    <meta
-      property="og:title"
-      content="Where to Stay | Accredited Accommodations | BetterLegazpi.org"
-    />
+    <meta property="og:url" content="https://betterlegazpi.org/travel/attractions" />
+    <meta property="og:title" content="Tourist Attractions | BetterLegazpi.org" />
     <meta
       property="og:description"
-      content="Official directory of 62 accredited hotels, hometels, inns, and resorts in Legazpi City, Albay."
+      content="Official directory of natural wonders, historical shrines, religious heritage sites, and cultural attractions in Legazpi City."
     />
     <meta
       property="og:image"
@@ -48,7 +45,7 @@
     <!-- Theme Color -->
     <meta name="theme-color" content="#0032a0" />
 
-    <title>Where to Stay | Accredited Accommodations | BetterLegazpi.org</title>
+    <title>Tourist Attractions | BetterLegazpi.org</title>
     <link rel="icon" type="image/png" href="../assets/images/logo/betterlegazpi-favicon.png" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="apple-touch-icon" href="../assets/images/logo/betterlegazpi-favicon.png" />
@@ -90,7 +87,7 @@
     </script>
   </head>
 
-  <body data-tourism-category="accommodations">
+  <body data-tourism-category="attractions">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Hotline Bar -->
@@ -162,7 +159,7 @@
             <li><a href="../policies/">Policies</a></li>
             <li><a href="../history/">History</a></li>
             <li>
-              <a href="../tourism/" class="active" aria-current="page">Travel</a>
+              <a href="../travel/" class="active" aria-current="page">Travel</a>
             </li>
             <li><a href="../statistics/">Statistics</a></li>
             <li><a href="../transparency/">Transparency</a></li>
@@ -213,7 +210,7 @@
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <a href="../">Home</a><span>/</span> <a href="./">Travel</a><span>/</span>
-        <span aria-current="page">Where to Stay</span>
+        <span aria-current="page">Tourist Attractions</span>
       </nav>
     </div>
 
@@ -222,12 +219,12 @@
       <div class="container">
         <div class="page-header-content">
           <span class="page-header-badge"
-            ><i class="bi bi-building-fill"></i> <span>Where to Stay</span></span
+            ><i class="bi bi-geo-alt-fill"></i> <span>Tourist Attractions</span></span
           >
-          <h1>Where to Stay in Legazpi City</h1>
+          <h1>Tourist Attractions</h1>
           <p class="page-header-desc">
-            Official directory of 62 accredited hotels, hometels, inns, and resorts across Legazpi
-            City with direct phone/email contact links and Google Maps.
+            Explore natural volcanic wonders, historic shrines, centuries-old religious monuments,
+            and cultural landmarks across Legazpi City with direct Google Maps directions.
           </p>
         </div>
       </div>
@@ -237,7 +234,7 @@
     <main id="main-content" class="tourism-main-container" style="padding-top: 0">
       <div class="container">
         <!-- Interactive Toolbar -->
-        <section class="tourism-toolbar" aria-label="Accommodations Search and Filter Controls">
+        <section class="tourism-toolbar" aria-label="Attractions Search and Filter Controls">
           <div class="tourism-filter-row">
             <!-- Search Bar -->
             <div class="tourism-search-box">
@@ -245,8 +242,8 @@
               <input
                 type="text"
                 id="tourism-search"
-                placeholder="Search hotels, inns, resorts (e.g. Oriental, Pepperland, Inn)..."
-                aria-label="Search accommodations"
+                placeholder="Search attractions (e.g. Mayon, Cathedral, Lignon)..."
+                aria-label="Search attractions"
               />
               <button
                 type="button"
@@ -284,8 +281,8 @@
             <!-- Sort Selector -->
             <div class="tourism-select-box">
               <i class="bi bi-sort-down select-icon" aria-hidden="true"></i>
-              <select id="tourism-sort-select" aria-label="Sort accommodations">
-                <option value="accredited_first">DOT / LGU Accredited First</option>
+              <select id="tourism-sort-select" aria-label="Sort attractions">
+                <option value="featured_first">Featured First</option>
                 <option value="name_asc">Name (A to Z)</option>
                 <option value="name_desc">Name (Z to A)</option>
                 <option value="barangay_asc">By Barangay (A to Z)</option>
@@ -327,7 +324,7 @@
         <!-- Results Meta Bar -->
         <div class="tourism-results-meta">
           <div id="tourism-results-count" class="tourism-results-count" aria-live="polite">
-            Showing accommodations...
+            Showing attractions...
           </div>
           <div id="tourism-active-filters" class="tourism-active-filters"></div>
         </div>
@@ -337,18 +334,18 @@
           id="tourism-grid-container"
           class="tourism-grid"
           role="region"
-          aria-label="Accommodations Card Grid"
+          aria-label="Attractions Card Grid"
         ></div>
 
         <!-- Table View Layout -->
         <div id="tourism-table-wrapper" class="tourism-table-wrapper" style="display: none">
           <div class="tourism-table-responsive">
-            <table class="tourism-table" aria-label="Accommodations Directory Table">
+            <table class="tourism-table" aria-label="Attractions Directory Table">
               <thead>
                 <tr>
-                  <th scope="col" style="min-width: 260px">Establishment &amp; Classification</th>
+                  <th scope="col" style="min-width: 260px">Attraction &amp; Classification</th>
                   <th scope="col" style="min-width: 240px">Address &amp; Barangay (PSGC)</th>
-                  <th scope="col" style="min-width: 180px">Direct Contact Links</th>
+                  <th scope="col" style="min-width: 160px">Details</th>
                   <th scope="col" style="min-width: 130px">Directions</th>
                 </tr>
               </thead>
@@ -359,8 +356,8 @@
 
         <!-- Empty State -->
         <div id="tourism-empty-state" class="tourism-empty-state" style="display: none">
-          <i class="bi bi-building-fill"></i>
-          <h3>No matching accommodations found</h3>
+          <i class="bi bi-geo-alt-fill"></i>
+          <h3>No matching attractions found</h3>
           <p>Try searching with another keyword or resetting your barangay filter.</p>
           <button type="button" id="tourism-reset-filters" class="tourism-btn-reset">
             <i class="bi bi-arrow-counterclockwise"></i> Reset Filters
@@ -382,11 +379,9 @@
         <aside class="tourism-source-card" style="margin-top: 40px" aria-label="Source Attribution">
           <i class="bi bi-shield-check"></i>
           <p>
-            <strong>Official Municipal Source:</strong> All 62 accredited hotels, inns, and resorts
-            are curated directly from the City Government of Legazpi (<a
-              href="https://legazpi.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <strong>Official Municipal Source:</strong> All 28 tourist attractions, historical
+            monuments, and religious landmarks are curated directly from the City Government of
+            Legazpi (<a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
               >legazpi.gov.ph</a
             >) and the official <em>City of Fun and Adventure Travel Guide</em> (City Tourism
             Services Unit).
@@ -424,7 +419,7 @@
             <h4>Quick Links</h4>
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
-              <li><a href="../tourism/">Fun &amp; Adventure</a></li>
+              <li><a href="../travel/">Fun &amp; Adventure</a></li>
               <li><a href="../sitemap/">Sitemap</a></li>
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>

@@ -250,7 +250,7 @@
     // Run global image error catchers on all pages (including Hub)
     setupGlobalImageFallbacks();
 
-    const basePath = window.location.pathname.includes('/tourism') ? '../data/' : 'data/';
+    const basePath = window.location.pathname.includes('/travel') ? '../data/' : 'data/';
 
     try {
       // Fetch PSGC Barangays

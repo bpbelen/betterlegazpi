@@ -69,7 +69,7 @@ There is no templating layer, so header/nav/footer markup is **duplicated into e
 
 - `services/` — category landing pages only: the eleven routes reachable from the main nav and `services/index.html` (agriculture, business, certificates, education, employment, environment, health, infrastructure, social-services, tax-payments, utilities). A page covering one office or one programme belongs in `service-details/`, not here.
 - `service-details/` — per-office and per-programme pages (e.g. `city-civil-registrar.html`, `cto-services.html`, `philhealth-yakap.html`), linked from `data/services.json` entries or from their category page. These carry large page-local `<style>` blocks.
-- `tourism/` — attractions, landmarks, food, accommodations, experience.
+- `travel/` — attractions, landmarks, food, accommodations, experience.
 - `government/`, `legislative/`, `budget/`, `statistics/`, `news/`, `history/`, `contact/`, `faq/`, `sitemap/`, `accessibility/`, `terms/`, `privacy/` — one section each.
 - `admin/news-editor.html` — standalone admin tool, excluded from the production build (see `build.sh` rsync excludes).
 

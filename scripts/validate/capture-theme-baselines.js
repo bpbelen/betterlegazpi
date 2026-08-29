@@ -32,7 +32,7 @@ const ROUTES = [
   ['policies', '/policies/index.html'],
   ['transparency', '/transparency/index.html'],
   ['statistics', '/statistics/index.html'],
-  ['tourism', '/tourism/index.html'],
+  ['travel', '/travel/index.html'],
   ['history', '/history/index.html'],
   ['contact', '/contact/index.html'],
   ['news', '/news/index.html'],
