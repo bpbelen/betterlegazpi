@@ -10422,6 +10422,269 @@ a.a11y-contact-item:hover i {
   font-weight: 600;
 }
 
+/* The "+N more" pill is the control that opens the details panel, so it is a
+   button. Below the touch breakpoint it has to clear 44px like any other
+   target, even though it sits in a row of much smaller static pills. */
+button.service-pill-more {
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+button.service-pill-more:hover {
+  background: #bae6fd;
+}
+
+@media (max-width: 768px) {
+  button.service-pill-more {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Details disclosure ---------------------------------------------------- */
+
+.facility-disclosure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: background var(--duration-base) ease;
+}
+
+.facility-disclosure:hover {
+  background: #e2e8f0;
+}
+
+.facility-disclosure-icon {
+  transition: transform var(--duration-base) ease;
+}
+
+.facility-disclosure[aria-expanded='true'] .facility-disclosure-icon {
+  transform: rotate(180deg);
+}
+
+.facility-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.facility-details-heading {
+  margin: 0 0 6px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--color-text-light);
+}
+
+.facility-details-empty {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.facility-detail-list {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+}
+
+.facility-detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  font-size: 0.8125rem;
+}
+
+.facility-detail-row dt {
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.facility-detail-row dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.facility-source-note {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  color: #78350f;
+}
+
+.facility-source-note i {
+  flex-shrink: 0;
+  color: #d97706;
+}
+
+.facility-source-note p {
+  margin: 0 0 4px;
+}
+
+.facility-source-link {
+  font-weight: 600;
+}
+
+/* An unpublished number is a fact about the source, not a broken button, so
+   it is a non-interactive span that keeps the footer's two-column rhythm. */
+.facility-action-btn--unlisted {
+  background: #f8fafc;
+  color: var(--color-text-light);
+  border: 1px dashed #cbd5e1;
+  cursor: default;
+}
+
+/* Category chip overflow ------------------------------------------------ */
+
+.health-cat-pill[data-secondary] {
+  display: none;
+}
+
+.health-cat-pill[data-secondary].is-revealed {
+  display: inline-flex;
+}
+
+.health-cat-pill--overflow {
+  border-style: dashed;
+}
+
+/* Documentary sources & references -------------------------------------- */
+
+.health-references {
+  margin-top: 32px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.health-references-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 0;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.health-references-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* The badge is what keeps the collapsed state honest: it says the notes exist
+   before anyone opens the section. */
+.health-references-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #b45309;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+.health-references-icon {
+  margin-left: auto;
+  transition: transform var(--duration-base) ease;
+  color: var(--color-text-light);
+}
+
+.health-references-toggle[aria-expanded='true'] .health-references-icon {
+  transform: rotate(180deg);
+}
+
+.health-references-panel {
+  padding: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.health-citation-list {
+  margin: 0 0 20px;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+.health-citation-list a {
+  word-break: break-word;
+}
+
+.health-disclaimer-card {
+  padding: 14px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 10px;
+  color: #78350f;
+}
+
+.health-disclaimer-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.health-disclaimer-card p {
+  margin: 0 0 10px;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.health-notes-list {
+  margin: 0 0 10px;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.health-disclaimer-footnote {
+  margin: 0;
+  font-style: italic;
+}
+
 .facility-card-footer {
   display: flex;
   gap: 8px;
@@ -10607,6 +10870,66 @@ a.a11y-contact-item:hover i {
 [data-theme='dark'] .health-cat-pill.active {
   background: #0369a1;
   color: #ffffff;
+}
+
+[data-theme='dark'] .facility-disclosure,
+[data-theme='dark'] .facility-details {
+  background: var(--color-bg);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
+}
+
+[data-theme='dark'] .facility-disclosure:hover {
+  background: var(--color-bg-muted);
+}
+
+[data-theme='dark'] .facility-detail-row dd {
+  color: var(--color-text);
+}
+
+[data-theme='dark'] .facility-action-btn--unlisted {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--color-text-light);
+}
+
+[data-theme='dark'] button.service-pill-more {
+  background: rgba(56, 189, 248, 0.16);
+  color: #7dd3fc;
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+[data-theme='dark'] button.service-pill-more:hover {
+  background: rgba(56, 189, 248, 0.28);
+}
+
+[data-theme='dark'] .facility-source-note,
+[data-theme='dark'] .health-disclaimer-card {
+  background: rgba(217, 119, 6, 0.12);
+  border-color: rgba(217, 119, 6, 0.4);
+  color: #fcd34d;
+}
+
+[data-theme='dark'] .facility-source-note i {
+  color: #fbbf24;
+}
+
+[data-theme='dark'] .health-references {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .health-references-toggle {
+  background: var(--color-bg-muted);
+}
+
+[data-theme='dark'] .health-references-panel {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .health-references-badge {
+  background: rgba(217, 119, 6, 0.16);
+  border-color: rgba(217, 119, 6, 0.4);
+  color: #fcd34d;
 }
 
 [data-theme='dark'] .health-filter-select {

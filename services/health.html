@@ -363,11 +363,14 @@
           <div class="health-directory-header">
             <h2 class="section-title">
               <i class="bi bi-hospital text-primary"></i>
-              <span>Health Facilities Directory</span>
+              <span>Consolidated List of Health Facilities</span>
             </h2>
             <p class="section-subtitle">
-              Single Source of Truth (SSOT) database verified with DOH NHFR, PhilHealth YAKAP
-              Registry (July 2026 update), and Legazpi City Health Office.
+              Compiled from the DOH National Health Facility Registry, the DOH HFSRB licensing
+              lists, the DOH Bicol CHD certified animal-bite centres, the PhilHealth YAKAP registry,
+              and the Legazpi City Health Office. Source data ranges from December 2025 to June 2026
+              &mdash; see the
+              <a href="#references">sources and data notes</a>.
             </p>
           </div>
 
@@ -401,33 +404,99 @@
               aria-label="Filter by facility category"
             >
               <button type="button" class="health-cat-pill active" data-category="all">
-                <i class="bi bi-grid-fill"></i> All Facilities
+                <i class="bi bi-grid-fill"></i> All Facilities (<span data-chip-count>0</span>)
               </button>
               <button type="button" class="health-cat-pill" data-category="Hospital">
-                <i class="bi bi-hospital"></i> Hospitals (8)
-              </button>
-              <button type="button" class="health-cat-pill" data-category="yakap-accredited">
-                <i class="bi bi-patch-check-fill"></i> PhilHealth YAKAP (13)
-              </button>
-              <button
-                type="button"
-                class="health-cat-pill"
-                data-category="Super Health Center & RHU"
-              >
-                <i class="bi bi-building-add"></i> Super Health Center &amp; RHU
-              </button>
-              <button
-                type="button"
-                class="health-cat-pill"
-                data-category="Birthing & Lying-in Clinic"
-              >
-                <i class="bi bi-heart-pulse-fill"></i> Birthing &amp; Lying-In
-              </button>
-              <button type="button" class="health-cat-pill" data-category="Diagnostic Laboratory">
-                <i class="bi bi-prescription2"></i> Diagnostic Labs
+                <i class="bi bi-hospital"></i> Hospitals (<span data-chip-count>0</span>)
               </button>
               <button type="button" class="health-cat-pill" data-category="Barangay Health Station">
-                <i class="bi bi-geo-alt-fill"></i> Barangay Health Stations (70)
+                <i class="bi bi-geo-alt-fill"></i> Barangay Health Stations (<span data-chip-count
+                  >0</span
+                >)
+              </button>
+              <button type="button" class="health-cat-pill" data-category="Diagnostic Laboratory">
+                <i class="bi bi-prescription2"></i> Diagnostic Labs (<span data-chip-count>0</span>)
+              </button>
+              <button
+                type="button"
+                class="health-cat-pill"
+                data-category="Birthing &amp; Lying-in Clinic"
+              >
+                <i class="bi bi-heart-pulse-fill"></i> Birthing &amp; Lying-In (<span
+                  data-chip-count
+                  >0</span
+                >)
+              </button>
+              <button type="button" class="health-cat-pill" data-category="abtc-certified">
+                <i class="bi bi-bandaid-fill"></i> Animal Bite Centres (<span data-chip-count
+                  >0</span
+                >)
+              </button>
+
+              <button
+                type="button"
+                class="health-cat-pill"
+                data-category="Dialysis Center"
+                data-secondary
+              >
+                <i class="bi bi-droplet-half"></i> Dialysis Centres (<span data-chip-count>0</span>)
+              </button>
+              <button
+                type="button"
+                class="health-cat-pill"
+                data-category="PhilHealth YAKAP Clinic"
+                data-secondary
+              >
+                <i class="bi bi-shield-plus"></i> PhilHealth YAKAP Clinics (<span data-chip-count
+                  >0</span
+                >)
+              </button>
+              <button
+                type="button"
+                class="health-cat-pill"
+                data-category="Super Health Center &amp; RHU"
+                data-secondary
+              >
+                <i class="bi bi-building-add"></i> Super Health Centre &amp; RHU (<span
+                  data-chip-count
+                  >0</span
+                >)
+              </button>
+              <button
+                type="button"
+                class="health-cat-pill"
+                data-category="Drug Testing Laboratory"
+                data-secondary
+              >
+                <i class="bi bi-clipboard2-pulse"></i> Drug Testing Labs (<span data-chip-count
+                  >0</span
+                >)
+              </button>
+              <button
+                type="button"
+                class="health-cat-pill"
+                data-category="Ambulatory Surgical Clinic"
+                data-secondary
+              >
+                <i class="bi bi-scissors"></i> Ambulatory Surgical (<span data-chip-count>0</span>)
+              </button>
+              <button
+                type="button"
+                class="health-cat-pill"
+                data-category="Blood Service Facility"
+                data-secondary
+              >
+                <i class="bi bi-droplet-fill"></i> Blood Services (<span data-chip-count>0</span>)
+              </button>
+
+              <button
+                type="button"
+                class="health-cat-pill health-cat-pill--overflow"
+                id="health-cat-more"
+                aria-expanded="false"
+              >
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+                <span data-chip-overflow-label>more</span>
               </button>
             </div>
 
@@ -483,6 +552,46 @@
             <button type="button" id="health-load-more-btn" class="health-load-more-btn">
               Show More Facilities
             </button>
+          </div>
+
+          <!-- Documentary Sources & References -->
+          <div class="health-references" id="references">
+            <button
+              type="button"
+              class="health-references-toggle"
+              id="health-references-toggle"
+              aria-expanded="false"
+              aria-controls="health-references-panel"
+            >
+              <span class="health-references-heading">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                Documentary Sources &amp; References
+              </span>
+              <span class="health-references-badge" id="health-references-badge"></span>
+              <i class="bi bi-chevron-down health-references-icon" aria-hidden="true"></i>
+            </button>
+
+            <div class="health-references-panel" id="health-references-panel" hidden>
+              <ul class="health-citation-list" id="health-references-list"></ul>
+
+              <div class="health-disclaimer-card">
+                <h4><i class="bi bi-exclamation-triangle-fill"></i> Disclaimer &amp; data notes</h4>
+                <p>
+                  This directory consolidates several DOH registries that do not always agree with
+                  one another, and whose publication dates differ by facility type. Where two
+                  sources conflict, the DOH National Health Facility Registry takes precedence and
+                  the superseded value is recorded below rather than discarded. Licence and
+                  accreditation dates are those the sources published; confirm with a facility
+                  before relying on them.
+                </p>
+                <ul class="health-notes-list" id="health-references-notes"></ul>
+                <p class="health-disclaimer-footnote">
+                  One entry departs from that rule deliberately: Bicol Regional Hospital and Medical
+                  Center is registered by DOH under Daraga, Albay, but is listed here because it
+                  operates on Rizal Street and serves Legazpi City.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
