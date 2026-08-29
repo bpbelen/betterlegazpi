@@ -12394,6 +12394,15 @@ button.service-pill-more:hover {
 
 .lang-option-check {
   font-size: 0.95rem;
+  /* Every option now carries this icon in markup; only the active one shows
+     it. Previously only English's button had the icon at all, so the check
+     mark stayed next to English regardless of which language was actually
+     selected. */
+  display: none;
+}
+
+.lang-option.is-active .lang-option-check {
+  display: inline-block;
 }
 
 /* Unavailable languages stay focusable (aria-disabled, not disabled) so screen

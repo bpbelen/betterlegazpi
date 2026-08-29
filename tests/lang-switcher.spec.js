@@ -68,6 +68,16 @@ for (const route of ROUTES) {
       await opt.click();
       await expect(page.locator('.lang-toggle-code')).toHaveText('FIL');
       await expect(page.locator('html')).toHaveAttribute('lang', 'fil');
+      // Regression check: the checkmark icon used to exist only in English's
+      // markup, so it stayed next to English no matter which language was
+      // actually active — is-active/aria-checked were correct, only the
+      // visible icon was wrong. Every option now carries the icon and CSS
+      // shows it only on .is-active, so this asserts the icon itself moved,
+      // not just the attributes underneath it.
+      await page.locator('.lang-toggle-btn').click();
+      await expect(page.locator('.lang-option[data-lang="fil"] .lang-option-check')).toBeVisible();
+      await expect(page.locator('.lang-option[data-lang="en"] .lang-option-check')).toBeHidden();
+      await page.locator('.lang-toggle-btn').click();
       await expect(page.locator('[data-i18n="skip_to_content"]')).toHaveText(
         'Lumaktaw papunta sa pangunahing nilalaman'
       );
