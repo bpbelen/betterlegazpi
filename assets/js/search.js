@@ -15,6 +15,42 @@
   const MAX_RECENT_SEARCHES = 10;
   const MAX_ANALYTICS_ENTRIES = 100;
 
+  // How many of each kind the dropdown shows at once.
+  const SERVICE_RESULT_LIMIT = 8;
+  const PAGE_RESULT_LIMIT = 4;
+  const WEAK_RESULT_LIMIT = 4;
+
+  /** Below this, a loose match is noise rather than a suggestion worth offering. */
+  const WEAK_SCORE_FLOOR = 15;
+
+  /**
+   * Below this many confident results, the weak matches are offered under
+   * "Not exactly what you're looking for?". Above it, they stay hidden — there
+   * is no reason to show near-misses when there are already good answers.
+   */
+  const WEAK_THRESHOLD = 3;
+
+  /**
+   * Short labels for the category chips. The chips used to be built by taking
+   * the first word of each category name, which produced "Certificates",
+   * "Business", "Tax" — ambiguous once more categories exist. Keyed by the
+   * categoryId used across data/service-categories.json and the hubs.
+   */
+  const CATEGORY_CHIP_LABELS = {
+    agriculture: 'Agriculture',
+    business: 'Business',
+    certificates: 'Certificates',
+    education: 'Education',
+    employment: 'Jobs',
+    environment: 'Environment',
+    health: 'Health',
+    housing: 'Housing',
+    infrastructure: 'Building',
+    'social-services': 'Social',
+    'tax-payments': 'Tax',
+    utilities: 'Utilities',
+  };
+
   // Popular searches (curated + dynamic)
   const CURATED_POPULAR = [
     'birth certificate',
@@ -34,27 +70,23 @@
     'slaughterhouse',
   ];
 
-  // Determine the base path based on current page location
+  /**
+   * Relative prefix back to the site root, so data/ and result URLs resolve from
+   * any depth. Derived from the path rather than a list of known directories:
+   * the old hardcoded list had grown stale and omitted /tourism/, /legislative/,
+   * /budget/ and /history/, where the fetch would have 404'd.
+   *
+   * Works for both real ".html" paths and the clean URLs serve.py and .htaccess
+   * rewrite: a trailing segment with no dot is treated as a directory index.
+   */
   function getBasePath() {
     const path = window.location.pathname;
-    if (
-      path.includes('/services/') ||
-      path.includes('/government/') ||
-      path.includes('/transparency/') ||
-      path.includes('/contact/') ||
-      path.includes('/faq/') ||
-      path.includes('/accessibility/') ||
-      path.includes('/news/') ||
-      path.includes('/sitemap/') ||
-      path.includes('/statistics/') ||
-      path.includes('/policies/') ||
-      path.includes('/privacy/') ||
-      path.includes('/terms/') ||
-      path.includes('/service-details/')
-    ) {
-      return '../';
-    }
-    return '';
+    const segments = path.split('/').filter(Boolean);
+
+    // A final segment containing a dot is a file, not a directory to climb out of.
+    if (segments.length && segments[segments.length - 1].includes('.')) segments.pop();
+
+    return segments.length ? '../'.repeat(segments.length) : '';
   }
 
   // ==================== SEARCH INDEX ====================
@@ -118,7 +150,13 @@
 
   // ==================== FUZZY MATCHING ====================
 
-  // Levenshtein distance for fuzzy matching
+  /**
+   * Damerau-Levenshtein (optimal string alignment): edit distance that counts a
+   * transposition as one edit rather than two. Plain Levenshtein scored
+   * "brith" against "birth" as distance 2 — a 0.6 similarity that fell below
+   * every threshold — even though swapped adjacent letters are the single most
+   * common typing mistake.
+   */
   function levenshteinDistance(a, b) {
     if (a.length === 0) return b.length;
     if (b.length === 0) return a.length;
@@ -133,18 +171,37 @@
 
     for (let i = 1; i <= b.length; i++) {
       for (let j = 1; j <= a.length; j++) {
-        if (b.charAt(i - 1) === a.charAt(j - 1)) {
-          matrix[i][j] = matrix[i - 1][j - 1];
-        } else {
-          matrix[i][j] = Math.min(
-            matrix[i - 1][j - 1] + 1,
-            matrix[i][j - 1] + 1,
-            matrix[i - 1][j] + 1
-          );
+        const cost = b.charAt(i - 1) === a.charAt(j - 1) ? 0 : 1;
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + cost,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j] + 1
+        );
+        if (
+          i > 1 &&
+          j > 1 &&
+          b.charAt(i - 1) === a.charAt(j - 2) &&
+          b.charAt(i - 2) === a.charAt(j - 1)
+        ) {
+          matrix[i][j] = Math.min(matrix[i][j], matrix[i - 2][j - 2] + 1);
         }
       }
     }
     return matrix[b.length][a.length];
+  }
+
+  /**
+   * Whether `term` is a near-miss for any single word in `text`.
+   *
+   * isFuzzyMatch compares a term against a whole string, which works for a
+   * one-word target and fails completely for a sentence: "helth" against
+   * "Getting a health card issued" is a huge edit distance, so a one-letter
+   * typo used to return nothing at all. Comparing word by word is what makes
+   * the "Not exactly what you're looking for?" suggestions work.
+   */
+  function fuzzyWordMatch(term, text) {
+    if (!text || term.length < 4) return false;
+    return tokenize(text).some((word) => word.length >= 4 && isFuzzyMatch(term, word, 0.25));
   }
 
   // Check if terms are similar (fuzzy match)
@@ -180,33 +237,54 @@
 
   // ==================== DATA LOADING ====================
 
+  /**
+   * data/search-index.json is generated by scripts/data/build-search-index.js
+   * from the office charters in data/offices/. It carries every charter service
+   * (264) plus the section pages, where the old data/services.json held only 50
+   * curated entries covering 9 of the 13 categories — which is why searches for
+   * "health", "education" or "YAKAP" used to return nothing useful.
+   *
+   * The two are not merged: the charter describes the same transactions in
+   * plainer words, so loading both would return every service twice.
+   */
   async function loadServicesData() {
     if (isDataLoaded) return servicesData;
 
+    const basePath = getBasePath();
+
     try {
-      const basePath = getBasePath();
-      const response = await fetch(`${basePath}data/services.json`);
-      if (!response.ok) throw new Error('Failed to load services data');
+      const response = await fetch(`${basePath}data/search-index.json`);
+      if (!response.ok) throw new Error('search-index.json unavailable');
       const data = await response.json();
-      servicesData = data.services || [];
-      searchIndex = buildSearchIndex(servicesData);
-      isDataLoaded = true;
-      return servicesData;
+      servicesData = data.entries || [];
+      if (!servicesData.length) throw new Error('search-index.json is empty');
     } catch (error) {
-      console.warn('Could not load services data:', error);
-      servicesData = getFallbackServices();
-      searchIndex = buildSearchIndex(servicesData);
-      isDataLoaded = true;
-      return servicesData;
+      console.warn('Falling back to data/services.json:', error.message);
+      try {
+        const response = await fetch(`${basePath}data/services.json`);
+        if (!response.ok) throw new Error('services.json unavailable');
+        const data = await response.json();
+        servicesData = (data.services || []).map((s) => ({ type: 'service', ...s }));
+      } catch (fallbackError) {
+        console.warn('Could not load any search data:', fallbackError.message);
+        servicesData = getFallbackServices();
+      }
     }
+
+    searchIndex = buildSearchIndex(servicesData);
+    isDataLoaded = true;
+    return servicesData;
   }
 
+  /** Last resort when neither JSON file can be fetched (offline, first visit). */
   function getFallbackServices() {
     return [
       {
+        type: 'service',
         id: 'ccro-on-time-birth',
         title: 'On-Time Registration of Certificate of Live Birth',
         category: 'Certificates & Vital Records',
+        categoryId: 'certificates',
         keywords: ['birth', 'birth certificate', 'certificate of live birth', 'colb'],
         office: "City Civil Registrar's Office",
         fee: 'Free (Marital) / ₱300.00 (Non-Marital)',
@@ -228,12 +306,14 @@
 
   // ==================== ENHANCED SEARCH ====================
 
-  function searchServices(query, services, options = {}) {
-    if (!query || query.length < 2) return [];
+  const EMPTY_RESULTS = { services: [], pages: [], weak: [], total: 0 };
 
-    const { category = null, limit = 10 } = options;
+  function searchServices(query, services, options = {}) {
+    if (!query || query.length < 2) return EMPTY_RESULTS;
+
+    const { category = null, limit = SERVICE_RESULT_LIMIT } = options;
     const searchTerms = tokenize(query);
-    if (searchTerms.length === 0) return [];
+    if (searchTerms.length === 0) return EMPTY_RESULTS;
 
     const candidateIndices = new Set();
 
@@ -259,91 +339,197 @@
     }
 
     // Score candidates
-    const results = [];
+    const confident = [];
+    const weak = [];
+
     candidateIndices.forEach((idx) => {
       const service = services[idx];
       if (!service) return;
 
-      // Category filter
-      if (
-        category &&
-        service.categoryId !== category &&
-        !service.category.toLowerCase().includes(category.toLowerCase())
-      ) {
-        return;
+      // Category filter applies to services only; pages carry no category.
+      if (category) {
+        if (service.type === 'page') return;
+        const label = (service.category || '').toLowerCase();
+        if (service.categoryId !== category && !label.includes(category.toLowerCase())) return;
       }
 
-      const score = calculateScore(service, searchTerms, query);
-      if (score > 0) {
-        results.push({ ...service, score, _query: query });
-      }
+      const { score, confident: isConfident } = calculateScore(service, searchTerms, query);
+      if (score <= 0) return;
+
+      const entry = { ...service, score, _query: query };
+      (isConfident ? confident : weak).push(entry);
     });
 
-    return results.sort((a, b) => b.score - a.score).slice(0, limit);
+    const byScore = (a, b) => b.score - a.score;
+    confident.sort(byScore);
+    weak.sort(byScore);
+
+    // Services lead: someone searching a city site usually wants a transaction
+    // they can complete, not the landing page that describes it.
+    const services_ = confident.filter((r) => r.type !== 'page').slice(0, limit);
+    const pages = confident.filter((r) => r.type === 'page').slice(0, PAGE_RESULT_LIMIT);
+
+    return {
+      services: services_,
+      pages,
+      // Shown under "Not exactly what you're looking for?" only — never mixed
+      // into the confident list, so a loose match can no longer pose as an answer.
+      // The floor keeps out matches so faint they are just noise: "jeepney fare"
+      // should not offer financial-assistance services because "fare" is inside
+      // "welfare".
+      weak: weak.filter((r) => r.score >= WEAK_SCORE_FLOOR).slice(0, WEAK_RESULT_LIMIT),
+      total: services_.length + pages.length,
+    };
   }
 
+  /**
+   * Scores a candidate and decides whether the match is strong enough to present
+   * as an answer.
+   *
+   * A match is "confident" only when the query lines up with something the entry
+   * actually is: its title, one of its curated aliases, its category or its
+   * office. Everything else — Levenshtein near-misses, a term buried mid-way
+   * through a longer alias — scores, but is quarantined into the weak list.
+   *
+   * This is what stopped "health" from returning the death certificate: that
+   * entry matched only because it carried "city health office" as a keyword.
+   */
   function calculateScore(service, searchTerms, originalQuery) {
     let score = 0;
+    let confident = false;
+    // How many of the query's terms this entry matched at all. An entry that
+    // answers half the query is much less relevant than one that answers all of
+    // it, which is what separates "Registering a birth within 30 days" from
+    // "Getting a certificate of occupancy" for the query "brith certificate".
+    let matchedTerms = 0;
+
     const titleLower = service.title.toLowerCase();
-    const categoryLower = service.category.toLowerCase();
+    const categoryLower = (service.category || '').toLowerCase();
     const descLower = (service.description || '').toLowerCase();
     const officeLower = (service.office || '').toLowerCase();
     const processingTime = (service.processingTime || '').toLowerCase();
     const keywords = service.keywords || [];
-    const queryLower = originalQuery.toLowerCase();
+    const queryLower = originalQuery.toLowerCase().trim();
 
-    // Exact full query match in title (highest priority)
-    if (titleLower === queryLower) score += 200;
-    else if (titleLower.includes(queryLower)) score += 100;
+    /** True when `term` appears in `text` as a whole word, not inside another. */
+    const hasWord = (text, term) =>
+      new RegExp(`(^|[^a-z0-9])${escapeRegex(term)}([^a-z0-9]|$)`, 'i').test(text);
+
+    // Whole-query match on the title is as strong a signal as there is.
+    if (titleLower === queryLower) {
+      score += 200;
+      confident = true;
+    } else if (titleLower.includes(queryLower)) {
+      score += 100;
+      confident = true;
+    }
 
     searchTerms.forEach((term) => {
-      // Title scoring
-      if (titleLower === term) score += 80;
-      else if (titleLower.startsWith(term)) score += 60;
-      else if (titleLower.includes(term)) score += 40;
-      else if (isFuzzyMatch(term, titleLower, 0.25)) score += 20;
+      const before = score;
 
-      // Keyword scoring
+      // Title
+      if (titleLower === term) {
+        score += 80;
+        confident = true;
+      } else if (titleLower.startsWith(term)) {
+        score += 60;
+        confident = true;
+      } else if (hasWord(titleLower, term)) {
+        score += 40;
+        confident = true;
+      } else if (titleLower.includes(term)) {
+        score += 12; // inside a longer word — weak on its own
+      } else if (fuzzyWordMatch(term, titleLower)) {
+        // A typo against a title word: real enough to suggest, never to assert.
+        score += 16;
+      }
+
+      // Curated aliases. An alias the query matches whole, or whose leading
+      // word it matches, names the thing. A term buried mid-alias does not.
       keywords.forEach((keyword) => {
         const kw = keyword.toLowerCase();
-        if (kw === term) score += 35;
-        else if (kw.includes(term)) score += 20;
-        else if (isFuzzyMatch(term, kw, 0.3)) score += 10;
+        if (kw === term || kw === queryLower) {
+          score += 45;
+          confident = true;
+        } else if (kw.startsWith(term)) {
+          score += 25;
+          confident = true;
+        } else if (hasWord(kw, term)) {
+          score += 10;
+        } else if (kw.includes(term)) {
+          score += 4;
+        } else if (fuzzyWordMatch(term, kw)) {
+          score += 9;
+        }
       });
 
-      // Category scoring
-      if (categoryLower.includes(term)) score += 15;
-      else if (isFuzzyMatch(term, categoryLower, 0.3)) score += 8;
+      // Category and office name the area of city business the entry sits in.
+      if (categoryLower && hasWord(categoryLower, term)) {
+        score += 18;
+        confident = true;
+      } else if (categoryLower.includes(term)) {
+        score += 6;
+      }
 
-      // Description scoring
-      if (descLower.includes(term)) score += 10;
+      if (officeLower && hasWord(officeLower, term)) {
+        score += 14;
+        confident = true;
+      } else if (officeLower.includes(term)) {
+        score += 5;
+      }
 
-      // Office scoring
-      if (officeLower.includes(term)) score += 12;
-      else if (isFuzzyMatch(term, officeLower, 0.3)) score += 6;
+      if (descLower.includes(term)) score += 8;
+      if (processingTime.includes(term)) score += 4;
 
-      // Processing time scoring (for queries like "same day", "fast")
-      if (processingTime.includes(term)) score += 8;
+      if (score > before) matchedTerms += 1;
     });
 
-    // Boost for services with more complete data
+    if (searchTerms.length > 1) {
+      score *= 0.4 + 0.6 * (matchedTerms / searchTerms.length);
+    }
+
+    // Prefer entries a resident can act on: a known fee and processing time
+    // mean the page answers "what will this cost me and how long will it take".
     if (service.fee) score += 2;
     if (service.processingTime) score += 2;
     if (service.description) score += 1;
 
-    return score;
+    // Unverified charter entries still rank, just never above a checked one
+    // that scored the same.
+    if (service.draft) score -= 1;
+
+    /**
+     * Length normalisation. A long title collects incidental word matches: for
+     * "birth certificate", "Certification of the location named on a birth or
+     * marriage certificate" contains both words and used to outrank
+     * "Registering a birth within 30 days", which is the service people mean.
+     * Discounting by title length is the standard correction, and it favours
+     * the short central title a short query is usually reaching for.
+     */
+    const titleWords = titleLower.split(/\s+/).filter(Boolean).length;
+    score = score / (1 + 0.06 * Math.max(0, titleWords - 5));
+
+    return { score, confident };
   }
 
   // ==================== CATEGORY FILTER ====================
 
+  /**
+   * Chips cover services only — pages are not transactions, so filtering them
+   * by service category would be meaningless. Ordered by how many services sit
+   * in each category so the busiest filters come first.
+   */
   function getCategories(services) {
-    const categories = new Map();
+    const counts = new Map();
     services.forEach((service) => {
-      if (service.categoryId && service.category) {
-        categories.set(service.categoryId, service.category);
-      }
+      if (service.type === 'page') return;
+      if (!service.categoryId) return;
+      counts.set(service.categoryId, (counts.get(service.categoryId) || 0) + 1);
     });
-    return Array.from(categories.entries()).map(([id, name]) => ({ id, name }));
+
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([id]) => ({ id, name: CATEGORY_CHIP_LABELS[id] || id }));
   }
 
   // ==================== RECENT SEARCHES ====================
@@ -511,6 +697,10 @@
       selectedCategory = null,
     } = options;
 
+    const services = results.services || [];
+    const pages = results.pages || [];
+    const weak = results.weak || [];
+
     let html = '';
 
     // Category filter (if categories provided)
@@ -519,10 +709,10 @@
                 <div class="search-filters">
                     <button class="search-filter-btn ${!selectedCategory ? 'active' : ''}" data-category="">All</button>
                     ${categories
-                      .slice(0, 5)
+                      .slice(0, 8)
                       .map(
                         (cat) => `
-                        <button class="search-filter-btn ${selectedCategory === cat.id ? 'active' : ''}" data-category="${cat.id}">${cat.name.split(' ')[0].replace(/,$/, '')}</button>
+                        <button class="search-filter-btn ${selectedCategory === cat.id ? 'active' : ''}" data-category="${escapeHtml(cat.id)}">${escapeHtml(cat.name)}</button>
                     `
                       )
                       .join('')}
@@ -574,8 +764,10 @@
       return;
     }
 
-    // Show autocomplete suggestions
-    if (suggestions.suggestions?.length && results.length === 0) {
+    // Show autocomplete term suggestions only when nothing at all matched.
+    // `results` is an object now, so the old `results.length === 0` was always
+    // false-y-undefined and this block rendered alongside good results.
+    if (suggestions.suggestions?.length && !services.length && !pages.length) {
       html += `
                 <div class="search-section">
                     <div class="search-section-header">
@@ -595,12 +787,12 @@
             `;
     }
 
-    // No results
-    if (results.length === 0) {
+    // No results at all
+    if (!services.length && !pages.length && !weak.length) {
       html += `
                 <div class="search-no-results">
                     <i class="bi bi-search"></i>
-                    <p>No services found</p>
+                    <p>Nothing found</p>
                     <small>Try different keywords or check spelling</small>
                 </div>
             `;
@@ -609,37 +801,50 @@
       return;
     }
 
-    // Render results
-    html += results
-      .map((result, index) => {
-        let url = result.url || '#';
-        if (!url.startsWith('http') && !url.startsWith('/')) {
-          const basePath = getBasePath();
-          url = basePath + url.replace(/^\.\.\//, '');
-        }
+    // `index` runs across every rendered result so arrow-key navigation and the
+    // selected-item lookup stay in step with the flattened order.
+    let index = 0;
+    const renderService = (result) => renderResultItem(result, index++, 'service');
+    const renderPage = (result) => renderResultItem(result, index++, 'page');
 
-        return `
-                <a href="${url}" class="search-result-item" role="option" data-index="${index}">
-                    <div class="search-result-title">
-                        ${highlightMatch(result.title, result._query || '')}
-                        ${result.processingTime && result.processingTime.toLowerCase().includes('same day') ? '<span class="search-result-badge">Fast</span>' : ''}
+    if (services.length) {
+      html += `
+                <div class="search-section search-section--results">
+                    <div class="search-section-header">
+                        <span><i class="bi bi-file-earmark-text"></i> Services</span>
                     </div>
-                    <div class="search-result-meta">
-                        <span class="search-result-category"><i class="bi bi-folder"></i> ${escapeHtml(result.category)}</span>
-                        ${result.fee ? `<span class="search-result-fee"><i class="bi bi-cash"></i> ${escapeHtml(result.fee)}</span>` : ''}
-                        ${result.processingTime ? `<span class="search-result-time"><i class="bi bi-clock"></i> ${escapeHtml(result.processingTime)}</span>` : ''}
-                    </div>
-                    ${result.office ? `<div class="search-result-office"><i class="bi bi-building"></i> ${escapeHtml(result.office)}</div>` : ''}
-                    ${result.description ? `<div class="search-result-desc">${escapeHtml(result.description)}</div>` : ''}
-                </a>
+                    ${services.map(renderService).join('')}
+                </div>
             `;
-      })
-      .join('');
+    }
 
-    // Add footer with result count and keyboard hints
+    if (pages.length) {
+      html += `
+                <div class="search-section search-section--results">
+                    <div class="search-section-header">
+                        <span><i class="bi bi-signpost-2"></i> Pages</span>
+                    </div>
+                    ${pages.map(renderPage).join('')}
+                </div>
+            `;
+    }
+
+    // Loose matches, kept out of the answers above.
+    if (weak.length && services.length + pages.length < WEAK_THRESHOLD) {
+      html += `
+                <div class="search-section search-section--weak">
+                    <div class="search-section-header">
+                        <span><i class="bi bi-question-circle"></i> Not exactly what you're looking for?</span>
+                    </div>
+                    ${weak.map((result) => renderResultItem(result, index++, 'weak')).join('')}
+                </div>
+            `;
+    }
+
+    const shown = services.length + pages.length;
     html += `
             <div class="search-footer">
-                <span class="search-footer-count">${results.length} service${results.length !== 1 ? 's' : ''} found</span>
+                <span class="search-footer-count">${shown} result${shown !== 1 ? 's' : ''}</span>
                 <span class="search-keyboard-hint">
                     <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
                     <span><kbd>Enter</kbd> Select</span>
@@ -650,6 +855,51 @@
 
     dropdown.innerHTML = html;
     dropdown.style.display = 'block';
+  }
+
+  /** One result row. `kind` is 'service', 'page' or 'weak'. */
+  function renderResultItem(result, index, kind) {
+    let url = result.url || '#';
+    if (!url.startsWith('http') && !url.startsWith('/')) {
+      url = getBasePath() + url.replace(/^\.\.\//, '');
+    }
+
+    const isPage = kind === 'page';
+    const meta = [];
+
+    if (result.category) {
+      meta.push(
+        `<span class="search-result-category"><i class="bi bi-folder"></i> ${escapeHtml(result.category)}</span>`
+      );
+    }
+    if (result.fee) {
+      meta.push(
+        `<span class="search-result-fee"><i class="bi bi-cash"></i> ${escapeHtml(result.fee)}</span>`
+      );
+    }
+    if (result.processingTime) {
+      meta.push(
+        `<span class="search-result-time"><i class="bi bi-clock"></i> ${escapeHtml(result.processingTime)}</span>`
+      );
+    }
+
+    // Every charter entry is currently unverified against the published PDF.
+    // Saying so is the difference between a citation and a rumour.
+    const draftBadge = result.draft
+      ? '<span class="search-result-draft" title="Not yet checked against the published Citizen\'s Charter">Unverified</span>'
+      : '';
+
+    return `
+            <a href="${url}" class="search-result-item ${kind === 'weak' ? 'is-weak' : ''}" role="option" data-index="${index}">
+                <div class="search-result-title">
+                    ${isPage ? '<i class="bi bi-arrow-right-short"></i> ' : ''}${highlightMatch(result.title, result._query || '')}
+                    ${draftBadge}
+                </div>
+                ${meta.length ? `<div class="search-result-meta">${meta.join('')}</div>` : ''}
+                ${!isPage && result.office ? `<div class="search-result-office"><i class="bi bi-building"></i> ${escapeHtml(result.office)}</div>` : ''}
+                ${result.description ? `<div class="search-result-desc">${escapeHtml(result.description)}</div>` : ''}
+            </a>
+        `;
   }
 
   function highlightMatch(text, query) {
@@ -693,7 +943,7 @@
       const query = this.value.trim();
       if (query.length < 2) {
         const suggestions = getSuggestions('', services);
-        renderResults([], dropdown, { showSuggestions: true, suggestions, categories });
+        renderResults(EMPTY_RESULTS, dropdown, { showSuggestions: true, suggestions, categories });
       } else {
         performSearch(query);
       }
@@ -706,7 +956,7 @@
 
       if (query.length < 2) {
         const suggestions = getSuggestions(query, services);
-        renderResults([], dropdown, { showSuggestions: true, suggestions, categories });
+        renderResults(EMPTY_RESULTS, dropdown, { showSuggestions: true, suggestions, categories });
         selectedIndex = -1;
         return;
       }
@@ -716,7 +966,11 @@
 
     function performSearch(query) {
       const results = searchServices(query, services, { category: currentCategory });
-      currentResults = results;
+
+      // Flattened in the order rendered, so keyboard navigation and Enter act on
+      // the row the user is actually looking at.
+      currentResults = [...results.services, ...results.pages];
+
       const suggestions = getSuggestions(query, services);
 
       renderResults(results, dropdown, {
@@ -725,8 +979,7 @@
         selectedCategory: currentCategory,
       });
 
-      // Track search
-      trackSearch(query, results.length);
+      trackSearch(query, results.total);
       selectedIndex = -1;
     }
 
@@ -807,7 +1060,7 @@
         e.preventDefault();
         clearRecentSearches();
         const suggestions = getSuggestions('', services);
-        renderResults([], dropdown, { showSuggestions: true, suggestions, categories });
+        renderResults(EMPTY_RESULTS, dropdown, { showSuggestions: true, suggestions, categories });
         return;
       }
 
@@ -1085,6 +1338,40 @@
                 letter-spacing: 0.3px;
             }
             
+            /* Charter entries not yet checked against the published PDF. Muted
+               rather than alarming: the information is usable, just unconfirmed. */
+            .search-result-draft {
+                font-size: 0.625rem;
+                font-weight: 600;
+                padding: 2px 6px;
+                border-radius: 4px;
+                background: rgba(180, 130, 20, 0.12);
+                color: #8a6410;
+                text-transform: uppercase;
+                letter-spacing: 0.3px;
+                white-space: nowrap;
+            }
+
+            [data-theme="dark"] .search-result-draft {
+                background: rgba(240, 190, 90, 0.16);
+                color: #e0b563;
+            }
+
+            /* Loose matches, shown only when there are few confident answers. */
+            .search-section--weak {
+                border-top: 1px solid var(--search-border, #e5e7eb);
+                background: rgba(0, 0, 0, 0.015);
+            }
+
+            [data-theme="dark"] .search-section--weak {
+                background: rgba(255, 255, 255, 0.02);
+            }
+
+            .search-result-item.is-weak .search-result-title {
+                font-weight: 500;
+                opacity: 0.85;
+            }
+
             .search-result-meta {
                 display: flex;
                 flex-wrap: wrap;

@@ -5,3 +5,8 @@ package-lock.json
 *.min.css
 react-app/.next
 react-app/node_modules
+
+# Generated data indexes (scripts/data/build-*-index.js own their formatting;
+# reformatting them makes each generator report its output as stale)
+data/service-index.json
+data/search-index.json

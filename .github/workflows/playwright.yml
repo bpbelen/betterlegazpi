@@ -33,6 +33,7 @@ jobs:
         run: >
           npx playwright test
           tests/site-responsive.spec.js
+          tests/site-search.spec.js
           tests/volunteer-modal.a11y.spec.js
           tests/volunteer-modal.behavior.spec.js
           tests/volunteer-modal.responsive.spec.js
