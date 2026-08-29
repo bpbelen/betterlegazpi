@@ -362,3 +362,36 @@ Contact Section */
 [data-theme='dark'] .legal-highlight span {
   color: var(--color-text);
 }
+
+/* ------------------------------------------------------------------
+   Links inside running text
+
+   axe reported link-in-text-block on privacy/index.html in all four
+   theme and viewport combinations: links inside .legal-callout were
+   set apart from the surrounding sentence by colour alone, which fails
+   WCAG 1.4.1 unless the colour difference against the body text is at
+   least 3:1. Underlining them removes the dependence on colour entirely.
+
+   Scoped to prose containers on purpose: the table of contents and the
+   contact block are lists of links, not links inside a sentence, and
+   underlining those would only add noise.
+   ------------------------------------------------------------------ */
+
+.legal-section p a,
+.legal-section li a,
+.legal-callout a,
+.legal-note a,
+.legal-highlight a,
+.legal-closing a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.legal-section p a:hover,
+.legal-section li a:hover,
+.legal-callout a:hover,
+.legal-note a:hover,
+.legal-highlight a:hover,
+.legal-closing a:hover {
+  text-decoration-thickness: 2px;
+}

@@ -66,7 +66,7 @@
     'tricycle franchise',
     'property declaration',
     'online payment',
-    'mswdo',
+    'cswdo',
     'slaughterhouse',
   ];
 

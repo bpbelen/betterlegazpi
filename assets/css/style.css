@@ -7969,9 +7969,13 @@ cklist with Icons - Proper Indentation */
   gap: 8px;
 }
 
+/* Tokens rather than literals: `background: white` with no dark-theme override
+   left light summary text sitting on a white card in dark mode, which axe
+   reported as color-contrast on all 16 accordions. In light mode the token
+   values match what was here before. */
 .faq-accordion {
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -8007,7 +8011,7 @@ cklist with Icons - Proper Indentation */
 }
 
 .faq-accordion[open] summary {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .faq-answer {
@@ -8066,14 +8070,20 @@ cklist with Icons - Proper Indentation */
   font-size: 0.9375rem;
 }
 
+/* This button sits on a fixed white fill on top of the gradient band, so its
+   text and hover fill must not follow the theme. --color-primary lightens to
+   #6f9dff in dark mode, which is 2.64:1 on white; --color-primary-solid is the
+   token that stays dark in both themes. --color-bg-alt had the same problem on
+   hover, turning the fill near-black under dark-blue text. */
 .faq-cta .btn {
-  background: white;
-  color: var(--color-primary);
+  background: #ffffff;
+  color: var(--color-primary-solid);
   flex-shrink: 0;
 }
 
 .faq-cta .btn:hover {
-  background: var(--color-bg-alt);
+  background: #f1f5f9;
+  color: var(--color-primary-solid);
 }
 
 /* ============================================

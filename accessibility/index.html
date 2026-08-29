@@ -246,7 +246,7 @@
                 <i class="bi bi-check-circle-fill"></i>
                 <div>
                   <span class="a11y-badge-label">WCAG 2.1 Level AA</span>
-                  <span class="a11y-badge-text">Conformant</span>
+                  <span class="a11y-badge-text">Partially conformant</span>
                 </div>
               </div>
             </div>
@@ -256,8 +256,11 @@
               <h2>Our Commitment</h2>
               <p>
                 BetterLegazpi is committed to ensuring digital accessibility for people with
-                disabilities. We are continually improving the user experience for everyone and
-                applying the relevant accessibility standards.
+                disabilities. We aim for WCAG 2.1 Level AA across the whole site and test every page
+                against it automatically, in both themes and at phone and desktop widths. We
+                describe the site as partially conformant rather than conformant, because a few
+                pages still fail that standard. They are listed under Known Limitations below, and
+                naming them is how we hold ourselves to fixing them.
               </p>
             </div>
 
@@ -283,7 +286,9 @@
                 <div class="a11y-feature">
                   <i class="bi bi-palette"></i>
                   <h3>Color Contrast</h3>
-                  <p>Meets WCAG AA contrast requirements.</p>
+                  <p>
+                    Text meets WCAG AA contrast on all but the pages named under Known Limitations.
+                  </p>
                 </div>
                 <div class="a11y-feature">
                   <i class="bi bi-phone"></i>
@@ -301,16 +306,53 @@
             <!-- Known Limitations -->
             <div class="a11y-section">
               <h2>Known Limitations</h2>
+              <p>
+                We test every page of this site automatically against WCAG 2.1 Level A and AA, in
+                both light and dark themes and at both phone and desktop widths. These are the pages
+                that do not pass yet, as of August 29, 2026:
+              </p>
               <ul class="a11y-list">
                 <li>
                   <i class="bi bi-exclamation-circle"></i>
-                  <span>Some PDF documents may not be fully accessible to screen readers</span>
+                  <span>
+                    <strong>Government and City Officials pages:</strong>
+                    some text does not have enough contrast against its background, in both themes.
+                  </span>
                 </li>
                 <li>
                   <i class="bi bi-exclamation-circle"></i>
-                  <span>Some third-party embedded content may have accessibility issues</span>
+                  <span>
+                    <strong>News page:</strong>
+                    some text does not have enough contrast in dark theme. The light theme passes.
+                  </span>
+                </li>
+                <li>
+                  <i class="bi bi-exclamation-circle"></i>
+                  <span>
+                    <strong>Offline page</strong>
+                    (shown when you have no connection): the same dark theme contrast problem.
+                  </span>
+                </li>
+                <li>
+                  <i class="bi bi-exclamation-circle"></i>
+                  <span>
+                    Documents we link to that are published by other offices, mainly PDFs, are
+                    outside our control and are often not readable by screen readers.
+                  </span>
+                </li>
+                <li>
+                  <i class="bi bi-exclamation-circle"></i>
+                  <span>
+                    Content embedded from other sites, such as posts from the city's Facebook page,
+                    follows that site's accessibility, not ours.
+                  </span>
                 </li>
               </ul>
+              <p>
+                Everything else we test passes. If you find a problem that is not listed here,
+                please tell us using the contact details below: an unlisted problem is one we do not
+                know about.
+              </p>
             </div>
 
             <!-- Alternative Access -->
@@ -350,7 +392,7 @@
               </div>
             </div>
 
-            <p class="a11y-date">Last updated: November 29, 2025</p>
+            <p class="a11y-date">Last updated: August 29, 2026</p>
           </div>
         </div>
       </section>
