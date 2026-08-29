@@ -100,6 +100,26 @@
     "gov_map_open_link": "Open in Google Maps",
     "gov_barangay_badge": "Barangay Units",
     "gov_barangay_title": "Barangays of Legazpi",
-    "gov_barangay_lead": "Directory of all 70 Barangays in Legazpi City with Punong Barangays and SK Chairpersons (Term 2023-2026)"
+    "gov_barangay_lead": "Directory of all 70 Barangays in Legazpi City with Punong Barangays and SK Chairpersons (Term 2023-2026)",
+    "officials_title": "Elected Officials",
+    "officials_tagline": "Meet the elected executive and legislative leaders serving the City of Legazpi, Albay",
+    "transparency_badge": "Financial Transparency",
+    "transparency_title": "Budget & Financial Transparency",
+    "transparency_tagline": "Tracking municipal finances and projects for accountability",
+    "transparency_sre_title": "Statement of Receipts & Expenditures",
+    "transparency_flood_title": "The Flood Control Watch",
+    "transparency_dpwh_title": "DPWH Infrastructure Projects in Legazpi City",
+    "stats_badge": "City Data",
+    "stats_title": "City Statistics",
+    "stats_tagline": "Data and statistics about Legazpi City, Albay",
+    "stats_income_title": "City Income",
+    "stats_pop_trends_title": "Population Trends",
+    "stats_pop_barangay_title": "Population by Barangay",
+    "stats_poverty_title": "Poverty Statistics",
+    "stats_cmci_title": "Legazpi Competitive Index",
+    "news_badge": "News",
+    "news_title": "News & Updates",
+    "news_tagline": "Stay informed about the latest happenings in Legazpi City",
+    "news_facebook_title": "From our Facebook Page"
   }
 }
