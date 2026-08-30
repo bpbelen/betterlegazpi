@@ -92,6 +92,9 @@
     });
 
     let searchQuery = '';
+    // True while the previous keystroke still had a query, so clearing the box
+    // collapses the groups that the search auto-expanded.
+    let wasSearching = false;
 
     function filterItems() {
       let totalVisible = 0;
@@ -124,11 +127,15 @@
 
         if (groupVisibleCount > 0) {
           group.style.display = 'block';
-          // Auto-expand group if there is an active search query
+          // Auto-expand while searching so matches are visible without a click,
+          // then collapse back to the category-only default once the box clears.
+          const headerBtn = group.querySelector('.yakap-cat-header');
           if (searchQuery) {
             group.classList.add('active');
-            const headerBtn = group.querySelector('.yakap-cat-header');
             if (headerBtn) headerBtn.setAttribute('aria-expanded', 'true');
+          } else if (wasSearching) {
+            group.classList.remove('active');
+            if (headerBtn) headerBtn.setAttribute('aria-expanded', 'false');
           }
         } else {
           group.style.display = 'none';
@@ -138,6 +145,8 @@
       if (emptyState) {
         emptyState.style.display = totalVisible === 0 ? 'block' : 'none';
       }
+
+      wasSearching = Boolean(searchQuery);
     }
 
     if (searchInput) {
@@ -154,25 +163,79 @@
   function initFacilitiesFilter() {
     const facPills = document.querySelectorAll('.yakap-fac-filter-pill');
     const facCards = document.querySelectorAll('.yakap-fac-card');
+    const toggleBtn = document.getElementById('yakap-fac-toggle');
+    const toggleText = toggleBtn && toggleBtn.querySelector('.yakap-fac-toggle-text');
 
     if (!facPills.length || !facCards.length) return;
+
+    // Only this many cards are shown until the visitor asks for the rest.
+    const COLLAPSED_COUNT = 3;
+
+    let currentFilter = 'all';
+    let expanded = false;
+
+    function render() {
+      const matching = [];
+
+      facCards.forEach((card) => {
+        const type = card.getAttribute('data-fac-type') || '';
+        if (currentFilter === 'all' || type === currentFilter) {
+          matching.push(card);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      matching.forEach((card, index) => {
+        card.style.display = expanded || index < COLLAPSED_COUNT ? 'flex' : 'none';
+      });
+
+      if (!toggleBtn) return;
+
+      const hidden = matching.length - COLLAPSED_COUNT;
+      if (hidden <= 0) {
+        toggleBtn.hidden = true;
+        return;
+      }
+
+      toggleBtn.hidden = false;
+      toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      if (toggleText) {
+        toggleText.textContent = expanded
+          ? 'Show fewer facilities'
+          : `Show all ${matching.length} facilities`;
+      }
+    }
 
     facPills.forEach((pill) => {
       pill.addEventListener('click', () => {
         facPills.forEach((p) => p.classList.remove('active'));
         pill.classList.add('active');
-        const filter = pill.getAttribute('data-fac-filter') || 'all';
-
-        facCards.forEach((card) => {
-          const type = card.getAttribute('data-fac-type') || '';
-          if (filter === 'all' || type === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+        currentFilter = pill.getAttribute('data-fac-filter') || 'all';
+        // Switching category starts collapsed again so the list never jumps.
+        expanded = false;
+        render();
       });
     });
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        expanded = !expanded;
+        render();
+        // Collapsing can leave the viewport below the list; pull it back up.
+        if (!expanded) {
+          const section = document.getElementById('facilities');
+          if (section) {
+            section.scrollIntoView({
+              behavior: prefersReducedMotion() ? 'auto' : 'smooth',
+              block: 'start',
+            });
+          }
+        }
+      });
+    }
+
+    render();
   }
 
   /* --------------------------------------------------------------------------
