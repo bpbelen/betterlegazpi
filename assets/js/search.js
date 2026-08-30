@@ -9,11 +9,8 @@
   let isDataLoaded = false;
   let searchIndex = null;
 
-  // Search analytics storage
-  const ANALYTICS_KEY = 'betterlegazpi_search_analytics';
   const RECENT_SEARCHES_KEY = 'betterlegazpi_recent_searches';
   const MAX_RECENT_SEARCHES = 10;
-  const MAX_ANALYTICS_ENTRIES = 100;
 
   // How many of each kind the dropdown shows at once.
   const SERVICE_RESULT_LIMIT = 8;
@@ -30,28 +27,9 @@
    */
   const WEAK_THRESHOLD = 3;
 
-  /**
-   * Short labels for the category chips. The chips used to be built by taking
-   * the first word of each category name, which produced "Certificates",
-   * "Business", "Tax" — ambiguous once more categories exist. Keyed by the
-   * categoryId used across data/service-categories.json and the hubs.
-   */
-  const CATEGORY_CHIP_LABELS = {
-    agriculture: 'Agriculture',
-    business: 'Business',
-    certificates: 'Certificates',
-    education: 'Education',
-    employment: 'Jobs',
-    environment: 'Environment',
-    health: 'Health',
-    housing: 'Housing',
-    infrastructure: 'Building',
-    'social-services': 'Social',
-    'tax-payments': 'Tax',
-    utilities: 'Utilities',
-  };
-
-  // Popular searches (curated + dynamic)
+  // Suggested searches shown when the box is empty. Curated by hand, not
+  // measured — the site has no backend to aggregate what visitors actually
+  // search for, so this makes no claim about sitewide popularity.
   const CURATED_POPULAR = [
     'birth certificate',
     'business permit',
@@ -311,7 +289,7 @@
   function searchServices(query, services, options = {}) {
     if (!query || query.length < 2) return EMPTY_RESULTS;
 
-    const { category = null, limit = SERVICE_RESULT_LIMIT } = options;
+    const { limit = SERVICE_RESULT_LIMIT } = options;
     const searchTerms = tokenize(query);
     if (searchTerms.length === 0) return EMPTY_RESULTS;
 
@@ -345,13 +323,6 @@
     candidateIndices.forEach((idx) => {
       const service = services[idx];
       if (!service) return;
-
-      // Category filter applies to services only; pages carry no category.
-      if (category) {
-        if (service.type === 'page') return;
-        const label = (service.category || '').toLowerCase();
-        if (service.categoryId !== category && !label.includes(category.toLowerCase())) return;
-      }
 
       const { score, confident: isConfident } = calculateScore(service, searchTerms, query);
       if (score <= 0) return;
@@ -512,26 +483,6 @@
     return { score, confident };
   }
 
-  // ==================== CATEGORY FILTER ====================
-
-  /**
-   * Chips cover services only — pages are not transactions, so filtering them
-   * by service category would be meaningless. Ordered by how many services sit
-   * in each category so the busiest filters come first.
-   */
-  function getCategories(services) {
-    const counts = new Map();
-    services.forEach((service) => {
-      if (service.type === 'page') return;
-      if (!service.categoryId) return;
-      counts.set(service.categoryId, (counts.get(service.categoryId) || 0) + 1);
-    });
-
-    return Array.from(counts.entries())
-      .sort((a, b) => b[1] - a[1])
-      .map(([id]) => ({ id, name: CATEGORY_CHIP_LABELS[id] || id }));
-  }
-
   // ==================== RECENT SEARCHES ====================
 
   function getRecentSearches() {
@@ -568,61 +519,8 @@
     }
   }
 
-  // ==================== SEARCH ANALYTICS ====================
-
-  function trackSearch(query, resultsCount) {
-    try {
-      let analytics = getSearchAnalytics();
-      const existing = analytics.find((a) => a.query.toLowerCase() === query.toLowerCase());
-
-      if (existing) {
-        existing.count++;
-        existing.lastSearched = Date.now();
-      } else {
-        analytics.push({
-          query: query,
-          count: 1,
-          resultsCount: resultsCount,
-          lastSearched: Date.now(),
-        });
-      }
-
-      // Sort by count and limit
-      analytics.sort((a, b) => b.count - a.count);
-      analytics = analytics.slice(0, MAX_ANALYTICS_ENTRIES);
-
-      localStorage.setItem(ANALYTICS_KEY, JSON.stringify(analytics));
-    } catch {
-      // localStorage not available
-    }
-  }
-
-  function getSearchAnalytics() {
-    try {
-      const stored = localStorage.getItem(ANALYTICS_KEY);
-      return stored ? JSON.parse(stored) : [];
-    } catch {
-      return [];
-    }
-  }
-
   function getPopularSearches(limit = 5) {
-    const analytics = getSearchAnalytics();
-    const popular = analytics
-      .filter((a) => a.count >= 2)
-      .slice(0, limit)
-      .map((a) => a.query);
-
-    // Fill with curated if not enough
-    if (popular.length < limit) {
-      CURATED_POPULAR.forEach((term) => {
-        if (popular.length < limit && !popular.includes(term)) {
-          popular.push(term);
-        }
-      });
-    }
-
-    return popular;
+    return CURATED_POPULAR.slice(0, limit);
   }
 
   // ==================== SEARCH SUGGESTIONS ====================
@@ -690,35 +588,13 @@
   }
 
   function renderResults(results, dropdown, options = {}) {
-    const {
-      showSuggestions = false,
-      suggestions = {},
-      categories = [],
-      selectedCategory = null,
-    } = options;
+    const { showSuggestions = false, suggestions = {} } = options;
 
     const services = results.services || [];
     const pages = results.pages || [];
     const weak = results.weak || [];
 
     let html = '';
-
-    // Category filter (if categories provided)
-    if (categories.length > 0) {
-      html += `
-                <div class="search-filters">
-                    <button class="search-filter-btn ${!selectedCategory ? 'active' : ''}" data-category="">All</button>
-                    ${categories
-                      .slice(0, 8)
-                      .map(
-                        (cat) => `
-                        <button class="search-filter-btn ${selectedCategory === cat.id ? 'active' : ''}" data-category="${escapeHtml(cat.id)}">${escapeHtml(cat.name)}</button>
-                    `
-                      )
-                      .join('')}
-                </div>
-            `;
-    }
 
     // Show suggestions when no results or empty query
     if (showSuggestions && (suggestions.popular?.length || suggestions.recent?.length)) {
@@ -745,7 +621,7 @@
         html += `
                     <div class="search-section">
                         <div class="search-section-header">
-                            <span><i class="bi bi-fire"></i> Popular Searches</span>
+                            <span><i class="bi bi-stars"></i> Suggested Searches</span>
                         </div>
                         ${suggestions.popular
                           .map(
@@ -931,11 +807,9 @@
   async function initSearch(input) {
     const services = await loadServicesData();
     const dropdown = createAutocomplete(input);
-    const categories = getCategories(services);
 
     let debounceTimer;
     let selectedIndex = -1;
-    let currentCategory = null;
     let currentResults = [];
 
     // Show suggestions on focus with empty input
@@ -943,7 +817,7 @@
       const query = this.value.trim();
       if (query.length < 2) {
         const suggestions = getSuggestions('', services);
-        renderResults(EMPTY_RESULTS, dropdown, { showSuggestions: true, suggestions, categories });
+        renderResults(EMPTY_RESULTS, dropdown, { showSuggestions: true, suggestions });
       } else {
         performSearch(query);
       }
@@ -956,7 +830,7 @@
 
       if (query.length < 2) {
         const suggestions = getSuggestions(query, services);
-        renderResults(EMPTY_RESULTS, dropdown, { showSuggestions: true, suggestions, categories });
+        renderResults(EMPTY_RESULTS, dropdown, { showSuggestions: true, suggestions });
         selectedIndex = -1;
         return;
       }
@@ -965,7 +839,7 @@
     });
 
     function performSearch(query) {
-      const results = searchServices(query, services, { category: currentCategory });
+      const results = searchServices(query, services);
 
       // Flattened in the order rendered, so keyboard navigation and Enter act on
       // the row the user is actually looking at.
@@ -973,13 +847,8 @@
 
       const suggestions = getSuggestions(query, services);
 
-      renderResults(results, dropdown, {
-        suggestions,
-        categories,
-        selectedCategory: currentCategory,
-      });
+      renderResults(results, dropdown, { suggestions });
 
-      trackSearch(query, results.total);
       selectedIndex = -1;
     }
 
@@ -1039,28 +908,13 @@
         return;
       }
 
-      // Handle category filter clicks
-      const filterBtn = e.target.closest('.search-filter-btn');
-      if (filterBtn) {
-        e.preventDefault();
-        currentCategory = filterBtn.dataset.category || null;
-        dropdown
-          .querySelectorAll('.search-filter-btn')
-          .forEach((btn) => btn.classList.remove('active'));
-        filterBtn.classList.add('active');
-        if (input.value.trim().length >= 2) {
-          performSearch(input.value.trim());
-        }
-        return;
-      }
-
       // Handle clear recent
       const clearBtn = e.target.closest('.search-clear-recent');
       if (clearBtn) {
         e.preventDefault();
         clearRecentSearches();
         const suggestions = getSuggestions('', services);
-        renderResults(EMPTY_RESULTS, dropdown, { showSuggestions: true, suggestions, categories });
+        renderResults(EMPTY_RESULTS, dropdown, { showSuggestions: true, suggestions });
         return;
       }
 
@@ -1172,47 +1026,6 @@
             
             @keyframes searchSpin {
                 to { transform: rotate(360deg); }
-            }
-            
-            .search-filters {
-                display: flex;
-                gap: 6px;
-                padding: 12px 14px;
-                border-bottom: 1px solid rgba(0, 50, 160, 0.06);
-                overflow-x: auto;
-                flex-wrap: nowrap;
-                background: linear-gradient(180deg, #fafbfc 0%, #fff 100%);
-                border-radius: 16px 16px 0 0;
-            }
-            
-            .search-filters::-webkit-scrollbar {
-                height: 0;
-            }
-            
-            .search-filter-btn {
-                padding: 6px 14px;
-                border: 1px solid rgba(0, 50, 160, 0.15);
-                border-radius: 20px;
-                background: #fff;
-                font-size: 0.75rem;
-                font-weight: 500;
-                color: #555;
-                cursor: pointer;
-                white-space: nowrap;
-                transition: all 0.2s ease;
-            }
-            
-            .search-filter-btn:hover {
-                border-color: #0032a0;
-                color: #0032a0;
-                background: rgba(0, 50, 160, 0.04);
-            }
-            
-            .search-filter-btn.active {
-                background: linear-gradient(135deg, #0032a0 0%, #0044cc 100%);
-                border-color: #0032a0;
-                color: #fff;
-                box-shadow: 0 2px 8px rgba(0, 50, 160, 0.3);
             }
             
             .search-section {
@@ -1517,17 +1330,6 @@
                     margin-top: 6px;
                 }
                 
-                .search-filters {
-                    padding: 10px 12px;
-                    gap: 5px;
-                    border-radius: 12px 12px 0 0;
-                }
-                
-                .search-filter-btn {
-                    padding: 5px 12px;
-                    font-size: 0.6875rem;
-                }
-                
                 .search-result-meta {
                     gap: 8px;
                 }
@@ -1575,8 +1377,6 @@
       getSuggestions,
       getPopularSearches,
       getRecentSearches,
-      getSearchAnalytics,
-      trackSearch,
     };
   }
 
@@ -1586,8 +1386,6 @@
       getSuggestions,
       getPopularSearches,
       getRecentSearches,
-      getSearchAnalytics,
-      trackSearch,
       clearRecentSearches,
     };
   }
