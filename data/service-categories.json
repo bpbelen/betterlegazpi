@@ -208,6 +208,15 @@
       ]
     },
     {
+      "id": "utilities",
+      "route": "services/utilities.html",
+      "name": "Public Utilities",
+      "icon": "bi-lightning-charge-fill",
+      "tagline": "Electricity and water",
+      "deferred": true,
+      "offices": []
+    },
+    {
       "id": "social-services",
       "route": "services/social-services.html",
       "name": "Social Services",
@@ -249,15 +258,6 @@
           "description": "Tax declarations, property transfers, reassessment, tax mapping, and certified copies of property records."
         }
       ]
-    },
-    {
-      "id": "utilities",
-      "route": "services/utilities.html",
-      "name": "Public Utilities",
-      "icon": "bi-lightning-charge-fill",
-      "tagline": "Electricity and water",
-      "deferred": true,
-      "offices": []
     }
   ]
 }

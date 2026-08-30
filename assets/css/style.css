@@ -316,6 +316,7 @@ p {
   align-items: center;
   gap: var(--spacing-sm);
   padding: 4px 0;
+  flex-shrink: 0;
 }
 
 .logo-container a {
@@ -365,6 +366,7 @@ p {
   -ms-user-select: none;
   user-select: none;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .main-nav a:hover,
