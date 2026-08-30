@@ -82,6 +82,25 @@
     />
 
     <!-- Styles -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://betterlegazpi.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services"
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
@@ -517,6 +536,7 @@
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
               <li><a href="../accessibility/">Accessibility</a></li>
+              <li><a href="../about/">About</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
@@ -633,8 +653,9 @@
           <div class="footer-copyright">
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
-            <span class="footer-copyright-disclaimer"
-              >All public information sourced from official government portals.</span
+            <span class="footer-copyright-disclaimer" data-i18n="footer_disclaimer"
+              >An independent civic tech project. A member of BetterGov.ph. For official records,
+              visit legazpi.gov.ph.</span
             >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.21</span>
           </div>

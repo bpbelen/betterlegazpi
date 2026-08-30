@@ -72,6 +72,124 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://betterlegazpi.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://betterlegazpi.org/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Employment &amp; Livelihood"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "I'm looking for work",
+        "description": "PESO is the front door. Which programme fits depends on whether you're a student, a first-time jobseeker, or between jobs.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Register as a jobseeker",
+            "text": "Job matching and referrals to employers hiring through PESO. Fee: Free. Processing time: 24 minutes.",
+            "url": "https://betterlegazpi.org/service-details/peso-services#peso-jobseekers"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Join JobStart, if you're a first-time jobseeker",
+            "text": "(Only if it applies) Life skills and technical training with a paid internship. If this is your first job, R.A. 11261 also waives the government fee on most of your pre-employment documents - see the First-Time Jobseekers page. Fee: Free. Processing time: 23 minutes.",
+            "url": "https://betterlegazpi.org/service-details/peso-services#peso-jobstart"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Ask about TUPAD, GIP or DILEEP",
+            "text": "(Only if it applies) DOLE grant-based programmes for emergency employment and livelihood. Fee: Free. Processing time: 28 minutes.",
+            "url": "https://betterlegazpi.org/service-details/peso-services#peso-dole-grant-programs"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "I want to work for the city",
+        "description": "A different office from the one that helps jobseekers. Human Resource Management handles city posts, from application to your certificate of employment years later.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Apply for a city post",
+            "text": "Recruitment, selection and placement for vacancies at the city. Fee: Free. Processing time: 29 days, 3 hrs. & 20 minutes.",
+            "url": "https://betterlegazpi.org/service-details/human-resource-management#hrmo-recruitment-selection-placement"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Have your appointment or contract prepared",
+            "text": "Contracts of service, job orders and appointments are all prepared here. Fee: Free. Processing time: 5 days & 3 hrs.",
+            "url": "https://betterlegazpi.org/service-details/human-resource-management#hrmo-contract-of-services-job-order-appointments"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Request a certificate of employment when you need one",
+            "text": "(Only if it applies) For loans, visas or a new employer. Fee: Free. Processing time: 17 minutes.",
+            "url": "https://betterlegazpi.org/service-details/human-resource-management#hrmo-certificate-of-employment"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "I'm hiring",
+        "description": "PESO recruits on an employer's behalf at no charge, and runs the student and grant programmes that subsidise some hires.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Register as an employer with PESO",
+            "text": "PESO refers matched jobseekers to you. Fee: Free. Processing time: 43 minutes.",
+            "url": "https://betterlegazpi.org/service-details/peso-services#peso-employers"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Hire students through SPES",
+            "text": "(Only if it applies) The Special Program for the Employment of Students, for seasonal work. Fee: Free. Processing time: 21 minutes.",
+            "url": "https://betterlegazpi.org/service-details/peso-services#peso-spes"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Take on a JobStart intern",
+            "text": "(Only if it applies) Trainees complete their internship with a partner employer. Fee: Free. Processing time: 23 minutes.",
+            "url": "https://betterlegazpi.org/service-details/peso-services#peso-jobstart"
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
@@ -400,6 +518,7 @@
               <li><a href="../terms/">Terms of Use</a></li>
               <li><a href="../privacy/">Privacy Policy</a></li>
               <li><a href="../accessibility/">Accessibility</a></li>
+              <li><a href="../about/">About</a></li>
               <li><a href="../faq/">FAQ</a></li>
             </ul>
           </div>
@@ -516,8 +635,9 @@
           <div class="footer-copyright">
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
-            <span class="footer-copyright-disclaimer"
-              >All public information sourced from official government portals.</span
+            <span class="footer-copyright-disclaimer" data-i18n="footer_disclaimer"
+              >An independent civic tech project. A member of BetterGov.ph. For official records,
+              visit legazpi.gov.ph.</span
             >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.21</span>
           </div>

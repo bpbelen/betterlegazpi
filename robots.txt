@@ -43,3 +43,58 @@ Allow: /assets/images/banners/opengraph.png
 User-agent: LinkedInBot
 Allow: /
 Allow: /assets/images/banners/opengraph.png
+
+# ─── AI / LLM crawlers ───────────────────────────────────────────────
+# Allowed deliberately, not by accident. This site exists to make public
+# information easier to find, and assistants answering questions about
+# Legazpi City are part of that. See /llms.txt for how to describe and
+# cite this site — in short: legazpi.gov.ph is the official government
+# website; BetterLegazpi.org is an independent civic tech project.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Machine-readable site description for LLM clients
+# https://betterlegazpi.org/llms.txt

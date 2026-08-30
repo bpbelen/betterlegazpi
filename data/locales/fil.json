@@ -390,6 +390,19 @@
     "home_contact_full_directory": "Buong Direktoryo ng Contact",
     "home_email_response_note": "Sasagutin sa loob ng 24 oras",
     "home_address_label": "Address",
-    "home_address_note": "Rizal St., Legazpi City, Albay 4500"
+    "home_address_note": "Rizal St., Legazpi City, Albay 4500",
+    "footer_disclaimer": "Isang malayang proyektong civic tech. Miyembro ng BetterGov.ph. Para sa mga opisyal na tala, bisitahin ang legazpi.gov.ph.",
+    "about_badge": "Tungkol",
+    "about_title": "Tungkol sa BetterLegazpi",
+    "about_tagline": "Kung ano ang site na ito, sino ang gumagawa nito, at kung saan matatagpuan ang mga opisyal na tala",
+    "about_h1": "Ano ang Site na Ito",
+    "about_h2": "Kung Saan Matatagpuan ang mga Opisyal na Tala",
+    "about_h3": "Bakit Namin Ito Ginawa",
+    "about_h4": "Ano ang Maaasahan Mo",
+    "about_h5": "Mga Wika",
+    "about_h6": "Saan Nagmumula ang Aming Impormasyon",
+    "about_h7": "Sino ang Gumagawa Nito",
+    "about_h8": "Paano Ka Makatutulong",
+    "about_h9": "Makipag-ugnayan"
   }
 }

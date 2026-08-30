@@ -15,23 +15,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Terms of Use for BetterLegazpi.org - A civic platform dedicated to empowering the people of Legazpi City with transparent access to municipal services and public funds of LGU Legazpi City, Albay."
+      content="About BetterLegazpi.org - an independent, volunteer-run civic tech portal for Legazpi City, Albay. Learn who makes this site, what you can find here, and why legazpi.gov.ph remains the official source for city government records."
     />
     <meta name="author" content="Ramon Logan Jr." />
     <meta
       name="keywords"
-      content="terms of use, legal terms, BetterLegazpi, user agreement, website terms, Legazpi City, Albay, LGU Legazpi City, civic platform"
+      content="about BetterLegazpi, independent civic tech, BetterGov.ph, volunteer project, Legazpi City, Albay, not official government website, legazpi.gov.ph, open source civic platform"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://betterlegazpi.org/terms/" />
+    <link rel="canonical" href="https://betterlegazpi.org/about/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://betterlegazpi.org/terms/" />
-    <meta property="og:title" content="Terms of Use | BetterLegazpi.org" />
+    <meta property="og:url" content="https://betterlegazpi.org/about/" />
+    <meta property="og:title" content="About BetterLegazpi.org" />
     <meta
       property="og:description"
-      content="Terms of Use for BetterLegazpi.org - A civic platform dedicated to empowering the people of Legazpi City with transparent access to municipal services and public funds of LGU Legazpi City, Albay."
+      content="About BetterLegazpi.org - an independent, volunteer-run civic tech portal for Legazpi City, Albay. Learn who makes this site, what you can find here, and why legazpi.gov.ph remains the official source for city government records."
     />
     <meta
       property="og:image"
@@ -49,17 +49,17 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://betterlegazpi.org/terms/" />
-    <meta name="twitter:title" content="Terms of Use | BetterLegazpi.org" />
+    <meta name="twitter:url" content="https://betterlegazpi.org/about/" />
+    <meta name="twitter:title" content="About BetterLegazpi.org" />
     <meta
       name="twitter:description"
-      content="Terms of Use for BetterLegazpi.org - A civic platform dedicated to empowering the people of Legazpi City with transparent access to municipal services and public funds of LGU Legazpi City, Albay."
+      content="About BetterLegazpi.org - an independent, volunteer-run civic tech portal for Legazpi City, Albay. Learn who makes this site, what you can find here, and why legazpi.gov.ph remains the official source for city government records."
     />
     <meta
       name="twitter:image"
       content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
-    <title>Terms of Use | BetterLegazpi.org</title>
+    <title>About BetterLegazpi.org</title>
     <link rel="icon" type="image/png" href="../assets/images/logo/betterlegazpi-favicon.png" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,21 +76,59 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
+        "@graph": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://betterlegazpi.org/"
+            "@type": "AboutPage",
+            "@id": "https://betterlegazpi.org/about/#webpage",
+            "url": "https://betterlegazpi.org/about/",
+            "name": "About BetterLegazpi.org",
+            "description": "BetterLegazpi.org is an independent, volunteer-run civic tech project for Legazpi City, Albay. It is not an official government website; legazpi.gov.ph is the official website of the City Government of Legazpi.",
+            "inLanguage": "en",
+            "isPartOf": { "@id": "https://betterlegazpi.org/#website" },
+            "about": { "@id": "https://betterlegazpi.org/#organization" },
+            "mentions": { "@id": "https://legazpi.gov.ph/#government" },
+            "breadcrumb": { "@id": "https://betterlegazpi.org/about/#breadcrumb" }
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Terms of Use"
+            "@type": "BreadcrumbList",
+            "@id": "https://betterlegazpi.org/about/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://betterlegazpi.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About"
+              }
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://betterlegazpi.org/#organization",
+            "name": "BetterLegazpi.org",
+            "url": "https://betterlegazpi.org",
+            "description": "An independent, volunteer-run civic tech project that organizes publicly available information about Legazpi City, Albay into plain-language guides. Not affiliated with, endorsed by, or operated by the City Government of Legazpi.",
+            "email": "volunteer@betterlegazpi.org",
+            "memberOf": {
+              "@type": "Organization",
+              "name": "BetterGov.ph",
+              "url": "https://bettergov.ph"
+            }
+          },
+          {
+            "@type": "GovernmentOrganization",
+            "@id": "https://legazpi.gov.ph/#government",
+            "name": "City Government of Legazpi",
+            "url": "https://legazpi.gov.ph",
+            "description": "The local government unit of Legazpi City, Albay, Philippines. legazpi.gov.ph is its official website and the authoritative source for official records and transactions."
           }
         ]
       }
@@ -301,7 +339,7 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <a href="../" data-i18n="nav_home">Home</a>
           <span>/</span>
-          <span aria-current="page">Terms of Use</span>
+          <span aria-current="page">About</span>
         </nav>
       </div>
 
@@ -310,18 +348,17 @@
         <div class="container">
           <div class="page-header-content">
             <span class="page-header-badge"
-              ><i class="bi bi-file-earmark-text"></i>
-              <span data-i18n="terms_badge">Legal</span></span
+              ><i class="bi bi-info-circle"></i> <span data-i18n="about_badge">About</span></span
             >
-            <h1 data-i18n="terms_title">Terms of Use</h1>
-            <p class="page-header-desc" data-i18n="terms_tagline">
-              Guidelines for using BetterLegazpi.org
+            <h1 data-i18n="about_title">About BetterLegazpi</h1>
+            <p class="page-header-desc" data-i18n="about_tagline">
+              What this site is, who makes it, and where the official records live
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Terms Content -->
+      <!-- About Content -->
       <section class="legal-content">
         <div class="container">
           <div class="legal-wrapper">
@@ -329,317 +366,266 @@
             <aside class="legal-toc">
               <h4><i class="bi bi-list-ul"></i> <span>Contents</span></h4>
               <nav>
-                <a href="#introduction">Introduction</a>
-                <a href="#acceptance">Acceptance of Terms</a>
-                <a href="#public-domain">Public Domain Content</a>
-                <a href="#disclaimer">"As Is" Disclaimer</a>
-                <a href="#limitation">Limitation of Liability</a>
-                <a href="#responsibilities">User Responsibilities</a>
-                <a href="#no-advice">No Professional Advice</a>
-                <a href="#external-links">External References</a>
-                <a href="#availability">Website Availability</a>
-                <a href="#indemnification">Indemnification</a>
-                <a href="#modifications">Modifications</a>
-                <a href="#governing-law">Governing Law</a>
-                <a href="#severability">Severability</a>
-                <a href="#takedown">Content Concerns</a>
-                <a href="#contact">Contact Information</a>
+                <a href="#what-this-is">What This Site Is</a>
+                <a href="#official">Where the Official Records Live</a>
+                <a href="#why">Why We Built It</a>
+                <a href="#features">What You Can Expect</a>
+                <a href="#languages">Languages</a>
+                <a href="#sources">Where Our Information Comes From</a>
+                <a href="#who">Who Makes This</a>
+                <a href="#help">How You Can Help</a>
+                <a href="#contact">Contact</a>
               </nav>
             </aside>
 
             <!-- Main Content -->
             <article class="legal-article">
-              <section id="introduction" class="legal-section">
-                <h2 data-i18n="terms_h1">Introduction</h2>
+              <section id="what-this-is" class="legal-section">
+                <h2 data-i18n="about_h1">What This Site Is</h2>
                 <p>
-                  BetterLegazpi.org is a civic platform dedicated to empowering the people of
-                  Legazpi City by providing transparent access to the services, programs, and public
-                  funds of LGU Legazpi City.
+                  BetterLegazpi.org is a free, volunteer-run website about Legazpi City. We take
+                  information that is already public &mdash; service requirements, fees, office
+                  hours, budgets, ordinances, contact numbers &mdash; and put it in one place, in
+                  plain language, so you do not have to hunt for it.
                 </p>
                 <p>
-                  While volunteers make every effort to secure BetterLegazpi.org from online threats
-                  and keep information accurate, no system can be guaranteed to be perfectly secure,
-                  error-free, or completely up-to-date at all times.
+                  A simple way to picture it: this is a <em>guidebook</em> to the city government,
+                  not the city government itself. A guidebook can tell you which counter to go to,
+                  what to bring, and roughly what it will cost. Only the office itself can actually
+                  issue your document.
                 </p>
                 <div class="legal-highlight">
                   <i class="bi bi-heart-fill"></i>
                   <span
-                    >This platform is provided <strong>free of charge</strong> as a public
-                    service.</span
+                    >Free to use. No account, no ads, no fees &mdash;
+                    <strong>for everyone</strong>.</span
                   >
                 </div>
               </section>
 
-              <section id="acceptance" class="legal-section">
-                <h2 data-i18n="terms_h2">Acceptance of Terms</h2>
+              <section id="official" class="legal-section">
+                <h2 data-i18n="about_h2">Where the Official Records Live</h2>
                 <p>
-                  By accessing and using this website, you acknowledge and agree to be bound by
-                  these terms and conditions. Your continued use of the site signifies your ongoing
-                  acceptance of this agreement.
-                </p>
-              </section>
-
-              <section id="public-domain" class="legal-section">
-                <h2 data-i18n="terms_h3">Public Domain Content and Volunteer Operation</h2>
-                <p>
-                  This website and its content are provided as a public domain resource and are
-                  operated entirely by volunteers. All information, data, documents, and materials
-                  on this website are in the public domain unless otherwise stated.
-                </p>
-                <p>
-                  Public domain content may be freely used, copied, distributed, and modified
-                  without permission or attribution, although attribution to BetterLegazpi.org and
-                  LGU Legazpi City is encouraged as a civic courtesy.
+                  BetterLegazpi.org is <strong>not</strong> the City Government of Legazpi, and it
+                  is not an official government website. We are an independent civic tech project,
+                  run by volunteers, and we have no authority to issue, certify, or decide anything.
                 </p>
                 <div class="legal-note">
                   <i class="bi bi-info-circle"></i>
                   <p>
-                    BetterLegazpi.org is an independent civic project. It is not affiliated with,
-                    endorsed by, or operated by the City Government of Legazpi, and it is not an
-                    official government website. Where this site and an official city channel
-                    disagree, the official channel is correct.
+                    The official website of the City Government of Legazpi is
+                    <a href="https://legazpi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                      >legazpi.gov.ph</a
+                    >. For anything official &mdash; legal records, formal applications, final fees
+                    &mdash; that site and the city offices themselves are the authority. Where this
+                    site and an official city channel disagree, the official channel is correct.
                   </p>
+                </div>
+                <p>
+                  In everyday terms: use this site to <em>understand and prepare</em>, then use the
+                  official channels to transact. If we say a document costs &#8369;100 and the
+                  office says &#8369;120, the office is right &mdash; and we would be grateful if
+                  you told us, so we can correct it for the next person.
+                </p>
+              </section>
+
+              <section id="why" class="legal-section">
+                <h2 data-i18n="about_h3">Why We Built It</h2>
+                <p>
+                  Say your PSA birth certificate is illegible and you need a fresh copy from the
+                  Legazpi City Civil Registrar, and you have never done it before. The usual
+                  experience is a scavenger hunt: a Facebook post from two years ago, a phone
+                  number that just rings out, a friend who half-remembers the requirements, or
+                  worse, a trip to City Hall that ends with &ldquo;you are missing one document,
+                  come back tomorrow.&rdquo;
+                </p>
+                <p>
+                  That lost day is the problem this site exists to solve. For every service we
+                  cover, we try to answer the same four questions on one page, before you leave the
+                  house:
+                </p>
+                <ul class="legal-list">
+                  <li><strong>What do I bring?</strong> The actual list of requirements.</li>
+                  <li><strong>Where do I go?</strong> The office, and how to reach it.</li>
+                  <li><strong>What does it cost?</strong> Published fees, where fees exist.</li>
+                  <li><strong>How long will it take?</strong> Processing time and office hours.</li>
+                </ul>
+                <p>
+                  None of this is secret information. It is simply scattered, and scattered
+                  information quietly costs people time, fare, and a day&rsquo;s wages.
+                </p>
+              </section>
+
+              <section id="features" class="legal-section">
+                <h2 data-i18n="about_h4">What You Can Expect</h2>
+                <p>Here is what you will find on the site today:</p>
+                <ul class="legal-list">
+                  <li>
+                    <strong>A services directory.</strong> Around 50 city services, grouped into 12
+                    everyday categories &mdash; certificates and records, business permits, health,
+                    housing, taxes and payments, education, employment, and more &mdash; plus
+                    dedicated pages for 26 individual offices and programmes.
+                  </li>
+                  <li>
+                    <strong>Your elected officials.</strong> The mayor, vice mayor, and the 12 city
+                    councilors, with their positions and committees.
+                  </li>
+                  <li>
+                    <strong>City news.</strong> Announcements and updates, gathered in one feed
+                    instead of scattered across social media.
+                  </li>
+                  <li>
+                    <strong>Policies.</strong> Ordinances and resolutions passed by the city
+                    council, listed so you can actually find one.
+                  </li>
+                  <li>
+                    <strong>Transparency.</strong> Budget and spending information, including
+                    infrastructure projects, presented as plain figures and tables.
+                  </li>
+                  <li>
+                    <strong>Statistics.</strong> Population and demographic data, barangay
+                    information, and a directory of health facilities.
+                  </li>
+                  <li>
+                    <strong>Travel and culture.</strong> Attractions, landmarks, food,
+                    accommodations, and local history for visitors and residents alike.
+                  </li>
+                  <li>
+                    <strong>Search.</strong> One search box across the whole site, so you can type
+                    what you need rather than guess which menu it lives under.
+                  </li>
+                  <li>
+                    <strong>It works on a phone.</strong> The site is built for small screens first,
+                    and once you have visited a page it stays available even if your connection
+                    drops.
+                  </li>
+                  <li>
+                    <strong>Light and dark mode.</strong> Your choice is remembered on your device.
+                  </li>
+                  <li>
+                    <strong>Built to be accessible.</strong> We aim for WCAG 2.1 Level AA, test
+                    every page automatically, and publish an honest
+                    <a href="../accessibility/">accessibility statement</a> naming the pages that
+                    still fall short.
+                  </li>
+                  <li>
+                    <strong>Free and open source.</strong> Released under MIT and CC BY 4.0, so
+                    anyone can inspect the code, reuse the work, or build on it.
+                  </li>
+                </ul>
+              </section>
+
+              <section id="languages" class="legal-section">
+                <h2 data-i18n="about_h5">Languages</h2>
+                <p>
+                  Public information is only useful if you can read it comfortably. Use the language
+                  button in the top bar &mdash; the
+                  <i class="bi bi-translate" aria-hidden="true"></i> icon &mdash; to switch. Here is
+                  exactly where each language stands, with no overstating:
+                </p>
+                <ul class="legal-list">
+                  <li>
+                    <strong>English &mdash; available.</strong> This is the language the site is
+                    written in, and it is complete.
+                  </li>
+                  <li>
+                    <strong>Filipino &mdash; available, still being checked.</strong> The
+                    navigation, footer, and a growing share of the pages are translated. The
+                    translation is machine-made and has not yet been reviewed by a native Filipino
+                    speaker, so while Filipino is switched on you will see a small notice with a
+                    link to report anything that reads wrongly. Official document names are kept in
+                    English alongside the translation on purpose, so the words still match the form
+                    in your hand.
+                  </li>
+                  <li>
+                    <strong>Bikol &mdash; coming soon.</strong> It appears in the menu but is not
+                    selectable yet. We could switch on a machine translation tomorrow; we have
+                    chosen not to. Bikol deserves a human translation, and shipping a bad one would
+                    be worse than waiting. If you speak Bikol and want to help, we would genuinely
+                    like to hear from you.
+                  </li>
+                </ul>
+                <div class="legal-note">
+                  <i class="bi bi-info-circle"></i>
                   <p>
-                    As a volunteer-run initiative, this website does not replace official government
-                    channels. Residents and stakeholders are encouraged to conduct their own
-                    independent research and verification of all information found here and to
-                    consult official LGU Legazpi City offices and government agencies when making
-                    important decisions.
+                    A page that has not been translated yet simply stays in English rather than
+                    showing you a blank or a broken sentence. Nothing is ever hidden because of the
+                    language you picked.
                   </p>
                 </div>
               </section>
 
-              <section id="disclaimer" class="legal-section">
-                <h2 data-i18n="terms_h4">"As Is" Disclaimer</h2>
+              <section id="sources" class="legal-section">
+                <h2 data-i18n="about_h6">Where Our Information Comes From</h2>
                 <p>
-                  All information on this website is provided "AS IS" without warranty of any kind,
-                  whether express or implied. This includes, but is not limited to:
+                  Everything here is drawn from publicly accessible information &mdash; official
+                  government portals, published documents and reports, and other public sources on
+                  the internet. We do not hold private records, and we do not publish anything that
+                  was not already public.
                 </p>
-                <ul class="legal-list">
-                  <li>Warranties of merchantability</li>
-                  <li>Fitness for a particular purpose</li>
-                  <li>Non-infringement of intellectual property rights</li>
-                  <li>Accuracy, completeness, or reliability of information</li>
-                  <li>Freedom from errors, viruses, or other harmful components</li>
-                </ul>
                 <p>
-                  Users should treat all content as informational and not as a substitute for
-                  official records or professional advice.
+                  We link back to the source wherever we can, so you can check our work rather than
+                  take our word for it. Where a figure could not be matched to a readable official
+                  document, we leave it out instead of guessing.
                 </p>
-              </section>
-
-              <section id="limitation" class="legal-section">
-                <h2 data-i18n="terms_h5">Limitation of Liability</h2>
                 <p>
-                  To the fullest extent permitted by law, the website operators, volunteers,
-                  contributors, and any affiliated civic partners shall not be liable for any
-                  direct, indirect, incidental, special, consequential, or punitive damages arising
-                  from or related to:
-                </p>
-                <ul class="legal-list">
-                  <li>Your use of or reliance on this website or its content</li>
-                  <li>Any errors, omissions, or outdated information</li>
-                  <li>Any interruption, suspension, or cessation of website availability</li>
-                  <li>
-                    Any bugs, viruses, or other harmful components transmitted through the site
-                  </li>
-                  <li>Any loss, corruption, or disclosure of data or information</li>
-                </ul>
-                <p>
-                  This limitation applies regardless of the form of action or legal theory,
-                  including contract, tort, negligence, or strict liability.
+                  Information changes, and sometimes we are slow to catch up. If you spot something
+                  out of date or simply wrong, telling us is the single most useful thing you can do
+                  for the next reader.
                 </p>
               </section>
 
-              <section id="responsibilities" class="legal-section">
-                <h2 data-i18n="terms_h6">User Responsibilities and Research Guidelines</h2>
+              <section id="who" class="legal-section">
+                <h2 data-i18n="about_h7">Who Makes This</h2>
                 <p>
-                  Users share responsibility for promoting informed and responsible civic
-                  engagement. By using this website, you are solely responsible for:
+                  BetterLegazpi.org is a volunteer effort, not a company and not a contractor. It
+                  was started by
+                  <a href="https://www.linkedin.com/in/bmpbelen/" target="_blank" rel="noopener noreferrer"
+                    >Rye Belen</a
+                  >
+                  and is a member of
+                  <a href="https://bettergov.ph" target="_blank" rel="noopener noreferrer"
+                    >BetterGov.ph</a
+                  >, a volunteer-driven civic tech community working to improve access to local
+                  government information and services across the Philippines.
                 </p>
-                <ul class="legal-list">
-                  <li>Independently verifying all information obtained from this website</li>
-                  <li>Reviewing and visiting original source links and references provided</li>
-                  <li>
-                    Cross-checking information with multiple reliable and official sources before
-                    making decisions
-                  </li>
-                  <li>Determining whether the information is suitable for your intended use</li>
-                  <li>Complying with all applicable laws, regulations, and local ordinances</li>
-                  <li>
-                    Accepting any consequences that may arise from your use of the website and its
-                    content
-                  </li>
-                </ul>
+                <p>
+                  Nobody is paid for this, and the site accepts no advertising. You can read more
+                  about the people involved on our <a href="../faq/">FAQ page</a>.
+                </p>
+              </section>
+
+              <section id="help" class="legal-section">
+                <h2 data-i18n="about_h8">How You Can Help</h2>
+                <p>
+                  This is a community project, and it improves mostly because residents tell us
+                  things. You do not need to be a programmer to be useful:
+                </p>
                 <div class="legal-callout">
                   <h4>
                     <i class="bi bi-lightbulb"></i>
-                    <span>You are strongly encouraged to:</span>
+                    <span>Ways to contribute:</span>
                   </h4>
                   <ul>
                     <li>
-                      Use the source links and references on each page to access primary documents
-                      and official records
+                      Report anything wrong, missing, or out of date &mdash; a wrong fee or a
+                      changed office hour is exactly the kind of thing we need to hear.
                     </li>
-                    <li>Conduct additional research beyond what is presented on this website</li>
+                    <li>Help translate, especially into Bikol.</li>
+                    <li>Contribute code, data, or design; the whole project is open source.</li>
                     <li>
-                      Consult official government websites, offices, and agencies for the most
-                      current information
-                    </li>
-                    <li>
-                      Verify dates, figures, and other details through multiple reputable sources
+                      Share the site with someone who is about to queue for a document they could
+                      have prepared for.
                     </li>
                   </ul>
                 </div>
-              </section>
-
-              <section id="no-advice" class="legal-section">
-                <h2 data-i18n="terms_h7">No Professional Advice</h2>
-                <p>
-                  The information on this website is provided for educational, informational, and
-                  civic transparency purposes only. It does not constitute legal, medical,
-                  financial, or any other form of professional advice.
-                </p>
-                <p>
-                  Users should consult qualified professionals or appropriate government offices for
-                  advice specific to their circumstances.
-                </p>
-              </section>
-
-              <section id="external-links" class="legal-section">
-                <h2 data-i18n="terms_h8">Source Links and External References</h2>
-                <p>
-                  This website may provide links to official sources, government documents, and
-                  other authoritative materials to support civic awareness and transparency. Users
-                  are encouraged to:
-                </p>
-                <ul class="legal-list">
-                  <li>Click through and review all source links provided</li>
-                  <li>Access primary documents and official publications referenced</li>
-                  <li>Verify information directly from original and official sources</li>
-                  <li>Check for updates, amendments, or corrections to referenced materials</li>
-                </ul>
-                <p>
-                  The continued availability, accuracy, and reliability of external links cannot be
-                  guaranteed. Links may change or become unavailable without notice, and users
-                  should always confirm information through official channels.
-                </p>
-              </section>
-
-              <section id="availability" class="legal-section">
-                <h2 data-i18n="terms_h9">Website Availability</h2>
-                <p>
-                  Although volunteers aim to keep the website accessible and functional,
-                  BetterLegazpi.org cannot guarantee that the website will be:
-                </p>
-                <ul class="legal-list">
-                  <li>Available or accessible at all times</li>
-                  <li>Error-free or uninterrupted</li>
-                  <li>Free from technical problems, vulnerabilities, or disruptions</li>
-                  <li>Fully compatible with all devices, browsers, or assistive technologies</li>
-                </ul>
-                <p>
-                  Users are encouraged to report technical issues and broken links so volunteers can
-                  address them as resources allow.
-                </p>
-              </section>
-
-              <section id="indemnification" class="legal-section">
-                <h2 data-i18n="terms_h10">Indemnification</h2>
-                <p>
-                  By using this website, you agree to indemnify and hold harmless the website
-                  operators, volunteers, contributors, and affiliated civic partners from any
-                  claims, damages, losses, liabilities, or expenses (including reasonable legal
-                  fees) arising from your use of the website or your violation of these terms.
-                </p>
-              </section>
-
-              <section id="modifications" class="legal-section">
-                <h2 data-i18n="terms_h11">Modifications</h2>
-                <p>
-                  These terms may be updated or modified from time to time to reflect legal
-                  requirements, policy changes, or improvements to civic services. Changes may be
-                  made without prior notice. Your continued use of the website after any changes are
-                  posted constitutes your acceptance of the updated terms.
-                </p>
-              </section>
-
-              <section id="governing-law" class="legal-section">
-                <h2 data-i18n="terms_h12">Governing Law</h2>
-                <p>
-                  These terms are governed by and construed in accordance with the laws of the
-                  Republic of the Philippines, without regard to any conflict of law principles. Any
-                  disputes arising in connection with these terms or your use of the website shall
-                  be subject to the exclusive jurisdiction of the courts of Legazpi City, Albay.
-                </p>
-              </section>
-
-              <section id="severability" class="legal-section">
-                <h2 data-i18n="terms_h13">Severability</h2>
-                <p>
-                  If any provision of these terms is found to be invalid, unlawful, or
-                  unenforceable, that provision shall be applied to the greatest extent permitted by
-                  law, and the remaining provisions shall remain in full force and effect.
-                </p>
-              </section>
-
-              <section id="takedown" class="legal-section">
-                <h2 data-i18n="terms_h14">Content Concerns and Takedown Requests</h2>
-                <p>
-                  BetterLegazpi.org values accuracy, public safety, and respect for rights. Despite
-                  good-faith efforts, some content may become outdated, incomplete, or raise
-                  legitimate concerns.
-                </p>
-                <p>If you believe that any content on this website is:</p>
-                <ul class="legal-list">
-                  <li>Factually incorrect or misleading</li>
-                  <li>Potentially harmful or dangerous</li>
-                  <li>In violation of applicable laws or regulations</li>
-                  <li>Containing personal information that should not be public</li>
-                  <li>Infringing upon legitimate rights or interests</li>
-                </ul>
-                <p>
-                  Please contact us at:
-                  <a href="mailto:volunteer@betterlegazpi.org">volunteer@betterlegazpi.org</a>
-                </p>
-
-                <div class="legal-callout">
-                  <h4>
-                    <i class="bi bi-envelope"></i>
-                    <span>When reaching out, kindly include:</span>
-                  </h4>
-                  <ul>
-                    <li>The specific URL or page location</li>
-                    <li>A clear description of your concern</li>
-                    <li>Supporting documentation or evidence, where applicable</li>
-                    <li>Your contact information for follow-up</li>
-                  </ul>
-                </div>
-
-                <h3>Our Response Process</h3>
-                <ul class="legal-list">
-                  <li>Legitimate concerns will be reviewed in good faith by volunteers.</li>
-                  <li>Response times may vary due to the volunteer nature of this initiative.</li>
-                  <li>
-                    Content may be removed, corrected, updated, or accompanied by additional
-                    disclaimers as appropriate.
-                  </li>
-                  <li>
-                    Editorial decisions about content rest with the website team, guided by public
-                    interest and civic responsibility.
-                  </li>
-                  <li>
-                    Knowingly false, malicious, or frivolous complaints may result in restricted
-                    communication with our volunteers.
-                  </li>
-                </ul>
               </section>
 
               <section id="contact" class="legal-section">
-                <h2 data-i18n="terms_h15">Contact Information</h2>
+                <h2 data-i18n="about_h9">Contact</h2>
                 <p>
-                  For questions about these terms, feedback on civic information, or content-related
-                  concerns, please contact:
+                  Corrections, questions, and offers to help are all welcome at the same address.
+                  You can also use the <a href="../contact/">contact page</a>.
                 </p>
                 <div class="legal-contact">
                   <a href="mailto:volunteer@betterlegazpi.org" class="contact-link"
@@ -650,7 +636,6 @@
                   BetterLegazpi.org provides public domain information to support civic engagement,
                   transparency, and informed participation in local governance.
                 </p>
-                <p class="legal-closing">Last Updated: August 29, 2026</p>
               </section>
             </article>
           </div>

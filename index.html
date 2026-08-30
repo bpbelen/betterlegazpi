@@ -31,7 +31,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://betterlegazpi.org/" />
-    <meta property="og:title" content="BetterLegazpi.org | Official Portal" />
+    <meta property="og:title" content="BetterLegazpi.org | Independent Civic Tech Portal" />
     <meta
       property="og:description"
       content="Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi."
@@ -49,7 +49,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://betterlegazpi.org/" />
-    <meta name="twitter:title" content="BetterLegazpi.org | Official Portal" />
+    <meta name="twitter:title" content="BetterLegazpi.org | Independent Civic Tech Portal" />
     <meta
       name="twitter:description"
       content="Empowering the people of Legazpi with transparent access to the services, programs, and public funds of LGU Legazpi."
@@ -78,7 +78,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="BetterLegazpi" />
 
-    <title>BetterLegazpi.org | Official Portal</title>
+    <title>BetterLegazpi.org | Independent Civic Tech Portal</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo/betterlegazpi-favicon.png" />
@@ -108,55 +108,92 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- Structured Data (JSON-LD) -->
+    <!--
+      Identity note: BetterLegazpi.org is an independent civic tech project, NOT the
+      City Government of Legazpi. The graph below states that explicitly — the site is
+      an Organization that is "about" a separate GovernmentOrganization node whose url
+      is legazpi.gov.ph. Do not merge these two nodes or re-add legazpi.gov.ph to the
+      site's own sameAs: that would re-assert the impersonation this markup exists to
+      correct. See /about/ for the human-readable version of the same statement.
+    -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "GovernmentOrganization",
-        "name": "City Government of Legazpi",
-        "alternateName": "Better Legazpi",
-        "url": "https://betterlegazpi.org",
-        "description": "Official portal of the City Government of Legazpi, Albay. Access municipal services, government information, and community updates.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Legazpi City Hall, Rizal St.",
-          "addressLocality": "Legazpi City",
-          "addressRegion": "Albay",
-          "postalCode": "4500",
-          "addressCountry": "PH"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "13.1391",
-          "longitude": "123.7438"
-        },
-        "telephone": "(052) 742-1234",
-        "email": "legazpicitymayorsoffice@gmail.com",
-        "openingHours": "Mo-Fr 08:00-17:00",
-        "areaServed": {
-          "@type": "AdministrativeArea",
-          "name": "Legazpi City, Albay"
-        },
-        "sameAs": [
-          "https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/",
-          "https://legazpi.gov.ph"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://betterlegazpi.org/#organization",
+            "name": "BetterLegazpi.org",
+            "alternateName": "Better Legazpi",
+            "url": "https://betterlegazpi.org",
+            "description": "An independent, volunteer-run civic tech project that organizes publicly available information about Legazpi City, Albay into plain-language guides. Not affiliated with, endorsed by, or operated by the City Government of Legazpi.",
+            "logo": "https://betterlegazpi.org/assets/images/logo/betterlegazpi-logo.png",
+            "email": "volunteer@betterlegazpi.org",
+            "founder": {
+              "@type": "Person",
+              "name": "Rye Belen",
+              "sameAs": "https://www.linkedin.com/in/bmpbelen/"
+            },
+            "memberOf": {
+              "@type": "Organization",
+              "name": "BetterGov.ph",
+              "url": "https://bettergov.ph",
+              "description": "A volunteer-driven civic tech community improving access to local government information and services in the Philippines."
+            },
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Legazpi City, Albay, Philippines"
+            },
+            "sameAs": ["https://github.com/bpbelen/betterlegazpi"]
+          },
+          {
+            "@type": "GovernmentOrganization",
+            "@id": "https://legazpi.gov.ph/#government",
+            "name": "City Government of Legazpi",
+            "url": "https://legazpi.gov.ph",
+            "description": "The local government unit of Legazpi City, Albay, Philippines. legazpi.gov.ph is its official website and the authoritative source for official records and transactions.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Legazpi City Hall, Rizal St.",
+              "addressLocality": "Legazpi City",
+              "addressRegion": "Albay",
+              "postalCode": "4500",
+              "addressCountry": "PH"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "13.1391",
+              "longitude": "123.7438"
+            },
+            "telephone": "(052) 742-1234",
+            "email": "legazpicitymayorsoffice@gmail.com",
+            "openingHours": "Mo-Fr 08:00-17:00",
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Legazpi City, Albay"
+            },
+            "sameAs": [
+              "https://legazpi.gov.ph",
+              "https://www.facebook.com/p/City-Government-of-Legazpi-61565693764942/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://betterlegazpi.org/#website",
+            "name": "BetterLegazpi.org",
+            "url": "https://betterlegazpi.org",
+            "inLanguage": ["en", "fil"],
+            "publisher": { "@id": "https://betterlegazpi.org/#organization" },
+            "about": { "@id": "https://legazpi.gov.ph/#government" },
+            "isAccessibleForFree": true,
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://betterlegazpi.org/services/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
         ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Better Legazpi",
-        "url": "https://betterlegazpi.org",
-        "author": {
-          "@type": "Person",
-          "name": "BetterLegazpi Team"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://betterlegazpi.org/services/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
       }
     </script>
     <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -1090,6 +1127,7 @@
               <li><a href="terms/">Terms of Use</a></li>
               <li><a href="privacy/">Privacy Policy</a></li>
               <li><a href="accessibility/">Accessibility</a></li>
+              <li><a href="about/">About</a></li>
               <li><a href="faq/">FAQ</a></li>
             </ul>
           </div>
@@ -1206,8 +1244,9 @@
           <div class="footer-copyright">
             <span class="footer-copyright-text">&copy; 2026 BetterLegazpi.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
-            <span class="footer-copyright-disclaimer"
-              >All public information sourced from official government portals.</span
+            <span class="footer-copyright-disclaimer" data-i18n="footer_disclaimer"
+              >An independent civic tech project. A member of BetterGov.ph. For official records,
+              visit legazpi.gov.ph.</span
             >
             <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.21</span>
           </div>

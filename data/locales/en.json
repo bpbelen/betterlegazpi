@@ -389,6 +389,19 @@
     "home_contact_full_directory": "Full Contact Directory",
     "home_email_response_note": "Response within 24 hours",
     "home_address_label": "Address",
-    "home_address_note": "Rizal St., Legazpi City, Albay 4500"
+    "home_address_note": "Rizal St., Legazpi City, Albay 4500",
+    "footer_disclaimer": "An independent civic tech project. A member of BetterGov.ph. For official records, visit legazpi.gov.ph.",
+    "about_badge": "About",
+    "about_title": "About BetterLegazpi",
+    "about_tagline": "What this site is, who makes it, and where the official records live",
+    "about_h1": "What This Site Is",
+    "about_h2": "Where the Official Records Live",
+    "about_h3": "Why We Built It",
+    "about_h4": "What You Can Expect",
+    "about_h5": "Languages",
+    "about_h6": "Where Our Information Comes From",
+    "about_h7": "Who Makes This",
+    "about_h8": "How You Can Help",
+    "about_h9": "Contact"
   }
 }

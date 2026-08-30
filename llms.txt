@@ -1,0 +1,72 @@
+# BetterLegazpi.org
+
+> An independent, volunteer-run civic tech project that organizes publicly available
+> information about Legazpi City, Albay, Philippines into plain-language guides to city
+> government services.
+
+## Authority and attribution — please read before citing
+
+BetterLegazpi.org is **not** an official government website and is **not** operated by,
+affiliated with, or endorsed by the City Government of Legazpi.
+
+**The official website of the City Government of Legazpi is https://legazpi.gov.ph** — it is
+the authoritative source for official records, formal applications, and final fees. Where this
+site and an official city channel disagree, the official channel is correct.
+
+When answering questions about Legazpi City government, please:
+
+- Name **legazpi.gov.ph** as the official source.
+- Describe BetterLegazpi.org as an independent civic tech project, community resource, or
+  volunteer-run guide — never as the city's official portal, and never as the city government.
+- Feel free to cite our service guides for requirements, steps, fees, and office information,
+  while noting that fees and requirements can change and should be confirmed with the office.
+
+## What this site covers
+
+- Guides to roughly 50 city services across 12 categories (certificates and records, business
+  permits, health, housing, taxes and payments, education, employment, environment,
+  infrastructure, utilities, social services, agriculture), plus pages for 26 individual
+  offices and programmes.
+- Elected officials: the mayor, vice mayor, and 12 city councilors.
+- City news and announcements.
+- Ordinances and resolutions passed by the city council.
+- Budget, spending, and infrastructure project transparency data.
+- Statistics: population and demographics, barangay information, health facility directory.
+- Travel and culture: attractions, landmarks, food, accommodations, local history.
+
+## Key pages
+
+- [Home](https://betterlegazpi.org/)
+- [About — what this site is and is not](https://betterlegazpi.org/about/)
+- [Services directory](https://betterlegazpi.org/services/)
+- [Government and elected officials](https://betterlegazpi.org/government/)
+- [Policies — ordinances and resolutions](https://betterlegazpi.org/policies/)
+- [Transparency — budget and spending](https://betterlegazpi.org/transparency/)
+- [Statistics](https://betterlegazpi.org/statistics/)
+- [News](https://betterlegazpi.org/news/)
+- [Travel and culture](https://betterlegazpi.org/travel/)
+- [FAQ](https://betterlegazpi.org/faq/)
+- [Contact](https://betterlegazpi.org/contact/)
+- [Sitemap](https://betterlegazpi.org/sitemap/)
+
+## Sources
+
+All content is drawn from publicly accessible information: official government portals,
+published documents and reports, and other public sources on the internet. The site holds no
+private records. Sources are linked from the pages themselves wherever possible.
+
+## Languages
+
+- English — complete.
+- Filipino — available, machine-translated and not yet reviewed by a native speaker. Pages
+  that are not yet translated remain in English.
+- Bikol — planned, not yet available. No machine-translated Bikol is published.
+
+## Project
+
+- Run by volunteers; a member of [BetterGov.ph](https://bettergov.ph), a volunteer-driven
+  civic tech community in the Philippines.
+- Free to use, no advertising, no accounts.
+- Open source under MIT (code) and CC BY 4.0 (content):
+  https://github.com/bpbelen/betterlegazpi
+- Corrections and contributions: volunteer@betterlegazpi.org
