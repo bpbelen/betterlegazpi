@@ -1,0 +1,5 @@
+# BetterLegazpi Cloudflare Pages Redirects
+/budget/* /transparency/:splat 301
+/budget /transparency/ 301
+/legislative/* /policies/:splat 301
+/legislative /policies/ 301

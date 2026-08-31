@@ -61,7 +61,6 @@ jobs:
   accessibility:
     name: axe (advisory)
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
@@ -77,6 +76,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Run axe
+        continue-on-error: true
         run: npx playwright test tests/site-a11y.spec.js --project=mobile-chrome
 
       - uses: actions/upload-artifact@v4
