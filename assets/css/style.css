@@ -10253,12 +10253,6 @@ a.a11y-contact-item:hover i {
   border: 1px solid #ddd6fe;
 }
 
-.badge-247 {
-  background: #ffe4e6;
-  color: #be123c;
-  border: 1px solid #fecdd3;
-}
-
 .badge-doh {
   background: #f1f5f9;
   color: #475569;
@@ -10519,6 +10513,14 @@ button.service-pill-more:hover {
   font-size: 0.8125rem;
   color: var(--color-text-light);
   font-style: italic;
+}
+
+/* Verbatim DOH add-on text: prose, not pills -- it runs to 400 characters. */
+.facility-add-ons {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-text);
 }
 
 .facility-detail-list {

@@ -22,7 +22,6 @@
   let activeCategory = 'all';
   let activeOwnership = 'all';
   let activeFilterYakapOnly = false;
-  let activeFilter247Only = false;
   let searchQuery = '';
 
   const DOM = {
@@ -38,7 +37,6 @@
     categoryPills: null,
     ownershipSelect: null,
     filterYakapCheck: null,
-    filter247Check: null,
     resultCount: null,
     loadMoreContainer: null,
     loadMoreBtn: null,
@@ -78,7 +76,6 @@
     DOM.categoryPills = document.querySelectorAll('.health-cat-pill[data-category]');
     DOM.ownershipSelect = document.getElementById('health-ownership-filter');
     DOM.filterYakapCheck = document.getElementById('filter-yakap-only');
-    DOM.filter247Check = document.getElementById('filter-247-only');
     DOM.resultCount = document.getElementById('health-result-count');
     DOM.loadMoreContainer = document.getElementById('health-load-more-wrap');
     DOM.loadMoreBtn = document.getElementById('health-load-more-btn');
@@ -144,14 +141,6 @@
       });
     }
 
-    if (DOM.filter247Check) {
-      DOM.filter247Check.addEventListener('change', (e) => {
-        activeFilter247Only = e.target.checked;
-        currentPage = 1;
-        applyFilters();
-      });
-    }
-
     if (DOM.loadMoreBtn) {
       DOM.loadMoreBtn.addEventListener('click', () => {
         currentPage++;
@@ -172,11 +161,9 @@
     activeCategory = 'all';
     activeOwnership = 'all';
     activeFilterYakapOnly = false;
-    activeFilter247Only = false;
 
     if (DOM.ownershipSelect) DOM.ownershipSelect.value = 'all';
     if (DOM.filterYakapCheck) DOM.filterYakapCheck.checked = false;
-    if (DOM.filter247Check) DOM.filter247Check.checked = false;
 
     if (DOM.categoryPills) {
       DOM.categoryPills.forEach((p) => {
@@ -368,12 +355,7 @@
         return false;
       }
 
-      // 4. 24/7 Emergency Only Toggle
-      if (activeFilter247Only && !facility.emergency_24_7) {
-        return false;
-      }
-
-      // 5. Search Query
+      // 4. Search Query
       if (searchQuery) {
         const name = (facility.name || '').toLowerCase();
         const shortName = (facility.short_name || '').toLowerCase();
@@ -468,7 +450,6 @@
       const isGamot = fac.accreditations?.is_yakap_gamot;
       const isYakap = isKonsulta || isGamot;
       const isDoh = fac.accreditations?.is_doh_licensed;
-      const is247 = fac.emergency_24_7;
       const isGovt = fac.ownership === 'Government';
       const isAbtc = fac.accreditations?.is_abtc_certified;
       const abtcLapsed = isAbtc && hasLapsed(fac.accreditations?.abtc_validity);
@@ -583,6 +564,8 @@
           'Animal-bite certification valid to',
           formatDate(fac.accreditations?.abtc_validity)
         ),
+        // DOH publishes this as "ABC" -- authorised bed capacity.
+        detailRow('DOH-authorised beds', fac.bed_capacity),
       ].filter(Boolean);
 
       html += `
@@ -603,13 +586,6 @@
                 isGamot
                   ? `<span class="badge badge-gamot ${gamotLapsed ? 'badge--lapsed' : ''}" title="On the PhilHealth list of Accredited GAMOT Package Providers -- dispenses the free YAKAP maintenance medicines">
                        <i class="bi bi-capsule"></i> YAKAP GAMOT${gamotLapsed ? ' (lapsed)' : ''}
-                     </span>`
-                  : ''
-              }
-              ${
-                is247
-                  ? `<span class="badge badge-247" title="Open 24 Hours / Emergency Response">
-                       <i class="bi bi-clock-fill"></i> 24/7 Emergency
                      </span>`
                   : ''
               }
@@ -679,6 +655,15 @@
                      <div class="facility-services-tags">
                        ${services.map((sv) => `<span class="service-pill">${escapeHtml(sv)}</span>`).join('')}
                      </div>
+                   </div>`
+                : ''
+            }
+
+            ${
+              fac.licensed_add_ons
+                ? `<div class="facility-details-group">
+                     <h4 class="facility-details-heading">Add-on services, as DOH publishes them</h4>
+                     <p class="facility-add-ons">${escapeHtml(fac.licensed_add_ons)}</p>
                    </div>`
                 : ''
             }
