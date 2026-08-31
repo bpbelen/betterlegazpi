@@ -12,9 +12,14 @@ BUMP_TYPE="patch"
 SKIP_BUMP=false
 REACT_BUILD=true
 
+if [ -n "$CI" ] || [ -n "$CF_PAGES" ]; then
+    SKIP_BUMP=true
+fi
+
 for arg in "$@"; do
     case $arg in
         --no-bump) SKIP_BUMP=true ;;
+        --bump) SKIP_BUMP=false ;;
         --no-react) REACT_BUILD=false ;;
         major|minor|patch) BUMP_TYPE=$arg ;;
     esac

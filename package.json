@@ -4,7 +4,8 @@
   "description": "BetterLegazpi.org - Official Portal for LGU Legazpi City",
   "scripts": {
     "dev": "python serve.py -p 8000 -d .",
-    "build": "bash build.sh",
+    "build": "bash build.sh --no-bump",
+    "build:patch": "bash build.sh patch",
     "build:major": "bash scripts/build/version.sh major && bash build.sh --no-bump",
     "build:minor": "bash scripts/build/version.sh minor && bash build.sh --no-bump",
     "serve": "python serve.py -p 8000 -d .",
