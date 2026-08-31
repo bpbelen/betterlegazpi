@@ -54,8 +54,10 @@ class CleanURLHandler(SimpleHTTPRequestHandler):
     # Legacy routes, kept in step with the RewriteRules in .htaccess. Renaming a
     # directory silently breaks every external link to the old path, so the pair
     # of implementations has to agree here too, not just on clean URLs.
+    # Keep this list in step with the RewriteRules in .htaccess.
     LEGACY_REDIRECTS = {
         '/budget': '/transparency',
+        '/legislative': '/policies',
     }
 
     def _redirect_legacy(self):

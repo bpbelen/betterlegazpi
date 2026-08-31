@@ -23,7 +23,15 @@ npm run format           # prettier --write .   (see the Windows warning below)
 npm run format:check
 npm run lighthouse       # lhci autorun (mobile config)
 
+npm run sitemap          # regenerate sitemap.xml from the HTML on disk
+npm run sitemap:check    # fail if sitemap.xml has drifted from disk
+
+npm run hubs:fetch       # scripts/data/fetch-charters.js
+npm run hubs:validate / hubs:render / hubs:preview / hubs:check   # office-hub pipeline
+npm run transport:validate
+
 npm test                 # playwright test — all specs, all six browser projects
+npm run test:unit        # node --test over scripts/build/*.test.js, scripts/validate/*.test.js
 npm run test:chrome      # --project=chrome
 npm run test:report      # open last HTML report
 npx playwright test tests/site-responsive.spec.js --project=mobile-chrome   # one spec, one project
@@ -52,7 +60,9 @@ The site specs are driven by shared helpers rather than hardcoded lists — that
 - `lighthouse.yml` — builds `dist/`, serves it on :8080, runs a **mobile × desktop matrix** over 9 URLs. `.lighthouserc.json` (mobile) is all warnings; `.lighthouserc.desktop.json` gates `categories:accessibility` at `["error", {minScore: 0.9}]` — the only hard Lighthouse failure.
 - `facebook-sync.yml` — content sync (see `docs/facebook-sync.md`).
 
-Beyond Prettier and these specs there is no lint or type check for the plain HTML/JS. No pre-commit hook is installed.
+Beyond Prettier, these specs, and `npm run test:unit` (node's built-in runner over `scripts/build/*.test.js` and `scripts/validate/*.test.js`), there is no lint or type check for the plain HTML/JS. No pre-commit hook is installed.
+
+`sitemap.xml` is **generated**, not hand-edited — `npm run sitemap` rebuilds it from the HTML actually on disk, and `npm run sitemap:check` fails if the two have diverged. It was hand-maintained until it had drifted 16 pages behind; if you add a route, run the generator rather than editing the XML.
 
 ## Architecture
 
@@ -67,15 +77,26 @@ There is no templating layer, so header/nav/footer markup is **duplicated into e
 
 **Page structure.** Top-level directories each hold one topic's page(s):
 
-- `services/` — category landing pages only: the eleven routes reachable from the main nav and `services/index.html` (agriculture, business, certificates, education, employment, environment, health, infrastructure, social-services, tax-payments, utilities). A page covering one office or one programme belongs in `service-details/`, not here.
-- `service-details/` — per-office and per-programme pages (e.g. `city-civil-registrar.html`, `cto-services.html`, `philhealth-yakap.html`), linked from `data/services.json` entries or from their category page. These carry large page-local `<style>` blocks.
-- `travel/` — attractions, landmarks, food, accommodations, experience.
-- `government/`, `legislative/`, `budget/`, `statistics/`, `news/`, `history/`, `contact/`, `faq/`, `sitemap/`, `accessibility/`, `terms/`, `privacy/` — one section each.
+- `services/` — category landing pages only: the twelve routes reachable from the main nav and `services/index.html` (agriculture, business, certificates, education, employment, environment, health, housing, infrastructure, social-services, tax-payments, utilities). A page covering one office or one programme belongs in `service-details/`, not here.
+- `service-details/` — per-office and per-programme pages, 26 of them (e.g. `city-civil-registrar.html`, `cto-services.html`, `philhealth-yakap.html`), linked from `data/services.json` entries or from their category page. These carry large page-local `<style>` blocks.
+- `travel/` — attractions, landmarks, food, accommodations, experience, transportation, ibalong.
+- `government/`, `policies/`, `transparency/`, `statistics/`, `news/`, `history/`, `about/`, `contact/`, `faq/`, `sitemap/`, `accessibility/`, `terms/`, `privacy/` — one section each.
+
+  **Renamed sections.** `budget/` → `transparency/` and `legislative/` → `policies/`, to match the nav labels they always carried. Both old paths are 301-redirected, and that redirect is implemented **twice** — `LEGACY_REDIRECTS` in `serve.py` and `RewriteRule`s in `.htaccess` — so a further rename means editing both. Older docs under `docs/audits/` still use the old names; those are dated records, leave them.
+
 - `admin/news-editor.html` — standalone admin tool, excluded from the production build (see `build.sh` rsync excludes).
 
 **Data-driven content.** `data/*.json` (services, officials, news, ordinances, resolutions, demographics, health-facilities, barangays, dpwh-projects, fiscal-transparency, sumbong-flood-control, competitive-index, tourism-\*) is fetched client-side by matching modules in `assets/js/` (`officials.js`, `news.js`, `ordinances.js`, `resolutions.js`, `statistics.js`, `health-directory.js`, `dpwh-projects.js`, `sumbong-projects.js`, `budget.js`, `tourism.js`, `history.js`, `philhealth-yakap.js`, `search.js`). When adding or editing municipal data, edit the JSON — pages render it dynamically rather than hardcoding it, and `service-details/*.html` pages are cross-referenced by id/slug from `data/services.json`.
 
-**i18n — removed, planned for later.** The inherited `TranslationEngine` and its 1.1 MB `assets/js/translations.js` bundle are **gone**: no `data-i18n` attributes, no language toggle, no precache entry, no remaining reference. The site ships English-only. Per the note at `assets/js/main.js:520`, multi-language (English, Filipino, **Bicol**) is planned as **per-locale files fetched on demand**, not a single bundle loaded on every page. Do not add `data-i18n` attributes expecting them to work, and treat README's multi-language claims as describing BetterSolano, not this site.
+**i18n — live, built as per-locale files.** The inherited 1.1 MB `assets/js/translations.js` bundle is gone, and multi-language was rebuilt the intended way: **per-locale JSON fetched on demand** from `data/locales/` (`en.json`, `fil.json`), never one bundle on every page. The moving parts are a `.lang-toggle-btn` / `.lang-menu` in the header, `data-i18n` attributes on translatable nodes (~2,000 across 66 files), the loader and `localestrings` event in `assets/js/main.js` (from ~line 740), `.lang-*` styles in `assets/css/style.css`, and `tests/lang-switcher.spec.js`.
+
+- **English** is complete and is the language pages are authored in. Untranslated strings fall back to the English in the markup, so a missing key degrades to English rather than to a blank.
+- **Filipino** ships but is machine-made and unreviewed; the UI shows a notice to that effect.
+- **Bikol** (`bcl`) appears in the menu but is deliberately **not selectable** — it is held back pending a human translation. Do not switch it on with a machine translation.
+
+Adding a page means adding its `data-i18n` keys to `data/locales/*.json`; adding a locale means a new file there plus a menu entry. `tests/lang-switcher.spec.js` covers the switcher but is **not** in the blocking CI job, so run it by hand after touching the header.
+
+**Spelling:** **Bikol** is the language; **Bicol** is the region and appears in proper nouns (Bicol University, Bicol Express, Bicol Regional Hospital) and in the demonym _Bicolano_. Both are correct — do not "normalise" one into the other.
 
 **PWA.** `sw.js` is a versioned service worker (currently `v5`) with a dual-cache strategy (`STATIC_CACHE` precache + `RUNTIME_CACHE`, FIFO-capped at 80 entries with a 7-day TTL), network-first navigation falling back to `offline.html`, and `skipWaiting`/`controllerchange` silent updates (no manual refresh prompt). `manifest.webmanifest` declares install metadata/shortcuts. Bumping the site version is what invalidates the SW cache — `version.json` is the single source of truth, synced by `scripts/build/bump-version.js` into `package.json` and every HTML file's footer.
 

@@ -17,13 +17,16 @@
     # RewriteCond %{HTTP_HOST} !^www\. [NC]
     # RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # Legacy routes. /budget/ was renamed to /transparency/ to match the nav
-    # label it has always carried. The old path is indexed and linked from
-    # outside the site, so it is redirected rather than dropped. Must run
-    # before the clean-URL rules below, which would otherwise try to resolve
-    # budget.html and 404.
+    # Legacy routes. /budget/ was renamed to /transparency/ and /legislative/ to
+    # /policies/, to match the nav labels they have always carried. The old paths
+    # are indexed and linked from outside the site, so they are redirected rather
+    # than dropped. Must run before the clean-URL rules below, which would
+    # otherwise try to resolve budget.html / legislative.html and 404.
+    # Keep this list in step with LEGACY_REDIRECTS in serve.py.
     RewriteRule ^budget/?$ /transparency/ [L,R=301]
     RewriteRule ^budget/(.*)$ /transparency/$1 [L,R=301]
+    RewriteRule ^legislative/?$ /policies/ [L,R=301]
+    RewriteRule ^legislative/(.*)$ /policies/$1 [L,R=301]
 
     # Remove .html extension from URLs (redirect to clean URL)
     RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]

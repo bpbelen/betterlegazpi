@@ -1,6 +1,6 @@
 {
   "name": "betterlegazpi",
-  "version": "1.1.21",
+  "version": "1.2.0",
   "description": "BetterLegazpi.org - Official Portal for LGU Legazpi City",
   "scripts": {
     "dev": "python serve.py -p 8000 -d .",
@@ -19,6 +19,8 @@
     "hubs:preview": "node scripts/validate/validate-office-hubs.js --allow-unverified && node scripts/build/render-office-hubs.js",
     "hubs:check": "node scripts/validate/validate-office-hubs.js && node scripts/build/render-office-hubs.js --check",
     "transport:validate": "node scripts/validate/validate-transport.js",
+    "sitemap": "node scripts/build/generate-sitemap.js",
+    "sitemap:check": "node scripts/build/generate-sitemap.js --check",
     "test": "playwright test",
     "test:unit": "node --test \"scripts/build/*.test.js\" \"scripts/validate/*.test.js\"",
     "test:chrome": "playwright test --project=chrome",

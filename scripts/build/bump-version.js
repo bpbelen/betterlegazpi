@@ -147,4 +147,22 @@ try {
   console.warn('Warning: Could not update react-app/package.json:', e.message);
 }
 
+// Update the shields.io version badge in README.md. It was hand-maintained and
+// drifted (README said 1.1.19 while version.json said 1.1.21); syncing it here
+// keeps version.json the single source of truth it claims to be.
+try {
+  const readmeFile = path.join(REPO_ROOT, 'README.md');
+  const readme = fs.readFileSync(readmeFile, 'utf8');
+  const updated = readme.replace(
+    /(!\[Version\]\(https:\/\/img\.shields\.io\/badge\/version-)[0-9]+\.[0-9]+\.[0-9]+(-)/,
+    '$1' + newVersion + '$2'
+  );
+  if (updated !== readme) {
+    fs.writeFileSync(readmeFile, updated);
+    console.log('Synced version badge → README.md');
+  }
+} catch (e) {
+  console.warn('Warning: Could not update README.md badge:', e.message);
+}
+
 console.log('Done! Version is now ' + newVersion);

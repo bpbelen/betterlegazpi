@@ -76,3 +76,23 @@ one-time measurement, run locally; too large for CI.
 page-specific stylesheet, at five viewports. The regression gate. Its premise is
 that on a site with no templating, shared CSS is where cross-cutting risk lives,
 so sampling routes is adequate where sampling stylesheets would not be.
+
+## Language
+
+**Locale** — one file under `data/locales/`, named by language code (`en.json`,
+`fil.json`), fetched only when a visitor selects that language. There is no
+translation bundle loaded up front; a visitor who never opens the language menu
+downloads none of this. Untranslated keys fall back to the English authored in
+the markup, so a missing key degrades to English rather than to a blank.
+
+**Bikol vs Bicol** — two spellings, both correct, and not interchangeable.
+**Bikol** is the language: use it for the locale, the language menu, and any
+sentence about translation. **Bicol** is the region, and carries into proper
+nouns (Bicol University, Bicol Express, Bicol Regional Hospital and Medical
+Center) and the demonym _Bicolano_. A find-and-replace across the repo in
+either direction is always wrong.
+
+The language code for Central Bikol is `bcl`. Bikol is listed in the menu but
+deliberately not selectable: it is held back until a human translation exists,
+because a machine translation of a language this small would be worse than
+waiting. Filipino ships machine-made and says so in the UI.

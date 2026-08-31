@@ -520,12 +520,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initDropdowns();
 
-  // No language handling here: the site currently ships in English only.
-  // The inherited BetterLegazpi City TranslationEngine was removed along with its
-  // translations.js — no page carries data-i18n attributes or a language
-  // toggle. Multi-language (English, Filipino, Bicol) is planned for a later
-  // iteration and should be built as per-locale files fetched on demand,
-  // not as a single bundle loaded on every page.
+  // Language handling lives further down this file, not here — see the
+  // switcher and the locale loader below. The inherited BetterSolano
+  // TranslationEngine and its 1.1 MB translations.js were removed and replaced
+  // with per-locale JSON fetched on demand from data/locales/, so a visitor who
+  // never switches language downloads no translation payload at all.
+  // English is authored in the markup; Filipino ships machine-made and
+  // unreviewed; Bikol is in the menu but deliberately not selectable until a
+  // human translation exists.
 
   // Dynamic copyright year
   const yearElement = document.getElementById('copyright-year');

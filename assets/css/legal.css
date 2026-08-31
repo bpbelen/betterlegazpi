@@ -26,7 +26,7 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 }
 
-.legal-toc h4 {
+.legal-toc h2 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -184,7 +184,7 @@
   margin: 24px 0;
 }
 
-.legal-callout h4 {
+.legal-callout h3 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -303,7 +303,7 @@ Contact Section */
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
-[data-theme='dark'] .legal-toc h4 {
+[data-theme='dark'] .legal-toc h2 {
   color: var(--color-text);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -341,7 +341,7 @@ Contact Section */
   color: var(--color-text-light);
 }
 
-[data-theme='dark'] .legal-callout h4 {
+[data-theme='dark'] .legal-callout h3 {
   color: #4f8eff;
 }
 

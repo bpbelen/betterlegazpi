@@ -22,6 +22,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # sitemap.xml is generated from the pages on disk. It was hand-maintained
+      # until it had silently drifted 16 pages behind; this keeps that from
+      # recurring. Cheap, so it runs before the browsers are installed.
+      - name: Check sitemap.xml is current
+        run: npm run sitemap:check
+
+      - name: Unit tests
+        run: npm run test:unit
+
       # The `chrome` and `edge` projects in playwright.config.js use real
       # installed browser channels, which are slow and fragile on runners.
       # CI runs the bundled-engine projects instead; the branded channels stay
@@ -34,6 +43,7 @@ jobs:
           npx playwright test
           tests/site-responsive.spec.js
           tests/site-search.spec.js
+          tests/lang-switcher.spec.js
           tests/volunteer-modal.a11y.spec.js
           tests/volunteer-modal.behavior.spec.js
           tests/volunteer-modal.responsive.spec.js

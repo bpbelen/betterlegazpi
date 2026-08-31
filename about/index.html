@@ -17,7 +17,7 @@
       name="description"
       content="About BetterLegazpi.org - an independent, volunteer-run civic tech portal for Legazpi City, Albay. Learn who makes this site, what you can find here, and why legazpi.gov.ph remains the official source for city government records."
     />
-    <meta name="author" content="Ramon Logan Jr." />
+    <meta name="author" content="BetterLegazpi Team" />
     <meta
       name="keywords"
       content="about BetterLegazpi, independent civic tech, BetterGov.ph, volunteer project, Legazpi City, Albay, not official government website, legazpi.gov.ph, open source civic platform"
@@ -28,7 +28,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://betterlegazpi.org/about/" />
-    <meta property="og:title" content="About BetterLegazpi.org" />
+    <meta property="og:title" content="About | BetterLegazpi.org" />
     <meta
       property="og:description"
       content="About BetterLegazpi.org - an independent, volunteer-run civic tech portal for Legazpi City, Albay. Learn who makes this site, what you can find here, and why legazpi.gov.ph remains the official source for city government records."
@@ -50,7 +50,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://betterlegazpi.org/about/" />
-    <meta name="twitter:title" content="About BetterLegazpi.org" />
+    <meta name="twitter:title" content="About | BetterLegazpi.org" />
     <meta
       name="twitter:description"
       content="About BetterLegazpi.org - an independent, volunteer-run civic tech portal for Legazpi City, Albay. Learn who makes this site, what you can find here, and why legazpi.gov.ph remains the official source for city government records."
@@ -59,7 +59,10 @@
       name="twitter:image"
       content="https://betterlegazpi.org/assets/images/banners/opengraph.png"
     />
-    <title>About BetterLegazpi.org</title>
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0032a0" />
+
+    <title>About | BetterLegazpi.org</title>
     <link rel="icon" type="image/png" href="../assets/images/logo/betterlegazpi-favicon.png" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -350,7 +353,7 @@
             <span class="page-header-badge"
               ><i class="bi bi-info-circle"></i> <span data-i18n="about_badge">About</span></span
             >
-            <h1 data-i18n="about_title">About BetterLegazpi</h1>
+            <h1 data-i18n="about_title">About BetterLegazpi.org</h1>
             <p class="page-header-desc" data-i18n="about_tagline">
               What this site is, who makes it, and where the official records live
             </p>
@@ -363,9 +366,9 @@
         <div class="container">
           <div class="legal-wrapper">
             <!-- Table of Contents -->
-            <aside class="legal-toc">
-              <h4><i class="bi bi-list-ul"></i> <span>Contents</span></h4>
-              <nav>
+            <aside class="legal-toc" aria-labelledby="toc-heading">
+              <h2 id="toc-heading"><i class="bi bi-list-ul"></i> <span>Contents</span></h2>
+              <nav aria-labelledby="toc-heading">
                 <a href="#what-this-is">What This Site Is</a>
                 <a href="#official">Where the Official Records Live</a>
                 <a href="#why">Why We Built It</a>
@@ -593,6 +596,15 @@
                   Nobody is paid for this, and the site accepts no advertising. You can read more
                   about the people involved on our <a href="../faq/">FAQ page</a>.
                 </p>
+                <p>
+                  This site began as a fork of
+                  <a href="https://bettersolano.org" target="_blank" rel="noopener noreferrer"
+                    >BetterSolano.org</a
+                  >, built for LGU Solano, Nueva Vizcaya by
+                  <a href="https://ramonloganjr.com/" target="_blank" rel="noopener noreferrer"
+                    >Ramon Logan Jr.</a
+                  >, and was then retrofitted for Legazpi City. We are grateful for that groundwork.
+                </p>
               </section>
 
               <section id="help" class="legal-section">
@@ -602,10 +614,10 @@
                   things. You do not need to be a programmer to be useful:
                 </p>
                 <div class="legal-callout">
-                  <h4>
+                  <h3>
                     <i class="bi bi-lightbulb"></i>
                     <span>Ways to contribute:</span>
-                  </h4>
+                  </h3>
                   <ul>
                     <li>
                       Report anything wrong, missing, or out of date &mdash; a wrong fee or a
@@ -636,6 +648,7 @@
                   BetterLegazpi.org provides public domain information to support civic engagement,
                   transparency, and informed participation in local governance.
                 </p>
+                <p class="page-updated">Last updated: August 31, 2026</p>
               </section>
             </article>
           </div>
@@ -668,7 +681,7 @@
             </div>
           </div>
           <div class="footer-column">
-            <h4>Quick Links</h4>
+            <h2>Quick Links</h2>
             <ul class="footer-links-new">
               <li><a href="../services/">Services Directory</a></li>
               <li><a href="../travel/">Fun &amp; Adventure</a></li>
@@ -681,7 +694,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Resources</h4>
+            <h2>Resources</h2>
             <ul class="footer-links-new">
               <li>
                 <a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer"

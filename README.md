@@ -1,8 +1,8 @@
 # BetterLegazpi.org
 
-A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Legazpi City, Albay, Philippines.
+A civic-tech initiative providing transparent access to city services, programs, and public funds of LGU Legazpi City, Albay, Philippines.
 
-![Version](https://img.shields.io/badge/version-1.1.19-green)
+![Version](https://img.shields.io/badge/version-1.2.0-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -45,16 +45,16 @@ Each folder below is one section of the site, and its name is the web address. `
 | Folder                                                                   | What it holds                                                                |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
 | `index.html`                                                             | The homepage                                                                 |
-| [services/](services/)                                                   | The 11 service categories — health, business, certificates, taxes, and so on |
+| [services/](services/)                                                   | The 12 service categories — health, business, certificates, taxes, and so on |
 | [service-details/](service-details/)                                     | One page per city office or programme, with steps, fees, and requirements    |
 | [travel/](travel/)                                                       | Attractions, landmarks, food, accommodations, and things to do               |
 | [government/](government/)                                               | Elected officials and department heads                                       |
-| [legislative/](legislative/)                                             | Ordinances and resolutions                                                   |
-| [budget/](budget/)                                                       | Public funds — income, spending, and infrastructure projects                 |
+| [policies/](policies/)                                                   | Ordinances and resolutions                                                   |
+| [transparency/](transparency/)                                           | Public funds — income, spending, and infrastructure projects                 |
 | [statistics/](statistics/)                                               | Population, economy, and barangay data                                       |
 | [news/](news/)                                                           | Announcements and updates                                                    |
 | [history/](history/)                                                     | The history of Legazpi City                                                  |
-| [contact/](contact/), [faq/](faq/)                                       | How to reach the city, and common questions                                  |
+| [about/](about/), [contact/](contact/), [faq/](faq/)                     | Who runs this, how to reach the city, and common questions                   |
 | [sitemap/](sitemap/)                                                     | A human-readable index of every page                                         |
 | [accessibility/](accessibility/), [terms/](terms/), [privacy/](privacy/) | The site's legal and accessibility statements                                |
 | `403.html`, `404.html`, `500.html`, `offline.html`                       | Shown when a page is missing, blocked, or the visitor is offline             |
@@ -72,29 +72,29 @@ Each folder below is one section of the site, and its name is the web address. `
 
 Nothing in this group is published to the live site.
 
-| Folder                                 | What it holds                                                                                           |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [docs/](docs/)                         | Written documentation — decisions, workflows, audits, and the source research in `docs/sources/`        |
-| [scripts/build/](scripts/build/)       | Used every time the site is built. Don't move these without reading the notes in [CLAUDE.md](CLAUDE.md) |
-| [scripts/data/](scripts/data/)         | Occasional jobs that regenerate files in `data/` or fetch photos                                        |
-| [scripts/validate/](scripts/validate/) | Checkers you run by hand to confirm nothing is broken                                                   |
-| [tests/](tests/)                       | Automated checks that the site works on phones, tablets, and desktops                                   |
-| [admin/](admin/)                       | A standalone news editor for maintainers                                                                |
-| `scratch/`                             | Throwaway exploration, kept only as a record. Safe to ignore, and safe to delete                        |
-| `dist/`                                | The finished, compressed site, produced by `npm run build`. Never edited by hand                        |
+| Folder                                 | What it holds                                                                                                                                        |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [docs/](docs/)                         | Written documentation — decisions, workflows, audits, and the source research in `docs/sources/`                                                     |
+| [scripts/build/](scripts/build/)       | Used every time the site is built. Don't move these without reading the notes in [CLAUDE.md](CLAUDE.md)                                              |
+| [scripts/data/](scripts/data/)         | Occasional jobs that regenerate files in `data/` or fetch photos                                                                                     |
+| [scripts/validate/](scripts/validate/) | Checkers you run by hand to confirm nothing is broken                                                                                                |
+| [tests/](tests/)                       | Automated checks that the site works on phones, tablets, and desktops                                                                                |
+| [admin/](admin/)                       | A standalone news editor for maintainers                                                                                                             |
+| `scratch/`                             | Throwaway exploration kept as a record. Safe to ignore, but **not** safe to delete wholesale — `scratch/geo/*.json` is a cache two data scripts read |
+| `dist/`                                | The finished, compressed site, produced by `npm run build`. Never edited by hand                                                                     |
 
 ### Configuration in the root folder
 
-| File                            | Purpose                                                             |
-| ------------------------------- | ------------------------------------------------------------------- |
-| `package.json`                  | Project dependencies and the `npm run` commands                     |
-| `build.sh`                      | The build process, start to finish                                  |
-| `serve.py`                      | The local preview server                                            |
-| `.htaccess`                     | Live-server settings: clean URLs, security headers, compression     |
-| `sw.js`, `manifest.webmanifest` | What makes the site installable and usable offline                  |
-| `version.json`                  | The single source of truth for the version number                   |
-| `sitemap.xml`, `robots.txt`     | What search engines are told about the site                         |
-| `CLAUDE.md`, `CONTEXT.md`       | Notes for contributors and AI assistants working in this repository |
+| File                            | Purpose                                                                                                             |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `package.json`                  | Project dependencies and the `npm run` commands                                                                     |
+| `build.sh`                      | The build process, start to finish                                                                                  |
+| `serve.py`                      | The local preview server                                                                                            |
+| `.htaccess`                     | Live-server settings: clean URLs, security headers, compression                                                     |
+| `sw.js`, `manifest.webmanifest` | What makes the site installable and usable offline                                                                  |
+| `version.json`                  | The single source of truth for the version number                                                                   |
+| `sitemap.xml`, `robots.txt`     | What search engines are told about the site. `sitemap.xml` is generated — run `npm run sitemap`, don't hand-edit it |
+| `CLAUDE.md`, `CONTEXT.md`       | Notes for contributors and AI assistants working in this repository                                                 |
 
 ---
 
@@ -149,7 +149,10 @@ npm run dev          # http://localhost:8000
 | `npm run version:patch`      | Bump patch version only                                               |
 | `npm run version:minor`      | Bump minor version only                                               |
 | `npm run version:major`      | Bump major version only                                               |
+| `npm run sitemap`            | Regenerate `sitemap.xml` from the pages on disk                       |
+| `npm run sitemap:check`      | Fail if `sitemap.xml` has drifted from the pages on disk              |
 | `npm test`                   | Run the full Playwright suite                                         |
+| `npm run test:unit`          | Run the Node unit tests for the build and validate scripts            |
 | `npm run test:chrome`        | Run the suite in Chrome only                                          |
 | `npm run test:report`        | Open the last HTML test report                                        |
 | `npm run lighthouse`         | Run Lighthouse CI (mobile config)                                     |
@@ -201,23 +204,25 @@ The build sets these permissions automatically.
 
 ## Key Features
 
-| Feature                          | Description                                                                                                                |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **Municipal Services Directory** | Comprehensive guide to city services with requirements, fees, and processing times, cross-referenced to office pages       |
-| **Government Officials**         | Directory of elected officials and department heads with contact information                                               |
-| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                              |
-| **City Statistics**              | Demographics, economic data, and competitive index rankings                                                                |
-| **Tourism Directory**            | Attractions, landmarks, food, accommodations, and experiences                                                              |
-| **Real-time Information**        | Live weather, currency exchange rates, and Philippine time                                                                 |
-| **Emergency Hotline Bar**        | Standardized emergency contact numbers shown on every page                                                                 |
-| **Progressive Web App**          | Installable, with seamless auto-updates, versioned service-worker caching, and an offline page carrying emergency hotlines |
-| **Auto Version Management**      | Version displayed from `version.json`, synced across every HTML page and `package.json`                                    |
-| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions                                                                               |
-| **Accessibility**                | WCAG 2.1 target: skip links, ARIA labels, keyboard navigation, semantic HTML                                               |
-| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, XML sitemap                                                         |
-| **Performance**                  | Minification, GZIP compression, Babel transpilation, browser caching                                                       |
+| Feature                          | Description                                                                                                                                                                    |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Municipal Services Directory** | Comprehensive guide to city services with requirements, fees, and processing times, cross-referenced to office pages                                                           |
+| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                   |
+| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                  |
+| **City Statistics**              | Demographics, economic data, and competitive index rankings                                                                                                                    |
+| **Tourism Directory**            | Attractions, landmarks, food, accommodations, and experiences                                                                                                                  |
+| **Real-time Information**        | Live weather, currency exchange rates, and Philippine time                                                                                                                     |
+| **Emergency Hotline Bar**        | Standardized emergency contact numbers shown on every page                                                                                                                     |
+| **Progressive Web App**          | Installable, with seamless auto-updates, versioned service-worker caching, and an offline page carrying emergency hotlines                                                     |
+| **Auto Version Management**      | Version displayed from `version.json`, synced across every HTML page and `package.json`                                                                                        |
+| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions                                                                                                                                   |
+| **Accessibility**                | WCAG 2.1 Level AA target, partially conformant — skip links, ARIA labels, keyboard navigation, semantic HTML. Shortfalls are named on the [accessibility page](accessibility/) |
+| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, XML sitemap                                                                                                             |
+| **Performance**                  | Minification, GZIP compression, Babel transpilation, browser caching                                                                                                           |
 
-**Not yet live:** multi-language support (English, Filipino, Bicol) is planned but not currently wired up — see [CLAUDE.md](CLAUDE.md) for the current state and rationale. The legislative documents section is intentionally held back pending real Legazpi City data.
+**Languages.** English is complete. **Filipino** ships but is machine-translated and not yet reviewed by a native speaker, so the UI says so plainly. **Bikol** appears in the language menu but is deliberately not selectable — it is held back until a human translation exists, because shipping a bad one would be worse than waiting. Translations are per-locale files in `data/locales/`, fetched only when a visitor switches language.
+
+Note the spelling convention: **Bikol** is the language; **Bicol** is the region, and appears in proper nouns (Bicol University, Bicol Express) and in the demonym _Bicolano_.
 
 ## Technology Stack
 
@@ -288,7 +293,7 @@ Questions, bug reports, and feature requests: open a [GitHub issue](https://gith
 ## Acknowledgments
 
 - [BetterGov.ph](https://bettergov.ph) for the civic-tech initiative in the Philippines
-- [BetterSolano.org](https://github.com/BetterSolano/bettersolano), the original project this repository was forked and retrofitted from
+- [BetterSolano.org](https://github.com/BetterSolano/bettersolano) by [Ramon Logan Jr.](https://ramonloganjr.com/) — the original project this repository was forked and retrofitted from
 - All volunteers and contributors who dedicate their time
 - The open-source community for the tools and libraries used
 - Citizens of Legazpi City for their feedback and support

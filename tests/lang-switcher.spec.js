@@ -193,8 +193,11 @@ test.describe('/index.html hero (Filipino)', () => {
       'Tingnan ang Lahat ng Serbisyo'
     );
 
-    // Nav is NOT translated yet (its markup isn't uniform across pages, see
-    // the comment above AVAILABLE in main.js) — this should stay English.
-    await expect(page.locator('.main-nav a[href="/government/"]')).toHaveText('Government');
+    // The nav translates too, now that data-i18n reaches the shared chrome.
+    await expect(page.locator('.main-nav a[href="/government/"]')).toHaveText('Pamahalaan');
+    // "Home" is deliberately left as-is in fil.json: it is the word Filipino
+    // speakers actually use for this nav item, so translating it would read
+    // as stilted rather than helpful.
+    await expect(page.locator('.main-nav a[href="/"]')).toHaveText('Home');
   });
 });
