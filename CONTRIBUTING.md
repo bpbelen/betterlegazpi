@@ -78,16 +78,16 @@ Types:
 
 ## Contribution Areas
 
-| Area               | Description                          |
-| ------------------ | ------------------------------------- |
-| Bug Fixes          | Fix reported issues                  |
-| Features           | Implement new functionality          |
-| Content            | Update municipal service information |
+| Area               | Description                                           |
+| ------------------ | ----------------------------------------------------- |
+| Bug Fixes          | Fix reported issues                                   |
+| Features           | Implement new functionality                           |
+| Content            | Update municipal service information                  |
 | Translations       | Help build out planned English/Filipino/Bicol support |
-| Design             | Improve UI/UX and accessibility      |
-| Data               | Verify and update statistics         |
-| Documentation      | Improve guides and comments          |
-| Data Visualization | Enhance charts and graphs            |
+| Design             | Improve UI/UX and accessibility                       |
+| Data               | Verify and update statistics                          |
+| Documentation      | Improve guides and comments                           |
+| Data Visualization | Enhance charts and graphs                             |
 
 ## Code Guidelines
 
@@ -147,7 +147,7 @@ Pull requests are reviewed for:
 
 ## Community
 
-Questions or discussion happen on [GitHub Issues](https://github.com/bpbelen/betterlegazpi/issues) — feel free to open one.
+Questions or discussion happen on [GitHub Issues](https://github.com/bpbelen/betterlegazpi/issues) — feel free to open one. To volunteer or ask something privately, email [volunteer@betterlegazpi.org](mailto:volunteer@betterlegazpi.org), or follow along on [Facebook](https://www.facebook.com/betterlegazpi).
 
 ## Recognition
 

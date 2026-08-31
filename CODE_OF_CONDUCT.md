@@ -35,7 +35,7 @@ This Code of Conduct applies to all project spaces, including:
 
 ## Enforcement
 
-Instances of unacceptable behavior may be reported by opening a [GitHub issue](https://github.com/bpbelen/betterlegazpi/issues) or contacting the maintainer directly through GitHub.
+Instances of unacceptable behavior may be reported by opening a [GitHub issue](https://github.com/bpbelen/betterlegazpi/issues), contacting the maintainer directly through GitHub, or emailing [volunteer@betterlegazpi.org](mailto:volunteer@betterlegazpi.org) for a private report.
 
 All complaints will be reviewed and investigated promptly and fairly. The project team is obligated to maintain confidentiality regarding the reporter.
 

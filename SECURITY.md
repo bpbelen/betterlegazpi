@@ -27,7 +27,7 @@ Include in your report:
 ### Response Timeline
 
 | Action             | Timeframe             |
-| ------------------ | ---------------------- |
+| ------------------ | --------------------- |
 | Acknowledgment     | Within 48 hours       |
 | Initial Assessment | Within 7 days         |
 | Resolution Target  | Within 30 days        |
@@ -62,12 +62,12 @@ Include in your report:
 
 ### Third-Party Services
 
-| Service          | Purpose          | Data Shared                |
-| ---------------- | ---------------- | --------------------------- |
-| Google Analytics | Usage statistics | Anonymous page views        |
-| Open-Meteo API   | Weather data     | Location (Legazpi City)     |
-| ExchangeRate API | Currency rates   | None                        |
-| OpenStreetMap    | Map tiles        | None                        |
+| Service          | Purpose          | Data Shared             |
+| ---------------- | ---------------- | ----------------------- |
+| Google Analytics | Usage statistics | Anonymous page views    |
+| Open-Meteo API   | Weather data     | Location (Legazpi City) |
+| ExchangeRate API | Currency rates   | None                    |
+| OpenStreetMap    | Map tiles        | None                    |
 
 ## Best Practices for Contributors
 
@@ -96,7 +96,7 @@ Out of scope:
 
 For security concerns, open a [security advisory](https://github.com/bpbelen/betterlegazpi/security/advisories/new).
 
-For general inquiries, open a [GitHub issue](https://github.com/bpbelen/betterlegazpi/issues).
+For general inquiries, open a [GitHub issue](https://github.com/bpbelen/betterlegazpi/issues) or email [volunteer@betterlegazpi.org](mailto:volunteer@betterlegazpi.org).
 
 ---
 

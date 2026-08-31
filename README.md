@@ -9,7 +9,7 @@ A civic-tech initiative providing transparent access to city services, programs,
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
 
-This project began as a fork of [BetterSolano.org](https://github.com/BetterSolano/bettersolano), a civic-tech site built for LGU Solano, Nueva Vizcaya, retrofitted for Legazpi City. See [MIGRATION.md](MIGRATION.md) for background on the upstream project's React + TypeScript rewrite (not part of this repository).
+This project began as a fork of [BetterSolano.org](https://github.com/BetterSolano/bettersolano), a civic-tech site built for LGU Solano, Nueva Vizcaya, retrofitted for Legazpi City.
 
 ## About
 
@@ -18,6 +18,8 @@ BetterLegazpi.org is a volunteer-driven, open-source project that empowers the p
 **Cost to the People of Legazpi = ₱0**
 
 Visit the live website: [https://betterlegazpi.org](https://betterlegazpi.org)
+
+Follow updates on Facebook: [facebook.com/betterlegazpi](https://www.facebook.com/betterlegazpi)
 
 ## Open Source for LGUs
 
@@ -137,27 +139,24 @@ npm run dev          # http://localhost:8000
 
 ## Commands
 
-| Command                      | Description                                                           |
-| ---------------------------- | --------------------------------------------------------------------- |
-| `npm run dev`                | Start the local development server (port 8000, clean URLs)            |
-| `npm run build`              | Build minified production files to `dist/` (auto-bumps patch version) |
-| `npm run build -- --no-bump` | Build without incrementing the version number                         |
-| `npm run build:minor`        | Bump minor version and build                                          |
-| `npm run build:major`        | Bump major version and build                                          |
-| `npm run serve:dist`         | Serve the production build (port 8080)                                |
-| `npm run version:check`      | Display the current version                                           |
-| `npm run version:patch`      | Bump patch version only                                               |
-| `npm run version:minor`      | Bump minor version only                                               |
-| `npm run version:major`      | Bump major version only                                               |
-| `npm run sitemap`            | Regenerate `sitemap.xml` from the pages on disk                       |
-| `npm run sitemap:check`      | Fail if `sitemap.xml` has drifted from the pages on disk              |
-| `npm test`                   | Run the full Playwright suite                                         |
-| `npm run test:unit`          | Run the Node unit tests for the build and validate scripts            |
-| `npm run test:chrome`        | Run the suite in Chrome only                                          |
-| `npm run test:report`        | Open the last HTML test report                                        |
-| `npm run lighthouse`         | Run Lighthouse CI (mobile config)                                     |
-| `npm run format`             | Format all files with Prettier — **see the Windows warning below**    |
-| `npm run format:check`       | Check formatting without writing changes                              |
+| Command                                       | Description                                                           |
+| --------------------------------------------- | --------------------------------------------------------------------- |
+| `npm run dev`                                 | Start the local development server (port 8000, clean URLs)            |
+| `npm run build`                               | Build minified production files to `dist/` (auto-bumps patch version) |
+| `npm run build -- --no-bump`                  | Build without incrementing the version number                         |
+| `npm run build:minor` / `:major`              | Bump minor/major version and build                                    |
+| `npm run serve:dist`                          | Serve the production build (port 8080)                                |
+| `npm run version:check`                       | Display the current version                                           |
+| `npm run version:patch` / `:minor` / `:major` | Bump the given version part only, no build                            |
+| `npm run sitemap`                             | Regenerate `sitemap.xml` from the pages on disk                       |
+| `npm run sitemap:check`                       | Fail if `sitemap.xml` has drifted from the pages on disk              |
+| `npm test`                                    | Run the full Playwright suite                                         |
+| `npm run test:unit`                           | Run the Node unit tests for the build and validate scripts            |
+| `npm run test:chrome`                         | Run the suite in Chrome only                                          |
+| `npm run test:report`                         | Open the last HTML test report                                        |
+| `npm run lighthouse`                          | Run Lighthouse CI (mobile config)                                     |
+| `npm run format`                              | Format all files with Prettier — **see the Windows warning below**    |
+| `npm run format:check`                        | Check formatting without writing changes                              |
 
 There is no `build:patch` — plain `npm run build` _is_ the patch bump.
 
@@ -213,12 +212,9 @@ The build sets these permissions automatically.
 | **Tourism Directory**            | Attractions, landmarks, food, accommodations, and experiences                                                                                                                  |
 | **Real-time Information**        | Live weather, currency exchange rates, and Philippine time                                                                                                                     |
 | **Emergency Hotline Bar**        | Standardized emergency contact numbers shown on every page                                                                                                                     |
-| **Progressive Web App**          | Installable, with seamless auto-updates, versioned service-worker caching, and an offline page carrying emergency hotlines                                                     |
-| **Auto Version Management**      | Version displayed from `version.json`, synced across every HTML page and `package.json`                                                                                        |
-| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions                                                                                                                                   |
+| **Progressive Web App**          | Installable, with auto-updates, versioned service-worker caching, and an offline page carrying emergency hotlines                                                              |
 | **Accessibility**                | WCAG 2.1 Level AA target, partially conformant — skip links, ARIA labels, keyboard navigation, semantic HTML. Shortfalls are named on the [accessibility page](accessibility/) |
-| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, XML sitemap                                                                                                             |
-| **Performance**                  | Minification, GZIP compression, Babel transpilation, browser caching                                                                                                           |
+| **SEO**                          | Clean URLs, meta tags, Open Graph, structured data, XML sitemap                                                                                                                |
 
 **Languages.** English is complete. **Filipino** ships but is machine-translated and not yet reviewed by a native speaker, so the UI says so plainly. **Bikol** appears in the language menu but is deliberately not selectable — it is held back until a human translation exists, because shipping a bad one would be worse than waiting. Translations are per-locale files in `data/locales/`, fetched only when a visitor switches language.
 
@@ -226,25 +222,15 @@ Note the spelling convention: **Bikol** is the language; **Bicol** is the region
 
 ## Technology Stack
 
-| Category            | Technologies                                                                                |
-| ------------------- | ------------------------------------------------------------------------------------------- |
-| **Frontend**        | HTML5, CSS3, JavaScript (ES6+) — no framework, no bundler                                   |
-| **Styling**         | Custom CSS, CSS variables, Flexbox, CSS Grid, responsive design                             |
-| **Icons**           | Bootstrap Icons (jsDelivr CDN)                                                              |
-| **Fonts**           | Google Fonts (Inter)                                                                        |
-| **Maps**            | Leaflet.js, OpenStreetMap                                                                   |
-| **Charts**          | Chart.js                                                                                    |
-| **Data Format**     | JSON                                                                                        |
-| **APIs**            | Open-Meteo (weather), exchangerate.host and open.er-api.com (currency), Facebook page embed |
-| **Build Tools**     | Node.js, npm, Bash, Babel (`@babel/preset-env`)                                             |
-| **Minification**    | html-minifier-terser, clean-css-cli, terser                                                 |
-| **Code Formatting** | Prettier                                                                                    |
-| **Testing**         | Playwright, axe-core, Lighthouse CI                                                         |
-| **Server**          | Apache (`.htaccess`), mod_rewrite, mod_deflate                                              |
-| **Hosting**         | cPanel (production), Python HTTP server (development)                                       |
-| **PWA**             | Versioned service worker, web app manifest, offline fallback                                |
-| **Security**        | HTTPS, CSP headers, HSTS, X-Frame-Options                                                   |
-| **Analytics**       | Google Analytics (gtag.js)                                                                  |
+| Category           | Technologies                                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------------- |
+| **Frontend**       | HTML5, CSS3, JavaScript (ES6+) — no framework, no bundler                                                     |
+| **Data**           | JSON files in `data/`, fetched client-side                                                                    |
+| **Libraries**      | Leaflet.js + OpenStreetMap (maps), Chart.js (charts), Bootstrap Icons, Google Fonts (Inter)                   |
+| **APIs**           | Open-Meteo (weather), exchangerate.host / open.er-api.com (currency), Facebook page embed                     |
+| **Build & test**   | Node.js/npm, Babel, Terser/clean-css/html-minifier-terser, Prettier, Playwright, Lighthouse CI                |
+| **Server**         | Apache (`.htaccess`, mod_rewrite, mod_deflate) on cPanel in production; Python's `http.server` in development |
+| **PWA & security** | Versioned service worker, web app manifest, HTTPS, CSP/HSTS/X-Frame-Options headers                           |
 
 ## Contributing
 
@@ -261,13 +247,17 @@ Deeper technical notes, including the vocabulary this project uses, are in [CLAU
 
 All public information is sourced from official government portals:
 
-| Source                                | URL                                         | Data Type                 |
-| ------------------------------------- | ------------------------------------------- | ------------------------- |
-| LGU Legazpi Official Website          | [legazpi.gov.ph](https://legazpi.gov.ph/)   | Services, Officials       |
-| Bureau of Local Government Finance    | [blgf.gov.ph](https://blgf.gov.ph/)         | Budget, Financial Reports |
-| Philippine Statistics Authority       | [psa.gov.ph](https://psa.gov.ph/)           | Demographics, Census      |
-| DTI CMCI Portal                       | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/) | Competitive Index         |
-| DOH National Health Facility Registry | [nhfr.doh.gov.ph](https://nhfr.doh.gov.ph/) | Health Facilities         |
+| Source                                  | URL                                                                   | Data Type                           |
+| --------------------------------------- | --------------------------------------------------------------------- | ----------------------------------- |
+| LGU Legazpi Official Website            | [legazpi.gov.ph](https://legazpi.gov.ph/)                             | Services, Officials, Tourism        |
+| Bureau of Local Government Finance      | [blgf.gov.ph](https://blgf.gov.ph/)                                   | Budget, Financial Reports           |
+| Philippine Statistics Authority         | [psa.gov.ph](https://psa.gov.ph/)                                     | Demographics, Census, Barangay Data |
+| DTI CMCI Portal                         | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                           | Competitive Index                   |
+| DOH National Health Facility Registry   | [nhfr.doh.gov.ph](https://nhfr.doh.gov.ph/)                           | Health Facilities                   |
+| DOH Bicol Center for Health Development | [bicol.doh.gov.ph](https://bicol.doh.gov.ph/)                         | Animal Bite Treatment Centers       |
+| PhilHealth                              | [philhealth.gov.ph](https://www.philhealth.gov.ph/)                   | YAKAP / GAMOT Accredited Facilities |
+| LTFRB                                   | [ltfrb.gov.ph](https://ltfrb.gov.ph/)                                 | Public Transport Fares              |
+| DPWH — Sumbong sa Pangulo               | [sumbongsapangulo.ph](https://sumbongsapangulo.ph/flood-control-map/) | Flood Control Projects              |
 
 Source documents compiled during research are kept in [docs/sources/](docs/sources/).
 
@@ -288,7 +278,7 @@ See [LICENSE](LICENSE) for full details.
 
 ## Contact
 
-Questions, bug reports, and feature requests: open a [GitHub issue](https://github.com/bpbelen/betterlegazpi/issues).
+Questions, bug reports, and feature requests: open a [GitHub issue](https://github.com/bpbelen/betterlegazpi/issues). To volunteer or get in touch directly, email [volunteer@betterlegazpi.org](mailto:volunteer@betterlegazpi.org), or follow along on [Facebook](https://www.facebook.com/betterlegazpi).
 
 ## Acknowledgments
 
