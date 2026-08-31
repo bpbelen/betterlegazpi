@@ -13,9 +13,20 @@ wholesale. This script is the enrichment pass on top of that output:
 Precedence rule: the DOH National Health Facility Registry wins. HFSRB
 publishes the registry's own `NHFR CODE` column, so it is authoritative for
 `doh_code`; a disagreeing local value is preserved as a data note rather than
-discarded. The one deliberate override is BRHMC, which both DOH sources file
-under Daraga but which this directory keeps as a Legazpi facility -- the
-conflict is recorded, not acted on.
+discarded.
+
+BRHMC is the one facility both DOH sources file under Daraga, Albay. It is
+still listed in this directory because it is the regional referral hospital
+serving Legazpi City, but its address now reads Daraga and it is excluded from
+the facility totals -- the conflict is acted on, not merely recorded. Re-running
+this script must not reinstate a Legazpi address for it.
+
+WARNING: this script has not been re-run since data/health-facilities.json was
+corrected against PhilHealth's two accreditation lists. It knows nothing about
+the is_yakap_konsulta / is_yakap_gamot split, the gamot_providers array, or the
+merged Philippine Red Cross record, and it still writes the retired
+`is_yakap_accredited` pair described below. Reconcile it with the JSON before
+running it again.
 
 Nothing new is added to the facility record schema. HFSRB licensing and ABTC
 certification ride inside the existing `accreditations` object, mirroring the

@@ -11,7 +11,13 @@
       "publisher": "PhilHealth",
       "title": "List of Accredited YAKAP Clinics with Available GAMOT Prescription for CY 2026",
       "as_of": "2026-07-31",
-      "url": "https://www.philhealth.gov.ph/"
+      "url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf"
+    },
+    {
+      "publisher": "PhilHealth",
+      "title": "List of Accredited PhilHealth GAMOT Package Providers for CY 2026",
+      "as_of": "2026-07-31",
+      "url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/GAMOT.pdf"
     },
     {
       "publisher": "Legazpi City Health Office",
@@ -27,7 +33,7 @@
     },
     {
       "publisher": "Department of Health – Health Facilities and Services Regulatory Bureau",
-      "title": "ist of Licensed Ambulatory Surgical Clinics (as of June 30, 2026)",
+      "title": "List of Licensed Ambulatory Surgical Clinics (as of June 30, 2026)",
       "as_of": "2026-06-30",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQmUU2oMSgAYZojzn5040H3Om5vckQiWCKCMNsD7AoxQCbxDPuDoimifznf8ZZuNkyXxexaAjwLhvpo/pubhtml"
     },
@@ -78,20 +84,21 @@
   "province": "Albay",
   "region": "Region V - Bicol Region",
   "summary_counts": {
-    "total": 120,
-    "hospitals": 8,
-    "yakap_accredited": 13,
+    "total": 118,
+    "hospitals": 7,
     "super_health_centers": 1,
     "birthing_homes": 13,
-    "laboratories": 15,
+    "laboratories": 14,
     "dialysis_centers": 3,
     "drug_testing_laboratories": 3,
     "ambulatory_surgical_clinics": 1,
     "blood_service_facilities": 1,
     "animal_bite_centers": 3,
     "barangay_health_stations": 70,
-    "government_owned": 81,
-    "private_owned": 39
+    "government_owned": 79,
+    "private_owned": 39,
+    "yakap_konsulta_clinics": 7,
+    "gamot_providers": 7
   },
   "facilities": [
     {
@@ -101,13 +108,14 @@
       "category": "Hospital",
       "type": "Level 3 Tertiary Apex Medical Center",
       "ownership": "Government",
+      "doh_code": "270",
+      "outside_city_limits": true,
       "address": {
         "street": "Rizal Street",
         "building": "BRHMC Medical Complex",
-        "barangay": "Bgy. 1 - Em's Barrio / Concepcion Border",
-        "city": "Legazpi City",
+        "city": "Daraga",
         "province": "Albay",
-        "zip": "4500"
+        "zip": "4501"
       },
       "contact": {
         "landline": "(052) 483-0017 / (052) 483-0014",
@@ -117,13 +125,15 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "yakap_validity": "2026-12-31",
         "philhealth_accredited": true,
         "is_abtc_certified": true,
-        "abtc_validity": "2027-01-21"
+        "abtc_validity": "2027-01-21",
+        "is_yakap_gamot": true,
+        "gamot_provider_no": "1594",
+        "gamot_valid_until": "2026-12-31"
       },
       "services": [
+        "YAKAP GAMOT medicine dispensing",
         "24/7 Emergency",
         "Trauma & Critical Care",
         "Specialized Surgery",
@@ -164,7 +174,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30"
       },
@@ -207,14 +216,19 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "yakap_validity": "2026-12-31",
         "philhealth_accredited": true,
-        "hfsrb_as_of": "2026-06-30"
+        "hfsrb_as_of": "2026-06-30",
+        "is_yakap_konsulta": true,
+        "yakap_konsulta_no": "2071",
+        "yakap_konsulta_valid_until": "2026-12-31",
+        "is_yakap_gamot": true,
+        "gamot_provider_no": "1593",
+        "gamot_valid_until": "2026-12-31"
       },
       "services": [
+        "PhilHealth YAKAP Konsulta",
+        "YAKAP GAMOT medicine dispensing",
         "24/7 Emergency",
-        "YAKAP Konsulta & GAMOT",
         "Inpatient Care",
         "Maternity & Child Care",
         "Surgical Services",
@@ -252,14 +266,19 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "yakap_validity": "2026-12-31",
         "philhealth_accredited": true,
-        "hfsrb_as_of": "2026-06-30"
+        "hfsrb_as_of": "2026-06-30",
+        "is_yakap_konsulta": true,
+        "yakap_konsulta_no": "2105",
+        "yakap_konsulta_valid_until": "2026-12-31",
+        "is_yakap_gamot": true,
+        "gamot_provider_no": "1616",
+        "gamot_valid_until": "2026-12-31"
       },
       "services": [
+        "PhilHealth YAKAP Konsulta",
+        "YAKAP GAMOT medicine dispensing",
         "24/7 Emergency",
-        "YAKAP Konsulta Clinic",
         "Inpatient & Outpatient",
         "General Surgery & OB-GYN",
         "Pediatrics",
@@ -297,14 +316,15 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "yakap_validity": "2026-12-31",
         "philhealth_accredited": true,
-        "hfsrb_as_of": "2026-06-30"
+        "hfsrb_as_of": "2026-06-30",
+        "is_yakap_konsulta": true,
+        "yakap_konsulta_no": "2086",
+        "yakap_konsulta_valid_until": "2026-12-31"
       },
       "services": [
+        "PhilHealth YAKAP Konsulta",
         "24/7 Emergency",
-        "YAKAP Konsulta & GAMOT",
         "General Inpatient Care",
         "Maternity & Delivery",
         "Pediatrics",
@@ -340,7 +360,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30",
         "is_abtc_certified": true,
@@ -386,7 +405,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30"
       },
@@ -427,7 +445,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30"
       },
@@ -453,7 +470,6 @@
       "type": "City Health Office & Primary Care Facility",
       "ownership": "Government",
       "doh_code": "6700",
-      "yakap_code": "2085",
       "address": {
         "street": "City Hall Compound, Rizal Street",
         "building": "City Health Office Building",
@@ -470,13 +486,17 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2027-12-31",
-        "is_yakap_accredited": true,
-        "yakap_validity": "2026-12-31",
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "is_yakap_konsulta": true,
+        "yakap_konsulta_no": "2085",
+        "yakap_konsulta_valid_until": "2026-12-31",
+        "is_yakap_gamot": true,
+        "gamot_provider_no": "1606",
+        "gamot_valid_until": "2027-03-25"
       },
       "services": [
-        "Free YAKAP Konsulta Consultations",
-        "Free GAMOT Maintenance Medicines",
+        "PhilHealth YAKAP Konsulta",
+        "YAKAP GAMOT medicine dispensing",
         "Childhood Immunization & EPI",
         "Prenatal & Postnatal Care",
         "TB-DOTS Treatment",
@@ -496,7 +516,6 @@
       "category": "PhilHealth YAKAP Clinic",
       "type": "Primary Care Facility & Specialty Clinic",
       "ownership": "Private",
-      "yakap_code": "2093",
       "address": {
         "street": "213 Magallanes Street",
         "building": "",
@@ -513,14 +532,14 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "yakap_validity": "2026-12-31",
         "philhealth_accredited": true,
-        "hfsrb_as_of": "2026-03-31"
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_konsulta": true,
+        "yakap_konsulta_no": "2093",
+        "yakap_konsulta_valid_until": "2026-12-31"
       },
       "services": [
-        "PhilHealth YAKAP Konsulta Package",
-        "GAMOT Prescription Dispensing",
+        "PhilHealth YAKAP Konsulta",
         "General Medical Consultation",
         "Diagnostic Laboratory",
         "Preventive Health Checkups",
@@ -540,7 +559,6 @@
       "category": "PhilHealth YAKAP Clinic",
       "type": "Government Institutional Health Facility",
       "ownership": "Government",
-      "yakap_code": "2094",
       "address": {
         "street": "Camp BGen Simeon A. Ola",
         "building": "RMDU 5 Health Facility",
@@ -557,12 +575,13 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "yakap_validity": "2026-12-31",
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "is_yakap_konsulta": true,
+        "yakap_konsulta_no": "2094",
+        "yakap_konsulta_valid_until": "2026-12-31"
       },
       "services": [
-        "PhilHealth YAKAP Konsulta Services",
+        "PhilHealth YAKAP Konsulta",
         "General Medical & Dental Consultations",
         "Physical Examinations",
         "Primary Care & First Aid"
@@ -580,7 +599,6 @@
       "category": "PhilHealth YAKAP Clinic",
       "type": "Primary Care & Occupational Health Clinic",
       "ownership": "Private",
-      "yakap_code": "2104",
       "address": {
         "street": "Landco Business Park",
         "building": "2F Towermall Building 4",
@@ -597,13 +615,14 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "yakap_validity": "2026-12-31",
         "philhealth_accredited": true,
-        "hfsrb_as_of": "2026-03-31"
+        "hfsrb_as_of": "2026-03-31",
+        "is_yakap_konsulta": true,
+        "yakap_konsulta_no": "2104",
+        "yakap_konsulta_valid_until": "2026-12-31"
       },
       "services": [
-        "PhilHealth YAKAP Konsulta Provider",
+        "PhilHealth YAKAP Konsulta",
         "Occupational Health & Pre-Employment Exams",
         "Diagnostic Laboratory Tests",
         "Executive Health Checkups",
@@ -641,16 +660,14 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2027-12-31",
-        "is_yakap_accredited": true,
-        "yakap_validity": "2026-12-31",
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "yakap_under_accreditation_of": "fac-yakap-001"
       },
       "services": [
         "Outpatient Consultations",
         "Birthing & Lying-in Facility",
         "Laboratory & Ultrasound Diagnostics",
         "Childhood Immunization",
-        "Pharmacy & GAMOT Dispensing",
         "Dental Care",
         "Minor Surgery & Triage"
       ],
@@ -684,8 +701,8 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "yakap_under_accreditation_of": "fac-yakap-001"
       },
       "services": [
         "24/7 Normal Spontaneous Delivery",
@@ -723,8 +740,8 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "yakap_under_accreditation_of": "fac-yakap-001"
       },
       "services": [
         "24/7 Normal Spontaneous Delivery",
@@ -762,8 +779,8 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "yakap_under_accreditation_of": "fac-yakap-001"
       },
       "services": [
         "Normal Delivery Services",
@@ -801,8 +818,8 @@
       "accreditations": {
         "is_doh_licensed": true,
         "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": true,
-        "philhealth_accredited": true
+        "philhealth_accredited": true,
+        "yakap_under_accreditation_of": "fac-yakap-001"
       },
       "services": [
         "CBC & Blood Chemistry",
@@ -815,44 +832,6 @@
       "coordinates": {
         "lat": 13.1398,
         "lng": 123.7345
-      }
-    },
-    {
-      "id": "fac-lab-002",
-      "name": "Philippine Red Cross - Albay Chapter Blood Service Facility",
-      "short_name": "PRC Albay Blood Center",
-      "category": "Diagnostic Laboratory",
-      "type": "Blood Service Facility & Emergency First Aid",
-      "ownership": "Government",
-      "address": {
-        "street": "Landco Business Park",
-        "building": "Red Cross Building",
-        "barangay": "Bgy. 36 - Capantawan",
-        "city": "Legazpi City",
-        "province": "Albay",
-        "zip": "4500"
-      },
-      "contact": {
-        "landline": "(052) 480-1288",
-        "mobile": "0917-838-8975",
-        "email": "albay@redcross.org.ph"
-      },
-      "accreditations": {
-        "is_doh_licensed": true,
-        "doh_license_validity": "2026-12-31",
-        "is_yakap_accredited": false,
-        "philhealth_accredited": false
-      },
-      "services": [
-        "24/7 Blood Banking & Blood Products",
-        "Voluntary Blood Donation",
-        "Blood Typing & Crossmatching",
-        "Ambulance & Emergency Response"
-      ],
-      "emergency_24_7": true,
-      "coordinates": {
-        "lat": 13.1405,
-        "lng": 123.753
       }
     },
     {
@@ -882,7 +861,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -922,7 +900,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -962,7 +939,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1002,7 +978,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1042,7 +1017,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1082,7 +1056,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1122,7 +1095,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1162,7 +1134,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1202,7 +1173,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1242,7 +1212,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1282,7 +1251,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1322,7 +1290,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1362,7 +1329,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1402,7 +1368,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1442,7 +1407,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1482,7 +1446,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1522,7 +1485,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1562,7 +1524,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1602,7 +1563,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1642,7 +1602,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1682,7 +1641,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1722,7 +1680,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1762,7 +1719,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1802,7 +1758,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1842,7 +1797,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1882,7 +1836,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1922,7 +1875,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -1962,7 +1914,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2002,7 +1953,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2042,7 +1992,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2082,7 +2031,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2122,7 +2070,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2162,7 +2109,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2202,7 +2148,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2242,7 +2187,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2282,7 +2226,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2322,7 +2265,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2362,7 +2304,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2402,7 +2343,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2442,7 +2382,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2482,7 +2421,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2522,7 +2460,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2562,7 +2499,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2602,7 +2538,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2642,7 +2577,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2682,7 +2616,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2722,7 +2655,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2762,7 +2694,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2802,7 +2733,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2842,7 +2772,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2882,7 +2811,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2922,7 +2850,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -2962,7 +2889,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3002,7 +2928,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3042,7 +2967,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3082,7 +3006,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3122,7 +3045,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3162,7 +3084,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3202,7 +3123,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3242,7 +3162,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3282,7 +3201,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3322,7 +3240,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3362,7 +3279,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3402,7 +3318,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3442,7 +3357,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3482,7 +3396,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3522,7 +3435,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3562,7 +3474,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3602,7 +3513,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3642,7 +3552,6 @@
       },
       "accreditations": {
         "is_doh_licensed": true,
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": [
@@ -3679,7 +3588,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory"],
@@ -3709,7 +3617,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory"],
@@ -3739,7 +3646,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory"],
@@ -3769,7 +3675,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory"],
@@ -3799,7 +3704,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory"],
@@ -3829,7 +3733,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory", "Drug Testing"],
@@ -3859,7 +3762,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory", "Drug Testing"],
@@ -3889,7 +3791,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory", "Drug Testing"],
@@ -3919,7 +3820,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory"],
@@ -3949,7 +3849,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory"],
@@ -3979,7 +3878,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory"],
@@ -4009,7 +3907,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory", "Drug Testing"],
@@ -4039,7 +3936,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Clinical Laboratory"],
@@ -4069,7 +3965,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4099,7 +3994,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4129,7 +4023,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4159,7 +4052,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4189,7 +4081,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4219,7 +4110,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4249,7 +4139,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4279,7 +4168,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4309,7 +4197,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4339,7 +4226,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Birthing & Maternity Care"],
@@ -4369,7 +4255,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-06-30",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Hemodialysis"],
@@ -4399,7 +4284,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-06-30",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Hemodialysis"],
@@ -4429,7 +4313,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-06-30",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Hemodialysis"],
@@ -4459,7 +4342,6 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-06-30",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Ambulatory Surgery", "Ophthalmologic"],
@@ -4482,17 +4364,22 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "63 52 742 2199",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "(052) 742-2199 / (052) 480-1288",
+        "mobile": "0917-838-8975",
+        "email": "albay@redcross.org.ph"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2025-06-30",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
-      "services": ["Blood Services"],
+      "services": [
+        "24/7 Blood Banking & Blood Products",
+        "Ambulance & Emergency Response",
+        "Blood Services",
+        "Blood Typing & Crossmatching",
+        "Voluntary Blood Donation"
+      ],
       "emergency_24_7": false
     },
     {
@@ -4519,8 +4406,9 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
-        "philhealth_accredited": false
+        "philhealth_accredited": false,
+        "dtl_accreditation_no": "05-0270-26-PFSS-R",
+        "dtl_list_as_of": "2026-03-31"
       },
       "services": ["Drug Testing"],
       "emergency_24_7": false
@@ -4549,8 +4437,9 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
-        "philhealth_accredited": false
+        "philhealth_accredited": false,
+        "dtl_accreditation_no": "05-1167-26-PFSS-R",
+        "dtl_list_as_of": "2026-03-31"
       },
       "services": ["Drug Testing"],
       "emergency_24_7": false
@@ -4579,8 +4468,9 @@
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
-        "is_yakap_accredited": false,
-        "philhealth_accredited": false
+        "philhealth_accredited": false,
+        "dtl_accreditation_no": "05-1593-26-PFSS-R",
+        "dtl_list_as_of": "2026-03-31"
       },
       "services": ["Drug Testing"],
       "emergency_24_7": false
@@ -4610,7 +4500,6 @@
         "is_doh_licensed": true,
         "is_abtc_certified": true,
         "abtc_validity": "2027-03-25",
-        "is_yakap_accredited": false,
         "philhealth_accredited": false
       },
       "services": ["Animal Bite Treatment", "Anti-Rabies Vaccination"],
@@ -4620,13 +4509,13 @@
   "_data_notes": [
     {
       "facility_id": "fac-hosp-003",
-      "type": "code-conflict",
-      "note": "DOH registry code recorded locally as 2071; DOH HFSRB Hospital list (as of 2026-06-30) publishes NHFR code 374. The registry value takes precedence and is shown."
+      "type": "code-correction",
+      "note": "An earlier revision recorded 2071 in this facility's DOH code field. 2071 is not a DOH code: it is the facility's entry number on the PhilHealth YAKAP list, now stored as yakap_konsulta_no. The DOH HFSRB Hospital list (as of 2026-06-30) publishes NHFR code 374, which is shown."
     },
     {
       "facility_id": "fac-hosp-004",
-      "type": "code-conflict",
-      "note": "DOH registry code recorded locally as 2105; DOH HFSRB Hospital list (as of 2026-06-30) publishes NHFR code 390. The registry value takes precedence and is shown."
+      "type": "code-correction",
+      "note": "An earlier revision recorded 2105 in this facility's DOH code field. 2105 is not a DOH code: it is the facility's entry number on the PhilHealth YAKAP list, now stored as yakap_konsulta_no. The DOH HFSRB Hospital list (as of 2026-06-30) publishes NHFR code 390, which is shown."
     },
     {
       "facility_id": "fac-birth-004",
@@ -4655,18 +4544,18 @@
     },
     {
       "facility_id": "fac-dtl-001",
-      "type": "missing-code",
-      "note": "The DOH HFSRB Drug Testing Laboratories (DTL) list (as of 2026-03-31) publishes no NHFR code for this facility."
+      "type": "code-source",
+      "note": "The DOH accredited Drug Testing Laboratory list publishes an accreditation number rather than an NHFR registry code, so this facility has no doh_code. Its accreditation number is recorded instead."
     },
     {
       "facility_id": "fac-dtl-002",
-      "type": "missing-code",
-      "note": "The DOH HFSRB Drug Testing Laboratories (DTL) list (as of 2026-03-31) publishes no NHFR code for this facility."
+      "type": "code-source",
+      "note": "The DOH accredited Drug Testing Laboratory list publishes an accreditation number rather than an NHFR registry code, so this facility has no doh_code. Its accreditation number is recorded instead."
     },
     {
       "facility_id": "fac-dtl-003",
-      "type": "missing-code",
-      "note": "The DOH HFSRB Drug Testing Laboratories (DTL) list (as of 2026-03-31) publishes no NHFR code for this facility."
+      "type": "code-source",
+      "note": "The DOH accredited Drug Testing Laboratory list publishes an accreditation number rather than an NHFR registry code, so this facility has no doh_code. Its accreditation number is recorded instead."
     },
     {
       "facility_id": "fac-abtc-001",
@@ -4682,6 +4571,131 @@
       "facility_id": "fac-hosp-001",
       "type": "jurisdiction-conflict",
       "note": "DOH registers this facility under Daraga, Albay (both the HFSRB hospital list and the DOH Bicol CHD animal-bite centre list). It is retained here because it operates on Rizal Street and serves Legazpi City."
+    },
+    {
+      "facility_id": "fac-hosp-001",
+      "type": "outside-city-limits",
+      "note": "DOH HFSRB registers BRHMC under Daraga, Albay (NHFR code 270), not Legazpi City. It is listed here because it is the regional referral hospital serving Legazpi City, and its address has been corrected to Daraga accordingly. It is excluded from the facility totals."
+    },
+    {
+      "facility_id": "fac-hosp-001",
+      "type": "accreditation-scope",
+      "note": "BRHMC does not appear on the PhilHealth list of Accredited YAKAP Clinics. It appears on the separate GAMOT Package Providers list as no. 1594, so it dispenses YAKAP medicines but does not provide YAKAP konsulta consultations."
+    },
+    {
+      "facility_id": "fac-yakap-001",
+      "type": "accreditation-scope",
+      "note": "The Homapon Super Health Center, the Buyuan, Banquerohan and Taysan lying-in clinics, and the CHO Laboratory hold no separate YAKAP entry. They operate under the City Health Office's accreditation (YAKAP no. 2085)."
+    },
+    {
+      "facility_id": "fac-blood-001",
+      "type": "merged-duplicate",
+      "note": "This chapter previously had a second entry (fac-lab-002) filed as a Diagnostic Laboratory, though its own type field read Blood Service Facility. It appeared on no DOH list and gave a different address -- Red Cross Building, Landco Business Park, Bgy. 36 Capantawan -- against the DOH-published Gov. Locsin cor. Fr. JL Bates St., Bgy. 16. The records were merged into this one, which carries the DOH NHFR code; the contact details shown here came from the removed entry and are unverified. If the chapter genuinely operates from two addresses, this needs splitting again with a source for the second."
+    },
+    {
+      "facility_id": "fac-yakap-001",
+      "type": "code-unverified",
+      "note": "DOH registry code 6700 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+    },
+    {
+      "facility_id": "fac-shc-001",
+      "type": "code-unverified",
+      "note": "DOH registry code 54794 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+    },
+    {
+      "facility_id": "fac-lab-001",
+      "type": "code-unverified",
+      "note": "DOH registry code 39679 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+    },
+    {
+      "facility_id": "fac-birth-001",
+      "type": "code-unverified",
+      "note": "DOH registry code 32449 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+    },
+    {
+      "facility_id": "fac-birth-002",
+      "type": "code-unverified",
+      "note": "DOH registry code 32450 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+    },
+    {
+      "facility_id": "fac-birth-003",
+      "type": "code-unverified",
+      "note": "DOH registry code 37755 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+    }
+  ],
+  "gamot_providers": [
+    {
+      "id": "gamot-001",
+      "name": "DiscountCare Pharmacy",
+      "gamot_provider_no": "1596",
+      "sector": "Private",
+      "address": {
+        "street": "Door 3, Zone 5, Brgy. 37 Bitano",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 204-9483",
+        "mobile": "0994-8818440 / 0967-8176768",
+        "email": "discountcare2024@gmail.com"
+      },
+      "gamot_valid_until": "2026-11-14"
+    },
+    {
+      "id": "gamot-002",
+      "name": "Generika Drugstore (Oro Site)",
+      "gamot_provider_no": "1598",
+      "sector": "Private",
+      "address": {
+        "street": "Peñaranda Street, Oro Site",
+        "building": "FLT Building",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 201-1470",
+        "mobile": "0917-1106853",
+        "email": "albaylegazpicity2@generikastore.com.ph"
+      },
+      "gamot_valid_until": "2026-12-31"
+    },
+    {
+      "id": "gamot-003",
+      "name": "JMed Pharma (Teachers' Village)",
+      "gamot_provider_no": "1603",
+      "sector": "Private",
+      "address": {
+        "street": "Teachers' Village Phase 2",
+        "building": "Ramos Building",
+        "city": "Legazpi City",
+        "province": "Albay"
+      },
+      "contact": {
+        "mobile": "0998-9506196",
+        "email": "jmed_pharma@yahoo.com"
+      },
+      "gamot_valid_until": "2026-12-31"
+    },
+    {
+      "id": "gamot-004",
+      "name": "Med To Go Drugstore",
+      "gamot_provider_no": "1607",
+      "sector": "Private",
+      "address": {
+        "street": "Bitano",
+        "building": "Ground Floor, SCRC Building",
+        "city": "Legazpi City",
+        "province": "Albay",
+        "zip": "4500"
+      },
+      "contact": {
+        "landline": "(052) 201-1233",
+        "mobile": "0966-1821049",
+        "email": "medtogobogtong@gmail.com"
+      },
+      "gamot_valid_until": "2028-03-12"
     }
   ]
 }

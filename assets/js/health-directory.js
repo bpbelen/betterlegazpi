@@ -15,6 +15,7 @@
   let allFacilities = [];
   let filteredFacilities = [];
   let summaryCounts = {};
+  let gamotProviders = [];
   let dataNotes = [];
   let dataSources = [];
   let currentPage = 1;
@@ -65,6 +66,9 @@
     DOM.statsTotal = document.getElementById('stat-total-facilities');
     DOM.statsHospitals = document.getElementById('stat-hospitals');
     DOM.statsYakap = document.getElementById('stat-yakap');
+    DOM.statsGamot = document.getElementById('stat-gamot');
+    DOM.gamotGrid = document.getElementById('gamot-providers-grid');
+    DOM.gamotCount = document.getElementById('gamot-result-count');
     DOM.statsSuperCenters = document.getElementById('stat-super-centers');
     DOM.statsBhs = document.getElementById('stat-bhs');
     DOM.searchInput = document.getElementById('health-search-input');
@@ -205,12 +209,14 @@
         .then((data) => {
           allFacilities = data.facilities || [];
           summaryCounts = data.summary_counts || {};
+          gamotProviders = data.gamot_providers || [];
           dataNotes = data._data_notes || [];
           dataSources = data._sources || [];
           filteredFacilities = [...allFacilities];
           updateStats();
           renderCategoryChips();
           renderReferences();
+          renderGamotProviders();
           applyFilters();
         })
         .catch(() => {
@@ -221,6 +227,98 @@
     tryFetch(0);
   }
 
+  /**
+   * A facility with no YAKAP entry of its own may still be covered: the CHO's
+   * branches operate under the main office's accreditation. The data records
+   * that as a facility id so the parent's list number stays a single fact.
+   */
+  function yakapParentLabel(fac) {
+    const parentId = fac.accreditations?.yakap_under_accreditation_of;
+    if (!parentId) return '';
+    const parent = allFacilities.find((f) => f.id === parentId);
+    if (!parent) return '';
+    const listNo = parent.accreditations?.yakap_konsulta_no;
+    return `Under ${parent.name}${listNo ? ` (YAKAP no. ${listNo})` : ''}`;
+  }
+
+  /**
+   * GAMOT-only providers are FDA-licensed drug outlets, not DOH health
+   * facilities, so they are held in their own array and rendered in their own
+   * section rather than counted into the facility directory. Facilities that
+   * hold GAMOT accreditation are folded in here too, so this section answers
+   * one question completely: where a YAKAP prescription can be filled.
+   */
+  function renderGamotProviders() {
+    if (!DOM.gamotGrid) return;
+
+    const fromDirectory = allFacilities
+      .filter((f) => f.accreditations?.is_yakap_gamot)
+      .map((f) => ({
+        name: f.name,
+        listNo: f.accreditations.gamot_provider_no,
+        validUntil: f.accreditations.gamot_valid_until,
+        address: f.address,
+        contact: f.contact,
+        kind: f.type || f.category,
+        isFacility: true,
+        outsideCity: Boolean(f.outside_city_limits),
+      }));
+
+    const fromPharmacies = gamotProviders.map((p) => ({
+      name: p.name,
+      listNo: p.gamot_provider_no,
+      validUntil: p.gamot_valid_until,
+      address: p.address,
+      contact: p.contact,
+      kind: 'FDA-licensed drug outlet',
+      isFacility: false,
+      outsideCity: false,
+    }));
+
+    const all = fromDirectory
+      .concat(fromPharmacies)
+      .sort((a, b) => Number(a.listNo) - Number(b.listNo));
+
+    if (DOM.gamotCount) {
+      // BRHMC is shown but not counted, because it is registered under Daraga.
+      // Saying so here keeps this figure and the stat tile above from looking
+      // like two different answers to the same question.
+      const outside = all.filter((p) => p.outsideCity);
+      const counted = all.length - outside.length;
+      const aside = outside.length
+        ? ` in Legazpi City, plus ${outside.map((p) => p.name.replace(/\s*\(.*\)$/, '')).join(' and ')} in Daraga`
+        : '';
+      DOM.gamotCount.innerHTML = `Showing <strong>${counted}</strong> GAMOT provider${counted === 1 ? '' : 's'}${escapeHtml(aside)}`;
+    }
+
+    DOM.gamotGrid.innerHTML = all
+      .map((p) => {
+        const dial = p.contact?.landline || p.contact?.mobile || '';
+        const line = [p.address?.building, p.address?.street, p.address?.city]
+          .filter(Boolean)
+          .join(', ');
+        return `
+          <article class="gamot-card">
+            <div class="gamot-card-head">
+              <span class="gamot-list-no" title="PhilHealth GAMOT Package Provider list number">No. ${escapeHtml(p.listNo)}</span>
+              <span class="badge ${p.isFacility ? 'badge-govt' : 'badge-private'}">${escapeHtml(p.kind)}</span>
+            </div>
+            <h3 class="gamot-card-title">${escapeHtml(p.name)}</h3>
+            ${p.outsideCity ? '<p class="gamot-card-flag"><i class="bi bi-info-circle" aria-hidden="true"></i> Registered under Daraga, Albay</p>' : ''}
+            <p class="gamot-card-address"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> ${escapeHtml(line)}</p>
+            <dl class="gamot-card-meta">
+              <div><dt>Accreditation valid to</dt><dd>${escapeHtml(formatDate(p.validUntil) || 'Not published')}</dd></div>
+            </dl>
+            ${
+              dial
+                ? `<a class="gamot-card-call" href="tel:${escapeHtml(dial.split('/')[0].trim())}"><i class="bi bi-telephone-fill" aria-hidden="true"></i> ${escapeHtml(dial)}</a>`
+                : '<p class="gamot-card-call gamot-card-call--none">No contact number published</p>'
+            }
+          </article>`;
+      })
+      .join('');
+  }
+
   function updateStats() {
     if (DOM.statsTotal && summaryCounts.total) {
       DOM.statsTotal.textContent = summaryCounts.total;
@@ -228,8 +326,11 @@
     if (DOM.statsHospitals && summaryCounts.hospitals) {
       DOM.statsHospitals.textContent = summaryCounts.hospitals;
     }
-    if (DOM.statsYakap && summaryCounts.yakap_accredited) {
-      DOM.statsYakap.textContent = summaryCounts.yakap_accredited;
+    if (DOM.statsYakap && summaryCounts.yakap_konsulta_clinics) {
+      DOM.statsYakap.textContent = summaryCounts.yakap_konsulta_clinics;
+    }
+    if (DOM.statsGamot && summaryCounts.gamot_providers) {
+      DOM.statsGamot.textContent = summaryCounts.gamot_providers;
     }
     if (DOM.statsSuperCenters) {
       const shcCount =
@@ -246,7 +347,7 @@
       // 1. Category Filter
       if (activeCategory !== 'all') {
         if (activeCategory === 'yakap-accredited') {
-          if (!facility.accreditations?.is_yakap_accredited) return false;
+          if (!facility.accreditations?.is_yakap_konsulta) return false;
         } else if (activeCategory === 'abtc-certified') {
           // Hospitals run animal-bite centres as departments, so this filter
           // reads the certification rather than the category -- one card per
@@ -263,7 +364,7 @@
       }
 
       // 3. YAKAP Only Toggle
-      if (activeFilterYakapOnly && !facility.accreditations?.is_yakap_accredited) {
+      if (activeFilterYakapOnly && !facility.accreditations?.is_yakap_konsulta) {
         return false;
       }
 
@@ -359,15 +460,25 @@
 
     let html = '';
     visibleItems.forEach((fac) => {
-      const isYakap = fac.accreditations?.is_yakap_accredited;
+      // YAKAP is two separate PhilHealth accreditations published as two separate
+      // lists: konsulta consultations, and GAMOT medicine dispensing. A facility can
+      // hold either without the other -- BRHMC dispenses GAMOT but runs no konsulta --
+      // so each is badged from its own list rather than from one combined flag.
+      const isKonsulta = fac.accreditations?.is_yakap_konsulta;
+      const isGamot = fac.accreditations?.is_yakap_gamot;
+      const isYakap = isKonsulta || isGamot;
       const isDoh = fac.accreditations?.is_doh_licensed;
       const is247 = fac.emergency_24_7;
       const isGovt = fac.ownership === 'Government';
       const isAbtc = fac.accreditations?.is_abtc_certified;
+      const abtcLapsed = isAbtc && hasLapsed(fac.accreditations?.abtc_validity);
+      const konsultaLapsed =
+        isKonsulta && hasLapsed(fac.accreditations?.yakap_konsulta_valid_until);
+      const gamotLapsed = isGamot && hasLapsed(fac.accreditations?.gamot_valid_until);
       const icon = getCategoryIcon(fac.category);
 
       const mapQuery = encodeURIComponent(
-        `${fac.name}, ${fac.address?.barangay || ''}, Legazpi City, Albay`
+        `${fac.name}, ${fac.address?.barangay || ''}, ${fac.address?.city || 'Legazpi City'}, Albay`
       );
       const mapUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
 
@@ -455,8 +566,19 @@
         detailRow('DOH registry code', fac.doh_code),
         detailRow('DOH licensing list', formatDate(fac.accreditations?.hfsrb_as_of), 'as of '),
         detailRow('DOH licence valid to', formatDate(fac.accreditations?.doh_license_validity)),
-        detailRow('PhilHealth YAKAP valid to', formatDate(fac.accreditations?.yakap_validity)),
-        detailRow('YAKAP code', fac.yakap_code),
+        detailRow('YAKAP Konsulta list no.', fac.accreditations?.yakap_konsulta_no),
+        detailRow(
+          'YAKAP Konsulta valid to',
+          formatDate(fac.accreditations?.yakap_konsulta_valid_until)
+        ),
+        detailRow('GAMOT provider list no.', fac.accreditations?.gamot_provider_no),
+        detailRow(
+          'GAMOT accreditation valid to',
+          formatDate(fac.accreditations?.gamot_valid_until)
+        ),
+        detailRow('YAKAP coverage', yakapParentLabel(fac)),
+        detailRow('Drug-testing accreditation no.', fac.accreditations?.dtl_accreditation_no),
+        detailRow('Drug-testing list', formatDate(fac.accreditations?.dtl_list_as_of), 'as of '),
         detailRow(
           'Animal-bite certification valid to',
           formatDate(fac.accreditations?.abtc_validity)
@@ -471,9 +593,16 @@
                 <i class="bi ${isGovt ? 'bi-bank' : 'bi-building'}"></i> ${fac.ownership || 'Facility'}
               </span>
               ${
-                isYakap
-                  ? `<span class="badge badge-yakap" title="Accredited PhilHealth YAKAP Clinic (Konsulta &amp; GAMOT)">
-                       <i class="bi bi-patch-check-fill"></i> PhilHealth YAKAP
+                isKonsulta
+                  ? `<span class="badge badge-yakap ${konsultaLapsed ? 'badge--lapsed' : ''}" title="On the PhilHealth list of Accredited YAKAP Clinics -- free consultations and laboratory tests">
+                       <i class="bi bi-patch-check-fill"></i> YAKAP Konsulta${konsultaLapsed ? ' (lapsed)' : ''}
+                     </span>`
+                  : ''
+              }
+              ${
+                isGamot
+                  ? `<span class="badge badge-gamot ${gamotLapsed ? 'badge--lapsed' : ''}" title="On the PhilHealth list of Accredited GAMOT Package Providers -- dispenses the free YAKAP maintenance medicines">
+                       <i class="bi bi-capsule"></i> YAKAP GAMOT${gamotLapsed ? ' (lapsed)' : ''}
                      </span>`
                   : ''
               }
@@ -486,8 +615,14 @@
               }
               ${
                 isAbtc
-                  ? `<span class="badge badge-abtc" title="DOH-certified Animal Bite Treatment Centre">
-                       <i class="bi bi-bandaid-fill"></i> Animal Bite Centre
+                  ? `<span class="badge badge-abtc ${abtcLapsed ? 'badge--lapsed' : ''}" title="${
+                      abtcLapsed
+                        ? 'Animal-bite certification lapsed on ' +
+                          formatDate(fac.accreditations?.abtc_validity) +
+                          ' -- call before you travel'
+                        : 'DOH-certified Animal Bite Treatment Centre'
+                    }">
+                       <i class="bi bi-bandaid-fill"></i> Animal Bite Centre${abtcLapsed ? ' (lapsed)' : ''}
                      </span>`
                   : ''
               }
@@ -510,7 +645,7 @@
             <div class="facility-location">
               <i class="bi bi-geo-alt-fill location-icon" aria-hidden="true"></i>
               <div class="location-text">
-                <strong>${escapeHtml(fac.address?.barangay || 'Legazpi City')}</strong>
+                <strong>${escapeHtml(fac.address?.barangay || fac.address?.city || 'Legazpi City')}</strong>
                 <span>${escapeHtml([fac.address?.building, fac.address?.street, fac.address?.city, fac.address?.province].filter(Boolean).join(', '))}</span>
               </div>
             </div>
@@ -623,6 +758,19 @@
     `;
   }
 
+  /**
+   * An accreditation with a past expiry date is not a current accreditation.
+   * The published lists keep lapsed entries, so a badge rendered straight from
+   * the flag can promise a service the facility may no longer be certified to
+   * give -- animal-bite treatment being the case that matters most.
+   */
+  function hasLapsed(value) {
+    if (!value) return false;
+    const parsed = new Date(value);
+    if (Number.isNaN(parsed.getTime())) return false;
+    return parsed < new Date();
+  }
+
   function formatDate(value) {
     if (!value) return '';
     const parsed = new Date(value);
@@ -650,7 +798,7 @@
       if (category === 'all') {
         total = allFacilities.length;
       } else if (category === 'yakap-accredited') {
-        total = allFacilities.filter((f) => f.accreditations?.is_yakap_accredited).length;
+        total = allFacilities.filter((f) => f.accreditations?.is_yakap_konsulta).length;
       } else if (category === 'abtc-certified') {
         total = allFacilities.filter((f) => f.accreditations?.is_abtc_certified).length;
       } else {
@@ -764,22 +912,35 @@
       });
     }
 
-    if (DOM.referencesToggle && DOM.referencesPanel) {
-      DOM.referencesToggle.addEventListener('click', () => {
-        const expanded = DOM.referencesToggle.getAttribute('aria-expanded') === 'true';
-        setDisclosure(DOM.referencesToggle, DOM.referencesPanel, !expanded);
-      });
+    // There is more than one references block on the page -- the facility
+    // directory has its own, and so does the GAMOT provider list -- so these are
+    // wired by their aria-controls rather than by a single known id.
+    const referencePairs = Array.from(document.querySelectorAll('.health-references-toggle'))
+      .map((toggle) => ({
+        toggle,
+        panel: document.getElementById(toggle.getAttribute('aria-controls')),
+      }))
+      .filter((pair) => pair.panel);
 
-      // A card's source note links to #references; arriving there should not
-      // land the reader on a section that is still shut.
-      const openFromHash = () => {
-        if (window.location.hash === '#references') {
-          setDisclosure(DOM.referencesToggle, DOM.referencesPanel, true);
-        }
-      };
-      window.addEventListener('hashchange', openFromHash);
-      openFromHash();
-    }
+    referencePairs.forEach(({ toggle, panel }) => {
+      toggle.addEventListener('click', () => {
+        setDisclosure(toggle, panel, toggle.getAttribute('aria-expanded') !== 'true');
+      });
+    });
+
+    // A card's source note links to #references; arriving there should not land
+    // the reader on a section that is still shut.
+    const openFromHash = () => {
+      const target = window.location.hash.slice(1);
+      if (!target) return;
+      const pair = referencePairs.find(
+        ({ toggle, panel }) =>
+          toggle.closest('.health-references')?.id === target || panel.id === target
+      );
+      if (pair) setDisclosure(pair.toggle, pair.panel, true);
+    };
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
   }
 
   function escapeHtml(text) {

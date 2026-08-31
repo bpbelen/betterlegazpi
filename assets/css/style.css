@@ -6948,8 +6948,11 @@ cklist with Icons - Proper Indentation */
 }
 
 /* HIV Care Philippines CTA */
+/* Plain background -- the section above (GAMOT providers) is already bg-alt,
+   so this stays var(--color-bg) to keep the page's alternating rhythm rather
+   than sitting flush against another alt section with no visible seam. */
 .hivcare-cta-section {
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.035) 1px, transparent 1px) var(--color-bg-alt);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.035) 1px, transparent 1px) var(--color-bg);
   background-size: 20px 20px;
 }
 
@@ -9930,12 +9933,6 @@ a.a11y-contact-item:hover i {
 }
 
 /* Health Page Styles */
-.health-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
 .health-stat-card {
   background: var(--color-white);
   border: 1px solid #e5e7eb;
@@ -9971,7 +9968,7 @@ a.a11y-contact-item:hover i {
 
 .health-stats-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 14px;
 }
 
@@ -10248,6 +10245,12 @@ a.a11y-contact-item:hover i {
   background: #d1fae5;
   color: #047857;
   border: 1px solid #a7f3d0;
+}
+
+.badge-gamot {
+  background: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
 }
 
 .badge-247 {
@@ -14073,4 +14076,160 @@ button.service-pill-more:hover {
 
 [data-theme='dark'] .error-message {
   color: var(--color-text-light);
+}
+
+/* ===================================================
+   GAMOT Prescription Providers
+   =================================================== */
+.gamot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.gamot-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--color-white);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: all var(--duration-slow) ease;
+}
+
+.gamot-card:hover {
+  transform: translateY(-3px);
+  border-color: #c4b5fd;
+  box-shadow: 0 8px 20px rgba(109, 40, 217, 0.1);
+}
+
+.gamot-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.gamot-list-no {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6d28d9;
+  background: #ede9fe;
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.gamot-card-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.gamot-card-flag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: #b45309;
+  margin: 0;
+}
+
+.gamot-card-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.gamot-card-meta {
+  margin: 0;
+  font-size: 0.8125rem;
+}
+
+.gamot-card-meta div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.gamot-card-meta dt {
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.gamot-card-meta dt::after {
+  content: ':';
+}
+
+.gamot-card-meta dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.gamot-card-call {
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Comfortably past the 44px touch-target floor the responsive spec checks. */
+  min-height: 44px;
+}
+
+.gamot-card-call--none {
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .gamot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+[data-theme='dark'] .gamot-card {
+  background: var(--color-bg);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .gamot-card:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='dark'] .gamot-card-title {
+  color: var(--color-text);
+}
+
+[data-theme='dark'] .gamot-list-no,
+[data-theme='dark'] .badge-gamot {
+  background: rgba(109, 40, 217, 0.22);
+  color: #c4b5fd;
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+/* A lapsed accreditation is drawn back to a neutral, muted state so it reads as
+   a caveat rather than an endorsement. */
+.badge.badge--lapsed {
+  background: #f1f5f9;
+  color: #64748b;
+  border-color: #e2e8f0;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+[data-theme='dark'] .badge.badge--lapsed {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text-light);
+  border-color: rgba(255, 255, 255, 0.12);
 }

@@ -45,9 +45,10 @@ module.exports = {
   '/services/education.html': { waitForSelector: '#service-category-app > *' },
   '/services/employment.html': { waitForSelector: '#service-category-app > *' },
   '/services/environment.html': { waitForSelector: '#service-category-app > *' },
-  // health renders two JSON-driven regions. Wait on a facility card rather than
-  // the category app: the directory grid is the larger and slower of the two,
-  // and waiting on the wrong one lets the harness measure an empty grid.
+  // health renders three JSON-driven regions: the category app, the facility
+  // directory, and the GAMOT provider grid. Wait on a facility card -- the
+  // directory grid is the largest and slowest of the three, and the GAMOT grid
+  // is painted from the same fetch one step earlier, so this covers both.
   '/services/health.html': { waitForSelector: '.facility-card' },
   '/services/housing.html': { waitForSelector: '#service-category-app > *' },
   '/services/infrastructure.html': { waitForSelector: '#service-category-app > *' },

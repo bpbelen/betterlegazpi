@@ -618,10 +618,13 @@
           <div class="section-header-center">
             <h2 class="section-title">Where to go in Legazpi City</h2>
             <p class="section-subtitle">
-              These are the 13 PhilHealth YAKAP-accredited facilities in Legazpi City. You register
-              with one clinic and it becomes your home clinic; the accredited laboratory is where
-              your ordered tests are run. Tap any address for directions, or any number to call
-              ahead and check the queue.
+              PhilHealth accredits YAKAP in two parts, and publishes them as two lists.
+              <strong>Seven clinics in Legazpi City</strong> are on the YAKAP Konsulta list &mdash;
+              you register with one and it becomes your home clinic. A further five City Health
+              Office sites serve patients under the CHO's own accreditation, and some places
+              dispense the free GAMOT medicines without running consultations at all. Each card
+              below says which. Tap any address for directions, or any number to call ahead and
+              check the queue.
             </p>
           </div>
 
@@ -637,7 +640,7 @@
               class="yakap-filter-pill yakap-fac-filter-pill active"
               data-fac-filter="all"
             >
-              All 13 facilities
+              All 13 places
             </button>
             <button
               type="button"
@@ -667,6 +670,13 @@
             >
               Private Partners
             </button>
+            <button
+              type="button"
+              class="yakap-filter-pill yakap-fac-filter-pill"
+              data-fac-filter="gamot"
+            >
+              GAMOT Medicines Only
+            </button>
           </div>
 
           <div class="yakap-facilities-grid" id="yakap-facilities-grid">
@@ -675,6 +685,12 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Primary LGU Hub</span>
                 <span class="yakap-fac-ownership">Government (LGU)</span>
+                <span class="yakap-fac-accred yakap-fac-accred--konsulta"
+                  >YAKAP Konsulta &mdash; list no. 2085</span
+                >
+                <span class="yakap-fac-accred yakap-fac-accred--gamot"
+                  >GAMOT medicines &mdash; list no. 1606</span
+                >
               </div>
               <h3 class="yakap-fac-name">Legazpi City Health Office (Main CHO)</h3>
               <p class="yakap-fac-address">
@@ -708,6 +724,9 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Super Health Center</span>
                 <span class="yakap-fac-ownership">Government (LGU)</span>
+                <span class="yakap-fac-accred yakap-fac-accred--under"
+                  >Serves under the City Health Office accreditation (no. 2085)</span
+                >
               </div>
               <h3 class="yakap-fac-name">Legazpi CHO RHU III (Super Health Center)</h3>
               <p class="yakap-fac-address">
@@ -735,24 +754,34 @@
             </div>
 
             <!-- Facility 3: Bicol Regional Hospital and Medical Center (BRHMC) -->
-            <div class="yakap-fac-card" data-fac-type="hospital">
+            <div class="yakap-fac-card" data-fac-type="gamot">
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Level 3 Apex Medical Center</span>
                 <span class="yakap-fac-ownership">Government (DOH)</span>
+                <span class="yakap-fac-accred yakap-fac-accred--gamot"
+                  >GAMOT medicines only &mdash; no YAKAP consultations</span
+                >
               </div>
               <h3 class="yakap-fac-name">Bicol Regional Hospital and Medical Center (BRHMC)</h3>
+              <p class="yakap-fac-note">
+                <i class="bi bi-info-circle-fill" aria-hidden="true"></i> BRHMC is on PhilHealth's
+                GAMOT Package Provider list (no. 1594) but not on the YAKAP Konsulta list, so you
+                can collect YAKAP medicines here but cannot have your YAKAP check-up here. DOH
+                registers it under Daraga, Albay.
+              </p>
               <p class="yakap-fac-address">
                 <i class="bi bi-geo-alt-fill"></i>
                 <a
                   class="yakap-fac-map-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=BRHMC+Medical+Complex%2C+Rizal+St.%2C+Bgy.+1+-+Em's+Barrio%2C+Legazpi+City"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Bicol+Regional+Hospital+and+Medical+Center%2C+Rizal+St.%2C+Daraga%2C+Albay"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >BRHMC Medical Complex, Rizal St., Bgy. 1 - Em's Barrio, Legazpi City
+                  >BRHMC Medical Complex, Rizal St., Daraga, Albay
                   <span class="yakap-fac-map-cue">Directions</span></a
                 >
               </p>
               <ul class="yakap-fac-services">
+                <li class="yakap-fac-service-pill">GAMOT medicine dispensing</li>
                 <li class="yakap-fac-service-pill">24/7 Apex Emergency</li>
                 <li class="yakap-fac-service-pill">Specialized Diagnostics</li>
                 <li class="yakap-fac-service-pill">Cancer Screening Hub</li>
@@ -772,6 +801,9 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Level 1 City Hospital</span>
                 <span class="yakap-fac-ownership">Government (LGU)</span>
+                <span class="yakap-fac-accred yakap-fac-accred--konsulta"
+                  >YAKAP Konsulta &mdash; list no. 2086</span
+                >
               </div>
               <h3 class="yakap-fac-name">Legazpi City Hospital</h3>
               <p class="yakap-fac-address">
@@ -803,6 +835,12 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Level 2 General Hospital</span>
                 <span class="yakap-fac-ownership">Private Partner</span>
+                <span class="yakap-fac-accred yakap-fac-accred--konsulta"
+                  >YAKAP Konsulta &mdash; list no. 2071</span
+                >
+                <span class="yakap-fac-accred yakap-fac-accred--gamot"
+                  >GAMOT medicines &mdash; list no. 1593</span
+                >
               </div>
               <h3 class="yakap-fac-name">Albay Doctors' Hospital, Inc.</h3>
               <p class="yakap-fac-address">
@@ -836,6 +874,12 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Level 2 General Hospital</span>
                 <span class="yakap-fac-ownership">Private Partner</span>
+                <span class="yakap-fac-accred yakap-fac-accred--konsulta"
+                  >YAKAP Konsulta &mdash; list no. 2105</span
+                >
+                <span class="yakap-fac-accred yakap-fac-accred--gamot"
+                  >GAMOT medicines &mdash; list no. 1616</span
+                >
               </div>
               <h3 class="yakap-fac-name">Tanchuling General Hospital, Inc.</h3>
               <p class="yakap-fac-address">
@@ -867,6 +911,9 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Northern Birthing Home</span>
                 <span class="yakap-fac-ownership">Government (LGU)</span>
+                <span class="yakap-fac-accred yakap-fac-accred--under"
+                  >Serves under the City Health Office accreditation (no. 2085)</span
+                >
               </div>
               <h3 class="yakap-fac-name">Legazpi CHO Northern District Maternity Clinic</h3>
               <p class="yakap-fac-address">
@@ -898,6 +945,9 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Southern Birthing Home</span>
                 <span class="yakap-fac-ownership">Government (LGU)</span>
+                <span class="yakap-fac-accred yakap-fac-accred--under"
+                  >Serves under the City Health Office accreditation (no. 2085)</span
+                >
               </div>
               <h3 class="yakap-fac-name">Legazpi CHO Southern District Maternity Clinic</h3>
               <p class="yakap-fac-address">
@@ -929,6 +979,9 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Accredited Private Clinic</span>
                 <span class="yakap-fac-ownership">Private Partner</span>
+                <span class="yakap-fac-accred yakap-fac-accred--konsulta"
+                  >YAKAP Konsulta &mdash; list no. 2093</span
+                >
               </div>
               <h3 class="yakap-fac-name">PremierMD Health Care Clinic</h3>
               <p class="yakap-fac-address">
@@ -960,6 +1013,9 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Primary Care &amp; Occupational</span>
                 <span class="yakap-fac-ownership">Private Partner</span>
+                <span class="yakap-fac-accred yakap-fac-accred--konsulta"
+                  >YAKAP Konsulta &mdash; list no. 2104</span
+                >
               </div>
               <h3 class="yakap-fac-name">Southeast Occupational Health &amp; Safety Services</h3>
               <p class="yakap-fac-address">
@@ -991,6 +1047,9 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Institutional Clinic</span>
                 <span class="yakap-fac-ownership">Government (PNP)</span>
+                <span class="yakap-fac-accred yakap-fac-accred--konsulta"
+                  >YAKAP Konsulta &mdash; list no. 2094</span
+                >
               </div>
               <h3 class="yakap-fac-name">Regional Medical and Dental Unit 5 (RMDU 5)</h3>
               <p class="yakap-fac-address">
@@ -1022,6 +1081,9 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Southern Birthing Home 2</span>
                 <span class="yakap-fac-ownership">Government (LGU)</span>
+                <span class="yakap-fac-accred yakap-fac-accred--under"
+                  >Serves under the City Health Office accreditation (no. 2085)</span
+                >
               </div>
               <h3 class="yakap-fac-name">Legazpi CHO Southern District 2 (Taysan Clinic)</h3>
               <p class="yakap-fac-address">
@@ -1053,6 +1115,9 @@
               <div class="yakap-fac-badge-row">
                 <span class="yakap-fac-type-badge">Accredited Diagnostic Laboratory</span>
                 <span class="yakap-fac-ownership">Government (LGU)</span>
+                <span class="yakap-fac-accred yakap-fac-accred--under"
+                  >Serves under the City Health Office accreditation (no. 2085)</span
+                >
               </div>
               <h3 class="yakap-fac-name">Legazpi City Health Office Laboratory</h3>
               <p class="yakap-fac-address">
@@ -1093,7 +1158,7 @@
               aria-expanded="false"
               aria-controls="yakap-facilities-grid"
             >
-              <span class="yakap-fac-toggle-text">Show all 13 facilities</span>
+              <span class="yakap-fac-toggle-text">Show all 13 places</span>
               <i class="bi bi-chevron-down yakap-fac-toggle-icon" aria-hidden="true"></i>
             </button>
           </div>
@@ -1106,10 +1171,45 @@
             >
               <i class="bi bi-search"></i>
               <span
-                >Explore All 120 Health Facilities &amp; 70 Barangay Health Stations in
+                >Explore All 118 Health Facilities &amp; 70 Barangay Health Stations in
                 Legazpi</span
               >
             </a>
+          </div>
+
+          <div class="yakap-fac-methodology">
+            <h3><i class="bi bi-book" aria-hidden="true"></i> How this list was built</h3>
+            <p>
+              Every entry above was read directly from PhilHealth's two published accreditation
+              lists and matched by its printed entry number, which is shown on each card so you can
+              check it against the source. Nothing is inferred: a clinic is shown as YAKAP Konsulta
+              only where PhilHealth's
+              <a
+                href="https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf"
+                rel="noopener"
+                >List of Accredited YAKAP Clinics</a
+              >
+              prints it, and as a GAMOT provider only where the separate
+              <a
+                href="https://www.philhealth.gov.ph/partners/providers/facilities/accredited/GAMOT.pdf"
+                rel="noopener"
+                >List of Accredited GAMOT Package Providers</a
+              >
+              prints it. Both lists are current as of 31 July 2026.
+            </p>
+            <p>
+              Five City Health Office sites &mdash; the Homapon Super Health Center, the Buyuan,
+              Banquerohan and Taysan lying-in clinics, and the CHO Laboratory &mdash; hold no
+              separate entry on either list. They serve patients under the City Health Office's own
+              accreditation (no. 2085), the way a bank branch operates under its head office's
+              licence, and are marked as such above rather than claimed as separately accredited.
+            </p>
+            <p>
+              Accreditation dates are those PhilHealth published, and accreditations lapse. Call a
+              clinic before you travel, and see the
+              <a href="../services/health#references">full sources and data notes</a>
+              on the health facilities directory.
+            </p>
           </div>
         </div>
       </section>

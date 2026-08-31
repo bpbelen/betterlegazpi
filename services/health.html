@@ -458,7 +458,7 @@
               </div>
               <div class="yakap-spotlight-metric-pill">
                 <dt class="yakap-spotlight-metric-label">Clinics in Legazpi</dt>
-                <dd class="yakap-spotlight-metric-num">12</dd>
+                <dd class="yakap-spotlight-metric-num">7</dd>
               </div>
             </dl>
           </div>
@@ -470,19 +470,23 @@
         <div class="container">
           <div class="health-stats-grid">
             <div class="health-stat-card">
-              <span class="health-stat-num" id="stat-total-facilities">120</span>
+              <span class="health-stat-num" id="stat-total-facilities">118</span>
               <span class="health-stat-label">Total Health Facilities</span>
             </div>
             <div class="health-stat-card">
-              <span class="health-stat-num" id="stat-hospitals">8</span>
+              <span class="health-stat-num" id="stat-hospitals">7</span>
               <span class="health-stat-label">Licensed Hospitals</span>
             </div>
             <div class="health-stat-card">
-              <span class="health-stat-num" id="stat-yakap">13</span>
-              <span class="health-stat-label">PhilHealth YAKAP Clinics</span>
+              <span class="health-stat-num" id="stat-yakap">7</span>
+              <span class="health-stat-label">YAKAP Konsulta Clinics</span>
             </div>
             <div class="health-stat-card">
-              <span class="health-stat-num" id="stat-super-centers">4</span>
+              <span class="health-stat-num" id="stat-gamot">7</span>
+              <span class="health-stat-label">GAMOT Prescription Providers</span>
+            </div>
+            <div class="health-stat-card">
+              <span class="health-stat-num" id="stat-super-centers">14</span>
               <span class="health-stat-label">Super Centers &amp; Birthing Homes</span>
             </div>
             <div class="health-stat-card">
@@ -503,10 +507,10 @@
             </h2>
             <p class="section-subtitle">
               Compiled from the DOH National Health Facility Registry, the DOH HFSRB licensing
-              lists, the DOH Bicol CHD certified animal-bite centres, the PhilHealth YAKAP registry,
-              and the Legazpi City Health Office. Source data ranges from December 2025 to June 2026
-              &mdash; see the
-              <a href="#references">sources and data notes</a>.
+              lists, the DOH Bicol CHD certified animal-bite centres, the two PhilHealth
+              accreditation lists &mdash; YAKAP Konsulta clinics and GAMOT Package Providers &mdash;
+              and the Legazpi City Health Office. Source data ranges from December 2025 to July 2026
+              &mdash; see the <a href="#references">sources and data notes</a>.
             </p>
           </div>
 
@@ -723,6 +727,126 @@
                   One entry departs from that rule deliberately: Bicol Regional Hospital and Medical
                   Center is registered by DOH under Daraga, Albay, but is listed here because it
                   operates on Rizal Street and serves Legazpi City.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GAMOT Prescription Providers Section -->
+      <section
+        class="section bg-alt gamot-directory-section"
+        id="gamot-directory"
+        aria-labelledby="gamot-directory-title"
+      >
+        <div class="container">
+          <div class="health-directory-header">
+            <h2 class="section-title" id="gamot-directory-title">
+              <i class="bi bi-capsule text-primary" aria-hidden="true"></i>
+              <span>Consolidated List of GAMOT Prescription Providers</span>
+            </h2>
+            <p class="section-subtitle">
+              Where a PhilHealth YAKAP prescription can actually be filled. PhilHealth accredits
+              GAMOT medicine dispensing separately from YAKAP Konsulta consultations, and publishes
+              it as a separate list &mdash; so some places here run no consultations at all, and
+              some YAKAP clinics do not appear. Sourced from the
+              <a
+                href="https://www.philhealth.gov.ph/partners/providers/facilities/accredited/GAMOT.pdf"
+                rel="noopener"
+                >List of Accredited PhilHealth GAMOT Package Providers for CY 2026</a
+              >, as of 31 July 2026.
+            </p>
+          </div>
+
+          <p class="health-result-count" id="gamot-result-count" role="status" aria-live="polite">
+            Loading GAMOT providers&hellip;
+          </p>
+
+          <div class="gamot-grid" id="gamot-providers-grid"></div>
+
+          <!-- Documentary Sources & References -->
+          <div class="health-references" id="gamot-references">
+            <button
+              type="button"
+              class="health-references-toggle"
+              id="gamot-references-toggle"
+              aria-expanded="false"
+              aria-controls="gamot-references-panel"
+            >
+              <span class="health-references-heading">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                Documentary Sources &amp; References
+              </span>
+              <i class="bi bi-chevron-down health-references-icon" aria-hidden="true"></i>
+            </button>
+
+            <div class="health-references-panel" id="gamot-references-panel" hidden>
+              <ul class="health-citation-list">
+                <li>
+                  PhilHealth (31 July 2026).
+                  <em>List of Accredited PhilHealth GAMOT Package Providers for CY 2026</em>.
+                  <a
+                    href="https://www.philhealth.gov.ph/partners/providers/facilities/accredited/GAMOT.pdf"
+                    rel="noopener"
+                    >philhealth.gov.ph</a
+                  >
+                </li>
+                <li>
+                  PhilHealth (31 July 2026).
+                  <em>
+                    List of Accredited YAKAP Clinics with Available GAMOT Prescription for CY
+                    2026</em
+                  >.
+                  <a
+                    href="https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf"
+                    rel="noopener"
+                    >philhealth.gov.ph</a
+                  >
+                </li>
+                <li>
+                  Food and Drug Administration, Philippines.
+                  <em>Licensing of Drug Establishments and Outlets</em>. Establishes that drugstores
+                  and pharmacies are FDA-licensed drug outlets, distinct from DOH-licensed health
+                  facilities.
+                  <a
+                    href="https://www.fda.gov.ph/wp-content/uploads/2023/10/CDRR_LICENSING-OF-DRUG-ESTABLISHMENTS.pdf"
+                    rel="noopener"
+                    >fda.gov.ph</a
+                  >
+                </li>
+              </ul>
+
+              <div class="health-disclaimer-card">
+                <h4>
+                  <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Disclaimer
+                  &amp; data notes
+                </h4>
+                <p>
+                  <strong>How this list was built.</strong> Every entry was read directly from
+                  PhilHealth's published GAMOT list and matched by its printed entry number, which
+                  is shown on each card so you can check it against the source. Nothing here is
+                  inferred: a provider appears only where PhilHealth prints it, and the two
+                  PhilHealth lists are never treated as interchangeable.
+                </p>
+                <p>
+                  <strong>Two accreditations, not one.</strong> A place on the YAKAP Konsulta list
+                  provides free consultations and laboratory tests. A place on the GAMOT list
+                  dispenses the free maintenance medicines. Many hold both, but not all &mdash;
+                  check the badges on a facility before travelling for a specific service.
+                </p>
+                <p>
+                  <strong>Pharmacies are not health facilities.</strong> Drugstores here are
+                  FDA-licensed drug outlets, not DOH-licensed health facilities, which is why they
+                  are listed separately and are not counted in the facility directory above.
+                </p>
+                <p class="health-disclaimer-footnote">
+                  Bicol Regional Hospital and Medical Center appears on the GAMOT list (no. 1594)
+                  but not on the YAKAP Konsulta list, so it dispenses YAKAP medicines without
+                  providing YAKAP consultations. It is registered by DOH under Daraga, Albay, and is
+                  listed here because it serves Legazpi City. Accreditation dates are those
+                  PhilHealth published; confirm with a provider before relying on them, and bring a
+                  valid prescription.
                 </p>
               </div>
             </div>

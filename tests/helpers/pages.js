@@ -46,7 +46,7 @@ const CI_ROUTES = [
   '/transparency/index.html', // budget.css
   '/history/index.html', // history.css
   '/services/utilities.html', // utilities.css, and the only JSON-rendered services page
-  '/services/health.html', // 120-card facility grid: per-card disclosures, expandable chip group, collapsible references
+  '/services/health.html', // 119-card facility grid plus the GAMOT provider grid: per-card disclosures, expandable chip group, two collapsible reference blocks
   '/service-details/philhealth-yakap.html', // philhealth-yakap.css: inverted spotlight panel, tabs, accordions
   '/service-details/first-time-jobseekers.html', // first-time-jobseekers.css: tier cards, step list, details accordions
   '/travel/index.html', // tourism.css: photo page-header, bento, scroll-snap strip

@@ -1,3 +1,15 @@
+"""One-off generator that produced the first version of data/health-facilities.json.
+
+DO NOT RE-RUN AGAINST THE LIVE FILE. data/health-facilities.json has since been
+enriched from the DOH HFSRB licensing lists (doh_code, hfsrb_as_of) and corrected
+against PhilHealth's two accreditation lists, none of which this script knows
+about. Re-running it would drop the DOH registry codes and reinstate the
+hand-typed YAKAP flags that were found to be wrong -- notably BRHMC, which is a
+GAMOT Package Provider but not an accredited YAKAP clinic.
+
+The JSON is the source of truth. Edit it directly, as CLAUDE.md says.
+"""
+
 import json
 import os
 
