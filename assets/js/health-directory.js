@@ -22,7 +22,6 @@
   let activeCategory = 'all';
   let activeOwnership = 'all';
   let activeFilterYakapOnly = false;
-  let activeFilter247Only = false;
   let searchQuery = '';
 
   const DOM = {
@@ -38,7 +37,6 @@
     categoryPills: null,
     ownershipSelect: null,
     filterYakapCheck: null,
-    filter247Check: null,
     resultCount: null,
     loadMoreContainer: null,
     loadMoreBtn: null,
@@ -78,7 +76,6 @@
     DOM.categoryPills = document.querySelectorAll('.health-cat-pill[data-category]');
     DOM.ownershipSelect = document.getElementById('health-ownership-filter');
     DOM.filterYakapCheck = document.getElementById('filter-yakap-only');
-    DOM.filter247Check = document.getElementById('filter-247-only');
     DOM.resultCount = document.getElementById('health-result-count');
     DOM.loadMoreContainer = document.getElementById('health-load-more-wrap');
     DOM.loadMoreBtn = document.getElementById('health-load-more-btn');
@@ -144,14 +141,6 @@
       });
     }
 
-    if (DOM.filter247Check) {
-      DOM.filter247Check.addEventListener('change', (e) => {
-        activeFilter247Only = e.target.checked;
-        currentPage = 1;
-        applyFilters();
-      });
-    }
-
     if (DOM.loadMoreBtn) {
       DOM.loadMoreBtn.addEventListener('click', () => {
         currentPage++;
@@ -172,11 +161,9 @@
     activeCategory = 'all';
     activeOwnership = 'all';
     activeFilterYakapOnly = false;
-    activeFilter247Only = false;
 
     if (DOM.ownershipSelect) DOM.ownershipSelect.value = 'all';
     if (DOM.filterYakapCheck) DOM.filterYakapCheck.checked = false;
-    if (DOM.filter247Check) DOM.filter247Check.checked = false;
 
     if (DOM.categoryPills) {
       DOM.categoryPills.forEach((p) => {
@@ -368,12 +355,7 @@
         return false;
       }
 
-      // 4. 24/7 Emergency Only Toggle
-      if (activeFilter247Only && !facility.emergency_24_7) {
-        return false;
-      }
-
-      // 5. Search Query
+      // 4. Search Query
       if (searchQuery) {
         const name = (facility.name || '').toLowerCase();
         const shortName = (facility.short_name || '').toLowerCase();
@@ -381,9 +363,12 @@
         const street = (facility.address?.street || '').toLowerCase();
         const cat = (facility.category || '').toLowerCase();
         const type = (facility.type || '').toLowerCase();
+        // Not shown on the card any more -- the lists made it too long -- but
+        // still indexed, so a search for a procedure finds the facility.
         const services = Array.isArray(facility.services)
           ? facility.services.join(' ').toLowerCase()
           : '';
+        const addOns = (facility.licensed_add_ons || '').toLowerCase();
         const pb = (facility.punong_barangay || '').toLowerCase();
 
         const match =
@@ -394,6 +379,7 @@
           cat.includes(searchQuery) ||
           type.includes(searchQuery) ||
           services.includes(searchQuery) ||
+          addOns.includes(searchQuery) ||
           pb.includes(searchQuery);
 
         if (!match) return false;
@@ -468,7 +454,6 @@
       const isGamot = fac.accreditations?.is_yakap_gamot;
       const isYakap = isKonsulta || isGamot;
       const isDoh = fac.accreditations?.is_doh_licensed;
-      const is247 = fac.emergency_24_7;
       const isGovt = fac.ownership === 'Government';
       const isAbtc = fac.accreditations?.is_abtc_certified;
       const abtcLapsed = isAbtc && hasLapsed(fac.accreditations?.abtc_validity);
@@ -506,33 +491,7 @@
       }
 
       const notes = dataNotes.filter((note) => note.facility_id === fac.id);
-      const services = Array.isArray(fac.services) ? fac.services : [];
       const detailsId = `facility-details-${fac.id}`;
-
-      // The card face shows a sample of services. The rest live in the details
-      // panel, and the "+N more" chip is the control that opens it rather than
-      // a label that goes nowhere.
-      const PREVIEW = 3;
-      let servicesHtml = '';
-      if (services.length > 0) {
-        const hidden = services.length - PREVIEW;
-        servicesHtml = `
-          <div class="facility-services-wrap">
-            <span class="facility-services-label"><i class="bi bi-tag-fill"></i> Services:</span>
-            <div class="facility-services-tags">
-              ${services
-                .slice(0, PREVIEW)
-                .map((s) => `<span class="service-pill">${escapeHtml(s)}</span>`)
-                .join('')}
-              ${
-                hidden > 0
-                  ? `<button type="button" class="service-pill service-pill-more" data-facility-expand aria-controls="${escapeHtml(detailsId)}">+${hidden} more</button>`
-                  : ''
-              }
-            </div>
-          </div>
-        `;
-      }
 
       let bhsExtraHtml = '';
       if (fac.category === 'Barangay Health Station') {
@@ -583,6 +542,8 @@
           'Animal-bite certification valid to',
           formatDate(fac.accreditations?.abtc_validity)
         ),
+        // DOH publishes this as "ABC" -- authorised bed capacity.
+        detailRow('DOH-authorised beds', fac.bed_capacity),
       ].filter(Boolean);
 
       html += `
@@ -603,13 +564,6 @@
                 isGamot
                   ? `<span class="badge badge-gamot ${gamotLapsed ? 'badge--lapsed' : ''}" title="On the PhilHealth list of Accredited GAMOT Package Providers -- dispenses the free YAKAP maintenance medicines">
                        <i class="bi bi-capsule"></i> YAKAP GAMOT${gamotLapsed ? ' (lapsed)' : ''}
-                     </span>`
-                  : ''
-              }
-              ${
-                is247
-                  ? `<span class="badge badge-247" title="Open 24 Hours / Emergency Response">
-                       <i class="bi bi-clock-fill"></i> 24/7 Emergency
                      </span>`
                   : ''
               }
@@ -652,7 +606,6 @@
 
             ${contactLines.length ? `<div class="facility-contacts">${contactLines[0]}</div>` : ''}
 
-            ${servicesHtml}
           </div>
 
           <button type="button" class="facility-disclosure" aria-expanded="false" aria-controls="${escapeHtml(detailsId)}" data-facility-toggle>
@@ -671,17 +624,6 @@
                   : '<p class="facility-details-empty">DOH does not publish contact details for this facility.</p>'
               }
             </div>
-
-            ${
-              services.length
-                ? `<div class="facility-details-group">
-                     <h4 class="facility-details-heading">All services</h4>
-                     <div class="facility-services-tags">
-                       ${services.map((sv) => `<span class="service-pill">${escapeHtml(sv)}</span>`).join('')}
-                     </div>
-                   </div>`
-                : ''
-            }
 
             ${
               licenceRows.length
@@ -886,7 +828,7 @@
       // independently -- opening one does not close another elsewhere in the
       // grid, which at this many cards would be disorienting.
       DOM.grid.addEventListener('click', (event) => {
-        const trigger = event.target.closest('[data-facility-toggle], [data-facility-expand]');
+        const trigger = event.target.closest('[data-facility-toggle]');
         if (!trigger) return;
 
         const card = trigger.closest('.facility-card');
@@ -894,10 +836,7 @@
         const panel = card && card.querySelector('.facility-details');
         if (!button || !panel) return;
 
-        const expand = trigger.hasAttribute('data-facility-expand')
-          ? true
-          : button.getAttribute('aria-expanded') !== 'true';
-        setDisclosure(button, panel, expand);
+        setDisclosure(button, panel, button.getAttribute('aria-expanded') !== 'true');
       });
     }
 

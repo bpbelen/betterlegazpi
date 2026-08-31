@@ -93,7 +93,7 @@
     "drug_testing_laboratories": 3,
     "ambulatory_surgical_clinics": 1,
     "blood_service_facilities": 1,
-    "animal_bite_centers": 3,
+    "animal_bite_centers": 2,
     "barangay_health_stations": 70,
     "government_owned": 79,
     "private_owned": 39,
@@ -144,7 +144,6 @@
         "Pharmacy",
         "Animal Bite Treatment"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.1444,
         "lng": 123.7291
@@ -167,9 +166,9 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 742-5938",
-        "mobile": "0917-142-3633",
-        "email": "info@acemedicalcenterlegazpi.com"
+        "landline": "N/A",
+        "mobile": "(+63) 975-372-9932 / (+63) 917-185-2764",
+        "email": "acemclegazpi@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
@@ -177,20 +176,13 @@
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30"
       },
-      "services": [
-        "24/7 Emergency",
-        "ICU & NICU",
-        "Inpatient Care",
-        "Hemodialysis",
-        "Endoscopy & Diagnostics",
-        "CT Scan & X-Ray",
-        "Pharmacy"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Tertiary)", "Blood station", "Hemodialysis (12 stations)"],
       "coordinates": {
         "lat": 13.1678,
         "lng": 123.7225
-      }
+      },
+      "licensed_add_ons": "DOH HFSRB Hospitals list: DIAGNOSTIC X-RAY SERVICES (LEVEL 3) / Specialized Diagnostic X-Ray Services:Computed Tomography, Digital Subtraction Angiography,  Percutaneous Transluminal Angioplasty, Tumor Localization And Simulation, Cardiac Catheterization Magnetic Resonance Imaging / AMBULATORY SURGICAL CLINIC: Colorectal Surgery, General Surgery, Oral-Maxillo-Facial Surgery, Orthopedic Surgery,  Otorhinolaryngologic Surgery,  Pediatric Surgery, Plastic and Reconstructive Surgery, Reproductive Health Surgery, Thoracic Surgery, Urologic Surgery / PHYSICAL MEDICINE AND CARDIAC REHABILITATION UNIT",
+      "bed_capacity": 102
     },
     {
       "id": "fac-hosp-003",
@@ -209,8 +201,8 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 480-7777 / (052) 480-7778",
-        "mobile": "0917-582-3977 / 0917-558-1679",
+        "landline": "480-8747 loc.103",
+        "mobile": "09178093043 / 9985469453",
         "email": "adh_hospital@yahoo.com"
       },
       "accreditations": {
@@ -225,22 +217,13 @@
         "gamot_provider_no": "1593",
         "gamot_valid_until": "2026-12-31"
       },
-      "services": [
-        "PhilHealth YAKAP Konsulta",
-        "YAKAP GAMOT medicine dispensing",
-        "24/7 Emergency",
-        "Inpatient Care",
-        "Maternity & Child Care",
-        "Surgical Services",
-        "Clinical Laboratory",
-        "Pharmacy",
-        "Drug Testing"
-      ],
-      "emergency_24_7": true,
+      "services": ["Drug testing (screening)", "Clinical laboratory (Tertiary)", "Blood station"],
       "coordinates": {
         "lat": 13.1396,
         "lng": 123.7441
-      }
+      },
+      "licensed_add_ons": "DOH HFSRB Hospitals list: Specialized Diagnostic X-Ray Services: Computed Tomography",
+      "bed_capacity": 55
     },
     {
       "id": "fac-hosp-004",
@@ -259,8 +242,8 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 480-7411",
-        "mobile": "0945-385-3587",
+        "landline": "N/A",
+        "mobile": "0977-3774791",
         "email": "tghlegazpi@gmail.com"
       },
       "accreditations": {
@@ -276,21 +259,17 @@
         "gamot_valid_until": "2026-12-31"
       },
       "services": [
-        "PhilHealth YAKAP Konsulta",
-        "YAKAP GAMOT medicine dispensing",
-        "24/7 Emergency",
-        "Inpatient & Outpatient",
-        "General Surgery & OB-GYN",
-        "Pediatrics",
-        "Diagnostic Ultrasound & X-Ray",
-        "Pharmacy",
-        "Cancer Treatment"
+        "Clinical laboratory (Tertiary)",
+        "Blood station",
+        "Cancer treatment unit in a general hospital",
+        "Hemodialysis (12 stations)"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.1415,
         "lng": 123.738
-      }
+      },
+      "licensed_add_ons": "DOH HFSRB Hospitals list: Hemodialysis Clinic / Specialized Diganostic X-ray Services: Computed Tomography; / Cancer Treatment Unit in a General Hospital",
+      "bed_capacity": 50
     },
     {
       "id": "fac-hosp-005",
@@ -309,8 +288,8 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 742-1234",
-        "mobile": "0905-892-1185",
+        "landline": "N/A",
+        "mobile": "0905-892-1185 / 9611787866",
         "email": "legazpicityhospital.ph@gmail.com"
       },
       "accreditations": {
@@ -322,20 +301,12 @@
         "yakap_konsulta_no": "2086",
         "yakap_konsulta_valid_until": "2026-12-31"
       },
-      "services": [
-        "PhilHealth YAKAP Konsulta",
-        "24/7 Emergency",
-        "General Inpatient Care",
-        "Maternity & Delivery",
-        "Pediatrics",
-        "Primary Surgery",
-        "Clinical Lab & Pharmacy"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Secondary)", "Blood station"],
       "coordinates": {
         "lat": 13.1465,
         "lng": 123.7485
-      }
+      },
+      "bed_capacity": 75
     },
     {
       "id": "fac-hosp-006",
@@ -353,9 +324,9 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 736-0330 / (052) 481-1450",
-        "mobile": "0917-578-8785",
-        "email": "hospital@ust-legazpi.edu.ph"
+        "landline": "N/A",
+        "mobile": "9176263148",
+        "email": "ustlegazpihospital@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
@@ -365,22 +336,14 @@
         "is_abtc_certified": true,
         "abtc_validity": "2026-04-11"
       },
-      "services": [
-        "24/7 Emergency",
-        "Intensive Care Unit (ICU)",
-        "Diagnostic Imaging & CT Scan",
-        "Laboratory Services",
-        "Physical Therapy & Rehab",
-        "Outpatient Specialties",
-        "Pharmacy",
-        "Animal Bite Treatment"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Tertiary)", "Blood station", "Hemodialysis (13 stations)"],
       "coordinates": {
         "lat": 13.1418,
         "lng": 123.7412
       },
-      "doh_code": "4999"
+      "doh_code": "4999",
+      "licensed_add_ons": "DOH HFSRB Hospitals list: Specialized x-ray facility: Computed Tomography and Mammography, / Dialysis Clinic",
+      "bed_capacity": 50
     },
     {
       "id": "fac-hosp-007",
@@ -398,9 +361,9 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 480-7132",
-        "mobile": "0917-512-3456",
-        "email": "agohospital@yahoo.com"
+        "landline": "N/A",
+        "mobile": "9561651829 / 998548354",
+        "email": "agogeneralhospital@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
@@ -408,19 +371,14 @@
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30"
       },
-      "services": [
-        "Emergency Care",
-        "General Medicine",
-        "Maternity & Pediatric Care",
-        "Outpatient Clinic",
-        "Clinical Laboratory"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Secondary)", "Blood station"],
       "coordinates": {
         "lat": 13.1388,
         "lng": 123.7365
       },
-      "doh_code": "402"
+      "doh_code": "402",
+      "licensed_add_ons": "DOH HFSRB Hospitals list: X-RAY  (Level 2) / Add-on service: Clinical Chemistry – Troponin I",
+      "bed_capacity": 25
     },
     {
       "id": "fac-hosp-008",
@@ -438,9 +396,9 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 480-7764 / (052) 480-7765",
-        "mobile": "0917-890-1234",
-        "email": "estevezhospital@gmail.com"
+        "landline": "052-480-4021",
+        "mobile": "09189247495",
+        "email": "emh@estevezhospital.com / mlv.estz@gmail.com / estevezmemorialhospitalinc@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
@@ -448,19 +406,14 @@
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30"
       },
-      "services": [
-        "Emergency Care",
-        "Inpatient & Outpatient",
-        "Minor Surgery",
-        "Maternal & Child Health",
-        "Pharmacy"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Tertiary)", "Blood station"],
       "coordinates": {
         "lat": 13.1432,
         "lng": 123.751
       },
-      "doh_code": "4308"
+      "doh_code": "4308",
+      "licensed_add_ons": "DOH HFSRB Hospitals list: LEVEL 3 X-RAY SERVICES: / COMPUTED TOMOGRAPHY / PHYSICAL MEDICINE AND REHABILITATION UNIT",
+      "bed_capacity": 55
     },
     {
       "id": "fac-yakap-001",
@@ -503,7 +456,6 @@
         "Dental Health Services",
         "Sanitary Inspection & Health Cards"
       ],
-      "emergency_24_7": false,
       "coordinates": {
         "lat": 13.1398,
         "lng": 123.7345
@@ -525,7 +477,7 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 742-8899",
+        "landline": "N/A",
         "mobile": "0916-373-8055",
         "email": "premiermd213@gmail.com"
       },
@@ -538,19 +490,13 @@
         "yakap_konsulta_no": "2093",
         "yakap_konsulta_valid_until": "2026-12-31"
       },
-      "services": [
-        "PhilHealth YAKAP Konsulta",
-        "General Medical Consultation",
-        "Diagnostic Laboratory",
-        "Preventive Health Checkups",
-        "Clinical Laboratory"
-      ],
-      "emergency_24_7": false,
+      "services": ["Clinical laboratory (Primary)"],
       "coordinates": {
         "lat": 13.1425,
         "lng": 123.746
       },
-      "doh_code": "54937"
+      "doh_code": "54937",
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: SGOT, SGPT, HbA1c, TSH, FT3, FT4"
     },
     {
       "id": "fac-yakap-003",
@@ -568,7 +514,7 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 480-1234",
+        "landline": "N/A",
         "mobile": "0956-875-8958",
         "email": "rmdu5ekonsulta@gmail.com"
       },
@@ -586,7 +532,6 @@
         "Physical Examinations",
         "Primary Care & First Aid"
       ],
-      "emergency_24_7": false,
       "coordinates": {
         "lat": 13.146,
         "lng": 123.731
@@ -608,7 +553,7 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 836-7014",
+        "landline": "480-76-74",
         "mobile": "0956-221-1360",
         "email": "southeastoccupationalhealth@gmail.com"
       },
@@ -621,20 +566,13 @@
         "yakap_konsulta_no": "2104",
         "yakap_konsulta_valid_until": "2026-12-31"
       },
-      "services": [
-        "PhilHealth YAKAP Konsulta",
-        "Occupational Health & Pre-Employment Exams",
-        "Diagnostic Laboratory Tests",
-        "Executive Health Checkups",
-        "Clinical Laboratory",
-        "Drug Testing"
-      ],
-      "emergency_24_7": false,
+      "services": ["Clinical laboratory (Secondary)", "Drug testing (screening)"],
       "coordinates": {
         "lat": 13.1402,
         "lng": 123.7525
       },
-      "doh_code": "8924"
+      "doh_code": "8924",
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Mobile Clinical Laboratory"
     },
     {
       "id": "fac-shc-001",
@@ -671,7 +609,6 @@
         "Dental Care",
         "Minor Surgery & Triage"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.1095,
         "lng": 123.722
@@ -710,7 +647,6 @@
         "Newborn Screening & Hearing Test",
         "Family Planning & Lactation Counseling"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.203,
         "lng": 123.765
@@ -749,7 +685,6 @@
         "Newborn Care & Immunization",
         "Family Planning Services"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.085,
         "lng": 123.755
@@ -788,7 +723,6 @@
         "Newborn Care",
         "Immunization & Nutrition"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.121,
         "lng": 123.738
@@ -828,7 +762,6 @@
         "Water Testing & Food Handler Screening",
         "Drug Testing"
       ],
-      "emergency_24_7": false,
       "coordinates": {
         "lat": 13.1398,
         "lng": 123.7345
@@ -845,7 +778,6 @@
       "urban_rural": "Urban",
       "population_served": 3259,
       "punong_barangay": "Hon. Veronica S. Geraldino",
-      "barangay_secretary": "Maria Vecia G. Basilan",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -870,8 +802,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-002",
@@ -884,7 +815,6 @@
       "urban_rural": "Urban",
       "population_served": 1416,
       "punong_barangay": "Hon. Milagros B. Bal",
-      "barangay_secretary": "Ma. Zarina N. Miraflores",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -909,8 +839,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-003",
@@ -923,7 +852,6 @@
       "urban_rural": "Urban",
       "population_served": 945,
       "punong_barangay": "Hon. Jose T. Pispis",
-      "barangay_secretary": "Ave A. Palcon",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -934,7 +862,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09814619092",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -948,8 +876,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-004",
@@ -962,7 +889,6 @@
       "urban_rural": "Urban",
       "population_served": 975,
       "punong_barangay": "Hon. Gibsen Salvador E. De Leoz",
-      "barangay_secretary": "Ma. Keneth O. Campillos",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -973,7 +899,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09516995291",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -987,8 +913,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-005",
@@ -1001,7 +926,6 @@
       "urban_rural": "Urban",
       "population_served": 1037,
       "punong_barangay": "Hon. Lorena A. Vargas",
-      "barangay_secretary": "Thea Salome U. Martinez",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1026,8 +950,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-006",
@@ -1040,7 +963,6 @@
       "urban_rural": "Urban",
       "population_served": 1289,
       "punong_barangay": "Hon. Arthur R. Marco",
-      "barangay_secretary": "Maria Angela A. Nalles",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1065,8 +987,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-007",
@@ -1079,7 +1000,6 @@
       "urban_rural": "Urban",
       "population_served": 559,
       "punong_barangay": "Hon. Domingo Alberto D. Pasano Jr.",
-      "barangay_secretary": "Mary Ann P. Morano",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1104,8 +1024,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-008",
@@ -1118,7 +1037,6 @@
       "urban_rural": "Urban",
       "population_served": 2564,
       "punong_barangay": "Hon. Amore Rex B. Rañeses",
-      "barangay_secretary": "Regina D. De Guzman",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1143,8 +1061,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-009",
@@ -1157,7 +1074,6 @@
       "urban_rural": "Urban",
       "population_served": 1414,
       "punong_barangay": "Hon. Roy A. Nañoz",
-      "barangay_secretary": "Jacqueline L. Amaranto",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1168,7 +1084,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09308119357",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1182,8 +1098,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-010",
@@ -1196,7 +1111,6 @@
       "urban_rural": "Rural",
       "population_served": 452,
       "punong_barangay": "Hon. Victor R. Lapasaran",
-      "barangay_secretary": "Christy M. Aycocho",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1221,8 +1135,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-011",
@@ -1235,7 +1148,6 @@
       "urban_rural": "Urban",
       "population_served": 1505,
       "punong_barangay": "Hon. Mark Joel O. Beguiras",
-      "barangay_secretary": "Meryl E. Bajamundi",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1260,8 +1172,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-012",
@@ -1274,7 +1185,6 @@
       "urban_rural": "Urban",
       "population_served": 1041,
       "punong_barangay": "Hon. Miguelito A. Barcoma",
-      "barangay_secretary": "Ma. Rayzel A. Ibay",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1299,8 +1209,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-013",
@@ -1313,7 +1222,6 @@
       "urban_rural": "Urban",
       "population_served": 365,
       "punong_barangay": "Hon. Ma. Lourdes F. Baltazar",
-      "barangay_secretary": "Lailani A. Belleza",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1324,7 +1232,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09751738902",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1338,8 +1246,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-014",
@@ -1352,7 +1259,6 @@
       "urban_rural": "Urban",
       "population_served": 719,
       "punong_barangay": "Hon. Gerald A. Ayque",
-      "barangay_secretary": "Lorelie M. Mangampo",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1363,7 +1269,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09953606107",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1377,8 +1283,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-015",
@@ -1391,7 +1296,6 @@
       "urban_rural": "Urban",
       "population_served": 2386,
       "punong_barangay": "Hon. Erlim A. Azotea",
-      "barangay_secretary": "Irma A. Buemia",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1402,7 +1306,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09305283465",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1416,8 +1320,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-016",
@@ -1430,7 +1333,6 @@
       "urban_rural": "Urban",
       "population_served": 5420,
       "punong_barangay": "Hon. Jonathan G. Rodenas",
-      "barangay_secretary": "Cesar L. Asiado",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1455,8 +1357,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-017",
@@ -1469,7 +1370,6 @@
       "urban_rural": "Urban",
       "population_served": 2365,
       "punong_barangay": "Hon. Benito B. Chan",
-      "barangay_secretary": "Amelia R. Colecha",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1494,8 +1394,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-018",
@@ -1508,7 +1407,6 @@
       "urban_rural": "Urban",
       "population_served": 4133,
       "punong_barangay": "Hon. Rowena A. Olimpo",
-      "barangay_secretary": "Arlene Mae D. Magno",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1533,8 +1431,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-019",
@@ -1547,7 +1444,6 @@
       "urban_rural": "Rural",
       "population_served": 1611,
       "punong_barangay": "Hon. John B. Macalampad",
-      "barangay_secretary": "Christine Joy N. Apita",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1572,8 +1468,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-020",
@@ -1586,7 +1481,6 @@
       "urban_rural": "Urban",
       "population_served": 707,
       "punong_barangay": "Hon. Fabian B. Batalla Jr.",
-      "barangay_secretary": "Maria Shiela M. Enaje",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1611,8 +1505,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-021",
@@ -1625,7 +1518,6 @@
       "urban_rural": "Urban",
       "population_served": 770,
       "punong_barangay": "Hon. Jose T. Abiera",
-      "barangay_secretary": "Arcie A. Malto",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1650,8 +1542,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-022",
@@ -1664,7 +1555,6 @@
       "urban_rural": "Urban",
       "population_served": 1861,
       "punong_barangay": "Hon. Jerry A. Grageda",
-      "barangay_secretary": "Merle Z. Mira",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1689,8 +1579,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-023",
@@ -1703,7 +1592,6 @@
       "urban_rural": "Urban",
       "population_served": 1202,
       "punong_barangay": "Hon. Edgar B. Bejer",
-      "barangay_secretary": "Joseph C. Belga",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1714,7 +1602,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09122025648",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1728,8 +1616,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-024",
@@ -1742,7 +1629,6 @@
       "urban_rural": "Rural",
       "population_served": 1826,
       "punong_barangay": "Hon. Ricardo V. Abunda",
-      "barangay_secretary": "Elmer S. Canon",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1767,8 +1653,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-025",
@@ -1781,7 +1666,6 @@
       "urban_rural": "Urban",
       "population_served": 2730,
       "punong_barangay": "Hon. Ma. Karren C. Valdez",
-      "barangay_secretary": "Carrie Mae A. Lusuegro",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1806,8 +1690,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-026",
@@ -1820,7 +1703,6 @@
       "urban_rural": "Urban",
       "population_served": 534,
       "punong_barangay": "Hon. Julia D. Agao",
-      "barangay_secretary": "April Ester M. Naval",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1845,8 +1727,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-027",
@@ -1859,7 +1740,6 @@
       "urban_rural": "Urban",
       "population_served": 1451,
       "punong_barangay": "Hon. Basilia A. Capino",
-      "barangay_secretary": "Laurice T. Dazal",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1870,7 +1750,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09776320556",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1884,8 +1764,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-028",
@@ -1898,7 +1777,6 @@
       "urban_rural": "Urban",
       "population_served": 1487,
       "punong_barangay": "Hon. Antonio L. Loveriza",
-      "barangay_secretary": "Cecelia M. Cariño",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1923,8 +1801,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-029",
@@ -1937,7 +1814,6 @@
       "urban_rural": "Urban",
       "population_served": 1894,
       "punong_barangay": "Hon. Ismael G. Santillan",
-      "barangay_secretary": "Rhounalyn Dematera",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1962,8 +1838,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-030",
@@ -1976,7 +1851,6 @@
       "urban_rural": "Urban",
       "population_served": 1210,
       "punong_barangay": "Hon. Fernando A. Lopez",
-      "barangay_secretary": "Maricel L. Encinareal",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2001,8 +1875,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-031",
@@ -2015,7 +1888,6 @@
       "urban_rural": "Urban",
       "population_served": 1088,
       "punong_barangay": "Hon. Teresita L. Empig",
-      "barangay_secretary": "Bremer D. Romero",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2026,7 +1898,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09070127231",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2040,8 +1912,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-032",
@@ -2054,7 +1925,6 @@
       "urban_rural": "Urban",
       "population_served": 5452,
       "punong_barangay": "Hon. Bill B. Atento",
-      "barangay_secretary": "Rafael Padrique",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2065,7 +1935,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09171120318",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2079,8 +1949,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-033",
@@ -2093,7 +1962,6 @@
       "urban_rural": "Urban",
       "population_served": 2887,
       "punong_barangay": "Hon. Marife D. Velasco",
-      "barangay_secretary": "Maria Teresa A. Cuebillas",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2104,7 +1972,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09636753741",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2118,8 +1986,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-034",
@@ -2132,7 +1999,6 @@
       "urban_rural": "Urban",
       "population_served": 2140,
       "punong_barangay": "Hon. Mariano Oriel A. Maddela",
-      "barangay_secretary": "Rolando B. Gonzales",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2157,8 +2023,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-035",
@@ -2171,7 +2036,6 @@
       "urban_rural": "Urban",
       "population_served": 340,
       "punong_barangay": "Hon. Sayri R. Sayco",
-      "barangay_secretary": "Benajane Bellen",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2182,7 +2046,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09395968501",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2196,8 +2060,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-036",
@@ -2210,7 +2073,6 @@
       "urban_rural": "Urban",
       "population_served": 404,
       "punong_barangay": "Hon. Eric Sim B. Brizuela",
-      "barangay_secretary": "Nelia D. Abad",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2235,8 +2097,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-037",
@@ -2249,7 +2110,6 @@
       "urban_rural": "Urban",
       "population_served": 7546,
       "punong_barangay": "Hon. Bernard Y. Pacardo",
-      "barangay_secretary": "Ali Raza P. Ahmad",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2274,8 +2134,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-038",
@@ -2288,7 +2147,6 @@
       "urban_rural": "Urban",
       "population_served": 6534,
       "punong_barangay": "Hon. Ma. Theresa S. Naz",
-      "barangay_secretary": "Angelica N. Cordovilla",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2299,7 +2157,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09257136784",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2313,8 +2171,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-039",
@@ -2327,7 +2184,6 @@
       "urban_rural": "Urban",
       "population_served": 2375,
       "punong_barangay": "Hon. Reynaldo H. Bendicio",
-      "barangay_secretary": "Monica S. Lorica",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2352,8 +2208,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-040",
@@ -2366,7 +2221,6 @@
       "urban_rural": "Urban",
       "population_served": 7030,
       "punong_barangay": "Hon. Edsil N. Llaguno",
-      "barangay_secretary": "Niño Joseph C. Llena",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2391,8 +2245,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-041",
@@ -2405,7 +2258,6 @@
       "urban_rural": "Urban",
       "population_served": 5389,
       "punong_barangay": "Hon. Joel A. Ador",
-      "barangay_secretary": "Ma. Angelica B. Nuñez",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2430,8 +2282,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-042",
@@ -2444,7 +2295,6 @@
       "urban_rural": "Urban",
       "population_served": 10330,
       "punong_barangay": "Hon. Joel A. Orosco",
-      "barangay_secretary": "Jean A. Ramos",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2455,7 +2305,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09106022923",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2469,8 +2319,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-043",
@@ -2483,7 +2332,6 @@
       "urban_rural": "Rural",
       "population_served": 1809,
       "punong_barangay": "Hon. Sylvia M. Del Agua",
-      "barangay_secretary": "Thelma B. Arcinue",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2508,8 +2356,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-044",
@@ -2522,7 +2369,6 @@
       "urban_rural": "Rural",
       "population_served": 4585,
       "punong_barangay": "Hon. Tito C. Villanueva",
-      "barangay_secretary": "Joy M. Alamil",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2547,8 +2393,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-045",
@@ -2561,7 +2406,6 @@
       "urban_rural": "Rural",
       "population_served": 2167,
       "punong_barangay": "Hon. Romeo A. Almayda Jr.",
-      "barangay_secretary": "Cynthia D. Nuñez",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2586,8 +2430,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-046",
@@ -2600,7 +2443,6 @@
       "urban_rural": "Rural",
       "population_served": 1903,
       "punong_barangay": "Hon. Amelia A. Dela Torre",
-      "barangay_secretary": "Rodel P. Balaguer",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2625,8 +2467,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-047",
@@ -2639,7 +2480,6 @@
       "urban_rural": "Rural",
       "population_served": 4085,
       "punong_barangay": "Hon. Wilhelmina M. Budao",
-      "barangay_secretary": "Marifaith A. Estevez",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2664,8 +2504,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-048",
@@ -2678,7 +2517,6 @@
       "urban_rural": "Rural",
       "population_served": 1675,
       "punong_barangay": "Hon. Dindo D. Nuñez",
-      "barangay_secretary": "Jecel N. De Lumen",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2703,8 +2541,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-049",
@@ -2717,7 +2554,6 @@
       "urban_rural": "Urban",
       "population_served": 7287,
       "punong_barangay": "Hon. Ricardo A. Arienda",
-      "barangay_secretary": "Catherine A. Loterte",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2728,7 +2564,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09158717790",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2742,8 +2578,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-050",
@@ -2756,7 +2591,6 @@
       "urban_rural": "Rural",
       "population_served": 1949,
       "punong_barangay": "Hon. Harold L. Bembenuto",
-      "barangay_secretary": "Lhiza Mae A. Banania",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2767,7 +2601,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09068516780",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2781,8 +2615,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-051",
@@ -2795,7 +2628,6 @@
       "urban_rural": "Rural",
       "population_served": 4200,
       "punong_barangay": "Hon. Ronaldo B. Miña Sr.",
-      "barangay_secretary": "Janette A. Araña",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2820,8 +2652,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-052",
@@ -2834,7 +2665,6 @@
       "urban_rural": "Rural",
       "population_served": 1904,
       "punong_barangay": "Hon. Hilario A. Atun",
-      "barangay_secretary": "Mae N. Aydalla",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2859,8 +2689,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-053",
@@ -2873,7 +2702,6 @@
       "urban_rural": "Rural",
       "population_served": 4308,
       "punong_barangay": "Hon. Chona M. Miña",
-      "barangay_secretary": "Violeta N. Abejuro",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2898,8 +2726,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-054",
@@ -2912,7 +2739,6 @@
       "urban_rural": "Rural",
       "population_served": 1699,
       "punong_barangay": "Hon. Dennis P. Nuñez",
-      "barangay_secretary": "Ronaldo L. Agao",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2937,8 +2763,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-055",
@@ -2951,7 +2776,6 @@
       "urban_rural": "Rural",
       "population_served": 4963,
       "punong_barangay": "Hon. Danilo D. Agripa",
-      "barangay_secretary": "Cristy E. Arimado",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2976,8 +2800,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-056",
@@ -2990,7 +2813,6 @@
       "urban_rural": "Urban",
       "population_served": 20017,
       "punong_barangay": "Hon. Benjamin D. Rosin",
-      "barangay_secretary": "Cecilia T. Gandol",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3015,8 +2837,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-057",
@@ -3029,7 +2850,6 @@
       "urban_rural": "Rural",
       "population_served": 1746,
       "punong_barangay": "Hon. Glenn J. Barcelon",
-      "barangay_secretary": "Michelle D. Ayque",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3054,8 +2874,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-058",
@@ -3068,7 +2887,6 @@
       "urban_rural": "Rural",
       "population_served": 4329,
       "punong_barangay": "Hon. Maria Cristina P. Ajero",
-      "barangay_secretary": "Benjamin Gabriel G. Imperial",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3093,8 +2911,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-059",
@@ -3107,7 +2924,6 @@
       "urban_rural": "Urban",
       "population_served": 5215,
       "punong_barangay": "Hon. Henyl B. Olimpo",
-      "barangay_secretary": "Ernesto D. Barrameda Jr.",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3132,8 +2948,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-060",
@@ -3146,7 +2961,6 @@
       "urban_rural": "Rural",
       "population_served": 1453,
       "punong_barangay": "Hon. Norberto M. Abion",
-      "barangay_secretary": "Shaira B. Lana",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3171,8 +2985,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-061",
@@ -3185,7 +2998,6 @@
       "urban_rural": "Urban",
       "population_served": 5320,
       "punong_barangay": "Hon. Niño Albert C. Berjuega",
-      "barangay_secretary": "Cristina A. Bertiz",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3210,8 +3022,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-062",
@@ -3224,7 +3035,6 @@
       "urban_rural": "Urban",
       "population_served": 5250,
       "punong_barangay": "Hon. Fidel A. Botin Sr.",
-      "barangay_secretary": "Ella B. Maravilla",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3249,8 +3059,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-063",
@@ -3263,7 +3072,6 @@
       "urban_rural": "Rural",
       "population_served": 2026,
       "punong_barangay": "Hon. Anabelle A. Teope",
-      "barangay_secretary": "Rachel M. Alcantara",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3288,8 +3096,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-064",
@@ -3302,7 +3109,6 @@
       "urban_rural": "Rural",
       "population_served": 1869,
       "punong_barangay": "Hon. Dennis A. Alamo",
-      "barangay_secretary": "Janice Ian Rose P. Agripa",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3327,8 +3133,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-065",
@@ -3341,7 +3146,6 @@
       "urban_rural": "Rural",
       "population_served": 2798,
       "punong_barangay": "Hon. Beberlyn A. Bitancur",
-      "barangay_secretary": "Andy A. Aguimba",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3366,8 +3170,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-066",
@@ -3380,7 +3183,6 @@
       "urban_rural": "Urban",
       "population_served": 8918,
       "punong_barangay": "Hon. Crispin A. Botin",
-      "barangay_secretary": "Mark Jhay R. Alcazar",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3391,7 +3193,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09091238701",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -3405,8 +3207,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-067",
@@ -3419,7 +3220,6 @@
       "urban_rural": "Rural",
       "population_served": 1739,
       "punong_barangay": "Hon. Jesse M. Aycardo",
-      "barangay_secretary": "Rose Ann E. Nicol",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3430,7 +3230,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09664594639",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -3444,8 +3244,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-068",
@@ -3458,7 +3257,6 @@
       "urban_rural": "Rural",
       "population_served": 2322,
       "punong_barangay": "Hon. Ronaldo P. Aringo",
-      "barangay_secretary": "Anna Marie A. Dejumo",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3483,8 +3281,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-069",
@@ -3497,7 +3294,6 @@
       "urban_rural": "Rural",
       "population_served": 1419,
       "punong_barangay": "Hon. Rogelio A. Leron",
-      "barangay_secretary": "Sara Jean L. Musa",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3508,7 +3304,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09564267369",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -3522,8 +3318,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-070",
@@ -3536,7 +3331,6 @@
       "urban_rural": "Rural",
       "population_served": 3019,
       "punong_barangay": "Hon. Gladwyn T. Candia",
-      "barangay_secretary": "Hazel L. Lorilla",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3561,8 +3355,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-lab-003",
@@ -3581,17 +3374,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9198330720, 7327418; '09152780255",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "7327418",
+        "mobile": "9198330720 / 09152780255",
+        "email": "albaydiaglab@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Clinical Chemistry: HbA1c, Total Calcium, Ionized Calcium, Magnesium, / Phosphorus, Total Bilirubin, Direct and Indirect Bilirubin, Alkaline / Phosphatase, Amylase, LDH, NT-proBNP / Hepatitis Profile: Anti-HCV Test & Anti-HAV IgM Test (Screening) / Serology & Immunology: Typhoid Test, C-Reactive Protein (CRP) / Coagulation Tests: PT and APTT / Thyroid Function Tests: T3, T4, FT3, FT4, TSH (FIA) / Tumor Markers: PSA, B-HCG, CA-125"
     },
     {
       "id": "fac-lab-004",
@@ -3610,17 +3403,16 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9983327466",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9983327466",
+        "email": "bicolskinclinic@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Limited)"]
     },
     {
       "id": "fac-lab-005",
@@ -3639,17 +3431,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "0908 9496334; '09488727562",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "0908 9496334 / 09488727562",
+        "email": "bmsclaboratory@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Albumin, Total Protein, Magnesium, Phosphorous, LDH, Alkaline Phosphatase, HbA1c, Anti-HCV, Typhoid Test, T-proBNP, T3, T4, TSH, FT3, FT4, PSA, B-HCG, Ferritin"
     },
     {
       "id": "fac-lab-006",
@@ -3668,17 +3460,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "09171260361/09193453458",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "09171260361 / 09193453458",
+        "email": "healthubdiagnostic@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Mobile Clinical Laboratory / Clinical Chemistry Section: AST & ALT / Immunology/Serology Section: Thyroid Function Test (TSH, FT3, FT4)"
     },
     {
       "id": "fac-lab-007",
@@ -3697,17 +3489,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9175702551",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9175702551",
+        "email": "ibalongmedicalcenter@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: NT-pro BNP, FT3, FT4, TSH, PSA, HbA1c, Troponin-I"
     },
     {
       "id": "fac-lab-008",
@@ -3726,17 +3518,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9175176568",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9175176568 / 09175173783",
+        "email": "legazpi.mmg.albay@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory", "Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Primary)", "Drug testing (screening)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: ALT/AST"
     },
     {
       "id": "fac-lab-009",
@@ -3755,17 +3547,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9988626985",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "052 2010964",
+        "mobile": "9988626985",
+        "email": "rgmdi.laboratory@gmail.com / rgmdi.dtl@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory", "Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)", "Drug testing (screening)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Clinical Chemistry: Cortisol, Estradiol, FSH, Prolactin, LH, ASO, Amylase, Lipase, / Inorganic Phosphorous (IPHOS), Calcium, Magnesium, LDH, / Direct Bilirubin, Total Bilirubin, TIBC, Serum Iron, Total Protein, / Albumin & ALP / Immunology/Serology: Thyroid Function Test (FT4, FT3, TSH, T4, T3), Tumor Marker / (NT PROBNP, PSA), Anti-HBS, Ferritin, CRP, CEA, AFP, and / HEPA Profile (HBsAg ELISA, Anti-HBC IgG, Anti-HBE, / HBeAg) / Hematology Section: Protime, APTT"
     },
     {
       "id": "fac-lab-010",
@@ -3784,17 +3576,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9175968127",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "201-8153",
+        "mobile": "9175968127 / 09687986405",
+        "email": "sacredheartcliniclegazpi@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory", "Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)", "Drug testing (screening)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Thyroid Function Test (TSH, FT3, FT4, T3 and T4) / PSA Marker, SGOT, SGPT, Na, K, Cl, T. Calcium, Ionized Calcium, / HbA1c, HAV Screening"
     },
     {
       "id": "fac-lab-011",
@@ -3813,17 +3605,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "09519263960/( 054) 8306735",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "( 054) 8306735",
+        "mobile": "09519263960",
+        "email": "sadllegazpi5@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: HCV and HbA1c"
     },
     {
       "id": "fac-lab-012",
@@ -3842,17 +3634,16 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9369726782",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9369726782",
+        "email": "stmartinlgp@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Primary)"]
     },
     {
       "id": "fac-lab-013",
@@ -3871,17 +3662,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9177106520",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9177106520",
+        "email": "vizconnlaboratory@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Clinical Chemistry: SGOT, SGPT, HbA1c, Na, K, CI, / Serology: FT3, FT4, TSH, Mobile Clinical Laboratory,"
     },
     {
       "id": "fac-lab-014",
@@ -3900,17 +3691,17 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "09993751422 / 09173286690",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "09993751422 / 09173286690",
+        "email": "washingtonlaboratory@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory", "Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Primary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: AST, ALT, Na, K, Cl / Mobile Clinical Laboratory"
     },
     {
       "id": "fac-lab-015",
@@ -3931,15 +3722,14 @@
       "contact": {
         "landline": "(052) 8201731 loc. 5561",
         "mobile": "N/A",
-        "email": "N/A"
+        "email": "bsl-snrl@bicol.doh.gov.ph"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Limited)"]
     },
     {
       "id": "fac-birth-004",
@@ -3958,17 +3748,15 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9271917821",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9271917821",
+        "email": "abion.birthingcenter@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-005",
@@ -3989,15 +3777,13 @@
       "contact": {
         "landline": "(052) 820-5877",
         "mobile": "N/A",
-        "email": "N/A"
+        "email": "amecbirthing2019@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-006",
@@ -4016,17 +3802,15 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9205551411",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9205551411",
+        "email": "chebirthinghome14@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-007",
@@ -4045,17 +3829,15 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9478791984",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9478791984",
+        "email": "gdbbh@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-008",
@@ -4076,15 +3858,13 @@
       "contact": {
         "landline": "8742-13-75",
         "mobile": "N/A",
-        "email": "N/A"
+        "email": "lourdesarcos@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-009",
@@ -4103,17 +3883,15 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "09068425313,",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "09068425313",
+        "email": "lanasbirthinghome@yahoo.com.ph"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-010",
@@ -4132,17 +3910,15 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9272866246",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9272866246",
+        "email": "marysangelbirthinghome@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-011",
@@ -4161,17 +3937,15 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9564267591",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9564267591",
+        "email": "tcibirthing@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-012",
@@ -4190,17 +3964,15 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "968246459",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "968246459",
+        "email": "ryandescalzo@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-013",
@@ -4219,17 +3991,15 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "9175009428",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "9175009428",
+        "email": "rbbarcenas@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-dialysis-001",
@@ -4248,17 +4018,16 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "N/A",
+        "landline": "(052) 742 6756",
         "mobile": "N/A",
-        "email": "N/A"
+        "email": "bicolhemodialysisctr@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-06-30",
         "philhealth_accredited": false
       },
-      "services": ["Hemodialysis"],
-      "emergency_24_7": false
+      "services": ["Hemodialysis (18 stations)"]
     },
     {
       "id": "fac-dialysis-002",
@@ -4286,8 +4055,7 @@
         "hfsrb_as_of": "2026-06-30",
         "philhealth_accredited": false
       },
-      "services": ["Hemodialysis"],
-      "emergency_24_7": false
+      "services": ["Hemodialysis (6 stations)"]
     },
     {
       "id": "fac-dialysis-003",
@@ -4307,16 +4075,15 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "N/A",
-        "email": "N/A"
+        "mobile": "0977-630-0151",
+        "email": "smkcibicol2@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-06-30",
         "philhealth_accredited": false
       },
-      "services": ["Hemodialysis"],
-      "emergency_24_7": false
+      "services": ["Hemodialysis (11 stations)"]
     },
     {
       "id": "fac-asc-001",
@@ -4335,17 +4102,16 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "0908-8981200",
-        "mobile": "N/A",
-        "email": "N/A"
+        "landline": "N/A",
+        "mobile": "0908-8981200",
+        "email": "legazpieye@gmail.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-06-30",
         "philhealth_accredited": false
       },
-      "services": ["Ambulatory Surgery", "Ophthalmologic"],
-      "emergency_24_7": false
+      "services": ["Ambulatory surgery: Ophthalmologic"]
     },
     {
       "id": "fac-blood-001",
@@ -4364,8 +4130,8 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 742-2199 / (052) 480-1288",
-        "mobile": "0917-838-8975",
+        "landline": "(052) 742-2199",
+        "mobile": "N/A",
         "email": "albay@redcross.org.ph"
       },
       "accreditations": {
@@ -4373,14 +4139,7 @@
         "hfsrb_as_of": "2025-06-30",
         "philhealth_accredited": false
       },
-      "services": [
-        "24/7 Blood Banking & Blood Products",
-        "Ambulance & Emergency Response",
-        "Blood Services",
-        "Blood Typing & Crossmatching",
-        "Voluntary Blood Donation"
-      ],
-      "emergency_24_7": false
+      "services": ["Blood collection unit/blood station"]
     },
     {
       "id": "fac-dtl-001",
@@ -4401,7 +4160,7 @@
       "contact": {
         "landline": "052010593",
         "mobile": "09162827909",
-        "email": "N/A"
+        "email": "bicoldrug@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
@@ -4410,8 +4169,7 @@
         "dtl_accreditation_no": "05-0270-26-PFSS-R",
         "dtl_list_as_of": "2026-03-31"
       },
-      "services": ["Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Drug testing (screening)"]
     },
     {
       "id": "fac-dtl-002",
@@ -4432,7 +4190,7 @@
       "contact": {
         "landline": "{052}7420291",
         "mobile": "09258971012",
-        "email": "N/A"
+        "email": "jhun_rosedtc@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
@@ -4441,8 +4199,7 @@
         "dtl_accreditation_no": "05-1167-26-PFSS-R",
         "dtl_list_as_of": "2026-03-31"
       },
-      "services": ["Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Drug testing (screening)"]
     },
     {
       "id": "fac-dtl-003",
@@ -4463,7 +4220,7 @@
       "contact": {
         "landline": "7423747",
         "mobile": "09202865313",
-        "email": "N/A"
+        "email": "mrr_supreme@yahoo.com"
       },
       "accreditations": {
         "is_doh_licensed": true,
@@ -4472,8 +4229,7 @@
         "dtl_accreditation_no": "05-1593-26-PFSS-R",
         "dtl_list_as_of": "2026-03-31"
       },
-      "services": ["Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Drug testing (screening)"]
     },
     {
       "id": "fac-abtc-001",
@@ -4502,21 +4258,10 @@
         "abtc_validity": "2027-03-25",
         "philhealth_accredited": false
       },
-      "services": ["Animal Bite Treatment", "Anti-Rabies Vaccination"],
-      "emergency_24_7": false
+      "services": ["Animal bite treatment"]
     }
   ],
   "_data_notes": [
-    {
-      "facility_id": "fac-hosp-003",
-      "type": "code-correction",
-      "note": "An earlier revision recorded 2071 in this facility's DOH code field. 2071 is not a DOH code: it is the facility's entry number on the PhilHealth YAKAP list, now stored as yakap_konsulta_no. The DOH HFSRB Hospital list (as of 2026-06-30) publishes NHFR code 374, which is shown."
-    },
-    {
-      "facility_id": "fac-hosp-004",
-      "type": "code-correction",
-      "note": "An earlier revision recorded 2105 in this facility's DOH code field. 2105 is not a DOH code: it is the facility's entry number on the PhilHealth YAKAP list, now stored as yakap_konsulta_no. The DOH HFSRB Hospital list (as of 2026-06-30) publishes NHFR code 390, which is shown."
-    },
     {
       "facility_id": "fac-birth-004",
       "type": "missing-code",
@@ -4528,17 +4273,7 @@
       "note": "The DOH HFSRB Birthing Home Facility list (as of 2026-03-31) publishes no NHFR code for this facility."
     },
     {
-      "facility_id": "fac-dialysis-001",
-      "type": "contact-unlisted",
-      "note": "DOH does not publish contact details for this facility."
-    },
-    {
       "facility_id": "fac-dialysis-002",
-      "type": "contact-unlisted",
-      "note": "DOH does not publish contact details for this facility."
-    },
-    {
-      "facility_id": "fac-dialysis-003",
       "type": "contact-unlisted",
       "note": "DOH does not publish contact details for this facility."
     },
@@ -4569,13 +4304,8 @@
     },
     {
       "facility_id": "fac-hosp-001",
-      "type": "jurisdiction-conflict",
-      "note": "DOH registers this facility under Daraga, Albay (both the HFSRB hospital list and the DOH Bicol CHD animal-bite centre list). It is retained here because it operates on Rizal Street and serves Legazpi City."
-    },
-    {
-      "facility_id": "fac-hosp-001",
-      "type": "outside-city-limits",
-      "note": "DOH HFSRB registers BRHMC under Daraga, Albay (NHFR code 270), not Legazpi City. It is listed here because it is the regional referral hospital serving Legazpi City, and its address has been corrected to Daraga accordingly. It is excluded from the facility totals."
+      "type": "jurisdiction",
+      "note": "DOH registers this hospital in Daraga, Albay (NHFR code 270) on both the HFSRB hospital list and the Bicol CHD animal-bite list, not in Legazpi City. It is listed here because it is the regional referral hospital serving the city, and its address is shown as Daraga accordingly. It is excluded from the city facility totals."
     },
     {
       "facility_id": "fac-hosp-001",
@@ -4589,38 +4319,23 @@
     },
     {
       "facility_id": "fac-blood-001",
-      "type": "merged-duplicate",
-      "note": "This chapter previously had a second entry (fac-lab-002) filed as a Diagnostic Laboratory, though its own type field read Blood Service Facility. It appeared on no DOH list and gave a different address -- Red Cross Building, Landco Business Park, Bgy. 36 Capantawan -- against the DOH-published Gov. Locsin cor. Fr. JL Bates St., Bgy. 16. The records were merged into this one, which carries the DOH NHFR code; the contact details shown here came from the removed entry and are unverified. If the chapter genuinely operates from two addresses, this needs splitting again with a source for the second."
+      "type": "address-conflict",
+      "note": "DOH publishes this chapter at Gov. Locsin corner Fr. JL Bates Street, Barangay 16, which is the address shown. An earlier record in this directory gave Red Cross Building, Landco Business Park, Barangay 36 Capantawan instead. If the chapter operates from both, confirm which one before travelling."
     },
     {
-      "facility_id": "fac-yakap-001",
+      "facility_id": "cho-registry-codes",
       "type": "code-unverified",
-      "note": "DOH registry code 6700 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+      "note": "DOH registry codes for six City Health Office facilities -- 6700, 54794, 39679, 32449, 32450 and 37755 -- could not be confirmed against any cited source. They appear in none of the HFSRB licensing lists, and the National Health Facility Registry refuses automated access. City Health Office facilities are the kind the registry lists but the licensing lists do not, so the codes are plausible and are retained; unlike every other code here, they are unverified."
     },
     {
-      "facility_id": "fac-shc-001",
-      "type": "code-unverified",
-      "note": "DOH registry code 54794 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+      "facility_id": "barangay-health-stations",
+      "type": "contact-removed",
+      "note": "Nineteen barangay health stations previously listed a personal mobile number that no cited source publishes. Those numbers have been removed and the stations now show the City Health Office hotline, as the other fifty-one already did. The name of each barangay secretary was also dropped from the dataset: it was never displayed and served no purpose here."
     },
     {
-      "facility_id": "fac-lab-001",
-      "type": "code-unverified",
-      "note": "DOH registry code 39679 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
-    },
-    {
-      "facility_id": "fac-birth-001",
-      "type": "code-unverified",
-      "note": "DOH registry code 32449 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
-    },
-    {
-      "facility_id": "fac-birth-002",
-      "type": "code-unverified",
-      "note": "DOH registry code 32450 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
-    },
-    {
-      "facility_id": "fac-birth-003",
-      "type": "code-unverified",
-      "note": "DOH registry code 37755 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+      "facility_id": "unverifiable-sources",
+      "type": "source-not-machine-readable",
+      "note": "Contact details and registry codes for 78 facilities could not be checked against a cited source. The City Health Office barangay directory publishes no structured data, the two PhilHealth accreditation lists are PDFs whose columns drift out of alignment, and the DOH National Health Facility Registry refuses automated access. Those details are shown as previously recorded, and are unverified."
     }
   ],
   "gamot_providers": [
@@ -4697,5 +4412,6 @@
       },
       "gamot_valid_until": "2028-03-12"
     }
-  ]
+  ],
+  "_data_notes_policy": "A data note explains something a visitor can see on a card -- a missing code, a lapsed certification, a conflicting address. It is not a changelog: what changed and why belongs in the commit, not on the page."
 }
