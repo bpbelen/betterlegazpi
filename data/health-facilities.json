@@ -309,7 +309,7 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 742-1234",
+        "landline": "N/A",
         "mobile": "0905-892-1185",
         "email": "legazpicityhospital.ph@gmail.com"
       },
@@ -399,7 +399,7 @@
       },
       "contact": {
         "landline": "(052) 480-7132",
-        "mobile": "0917-512-3456",
+        "mobile": "N/A",
         "email": "agohospital@yahoo.com"
       },
       "accreditations": {
@@ -439,7 +439,7 @@
       },
       "contact": {
         "landline": "(052) 480-7764 / (052) 480-7765",
-        "mobile": "0917-890-1234",
+        "mobile": "N/A",
         "email": "estevezhospital@gmail.com"
       },
       "accreditations": {
@@ -568,7 +568,7 @@
         "zip": "4500"
       },
       "contact": {
-        "landline": "(052) 480-1234",
+        "landline": "N/A",
         "mobile": "0956-875-8958",
         "email": "rmdu5ekonsulta@gmail.com"
       },
@@ -845,7 +845,6 @@
       "urban_rural": "Urban",
       "population_served": 3259,
       "punong_barangay": "Hon. Veronica S. Geraldino",
-      "barangay_secretary": "Maria Vecia G. Basilan",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -884,7 +883,6 @@
       "urban_rural": "Urban",
       "population_served": 1416,
       "punong_barangay": "Hon. Milagros B. Bal",
-      "barangay_secretary": "Ma. Zarina N. Miraflores",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -923,7 +921,6 @@
       "urban_rural": "Urban",
       "population_served": 945,
       "punong_barangay": "Hon. Jose T. Pispis",
-      "barangay_secretary": "Ave A. Palcon",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -934,7 +931,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09814619092",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -962,7 +959,6 @@
       "urban_rural": "Urban",
       "population_served": 975,
       "punong_barangay": "Hon. Gibsen Salvador E. De Leoz",
-      "barangay_secretary": "Ma. Keneth O. Campillos",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -973,7 +969,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09516995291",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1001,7 +997,6 @@
       "urban_rural": "Urban",
       "population_served": 1037,
       "punong_barangay": "Hon. Lorena A. Vargas",
-      "barangay_secretary": "Thea Salome U. Martinez",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1040,7 +1035,6 @@
       "urban_rural": "Urban",
       "population_served": 1289,
       "punong_barangay": "Hon. Arthur R. Marco",
-      "barangay_secretary": "Maria Angela A. Nalles",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1079,7 +1073,6 @@
       "urban_rural": "Urban",
       "population_served": 559,
       "punong_barangay": "Hon. Domingo Alberto D. Pasano Jr.",
-      "barangay_secretary": "Mary Ann P. Morano",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1118,7 +1111,6 @@
       "urban_rural": "Urban",
       "population_served": 2564,
       "punong_barangay": "Hon. Amore Rex B. Rañeses",
-      "barangay_secretary": "Regina D. De Guzman",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1157,7 +1149,6 @@
       "urban_rural": "Urban",
       "population_served": 1414,
       "punong_barangay": "Hon. Roy A. Nañoz",
-      "barangay_secretary": "Jacqueline L. Amaranto",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1168,7 +1159,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09308119357",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1196,7 +1187,6 @@
       "urban_rural": "Rural",
       "population_served": 452,
       "punong_barangay": "Hon. Victor R. Lapasaran",
-      "barangay_secretary": "Christy M. Aycocho",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1235,7 +1225,6 @@
       "urban_rural": "Urban",
       "population_served": 1505,
       "punong_barangay": "Hon. Mark Joel O. Beguiras",
-      "barangay_secretary": "Meryl E. Bajamundi",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1274,7 +1263,6 @@
       "urban_rural": "Urban",
       "population_served": 1041,
       "punong_barangay": "Hon. Miguelito A. Barcoma",
-      "barangay_secretary": "Ma. Rayzel A. Ibay",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1313,7 +1301,6 @@
       "urban_rural": "Urban",
       "population_served": 365,
       "punong_barangay": "Hon. Ma. Lourdes F. Baltazar",
-      "barangay_secretary": "Lailani A. Belleza",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1324,7 +1311,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09751738902",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1352,7 +1339,6 @@
       "urban_rural": "Urban",
       "population_served": 719,
       "punong_barangay": "Hon. Gerald A. Ayque",
-      "barangay_secretary": "Lorelie M. Mangampo",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1363,7 +1349,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09953606107",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1391,7 +1377,6 @@
       "urban_rural": "Urban",
       "population_served": 2386,
       "punong_barangay": "Hon. Erlim A. Azotea",
-      "barangay_secretary": "Irma A. Buemia",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1402,7 +1387,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09305283465",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1430,7 +1415,6 @@
       "urban_rural": "Urban",
       "population_served": 5420,
       "punong_barangay": "Hon. Jonathan G. Rodenas",
-      "barangay_secretary": "Cesar L. Asiado",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1469,7 +1453,6 @@
       "urban_rural": "Urban",
       "population_served": 2365,
       "punong_barangay": "Hon. Benito B. Chan",
-      "barangay_secretary": "Amelia R. Colecha",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1508,7 +1491,6 @@
       "urban_rural": "Urban",
       "population_served": 4133,
       "punong_barangay": "Hon. Rowena A. Olimpo",
-      "barangay_secretary": "Arlene Mae D. Magno",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1547,7 +1529,6 @@
       "urban_rural": "Rural",
       "population_served": 1611,
       "punong_barangay": "Hon. John B. Macalampad",
-      "barangay_secretary": "Christine Joy N. Apita",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1586,7 +1567,6 @@
       "urban_rural": "Urban",
       "population_served": 707,
       "punong_barangay": "Hon. Fabian B. Batalla Jr.",
-      "barangay_secretary": "Maria Shiela M. Enaje",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1625,7 +1605,6 @@
       "urban_rural": "Urban",
       "population_served": 770,
       "punong_barangay": "Hon. Jose T. Abiera",
-      "barangay_secretary": "Arcie A. Malto",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1664,7 +1643,6 @@
       "urban_rural": "Urban",
       "population_served": 1861,
       "punong_barangay": "Hon. Jerry A. Grageda",
-      "barangay_secretary": "Merle Z. Mira",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1703,7 +1681,6 @@
       "urban_rural": "Urban",
       "population_served": 1202,
       "punong_barangay": "Hon. Edgar B. Bejer",
-      "barangay_secretary": "Joseph C. Belga",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1714,7 +1691,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09122025648",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1742,7 +1719,6 @@
       "urban_rural": "Rural",
       "population_served": 1826,
       "punong_barangay": "Hon. Ricardo V. Abunda",
-      "barangay_secretary": "Elmer S. Canon",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1781,7 +1757,6 @@
       "urban_rural": "Urban",
       "population_served": 2730,
       "punong_barangay": "Hon. Ma. Karren C. Valdez",
-      "barangay_secretary": "Carrie Mae A. Lusuegro",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1820,7 +1795,6 @@
       "urban_rural": "Urban",
       "population_served": 534,
       "punong_barangay": "Hon. Julia D. Agao",
-      "barangay_secretary": "April Ester M. Naval",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1859,7 +1833,6 @@
       "urban_rural": "Urban",
       "population_served": 1451,
       "punong_barangay": "Hon. Basilia A. Capino",
-      "barangay_secretary": "Laurice T. Dazal",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1870,7 +1843,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09776320556",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -1898,7 +1871,6 @@
       "urban_rural": "Urban",
       "population_served": 1487,
       "punong_barangay": "Hon. Antonio L. Loveriza",
-      "barangay_secretary": "Cecelia M. Cariño",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1937,7 +1909,6 @@
       "urban_rural": "Urban",
       "population_served": 1894,
       "punong_barangay": "Hon. Ismael G. Santillan",
-      "barangay_secretary": "Rhounalyn Dematera",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -1976,7 +1947,6 @@
       "urban_rural": "Urban",
       "population_served": 1210,
       "punong_barangay": "Hon. Fernando A. Lopez",
-      "barangay_secretary": "Maricel L. Encinareal",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2015,7 +1985,6 @@
       "urban_rural": "Urban",
       "population_served": 1088,
       "punong_barangay": "Hon. Teresita L. Empig",
-      "barangay_secretary": "Bremer D. Romero",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2026,7 +1995,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09070127231",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2054,7 +2023,6 @@
       "urban_rural": "Urban",
       "population_served": 5452,
       "punong_barangay": "Hon. Bill B. Atento",
-      "barangay_secretary": "Rafael Padrique",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2065,7 +2033,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09171120318",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2093,7 +2061,6 @@
       "urban_rural": "Urban",
       "population_served": 2887,
       "punong_barangay": "Hon. Marife D. Velasco",
-      "barangay_secretary": "Maria Teresa A. Cuebillas",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2104,7 +2071,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09636753741",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2132,7 +2099,6 @@
       "urban_rural": "Urban",
       "population_served": 2140,
       "punong_barangay": "Hon. Mariano Oriel A. Maddela",
-      "barangay_secretary": "Rolando B. Gonzales",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2171,7 +2137,6 @@
       "urban_rural": "Urban",
       "population_served": 340,
       "punong_barangay": "Hon. Sayri R. Sayco",
-      "barangay_secretary": "Benajane Bellen",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2182,7 +2147,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09395968501",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2210,7 +2175,6 @@
       "urban_rural": "Urban",
       "population_served": 404,
       "punong_barangay": "Hon. Eric Sim B. Brizuela",
-      "barangay_secretary": "Nelia D. Abad",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2249,7 +2213,6 @@
       "urban_rural": "Urban",
       "population_served": 7546,
       "punong_barangay": "Hon. Bernard Y. Pacardo",
-      "barangay_secretary": "Ali Raza P. Ahmad",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2288,7 +2251,6 @@
       "urban_rural": "Urban",
       "population_served": 6534,
       "punong_barangay": "Hon. Ma. Theresa S. Naz",
-      "barangay_secretary": "Angelica N. Cordovilla",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2299,7 +2261,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09257136784",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2327,7 +2289,6 @@
       "urban_rural": "Urban",
       "population_served": 2375,
       "punong_barangay": "Hon. Reynaldo H. Bendicio",
-      "barangay_secretary": "Monica S. Lorica",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2366,7 +2327,6 @@
       "urban_rural": "Urban",
       "population_served": 7030,
       "punong_barangay": "Hon. Edsil N. Llaguno",
-      "barangay_secretary": "Niño Joseph C. Llena",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2405,7 +2365,6 @@
       "urban_rural": "Urban",
       "population_served": 5389,
       "punong_barangay": "Hon. Joel A. Ador",
-      "barangay_secretary": "Ma. Angelica B. Nuñez",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2444,7 +2403,6 @@
       "urban_rural": "Urban",
       "population_served": 10330,
       "punong_barangay": "Hon. Joel A. Orosco",
-      "barangay_secretary": "Jean A. Ramos",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2455,7 +2413,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09106022923",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2483,7 +2441,6 @@
       "urban_rural": "Rural",
       "population_served": 1809,
       "punong_barangay": "Hon. Sylvia M. Del Agua",
-      "barangay_secretary": "Thelma B. Arcinue",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2522,7 +2479,6 @@
       "urban_rural": "Rural",
       "population_served": 4585,
       "punong_barangay": "Hon. Tito C. Villanueva",
-      "barangay_secretary": "Joy M. Alamil",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2561,7 +2517,6 @@
       "urban_rural": "Rural",
       "population_served": 2167,
       "punong_barangay": "Hon. Romeo A. Almayda Jr.",
-      "barangay_secretary": "Cynthia D. Nuñez",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2600,7 +2555,6 @@
       "urban_rural": "Rural",
       "population_served": 1903,
       "punong_barangay": "Hon. Amelia A. Dela Torre",
-      "barangay_secretary": "Rodel P. Balaguer",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2639,7 +2593,6 @@
       "urban_rural": "Rural",
       "population_served": 4085,
       "punong_barangay": "Hon. Wilhelmina M. Budao",
-      "barangay_secretary": "Marifaith A. Estevez",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2678,7 +2631,6 @@
       "urban_rural": "Rural",
       "population_served": 1675,
       "punong_barangay": "Hon. Dindo D. Nuñez",
-      "barangay_secretary": "Jecel N. De Lumen",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2717,7 +2669,6 @@
       "urban_rural": "Urban",
       "population_served": 7287,
       "punong_barangay": "Hon. Ricardo A. Arienda",
-      "barangay_secretary": "Catherine A. Loterte",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2728,7 +2679,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09158717790",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2756,7 +2707,6 @@
       "urban_rural": "Rural",
       "population_served": 1949,
       "punong_barangay": "Hon. Harold L. Bembenuto",
-      "barangay_secretary": "Lhiza Mae A. Banania",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2767,7 +2717,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09068516780",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -2795,7 +2745,6 @@
       "urban_rural": "Rural",
       "population_served": 4200,
       "punong_barangay": "Hon. Ronaldo B. Miña Sr.",
-      "barangay_secretary": "Janette A. Araña",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2834,7 +2783,6 @@
       "urban_rural": "Rural",
       "population_served": 1904,
       "punong_barangay": "Hon. Hilario A. Atun",
-      "barangay_secretary": "Mae N. Aydalla",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2873,7 +2821,6 @@
       "urban_rural": "Rural",
       "population_served": 4308,
       "punong_barangay": "Hon. Chona M. Miña",
-      "barangay_secretary": "Violeta N. Abejuro",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2912,7 +2859,6 @@
       "urban_rural": "Rural",
       "population_served": 1699,
       "punong_barangay": "Hon. Dennis P. Nuñez",
-      "barangay_secretary": "Ronaldo L. Agao",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2951,7 +2897,6 @@
       "urban_rural": "Rural",
       "population_served": 4963,
       "punong_barangay": "Hon. Danilo D. Agripa",
-      "barangay_secretary": "Cristy E. Arimado",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -2990,7 +2935,6 @@
       "urban_rural": "Urban",
       "population_served": 20017,
       "punong_barangay": "Hon. Benjamin D. Rosin",
-      "barangay_secretary": "Cecilia T. Gandol",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3029,7 +2973,6 @@
       "urban_rural": "Rural",
       "population_served": 1746,
       "punong_barangay": "Hon. Glenn J. Barcelon",
-      "barangay_secretary": "Michelle D. Ayque",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3068,7 +3011,6 @@
       "urban_rural": "Rural",
       "population_served": 4329,
       "punong_barangay": "Hon. Maria Cristina P. Ajero",
-      "barangay_secretary": "Benjamin Gabriel G. Imperial",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3107,7 +3049,6 @@
       "urban_rural": "Urban",
       "population_served": 5215,
       "punong_barangay": "Hon. Henyl B. Olimpo",
-      "barangay_secretary": "Ernesto D. Barrameda Jr.",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3146,7 +3087,6 @@
       "urban_rural": "Rural",
       "population_served": 1453,
       "punong_barangay": "Hon. Norberto M. Abion",
-      "barangay_secretary": "Shaira B. Lana",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3185,7 +3125,6 @@
       "urban_rural": "Urban",
       "population_served": 5320,
       "punong_barangay": "Hon. Niño Albert C. Berjuega",
-      "barangay_secretary": "Cristina A. Bertiz",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3224,7 +3163,6 @@
       "urban_rural": "Urban",
       "population_served": 5250,
       "punong_barangay": "Hon. Fidel A. Botin Sr.",
-      "barangay_secretary": "Ella B. Maravilla",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3263,7 +3201,6 @@
       "urban_rural": "Rural",
       "population_served": 2026,
       "punong_barangay": "Hon. Anabelle A. Teope",
-      "barangay_secretary": "Rachel M. Alcantara",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3302,7 +3239,6 @@
       "urban_rural": "Rural",
       "population_served": 1869,
       "punong_barangay": "Hon. Dennis A. Alamo",
-      "barangay_secretary": "Janice Ian Rose P. Agripa",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3341,7 +3277,6 @@
       "urban_rural": "Rural",
       "population_served": 2798,
       "punong_barangay": "Hon. Beberlyn A. Bitancur",
-      "barangay_secretary": "Andy A. Aguimba",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3380,7 +3315,6 @@
       "urban_rural": "Urban",
       "population_served": 8918,
       "punong_barangay": "Hon. Crispin A. Botin",
-      "barangay_secretary": "Mark Jhay R. Alcazar",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3391,7 +3325,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09091238701",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -3419,7 +3353,6 @@
       "urban_rural": "Rural",
       "population_served": 1739,
       "punong_barangay": "Hon. Jesse M. Aycardo",
-      "barangay_secretary": "Rose Ann E. Nicol",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3430,7 +3363,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09664594639",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -3458,7 +3391,6 @@
       "urban_rural": "Rural",
       "population_served": 2322,
       "punong_barangay": "Hon. Ronaldo P. Aringo",
-      "barangay_secretary": "Anna Marie A. Dejumo",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3497,7 +3429,6 @@
       "urban_rural": "Rural",
       "population_served": 1419,
       "punong_barangay": "Hon. Rogelio A. Leron",
-      "barangay_secretary": "Sara Jean L. Musa",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -3508,7 +3439,7 @@
       },
       "contact": {
         "landline": "N/A",
-        "mobile": "09564267369",
+        "mobile": "0956-841-6087 (CHO Hotline)",
         "email": "cholegazpi@gmail.com"
       },
       "accreditations": {
@@ -3536,7 +3467,6 @@
       "urban_rural": "Rural",
       "population_served": 3019,
       "punong_barangay": "Hon. Gladwyn T. Candia",
-      "barangay_secretary": "Hazel L. Lorilla",
       "address": {
         "street": "Barangay Hall Compound",
         "building": "Barangay Health Station",
@@ -4621,6 +4551,31 @@
       "facility_id": "fac-birth-003",
       "type": "code-unverified",
       "note": "DOH registry code 37755 could not be traced to any cited source. It appears in none of the DOH HFSRB licensing lists, and the DOH National Health Facility Registry could not be read directly to confirm it. City Health Office facilities are the kind the registry lists but the HFSRB licensing lists do not, so the code is plausible and is retained -- but it is unverified, unlike every other code in this directory."
+    },
+    {
+      "facility_id": "fac-hosp-005",
+      "type": "contact-removed",
+      "note": "A landline previously shown here followed a placeholder digit pattern and appears in none of the cited sources. It has been removed rather than shown as if verified."
+    },
+    {
+      "facility_id": "fac-hosp-007",
+      "type": "contact-removed",
+      "note": "A mobile number previously shown here followed a placeholder digit pattern and appears in none of the cited sources. It has been removed rather than shown as if verified."
+    },
+    {
+      "facility_id": "fac-hosp-008",
+      "type": "contact-removed",
+      "note": "A mobile number previously shown here followed a placeholder digit pattern and appears in none of the cited sources. It has been removed rather than shown as if verified."
+    },
+    {
+      "facility_id": "fac-yakap-003",
+      "type": "contact-removed",
+      "note": "A landline previously shown here followed a placeholder digit pattern and appears in none of the cited sources. It has been removed rather than shown as if verified."
+    },
+    {
+      "facility_id": "barangay-health-stations",
+      "type": "contact-removed",
+      "note": "Nineteen barangay health stations previously listed a personal mobile number that no cited source publishes. Those numbers have been removed and the stations now show the City Health Office hotline, as the other fifty-one already did. The name of each barangay secretary was also dropped from the dataset: it was never displayed and served no purpose here."
     }
   ],
   "gamot_providers": [
