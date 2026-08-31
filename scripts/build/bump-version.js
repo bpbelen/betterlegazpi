@@ -82,47 +82,49 @@ try {
   console.warn('Warning: Could not update package.json:', e.message);
 }
 
-// Update all HTML files — replace hardcoded "Ver. X.X.X" in footer
-const htmlDirs = [
-  '.',
-  'accessibility',
-  'transparency',
-  'contact',
-  'faq',
-  'government',
-  'news',
-  'policies',
-  'privacy',
-  'service-details',
-  'services',
-  'sitemap',
-  'statistics',
-  'terms',
-  'transparency',
-];
+// Update all HTML files — replace the footer "Ver. X.X.X" string.
+//
+// This used to be a hardcoded directory list that had silently fallen behind
+// the site: about/, travel/, and history/ were never in it (their footers
+// were never bumped), transparency/ was listed twice, and matching only the
+// exact previous version meant a page that had already drifted (e.g. from an
+// interrupted build) stayed stuck forever. A recursive walk plus a
+// version-shaped pattern (any "Ver. X.Y.Z", not just oldVersion) fixes both:
+// every HTML file is covered, and running this once repairs prior drift too.
+const HTML_EXCLUDED_DIRS = new Set([
+  'node_modules',
+  'dist',
+  'scratch',
+  'test-results',
+  '.git',
+  '.github',
+  'admin',
+  'react-app',
+]);
+
+function collectHtmlFiles(dir, out) {
+  out = out || [];
+  fs.readdirSync(dir, { withFileTypes: true }).forEach(function (entry) {
+    if (entry.isDirectory()) {
+      if (HTML_EXCLUDED_DIRS.has(entry.name) || entry.name.indexOf('.') === 0) return;
+      collectHtmlFiles(path.join(dir, entry.name), out);
+      return;
+    }
+    if (entry.name.endsWith('.html')) out.push(path.join(dir, entry.name));
+  });
+  return out;
+}
 
 let filesUpdated = 0;
-const versionPattern = new RegExp('Ver\\. ' + oldVersion.replace(/\./g, '\\.'), 'g');
+const versionPattern = /Ver\. \d+\.\d+\.\d+/g;
 
-htmlDirs.forEach(function (dir) {
-  const dirPath = path.join(REPO_ROOT, dir);
-  if (!fs.existsSync(dirPath)) return;
-
-  const files = fs.readdirSync(dirPath).filter(function (f) {
-    return f.endsWith('.html');
-  });
-
-  files.forEach(function (file) {
-    const filePath = path.join(dirPath, file);
-    let content = fs.readFileSync(filePath, 'utf8');
-    if (versionPattern.test(content)) {
-      content = content.replace(versionPattern, 'Ver. ' + newVersion);
-      fs.writeFileSync(filePath, content);
-      filesUpdated++;
-    }
-    // Reset regex lastIndex
-    versionPattern.lastIndex = 0;
-  });
+collectHtmlFiles(REPO_ROOT).forEach(function (filePath) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  const updated = content.replace(versionPattern, 'Ver. ' + newVersion);
+  if (updated !== content) {
+    fs.writeFileSync(filePath, updated);
+    filesUpdated++;
+  }
 });
 
 console.log('Updated ' + filesUpdated + ' HTML file(s)');
