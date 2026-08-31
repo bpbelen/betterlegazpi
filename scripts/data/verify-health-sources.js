@@ -38,14 +38,20 @@ const sheet = (id, gid) =>
   `https://docs.google.com/spreadsheets/d/e/${id}/pub?gid=${gid}&single=true&output=csv`;
 
 const HFSRB = {
-  ambulatory: '2PACX-1vQmUU2oMSgAYZojzn5040H3Om5vckQiWCKCMNsD7AoxQCbxDPuDoimifznf8ZZuNkyXxexaAjwLhvpo',
-  birthing: '2PACX-1vRwHeUBQvFrhdcIyes8vWGB3Mt_v8Fl_sj4iEilHbh5FJIqEs6CxY77JqirYuLSaKwM0NqqtEiTZnTi',
+  ambulatory:
+    '2PACX-1vQmUU2oMSgAYZojzn5040H3Om5vckQiWCKCMNsD7AoxQCbxDPuDoimifznf8ZZuNkyXxexaAjwLhvpo',
+  birthing:
+    '2PACX-1vRwHeUBQvFrhdcIyes8vWGB3Mt_v8Fl_sj4iEilHbh5FJIqEs6CxY77JqirYuLSaKwM0NqqtEiTZnTi',
   blood: '2PACX-1vRdH6frusJM0WBHrG8FXCVBlEg_72kni5ACecslSJBHn1QqVkas5WxY6b0ehZDNhHJ0uRBnJ0R_JX_s',
   cancer: '2PACX-1vT-TyFkys15FYNRCuWzbL8cjOV4Z6CITnuiH1Y_a8njw9c6QtsbDOsGCR4uLfkqinikbfZmt2_1sIsf',
-  clinicalLab: '2PACX-1vSgHqO86ff92RfVCSUH1wFXLBYqm9uQLB64EelB1U6fizGWb0LufoFDSN41JvweCHRAJx3B0KLo2Y7I',
-  dialysis: '2PACX-1vR0T_5LKHV8soNilfnxsjd5ImQ_CzB9MFYJPH2jHOyoxIVT7Kz2guLYeKiAliOCezKj-7su307sB4an',
-  drugTesting: '2PACX-1vTnhRA0Tgo50k6ecFeKQNiOT8GMoDSkA4BVjOVNx9fUC9gMjcXsZF1dzCNXHZcJy74Ry6Zdr5SRw6os',
-  hospitals: '2PACX-1vSzVqrbHHGuOuouvS9WR2un2Q_AZ4SEw5x5F9npaW9xFtV0OV0T70_-NybWKJUTpRS2wiCk9VH5cxMV',
+  clinicalLab:
+    '2PACX-1vSgHqO86ff92RfVCSUH1wFXLBYqm9uQLB64EelB1U6fizGWb0LufoFDSN41JvweCHRAJx3B0KLo2Y7I',
+  dialysis:
+    '2PACX-1vR0T_5LKHV8soNilfnxsjd5ImQ_CzB9MFYJPH2jHOyoxIVT7Kz2guLYeKiAliOCezKj-7su307sB4an',
+  drugTesting:
+    '2PACX-1vTnhRA0Tgo50k6ecFeKQNiOT8GMoDSkA4BVjOVNx9fUC9gMjcXsZF1dzCNXHZcJy74Ry6Zdr5SRw6os',
+  hospitals:
+    '2PACX-1vSzVqrbHHGuOuouvS9WR2un2Q_AZ4SEw5x5F9npaW9xFtV0OV0T70_-NybWKJUTpRS2wiCk9VH5cxMV',
 };
 
 /**
@@ -53,23 +59,108 @@ const HFSRB = {
  * regional counts, not facilities.
  */
 const TABS = [
-  { source: 'ambulatory', label: 'Ambulatory Surgical Clinics', url: sheet(HFSRB.ambulatory, '1149067199'), tab: 'government' },
-  { source: 'ambulatory', label: 'Ambulatory Surgical Clinics', url: sheet(HFSRB.ambulatory, '325136124'), tab: 'private' },
-  { source: 'birthing', label: 'Birthing Home Facilities', url: sheet(HFSRB.birthing, '1807163672'), tab: 'government' },
-  { source: 'birthing', label: 'Birthing Home Facilities', url: sheet(HFSRB.birthing, '330429063'), tab: 'private' },
-  { source: 'blood', label: 'Blood Service Facilities', url: sheet(HFSRB.blood, '1067480363'), tab: 'government' },
-  { source: 'blood', label: 'Blood Service Facilities', url: sheet(HFSRB.blood, '1846885471'), tab: 'private' },
-  { source: 'cancer', label: 'Cancer Treatment Facilities', url: sheet(HFSRB.cancer, '1227203781'), tab: 'government-hospital-based' },
-  { source: 'cancer', label: 'Cancer Treatment Facilities', url: sheet(HFSRB.cancer, '1974858609'), tab: 'private-non-hospital-based' },
-  { source: 'cancer', label: 'Cancer Treatment Facilities', url: sheet(HFSRB.cancer, '640098549'), tab: 'private-hospital-based' },
-  { source: 'clinicalLab', label: 'Clinical Laboratories', url: sheet(HFSRB.clinicalLab, '1729206860'), tab: 'government' },
-  { source: 'clinicalLab', label: 'Clinical Laboratories', url: sheet(HFSRB.clinicalLab, '1377153079'), tab: 'private' },
-  { source: 'dialysis', label: 'Free-Standing Dialysis Clinics', url: sheet(HFSRB.dialysis, '1094125951'), tab: 'government' },
-  { source: 'dialysis', label: 'Free-Standing Dialysis Clinics', url: sheet(HFSRB.dialysis, '1397518050'), tab: 'private' },
-  { source: 'drugTesting', label: 'Accredited Drug Testing Laboratories', url: sheet(HFSRB.drugTesting, '2073052033'), tab: 'government' },
-  { source: 'drugTesting', label: 'Accredited Drug Testing Laboratories', url: sheet(HFSRB.drugTesting, '722170213'), tab: 'private' },
-  { source: 'hospitals', label: 'Government and Private Hospitals', url: sheet(HFSRB.hospitals, '618835953'), tab: 'government' },
-  { source: 'hospitals', label: 'Government and Private Hospitals', url: sheet(HFSRB.hospitals, '935520484'), tab: 'private' },
+  {
+    source: 'ambulatory',
+    label: 'Ambulatory Surgical Clinics',
+    url: sheet(HFSRB.ambulatory, '1149067199'),
+    tab: 'government',
+  },
+  {
+    source: 'ambulatory',
+    label: 'Ambulatory Surgical Clinics',
+    url: sheet(HFSRB.ambulatory, '325136124'),
+    tab: 'private',
+  },
+  {
+    source: 'birthing',
+    label: 'Birthing Home Facilities',
+    url: sheet(HFSRB.birthing, '1807163672'),
+    tab: 'government',
+  },
+  {
+    source: 'birthing',
+    label: 'Birthing Home Facilities',
+    url: sheet(HFSRB.birthing, '330429063'),
+    tab: 'private',
+  },
+  {
+    source: 'blood',
+    label: 'Blood Service Facilities',
+    url: sheet(HFSRB.blood, '1067480363'),
+    tab: 'government',
+  },
+  {
+    source: 'blood',
+    label: 'Blood Service Facilities',
+    url: sheet(HFSRB.blood, '1846885471'),
+    tab: 'private',
+  },
+  {
+    source: 'cancer',
+    label: 'Cancer Treatment Facilities',
+    url: sheet(HFSRB.cancer, '1227203781'),
+    tab: 'government-hospital-based',
+  },
+  {
+    source: 'cancer',
+    label: 'Cancer Treatment Facilities',
+    url: sheet(HFSRB.cancer, '1974858609'),
+    tab: 'private-non-hospital-based',
+  },
+  {
+    source: 'cancer',
+    label: 'Cancer Treatment Facilities',
+    url: sheet(HFSRB.cancer, '640098549'),
+    tab: 'private-hospital-based',
+  },
+  {
+    source: 'clinicalLab',
+    label: 'Clinical Laboratories',
+    url: sheet(HFSRB.clinicalLab, '1729206860'),
+    tab: 'government',
+  },
+  {
+    source: 'clinicalLab',
+    label: 'Clinical Laboratories',
+    url: sheet(HFSRB.clinicalLab, '1377153079'),
+    tab: 'private',
+  },
+  {
+    source: 'dialysis',
+    label: 'Free-Standing Dialysis Clinics',
+    url: sheet(HFSRB.dialysis, '1094125951'),
+    tab: 'government',
+  },
+  {
+    source: 'dialysis',
+    label: 'Free-Standing Dialysis Clinics',
+    url: sheet(HFSRB.dialysis, '1397518050'),
+    tab: 'private',
+  },
+  {
+    source: 'drugTesting',
+    label: 'Accredited Drug Testing Laboratories',
+    url: sheet(HFSRB.drugTesting, '2073052033'),
+    tab: 'government',
+  },
+  {
+    source: 'drugTesting',
+    label: 'Accredited Drug Testing Laboratories',
+    url: sheet(HFSRB.drugTesting, '722170213'),
+    tab: 'private',
+  },
+  {
+    source: 'hospitals',
+    label: 'Government and Private Hospitals',
+    url: sheet(HFSRB.hospitals, '618835953'),
+    tab: 'government',
+  },
+  {
+    source: 'hospitals',
+    label: 'Government and Private Hospitals',
+    url: sheet(HFSRB.hospitals, '935520484'),
+    tab: 'private',
+  },
 ];
 
 /**
@@ -85,13 +176,36 @@ const COLUMN_ALIASES = {
   contact: ['contact nos.', 'contact no.', 'contact number', 'telno'],
   mobile: ['mobileno'],
   email: ['e-mail address', 'email address', 'emailadr', 'email'],
-  serviceCapability: ['servce capability', 'service capability', 'servce capability (category)', 'class'],
+  // "SERVCE  CAPABILITY" is the published spelling, double space included.
+  // Kept distinct from CLASS: a hospital row carries both "General" (class)
+  // and "Level 2" (capability), and conflating them loses the licensed level.
+  serviceCapability: ['servce capability', 'service capability', 'servce capability (category)'],
+  facilityClass: ['class'],
   addOns: ['add-ons services', 'add-ons service', 'services', 'service'],
+  beds: ['abc'],
+  clinicalLabClass: ['clinical lab classification (if applicable)'],
+  ctfClass: ['ctf classification (if applicable)'],
+  dialysisStations: ['no of dialysis station (if applicable)', 'no. of station'],
+  bloodService: ['blood service facility (service capability)'],
   validUntil: ['validity until', 'valid until'],
   licenseNo: ['licensed no.', 'license no.', 'licence no.', 'accreditation no'],
 };
 
-const normHeader = (h) => String(h || '').replace(/\s+/g, ' ').trim().toLowerCase();
+/** Columns that describe what a facility is licensed to do. */
+const SERVICE_FIELDS = [
+  'serviceCapability',
+  'addOns',
+  'clinicalLabClass',
+  'ctfClass',
+  'dialysisStations',
+  'bloodService',
+];
+
+const normHeader = (h) =>
+  String(h || '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
 
 /** Digits only, leading 0/63 stripped -- so 09985469453 == 9985469453 == +63 998 546 9453. */
 function phoneKey(value) {
@@ -154,15 +268,54 @@ function parseCsv(text) {
   return rows;
 }
 
-async function fetchCached(url, key) {
+/** bicol.doh.gov.ph 403s anything without a browser User-Agent. */
+const BROWSER_UA =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36';
+
+async function fetchCached(url, key, ext = 'csv') {
   fs.mkdirSync(CACHE, { recursive: true });
-  const file = path.join(CACHE, `${key}.csv`);
+  const file = path.join(CACHE, `${key}.${ext}`);
   if (!REFRESH && fs.existsSync(file)) return fs.readFileSync(file, 'utf8');
-  const res = await fetch(url, { redirect: 'follow' });
+  const res = await fetch(url, { redirect: 'follow', headers: { 'User-Agent': BROWSER_UA } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const text = await res.text();
   fs.writeFileSync(file, text, 'utf8');
   return text;
+}
+
+const ABTC_URL = 'https://bicol.doh.gov.ph/certified-animal-bite-treatment-centers/';
+
+/**
+ * The animal-bite page is a WordPress tab widget with no table and no headers:
+ * each centre is three consecutive text nodes -- "Expiry Date: <date>", the
+ * facility name, then a city. Parsed positionally, which is fragile by nature,
+ * so a zero-record result is reported rather than treated as "none certified".
+ */
+function parseAbtc(html) {
+  const text = html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, '\n')
+    .replace(/&#0?38;|&amp;/g, '&')
+    .replace(/&#8217;|&#039;|&apos;/g, "'")
+    .replace(/&nbsp;/g, ' ');
+  const lines = text
+    .split('\n')
+    .map((l) => l.trim())
+    .filter(Boolean);
+  const records = [];
+  for (let i = 0; i < lines.length; i++) {
+    const m = /^Expiry Date:\s*(.+)$/i.exec(lines[i]);
+    if (!m || !lines[i + 1] || !lines[i + 2]) continue;
+    records.push({
+      validUntil: m[1].trim(),
+      name: lines[i + 1],
+      city: lines[i + 2],
+      _row: [m[1].trim(), lines[i + 1], lines[i + 2]],
+    });
+    i += 2;
+  }
+  return records;
 }
 
 /** Rows for one tab, keyed by our column aliases, filtered to Legazpi. */
@@ -170,10 +323,17 @@ function extractLegazpi(csvText) {
   const rows = parseCsv(csvText);
   if (!rows.length) return { columns: {}, records: [] };
   const header = rows[0].map(normHeader);
+  // Aliases are tried in order, so the most specific header wins even when a
+  // looser one sits earlier in the sheet.
   const columns = {};
   for (const [field, aliases] of Object.entries(COLUMN_ALIASES)) {
-    const idx = header.findIndex((h) => aliases.includes(h));
-    if (idx !== -1) columns[field] = idx;
+    for (const alias of aliases) {
+      const idx = header.indexOf(alias);
+      if (idx !== -1) {
+        columns[field] = idx;
+        break;
+      }
+    }
   }
   const records = [];
   for (const row of rows.slice(1)) {
@@ -192,7 +352,12 @@ async function loadSources() {
   const bySource = {};
   for (const tab of TABS) {
     const key = `${tab.source}-${tab.tab}`;
-    const entry = (bySource[tab.source] ||= { label: tab.label, tabs: [], records: [], columns: {} });
+    const entry = (bySource[tab.source] ||= {
+      label: tab.label,
+      tabs: [],
+      records: [],
+      columns: {},
+    });
     try {
       const text = await fetchCached(tab.url, key);
       const { columns, records } = extractLegazpi(text);
@@ -207,23 +372,49 @@ async function loadSources() {
       entry.tabs.push({ tab: tab.tab, ok: false, error: err.message });
     }
   }
+
+  const abtc = (bySource.abtc = {
+    label: 'Certified Animal Bite Treatment Centers',
+    tabs: [],
+    records: [],
+    columns: {},
+  });
+  try {
+    const html = await fetchCached(ABTC_URL, 'abtc', 'html');
+    const all = parseAbtc(html);
+    const legazpi = all.filter((r) => /LEGAZPI|LEGASPI/i.test(r.city));
+    legazpi.forEach((r) => {
+      r._tab = 'albay';
+      r._source = 'abtc';
+    });
+    abtc.records.push(...legazpi);
+    abtc.tabs.push({ tab: 'albay', ok: true, matched: legazpi.length, parsed: all.length });
+  } catch (err) {
+    abtc.tabs.push({ tab: 'albay', ok: false, error: err.message });
+  }
+
   return bySource;
 }
 
 /** Find the published rows for one of our facilities: NHFR code first, then name. */
 function matchFacility(facility, bySource) {
-  const code = String(facility.doh_code || '').replace(/^DOH0*/i, '').replace(/^0+/, '');
+  const code = String(facility.doh_code || '')
+    .replace(/^DOH0*/i, '')
+    .replace(/^0+/, '');
   const key = nameKey(facility.name);
   const shortKey = nameKey(facility.short_name);
   const hits = [];
   for (const [source, entry] of Object.entries(bySource)) {
     for (const rec of entry.records) {
-      const recCode = String(rec.nhfrCode || '').replace(/^DOH0*/i, '').replace(/^0+/, '');
+      const recCode = String(rec.nhfrCode || '')
+        .replace(/^DOH0*/i, '')
+        .replace(/^0+/, '');
       const recName = nameKey(rec.name);
       let how = null;
       if (code && recCode && code === recCode) how = 'nhfr-code';
       else if (recName && (recName === key || recName === shortKey)) how = 'name';
-      else if (recName && key && (recName.includes(key) || key.includes(recName)) && key.length > 8) how = 'name-partial';
+      else if (recName && key && (recName.includes(key) || key.includes(recName)) && key.length > 8)
+        how = 'name-partial';
       if (how) hits.push({ source, label: entry.label, how, rec });
     }
   }
@@ -245,8 +436,13 @@ function auditFacility(facility, hits) {
       .map((e) => e.trim().toLowerCase())
       .filter((e) => e.includes('@'))
       .forEach((e) => publishedEmails.add(e));
-    const svc = [hit.rec.serviceCapability, hit.rec.addOns].filter(Boolean).join(' | ').trim();
-    if (svc) anyServices = anyServices ? `${anyServices} || ${svc}` : svc;
+    const svc = SERVICE_FIELDS.map((f) => (hit.rec[f] || '').trim())
+      .filter((v) => v && !/^n\/?a$/i.test(v))
+      .join(' | ');
+    if (svc)
+      anyServices = anyServices
+        ? `${anyServices} || ${hit.source}: ${svc}`
+        : `${hit.source}: ${svc}`;
   }
 
   const contact = facility.contact || {};
@@ -259,7 +455,13 @@ function auditFacility(facility, hits) {
     findings.push({
       field: `contact.${field}`,
       value: raw,
-      status: !hits.length ? 'no-source-row' : traced.length === ours.length ? 'traced' : traced.length ? 'partial' : 'untraced',
+      status: !hits.length
+        ? 'no-source-row'
+        : traced.length === ours.length
+          ? 'traced'
+          : traced.length
+            ? 'partial'
+            : 'untraced',
       published: [...publishedPhones],
     });
   }
@@ -274,10 +476,20 @@ function auditFacility(facility, hits) {
     });
   }
 
+  // The animal-bite page has no service column, but the list is titled
+  // "Certified Animal Bite Treatment Centers" -- membership is the statement.
+  const abtcListed = hits.some((h) => h.source === 'abtc');
+  if (abtcListed)
+    anyServices = anyServices ? `${anyServices} || abtc: certified` : 'abtc: certified';
+
   findings.push({
     field: 'services',
     value: (facility.services || []).join(' | '),
-    status: anyServices ? 'source-publishes-services' : hits.length ? 'source-has-no-services-column' : 'no-source-row',
+    status: anyServices
+      ? 'source-publishes-services'
+      : hits.length
+        ? 'source-has-no-services-column'
+        : 'no-source-row',
     published: anyServices ? [anyServices] : [],
   });
 
@@ -305,20 +517,51 @@ async function main() {
       name: facility.name,
       category: facility.category,
       doh_code: facility.doh_code || null,
-      matched: hits.map((h) => ({ source: h.source, how: h.how, name: h.rec.name })),
+      matched: hits.map((h) => ({
+        source: h.source,
+        how: h.how,
+        name: h.rec.name,
+        published: Object.fromEntries(
+          [
+            'nhfrCode',
+            'contact',
+            'mobile',
+            'email',
+            'facilityClass',
+            'beds',
+            'validUntil',
+            'licenseNo',
+            ...SERVICE_FIELDS,
+          ]
+            .map((f) => [f, (h.rec[f] || '').trim()])
+            .filter(([, v]) => v && !/^n\/?a$/i.test(v))
+        ),
+      })),
       findings: auditFacility(facility, hits),
     });
   }
 
   if (AS_JSON) {
-    console.log(JSON.stringify({ generated: new Date().toISOString(), sources: bySource ? Object.keys(bySource) : [], report }, null, 2));
+    console.log(
+      JSON.stringify(
+        {
+          generated: new Date().toISOString(),
+          sources: bySource ? Object.keys(bySource) : [],
+          report,
+        },
+        null,
+        2
+      )
+    );
     return;
   }
 
   console.log('SOURCE FETCH');
   for (const [source, entry] of Object.entries(bySource)) {
     for (const t of entry.tabs) {
-      console.log(`  ${source.padEnd(12)} ${t.tab.padEnd(28)} ${t.ok ? `ok, ${t.matched} Legazpi rows` : `FAILED: ${t.error}`}`);
+      console.log(
+        `  ${source.padEnd(12)} ${t.tab.padEnd(28)} ${t.ok ? `ok, ${t.matched} Legazpi rows` : `FAILED: ${t.error}`}`
+      );
     }
   }
 
@@ -328,11 +571,14 @@ async function main() {
     const flagged = r.findings.filter((f) => f.status !== 'traced');
     if (!flagged.length) continue;
     console.log(`\n  ${r.id}  ${r.name}`);
-    console.log(`    matched: ${r.matched.length ? r.matched.map((m) => `${m.source}(${m.how})`).join(', ') : 'NO SOURCE ROW'}`);
+    console.log(
+      `    matched: ${r.matched.length ? r.matched.map((m) => `${m.source}(${m.how})`).join(', ') : 'NO SOURCE ROW'}`
+    );
     for (const f of flagged) {
       tally[f.status] = (tally[f.status] || 0) + 1;
       console.log(`    [${f.status}] ${f.field} = ${f.value.slice(0, 90)}`);
-      if (f.published.length) console.log(`        published: ${f.published.join(' , ').slice(0, 200)}`);
+      if (f.published.length)
+        console.log(`        published: ${f.published.join(' , ').slice(0, 200)}`);
     }
   }
 
