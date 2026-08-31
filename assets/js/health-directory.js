@@ -363,9 +363,12 @@
         const street = (facility.address?.street || '').toLowerCase();
         const cat = (facility.category || '').toLowerCase();
         const type = (facility.type || '').toLowerCase();
+        // Not shown on the card any more -- the lists made it too long -- but
+        // still indexed, so a search for a procedure finds the facility.
         const services = Array.isArray(facility.services)
           ? facility.services.join(' ').toLowerCase()
           : '';
+        const addOns = (facility.licensed_add_ons || '').toLowerCase();
         const pb = (facility.punong_barangay || '').toLowerCase();
 
         const match =
@@ -376,6 +379,7 @@
           cat.includes(searchQuery) ||
           type.includes(searchQuery) ||
           services.includes(searchQuery) ||
+          addOns.includes(searchQuery) ||
           pb.includes(searchQuery);
 
         if (!match) return false;
@@ -487,33 +491,7 @@
       }
 
       const notes = dataNotes.filter((note) => note.facility_id === fac.id);
-      const services = Array.isArray(fac.services) ? fac.services : [];
       const detailsId = `facility-details-${fac.id}`;
-
-      // The card face shows a sample of services. The rest live in the details
-      // panel, and the "+N more" chip is the control that opens it rather than
-      // a label that goes nowhere.
-      const PREVIEW = 3;
-      let servicesHtml = '';
-      if (services.length > 0) {
-        const hidden = services.length - PREVIEW;
-        servicesHtml = `
-          <div class="facility-services-wrap">
-            <span class="facility-services-label"><i class="bi bi-tag-fill"></i> Services:</span>
-            <div class="facility-services-tags">
-              ${services
-                .slice(0, PREVIEW)
-                .map((s) => `<span class="service-pill">${escapeHtml(s)}</span>`)
-                .join('')}
-              ${
-                hidden > 0
-                  ? `<button type="button" class="service-pill service-pill-more" data-facility-expand aria-controls="${escapeHtml(detailsId)}">+${hidden} more</button>`
-                  : ''
-              }
-            </div>
-          </div>
-        `;
-      }
 
       let bhsExtraHtml = '';
       if (fac.category === 'Barangay Health Station') {
@@ -628,7 +606,6 @@
 
             ${contactLines.length ? `<div class="facility-contacts">${contactLines[0]}</div>` : ''}
 
-            ${servicesHtml}
           </div>
 
           <button type="button" class="facility-disclosure" aria-expanded="false" aria-controls="${escapeHtml(detailsId)}" data-facility-toggle>
@@ -647,26 +624,6 @@
                   : '<p class="facility-details-empty">DOH does not publish contact details for this facility.</p>'
               }
             </div>
-
-            ${
-              services.length
-                ? `<div class="facility-details-group">
-                     <h4 class="facility-details-heading">All services</h4>
-                     <div class="facility-services-tags">
-                       ${services.map((sv) => `<span class="service-pill">${escapeHtml(sv)}</span>`).join('')}
-                     </div>
-                   </div>`
-                : ''
-            }
-
-            ${
-              fac.licensed_add_ons
-                ? `<div class="facility-details-group">
-                     <h4 class="facility-details-heading">Add-on services, as DOH publishes them</h4>
-                     <p class="facility-add-ons">${escapeHtml(fac.licensed_add_ons)}</p>
-                   </div>`
-                : ''
-            }
 
             ${
               licenceRows.length
@@ -871,7 +828,7 @@
       // independently -- opening one does not close another elsewhere in the
       // grid, which at this many cards would be disorienting.
       DOM.grid.addEventListener('click', (event) => {
-        const trigger = event.target.closest('[data-facility-toggle], [data-facility-expand]');
+        const trigger = event.target.closest('[data-facility-toggle]');
         if (!trigger) return;
 
         const card = trigger.closest('.facility-card');
@@ -879,10 +836,7 @@
         const panel = card && card.querySelector('.facility-details');
         if (!button || !panel) return;
 
-        const expand = trigger.hasAttribute('data-facility-expand')
-          ? true
-          : button.getAttribute('aria-expanded') !== 'true';
-        setDisclosure(button, panel, expand);
+        setDisclosure(button, panel, button.getAttribute('aria-expanded') !== 'true');
       });
     }
 

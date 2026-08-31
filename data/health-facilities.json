@@ -93,7 +93,7 @@
     "drug_testing_laboratories": 3,
     "ambulatory_surgical_clinics": 1,
     "blood_service_facilities": 1,
-    "animal_bite_centers": 3,
+    "animal_bite_centers": 2,
     "barangay_health_stations": 70,
     "government_owned": 79,
     "private_owned": 39,
@@ -4406,6 +4406,11 @@
       "facility_id": "contact-reconciliation",
       "type": "contact-corrected",
       "note": "Contact details for the facilities DOH publishes were reconciled against the licensing lists cited above. Not one hospital landline previously shown in this directory appeared in any source, and several email addresses were subtly wrong. Published values are transcribed exactly as DOH prints them, including numbers that are missing a leading zero or a final digit: padding those into valid-looking numbers would be inventing data, which is what this correction exists to undo. Confirm with the facility before relying on a number."
+    },
+    {
+      "facility_id": "fac-abtc-001",
+      "type": "count-correction",
+      "note": "The animal-bite centre total read three. DOH Bicol CHD certifies two in Legazpi City -- this centre and the UST-Legazpi hospital centre, whose certification lapsed on 11 April 2026. The third was Bicol Regional Hospital and Medical Center, which DOH registers under Daraga and which is excluded from the city totals everywhere else in this file."
     }
   ],
   "gamot_providers": [

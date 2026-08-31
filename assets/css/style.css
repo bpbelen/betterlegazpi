@@ -10389,62 +10389,6 @@ a.a11y-contact-item:hover i {
   text-decoration: underline;
 }
 
-.facility-services-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.facility-services-label {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: var(--color-text-light);
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-}
-
-.facility-services-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.service-pill {
-  font-size: 0.6875rem;
-  font-weight: 500;
-  background: #f1f5f9;
-  color: #334155;
-  padding: 3px 7px;
-  border-radius: 4px;
-  border: 1px solid #e2e8f0;
-}
-
-.service-pill-more {
-  background: #e0f2fe;
-  color: #0369a1;
-  font-weight: 600;
-}
-
-/* The "+N more" pill is the control that opens the details panel, so it is a
-   button. Below the touch breakpoint it has to clear 44px like any other
-   target, even though it sits in a row of much smaller static pills. */
-button.service-pill-more {
-  cursor: pointer;
-  font-family: inherit;
-  line-height: 1.4;
-}
-
-button.service-pill-more:hover {
-  background: #bae6fd;
-}
-
-@media (max-width: 768px) {
-  button.service-pill-more {
-    min-height: 44px;
-    min-width: 44px;
-  }
-}
-
 /* Details disclosure ---------------------------------------------------- */
 
 .facility-disclosure {
@@ -10513,14 +10457,6 @@ button.service-pill-more:hover {
   font-size: 0.8125rem;
   color: var(--color-text-light);
   font-style: italic;
-}
-
-/* Verbatim DOH add-on text: prose, not pills -- it runs to 400 characters. */
-.facility-add-ons {
-  margin: 0;
-  font-size: 0.8125rem;
-  line-height: 1.5;
-  color: var(--color-text);
 }
 
 .facility-detail-list {
@@ -10921,16 +10857,6 @@ button.service-pill-more:hover {
   color: var(--color-text-light);
 }
 
-[data-theme='dark'] button.service-pill-more {
-  background: rgba(56, 189, 248, 0.16);
-  color: #7dd3fc;
-  border-color: rgba(56, 189, 248, 0.3);
-}
-
-[data-theme='dark'] button.service-pill-more:hover {
-  background: rgba(56, 189, 248, 0.28);
-}
-
 [data-theme='dark'] .facility-source-note,
 [data-theme='dark'] .health-disclaimer-card {
   background: rgba(217, 119, 6, 0.12);
@@ -11007,12 +10933,6 @@ button.service-pill-more:hover {
 
 [data-theme='dark'] .bhs-meta-val {
   color: var(--color-text);
-}
-
-[data-theme='dark'] .service-pill {
-  background: var(--color-bg);
-  border-color: rgba(255, 255, 255, 0.08);
-  color: var(--color-text-light);
 }
 
 [data-theme='dark'] .facility-card-footer {
