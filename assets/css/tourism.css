@@ -1342,6 +1342,60 @@
   text-decoration: underline;
 }
 
+/* --- Full APA Reference List (collapsed by default) --- */
+.tourism-references {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  padding: 20px 28px;
+  border-radius: var(--radius-lg);
+  background: var(--tourism-glass-bg);
+  border: 1px solid var(--tourism-glass-border);
+}
+
+.tourism-references summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--tourism-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.tourism-references summary::-webkit-details-marker {
+  display: none;
+}
+
+.tourism-references summary .tourism-references__icon {
+  transition: transform 0.2s ease;
+}
+
+.tourism-references[open] summary .tourism-references__icon {
+  transform: rotate(180deg);
+}
+
+.tourism-references ol {
+  margin: 18px 0 0;
+  padding-left: 22px;
+  font-size: 0.8rem;
+  color: var(--tourism-text-muted);
+  line-height: 1.7;
+}
+
+.tourism-references ol li {
+  margin-bottom: 12px;
+}
+
+.tourism-references ol li:last-child {
+  margin-bottom: 0;
+}
+
+.tourism-references a {
+  color: var(--tourism-primary);
+  word-break: break-word;
+}
+
 /* --- Responsive Media Queries --- */
 @media (max-width: 1024px) {
   .tourism-gateways-grid {
@@ -1895,6 +1949,9 @@
 /* Route from the hub's festival panel into the full epic page. */
 .tourism-festival-link {
   margin: 18px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
 }
 
 .tourism-festival-link a {
