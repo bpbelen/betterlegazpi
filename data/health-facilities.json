@@ -144,7 +144,6 @@
         "Pharmacy",
         "Animal Bite Treatment"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.1444,
         "lng": 123.7291
@@ -177,20 +176,13 @@
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30"
       },
-      "services": [
-        "24/7 Emergency",
-        "ICU & NICU",
-        "Inpatient Care",
-        "Hemodialysis",
-        "Endoscopy & Diagnostics",
-        "CT Scan & X-Ray",
-        "Pharmacy"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Tertiary)", "Blood station", "Hemodialysis (12 stations)"],
       "coordinates": {
         "lat": 13.1678,
         "lng": 123.7225
-      }
+      },
+      "licensed_add_ons": "DOH HFSRB Hospitals list: DIAGNOSTIC X-RAY SERVICES (LEVEL 3) / Specialized Diagnostic X-Ray Services:Computed Tomography, Digital Subtraction Angiography,  Percutaneous Transluminal Angioplasty, Tumor Localization And Simulation, Cardiac Catheterization Magnetic Resonance Imaging / AMBULATORY SURGICAL CLINIC: Colorectal Surgery, General Surgery, Oral-Maxillo-Facial Surgery, Orthopedic Surgery,  Otorhinolaryngologic Surgery,  Pediatric Surgery, Plastic and Reconstructive Surgery, Reproductive Health Surgery, Thoracic Surgery, Urologic Surgery / PHYSICAL MEDICINE AND CARDIAC REHABILITATION UNIT",
+      "bed_capacity": 102
     },
     {
       "id": "fac-hosp-003",
@@ -225,22 +217,13 @@
         "gamot_provider_no": "1593",
         "gamot_valid_until": "2026-12-31"
       },
-      "services": [
-        "PhilHealth YAKAP Konsulta",
-        "YAKAP GAMOT medicine dispensing",
-        "24/7 Emergency",
-        "Inpatient Care",
-        "Maternity & Child Care",
-        "Surgical Services",
-        "Clinical Laboratory",
-        "Pharmacy",
-        "Drug Testing"
-      ],
-      "emergency_24_7": true,
+      "services": ["Drug testing (screening)", "Clinical laboratory (Tertiary)", "Blood station"],
       "coordinates": {
         "lat": 13.1396,
         "lng": 123.7441
-      }
+      },
+      "licensed_add_ons": "DOH HFSRB Hospitals list: Specialized Diagnostic X-Ray Services: Computed Tomography",
+      "bed_capacity": 55
     },
     {
       "id": "fac-hosp-004",
@@ -276,21 +259,17 @@
         "gamot_valid_until": "2026-12-31"
       },
       "services": [
-        "PhilHealth YAKAP Konsulta",
-        "YAKAP GAMOT medicine dispensing",
-        "24/7 Emergency",
-        "Inpatient & Outpatient",
-        "General Surgery & OB-GYN",
-        "Pediatrics",
-        "Diagnostic Ultrasound & X-Ray",
-        "Pharmacy",
-        "Cancer Treatment"
+        "Clinical laboratory (Tertiary)",
+        "Blood station",
+        "Cancer treatment unit in a general hospital",
+        "Hemodialysis (12 stations)"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.1415,
         "lng": 123.738
-      }
+      },
+      "licensed_add_ons": "DOH HFSRB Hospitals list: Hemodialysis Clinic / Specialized Diganostic X-ray Services: Computed Tomography; / Cancer Treatment Unit in a General Hospital",
+      "bed_capacity": 50
     },
     {
       "id": "fac-hosp-005",
@@ -322,20 +301,12 @@
         "yakap_konsulta_no": "2086",
         "yakap_konsulta_valid_until": "2026-12-31"
       },
-      "services": [
-        "PhilHealth YAKAP Konsulta",
-        "24/7 Emergency",
-        "General Inpatient Care",
-        "Maternity & Delivery",
-        "Pediatrics",
-        "Primary Surgery",
-        "Clinical Lab & Pharmacy"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Secondary)", "Blood station"],
       "coordinates": {
         "lat": 13.1465,
         "lng": 123.7485
-      }
+      },
+      "bed_capacity": 75
     },
     {
       "id": "fac-hosp-006",
@@ -365,22 +336,14 @@
         "is_abtc_certified": true,
         "abtc_validity": "2026-04-11"
       },
-      "services": [
-        "24/7 Emergency",
-        "Intensive Care Unit (ICU)",
-        "Diagnostic Imaging & CT Scan",
-        "Laboratory Services",
-        "Physical Therapy & Rehab",
-        "Outpatient Specialties",
-        "Pharmacy",
-        "Animal Bite Treatment"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Tertiary)", "Blood station", "Hemodialysis (13 stations)"],
       "coordinates": {
         "lat": 13.1418,
         "lng": 123.7412
       },
-      "doh_code": "4999"
+      "doh_code": "4999",
+      "licensed_add_ons": "DOH HFSRB Hospitals list: Specialized x-ray facility: Computed Tomography and Mammography, / Dialysis Clinic",
+      "bed_capacity": 50
     },
     {
       "id": "fac-hosp-007",
@@ -408,19 +371,14 @@
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30"
       },
-      "services": [
-        "Emergency Care",
-        "General Medicine",
-        "Maternity & Pediatric Care",
-        "Outpatient Clinic",
-        "Clinical Laboratory"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Secondary)", "Blood station"],
       "coordinates": {
         "lat": 13.1388,
         "lng": 123.7365
       },
-      "doh_code": "402"
+      "doh_code": "402",
+      "licensed_add_ons": "DOH HFSRB Hospitals list: X-RAY  (Level 2) / Add-on service: Clinical Chemistry – Troponin I",
+      "bed_capacity": 25
     },
     {
       "id": "fac-hosp-008",
@@ -448,19 +406,14 @@
         "philhealth_accredited": true,
         "hfsrb_as_of": "2026-06-30"
       },
-      "services": [
-        "Emergency Care",
-        "Inpatient & Outpatient",
-        "Minor Surgery",
-        "Maternal & Child Health",
-        "Pharmacy"
-      ],
-      "emergency_24_7": true,
+      "services": ["Clinical laboratory (Tertiary)", "Blood station"],
       "coordinates": {
         "lat": 13.1432,
         "lng": 123.751
       },
-      "doh_code": "4308"
+      "doh_code": "4308",
+      "licensed_add_ons": "DOH HFSRB Hospitals list: LEVEL 3 X-RAY SERVICES: / COMPUTED TOMOGRAPHY / PHYSICAL MEDICINE AND REHABILITATION UNIT",
+      "bed_capacity": 55
     },
     {
       "id": "fac-yakap-001",
@@ -503,7 +456,6 @@
         "Dental Health Services",
         "Sanitary Inspection & Health Cards"
       ],
-      "emergency_24_7": false,
       "coordinates": {
         "lat": 13.1398,
         "lng": 123.7345
@@ -538,19 +490,13 @@
         "yakap_konsulta_no": "2093",
         "yakap_konsulta_valid_until": "2026-12-31"
       },
-      "services": [
-        "PhilHealth YAKAP Konsulta",
-        "General Medical Consultation",
-        "Diagnostic Laboratory",
-        "Preventive Health Checkups",
-        "Clinical Laboratory"
-      ],
-      "emergency_24_7": false,
+      "services": ["Clinical laboratory (Primary)"],
       "coordinates": {
         "lat": 13.1425,
         "lng": 123.746
       },
-      "doh_code": "54937"
+      "doh_code": "54937",
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: SGOT, SGPT, HbA1c, TSH, FT3, FT4"
     },
     {
       "id": "fac-yakap-003",
@@ -586,7 +532,6 @@
         "Physical Examinations",
         "Primary Care & First Aid"
       ],
-      "emergency_24_7": false,
       "coordinates": {
         "lat": 13.146,
         "lng": 123.731
@@ -621,20 +566,13 @@
         "yakap_konsulta_no": "2104",
         "yakap_konsulta_valid_until": "2026-12-31"
       },
-      "services": [
-        "PhilHealth YAKAP Konsulta",
-        "Occupational Health & Pre-Employment Exams",
-        "Diagnostic Laboratory Tests",
-        "Executive Health Checkups",
-        "Clinical Laboratory",
-        "Drug Testing"
-      ],
-      "emergency_24_7": false,
+      "services": ["Clinical laboratory (Secondary)", "Drug testing (screening)"],
       "coordinates": {
         "lat": 13.1402,
         "lng": 123.7525
       },
-      "doh_code": "8924"
+      "doh_code": "8924",
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Mobile Clinical Laboratory"
     },
     {
       "id": "fac-shc-001",
@@ -671,7 +609,6 @@
         "Dental Care",
         "Minor Surgery & Triage"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.1095,
         "lng": 123.722
@@ -710,7 +647,6 @@
         "Newborn Screening & Hearing Test",
         "Family Planning & Lactation Counseling"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.203,
         "lng": 123.765
@@ -749,7 +685,6 @@
         "Newborn Care & Immunization",
         "Family Planning Services"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.085,
         "lng": 123.755
@@ -788,7 +723,6 @@
         "Newborn Care",
         "Immunization & Nutrition"
       ],
-      "emergency_24_7": true,
       "coordinates": {
         "lat": 13.121,
         "lng": 123.738
@@ -828,7 +762,6 @@
         "Water Testing & Food Handler Screening",
         "Drug Testing"
       ],
-      "emergency_24_7": false,
       "coordinates": {
         "lat": 13.1398,
         "lng": 123.7345
@@ -869,8 +802,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-002",
@@ -907,8 +839,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-003",
@@ -945,8 +876,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-004",
@@ -983,8 +913,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-005",
@@ -1021,8 +950,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-006",
@@ -1059,8 +987,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-007",
@@ -1097,8 +1024,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-008",
@@ -1135,8 +1061,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-009",
@@ -1173,8 +1098,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-010",
@@ -1211,8 +1135,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-011",
@@ -1249,8 +1172,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-012",
@@ -1287,8 +1209,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-013",
@@ -1325,8 +1246,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-014",
@@ -1363,8 +1283,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-015",
@@ -1401,8 +1320,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-016",
@@ -1439,8 +1357,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-017",
@@ -1477,8 +1394,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-018",
@@ -1515,8 +1431,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-019",
@@ -1553,8 +1468,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-020",
@@ -1591,8 +1505,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-021",
@@ -1629,8 +1542,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-022",
@@ -1667,8 +1579,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-023",
@@ -1705,8 +1616,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-024",
@@ -1743,8 +1653,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-025",
@@ -1781,8 +1690,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-026",
@@ -1819,8 +1727,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-027",
@@ -1857,8 +1764,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-028",
@@ -1895,8 +1801,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-029",
@@ -1933,8 +1838,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-030",
@@ -1971,8 +1875,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-031",
@@ -2009,8 +1912,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-032",
@@ -2047,8 +1949,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-033",
@@ -2085,8 +1986,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-034",
@@ -2123,8 +2023,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-035",
@@ -2161,8 +2060,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-036",
@@ -2199,8 +2097,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-037",
@@ -2237,8 +2134,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-038",
@@ -2275,8 +2171,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-039",
@@ -2313,8 +2208,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-040",
@@ -2351,8 +2245,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-041",
@@ -2389,8 +2282,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-042",
@@ -2427,8 +2319,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-043",
@@ -2465,8 +2356,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-044",
@@ -2503,8 +2393,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-045",
@@ -2541,8 +2430,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-046",
@@ -2579,8 +2467,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-047",
@@ -2617,8 +2504,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-048",
@@ -2655,8 +2541,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-049",
@@ -2693,8 +2578,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-050",
@@ -2731,8 +2615,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-051",
@@ -2769,8 +2652,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-052",
@@ -2807,8 +2689,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-053",
@@ -2845,8 +2726,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-054",
@@ -2883,8 +2763,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-055",
@@ -2921,8 +2800,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-056",
@@ -2959,8 +2837,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-057",
@@ -2997,8 +2874,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-058",
@@ -3035,8 +2911,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-059",
@@ -3073,8 +2948,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-060",
@@ -3111,8 +2985,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-061",
@@ -3149,8 +3022,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-062",
@@ -3187,8 +3059,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-063",
@@ -3225,8 +3096,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-064",
@@ -3263,8 +3133,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-065",
@@ -3301,8 +3170,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-066",
@@ -3339,8 +3207,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-067",
@@ -3377,8 +3244,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-068",
@@ -3415,8 +3281,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-069",
@@ -3453,8 +3318,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-bhs-070",
@@ -3491,8 +3355,7 @@
         "Family Planning & Contraceptive Distribution",
         "Blood Pressure & Vital Signs Monitoring",
         "Barangay Health Worker (BHW) Outreach"
-      ],
-      "emergency_24_7": false
+      ]
     },
     {
       "id": "fac-lab-003",
@@ -3520,8 +3383,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Clinical Chemistry: HbA1c, Total Calcium, Ionized Calcium, Magnesium, / Phosphorus, Total Bilirubin, Direct and Indirect Bilirubin, Alkaline / Phosphatase, Amylase, LDH, NT-proBNP / Hepatitis Profile: Anti-HCV Test & Anti-HAV IgM Test (Screening) / Serology & Immunology: Typhoid Test, C-Reactive Protein (CRP) / Coagulation Tests: PT and APTT / Thyroid Function Tests: T3, T4, FT3, FT4, TSH (FIA) / Tumor Markers: PSA, B-HCG, CA-125"
     },
     {
       "id": "fac-lab-004",
@@ -3549,8 +3412,7 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Limited)"]
     },
     {
       "id": "fac-lab-005",
@@ -3578,8 +3440,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Albumin, Total Protein, Magnesium, Phosphorous, LDH, Alkaline Phosphatase, HbA1c, Anti-HCV, Typhoid Test, T-proBNP, T3, T4, TSH, FT3, FT4, PSA, B-HCG, Ferritin"
     },
     {
       "id": "fac-lab-006",
@@ -3607,8 +3469,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Mobile Clinical Laboratory / Clinical Chemistry Section: AST & ALT / Immunology/Serology Section: Thyroid Function Test (TSH, FT3, FT4)"
     },
     {
       "id": "fac-lab-007",
@@ -3636,8 +3498,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: NT-pro BNP, FT3, FT4, TSH, PSA, HbA1c, Troponin-I"
     },
     {
       "id": "fac-lab-008",
@@ -3665,8 +3527,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory", "Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Primary)", "Drug testing (screening)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: ALT/AST"
     },
     {
       "id": "fac-lab-009",
@@ -3694,8 +3556,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory", "Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)", "Drug testing (screening)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Clinical Chemistry: Cortisol, Estradiol, FSH, Prolactin, LH, ASO, Amylase, Lipase, / Inorganic Phosphorous (IPHOS), Calcium, Magnesium, LDH, / Direct Bilirubin, Total Bilirubin, TIBC, Serum Iron, Total Protein, / Albumin & ALP / Immunology/Serology: Thyroid Function Test (FT4, FT3, TSH, T4, T3), Tumor Marker / (NT PROBNP, PSA), Anti-HBS, Ferritin, CRP, CEA, AFP, and / HEPA Profile (HBsAg ELISA, Anti-HBC IgG, Anti-HBE, / HBeAg) / Hematology Section: Protime, APTT"
     },
     {
       "id": "fac-lab-010",
@@ -3723,8 +3585,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory", "Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)", "Drug testing (screening)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Thyroid Function Test (TSH, FT3, FT4, T3 and T4) / PSA Marker, SGOT, SGPT, Na, K, Cl, T. Calcium, Ionized Calcium, / HbA1c, HAV Screening"
     },
     {
       "id": "fac-lab-011",
@@ -3752,8 +3614,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: HCV and HbA1c"
     },
     {
       "id": "fac-lab-012",
@@ -3781,8 +3643,7 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Primary)"]
     },
     {
       "id": "fac-lab-013",
@@ -3810,8 +3671,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Secondary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: Clinical Chemistry: SGOT, SGPT, HbA1c, Na, K, CI, / Serology: FT3, FT4, TSH, Mobile Clinical Laboratory,"
     },
     {
       "id": "fac-lab-014",
@@ -3839,8 +3700,8 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory", "Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Primary)"],
+      "licensed_add_ons": "DOH HFSRB Clinical Laboratories list: AST, ALT, Na, K, Cl / Mobile Clinical Laboratory"
     },
     {
       "id": "fac-lab-015",
@@ -3868,8 +3729,7 @@
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
       },
-      "services": ["Clinical Laboratory"],
-      "emergency_24_7": false
+      "services": ["Clinical laboratory (Limited)"]
     },
     {
       "id": "fac-birth-004",
@@ -3896,9 +3756,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-005",
@@ -3925,9 +3783,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-006",
@@ -3954,9 +3810,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-007",
@@ -3983,9 +3837,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-008",
@@ -4012,9 +3864,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-009",
@@ -4041,9 +3891,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-010",
@@ -4070,9 +3918,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-011",
@@ -4099,9 +3945,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-012",
@@ -4128,9 +3972,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-birth-013",
@@ -4157,9 +3999,7 @@
         "is_doh_licensed": true,
         "hfsrb_as_of": "2026-03-31",
         "philhealth_accredited": false
-      },
-      "services": ["Birthing & Maternity Care"],
-      "emergency_24_7": false
+      }
     },
     {
       "id": "fac-dialysis-001",
@@ -4187,8 +4027,7 @@
         "hfsrb_as_of": "2026-06-30",
         "philhealth_accredited": false
       },
-      "services": ["Hemodialysis"],
-      "emergency_24_7": false
+      "services": ["Hemodialysis (18 stations)"]
     },
     {
       "id": "fac-dialysis-002",
@@ -4216,8 +4055,7 @@
         "hfsrb_as_of": "2026-06-30",
         "philhealth_accredited": false
       },
-      "services": ["Hemodialysis"],
-      "emergency_24_7": false
+      "services": ["Hemodialysis (6 stations)"]
     },
     {
       "id": "fac-dialysis-003",
@@ -4245,8 +4083,7 @@
         "hfsrb_as_of": "2026-06-30",
         "philhealth_accredited": false
       },
-      "services": ["Hemodialysis"],
-      "emergency_24_7": false
+      "services": ["Hemodialysis (11 stations)"]
     },
     {
       "id": "fac-asc-001",
@@ -4274,8 +4111,7 @@
         "hfsrb_as_of": "2026-06-30",
         "philhealth_accredited": false
       },
-      "services": ["Ambulatory Surgery", "Ophthalmologic"],
-      "emergency_24_7": false
+      "services": ["Ambulatory surgery: Ophthalmologic"]
     },
     {
       "id": "fac-blood-001",
@@ -4303,14 +4139,7 @@
         "hfsrb_as_of": "2025-06-30",
         "philhealth_accredited": false
       },
-      "services": [
-        "24/7 Blood Banking & Blood Products",
-        "Ambulance & Emergency Response",
-        "Blood Services",
-        "Blood Typing & Crossmatching",
-        "Voluntary Blood Donation"
-      ],
-      "emergency_24_7": false
+      "services": ["Blood collection unit/blood station"]
     },
     {
       "id": "fac-dtl-001",
@@ -4340,8 +4169,7 @@
         "dtl_accreditation_no": "05-0270-26-PFSS-R",
         "dtl_list_as_of": "2026-03-31"
       },
-      "services": ["Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Drug testing (screening)"]
     },
     {
       "id": "fac-dtl-002",
@@ -4371,8 +4199,7 @@
         "dtl_accreditation_no": "05-1167-26-PFSS-R",
         "dtl_list_as_of": "2026-03-31"
       },
-      "services": ["Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Drug testing (screening)"]
     },
     {
       "id": "fac-dtl-003",
@@ -4402,8 +4229,7 @@
         "dtl_accreditation_no": "05-1593-26-PFSS-R",
         "dtl_list_as_of": "2026-03-31"
       },
-      "services": ["Drug Testing"],
-      "emergency_24_7": false
+      "services": ["Drug testing (screening)"]
     },
     {
       "id": "fac-abtc-001",
@@ -4432,8 +4258,7 @@
         "abtc_validity": "2027-03-25",
         "philhealth_accredited": false
       },
-      "services": ["Animal Bite Treatment", "Anti-Rabies Vaccination"],
-      "emergency_24_7": false
+      "services": ["Animal bite treatment"]
     }
   ],
   "_data_notes": [
@@ -4576,6 +4401,16 @@
       "facility_id": "barangay-health-stations",
       "type": "contact-removed",
       "note": "Nineteen barangay health stations previously listed a personal mobile number that no cited source publishes. Those numbers have been removed and the stations now show the City Health Office hotline, as the other fifty-one already did. The name of each barangay secretary was also dropped from the dataset: it was never displayed and served no purpose here."
+    },
+    {
+      "facility_id": "unverifiable-sources",
+      "type": "source-not-machine-readable",
+      "note": "Service and contact details for 78 facilities could not be checked against a cited source. The City Health Office barangay directory publishes no structured data, the two PhilHealth accreditation lists are PDFs whose columns drift out of alignment, and the DOH National Health Facility Registry refuses automated access. Those details are retained as previously recorded but are unverified, and should not be read as confirmed by the sources listed above."
+    },
+    {
+      "facility_id": "emergency-hours",
+      "type": "field-removed",
+      "note": "A 24/7 emergency flag was previously shown on twelve facilities and offered as a filter. No cited source publishes opening hours, so the claim rested on nothing and has been removed rather than left for someone to rely on at night."
     }
   ],
   "gamot_providers": [
